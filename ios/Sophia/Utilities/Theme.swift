@@ -37,6 +37,67 @@ enum SophiaTabBarStyle {
 
     private static var applied = false
 
+    // MARK: Rebond de l'icône
+
+    /// Petit rebond de l'icône de l'onglet qui vient d'être choisi. La barre est celle du
+    /// système : on retrouve son icône en parcourant les vues (aucune API privée) ; si la
+    /// structure n'est pas celle attendue (iPad, futur iOS), il ne se passe simplement rien.
+    static func bounceSelectedIcon() {
+        // Au tour suivant : la barre a alors pris en compte la nouvelle sélection.
+        DispatchQueue.main.async {
+            guard !UIAccessibility.isReduceMotionEnabled else { return }
+            for scene in UIApplication.shared.connectedScenes {
+                guard let windowScene = scene as? UIWindowScene else { continue }
+                for window in windowScene.windows where window.isKeyWindow {
+                    if let tabBar = firstTabBar(in: window) {
+                        bounceIcon(of: tabBar)
+                        return
+                    }
+                }
+            }
+        }
+    }
+
+    private static func firstTabBar(in view: UIView) -> UITabBar? {
+        if let tabBar = view as? UITabBar { return tabBar }
+        for subview in view.subviews {
+            if let tabBar = firstTabBar(in: subview) { return tabBar }
+        }
+        return nil
+    }
+
+    private static func firstImageView(in view: UIView) -> UIImageView? {
+        if let imageView = view as? UIImageView { return imageView }
+        for subview in view.subviews {
+            if let imageView = firstImageView(in: subview) { return imageView }
+        }
+        return nil
+    }
+
+    private static func bounceIcon(of tabBar: UITabBar) {
+        guard let items = tabBar.items,
+              let selected = tabBar.selectedItem,
+              let index = items.firstIndex(of: selected) else { return }
+        // Les boutons de la barre, dans l'ordre de lecture.
+        var buttons: [UIView] = tabBar.subviews
+            .filter { $0 is UIControl && !$0.isHidden }
+            .sorted { $0.frame.minX < $1.frame.minX }
+        if tabBar.effectiveUserInterfaceLayoutDirection == .rightToLeft {
+            buttons.reverse()
+        }
+        guard buttons.count == items.count, let icon = firstImageView(in: buttons[index]) else { return }
+        icon.transform = CGAffineTransform(scaleX: 0.78, y: 0.78)
+        UIView.animate(
+            withDuration: 0.45,
+            delay: 0,
+            usingSpringWithDamping: 0.45,
+            initialSpringVelocity: 0.6,
+            options: [.allowUserInteraction, .beginFromCurrentState],
+            animations: { icon.transform = .identity },
+            completion: nil
+        )
+    }
+
     private static func style(_ state: UITabBarItemStateAppearance, color: UIColor) {
         let descriptor = UIFontDescriptor(fontAttributes: [
             .family: "Plus Jakarta Sans",

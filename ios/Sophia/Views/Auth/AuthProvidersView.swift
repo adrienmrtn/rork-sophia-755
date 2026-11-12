@@ -22,8 +22,8 @@ struct AuthProvidersView: View {
     var body: some View {
         VStack(spacing: 12) {
             // Official `SignInWithAppleButton` ignores the in-app language and stays
-            // on the system/bundle locale (usually French). Same capsule as Google,
-            // with a localized "Continue with Apple" label.
+            // on the system/bundle locale (usually French). Same rounded rectangle as
+            // Google, with a localized "Continue with Apple" label.
             Button {
                 handleApple()
             } label: {
@@ -35,10 +35,11 @@ struct AuthProvidersView: View {
                 }
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)
-                .frame(height: 52)
-                .background(Color.black, in: Capsule(style: .continuous))
+                .frame(height: 54)
+                .background(Color.black, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
+                .contentShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
             }
-            .buttonStyle(SoftPressButtonStyle())
+            .buttonStyle(.pressable)
             .opacity(isWorking ? 0.6 : 1)
             .disabled(isWorking)
 
@@ -52,14 +53,15 @@ struct AuthProvidersView: View {
                         .foregroundStyle(.black.opacity(0.85))
                 }
                 .frame(maxWidth: .infinity)
-                .frame(height: 52)
-                .background(Color.white, in: Capsule(style: .continuous))
+                .frame(height: 54)
+                .background(Color.white, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
                 .overlay {
-                    Capsule(style: .continuous)
-                        .strokeBorder(Color.black.opacity(0.15), lineWidth: 1)
+                    RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                        .strokeBorder(DS.hairline, lineWidth: 1.5)
                 }
+                .contentShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
             }
-            .buttonStyle(SoftPressButtonStyle())
+            .buttonStyle(.pressable)
             .opacity(isWorking ? 0.6 : 1)
             .disabled(isWorking)
 

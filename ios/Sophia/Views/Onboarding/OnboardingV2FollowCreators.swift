@@ -19,78 +19,102 @@ struct OnboardingV2FollowCreators: View {
 
     var body: some View {
         OV2ScrollableContent {
-            VStack(spacing: 22) {
-                VStack(spacing: 10) {
-                    Text(languageManager.text("onboardingV2.follow.title"))
-                        .font(DS.title(.title, .heavy))
-                        .foregroundStyle(OV2.ink)
-                        .multilineTextAlignment(.center)
-                    Text(languageManager.text("onboardingV2.follow.subtitle"))
-                        .font(DS.sans(.body, .medium))
-                        .foregroundStyle(OV2.inkSecondary)
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                .padding(.top, 36)
-                .ov2Reveal(delay: 0.05)
+            VStack(spacing: 0) {
+                OV2EndTitle(text: languageManager.text("onboardingV2.follow.title"))
+                    .padding(.top, OV2End.topWithoutHeader)
+                    .dsStagger(0)
 
-                VStack(spacing: 10) {
-                    ForEach(authors) { author in
+                OV2EndSubtitle(text: languageManager.text("onboardingV2.follow.subtitle"))
+                    .padding(.top, 10)
+                    .dsStagger(1)
+
+                VStack(spacing: 8) {
+                    ForEach(Array(authors.enumerated()), id: \.element.id) { index, author in
                         row(author)
+                            .dsStagger(index, step: 0.05, base: 0.14)
                     }
                 }
-                .ov2Reveal(delay: 0.14)
+                .padding(.top, 18)
             }
-            .padding(.horizontal, 24)
-            .padding(.bottom, 20)
+            .padding(.horizontal, OV2End.side)
+            .padding(.bottom, 28)
             .ov2ReadableWidth()
         } footer: {
             OnboardingV2Button(
                 title: languageManager.text("common.continue"),
                 action: onNext
             )
+            // La liste s'efface sous le bouton au lieu d'être coupée net.
+            .background(alignment: .top) { OV2EndBottomFade() }
         }
         .ov2Background()
         .onAppear { if authors.isEmpty { authors = Self.suggestedAuthors(subjects: vm.selectedSubjects) } }
     }
 
+    /// Une ligne par prof : portrait, nom, titre ou spécialité, et la pastille « Suivre » /
+    /// « Abonné ». Toute la ligne est le bouton.
     private func row(_ author: CourseAuthor) -> some View {
-        let following = progressManager.isFollowing(author.slug)
-        return HStack(spacing: 12) {
-            AuthorAvatarView(author: author, size: 48)
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 4) {
-                    Text(author.name)
-                        .font(DS.sans(.subheadline, .bold))
-                        .foregroundStyle(OV2.ink)
-                        .lineLimit(1)
-                    if author.isVerified { VerifiedCheck(size: 13) }
+        let following: Bool = progressManager.isFollowing(author.slug)
+        return Button {
+            Haptics.select()
+            progressManager.toggleFollow(author.slug)
+            AnalyticsService.shared.log(
+                following ? .unfollow : .follow,
+                screen: "onboarding",
+                props: ["creator": .string(author.slug)]
+            )
+        } label: {
+            HStack(spacing: 11) {
+                AuthorAvatarView(author: author, size: 46)
+                VStack(alignment: .leading, spacing: 2) {
+                    HStack(spacing: 4) {
+                        Text(author.name)
+                            .font(DS.sans(.subheadline, .bold))
+                            .foregroundStyle(DS.ink)
+                            .lineLimit(1)
+                        if author.isVerified { VerifiedCheck(size: 13) }
+                    }
+                    if let pedigree = author.title(for: languageManager.current) {
+                        Text(pedigree)
+                            .font(DS.sans(.caption, .regular))
+                            .foregroundStyle(DS.inkSecondary)
+                            .lineSpacing(1)
+                            .lineLimit(2)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
                 }
-                if let pedigree = author.title(for: languageManager.current) {
-                    Text(pedigree)
-                        .font(DS.sans(.caption))
-                        .foregroundStyle(OV2.inkSecondary)
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
+                Spacer(minLength: 6)
+                followPill(following: following)
             }
-            Spacer(minLength: 0)
-            FollowButton(isFollowing: following, compact: true) {
-                progressManager.toggleFollow(author.slug)
-                AnalyticsService.shared.log(
-                    following ? .unfollow : .follow,
-                    screen: "onboarding",
-                    props: ["creator": .string(author.slug)]
-                )
-            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 9)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .ov2EndCard()
         }
-        .padding(12)
-        .background(OV2.surface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .strokeBorder(following ? OV2.accent : OV2.hairline, lineWidth: following ? 1.5 : 1)
-        }
-        .animation(.easeInOut(duration: 0.15), value: following)
+        .buttonStyle(PressableStyle(haptic: false))
+        .accessibilityAddTraits(following ? .isSelected : [])
+    }
+
+    /// Pastille de suivi : pleine et bleue une fois abonné, cerclée de bleu sinon.
+    private func followPill(following: Bool) -> some View {
+        Text(languageManager.text(following ? "creator.following" : "creator.follow"))
+            .font(DS.sans(.footnote, .bold))
+            .foregroundStyle(following ? Color.white : DS.accent)
+            .lineLimit(1)
+            .padding(.horizontal, 13)
+            .frame(height: 34)
+            .background(
+                Capsule(style: .continuous)
+                    .fill(following ? DS.accent : DS.surface)
+            )
+            .overlay(
+                Capsule(style: .continuous)
+                    .strokeBorder(DS.accent, lineWidth: 1.5)
+            )
+            .fixedSize()
+            .contentTransition(.opacity)
+            .animation(DS.Motion.snappy, value: following)
     }
 
     /// Les créateurs proposés : d'abord ceux qui ont le plus de cours dans les matières

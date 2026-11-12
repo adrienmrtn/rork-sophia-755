@@ -92,7 +92,9 @@ struct ContentView: View {
             .tint(DS.accent)
             .toolbarBackground(DS.canvas, for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
+            // Changement d'onglet : un cran haptique et un petit rebond de l'icône choisie.
             .sensoryFeedback(.selection, trigger: selectedTab)
+            .onChange(of: selectedTab) { _, _ in SophiaTabBarStyle.bounceSelectedIcon() }
             .onAppear { SophiaTabBarStyle.apply() }
             .onChange(of: appearance.preference) { _, _ in
                 SophiaTabBarStyle.apply()

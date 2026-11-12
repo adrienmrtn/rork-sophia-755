@@ -59,16 +59,11 @@ struct AccountView: View {
     private var header: some View {
         HStack {
             Text(languageManager.text("account.title"))
-                .font(DS.title(.largeTitle, .semibold))
+                .font(DS.title(.title, .semibold))
                 .foregroundStyle(DS.ink)
-            Spacer()
-            Button { dismiss() } label: {
-                Image(systemName: "xmark")
-                    .font(.jakarta(size: 15, weight: .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                    .frame(width: 40, height: 40)
-                    .background(DS.surface, in: Circle())
-                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+            Spacer(minLength: 8)
+            ProfileRoundButton(systemImage: "xmark", accessibilityLabel: languageManager.text("common.close")) {
+                dismiss()
             }
         }
     }
@@ -82,13 +77,16 @@ struct AccountView: View {
                     .font(DS.title(.title3, .semibold))
                     .foregroundStyle(DS.ink)
                 Text(languageManager.text("account.signedOut.body"))
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.subheadline))
                     .foregroundStyle(DS.inkSecondary)
+                    .lineSpacing(2)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .dsCard()
+            .dsCard(padding: 16)
+            .dsStagger(0)
 
             AuthProvidersView(onSignedIn: { dismiss() })
+                .dsStagger(1)
         }
     }
 
@@ -96,25 +94,28 @@ struct AccountView: View {
 
     private var signedInContent: some View {
         VStack(alignment: .leading, spacing: 18) {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 0) {
                 infoRow(
                     label: languageManager.text("account.email"),
                     value: auth.currentUser?.email ?? "—"
                 )
                 if let handle = SocialService.shared.myHandle {
-                    Rectangle().fill(DS.hairline).frame(height: 1)
+                    ProfileRowDivider()
                     infoRow(
                         label: "@",
                         value: "@\(handle)"
                     )
                 }
-                Rectangle().fill(DS.hairline).frame(height: 1)
+                ProfileRowDivider()
                 infoRow(
                     label: languageManager.text("account.provider"),
                     value: providerLabel
                 )
             }
-            .dsCard()
+            .padding(.horizontal, 16)
+            .padding(.vertical, 2)
+            .dsCard(padding: 0)
+            .dsStagger(0)
             .task {
                 await SocialService.shared.refreshMyHandle()
             }
@@ -156,17 +157,18 @@ struct AccountView: View {
     }
 
     private func infoRow(label: String, value: String) -> some View {
-        HStack {
+        HStack(spacing: 12) {
             Text(label)
-                .font(DS.sans(.body, .medium))
+                .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
-            Spacer()
+            Spacer(minLength: 8)
             Text(value)
-                .font(DS.sans(.body, .semibold))
+                .font(DS.sans(.subheadline, .bold))
                 .foregroundStyle(DS.ink)
                 .lineLimit(1)
                 .truncationMode(.middle)
         }
+        .padding(.vertical, 12)
     }
 
     private func performDelete() {
@@ -181,6 +183,7 @@ struct AccountView: View {
             } catch {
                 isDeleting = false
                 deleteError = languageManager.text("account.delete.error")
+                Haptics.error()
             }
         }
     }

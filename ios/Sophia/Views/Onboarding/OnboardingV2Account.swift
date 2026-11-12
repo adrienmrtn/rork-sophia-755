@@ -23,7 +23,8 @@ struct OnboardingV2Account: View {
     private static let avatarSize: CGFloat = 104
     /// Largeur d'une case du carrousel, plus étroite que l'avatar centré : les voisins,
     /// réduits, viennent ainsi se ranger tout près de lui.
-    private static let avatarSlot: CGFloat = 80
+    private static let avatarSlot: CGFloat = 84
+    private static let avatarSpacing: CGFloat = 18
     private static let neighbourScale: CGFloat = 0.615
 
     private var sanitizedHandle: String {
@@ -109,7 +110,7 @@ struct OnboardingV2Account: View {
         GeometryReader { geo in
             let margin: CGFloat = max(0, (geo.size.width - Self.avatarSlot) / 2)
             ScrollView(.horizontal) {
-                HStack(spacing: 0) {
+                HStack(spacing: Self.avatarSpacing) {
                     ForEach(Avatars.all, id: \.self) { id in
                         avatarItem(id)
                     }

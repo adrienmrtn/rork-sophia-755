@@ -346,6 +346,45 @@ struct OV2ScrollableContent<Content: View, Footer: View>: View {
     }
 }
 
+// MARK: - Carte bordée
+
+private struct OV2CardModifier: ViewModifier {
+    let border: Color
+    let fill: Color
+    let cornerRadius: CGFloat
+    let lip: CGFloat
+
+    func body(content: Content) -> some View {
+        content
+            .background(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous).fill(fill)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .strokeBorder(border, lineWidth: 1.5)
+            )
+            .background(
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .fill(border)
+                    .offset(y: lip)
+            )
+    }
+}
+
+extension View {
+    /// Fond de carte du style (bordure 1,5 pt, petit rebord bas, pas d'ombre) sans padding ni
+    /// largeur imposée, à la couleur de bordure libre : `dsCard()` pour les cartes des
+    /// illustrations, qui règlent elles-mêmes leurs marges.
+    func ov2Card(
+        border: Color = DS.hairline,
+        fill: Color = DS.surface,
+        cornerRadius: CGFloat = DS.Radius.card,
+        lip: CGFloat = 1
+    ) -> some View {
+        modifier(OV2CardModifier(border: border, fill: fill, cornerRadius: cornerRadius, lip: lip))
+    }
+}
+
 // MARK: - Illustration ajustée à la hauteur disponible
 
 /// Montre `content` à sa taille naturelle quand elle tient dans la hauteur reçue, et le

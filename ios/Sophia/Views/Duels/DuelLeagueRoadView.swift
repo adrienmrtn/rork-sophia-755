@@ -85,7 +85,8 @@ struct DuelLeagueRoadView: View {
             roadFilled = true
             return
         }
-        withAnimation(DS.Motion.reveal) { roadFilled = true }
+        // Chaque repère porte sa propre animation, décalée selon sa place sur la route.
+        roadFilled = true
         DispatchQueue.main.asyncAfter(deadline: .now() + Self.fillDelay(distance: 0) + 0.3) {
             Haptics.soft()
         }
@@ -104,14 +105,16 @@ struct DuelLeagueRoadView: View {
         let isCurrent = league.position == currentPosition
         let distance = currentPosition - league.position
         // La carte vibre d'elle-même à la pression (`PressableStyle`).
-        return HStack(spacing: 12) {
+        return Button {
+            preview = league
+        } label: {
+            card(league, reached: reached, isCurrent: isCurrent)
+        }
+        .buttonStyle(PressableStyle(scale: 0.98))
+        // Le repère prend la hauteur de la carte : il est posé en surimpression dans sa marge.
+        .padding(.leading, 18)
+        .overlay(alignment: .leading) {
             rail(reached: reached, distance: distance)
-            Button {
-                preview = league
-            } label: {
-                card(league, reached: reached, isCurrent: isCurrent)
-            }
-            .buttonStyle(PressableStyle(scale: 0.98))
         }
         .dsStagger(min(abs(distance), 5), step: 0.05, base: 0.02, offset: 10)
     }

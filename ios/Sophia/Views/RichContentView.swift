@@ -766,17 +766,17 @@ struct CourseInlineImage: View {
     }
 }
 
-/// "Le saviez-vous ?" card — calm surface card with a quiet header row.
+/// "Le saviez-vous ?" card — carte blanche bordée, pictogramme doré et sur-titre.
 struct FunFactBox: View {
     let text: String
 
     var body: some View {
         LegacyCalloutCard(
-            icon: "lightbulb",
+            style: .funFact,
             title: AppLocalizable.string("course.funFact", language: AppLanguage.currentPersisted())
         ) {
             SimpleBoldText(raw: text, font: DS.sans(.body), italic: true)
-                .lineSpacing(4)
+                .lineSpacing(6)
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -784,18 +784,18 @@ struct FunFactBox: View {
     }
 }
 
-/// "À retenir" key takeaway card — calm surface card with a quiet header row.
+/// "À retenir" key takeaway card — fond vert pâle et étiquette verte pleine.
 struct HighlightBox: View {
     let text: String
     let accent: Color
 
     var body: some View {
         LegacyCalloutCard(
-            icon: "bookmark",
+            style: .takeaway,
             title: AppLocalizable.string("course.keyTakeaway", language: AppLanguage.currentPersisted())
         ) {
-            SimpleBoldText(raw: text, font: DS.sans(.body), baseWeight: .semibold)
-                .lineSpacing(4)
+            SimpleBoldText(raw: text, font: DS.sans(.body))
+                .lineSpacing(6)
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -803,34 +803,52 @@ struct HighlightBox: View {
     }
 }
 
-/// Calm callout container shared by the legacy fun-fact / takeaway boxes.
+/// Les deux encarts du rendu legacy, habillés comme ceux du rendu structuré
+/// (`FunFactCardV2`, `TakeawayCardV2`).
 private struct LegacyCalloutCard<Content: View>: View {
-    let icon: String
+    enum Style {
+        case funFact
+        case takeaway
+    }
+
+    let style: Style
     let title: String
     @ViewBuilder let content: () -> Content
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 8) {
-                Image(systemName: icon)
-                    .font(.jakarta(size: 12, weight: .semibold))
-                    .foregroundStyle(DS.accentSoft)
-                Text(title.uppercasedInApp())
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(DS.accentSoft)
-                    .tracking(1.2)
-            }
-            content()
-        }
-        .padding(DS.Space.l)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .fill(DS.surfaceMuted)
-                .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
+        switch style {
+        case .funFact:
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(spacing: 8) {
+                    Image(systemName: "lightbulb.fill")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(CoursePalette.goldDeep)
+                    Text(title.uppercasedInApp())
+                        .font(DS.sans(.caption, .heavy))
+                        .foregroundStyle(DS.ink)
+                        .tracking(0.8)
                 }
+                content()
+            }
+            .dsCard(padding: 16)
+
+        case .takeaway:
+            VStack(alignment: .leading, spacing: 10) {
+                Text(title.uppercasedInApp())
+                    .font(DS.sans(.caption, .heavy))
+                    .foregroundStyle(.white)
+                    .tracking(0.6)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 3)
+                    .background(DS.success, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                content()
+            }
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background {
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .fill(DS.successTint)
+            }
         }
     }
 }
