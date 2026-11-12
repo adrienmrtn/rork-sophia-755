@@ -243,7 +243,7 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Secretary_Kerry_Admires_Near-Full_Moon_Over_Shwedagon_Pagoda_During_Visit_to_Rangoon_(14876734904).jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "top"
   },
   "v5b_monument_st_peters": {
     "name": "St. Peter's Square and Basilica, photochrom, c. 1890-1900",
@@ -357,7 +357,13 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:American_Fall_from_Goat_Island,_Niagara-LCCN2008676327.jpg",
     "fit": "cover",
-    "focus": "center"
+    "focus": "center",
+    "crop": [
+      0.02,
+      0.02,
+      0.97,
+      0.97
+    ]
   },
   "v5b_monument_doges_palace": {
     "name": "Doge's Palace and Piazzetta, Venice, photochrom, 1890s",

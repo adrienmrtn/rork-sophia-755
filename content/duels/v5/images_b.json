@@ -248,7 +248,7 @@
  "v5b_monument_shwedagon": {
   "file": "Secretary Kerry Admires Near-Full Moon Over Shwedagon Pagoda During Visit to Rangoon (14876734904).jpg",
   "fit": "cover",
-  "focus": "center",
+  "focus": "top",
   "name": "Shwedagon Pagoda, Yangon (U.S. Department of State)"
  },
  "v5b_monument_us_capitol": {
@@ -315,7 +315,13 @@
   "file": "American Fall from Goat Island, Niagara-LCCN2008676327.jpg",
   "fit": "cover",
   "focus": "center",
-  "name": "American Fall from Goat Island, Niagara, Detroit Publishing Co., c. 1900"
+  "name": "American Fall from Goat Island, Niagara, Detroit Publishing Co., c. 1900",
+  "crop": [
+   0.02,
+   0.02,
+   0.97,
+   0.97
+  ]
  },
  "v5b_monument_doges_palace": {
   "file": "Doge's Palace and piazzetta, Venice, Italy, 1890s.jpg",
