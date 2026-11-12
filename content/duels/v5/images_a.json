@@ -238,7 +238,13 @@
     "file": "Portrait of José Rizal (1883).jpg",
     "fit": "cover",
     "focus": "top",
-    "name": "José Rizal, 1883"
+    "name": "José Rizal, 1883",
+    "crop": [
+      0.02,
+      0,
+      0.78,
+      0.95
+    ]
   },
   "v5a_liliuokalani": {
     "file": "Liliuokalani, c. 1891.jpg",
@@ -268,7 +274,13 @@
     "file": "Sofia Kovalevskaya.jpg",
     "fit": "cover",
     "focus": "top",
-    "name": "Sofia Kovalevskaya"
+    "name": "Sofia Kovalevskaya",
+    "crop": [
+      0.2,
+      0.15,
+      1,
+      0.9
+    ]
   },
   "v5a_alexander_von_humboldt": {
     "file": "Stieler, Joseph Karl - Alexander von Humboldt - 1843.jpg",
@@ -309,5 +321,10 @@
     "file": "Sir Peter Paul Rubens, The Fall of Phaeton, c. 1604-1605, probably reworked c. 1606-1608, NGA 71349.jpg",
     "fit": "contain",
     "name": "The Fall of Phaeton, Peter Paul Rubens, c. 1604-1608"
+  },
+  "v5a_arcimboldo_vertumnus": {
+    "file": "Giuseppe Arcimboldo - Rudolf II of Habsburg as Vertumnus - Google Art Project.jpg",
+    "fit": "contain",
+    "name": "Vertumnus (Rudolf II), Giuseppe Arcimboldo, c. 1590"
   }
 }

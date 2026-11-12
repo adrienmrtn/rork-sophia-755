@@ -446,7 +446,13 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_Jos%C3%A9_Rizal_(1883).jpg",
     "fit": "cover",
-    "focus": "top"
+    "focus": "top",
+    "crop": [
+      0.02,
+      0,
+      0.78,
+      0.95
+    ]
   },
   "v5a_sofia_kovalevskaya": {
     "name": "Sofia Kovalevskaya",
@@ -455,6 +461,12 @@
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Sofia_Kovalevskaya.jpg",
     "fit": "cover",
-    "focus": "top"
+    "focus": "top",
+    "crop": [
+      0.2,
+      0.15,
+      1,
+      0.9
+    ]
   }
 }
