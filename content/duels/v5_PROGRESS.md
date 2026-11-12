@@ -70,3 +70,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - it parts 8–14 fini ; vague 2 lancée pour ja (toutes les langues lancées)
 - da parts 8–14 fini
 - sv parts 8–14 fini ; images lot a fini (50) ; agent remplacements (5) lancé → v5/final_replacements.json
+- ru parts 8–14 fini
