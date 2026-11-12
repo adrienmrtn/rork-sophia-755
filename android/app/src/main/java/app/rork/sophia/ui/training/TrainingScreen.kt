@@ -1,13 +1,9 @@
 package app.rork.sophia.ui.training
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -15,17 +11,20 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.LockOpen
-import androidx.compose.material.icons.filled.Psychology
-import androidx.compose.material.icons.filled.RestartAlt
-import androidx.compose.material.icons.filled.VerifiedUser
+import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
@@ -36,12 +35,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.R
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.ProgressManager
@@ -57,20 +58,25 @@ import app.rork.sophia.domain.QuizScoring
 import app.rork.sophia.domain.QuizShuffler
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.AnimatedRewardBadge
-import app.rork.sophia.ui.components.RewardBadgeKind
 import app.rork.sophia.ui.components.AnswerOptionRow
 import app.rork.sophia.ui.components.AnswerState
-import app.rork.sophia.ui.components.CalmProgressBar
-import app.rork.sophia.ui.components.CircleIconButton
+import app.rork.sophia.ui.components.CoursePrimaryButton
+import app.rork.sophia.ui.components.CourseQuizQuestionHeader
+import app.rork.sophia.ui.components.CourseQuizTopBar
+import app.rork.sophia.ui.components.DSCheckBadge
 import app.rork.sophia.ui.components.FirstOpenExplanation
 import app.rork.sophia.ui.components.OrderingAnswerControl
-import app.rork.sophia.ui.components.SliderAnswerCard
 import app.rork.sophia.ui.components.QuizFeedbackPanel
+import app.rork.sophia.ui.components.RewardBadgeKind
+import app.rork.sophia.ui.components.SliderAnswerCard
 import app.rork.sophia.ui.components.SophiaPrimaryButton
+import app.rork.sophia.ui.components.TrueFalseAnswerCard
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.dsStagger
 import app.rork.sophia.ui.components.optionLetter
-import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.components.rememberHaptics
+import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.theme.DS
-import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 
 @Composable
@@ -130,72 +136,76 @@ fun TrainingScreen(
     }
 
     Box(modifier = modifier.fillMaxSize().background(DS.canvas)) {
-        Column(modifier = Modifier.fillMaxSize()) {
+        Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = StringStore.text(context, "training.title", language),
                 style = SophiaTypography.titleLarge,
-                modifier = Modifier.padding(start = DS.Space.l, end = DS.Space.l, top = DS.Space.m, bottom = 4.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 24.dp, end = 24.dp, top = DS.Space.m, bottom = 4.dp),
             )
+            // The illustration and its message, centred in the room above the button.
             Column(
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxWidth()
                     .verticalScroll(rememberScrollState())
-                    .padding(horizontal = DS.Space.l),
+                    .padding(horizontal = 24.dp, vertical = 24.dp),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                Spacer(Modifier.height(40.dp))
-                TrainingHero(
-                    icon = when {
-                        !isPremium -> Icons.Filled.Psychology
-                        due.isEmpty() -> Icons.Filled.VerifiedUser
-                        else -> Icons.Filled.RestartAlt
-                    },
-                )
-                Spacer(Modifier.height(24.dp))
-                when {
-                    !isPremium -> {
-                        TrainingCopy(
+                // One state at a time: each arrives with its own cascade.
+                val state = when {
+                    !isPremium -> TrainingEntry.Locked
+                    due.isEmpty() -> TrainingEntry.Done
+                    else -> TrainingEntry.Ready
+                }
+                key(state) {
+                    TrainingIllustration(badge = state)
+                    Spacer(Modifier.height(20.dp))
+                    when (state) {
+                        TrainingEntry.Locked -> TrainingCopy(
                             title = StringStore.text(context, "training.locked.title", language),
                             body = StringStore.text(context, "training.locked.message", language),
                         )
-                        Spacer(Modifier.height(24.dp))
-                        SophiaPrimaryButton(
-                            text = StringStore.text(
-                                context,
-                                if (app.tutorialFlags.seen(TutorialFlags.Id.TRAINING_ONBOARDING)) {
-                                    "training.unlock"
-                                } else {
-                                    "training.discover"
-                                },
-                                language,
-                            ),
-                            onClick = { showTrainingOb = true },
-                            leadingIcon = Icons.Filled.LockOpen,
-                            modifier = Modifier.padding(horizontal = 20.dp),
-                        )
-                    }
-                    due.isEmpty() -> {
-                        TrainingCopy(
+                        TrainingEntry.Done -> TrainingCopy(
                             title = StringStore.text(context, "training.emptyTitle", language),
                             body = StringStore.text(context, "training.emptyMessage", language),
                         )
-                    }
-                    else -> {
-                        TrainingCopy(
+                        TrainingEntry.Ready -> TrainingCopy(
                             title = StringStore.text(context, "training.readyTitle", language),
                             body = StringStore.text(context, "training.dueCount", language, due.size),
                         )
-                        Spacer(Modifier.height(24.dp))
-                        SophiaPrimaryButton(
-                            text = StringStore.text(context, "training.start", language),
-                            onClick = { sessionItems = due },
-                            modifier = Modifier.padding(horizontal = 20.dp),
-                        )
                     }
                 }
-                Spacer(Modifier.height(40.dp))
+            }
+            // The action, anchored at the bottom of the screen.
+            when {
+                !isPremium -> {
+                    val seenOnboarding = app.tutorialFlags.seen(TutorialFlags.Id.TRAINING_ONBOARDING)
+                    CoursePrimaryButton(
+                        text = StringStore.text(
+                            context,
+                            if (seenOnboarding) "training.unlock" else "training.discover",
+                            language,
+                        ),
+                        onClick = { showTrainingOb = true },
+                        leadingIcon = if (seenOnboarding) Icons.Filled.LockOpen else Icons.Outlined.StarOutline,
+                        modifier = Modifier
+                            .readableWidth()
+                            .padding(start = 24.dp, end = 24.dp, bottom = 24.dp)
+                            .dsStagger(3),
+                    )
+                }
+                due.isEmpty() -> Unit
+                else -> CoursePrimaryButton(
+                    text = StringStore.text(context, "training.start", language),
+                    onClick = { sessionItems = due },
+                    modifier = Modifier
+                        .readableWidth()
+                        .padding(start = 24.dp, end = 24.dp, bottom = 24.dp)
+                        .dsStagger(3),
+                )
             }
         }
         if (showExplain) {
@@ -213,13 +223,46 @@ fun TrainingScreen(
     }
 }
 
+/** What the entry of the training shows: questions to review, nothing left, or locked. */
+private enum class TrainingEntry { Ready, Done, Locked }
+
+/**
+ * The round illustration of the training, with a badge when everything is reviewed (a check
+ * that draws itself) or while it is locked (a padlock).
+ */
 @Composable
-private fun TrainingHero(icon: androidx.compose.ui.graphics.vector.ImageVector) {
-    Box(
-        modifier = Modifier.size(128.dp).clip(CircleShape).background(DS.accentTint),
-        contentAlignment = Alignment.Center,
-    ) {
-        Icon(icon, contentDescription = null, tint = DS.accent, modifier = Modifier.size(52.dp))
+private fun TrainingIllustration(badge: TrainingEntry) {
+    Box(modifier = Modifier.size(190.dp).dsPopIn().clearAndSetSemantics { }) {
+        Image(
+            painter = painterResource(R.drawable.training_poster),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize().clip(CircleShape).background(DS.accentTint),
+        )
+        when (badge) {
+            TrainingEntry.Ready -> Unit
+            TrainingEntry.Done -> Box(
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .padding(end = 6.dp, bottom = 6.dp)
+                    .background(DS.surface, CircleShape)
+                    .padding(3.dp),
+            ) {
+                DSCheckBadge(size = 38.dp, delayMillis = 250)
+            }
+            TrainingEntry.Locked -> Box(
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .padding(end = 6.dp, bottom = 6.dp)
+                    .background(DS.surface, CircleShape)
+                    .padding(3.dp)
+                    .size(38.dp)
+                    .background(DS.accentTint, CircleShape),
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(Icons.Filled.Lock, contentDescription = null, tint = DS.accent, modifier = Modifier.size(17.dp))
+            }
+        }
     }
 }
 
@@ -228,10 +271,20 @@ private fun TrainingCopy(title: String, body: String) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(10.dp),
-        modifier = Modifier.padding(horizontal = 12.dp),
+        modifier = Modifier.readableWidth().padding(horizontal = 8.dp),
     ) {
-        Text(text = title, style = SophiaTypography.titleLarge.copy(fontSize = 22.sp), textAlign = TextAlign.Center)
-        Text(text = body, style = SophiaTypography.bodyMedium, textAlign = TextAlign.Center)
+        Text(
+            text = title,
+            style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 31.sp),
+            textAlign = TextAlign.Center,
+            modifier = Modifier.dsStagger(1),
+        )
+        Text(
+            text = body,
+            style = SophiaTypography.bodyMedium.copy(fontSize = 16.sp, lineHeight = 24.sp),
+            textAlign = TextAlign.Center,
+            modifier = Modifier.dsStagger(2),
+        )
     }
 }
 
@@ -243,6 +296,7 @@ private fun TrainingSession(
     onDone: () -> Unit,
 ) {
     val context = LocalContext.current
+    val haptics = rememberHaptics()
     val shuffled = remember(items) { items.map { it.first to QuizShuffler.shuffle(it.second) } }
     var index by remember { mutableIntStateOf(0) }
     var selected by remember { mutableStateOf<Int?>(null) }
@@ -272,33 +326,46 @@ private fun TrainingSession(
     }
 
     if (finished) {
+        // The session is over: the reward vibration, once.
+        LaunchedEffect(Unit) { haptics.celebrate() }
         Column(
-            modifier = Modifier.fillMaxSize().background(DS.canvas).padding(DS.Space.l),
-            verticalArrangement = Arrangement.Center,
+            modifier = Modifier.fillMaxSize().background(DS.canvas),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Box(
-                modifier = Modifier.size(128.dp).clip(CircleShape).background(DS.successTint),
-                contentAlignment = Alignment.Center,
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState())
+                    .padding(24.dp),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                AnimatedRewardBadge(kind = RewardBadgeKind.Seal, size = 54.dp)
+                Box(
+                    modifier = Modifier.size(128.dp).dsPopIn().clip(CircleShape).background(DS.successTint),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    AnimatedRewardBadge(kind = RewardBadgeKind.Seal, size = 54.dp)
+                }
+                Spacer(Modifier.height(24.dp))
+                TrainingCopy(
+                    title = StringStore.text(context, "training.sessionComplete.title", language),
+                    body = StringStore.text(
+                        context,
+                        "training.sessionComplete.summary",
+                        language,
+                        correctCount,
+                        shuffled.size,
+                    ),
+                )
             }
-            Spacer(Modifier.height(24.dp))
-            TrainingCopy(
-                title = StringStore.text(context, "training.sessionComplete.title", language),
-                body = StringStore.text(
-                    context,
-                    "training.sessionComplete.summary",
-                    language,
-                    correctCount,
-                    shuffled.size,
-                ),
-            )
-            Spacer(Modifier.height(28.dp))
             SophiaPrimaryButton(
                 text = StringStore.text(context, "training.backToTraining", language),
                 onClick = onDone,
-                modifier = Modifier.padding(horizontal = 20.dp),
+                modifier = Modifier
+                    .readableWidth()
+                    .padding(start = 24.dp, end = 24.dp, bottom = 24.dp)
+                    .dsStagger(3),
             )
         }
         return
@@ -313,84 +380,109 @@ private fun TrainingSession(
         QuizQuestionType.NUMERIC_SLIDER, QuizQuestionType.PERCENTAGE_SLIDER -> true
     }
 
+    val subjectName = StringStore.text(context, "subject.${course.subjectEnum.storageKey}.short", language)
+    // « Question 2 sur 8 »: the eyebrow, and what TalkBack reads on the progress.
+    val questionCount = StringStore.text(context, "elevateCourse.quiz.questionOf", language, index + 1, shuffled.size)
+
+    fun optionState(i: Int): AnswerState = when {
+        answered && i == q.correctIndex -> AnswerState.Correct
+        answered && selected == i -> AnswerState.Wrong
+        answered -> AnswerState.Dimmed
+        selected == i -> AnswerState.Selected
+        else -> AnswerState.Idle
+    }
+
+    fun select(i: Int) {
+        if (selected != i) haptics.select()
+        selected = i
+    }
+
     Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l, vertical = 10.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            CircleIconButton(icon = Icons.Filled.Close, onClick = onDone)
-            CalmProgressBar(
-                fraction = (index + 1).toFloat() / shuffled.size,
-                modifier = Modifier.weight(1f),
-            )
-            Text(
-                text = "${index + 1}/${shuffled.size}",
-                style = SophiaTypography.labelMedium,
-            )
-        }
+        CourseQuizTopBar(
+            total = shuffled.size,
+            filled = index + 1,
+            closeLabel = StringStore.text(context, "common.close", language),
+            progressLabel = questionCount,
+            onClose = onDone,
+        )
 
         Column(
             modifier = Modifier
                 .weight(1f)
                 .fillMaxWidth()
                 .verticalScroll(rememberScrollState())
-                .padding(horizontal = DS.Space.l),
-            verticalArrangement = Arrangement.spacedBy(20.dp),
+                .padding(horizontal = 24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Spacer(Modifier.height(6.dp))
-            Column(
-                modifier = Modifier.fillMaxWidth().sophiaCard().padding(DS.Space.l),
-                verticalArrangement = Arrangement.spacedBy(10.dp),
-            ) {
-                Text(
-                    text = course.title,
-                    style = SophiaTypography.labelMedium.copy(color = DS.accentSoft, fontWeight = FontWeight.SemiBold),
-                    maxLines = 2,
-                )
-                Text(text = q.question, style = SophiaTypography.titleMedium.copy(fontSize = 20.sp))
-            }
-
-            when (q.type) {
-                QuizQuestionType.MCQ, QuizQuestionType.TRUE_FALSE -> {
-                    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                        q.options.forEachIndexed { i, option ->
-                            AnswerOptionRow(
-                                letter = optionLetter(i),
-                                text = option,
-                                state = when {
-                                    answered && i == q.correctIndex -> AnswerState.Correct
-                                    answered && selected == i -> AnswerState.Wrong
-                                    answered -> AnswerState.Dimmed
-                                    selected == i -> AnswerState.Selected
-                                    else -> AnswerState.Idle
-                                },
-                                enabled = !answered,
-                                onClick = { selected = i },
-                            )
-                        }
-                    }
-                }
-                QuizQuestionType.CHRONOLOGICAL -> OrderingAnswerControl(
-                    question = q,
-                    language = language,
-                    slots = orderSlots,
-                    pool = orderPool,
-                    answered = answered,
-                )
-                QuizQuestionType.NUMERIC_SLIDER, QuizQuestionType.PERCENTAGE_SLIDER ->
-                    SliderAnswerCard(
-                        question = q,
-                        language = language,
-                        value = sliderValue,
-                        onValueChange = { sliderValue = it },
-                        answered = answered,
+            // Each question arrives on its own: the statement, then its answers in cascade.
+            key(index) {
+                Column(
+                    modifier = Modifier.readableWidth().fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(26.dp),
+                ) {
+                    CourseQuizQuestionHeader(
+                        subject = course.subjectEnum,
+                        eyebrow = "$subjectName · $questionCount",
+                        question = q.question,
+                        // The course the question comes from.
+                        caption = course.title,
+                        modifier = Modifier.padding(top = 26.dp).dsStagger(0),
                     )
+
+                    when (q.type) {
+                        QuizQuestionType.MCQ, QuizQuestionType.TRUE_FALSE -> {
+                            if (q.type == QuizQuestionType.TRUE_FALSE && q.options.size == 2) {
+                                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                    q.options.forEachIndexed { i, option ->
+                                        TrueFalseAnswerCard(
+                                            text = option,
+                                            isTrue = i == 0,
+                                            state = optionState(i),
+                                            enabled = !answered,
+                                            onClick = { select(i) },
+                                            modifier = Modifier.weight(1f).dsStagger(i + 1),
+                                        )
+                                    }
+                                }
+                            } else {
+                                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                                    q.options.forEachIndexed { i, option ->
+                                        AnswerOptionRow(
+                                            letter = optionLetter(i),
+                                            text = option,
+                                            state = optionState(i),
+                                            enabled = !answered,
+                                            onClick = { select(i) },
+                                            modifier = Modifier.dsStagger(i + 1),
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                        QuizQuestionType.CHRONOLOGICAL -> OrderingAnswerControl(
+                            question = q,
+                            language = language,
+                            slots = orderSlots,
+                            pool = orderPool,
+                            answered = answered,
+                        )
+                        QuizQuestionType.NUMERIC_SLIDER, QuizQuestionType.PERCENTAGE_SLIDER ->
+                            SliderAnswerCard(
+                                question = q,
+                                language = language,
+                                value = sliderValue,
+                                onValueChange = { sliderValue = it },
+                                answered = answered,
+                                modifier = Modifier.dsStagger(1),
+                            )
+                    }
+                    Spacer(Modifier.height(6.dp))
+                }
             }
-            Spacer(Modifier.height(8.dp))
         }
 
         if (answered) {
+            // The verdict panel rises from the bottom; its « Continuer » vibrates by itself.
             QuizFeedbackPanel(
                 correct = lastCorrect,
                 title = StringStore.text(
@@ -414,18 +506,20 @@ private fun TrainingSession(
                 },
             )
         } else {
-            Box(modifier = Modifier.padding(horizontal = DS.Space.l, vertical = 16.dp)) {
-                SophiaPrimaryButton(
+            Box(modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 8.dp, bottom = 16.dp)) {
+                // No vibration on the press: the verdict vibrates at once.
+                CoursePrimaryButton(
                     text = StringStore.text(context, "quiz.validate", language),
                     enabled = canValidate,
+                    haptic = false,
                     onClick = {
                         val answer = when (q.type) {
                             QuizQuestionType.MCQ, QuizQuestionType.TRUE_FALSE ->
-                                QuizAnswer.SingleChoice(selected ?: return@SophiaPrimaryButton)
+                                QuizAnswer.SingleChoice(selected ?: return@CoursePrimaryButton)
                             QuizQuestionType.NUMERIC_SLIDER, QuizQuestionType.PERCENTAGE_SLIDER ->
                                 QuizAnswer.Value(sliderValue)
                             QuizQuestionType.CHRONOLOGICAL -> {
-                                if (orderSlots.any { it == null }) return@SophiaPrimaryButton
+                                if (orderSlots.any { it == null }) return@CoursePrimaryButton
                                 QuizAnswer.Order(orderSlots.filterNotNull())
                             }
                         }
@@ -446,6 +540,7 @@ private fun TrainingSession(
                         if (ok) correctCount += 1
                         progressManager.recordTrainingAnswer(q.id, course.id, ok)
                         answered = true
+                        if (ok) haptics.success() else haptics.error()
                     },
                 )
             }

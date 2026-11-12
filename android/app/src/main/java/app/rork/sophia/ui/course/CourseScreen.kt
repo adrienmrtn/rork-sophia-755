@@ -18,14 +18,9 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.WifiOff
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -42,7 +37,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
@@ -65,12 +59,25 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.FreemiumGate
 import app.rork.sophia.ui.audio.CourseReaderAudioButton
-import app.rork.sophia.ui.components.CalmProgressBar
-import app.rork.sophia.ui.components.CircleIconButton
+import app.rork.sophia.ui.components.CoursePalette
+import app.rork.sophia.ui.components.CoursePrimaryButton
+import app.rork.sophia.ui.components.CourseRoundIconButton
+import app.rork.sophia.ui.components.DSProgressBar
 import app.rork.sophia.ui.components.SophiaPrimaryButton
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.dsStagger
 import app.rork.sophia.ui.components.lockedContentBlur
+import app.rork.sophia.ui.components.rememberHaptics
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.newgen.BigHeartOverlay
-import app.rork.sophia.ui.newgen.SegmentedProgressBar
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.filled.MoreHoriz
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.style.TextOverflow
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -137,6 +144,8 @@ fun CourseScreen(
     }
     val scope = rememberCoroutineScope()
     val haptics = LocalHapticFeedback.current
+    // Le vocabulaire haptique du style, pour les gestes que ce lecteur n'accompagnait pas encore.
+    val elevateHaptics = rememberHaptics()
     // Le mode de lecture (pas à pas par défaut, par pages au choix), conservé sur l'appareil.
     var readingMode by remember { mutableStateOf(CourseReadingMode.current(context)) }
     var showModeMenu by remember { mutableStateOf(false) }
@@ -312,6 +321,18 @@ fun CourseScreen(
     // La section en cours : la page affichée, ou celle du dernier passage révélé.
     val currentSection = if (readingMode == CourseReadingMode.PAGES) pagerState.currentPage else stepSection
 
+    // Par pages : une vibration légère quand la section change (bouton ou glissement). Pas à pas,
+    // `advanceStep` vibre déjà à chaque passage.
+    var hapticPage by remember(course.id, language) { mutableIntStateOf(-1) }
+    LaunchedEffect(pagerState.currentPage, pagesReady, readingMode) {
+        if (!pagesReady || readingMode != CourseReadingMode.PAGES) {
+            hapticPage = -1
+            return@LaunchedEffect
+        }
+        if (hapticPage >= 0 && hapticPage != pagerState.currentPage) elevateHaptics.soft()
+        hapticPage = pagerState.currentPage
+    }
+
     LaunchedEffect(currentSection, pagesReady) {
         if (!pagesReady) return@LaunchedEffect
         val pageIndex = currentSection
@@ -404,7 +425,7 @@ fun CourseScreen(
     // de lecture (par pages et pas à pas).
     val sectionHeader: @Composable (Int, ReaderPage) -> Unit = { index, page ->
         // The title stays sharp; only the paid body is blurred.
-        Text(text = page.title, style = SophiaTypography.titleLarge)
+        ReaderSectionTitle(page.title)
         // The intro is the free page: who wrote the course belongs there.
         if (index == 0 && author != null) {
             AuthorByline(
@@ -462,24 +483,78 @@ fun CourseScreen(
 
     Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
+            // L'en-tête de la maquette : fermer, la progression fine par sections et son
+            // compteur, le mode de lecture, l'écoute.
+            val stepsMode = readingMode == CourseReadingMode.STEPS && steps.isNotEmpty()
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = DS.Space.s, vertical = 8.dp),
+                    .padding(start = 20.dp, end = 20.dp, top = 10.dp, bottom = 6.dp),
                 verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                CircleIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onDismiss)
-                Text(
-                    text = course.title,
-                    style = SophiaTypography.titleMedium.copy(fontSize = 16.sp),
-                    maxLines = 1,
-                    modifier = Modifier.weight(1f).padding(horizontal = 12.dp),
+                CourseRoundIconButton(
+                    icon = Icons.Filled.Close,
+                    onClick = onDismiss,
+                    contentDescription = StringStore.text(context, "common.close", language),
+                    size = 42.dp,
                 )
+                // Une capsule par section, remplies jusqu'à la courante (maquette) ; au-delà de douze
+                // sections les capsules deviendraient des pointillés, la barre continue reprend.
+                // Pas à pas, chaque capsule se remplit passage après passage.
+                val sectionLabel = if (pages.isEmpty()) {
+                    ""
+                } else {
+                    StringStore.text(context, "common.sectionOf", language, currentSection + 1, pages.size)
+                }
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(horizontal = 2.dp)
+                        .clearAndSetSemantics { contentDescription = sectionLabel },
+                ) {
+                    if (pages.size in 1..12) {
+                        SteppedProgressBar(
+                            fills = pages.indices.map { section ->
+                                if (stepsMode) {
+                                    sectionFill(steps, revealed, section)
+                                } else if (section <= pagerState.currentPage) {
+                                    1f
+                                } else {
+                                    0f
+                                }
+                            },
+                        )
+                    } else {
+                        DSProgressBar(
+                            value = when {
+                                pages.isEmpty() -> 0f
+                                stepsMode -> revealed.toFloat() / steps.size
+                                else -> (pagerState.currentPage + 1).toFloat() / pages.size
+                            },
+                            height = 5.dp,
+                            track = CoursePalette.track,
+                        )
+                    }
+                }
+                if (pages.isNotEmpty()) {
+                    Text(
+                        text = "${currentSection + 1} / ${pages.size}",
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 13.sp,
+                        color = DS.inkSecondary,
+                        maxLines = 1,
+                        modifier = Modifier.clearAndSetSemantics { },
+                    )
+                }
                 // Le choix du mode de lecture : pas à pas ou par pages, pour tous les cours.
                 Box {
-                    CircleIconButton(
-                        icon = if (readingMode == CourseReadingMode.STEPS) Icons.Filled.ViewDay else Icons.Filled.AutoStories,
+                    CourseRoundIconButton(
+                        icon = Icons.Filled.MoreHoriz,
                         onClick = { showModeMenu = true },
+                        contentDescription = StringStore.text(context, "course.readingMode", language),
+                        size = 42.dp,
                     )
                     DropdownMenu(expanded = showModeMenu, onDismissRequest = { showModeMenu = false }) {
                         CourseReadingMode.entries.forEach { mode ->
@@ -510,33 +585,17 @@ fun CourseScreen(
                     onOpenPlayer = onOpenAudio,
                 )
             }
-            // Une capsule par section, remplies jusqu'à la courante (maquette) ; au-delà de douze
-            // sections les capsules deviendraient des pointillés, la barre continue reprend.
-            // Pas à pas, chaque capsule se remplit passage après passage.
-            val stepsMode = readingMode == CourseReadingMode.STEPS && steps.isNotEmpty()
-            if (pages.size in 1..12) {
-                if (stepsMode) {
-                    SteppedProgressBar(
-                        fills = pages.indices.map { sectionFill(steps, revealed, it) },
-                        modifier = Modifier.padding(horizontal = DS.Space.l),
-                    )
-                } else {
-                    SegmentedProgressBar(
-                        count = pages.size,
-                        current = pagerState.currentPage,
-                        modifier = Modifier.padding(horizontal = DS.Space.l),
-                    )
-                }
-            } else {
-                CalmProgressBar(
-                    fraction = when {
-                        pages.isEmpty() -> 0f
-                        stepsMode -> revealed.toFloat() / steps.size
-                        else -> (pagerState.currentPage + 1).toFloat() / pages.size
-                    },
-                    modifier = Modifier.padding(horizontal = DS.Space.l),
-                )
-            }
+            // Le titre du cours, en légende discrète sous l'en-tête.
+            Text(
+                text = course.title,
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 13.sp,
+                color = DS.inkSecondary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp).padding(bottom = 4.dp),
+            )
 
             if (!pagesReady) {
                 Box(
@@ -587,7 +646,7 @@ fun CourseScreen(
                                     verticalArrangement = Arrangement.spacedBy(DS.Space.m),
                                 ) {
                                     if (page != null) {
-                                        Text(text = page.title, style = SophiaTypography.titleLarge)
+                                        ReaderSectionTitle(page.title)
                                         Column(
                                             modifier = Modifier.lockedContentBlur(true),
                                             verticalArrangement = Arrangement.spacedBy(DS.Space.m),
@@ -623,13 +682,13 @@ fun CourseScreen(
                             modifier = Modifier
                                 .fillMaxSize()
                                 .verticalScroll(rememberScrollState(), enabled = !locked)
-                                .padding(DS.Space.l),
-                            verticalArrangement = Arrangement.spacedBy(DS.Space.m),
+                                .padding(horizontal = 24.dp, vertical = DS.Space.l),
+                            verticalArrangement = Arrangement.spacedBy(DS.Space.l),
                         ) {
                             sectionHeader(index, page)
                             Column(
                                 modifier = Modifier.lockedContentBlur(locked),
-                                verticalArrangement = Arrangement.spacedBy(DS.Space.m),
+                                verticalArrangement = Arrangement.spacedBy(DS.Space.l),
                             ) {
                                 page.blocks.forEach { block ->
                                     ReaderBlockView(
@@ -656,7 +715,7 @@ fun CourseScreen(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(DS.Space.l),
+                    .padding(start = 24.dp, end = 24.dp, top = 8.dp, bottom = 24.dp),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 // Sans pages (téléchargement en cours, hors ligne), rien n'est « dernier » : le
@@ -667,24 +726,32 @@ fun CourseScreen(
                     pagerState.currentPage >= pages.lastIndex
                 }
                 val courseLocked = !isPremium && !isDailyFreeCourse
-                SophiaPrimaryButton(
+                // « Terminer le cours » porte une coche ; « Continuer » et « Quiz » une flèche.
+                val finishing = isLast && !courseLocked && !course.hasQuiz
+                // Le CTA bleu du style, sans vibration propre : chaque geste choisit la sienne
+                // (pas à pas dans `advanceStep` ; par pages, au changement de section ; la fin du
+                // cours fête elle-même).
+                CoursePrimaryButton(
                     text = when {
                         courseLocked || !isLast -> StringStore.text(context, "course.continue", language)
                         course.hasQuiz -> StringStore.text(context, "course.quiz", language)
                         else -> StringStore.text(context, "course.finish", language)
                     },
                     enabled = pagesReady,
+                    haptic = false,
+                    leadingIcon = if (finishing) Icons.Filled.Check else null,
+                    trailingIcon = if (finishing) null else Icons.AutoMirrored.Filled.ArrowForward,
                     onClick = {
-                        if (!pagesReady) return@SophiaPrimaryButton
+                        if (!pagesReady) return@CoursePrimaryButton
                         if (readingMode == CourseReadingMode.STEPS) {
                             advanceStep()
-                            return@SophiaPrimaryButton
+                            return@CoursePrimaryButton
                         }
                         if (courseLocked) {
                             if (!isLast) {
                                 scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                             }
-                            return@SophiaPrimaryButton
+                            return@CoursePrimaryButton
                         }
                         if (isLast) {
                             finishCourse()
@@ -725,29 +792,42 @@ fun GlossaryTermCoachmark(
             .padding(DS.Space.l),
         contentAlignment = Alignment.BottomCenter,
     ) {
+        // La carte du style : blanche, bordée, qui monte en se posant.
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(DS.surface, DS.cardShape)
-                .padding(DS.Space.m),
+                .dsStagger(0, offset = 24.dp)
+                .sophiaCard()
+                .padding(DS.Space.l),
         ) {
             Text(
                 text = StringStore.text(context, "explain.course.title", language),
-                style = SophiaTypography.titleMedium,
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 19.sp,
+                lineHeight = 25.sp,
+                color = DS.ink,
             )
             Spacer(Modifier.height(8.dp))
             Text(text = body, style = SophiaTypography.bodyMedium)
             Spacer(Modifier.height(16.dp))
-            Button(
-                onClick = onDismiss,
-                modifier = Modifier.fillMaxWidth().height(48.dp),
-                shape = DS.controlShape,
-                colors = ButtonDefaults.buttonColors(containerColor = DS.accent),
-            ) {
-                Text("OK", color = Color.White, fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold)
-            }
+            SophiaPrimaryButton(text = "OK", onClick = onDismiss)
         }
     }
+}
+
+/** Le titre d'une section : graisse moyenne, interlignage posé, annoncé comme un titre. */
+@Composable
+private fun ReaderSectionTitle(text: String) {
+    Text(
+        text = text,
+        fontFamily = PlusJakartaSans,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 24.sp,
+        lineHeight = 31.sp,
+        color = DS.ink,
+        modifier = Modifier.padding(top = 6.dp).semantics { heading() },
+    )
 }
 
 private const val PREFETCH_IMAGES = 4
@@ -786,27 +866,38 @@ private fun ReaderContentPlaceholder(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Icon(
-                imageVector = Icons.Filled.WifiOff,
-                contentDescription = null,
-                tint = DS.inkTertiary,
-                modifier = Modifier.size(36.dp),
-            )
+            Box(
+                modifier = Modifier.size(88.dp).dsPopIn().background(DS.accentTint, CircleShape),
+                contentAlignment = Alignment.Center,
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.WifiOff,
+                    contentDescription = null,
+                    tint = DS.accent,
+                    modifier = Modifier.size(36.dp),
+                )
+            }
             Text(
                 text = StringStore.text(context, "course.offline.title", language),
-                style = SophiaTypography.titleMedium,
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 20.sp,
+                lineHeight = 26.sp,
+                color = DS.ink,
                 textAlign = TextAlign.Center,
+                modifier = Modifier.padding(top = 6.dp).dsStagger(1),
             )
             Text(
                 text = StringStore.text(context, "course.offline.body", language),
                 style = SophiaTypography.bodyMedium,
                 color = DS.inkSecondary,
                 textAlign = TextAlign.Center,
+                modifier = Modifier.dsStagger(2),
             )
             SophiaPrimaryButton(
                 text = StringStore.text(context, "course.offline.retry", language),
                 onClick = onRetry,
-                modifier = Modifier.padding(top = 4.dp),
+                modifier = Modifier.padding(top = 4.dp).dsStagger(3),
             )
         }
     } else {
@@ -868,24 +959,25 @@ private fun OriginalCourseOverlay(
             .pointerInput(Unit) { detectTapGestures { } },
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(start = 20.dp, end = 20.dp, top = 12.dp, bottom = 10.dp),
+            modifier = Modifier.fillMaxWidth().padding(start = 24.dp, end = 20.dp, top = 10.dp, bottom = 10.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             Icon(imageVector = Icons.Filled.Public, contentDescription = null, tint = DS.accent, modifier = Modifier.size(18.dp))
             Text(
                 text = original.displayName,
-                style = SophiaTypography.titleMedium,
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 18.sp,
                 color = DS.ink,
                 modifier = Modifier.weight(1f),
             )
-            IconButton(onClick = onClose) {
-                Icon(
-                    imageVector = Icons.Filled.Close,
-                    contentDescription = StringStore.text(context, "common.close", language),
-                    tint = DS.ink,
-                )
-            }
+            CourseRoundIconButton(
+                icon = Icons.Filled.Close,
+                onClick = onClose,
+                contentDescription = StringStore.text(context, "common.close", language),
+                size = 42.dp,
+            )
         }
         val loaded = pages
         when {
@@ -898,12 +990,12 @@ private fun OriginalCourseOverlay(
                         modifier = Modifier
                             .fillMaxSize()
                             .verticalScroll(rememberScrollState())
-                            .padding(start = 20.dp, end = 20.dp, top = 8.dp, bottom = 40.dp),
+                            .padding(start = 24.dp, end = 24.dp, top = 8.dp, bottom = 40.dp),
                         verticalArrangement = Arrangement.spacedBy(40.dp),
                     ) {
                         loaded.forEach { page ->
-                            Column(verticalArrangement = Arrangement.spacedBy(DS.Space.m)) {
-                                Text(text = page.title, style = SophiaTypography.titleLarge)
+                            Column(verticalArrangement = Arrangement.spacedBy(DS.Space.l)) {
+                                ReaderSectionTitle(page.title)
                                 page.blocks.forEach { block ->
                                     ReaderBlockView(block = block, language = original, courseId = course.id, locked = false)
                                 }

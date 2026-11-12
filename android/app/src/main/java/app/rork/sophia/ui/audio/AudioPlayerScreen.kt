@@ -86,11 +86,15 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.Subject
 import app.rork.sophia.domain.locale
-import app.rork.sophia.ui.components.CircleIconButton
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.animateFloatAsState
+import app.rork.sophia.ui.components.CourseRoundIconButton
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.components.SectionLabel
 import app.rork.sophia.ui.components.SophiaSecondaryButton
 import app.rork.sophia.ui.components.sophiaCard
-import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -148,21 +152,26 @@ private fun PlayerPageContent(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.l, vertical = 10.dp),
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 10.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            CircleIconButton(icon = Icons.Filled.KeyboardArrowDown, onClick = onClose)
+            CourseRoundIconButton(
+                icon = Icons.Filled.KeyboardArrowDown,
+                onClick = onClose,
+                contentDescription = t("audio.close"),
+            )
+            // The eyebrow of the style: small tracked capitals, in blue.
             Text(
                 text = t("audio.nowPlaying").uppercase(language.locale),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.ExtraBold,
                 fontSize = 11.sp,
-                letterSpacing = 1.2.sp,
-                color = DS.inkTertiary,
+                letterSpacing = 0.9.sp,
+                color = DS.accent,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.weight(1f),
             )
-            Spacer(Modifier.size(40.dp))
+            Spacer(Modifier.size(44.dp))
         }
 
         Column(
@@ -174,18 +183,24 @@ private fun PlayerPageContent(
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Spacer(Modifier.height(8.dp))
+            // The cover breathes with the playback: it settles back a little on pause.
+            val coverScale by animateFloatAsState(
+                targetValue = if (state.isPlaying) 1f else 0.9f,
+                animationSpec = DSMotion.reveal(),
+                label = "audioCover",
+            )
             AudioCover(
                 courseId = item.courseId,
-                corner = DS.Radius.card,
+                corner = 24.dp,
                 modifier = Modifier
                     .fillMaxWidth(0.82f)
                     .aspectRatio(1f)
-                    .scale(if (state.isPlaying) 1f else 0.9f),
+                    .scale(coverScale),
             )
             Spacer(Modifier.height(22.dp))
             Text(
                 text = summary?.title ?: "Sophia",
-                style = SophiaTypography.titleLarge.copy(fontSize = 21.sp, lineHeight = 27.sp),
+                style = SophiaTypography.titleLarge.copy(fontSize = 22.sp, lineHeight = 29.sp),
                 textAlign = TextAlign.Center,
                 maxLines = 3,
                 overflow = TextOverflow.Ellipsis,
@@ -216,7 +231,7 @@ private fun PlayerPageContent(
                         t("audio.retry"),
                         color = DS.accentSoft,
                         fontWeight = FontWeight.SemiBold,
-                        modifier = Modifier.softPress(onClick = { CourseAudioPlayer.resume() }),
+                        modifier = Modifier.pressable(onClick = { CourseAudioPlayer.resume() }),
                     )
                 }
             }
@@ -253,10 +268,14 @@ private fun Scrubber() {
                 dragging = false
             },
             enabled = duration > 0,
+            // The blue bar of the style on its pale blue track.
             colors = SliderDefaults.colors(
                 thumbColor = DS.accent,
                 activeTrackColor = DS.accent,
-                inactiveTrackColor = DS.hairline,
+                inactiveTrackColor = DS.accentTint,
+                disabledThumbColor = DS.hairline,
+                disabledActiveTrackColor = DS.hairline,
+                disabledInactiveTrackColor = DS.accentTint,
             ),
         )
         Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
@@ -284,15 +303,16 @@ private fun Transport(language: AppLanguage) {
             SkipButton(forward = false, label = StringStore.text(context, "audio.skipBack", language)) {
                 CourseAudioPlayer.skip(-CourseAudioPlayer.SKIP_MS)
             }
+            // The round blue play button; its own vibration stays, the elastic press adds none.
             Box(
                 modifier = Modifier
                     .size(78.dp)
-                    .clip(CircleShape)
-                    .background(DS.accent)
-                    .softPress(onClick = {
+                    .pressable(scaleDown = 0.92f, haptic = false, onClick = {
                         haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                         CourseAudioPlayer.togglePlayPause()
-                    }),
+                    })
+                    .clip(CircleShape)
+                    .background(DS.accent),
                 contentAlignment = Alignment.Center,
             ) {
                 Icon(
@@ -312,7 +332,7 @@ private fun Transport(language: AppLanguage) {
                     .align(Alignment.CenterEnd)
                     .size(44.dp)
                     .clip(CircleShape)
-                    .softPress(onClick = { CourseAudioPlayer.skipToNext() }),
+                    .pressable(onClick = { CourseAudioPlayer.skipToNext() }, scaleDown = 0.9f),
                 contentAlignment = Alignment.Center,
             ) {
                 Icon(Icons.Filled.SkipNext, contentDescription = StringStore.text(context, "audio.next", language), tint = DS.ink)
@@ -325,7 +345,7 @@ private fun Transport(language: AppLanguage) {
 @Composable
 private fun SkipButton(forward: Boolean, label: String, onClick: () -> Unit) {
     Box(
-        modifier = Modifier.size(52.dp).clip(CircleShape).softPress(onClick = onClick),
+        modifier = Modifier.size(52.dp).clip(CircleShape).pressable(onClick = onClick, scaleDown = 0.9f),
         contentAlignment = Alignment.Center,
     ) {
         Icon(
@@ -347,9 +367,9 @@ private fun SpeedCard(language: AppLanguage) {
         // Changed elsewhere (a Bluetooth control, another screen).
         if (abs(state.rate - value) > 0.001f) value = state.rate
     }
-    Column(modifier = Modifier.fillMaxWidth().sophiaCard(shape = DS.controlShape, elevation = 2.dp).padding(16.dp)) {
+    Column(modifier = Modifier.fillMaxWidth().sophiaCard().padding(16.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            Icon(Icons.Filled.Speed, contentDescription = null, tint = DS.accentSoft, modifier = Modifier.size(18.dp))
+            Icon(Icons.Filled.Speed, contentDescription = null, tint = DS.accent, modifier = Modifier.size(18.dp))
             Text(
                 StringStore.text(context, "audio.speed", language),
                 style = SophiaTypography.bodyLarge.copy(fontWeight = FontWeight.SemiBold),
@@ -367,14 +387,14 @@ private fun SpeedCard(language: AppLanguage) {
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 12.sp,
-                    color = DS.inkSecondary,
+                    color = DS.accent,
                     modifier = Modifier
-                        .clip(CircleShape)
-                        .background(DS.accentTint)
-                        .softPress(onClick = {
+                        .pressable(onClick = {
                             value = 1f
                             CourseAudioPlayer.setRate(1f)
                         })
+                        .clip(CircleShape)
+                        .background(DS.accentTint)
                         .padding(horizontal = 10.dp, vertical = 4.dp),
                 )
             }
@@ -391,7 +411,7 @@ private fun SpeedCard(language: AppLanguage) {
             colors = SliderDefaults.colors(
                 thumbColor = DS.accent,
                 activeTrackColor = DS.accent,
-                inactiveTrackColor = DS.hairline,
+                inactiveTrackColor = DS.accentTint,
                 activeTickColor = DS.accent.copy(alpha = 0f),
                 inactiveTickColor = DS.hairline.copy(alpha = 0f),
             ),
@@ -480,8 +500,8 @@ private fun ActionTile(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .sophiaCard(shape = DS.controlShape, elevation = 2.dp)
-            .softPress(onClick = onClick)
+            .pressable(onClick = onClick)
+            .sophiaCard()
             .padding(vertical = 12.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(4.dp),
@@ -538,7 +558,7 @@ private fun SuggestionsSection(courseId: String, language: AppLanguage, onBrowse
             style = SophiaTypography.titleMedium.copy(fontSize = 17.sp),
         )
         if (suggestions.isNotEmpty()) {
-            Column(modifier = Modifier.fillMaxWidth().sophiaCard(shape = DS.controlShape, elevation = 2.dp).padding(horizontal = 12.dp)) {
+            Column(modifier = Modifier.fillMaxWidth().sophiaCard().padding(horizontal = 12.dp)) {
                 suggestions.forEachIndexed { index, course ->
                     if (index > 0) HorizontalDivider(color = DS.hairline, modifier = Modifier.padding(start = 58.dp))
                     AudioAddRow(course = course, language = language)
@@ -573,7 +593,7 @@ private fun AudioAddRow(course: CourseSummary, language: AppLanguage) {
             horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             AudioCover(course.id, modifier = Modifier.size(46.dp), corner = 8.dp)
-            Column(modifier = Modifier.weight(1f).softPress(onClick = { menu = true })) {
+            Column(modifier = Modifier.weight(1f).pressable(onClick = { menu = true })) {
                 Text(
                     course.title,
                     fontFamily = PlusJakartaSans,
@@ -593,7 +613,7 @@ private fun AudioAddRow(course: CourseSummary, language: AppLanguage) {
                 modifier = Modifier
                     .size(40.dp)
                     .clip(CircleShape)
-                    .softPress(enabled = !isCurrent, onClick = {
+                    .pressable(enabled = !isCurrent, haptic = false, scaleDown = 0.9f, onClick = {
                         if (queued) {
                             CourseAudioPlayer.removeFromQueue(course.id)
                         } else if (CourseAudioPlayer.requestEnqueue(course.id, next = false)) {
@@ -653,7 +673,7 @@ private fun AudioQueuePage(language: AppLanguage, onBack: () -> Unit) {
                             color = DS.danger,
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 13.sp,
-                            modifier = Modifier.softPress(onClick = { CourseAudioPlayer.clearQueue() }).padding(bottom = 8.dp),
+                            modifier = Modifier.pressable(onClick = { CourseAudioPlayer.clearQueue() }).padding(bottom = 8.dp),
                         )
                     }
                 }
@@ -696,7 +716,7 @@ private fun QueueRow(
         horizontalArrangement = Arrangement.spacedBy(10.dp),
     ) {
         AudioCover(item.courseId, modifier = Modifier.size(46.dp), corner = 8.dp)
-        Column(modifier = Modifier.weight(1f).softPress(enabled = onPlay != null, onClick = { onPlay?.invoke() })) {
+        Column(modifier = Modifier.weight(1f).pressable(enabled = onPlay != null, onClick = { onPlay?.invoke() })) {
             Text(
                 summary?.title ?: item.courseId,
                 fontFamily = PlusJakartaSans,
@@ -721,7 +741,7 @@ private fun QueueRow(
 @Composable
 private fun SmallIcon(icon: ImageVector, onClick: (() -> Unit)?, tint: androidx.compose.ui.graphics.Color = DS.inkSecondary) {
     Box(
-        modifier = Modifier.size(34.dp).clip(CircleShape).softPress(enabled = onClick != null, onClick = { onClick?.invoke() }),
+        modifier = Modifier.size(34.dp).clip(CircleShape).pressable(enabled = onClick != null, onClick = { onClick?.invoke() }),
         contentAlignment = Alignment.Center,
     ) {
         Icon(icon, contentDescription = null, tint = if (onClick != null) tint else DS.hairline, modifier = Modifier.size(18.dp))
@@ -756,7 +776,7 @@ private fun AudioBrowsePage(language: AppLanguage, onBack: () -> Unit) {
                     .fillMaxWidth()
                     .clip(DS.controlShape)
                     .background(DS.surface)
-                    .border(1.dp, DS.hairline, DS.controlShape)
+                    .border(1.5.dp, DS.hairline, DS.controlShape)
                     .padding(horizontal = 16.dp, vertical = 13.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
@@ -809,17 +829,24 @@ private fun AudioBrowsePage(language: AppLanguage, onBack: () -> Unit) {
 
 @Composable
 private fun Chip(text: String, selected: Boolean, onClick: () -> Unit) {
+    // A filter of the style: white and bordered at rest, tinted and ringed in blue once chosen.
+    val haptics = rememberHaptics()
+    val fill by animateColorAsState(if (selected) DS.accentTint else DS.surface, DSMotion.snappy(), label = "chipFill")
+    val edge by animateColorAsState(if (selected) DS.accent else DS.hairline, DSMotion.snappy(), label = "chipEdge")
     Text(
         text = text,
         fontFamily = PlusJakartaSans,
-        fontWeight = FontWeight.SemiBold,
+        fontWeight = if (selected) FontWeight.Bold else FontWeight.SemiBold,
         fontSize = 14.sp,
-        color = if (selected) DS.surface else DS.ink,
+        color = if (selected) DS.accent else DS.ink,
         modifier = Modifier
+            .pressable(haptic = false, onClick = {
+                if (!selected) haptics.select()
+                onClick()
+            })
             .clip(CircleShape)
-            .background(if (selected) DS.accent else DS.surface)
-            .border(if (selected) 0.dp else 1.dp, DS.hairline, CircleShape)
-            .softPress(onClick = onClick)
+            .background(fill)
+            .border(1.5.dp, edge, CircleShape)
             .padding(horizontal = 14.dp, vertical = 8.dp),
     )
 }
@@ -828,17 +855,22 @@ private fun Chip(text: String, selected: Boolean, onClick: () -> Unit) {
 internal fun SubPage(title: String, language: AppLanguage, onBack: () -> Unit, content: @Composable () -> Unit) {
     Column(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = DS.Space.s, vertical = 8.dp),
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 10.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            CircleIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onBack)
+            CourseRoundIconButton(icon = Icons.AutoMirrored.Filled.ArrowBack, onClick = onBack)
             Text(
                 text = title,
-                style = SophiaTypography.titleMedium.copy(fontSize = 17.sp),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 18.sp,
+                color = DS.ink,
+                textAlign = TextAlign.Center,
+                overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.padding(horizontal = 12.dp).weight(1f),
                 maxLines = 1,
             )
-            Spacer(Modifier.width(40.dp))
+            Spacer(Modifier.width(44.dp))
         }
         content()
     }

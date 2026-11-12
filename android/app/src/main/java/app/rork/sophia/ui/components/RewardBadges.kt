@@ -34,11 +34,15 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
-/** The streak colours: pink at the base of the flame, orange, yellow at the tip (iOS). */
+/**
+ * The three tones of the streak flame, from its base to its tip. The names date from the old
+ * pink flame; they now carry the saffron of the « Elevate arrondi » style (#E6B233, the tint
+ * of `DSFlame`) and its neighbours, as on iOS.
+ */
 object StreakColors {
-    val pink = Color(red = 0.96f, green = 0.30f, blue = 0.56f)
-    val orange = Color(red = 1.0f, green = 0.55f, blue = 0.18f)
-    val yellow = Color(red = 1.0f, green = 0.84f, blue = 0.35f)
+    val pink = Color(red = 0.851f, green = 0.596f, blue = 0.118f)
+    val orange = Color(red = 0.902f, green = 0.698f, blue = 0.200f)
+    val yellow = Color(red = 0.969f, green = 0.843f, blue = 0.455f)
 }
 
 /**
@@ -119,7 +123,7 @@ fun AnimatedRewardBadge(
     }
 }
 
-/** The streak flame: pink → orange → yellow, a pink halo and a lively beat (iOS). */
+/** The small streak flame: the saffron gradient of the style, a discreet halo and a lively beat (iOS). */
 @Composable
 fun AnimatedFlameBadge(
     modifier: Modifier = Modifier,
@@ -148,7 +152,7 @@ fun AnimatedFlameBadge(
     } else {
         0f
     }
-    BadgeFrame(modifier = modifier, size = size, glow = StreakColors.pink, showGlow = showGlow, glowAlpha = 0.35f) {
+    BadgeFrame(modifier = modifier, size = size, glow = StreakColors.orange, showGlow = showGlow, glowAlpha = 0.28f) {
         GradientIcon(
             icon = Icons.Filled.LocalFireDepartment,
             colors = listOf(StreakColors.pink, StreakColors.orange, StreakColors.yellow),

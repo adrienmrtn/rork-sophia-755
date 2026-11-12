@@ -17,16 +17,22 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathEffect
+import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.style.ResolvedTextDirection
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.GlossaryEntry
 import app.rork.sophia.data.GlossaryStore
 import app.rork.sophia.data.analytics.Analytics
@@ -60,20 +66,23 @@ fun RichTextWithGlossary(
         parseSegments(raw) { term -> GlossaryStore.hasEntry(language, courseId, term) }
     }
     var openEntry by remember { mutableStateOf<GlossaryEntry?>(null) }
+    val haptics = rememberHaptics()
 
     // Parsing only asks whether a term exists, which is a map hit on a preloaded
     // table; the entry itself is read on tap. Scanning the 2k glossary rows per
     // [[term]] during composition is what froze MainActivity for 15s on course open.
-    val annotated = remember(segments) {
+    val annotated = remember(segments, color) {
         buildAnnotatedString {
             segments.forEach { seg ->
                 if (seg.term != null) {
                     pushStringAnnotation(tag = "glossary", annotation = seg.term)
+                    // A term of the glossary: bold, in the colour of the text; its dotted
+                    // underline is drawn under the line (a span can only draw a solid one).
                     withStyle(
                         SpanStyle(
-                            color = DS.accentSoft,
-                            textDecoration = TextDecoration.Underline,
-                            fontWeight = FontWeight.SemiBold,
+                            color = color,
+                            fontWeight = FontWeight.Bold,
+                            fontStyle = if (seg.italic) FontStyle.Italic else null,
                         ),
                     ) { append(seg.text) }
                     pop()
@@ -83,14 +92,58 @@ fun RichTextWithGlossary(
             }
         }
     }
+    val terms = remember(annotated) { annotated.getStringAnnotations("glossary", 0, annotated.length) }
+    var layout by remember(annotated) { mutableStateOf<TextLayoutResult?>(null) }
 
     ClickableText(
         text = annotated,
-        style = SophiaTypography.bodyLarge.copy(color = color),
+        // Reading comfort first: the body in ink, with a generous line height.
+        style = SophiaTypography.bodyLarge.copy(color = color, fontSize = 17.sp, lineHeight = 28.sp),
+        modifier = Modifier.drawBehind {
+            val result = layout ?: return@drawBehind
+            if (terms.isEmpty()) return@drawBehind
+            val stroke = 1.5.dp.toPx()
+            val effect = PathEffect.dashPathEffect(floatArrayOf(stroke, stroke * 1.6f))
+            val textLength = result.layoutInput.text.length
+            terms.forEach { term ->
+                if (term.start >= term.end || term.end > textLength) return@forEach
+                val firstLine = result.getLineForOffset(term.start)
+                val lastLine = result.getLineForOffset(term.end - 1)
+                for (line in firstLine..lastLine) {
+                    val from = maxOf(term.start, result.getLineStart(line))
+                    val to = minOf(term.end, result.getLineEnd(line, visibleEnd = true))
+                    if (from >= to) continue
+                    val x1 = result.getHorizontalPosition(from, usePrimaryDirection = true)
+                    val x2 = if (to >= result.getLineEnd(line, visibleEnd = true)) {
+                        // The end of a line: its edge on the side the text runs towards.
+                        if (result.getParagraphDirection(from) == ResolvedTextDirection.Ltr) {
+                            result.getLineRight(line)
+                        } else {
+                            result.getLineLeft(line)
+                        }
+                    } else {
+                        result.getHorizontalPosition(to, usePrimaryDirection = true)
+                    }
+                    val y = result.getLineBaseline(line) + 4.dp.toPx()
+                    drawLine(
+                        color = color,
+                        start = Offset(minOf(x1, x2), y),
+                        end = Offset(maxOf(x1, x2), y),
+                        strokeWidth = stroke,
+                        cap = StrokeCap.Round,
+                        pathEffect = effect,
+                    )
+                }
+            }
+        },
+        onTextLayout = { layout = it },
         onClick = { offset ->
             annotated.getStringAnnotations("glossary", offset, offset).firstOrNull()?.let { ann ->
                 openEntry = GlossaryStore.entry(context, language, courseId, ann.item)
-                if (openEntry != null) Analytics.log("glossary_open", courseId = courseId, props = mapOf("term" to ann.item))
+                if (openEntry != null) {
+                    haptics.soft()
+                    Analytics.log("glossary_open", courseId = courseId, props = mapOf("term" to ann.item))
+                }
             }
         },
     )
@@ -100,17 +153,25 @@ fun RichTextWithGlossary(
             onDismissRequest = { openEntry = null },
             sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
             containerColor = DS.surface,
-            shape = RoundedCornerShape(topStart = 22.dp, topEnd = 22.dp),
+            shape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp),
         ) {
-            Column(modifier = Modifier.fillMaxWidth().padding(DS.Space.l)) {
-                Text(entry.displayTerm, style = SophiaTypography.titleLarge)
+            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp)) {
                 if (entry.classification.isNotBlank()) {
+                    DSEyebrow(entry.classification, modifier = Modifier.dsStagger(0))
                     Spacer(Modifier.height(6.dp))
-                    Text(entry.classification, style = SophiaTypography.labelMedium, color = DS.accentSoft)
                 }
+                Text(
+                    entry.displayTerm,
+                    style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 31.sp),
+                    modifier = Modifier.dsStagger(1),
+                )
                 Spacer(Modifier.height(12.dp))
-                Text(entry.explanation, style = SophiaTypography.bodyLarge)
-                Spacer(Modifier.height(24.dp))
+                Text(
+                    entry.explanation,
+                    style = SophiaTypography.bodyLarge.copy(lineHeight = 27.sp),
+                    modifier = Modifier.dsStagger(2),
+                )
+                Spacer(Modifier.height(28.dp))
             }
         }
     }

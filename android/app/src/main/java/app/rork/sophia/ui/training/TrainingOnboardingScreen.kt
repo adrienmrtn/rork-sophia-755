@@ -1,8 +1,12 @@
 package app.rork.sophia.ui.training
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,7 +17,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,11 +31,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.PathMeasure
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -41,10 +50,15 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.onboarding.OnboardingCta
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.ForceLightAppearance
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.delay
 
@@ -89,20 +103,22 @@ fun TrainingOnboardingScreen(
                 TrainingObStep.Algorithm -> 2
                 else -> 0
             }
+            // The three pages: the current one stretches into a blue capsule.
             Row(
                 modifier = Modifier
                     .align(Alignment.TopCenter)
-                    .padding(top = 14.dp),
+                    .padding(top = 16.dp),
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalAlignment = Alignment.CenterVertically,
             ) {
                 repeat(3) { i ->
+                    val width by animateDpAsState(if (i == index) 22.dp else 6.dp, DSMotion.snappy(), label = "obDotWidth")
+                    val color by animateColorAsState(if (i == index) DS.accent else DS.hairline, DSMotion.snappy(), label = "obDotColor")
                     Box(
                         modifier = Modifier
-                            .size(if (i == index) 8.dp else 6.dp)
-                            .background(
-                                if (i == index) DS.accent else DS.hairline,
-                                shape = androidx.compose.foundation.shape.CircleShape,
-                            ),
+                            .width(width)
+                            .height(6.dp)
+                            .background(color, shape = CircleShape),
                     )
                 }
             }
@@ -126,11 +142,12 @@ private fun WelcomeReadingPage(language: AppLanguage, onContinue: () -> Unit) {
         delay(400)
         showHint = true
     }
+    val hintAlpha by animateFloatAsState(if (showHint) 1f else 0f, tween(400), label = "obHint")
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .clickable(onClick = onContinue)
-            .padding(DS.Space.l),
+            .pressable(onClick = onContinue, scaleDown = 1f)
+            .padding(24.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
@@ -147,20 +164,19 @@ private fun WelcomeReadingPage(language: AppLanguage, onContinue: () -> Unit) {
                     }
                 }
             },
-            style = SophiaTypography.titleLarge,
+            style = SophiaTypography.titleLarge.copy(fontSize = 26.sp),
             textAlign = TextAlign.Center,
-            lineHeight = 32.sp,
+            lineHeight = 35.sp,
         )
-        if (showHint) {
-            Text(
-                StringStore.text(context, "explain.tapToClose", language),
-                style = SophiaTypography.labelMedium,
-                color = DS.inkTertiary,
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .padding(bottom = 46.dp),
-            )
-        }
+        Text(
+            StringStore.text(context, "explain.tapToClose", language),
+            style = SophiaTypography.labelMedium,
+            color = DS.inkTertiary,
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 46.dp)
+                .graphicsLayer { alpha = hintAlpha },
+        )
     }
 }
 
@@ -173,18 +189,22 @@ private fun ActiveRecallPage(language: AppLanguage, onNext: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(DS.Space.l),
+            .padding(24.dp),
     ) {
         Column(modifier = Modifier.weight(1f).verticalScroll(rememberScrollState())) {
             Spacer(Modifier.height(48.dp))
             Text(
                 StringStore.text(context, "training.ob.recall.title", language),
-                style = SophiaTypography.titleLarge,
+                style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 32.sp),
+                modifier = Modifier.dsStagger(0),
             )
             Spacer(Modifier.height(28.dp))
-            RetentionGraph()
+            RetentionGraph(modifier = Modifier.dsStagger(1))
             Spacer(Modifier.height(16.dp))
-            Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
+                modifier = Modifier.dsStagger(2),
+            ) {
                 LegendDot(DS.accent, StringStore.text(context, "training.ob.recall.legend.sophia", language))
                 LegendDot(DS.danger, StringStore.text(context, "training.ob.recall.legend.reread", language))
             }
@@ -193,13 +213,14 @@ private fun ActiveRecallPage(language: AppLanguage, onNext: () -> Unit) {
                 buildAnnotatedString {
                     append(StringStore.text(context, "training.ob.recall.stat.prefix", language))
                     append(' ')
-                    withStyle(SpanStyle(fontWeight = FontWeight.Bold, color = DS.accentSoft)) {
+                    withStyle(SpanStyle(fontWeight = FontWeight.Bold, color = DS.accent)) {
                         append(StringStore.text(context, "training.ob.recall.stat.highlight", language))
                     }
                     append(' ')
                     append(StringStore.text(context, "training.ob.recall.stat.suffix", language))
                 },
-                style = SophiaTypography.bodyMedium,
+                style = SophiaTypography.bodyMedium.copy(fontSize = 16.sp, lineHeight = 24.sp),
+                modifier = Modifier.dsStagger(3),
             )
             Spacer(Modifier.height(20.dp))
         }
@@ -218,34 +239,41 @@ private fun AlgorithmPage(language: AppLanguage, onNext: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(DS.Space.l),
+            .padding(24.dp),
     ) {
         Column(modifier = Modifier.weight(1f).verticalScroll(rememberScrollState())) {
             Spacer(Modifier.height(48.dp))
             Text(
                 StringStore.text(context, "training.ob.algo.title", language),
-                style = SophiaTypography.titleLarge,
+                style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 32.sp),
+                modifier = Modifier.dsStagger(0),
             )
             Spacer(Modifier.height(16.dp))
             Text(
                 StringStore.text(context, "training.ob.algo.body", language),
-                style = SophiaTypography.bodyMedium,
+                style = SophiaTypography.bodyMedium.copy(fontSize = 16.sp, lineHeight = 24.sp),
+                modifier = Modifier.dsStagger(1),
             )
             Spacer(Modifier.height(28.dp))
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(DS.accentTint, DS.cardShape)
-                    .padding(DS.Space.m),
+                    .dsStagger(2)
+                    .clip(DS.cardShape)
+                    .background(DS.accentTint)
+                    .padding(DS.Space.l),
+                verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 Text(
                     StringStore.text(context, "training.ob.algo.highlight.value", language),
-                    style = SophiaTypography.displayLarge,
-                    color = DS.accentSoft,
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 34.sp,
+                    color = DS.accent,
                 )
                 Text(
                     StringStore.text(context, "training.ob.algo.highlight.label", language),
-                    style = SophiaTypography.bodyMedium,
+                    style = SophiaTypography.bodyMedium.copy(color = DS.ink),
                 )
             }
             Spacer(Modifier.height(20.dp))
@@ -259,14 +287,20 @@ private fun AlgorithmPage(language: AppLanguage, onNext: () -> Unit) {
     }
 }
 
+/** The two retention curves, which draw themselves from left to right. */
 @Composable
-private fun RetentionGraph() {
+private fun RetentionGraph(modifier: Modifier = Modifier) {
+    val drawn = remember { Animatable(0f) }
+    LaunchedEffect(Unit) { drawn.animateTo(1f, tween(durationMillis = 900, delayMillis = 250)) }
+    val sophia = DS.accent
+    val reread = DS.danger
+    val axis = DS.hairline
     Canvas(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .height(140.dp)
-            .background(DS.surface, DS.cardShape)
-            .padding(12.dp),
+            .height(150.dp)
+            .sophiaCard()
+            .padding(14.dp),
     ) {
         fun curve(decay: Float, color: Color) {
             val path = Path()
@@ -278,18 +312,21 @@ private fun RetentionGraph() {
                 val y = h * (0.15f + (1f - 0.15f) * (1f - kotlin.math.exp(-decay * t)))
                 path.lineTo(w * t, y)
             }
-            drawPath(path, color = color, style = Stroke(width = 4.dp.toPx(), cap = StrokeCap.Round))
+            val measure = PathMeasure().apply { setPath(path, false) }
+            val partial = Path()
+            measure.getSegment(0f, measure.length * drawn.value.coerceIn(0f, 1f), partial, true)
+            drawPath(partial, color = color, style = Stroke(width = 4.dp.toPx(), cap = StrokeCap.Round))
         }
-        curve(1.2f, DS.accent)
-        curve(4.5f, DS.danger)
-        drawLine(DS.hairline, Offset(0f, size.height), Offset(size.width, size.height), 2f)
+        drawLine(axis, Offset(0f, size.height), Offset(size.width, size.height), 1.5.dp.toPx())
+        curve(1.2f, sophia)
+        curve(4.5f, reread)
     }
 }
 
 @Composable
 private fun LegendDot(color: Color, label: String) {
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-        Box(modifier = Modifier.size(10.dp).background(color, androidx.compose.foundation.shape.CircleShape))
-        Text(label, style = SophiaTypography.labelMedium)
+        Box(modifier = Modifier.size(10.dp).background(color, CircleShape))
+        Text(label, style = SophiaTypography.labelMedium.copy(fontWeight = FontWeight.SemiBold))
     }
 }
