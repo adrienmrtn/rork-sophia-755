@@ -64,8 +64,8 @@ struct TikTokBlockerSettingsView: View {
 
                     if blocker.unlockCount > 0 {
                         Text(String(format: languageManager.text("tiktokBlocker.stats.unlocks"), blocker.unlockCount))
-                            .font(DS.sans(.caption, .medium))
-                            .foregroundStyle(DS.inkTertiary)
+                            .font(DS.sans(.footnote))
+                            .foregroundStyle(DS.inkSecondary)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding(.top, 4)
                     }
@@ -110,24 +110,17 @@ struct TikTokBlockerSettingsView: View {
     // MARK: - Title
 
     private var titleBar: some View {
-        HStack(spacing: 14) {
-            Button {
-                hapticTrigger += 1
+        HStack(spacing: 12) {
+            // La vibration vient du style du bouton rond.
+            ProfileRoundButton(systemImage: presentedAsCover ? "xmark" : "chevron.backward") {
                 dismiss()
-            } label: {
-                Image(systemName: presentedAsCover ? "xmark" : "chevron.backward")
-                    .font(.jakarta(size: 15, weight: .semibold))
-                    .foregroundStyle(DS.inkSecondary)
-                    .frame(width: 40, height: 40)
-                    .background(DS.surface, in: Circle())
-                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
             }
-            .buttonStyle(SoftPressButtonStyle())
 
             Text(languageManager.text("tiktokBlocker.settings.row.title"))
                 .font(DS.title(.title2, .semibold))
                 .foregroundStyle(DS.ink)
-            Spacer()
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 0)
         }
     }
 
@@ -137,23 +130,25 @@ struct TikTokBlockerSettingsView: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 12) {
                 Image(systemName: "lock.fill")
-                    .font(.jakarta(size: 18, weight: .semibold))
+                    .font(.system(size: 18, weight: .semibold))
                     .foregroundStyle(.white)
                     .frame(width: 44, height: 44)
-                    .background(.white.opacity(0.18), in: Circle())
+                    .background(DS.accent, in: Circle())
+                    .dsPopIn(delay: 0.15)
                 Text(languageManager.text("tiktokBlocker.title"))
-                    .font(DS.title(.title3, .heavy))
-                    .foregroundStyle(.white)
+                    .font(DS.title(.title3, .semibold))
+                    .foregroundStyle(DS.ink)
                     .fixedSize(horizontal: false, vertical: true)
             }
             Text(languageManager.text("tiktokBlocker.hero.body"))
-                .font(DS.sans(.subheadline, .medium))
-                .foregroundStyle(.white.opacity(0.85))
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
+                .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(18)
+        .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(DS.accent, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .dsOptionCard(.selected)
     }
 
     // MARK: - Toggle
@@ -161,19 +156,19 @@ struct TikTokBlockerSettingsView: View {
     private var toggleSection: some View {
         section(languageManager.text("tiktokBlocker.section")) {
             card {
-                HStack(spacing: 14) {
-                    iconBadge("hand.raised.fill")
+                HStack(spacing: 12) {
+                    iconBadge("hand.raised")
                     VStack(alignment: .leading, spacing: 2) {
                         HStack(spacing: 8) {
                             Text(languageManager.text("tiktokBlocker.toggle.title"))
-                                .font(DS.sans(.body, .medium))
+                                .font(DS.sans(.subheadline, .bold))
                                 .foregroundStyle(DS.ink)
                             if !isPremium {
                                 premiumPill
                             }
                         }
                         Text(toggleSubtitle)
-                            .font(DS.sans(.caption, .medium))
+                            .font(DS.sans(.footnote))
                             .foregroundStyle(DS.inkSecondary)
                             .fixedSize(horizontal: false, vertical: true)
                     }
@@ -185,7 +180,7 @@ struct TikTokBlockerSettingsView: View {
                     .labelsHidden()
                     .tint(DS.accent)
                 }
-                .padding(.horizontal, 14)
+                .padding(.horizontal, 16)
                 .padding(.vertical, 12)
             }
         }
@@ -214,7 +209,8 @@ struct TikTokBlockerSettingsView: View {
     /// The switch, step by step. Each missing piece is asked for and the switch waits for
     /// the answer; nothing is enabled until TikTok is actually ticked.
     private func handleToggle(_ on: Bool) {
-        hapticTrigger += 1
+        // Une bascule : le cran de sélection.
+        Haptics.select()
         guard on else {
             toggleOn = false
             blocker.setEnabled(false)
@@ -253,13 +249,13 @@ struct TikTokBlockerSettingsView: View {
     private var appSection: some View {
         section(languageManager.text("tiktokBlocker.app.title")) {
             card {
-                HStack(spacing: 14) {
+                HStack(spacing: 12) {
                     if blocker.hasSelection {
                         selectedAppIcons
                     } else {
                         iconBadge("app.dashed")
                         Text(languageManager.text("tiktokBlocker.app.none"))
-                            .font(DS.sans(.caption, .medium))
+                            .font(DS.sans(.footnote))
                             .foregroundStyle(DS.inkSecondary)
                             .fixedSize(horizontal: false, vertical: true)
                     }
@@ -269,15 +265,15 @@ struct TikTokBlockerSettingsView: View {
                         showPicker = true
                     } label: {
                         Text(languageManager.text(blocker.hasSelection ? "tiktokBlocker.app.change" : "tiktokBlocker.app.choose"))
-                            .font(DS.sans(.subheadline, .semibold))
-                            .foregroundStyle(DS.accentSoft)
-                            .padding(.horizontal, 14)
-                            .padding(.vertical, 9)
-                            .background(DS.accentTint, in: Capsule())
+                            .font(DS.sans(.footnote, .bold))
+                            .foregroundStyle(DS.accent)
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 8)
+                            .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                     }
-                    .buttonStyle(SoftPressButtonStyle())
+                    .buttonStyle(PressableStyle(haptic: false))
                 }
-                .padding(.horizontal, 14)
+                .padding(.horizontal, 16)
                 .padding(.vertical, 12)
             }
         }
@@ -290,19 +286,19 @@ struct TikTokBlockerSettingsView: View {
             ForEach(Array(blocker.selection.applicationTokens), id: \.self) { token in
                 Label(token)
                     .labelStyle(.titleAndIcon)
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.subheadline, .semibold))
                     .foregroundStyle(DS.ink)
             }
             ForEach(Array(blocker.selection.categoryTokens), id: \.self) { token in
                 Label(token)
                     .labelStyle(.titleAndIcon)
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.subheadline, .semibold))
                     .foregroundStyle(DS.ink)
             }
             ForEach(Array(blocker.selection.webDomainTokens), id: \.self) { token in
                 Label(token)
                     .labelStyle(.titleAndIcon)
-                    .font(DS.sans(.subheadline, .medium))
+                    .font(DS.sans(.subheadline, .semibold))
                     .foregroundStyle(DS.ink)
             }
         }
@@ -312,19 +308,19 @@ struct TikTokBlockerSettingsView: View {
 
     private var statusSection: some View {
         card {
-            HStack(spacing: 14) {
+            HStack(spacing: 12) {
                 if blocker.isUnlockWindowOpen, let until = blocker.unlockedUntil {
                     iconBadge("lock.open.fill", tint: DS.success, bg: DS.successTint)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(languageManager.text("tiktokBlocker.status.unlocked"))
-                            .font(DS.title(.subheadline, .semibold))
+                            .font(DS.sans(.subheadline, .bold))
                             .foregroundStyle(DS.ink)
                         HStack(spacing: 4) {
                             Text(languageManager.text("tiktokBlocker.status.unlocked.subtitle"))
                             Text(until, style: .timer)
                                 .monospacedDigit()
                         }
-                        .font(DS.sans(.caption, .medium))
+                        .font(DS.sans(.footnote))
                         .foregroundStyle(DS.inkSecondary)
                     }
                     Spacer(minLength: 8)
@@ -333,39 +329,39 @@ struct TikTokBlockerSettingsView: View {
                         blocker.lockNow()
                     } label: {
                         Text(languageManager.text("tiktokBlocker.status.lockNow"))
-                            .font(DS.sans(.caption, .semibold))
-                            .foregroundStyle(DS.accentSoft)
+                            .font(DS.sans(.footnote, .bold))
+                            .foregroundStyle(DS.accent)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 8)
-                            .background(DS.accentTint, in: Capsule())
+                            .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                     }
-                    .buttonStyle(SoftPressButtonStyle())
+                    .buttonStyle(PressableStyle(haptic: false))
                 } else if blocker.isShieldActive {
                     iconBadge("lock.fill")
                     VStack(alignment: .leading, spacing: 2) {
                         Text(languageManager.text("tiktokBlocker.status.locked"))
-                            .font(DS.title(.subheadline, .semibold))
+                            .font(DS.sans(.subheadline, .bold))
                             .foregroundStyle(DS.ink)
                         Text(languageManager.text("tiktokBlocker.status.locked.subtitle"))
-                            .font(DS.sans(.caption, .medium))
+                            .font(DS.sans(.footnote))
                             .foregroundStyle(DS.inkSecondary)
                     }
                     Spacer()
                 } else {
-                    iconBadge("moon.zzz", tint: DS.inkTertiary, bg: DS.surfaceMuted)
+                    iconBadge("moon.zzz", tint: DS.inkSecondary, bg: DS.surfaceMuted)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(languageManager.text("tiktokBlocker.status.idle"))
-                            .font(DS.title(.subheadline, .semibold))
+                            .font(DS.sans(.subheadline, .bold))
                             .foregroundStyle(DS.ink)
                         Text(languageManager.text("tiktokBlocker.status.idle.subtitle"))
-                            .font(DS.sans(.caption, .medium))
+                            .font(DS.sans(.footnote))
                             .foregroundStyle(DS.inkSecondary)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     Spacer()
                 }
             }
-            .padding(.horizontal, 14)
+            .padding(.horizontal, 16)
             .padding(.vertical, 14)
         }
     }
@@ -406,11 +402,12 @@ struct TikTokBlockerSettingsView: View {
             HStack(spacing: 12) {
                 iconBadge(icon, tint: DS.danger, bg: DS.dangerTint)
                 Text(title)
-                    .font(DS.title(.subheadline, .semibold))
+                    .font(DS.sans(.subheadline, .bold))
                     .foregroundStyle(DS.ink)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             Text(message)
-                .font(DS.sans(.caption, .medium))
+                .font(DS.sans(.footnote))
                 .foregroundStyle(DS.inkSecondary)
                 .fixedSize(horizontal: false, vertical: true)
             Button {
@@ -418,12 +415,16 @@ struct TikTokBlockerSettingsView: View {
                 action()
             } label: {
                 Text(buttonTitle)
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundStyle(DS.accentSoft)
+                    .font(DS.sans(.subheadline, .bold))
+                    .foregroundStyle(DS.accent)
+                    .padding(.vertical, 4)
+                    .contentShape(Rectangle())
             }
-            .buttonStyle(SoftPressButtonStyle())
+            .buttonStyle(PressableStyle(haptic: false))
         }
-        .dsCard(padding: 16)
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .dsOptionCard(.wrong)
     }
 
     private func openSystemSettings() {
@@ -454,32 +455,31 @@ struct TikTokBlockerSettingsView: View {
     }
 
     private func step(_ number: Int, _ text: String) -> some View {
-        HStack(alignment: .top, spacing: 14) {
+        HStack(alignment: .top, spacing: 12) {
             Text("\(number)")
-                .font(DS.sans(.subheadline, .bold))
-                .foregroundStyle(DS.accentSoft)
-                .frame(width: 38, height: 38)
+                .font(DS.sans(.footnote, .heavy))
+                .foregroundStyle(DS.accent)
+                .frame(width: 28, height: 28)
                 .background(DS.accentTint, in: Circle())
+                .dsPopIn(delay: 0.2 + Double(number) * 0.08)
             Text(text)
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.ink)
+                .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
-                .padding(.top, 8)
+                .padding(.top, 4)
             Spacer(minLength: 0)
         }
-        .padding(.horizontal, 14)
+        .padding(.horizontal, 16)
         .padding(.vertical, 12)
     }
 
     // MARK: - Building blocks (mirrors SettingsView's private helpers)
 
     private func section<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(title.uppercasedInApp())
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkTertiary)
-                .tracking(1.2)
-                .padding(.horizontal, 24)
+        VStack(alignment: .leading, spacing: 8) {
+            ProfileGroupLabel(text: title)
+                .padding(.horizontal, 20)
             content()
         }
     }
@@ -488,22 +488,23 @@ struct TikTokBlockerSettingsView: View {
         VStack(spacing: 0) {
             content()
         }
+        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .dsCard(padding: 0)
         .padding(.horizontal, 20)
     }
 
     private var divider: some View {
-        Rectangle()
-            .fill(DS.hairline)
-            .frame(height: 1)
-            .padding(.leading, 66)
+        ProfileRowDivider()
+            .padding(.horizontal, 16)
     }
 
-    private func iconBadge(_ name: String, tint: Color = DS.accentSoft, bg: Color = DS.accentTint) -> some View {
+    /// Pictogramme de rangée, à la couleur de son état. `bg` n'est plus dessiné (pictogramme
+    /// au trait, sans pastille) ; il reste pour les appels existants.
+    private func iconBadge(_ name: String, tint: Color = DS.accent, bg: Color = DS.accentTint) -> some View {
         Image(systemName: name)
-            .font(.jakarta(size: 16, weight: .medium))
+            .font(.system(size: 17, weight: .semibold))
             .foregroundStyle(tint)
-            .frame(width: 38, height: 38)
-            .background(bg, in: Circle())
+            .frame(width: 24)
+            .accessibilityHidden(true)
     }
 }

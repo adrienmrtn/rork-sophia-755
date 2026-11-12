@@ -100,27 +100,28 @@ struct CourseCompletedView: View {
                                 .scaleEffect(thumbScale)
                                 .opacity(appeared ? 1 : 0)
 
-                            Spacer().frame(height: 18)
+                            Spacer().frame(height: 22)
 
                             Text(languageManager.text("course.completed"))
-                                .font(DS.title(.largeTitle, .semibold))
+                                .font(CourseType.font(26, .semibold, relativeTo: .title))
                                 .foregroundStyle(DS.ink)
                                 .multilineTextAlignment(.center)
+                                .fixedSize(horizontal: false, vertical: true)
                                 .padding(.horizontal, 24)
                                 .opacity(showTitle ? 1 : 0)
                                 .offset(y: showTitle ? 0 : 12)
 
                             if phase != .celebration {
                                 progressionCard
-                                    .padding(.horizontal, 20)
-                                    .padding(.top, 22)
+                                    .padding(.horizontal, 24)
+                                    .padding(.top, 18)
                                     .opacity(showCard ? 1 : 0)
                                     .offset(y: showCard ? 0 : 16)
                                     .transition(.opacity.combined(with: .offset(y: 16)))
 
                                 socialRow
-                                    .padding(.horizontal, 20)
-                                    .padding(.top, 12)
+                                    .padding(.horizontal, 24)
+                                    .padding(.top, 18)
                                     .opacity(showCard ? 1 : 0)
                                     .offset(y: showCard ? 0 : 16)
                                     .transition(.opacity.combined(with: .offset(y: 16)))
@@ -128,8 +129,8 @@ struct CourseCompletedView: View {
 
                             if showFreemiumGate && phase == .actions {
                                 freemiumNote
-                                    .padding(.horizontal, 20)
-                                    .padding(.top, 14)
+                                    .padding(.horizontal, 24)
+                                    .padding(.top, 18)
                                     .opacity(showNote ? 1 : 0)
                                     .offset(y: showNote ? 0 : 8)
                             }
@@ -145,8 +146,8 @@ struct CourseCompletedView: View {
                 // Actions ancrées en bas de l'écran (plus de vide entre le CTA et le bas).
                 if phase == .actions {
                     actionButtons
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 20)
+                        .padding(.horizontal, 24)
+                        .padding(.bottom, 24)
                         .opacity(showButtons ? 1 : 0)
                         .offset(y: showButtons ? 0 : 12)
                 }
@@ -190,16 +191,19 @@ struct CourseCompletedView: View {
     }
 
     private func runOpeningSequence() {
-        // Phase 1 — celebration
-        withAnimation(.spring(response: 0.7, dampingFraction: 0.8)) {
+        // Phase 1 — celebration : la vignette se pose, la coche se dessine, le téléphone fête.
+        Haptics.celebrate()
+        withAnimation(DS.Motion.pop) {
             appeared = true
             thumbScale = 1.0
+        }
+        withAnimation(DS.Motion.reveal.delay(0.1)) {
             showTitle = true
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             phase = .progression
-            withAnimation(.spring(response: 0.7, dampingFraction: 0.85)) {
+            withAnimation(DS.Motion.reveal) {
                 showCard = true
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
@@ -279,18 +283,13 @@ struct CourseCompletedView: View {
             }
         }
         .frame(width: 152, height: 152)
-        .clipShape(.rect(cornerRadius: DS.Radius.card))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
-        .dsSoftShadow()
+        .clipShape(.rect(cornerRadius: 28, style: .continuous))
         .overlay(alignment: .bottomTrailing) {
-            Image(systemName: "checkmark.circle.fill")
-                .font(.jakarta(size: 26, weight: .regular))
-                .foregroundStyle(DS.accent)
-                .background(Circle().fill(.white).frame(width: 26, height: 26))
-                .offset(x: 6, y: 6)
+            // La coche verte se dessine une fois la vignette posée.
+            DSCheckBadge(size: 34, delay: 0.3)
+                .padding(3)
+                .background(DS.surface, in: Circle())
+                .offset(x: 8, y: 8)
         }
     }
 
@@ -300,162 +299,177 @@ struct CourseCompletedView: View {
         let tierNow = tier(for: animatedXP)
         let xpToNext = max(0, tierNow.upper - animatedXP)
 
-        return VStack(alignment: .leading, spacing: 12) {
+        return VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 10) {
-                SubjectBadgeView(subject: course.subject, iconSize: 22, cornerRadius: 10)
-                    .frame(width: 38, height: 38)
+                CourseSubjectAvatar(subject: course.subject, size: 36)
 
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(course.subject.localizedShortName(language: languageManager.current))
-                        .font(DS.title(.headline, .semibold))
-                        .foregroundStyle(DS.ink)
-                    HStack(spacing: 4) {
-                        Text("\(displayedXP) XP")
-                            .font(DS.sans(.caption, .medium))
-                            .foregroundStyle(DS.inkSecondary)
-                            .monospacedDigit()
-                        if tierNow.level < 5 {
-                            Text(String(format: languageManager.text("common.xpBeforeNext"), xpToNext, tierNow.level + 1))
-                                .font(DS.sans(.caption, .medium))
-                                .foregroundStyle(DS.inkTertiary)
-                        }
-                    }
-                }
-                Spacer()
+                Text(course.subject.localizedShortName(language: languageManager.current))
+                    .font(DS.sans(.callout, .bold))
+                    .foregroundStyle(DS.ink)
+                    .lineLimit(2)
+
+                Spacer(minLength: 8)
+
                 Text(String(format: languageManager.text("common.levelShort"), displayedLevel))
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(DS.accentSoft)
+                    .font(DS.sans(.caption, .heavy))
+                    .foregroundStyle(DS.ink)
                     .padding(.horizontal, 10)
-                    .padding(.vertical, 5)
-                    .background(DS.accentTint, in: Capsule())
+                    .padding(.vertical, 4)
+                    .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
             }
 
-            CalmProgressBar(fraction: Double(barFill), height: 8)
-
-            HStack(spacing: 6) {
-                AnimatedRewardBadge(kind: .xp, size: 12, showGlow: false)
-                    .frame(width: 14, height: 14)
-                Text(String(format: languageManager.text("common.xpEarned"), earnedXP))
-                    .font(DS.sans(.caption, .semibold))
+            HStack(spacing: 4) {
+                Text("\(displayedXP) XP")
+                    .font(DS.sans(.subheadline, .bold))
+                    .foregroundStyle(DS.ink)
+                    .monospacedDigit()
+                if tierNow.level < 5 {
+                    Text(String(format: languageManager.text("common.xpBeforeNext"), xpToNext, tierNow.level + 1))
+                        .font(DS.sans(.subheadline))
+                        .foregroundStyle(DS.inkSecondary)
+                        .monospacedDigit()
+                }
             }
-            .foregroundStyle(DS.accentSoft)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 6)
-            .background(DS.accentTint, in: Capsule())
+
+            CourseXPBar(fraction: Double(barFill), height: 8)
+
+            CourseGoldPill(text: String(format: languageManager.text("common.xpEarned"), earnedXP))
         }
-        .dsCard()
+        .dsCard(padding: 16)
     }
 
     // MARK: Aimer le cours, suivre le créateur
 
     private var author: CourseAuthor? { CreatorIdentity.forCourse(course.id).author }
 
+    /// Le fond d'un bouton de la rangée « aimer / suivre » : carte bordée avec son rebord bas.
+    private func socialChrome(fill: Color, border: Color) -> some View {
+        let shape = RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+        return shape
+            .fill(fill)
+            .overlay(shape.strokeBorder(border, lineWidth: 1.5))
+            .background(shape.fill(border).offset(y: 1.5))
+    }
+
     /// Deux gestes à chaud, juste après la lecture : le cœur sur le cours, et l'abonnement au
     /// créateur. Rapportés avec l'écran `course_end`.
     private var socialRow: some View {
-        let liked = progressManager.isLiked(course.id)
-        return HStack(spacing: 10) {
-            Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                progressManager.toggleLike(course.id)
-                if !liked { likeBurst += 1 }
-                AnalyticsService.shared.log(liked ? .unlike : .like, courseId: course.id, screen: "course_end")
-            } label: {
-                HStack(spacing: 8) {
-                    LikeHeartIcon(liked: liked, burst: likeBurst, size: 16, idleTint: DS.ink)
-                    Text(languageManager.text(liked ? "course.end.liked" : "course.end.like"))
-                        .font(DS.sans(.subheadline, .bold))
-                        .foregroundStyle(liked ? DS.liked : DS.ink)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.8)
-                }
-                .padding(.horizontal, 14)
-                .frame(maxWidth: .infinity)
-                .frame(height: 48)
-                .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(liked ? DS.liked.opacity(0.1) : DS.surface))
-                .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).strokeBorder(liked ? DS.liked.opacity(0.45) : DS.hairline, lineWidth: 1))
-                .contentShape(Rectangle())
-            }
-            .buttonStyle(SoftPressButtonStyle())
-            .accessibilityLabel(Text(languageManager.text(liked ? "common.unlike" : "common.like")))
-
+        HStack(spacing: 10) {
+            likeButton
             if let author {
-                let following = progressManager.isFollowing(author.slug)
-                let firstName = author.name.split(separator: " ").first.map(String.init) ?? author.name
-                Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    progressManager.toggleFollow(author.slug)
-                    AnalyticsService.shared.log(following ? .unfollow : .follow, courseId: course.id, screen: "course_end", props: ["creator": .string(author.slug)])
-                } label: {
-                    HStack(spacing: 8) {
-                        AuthorAvatarView(author: author, size: 24)
-                        Text(following ? languageManager.text("creator.following") : String(format: languageManager.text("course.end.follow"), firstName))
-                            .font(DS.sans(.subheadline, .bold))
-                            .foregroundStyle(following ? DS.ink : .white)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.8)
-                    }
-                    .padding(.horizontal, 14)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 48)
-                    .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(following ? DS.surface : DS.accent))
-                    .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).strokeBorder(following ? DS.hairline : .clear, lineWidth: 1))
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(SoftPressButtonStyle())
-                .accessibilityLabel(Text(following ? languageManager.text("creator.following") : languageManager.text("creator.follow")))
+                followButton(author)
             }
         }
+    }
+
+    private var likeButton: some View {
+        let liked = progressManager.isLiked(course.id)
+        return Button {
+            Haptics.select()
+            progressManager.toggleLike(course.id)
+            if !liked { likeBurst += 1 }
+            AnalyticsService.shared.log(liked ? .unlike : .like, courseId: course.id, screen: "course_end")
+        } label: {
+            HStack(spacing: 8) {
+                LikeHeartIcon(liked: liked, burst: likeBurst, size: 17, idleTint: DS.liked)
+                Text(languageManager.text(liked ? "course.end.liked" : "course.end.like"))
+                    .font(DS.sans(.subheadline, .bold))
+                    .foregroundStyle(liked ? DS.liked : DS.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+            }
+            .padding(.horizontal, 12)
+            .frame(maxWidth: .infinity)
+            .frame(height: 50)
+            .background {
+                socialChrome(
+                    fill: liked ? DS.liked.opacity(0.1) : DS.surface,
+                    border: liked ? DS.liked.opacity(0.55) : DS.hairline
+                )
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(PressableStyle(haptic: false))
+        .animation(DS.Motion.snappy, value: liked)
+        .accessibilityLabel(Text(languageManager.text(liked ? "common.unlike" : "common.like")))
+    }
+
+    private func followButton(_ author: CourseAuthor) -> some View {
+        let following = progressManager.isFollowing(author.slug)
+        let firstName = author.name.split(separator: " ").first.map(String.init) ?? author.name
+        return Button {
+            Haptics.select()
+            progressManager.toggleFollow(author.slug)
+            AnalyticsService.shared.log(following ? .unfollow : .follow, courseId: course.id, screen: "course_end", props: ["creator": .string(author.slug)])
+        } label: {
+            HStack(spacing: 8) {
+                AuthorAvatarView(author: author, size: 24)
+                Text(following ? languageManager.text("creator.following") : String(format: languageManager.text("course.end.follow"), firstName))
+                    .font(DS.sans(.subheadline, .bold))
+                    .foregroundStyle(following ? DS.accent : DS.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+            }
+            .padding(.horizontal, 12)
+            .frame(maxWidth: .infinity)
+            .frame(height: 50)
+            .background {
+                socialChrome(
+                    fill: following ? DS.accentTint : DS.surface,
+                    border: following ? DS.accent : DS.hairline
+                )
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(PressableStyle(haptic: false))
+        .animation(DS.Motion.snappy, value: following)
+        .accessibilityLabel(Text(following ? languageManager.text("creator.following") : languageManager.text("creator.follow")))
     }
 
     // MARK: Freemium note
 
     private var freemiumNote: some View {
-        HStack(spacing: 8) {
-            Image(systemName: "checkmark.seal.fill")
-                .font(.jakarta(size: 13, weight: .medium))
+        HStack(spacing: 6) {
+            Image(systemName: "checkmark.circle")
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundStyle(DS.accent)
             Text(languageManager.text("course.dailyFreeDone"))
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.footnote, .bold))
+                .foregroundStyle(DS.ink)
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
         }
-        .foregroundStyle(DS.accentSoft)
         .padding(.horizontal, 14)
-        .padding(.vertical, 10)
-        .background(DS.accentTint, in: Capsule())
+        .padding(.vertical, 7)
+        .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
     // MARK: Action buttons (X close · Mini Quiz)
 
+    // Les deux boutons vibrent par leur style.
     private var actionButtons: some View {
-        HStack(spacing: 14) {
+        HStack(spacing: 10) {
             // X close
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 onClose()
             } label: {
-                Image(systemName: "xmark")
-                    .font(.jakarta(size: 16, weight: .medium))
-                    .foregroundStyle(DS.inkSecondary)
-                    .frame(width: 56, height: 56)
-                    .background(DS.surface, in: Circle())
-                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                CourseRoundIcon(systemName: "xmark")
             }
-            .buttonStyle(SoftPressButtonStyle())
+            .buttonStyle(.pressable)
+            .accessibilityLabel(Text(languageManager.text("common.close")))
 
             // Mini Quiz
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 onQuizTapped()
             } label: {
                 HStack(spacing: 8) {
                     if showFreemiumGate {
-                        Image(systemName: "lock.fill")
-                            .font(.jakarta(size: 13, weight: .medium))
+                        Image(systemName: "lock")
+                            .font(.subheadline.weight(.semibold))
                     }
                     Text(languageManager.text("common.miniQuiz"))
                     Image(systemName: "arrow.forward")
-                        .font(.jakarta(size: 13, weight: .medium))
+                        .font(.subheadline.weight(.semibold))
                 }
             }
             .buttonStyle(DSPrimaryButtonStyle())
@@ -465,10 +479,11 @@ struct CourseCompletedView: View {
 
 // MARK: - Streak Celebration screen
 
-/// La série : une flamme rose-orange qui bat, le compteur qui saute d'un cran avec une
-/// pluie de confettis, la semaine en pastilles roses. Peps et chaleur, pas de gris.
+/// La série : la flamme safran qui oscille, le nombre de jours qui arrive avec un compteur,
+/// puis la semaine en pastilles qui apparaissent en cascade.
 struct StreakCelebrationView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let streak: Int
     let subject: Subject
     let lastActiveDate: String?
@@ -477,14 +492,9 @@ struct StreakCelebrationView: View {
     @State private var appeared: Bool = false
     @State private var flameScale: CGFloat = 0.5
     @State private var numberAppeared: Bool = false
-    @State private var displayedStreak: Int = 0
-    @State private var numberBounce: CGFloat = 1
-    @State private var haloPulse = false
+    /// La valeur vers laquelle le compteur défile : 0, puis la série.
+    @State private var countTarget: Int = 0
     @State private var confetti = false
-
-    private static let pink = AnimatedFlameBadge.pink
-    private static let orange = AnimatedFlameBadge.orange
-    private static let yellow = AnimatedFlameBadge.yellow
 
     var body: some View {
         ZStack {
@@ -493,69 +503,23 @@ struct StreakCelebrationView: View {
             VStack(spacing: 0) {
                 GeometryReader { geo in
                     ScrollView {
-                        VStack(spacing: 0) {
-                            // Blocs équilibrés entre le haut de l'écran et le bouton ancré en bas.
-                            Spacer(minLength: 16)
-
-                            flameView
-                                .scaleEffect(flameScale)
-
-                            Spacer(minLength: 8)
-
-                            VStack(spacing: 4) {
-                                Text("\(displayedStreak)")
-                                    .font(.jakarta(size: 76, weight: .heavy))
-                                    .foregroundStyle(
-                                        LinearGradient(colors: [Self.pink, Self.orange], startPoint: .top, endPoint: .bottom)
-                                    )
-                                    .contentTransition(.numericText())
-                                    .scaleEffect((numberAppeared ? 1 : 0.6) * numberBounce)
-                                    .opacity(numberAppeared ? 1 : 0)
-
-                                Text(streak <= 1 ? languageManager.text("course.streak.day") : languageManager.text("course.streak.days"))
-                                    .font(DS.title(.title3, .semibold))
-                                    .foregroundStyle(DS.ink)
-                                    .opacity(numberAppeared ? 1 : 0)
-                            }
-
-                            Text(String(format: languageManager.text("course.streak.message"), subject.localizedShortName(language: languageManager.current)))
-                                .font(DS.sans(.subheadline))
-                                .foregroundStyle(DS.inkSecondary)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal, 32)
-                                .padding(.top, 12)
-                                .opacity(appeared ? 1 : 0)
-
-                            Spacer(minLength: 22)
-
-                            weekStrip
-                                .padding(.horizontal, 22)
-                                .opacity(appeared ? 1 : 0)
-                                .offset(y: appeared ? 0 : 10)
-
-                            Spacer(minLength: 18)
-
-                            Text(languageManager.text("course.streak.onTrack"))
-                                .font(DS.title(.headline, .semibold))
-                                .foregroundStyle(Self.pink)
-                                .opacity(appeared ? 1 : 0)
-
-                            Spacer(minLength: 20)
-                        }
-                        .frame(maxWidth: .infinity)
-                        .frame(minHeight: geo.size.height)
+                        streakSummary
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 20)
+                            .frame(maxWidth: .infinity)
+                            .frame(minHeight: geo.size.height)
                     }
                     .scrollIndicators(.hidden)
                 }
 
+                // Vibre par son style.
                 Button {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     onReturnHome()
                 } label: {
                     HStack(spacing: 8) {
+                        Image(systemName: "house")
+                            .font(.subheadline.weight(.semibold))
                         Text(languageManager.text("common.backHome"))
-                        Image(systemName: "house.fill")
-                            .font(.jakarta(size: 13, weight: .medium))
                     }
                 }
                 .buttonStyle(DSPrimaryButtonStyle())
@@ -567,7 +531,7 @@ struct StreakCelebrationView: View {
 
             if confetti {
                 PathConfettiBurst(
-                    colors: [Self.pink, Self.orange, Self.yellow, DS.accentSoft],
+                    colors: [CoursePalette.gold, CoursePalette.goldTint, DS.accent, DS.accentTint],
                     pieceCount: 60,
                     duration: 2.6,
                     origin: CGPoint(x: 0.5, y: 0.3)
@@ -576,53 +540,80 @@ struct StreakCelebrationView: View {
                 .allowsHitTesting(false)
             }
         }
-        .onAppear {
-            displayedStreak = max(0, streak - 1)
+        .onAppear { runSequence() }
+    }
 
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.6).delay(0.05)) {
-                flameScale = 1.0
-            }
-            withAnimation(.easeInOut(duration: 1.1).repeatForever(autoreverses: true).delay(0.4)) {
-                haloPulse = true
-            }
-            withAnimation(.spring(response: 0.45, dampingFraction: 0.65).delay(0.3)) {
-                numberAppeared = true
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) {
-                // Le compteur saute d'un cran : un petit rebond et des confettis.
-                withAnimation(.spring(response: 0.3, dampingFraction: 0.45)) {
-                    displayedStreak = streak
-                    numberBounce = 1.18
-                }
-                withAnimation(.spring(response: 0.4, dampingFraction: 0.7).delay(0.18)) {
-                    numberBounce = 1
-                }
-                confetti = true
-                UINotificationFeedbackGenerator().notificationOccurred(.success)
-            }
-            withAnimation(.easeOut(duration: 0.45).delay(0.6)) {
-                appeared = true
-            }
+    private var streakSummary: some View {
+        VStack(spacing: 14) {
+            DSFlame(size: 84)
+                .scaleEffect(flameScale)
+
+            DSCountUp(
+                value: countTarget,
+                duration: 0.9,
+                font: CourseType.font(96, .heavy, relativeTo: .largeTitle),
+                color: DS.ink
+            )
+            .lineLimit(1)
+            .minimumScaleFactor(0.5)
+            .scaleEffect(numberAppeared ? 1 : 0.6)
+            .opacity(numberAppeared ? 1 : 0)
+            .accessibilityLabel(Text("\(streak)"))
+
+            Text(streak <= 1 ? languageManager.text("course.streak.day") : languageManager.text("course.streak.days"))
+                .font(CourseType.font(22, .semibold, relativeTo: .title2))
+                .foregroundStyle(DS.ink)
+                .opacity(numberAppeared ? 1 : 0)
+
+            Text(String(format: languageManager.text("course.streak.message"), subject.localizedShortName(language: languageManager.current)))
+                .font(DS.sans(.callout))
+                .foregroundStyle(DS.inkSecondary)
+                .multilineTextAlignment(.center)
+                .lineSpacing(4)
+                .fixedSize(horizontal: false, vertical: true)
+                .opacity(appeared ? 1 : 0)
+
+            weekStrip
+                .padding(.top, 10)
+
+            Text(languageManager.text("course.streak.onTrack"))
+                .font(DS.sans(.callout, .bold))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.center)
+                .padding(.top, 6)
+                .opacity(appeared ? 1 : 0)
         }
     }
 
-    private var flameView: some View {
-        ZStack {
-            Circle()
-                .fill(Self.pink.opacity(0.14))
-                .frame(width: 164, height: 164)
-                .scaleEffect(haloPulse ? 1.08 : 0.94)
-                .opacity(haloPulse ? 0.7 : 1)
-
-            Circle()
-                .fill(
-                    LinearGradient(colors: [Self.pink.opacity(0.22), Self.orange.opacity(0.18)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                )
-                .frame(width: 128, height: 128)
-
-            AnimatedFlameBadge(size: 60, showGlow: false)
+    private func runSequence() {
+        if reduceMotion {
+            // Pas de mouvement : tout est posé d'emblée, le compteur seul défile.
+            flameScale = 1
+            numberAppeared = true
+            appeared = true
+            countTarget = streak
+            Haptics.celebrate()
+            return
         }
-        .frame(height: 164)
+
+        withAnimation(DS.Motion.pop.delay(0.05)) {
+            flameScale = 1.0
+        }
+        withAnimation(DS.Motion.pop.delay(0.25)) {
+            numberAppeared = true
+        }
+        // Le compteur part une fois le chiffre visible ; il vibre par petits crans (`DSCountUp`).
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+            countTarget = streak
+        }
+        withAnimation(.easeOut(duration: 0.45).delay(0.6)) {
+            appeared = true
+        }
+        // Le compteur est arrivé : la récompense, et une pluie de confettis.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.55) {
+            Haptics.celebrate()
+            confetti = true
+        }
     }
 
     private var weekStrip: some View {
@@ -650,30 +641,49 @@ struct StreakCelebrationView: View {
                     return dateStr <= last && daysFromLast >= 0 && daysFromLast < streak
                 }()
 
-                VStack(spacing: 6) {
-                    Text(dayLetters[StreakWeek.letterIndex(of: date, calendar: calendar)])
-                        .font(DS.sans(.caption2, .medium))
-                        .foregroundStyle(DS.inkTertiary)
-                    ZStack {
-                        if isDone {
-                            Circle().fill(
-                                LinearGradient(colors: [Self.pink, Self.orange], startPoint: .topLeading, endPoint: .bottomTrailing)
-                            )
-                            Image(systemName: "checkmark")
-                                .font(.jakarta(size: 11, weight: .bold))
-                                .foregroundStyle(.white)
-                        } else if isToday {
-                            Circle().fill(DS.surface)
-                            Circle().strokeBorder(Self.pink, lineWidth: 2)
-                        } else {
-                            Circle().fill(DS.surfaceMuted)
-                        }
-                    }
-                    .frame(width: 32, height: 32)
-                    .opacity(isFuture ? 0.5 : 1)
-                }
-                .frame(maxWidth: .infinity)
+                // Les pastilles arrivent en cascade ; la coche de chaque jour fait se dessine à la suite.
+                StreakDayPill(
+                    letter: dayLetters[StreakWeek.letterIndex(of: date, calendar: calendar)],
+                    isDone: isDone,
+                    isToday: isToday,
+                    isFuture: isFuture,
+                    checkDelay: 0.95 + Double(i) * 0.07
+                )
+                .dsStagger(i, step: 0.07, base: 0.75, offset: 10)
             }
         }
+    }
+}
+
+/// Un jour de la semaine de la série : pastille dorée cochée s'il est fait, cerclée d'or si
+/// c'est aujourd'hui, simplement cerclée sinon ; l'initiale du jour dessous.
+private struct StreakDayPill: View {
+    let letter: String
+    let isDone: Bool
+    let isToday: Bool
+    let isFuture: Bool
+    let checkDelay: Double
+
+    var body: some View {
+        VStack(spacing: 6) {
+            ZStack {
+                if isDone {
+                    DSCheckBadge(size: 36, fill: CoursePalette.gold, delay: checkDelay)
+                } else {
+                    Circle().fill(DS.surface)
+                    Circle().strokeBorder(
+                        isToday ? CoursePalette.gold : DS.ink.opacity(0.2),
+                        lineWidth: isToday ? 2.5 : 1.5
+                    )
+                }
+            }
+            .frame(width: 36, height: 36)
+            .opacity(isFuture ? 0.6 : 1)
+
+            Text(letter)
+                .font(DS.sans(.caption, .bold))
+                .foregroundStyle(DS.ink)
+        }
+        .frame(width: 36)
     }
 }

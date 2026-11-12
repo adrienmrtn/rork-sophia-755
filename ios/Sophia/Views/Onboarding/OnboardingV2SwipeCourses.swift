@@ -3,6 +3,11 @@ import SwiftUI
 /// Page 5 — recommandations de cours à swiper (like / dislike), 8 cartes.
 /// Les « likes » préremplissent les favoris (cf. `OnboardingV2ViewModel.persistAndComplete`).
 /// À la fin : « c'est noté » puis avance automatique.
+///
+/// Style « Elevate arrondi » : titre à gauche (son cœur en gras bleu), une pile de cartes bleu
+/// pâle — vignette du cours, titre, auteur, matière — dont deux dépassent en haut, et deux
+/// boutons ronds (pouce vers le bas, pouce vers le haut). Le geste, ses seuils et ses
+/// vibrations sont inchangés.
 struct OnboardingV2SwipeCourses: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
@@ -26,62 +31,55 @@ struct OnboardingV2SwipeCourses: View {
     /// reinstalling. One commit at a time, and the advance below no longer depends on
     /// catching the exact last card.
     @State private var isCommitting = false
+    /// Nom de l'auteur de chaque cours du paquet (identifiant du cours → nom), quand il est connu.
+    @State private var authorNames: [String: String] = [:]
 
     var body: some View {
         // The deck was a fixed 420pt tall between two flexible spacers. On an iPhone SE, or
         // at a large Dynamic Type size, the title plus the deck plus the buttons exceeded
-        // the screen and the ❤️ / ✕ row was pushed off the bottom — the one screen in the
+        // the screen and the like / pass row was pushed off the bottom — the one screen in the
         // flow you cannot skip. The deck is sized from the height actually left over.
         GeometryReader { geo in
-        VStack(spacing: 0) {
-            Spacer().frame(height: geo.size.height < 620 ? 40 : 72)
+            let compact: Bool = geo.size.height < 620
+            let cardWidth: CGFloat = max(geo.size.width - OV2CoreMetrics.sideInset * 2, 200)
+            let height: CGFloat = deckHeight(in: geo)
+            VStack(spacing: 0) {
+                header
+                    .padding(.horizontal, OV2CoreMetrics.sideInset)
+                    .padding(.top, compact ? 12 : 22)
+                    .dsStagger(0)
 
-            VStack(spacing: 8) {
-                Text(languageManager.text("onboardingV2.swipe.title"))
-                    .font(DS.title(.title2, .heavy))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
-                Text(languageManager.text("onboardingV2.swipe.subtitle"))
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-            }
-            .padding(.horizontal, 28)
-            .ov2Reveal(delay: 0.1)
+                Spacer(minLength: 12)
 
-            Spacer()
-
-            if done {
-                completionView(height: deckHeight(in: geo))
-            } else {
-                cardStack(height: deckHeight(in: geo))
-                    .scaleEffect(enter ? 1 : 0.86)
-                    .opacity(enter ? 1 : 0)
-                    .offset(y: enter ? 0 : 64)
-                    .rotationEffect(.degrees(enter ? 0 : -4))
-            }
-
-            Spacer()
-
-            if !done {
-                HStack(spacing: 40) {
-                    swipeButton(systemName: "xmark", tint: OV2.danger) { swipeTop(like: false) }
-                    swipeButton(systemName: "heart.fill", tint: OV2.success) { swipeTop(like: true) }
+                if done {
+                    completionView(height: height)
+                } else {
+                    deck(width: cardWidth, height: height)
+                        .scaleEffect(enter ? 1 : 0.86)
+                        .opacity(enter ? 1 : 0)
+                        .offset(y: enter ? 0 : 64)
+                        .rotationEffect(.degrees(enter ? 0 : -4))
                 }
-                .disabled(isCommitting || isFinishing)
-                .padding(.bottom, geo.size.height < 620 ? 16 : 28)
-                .ov2Reveal(delay: 0.3)
-            } else {
-                Color.clear.frame(height: 60)
+
+                Spacer(minLength: 12)
+
+                if !done {
+                    buttons
+                        .disabled(isCommitting || isFinishing)
+                        .padding(.bottom, compact ? 16 : 28)
+                        .ov2Reveal(delay: 0.3)
+                } else {
+                    Color.clear.frame(height: Self.buttonSize + (compact ? 16 : 28))
+                }
             }
-        }
-        .frame(width: geo.size.width, height: geo.size.height)
+            .frame(width: geo.size.width, height: geo.size.height)
         }
         .ov2Background()
         .onAppear {
             if courses.isEmpty {
                 courses = vm.recommendedCourses(language: languageManager.current)
                 vm.rememberSwipedCourses(courses)
+                authorNames = Self.authorNames(for: courses)
             }
             // Nothing to swipe is also "no cards left", and has to move on rather than
             // present an empty deck.
@@ -93,27 +91,72 @@ struct OnboardingV2SwipeCourses: View {
         }
     }
 
+    // MARK: - En-tête
+
+    /// « Choisis les **premiers cours** que tu vas lire » et sa consigne, alignés à gauche.
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            OV2CoreHighlightTitle(
+                text: OV2CoreText.marked(
+                    "onboardingV2.swipe.title",
+                    highlightKey: "elevateOnboardingCore.swipe.titleHighlight",
+                    language: languageManager.current
+                ),
+                size: 26
+            )
+            Text(languageManager.text("onboardingV2.swipe.subtitle"))
+                .font(DS.sans(.subheadline, .regular))
+                .foregroundStyle(OV2.inkSecondary)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+
     // MARK: - Card stack
+
+    private static let buttonSize: CGFloat = 64
+    /// Les deux cartes suivantes dépassent de ce qu'il faut au-dessus de la carte du dessus.
+    private static let plateRise: CGFloat = 22
+    /// Hauteur d'une carte hors vignette : marges, titre, auteur, filet, matière.
+    private static let cardChrome: CGFloat = 222
+    private static let maxThumbnail: CGFloat = 196
+    private static let minThumbnail: CGFloat = 88
 
     /// Height left for the deck once the title and the buttons have taken theirs.
     ///
-    /// The card is 3:4, so the width it can use is the binding constraint on a wide screen
-    /// and the height is on a short one; whichever runs out first decides.
+    /// The card is as wide as the page; its height is the thumbnail plus a fixed block of
+    /// text, so the thumbnail is what shrinks on a short screen.
     private func deckHeight(in geo: GeometryProxy) -> CGFloat {
-        let chrome: CGFloat = geo.size.height < 620 ? 230 : 290
-        let byHeight = geo.size.height - chrome
-        let byWidth = (geo.size.width - 48) * 4 / 3
-        return max(min(byHeight, byWidth, 420), 220)
+        let chrome: CGFloat = geo.size.height < 620 ? 206 : 244
+        let byHeight: CGFloat = geo.size.height - chrome
+        let tallest: CGFloat = Self.plateRise + Self.cardChrome + Self.maxThumbnail
+        let shortest: CGFloat = Self.plateRise + Self.cardChrome + Self.minThumbnail
+        return max(min(byHeight, tallest), shortest)
     }
 
-    private func cardStack(height: CGFloat) -> some View {
-        ZStack {
+    /// La pile : deux plaques bleutées qui dépassent en haut tant qu'il reste des cartes
+    /// dessous, la carte suivante juste sous celle du dessus, et la carte du dessus, qui suit
+    /// le doigt.
+    private func deck(width: CGFloat, height: CGFloat) -> some View {
+        let cardHeight: CGFloat = height - Self.plateRise
+        let thumbnail: CGFloat = min(Self.maxThumbnail, max(Self.minThumbnail, cardHeight - Self.cardChrome))
+        let remaining: Int = courses.count - index
+        return ZStack(alignment: .top) {
+            if remaining > 2 {
+                plate(width: width - 68, color: DS.accent.opacity(0.08))
+                    .transition(.opacity)
+            }
+            if remaining > 1 {
+                plate(width: width - 34, color: DS.accent.opacity(0.2))
+                    .offset(y: 11)
+                    .transition(.opacity)
+            }
             ForEach(Array(courses.enumerated()), id: \.element.id) { i, course in
-                if i >= index, i < index + 3 {
+                if i >= index, i < index + 2 {
                     let depth = i - index
-                    courseCard(course, height: height)
-                        .scaleEffect(1 - CGFloat(depth) * 0.04)
-                        .offset(y: CGFloat(depth) * 12)
+                    courseCard(course, width: width, height: cardHeight, thumbnail: thumbnail, isTop: depth == 0)
+                        .offset(y: Self.plateRise)
                         .offset(x: depth == 0 ? drag.width : 0, y: depth == 0 ? drag.height * 0.2 : 0)
                         .rotationEffect(.degrees(depth == 0 ? Double(drag.width / 18) : 0))
                         .zIndex(Double(courses.count - i))
@@ -123,101 +166,148 @@ struct OnboardingV2SwipeCourses: View {
                 }
             }
         }
-        .frame(height: height)
+        .frame(width: width, height: height, alignment: .top)
+        .animation(DS.Motion.snappy, value: remaining)
     }
 
-    /// The card keeps its 3:4 proportions inside whatever height the deck was given.
-    private func courseCard(_ course: Course, height: CGFloat) -> some View {
-        let width = height * 3 / 4
-        return cardBody(course, width: width, height: height)
+    private func plate(width: CGFloat, color: Color) -> some View {
+        RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+            .fill(color)
+            .frame(width: max(width, 0), height: 60)
+            .accessibilityHidden(true)
     }
 
-    private func cardBody(_ course: Course, width: CGFloat, height: CGFloat) -> some View {
-        ZStack(alignment: .bottomLeading) {
-            Group {
-                if let img = CourseImageMap.loadImage(for: course.id) {
-                    Image(uiImage: img).resizable().scaledToFill()
-                } else {
-                    LinearGradient(
-                        colors: [course.subject.color, course.subject.color.opacity(0.6)],
-                        startPoint: .topLeading, endPoint: .bottomTrailing
-                    )
-                }
+    /// Une carte de cours : vignette, titre, auteur quand il est connu, filet, matière.
+    private func courseCard(_ course: Course, width: CGFloat, height: CGFloat, thumbnail: CGFloat, isTop: Bool) -> some View {
+        VStack(spacing: 0) {
+            cover(course, side: thumbnail)
+
+            Text(course.title)
+                .font(DS.title(.title3, .bold))
+                .foregroundStyle(OV2.ink)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
+                .padding(.top, 18)
+
+            if let author = authorNames[course.id] {
+                Text(author)
+                    .font(DS.sans(.subheadline, .regular))
+                    .foregroundStyle(OV2.inkSecondary)
+                    .lineLimit(1)
+                    .padding(.top, 6)
             }
-            .frame(width: width, height: height)
-            .clipped()
 
-            LinearGradient(
-                colors: [.clear, .black.opacity(0.1), .black.opacity(0.75)],
-                startPoint: .center, endPoint: .bottom
-            )
+            Spacer(minLength: 8)
 
-            VStack(alignment: .leading, spacing: 8) {
-                Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
-                    .font(DS.sans(.caption2, .bold))
-                    .foregroundStyle(.white.opacity(0.9))
-                    .padding(.horizontal, 10).padding(.vertical, 5)
-                    .background(.white.opacity(0.2), in: Capsule())
-                Text(course.title)
-                    .font(DS.title(.title3, .bold))
-                    .foregroundStyle(.white)
-                    .lineLimit(3)
+            Rectangle()
+                .fill(Self.cardBorder)
+                .frame(height: 1.5)
+
+            HStack(spacing: 8) {
+                OV2CoreSubjectBadge(subject: course.subject, size: 24)
+                Text(course.subject.localizedShortName(language: languageManager.current))
+                    .font(DS.sans(.subheadline, .semibold))
+                    .foregroundStyle(OV2.ink)
+                    .lineLimit(1)
             }
-            .padding(18)
-
-            likeStamp
+            .padding(.top, 14)
         }
+        .padding(.top, 26)
+        .padding(.horizontal, 20)
+        .padding(.bottom, 20)
         .frame(width: width, height: height)
-        .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 24, style: .continuous)
-                .strokeBorder(OV2.hairline, lineWidth: 1)
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(DS.accentTint)
         )
-        .shadow(color: .black.opacity(0.12), radius: 18, y: 10)
+        .overlay(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(Self.cardBorder, lineWidth: 1.5)
+        )
+        .overlay(alignment: .top) {
+            if isTop { likeStamp }
+        }
+        .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+        .accessibilityElement(children: .combine)
+    }
+
+    /// Filet et bordure de la carte : le bleu d'accent, très dilué.
+    private static let cardBorder: Color = DS.accent.opacity(0.28)
+
+    /// La couverture du cours en vignette carrée ; à défaut, un dégradé à la couleur de la
+    /// matière.
+    private func cover(_ course: Course, side: CGFloat) -> some View {
+        Group {
+            if let img = CourseImageMap.loadImage(for: course.id) {
+                Image(uiImage: img).resizable().scaledToFill()
+            } else {
+                LinearGradient(
+                    colors: [course.subject.color, course.subject.color.opacity(0.6)],
+                    startPoint: .topLeading, endPoint: .bottomTrailing
+                )
+            }
+        }
+        .frame(width: side, height: side)
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .shadow(color: OV2.ink.opacity(0.16), radius: 12, y: 8)
+        .accessibilityHidden(true)
+    }
+
+    /// Nom de l'auteur de chaque cours du paquet, quand le catalogue le connaît. Calculé une
+    /// fois : la carte est redessinée à chaque mouvement du doigt.
+    private static func authorNames(for courses: [Course]) -> [String: String] {
+        var names: [String: String] = [:]
+        for course in courses {
+            if let author = AuthorStore.author(forCourseId: course.id) {
+                names[course.id] = author.name
+            }
+        }
+        return names
     }
 
     @ViewBuilder
     private var likeStamp: some View {
         let liking = drag.width > 0
         let intensity = min(1, abs(drag.width) / 110)
-        VStack {
-            HStack {
-                if liking {
-                    stamp(text: languageManager.text("onboardingV2.swipe.like"), color: OV2.success)
-                        .opacity(intensity)
-                    Spacer()
-                } else {
-                    Spacer()
-                    stamp(text: languageManager.text("onboardingV2.swipe.nope"), color: OV2.danger)
-                        .opacity(intensity)
-                }
+        HStack {
+            if liking {
+                stamp(text: languageManager.text("onboardingV2.swipe.like"), color: OV2.success)
+                    .opacity(intensity)
+                Spacer()
+            } else {
+                Spacer()
+                stamp(text: languageManager.text("onboardingV2.swipe.nope"), color: OV2.danger)
+                    .opacity(intensity)
             }
-            Spacer()
         }
-        .padding(18)
+        .padding(14)
+        .accessibilityHidden(true)
     }
 
     private func stamp(text: String, color: Color) -> some View {
         Text(text.uppercasedInApp())
-            .font(DS.title(.title2, .heavy))
+            .font(DS.title(.title3, .heavy))
             .foregroundStyle(color)
             .padding(.horizontal, 12).padding(.vertical, 6)
-            .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(color, lineWidth: 3))
+            .background(DS.surface, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).strokeBorder(color, lineWidth: 2.5))
             .rotationEffect(.degrees(drag.width > 0 ? -12 : 12))
     }
 
     private func completionView(height: CGFloat) -> some View {
         VStack(spacing: 18) {
             ZStack {
-                Circle().fill(OV2.success.opacity(0.12)).frame(width: 120, height: 120)
-                Image(systemName: "checkmark")
-                    .font(.system(size: 52, weight: .bold))
-                    .foregroundStyle(OV2.success)
-                    .scaleEffect(checkIn ? 1 : 0.4)
-                    .opacity(checkIn ? 1 : 0)
+                Circle().fill(OV2.success.opacity(0.12))
+                if checkIn {
+                    // La coche se dessine en arrivant.
+                    DSCheckBadge(size: 76)
+                }
             }
+            .frame(width: 120, height: 120)
+
             Text(languageManager.text("onboardingV2.swipe.noted"))
-                .font(DS.title(.title2, .heavy))
+                .font(DS.title(.title2, .semibold))
                 .foregroundStyle(OV2.ink)
                 .opacity(checkIn ? 1 : 0)
         }
@@ -298,16 +388,43 @@ struct OnboardingV2SwipeCourses: View {
         }
     }
 
-    private func swipeButton(systemName: String, tint: Color, action: @escaping () -> Void) -> some View {
+    // MARK: - Boutons
+
+    /// « Pas pour moi » en gris, « Ça m'intéresse » en bleu ; celui vers lequel la carte est
+    /// tirée grossit légèrement.
+    private var buttons: some View {
+        let pull: CGFloat = min(1, abs(drag.width) / 110)
+        let liking: Bool = drag.width > 0
+        return HStack(spacing: 22) {
+            swipeButton(
+                systemName: "hand.thumbsdown",
+                label: languageManager.text("onboardingV2.swipe.nope"),
+                fill: OV2.hairline,
+                tint: OV2.ink
+            ) { swipeTop(like: false) }
+            .scaleEffect(1 + (liking ? 0 : 0.12 * pull))
+
+            swipeButton(
+                systemName: "hand.thumbsup",
+                label: languageManager.text("onboardingV2.swipe.like"),
+                fill: OV2.accent,
+                tint: .white
+            ) { swipeTop(like: true) }
+            .scaleEffect(1 + (liking ? 0.12 * pull : 0))
+        }
+    }
+
+    private func swipeButton(systemName: String, label: String, fill: Color, tint: Color, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Image(systemName: systemName)
-                .font(.system(size: 24, weight: .bold))
+                .font(.system(size: 24, weight: .semibold))
                 .foregroundStyle(tint)
-                .frame(width: 64, height: 64)
-                .background(OV2.surface, in: Circle())
-                .overlay(Circle().strokeBorder(OV2.hairline, lineWidth: 1))
-                .shadow(color: .black.opacity(0.08), radius: 10, y: 5)
+                .frame(width: Self.buttonSize, height: Self.buttonSize)
+                .background(Circle().fill(fill))
+                .contentShape(Circle())
         }
-        .buttonStyle(SoftPressButtonStyle())
+        // Pas de vibration de style : `swipeTop` déclenche déjà celle de la validation.
+        .buttonStyle(PressableStyle(scale: 0.9, haptic: false))
+        .accessibilityLabel(Text(label))
     }
 }

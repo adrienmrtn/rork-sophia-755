@@ -182,7 +182,7 @@ struct OnboardingV2YearsGrid: View {
         // phone at a large text size the caption pushed it off the bottom. Scrolls, with
         // the button pinned; `ov2Background` caps the width on a tablet.
         OV2CorePage { height in
-            pageBody
+            pageBody(height: height)
                 .frame(minHeight: height, alignment: .top)
         } footer: {
             // Toujours là, toujours actif : on peut passer sans attendre la fin.
@@ -194,7 +194,7 @@ struct OnboardingV2YearsGrid: View {
     }
 
     /// Page content; the container above is what keeps the CTA on screen.
-    private var pageBody: some View {
+    private func pageBody(height: CGFloat) -> some View {
         VStack(alignment: .leading, spacing: 0) {
             header
                 .padding(.top, 16)
@@ -202,6 +202,8 @@ struct OnboardingV2YearsGrid: View {
             Spacer(minLength: 20)
 
             grid
+                .frame(maxWidth: gridMaxWidth(for: height))
+                .frame(maxWidth: .infinity)
 
             legend
                 .padding(.top, 20)
@@ -237,6 +239,18 @@ struct OnboardingV2YearsGrid: View {
     }
 
     // MARK: - Grille
+
+    /// Largeur maximale de la grille pour que la conclusion, qui arrive en dernier sous elle,
+    /// reste visible sans défiler sur un écran court : les carrés rétrécissent plutôt que de
+    /// pousser la légende et la conclusion hors de l'écran.
+    private func gridMaxWidth(for height: CGFloat) -> CGFloat {
+        // Hauteur du reste de la page : en-tête, légende, conclusion et marges.
+        let budget: CGFloat = height - 292
+        let rows: CGFloat = CGFloat(totalYears / columns)
+        let cell: CGFloat = (budget - Self.gridSpacing * (rows - 1)) / rows
+        let width: CGFloat = cell * CGFloat(columns) + Self.gridSpacing * CGFloat(columns - 1)
+        return max(200, width)
+    }
 
     private var grid: some View {
         LazyVGrid(columns: gridColumns, spacing: Self.gridSpacing) {

@@ -174,7 +174,7 @@ struct DuelResultView: View {
                 friendlyNote
             } else if let result {
                 trophyCount(result)
-                leagueProgress
+                leagueGauge
             } else if resultFailed {
                 syncFailedNote
             } else {
@@ -236,7 +236,7 @@ struct DuelResultView: View {
     }
 
     /// La ligue affichée, le seuil de la suivante, la jauge et ce qu'il reste à gagner.
-    private var leagueProgress: some View {
+    private var leagueGauge: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 Text(DuelFormat.leagueName(shownLeague, language: languageManager.current))

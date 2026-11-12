@@ -151,7 +151,6 @@ struct DuelVersusBadge: View {
                     .transition(.scale(scale: 0.5).combined(with: .opacity))
             }
         }
-        .accessibilityHidden(true)
     }
 }
 

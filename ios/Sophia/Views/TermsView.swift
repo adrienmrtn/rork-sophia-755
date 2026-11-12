@@ -14,8 +14,10 @@ struct TermsView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 22) {
                         ForEach(LegalDocumentContent.terms(language: languageManager.current)) { section in
-                            sectionTitle(section.title)
-                            sectionBody(section.body)
+                            VStack(alignment: .leading, spacing: 8) {
+                                sectionTitle(section.title)
+                                sectionBody(section.body)
+                            }
                         }
                     }
                     .padding(.horizontal, 20)
@@ -38,7 +40,7 @@ struct TermsView: View {
         Text(text)
             .font(DS.sans(.subheadline))
             .foregroundStyle(DS.inkSecondary)
-            .lineSpacing(4)
+            .lineSpacing(5)
             .frame(maxWidth: .infinity, alignment: .leading)
             .multilineTextAlignment(.leading)
     }

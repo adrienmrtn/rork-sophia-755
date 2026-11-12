@@ -122,7 +122,7 @@ struct OnboardingV2Account: View {
             .scrollPosition(id: centeredAvatar, anchor: .center)
             .contentMargins(.horizontal, margin, for: .scrollContent)
         }
-        .frame(height: Self.avatarSize + 8)
+        .frame(height: Self.avatarSize)
         .sensoryFeedback(.selection, trigger: avatarId)
     }
 
