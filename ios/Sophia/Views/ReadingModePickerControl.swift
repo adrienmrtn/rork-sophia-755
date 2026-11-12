@@ -15,38 +15,42 @@ struct ReadingModePickerControl: View {
                     let selected = mode == option
                     Button {
                         guard option != mode else { return }
-                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                        Haptics.select()
                         CourseReadingMode.current = option
-                        withAnimation(.easeInOut(duration: 0.2)) { mode = option }
+                        withAnimation(DS.Motion.snappy) { mode = option }
                     } label: {
                         VStack(spacing: 6) {
                             Image(systemName: option.systemImage)
-                                .font(.jakarta(size: 16, weight: .semibold))
+                                .font(.system(size: 16, weight: .semibold))
                             Text(languageManager.text(option.titleKey))
-                                .font(DS.sans(.caption, .semibold))
+                                .font(DS.sans(.caption, selected ? .bold : .semibold))
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.75)
                         }
-                        .foregroundStyle(selected ? DS.ink : DS.inkSecondary)
+                        .foregroundStyle(selected ? DS.accent : DS.inkSecondary)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 12)
                         .background(
-                            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                .fill(selected ? DS.surface : Color.clear)
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .fill(selected ? DS.accentTint : Color.clear)
                         )
                         .overlay {
-                            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                .strokeBorder(selected ? DS.hairline : Color.clear, lineWidth: 1)
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .strokeBorder(selected ? DS.accent : Color.clear, lineWidth: 1.5)
                         }
-                        .contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                        .contentShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(PressableStyle(haptic: false))
                     .accessibilityAddTraits(selected ? [.isSelected] : [])
                     .accessibilityLabel(languageManager.text(option.titleKey))
                 }
             }
             .padding(4)
-            .background(DS.surfaceMuted, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                    .strokeBorder(DS.hairline, lineWidth: 1.5)
+            }
             .accessibilityElement(children: .contain)
             .accessibilityLabel(languageManager.text("course.readingMode"))
 

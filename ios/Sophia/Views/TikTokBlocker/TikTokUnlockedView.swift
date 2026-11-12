@@ -25,7 +25,7 @@ struct TikTokUnlockedView: View {
                         .fill(DS.successTint)
                         .frame(width: 132, height: 132)
                     Circle()
-                        .strokeBorder(DS.success.opacity(0.25), lineWidth: 1)
+                        .strokeBorder(DS.success.opacity(0.35), lineWidth: 1.5)
                         .frame(width: 164, height: 164)
                         .scaleEffect(appeared ? 1 : 0.7)
                         .opacity(appeared ? 1 : 0)
@@ -36,37 +36,35 @@ struct TikTokUnlockedView: View {
                 }
                 .padding(.bottom, 28)
 
-                Text(languageManager.text("tiktokBlocker.unlocked.title"))
-                    .font(DS.title(.title, .heavy))
-                    .foregroundStyle(DS.ink)
-                    .multilineTextAlignment(.center)
+                DSHighlightTitle(text: languageManager.text("tiktokBlocker.unlocked.title"), style: .title, weight: .medium)
                     .padding(.horizontal, 28)
+                    .dsStagger(1)
 
                 Text(languageManager.text("tiktokBlocker.unlocked.subtitle"))
-                    .font(DS.sans(.body, .medium))
+                    .font(DS.sans(.body))
                     .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
+                    .lineSpacing(3)
                     .padding(.horizontal, 32)
                     .padding(.top, 10)
+                    .dsStagger(2)
 
                 if let until = blocker.unlockedUntil {
                     VStack(spacing: 4) {
-                        Text(languageManager.text("tiktokBlocker.unlocked.timer").uppercasedInApp())
-                            .font(DS.sans(.caption2, .semibold))
-                            .tracking(1.2)
-                            .foregroundStyle(DS.inkTertiary)
+                        DSEyebrow(text: languageManager.text("tiktokBlocker.unlocked.timer").uppercasedInApp())
                         Text(until, style: .timer)
-                            .font(.system(size: 40, weight: .heavy, design: .rounded))
+                            .font(.jakarta(size: 40, weight: .heavy))
                             .monospacedDigit()
-                            .foregroundStyle(DS.accent)
+                            .foregroundStyle(DS.ink)
                     }
                     .padding(.top, 26)
+                    .dsStagger(3)
                 }
 
                 if !blocker.canOpenTikTok {
                     Text(languageManager.text("tiktokBlocker.unlocked.notInstalled"))
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(DS.inkTertiary)
+                        .font(DS.sans(.caption))
+                        .foregroundStyle(DS.inkSecondary)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 36)
                         .padding(.top, 14)
@@ -90,8 +88,10 @@ struct TikTokUnlockedView: View {
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 17)
                             .background(DS.accent, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
+                            .contentShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
                         }
-                        .buttonStyle(SoftPressButtonStyle())
+                        // La vibration vient de `hapticTrigger`.
+                        .buttonStyle(PressableStyle(scale: 0.96, haptic: false))
                     }
 
                     Button {
@@ -103,8 +103,9 @@ struct TikTokUnlockedView: View {
                             .foregroundStyle(DS.inkSecondary)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 14)
+                            .contentShape(Rectangle())
                     }
-                    .buttonStyle(SoftPressButtonStyle())
+                    .buttonStyle(PressableStyle(haptic: false))
                 }
                 .padding(.horizontal, 24)
                 .padding(.bottom, 16)
@@ -114,7 +115,7 @@ struct TikTokUnlockedView: View {
         .sensoryFeedback(.success, trigger: appeared)
         .sensoryFeedback(.impact(weight: .medium), trigger: hapticTrigger)
         .onAppear {
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.72).delay(0.05)) {
+            withAnimation(DS.Motion.pop.delay(0.05)) {
                 appeared = true
             }
         }
@@ -145,7 +146,7 @@ struct TikTokLockBanner: View {
                 .lineLimit(1)
                 .minimumScaleFactor(0.85)
         }
-        .foregroundStyle(DS.accentSoft)
+        .foregroundStyle(DS.accent)
         .padding(.horizontal, 12)
         .padding(.vertical, 7)
         .background(DS.accentTint, in: Capsule())

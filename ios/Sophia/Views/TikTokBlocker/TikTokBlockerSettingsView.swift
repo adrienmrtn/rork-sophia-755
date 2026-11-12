@@ -42,8 +42,10 @@ struct TikTokBlockerSettingsView: View {
 
                     heroCard
                         .padding(.horizontal, 20)
+                        .dsStagger(0)
 
                     toggleSection
+                        .dsStagger(1)
 
                     if blocker.isEnabled || blocker.hasSelection {
                         appSection
@@ -61,6 +63,7 @@ struct TikTokBlockerSettingsView: View {
                     }
 
                     howItWorksSection
+                        .dsStagger(2)
 
                     if blocker.unlockCount > 0 {
                         Text(String(format: languageManager.text("tiktokBlocker.stats.unlocks"), blocker.unlockCount))

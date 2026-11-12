@@ -17,9 +17,9 @@ struct CourseLessonLockOverlay: View {
     var body: some View {
         Button {
             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-            withAnimation(.spring(response: 0.22, dampingFraction: 0.6)) { pressed = true }
+            withAnimation(DS.Motion.press) { pressed = true }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
-                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) { pressed = false }
+                withAnimation(DS.Motion.snappy) { pressed = false }
                 onUnlock()
             }
         } label: {
@@ -48,11 +48,15 @@ struct CourseLessonLockOverlay: View {
 
                 // Padlock medallion (design-system aligned).
                 ZStack {
+                    // Médaillon bordé avec son rebord bas, sans ombre.
+                    Circle()
+                        .fill(DS.hairline)
+                        .frame(width: 88, height: 88)
+                        .offset(y: 2)
                     Circle()
                         .fill(DS.surface)
                         .frame(width: 88, height: 88)
-                        .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
-                        .dsSoftShadow()
+                        .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1.5) }
 
                     Circle()
                         .fill(DS.accentTint)
@@ -75,7 +79,7 @@ struct CourseLessonLockOverlay: View {
         .accessibilityAddTraits(.isButton)
         .opacity(appeared ? 1 : 0)
         .onAppear {
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.72)) { appeared = true }
+            withAnimation(DS.Motion.pop) { appeared = true }
             withAnimation(.easeInOut(duration: 1.6).repeatForever(autoreverses: true)) { pulse = true }
             ringPhase = true
         }

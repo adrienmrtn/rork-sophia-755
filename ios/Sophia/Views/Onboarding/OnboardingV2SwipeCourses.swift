@@ -79,7 +79,7 @@ struct OnboardingV2SwipeCourses: View {
             if courses.isEmpty {
                 courses = vm.recommendedCourses(language: languageManager.current)
                 vm.rememberSwipedCourses(courses)
-                authorNames = Self.authorNames(for: courses)
+                authorNames = Self.resolveAuthorNames(for: courses)
             }
             // Nothing to swipe is also "no cards left", and has to move on rather than
             // present an empty deck.
@@ -119,16 +119,16 @@ struct OnboardingV2SwipeCourses: View {
     /// Les deux cartes suivantes dépassent de ce qu'il faut au-dessus de la carte du dessus.
     private static let plateRise: CGFloat = 22
     /// Hauteur d'une carte hors vignette : marges, titre, auteur, filet, matière.
-    private static let cardChrome: CGFloat = 222
+    private static let cardChrome: CGFloat = 210
     private static let maxThumbnail: CGFloat = 196
-    private static let minThumbnail: CGFloat = 88
+    private static let minThumbnail: CGFloat = 64
 
     /// Height left for the deck once the title and the buttons have taken theirs.
     ///
     /// The card is as wide as the page; its height is the thumbnail plus a fixed block of
     /// text, so the thumbnail is what shrinks on a short screen.
     private func deckHeight(in geo: GeometryProxy) -> CGFloat {
-        let chrome: CGFloat = geo.size.height < 620 ? 206 : 244
+        let chrome: CGFloat = geo.size.height < 620 ? 214 : 244
         let byHeight: CGFloat = geo.size.height - chrome
         let tallest: CGFloat = Self.plateRise + Self.cardChrome + Self.maxThumbnail
         let shortest: CGFloat = Self.plateRise + Self.cardChrome + Self.minThumbnail
@@ -230,6 +230,8 @@ struct OnboardingV2SwipeCourses: View {
         }
         .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
         .accessibilityElement(children: .combine)
+        // La carte suivante attend sous celle du dessus : VoiceOver ne lit que celle du dessus.
+        .accessibilityHidden(!isTop)
     }
 
     /// Filet et bordure de la carte : le bleu d'accent, très dilué.
@@ -256,7 +258,7 @@ struct OnboardingV2SwipeCourses: View {
 
     /// Nom de l'auteur de chaque cours du paquet, quand le catalogue le connaît. Calculé une
     /// fois : la carte est redessinée à chaque mouvement du doigt.
-    private static func authorNames(for courses: [Course]) -> [String: String] {
+    private static func resolveAuthorNames(for courses: [Course]) -> [String: String] {
         var names: [String: String] = [:]
         for course in courses {
             if let author = AuthorStore.author(forCourseId: course.id) {

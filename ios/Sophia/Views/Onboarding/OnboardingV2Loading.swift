@@ -20,6 +20,11 @@ struct OnboardingV2Loading: View {
     /// Réponse à la carte « Aimes-tu apprendre en écoutant ? » ; nil tant que rien n'est choisi.
     /// Elle n'arrête ni n'accélère le chargement.
     @State private var listens: Bool?
+    /// Départ, durée et valeur de départ de la barre de chaque étape : de quoi afficher un
+    /// pourcentage qui défile avec elle. `nil` tant que l'étape n'a pas commencé.
+    @State private var stepStarts: [Date?] = [nil, nil, nil]
+    @State private var stepSpans: [Double] = [0, 0, 0]
+    @State private var stepOrigins: [Double] = [0, 0, 0]
 
     /// Durée de chaque barre : trois chargements différents, comme trois vraies étapes.
     private static let durations: [Double] = [1.3, 2.2, 1.6]
@@ -146,7 +151,12 @@ struct OnboardingV2Loading: View {
             DSCheckBadge(size: 24, fill: DS.accent)
                 .transition(.scale.combined(with: .opacity))
         } else if isActive {
-            LoadingPercent(value: progress[i], locale: languageManager.locale)
+            LoadingPercent(
+                start: stepStarts[i],
+                span: stepSpans[i],
+                origin: stepOrigins[i],
+                locale: languageManager.locale
+            )
         } else {
             Circle()
                 .strokeBorder(DS.hairline, lineWidth: 1.5)
@@ -257,6 +267,10 @@ struct OnboardingV2Loading: View {
     private func playSteps() async {
         for i in 0..<3 where !completed[i] {
             let remaining = Self.durations[i] * (1 - progress[i])
+            // Repères du pourcentage affiché à côté de la barre (affichage seulement).
+            stepOrigins[i] = progress[i]
+            stepSpans[i] = remaining
+            stepStarts[i] = Date()
             withAnimation(.timingCurve(0.05, 0.75, 0.3, 1.0, duration: remaining)) { progress[i] = 1 }
             try? await Task.sleep(nanoseconds: UInt64(remaining * 1_000_000_000) + 80_000_000)
             if Task.isCancelled { return }
@@ -290,27 +304,66 @@ private struct LoadingBar: View {
     }
 }
 
-/// Pourcentage de l'étape en cours. `Animatable` : le nombre défile avec la barre au lieu de
-/// sauter de 0 à 100.
-private struct LoadingPercent: View, Animatable {
-    var value: Double
+/// Pourcentage de l'étape en cours. Il est recalculé à chaque image à partir du départ et
+/// de la durée de l'étape, sur la même courbe que la barre : le nombre défile avec elle au
+/// lieu de sauter de 0 à 100.
+private struct LoadingPercent: View {
+    let start: Date?
+    let span: Double
+    let origin: Double
     let locale: Locale
 
-    var animatableData: Double {
-        get { value }
-        set { value = newValue }
-    }
-
-    private var text: String {
-        let clamped: Double = min(max(value, 0.0), 1.0)
-        return clamped.formatted(.percent.precision(.fractionLength(0)).locale(locale))
-    }
-
     var body: some View {
-        Text(verbatim: text)
-            .font(DS.sans(.footnote, .medium))
-            .foregroundStyle(DS.inkSecondary)
-            .monospacedDigit()
+        TimelineView(.animation(minimumInterval: 1.0 / 20.0, paused: false)) { context in
+            Text(verbatim: text(at: context.date))
+                .font(DS.sans(.footnote, .medium))
+                .foregroundStyle(DS.inkSecondary)
+                .monospacedDigit()
+        }
+    }
+
+    private func text(at date: Date) -> String {
+        let value: Double = min(max(fraction(at: date), 0.0), 1.0)
+        return value.formatted(.percent.precision(.fractionLength(0)).locale(locale))
+    }
+
+    private func fraction(at date: Date) -> Double {
+        guard let start, span > 0 else { return origin }
+        let elapsed: Double = date.timeIntervalSince(start)
+        let time: Double = min(max(elapsed / span, 0.0), 1.0)
+        let eased: Double = LoadingCurve.value(at: time)
+        return origin + (1.0 - origin) * eased
+    }
+}
+
+/// La courbe de remplissage des barres, `timingCurve(0.05, 0.75, 0.3, 1.0)`, évaluée à la
+/// main pour le pourcentage : une Bézier cubique de (0, 0) à (1, 1).
+private enum LoadingCurve {
+    /// Avancement (0 à 1) à l'instant `time` (0 à 1).
+    static func value(at time: Double) -> Double {
+        let target: Double = min(max(time, 0.0), 1.0)
+        // L'abscisse de la courbe est croissante : on cherche son paramètre par dichotomie.
+        var low: Double = 0.0
+        var high: Double = 1.0
+        for _ in 0..<24 {
+            let mid: Double = (low + high) / 2.0
+            if bezier(mid, first: 0.05, second: 0.3) < target {
+                low = mid
+            } else {
+                high = mid
+            }
+        }
+        let parameter: Double = (low + high) / 2.0
+        return bezier(parameter, first: 0.75, second: 1.0)
+    }
+
+    /// Coordonnée d'une Bézier cubique allant de 0 à 1, de points de contrôle `first` et `second`.
+    private static func bezier(_ s: Double, first: Double, second: Double) -> Double {
+        let inverse: Double = 1.0 - s
+        let a: Double = 3.0 * inverse * inverse * s * first
+        let b: Double = 3.0 * inverse * s * s * second
+        let c: Double = s * s * s
+        return a + b + c
     }
 }
 
