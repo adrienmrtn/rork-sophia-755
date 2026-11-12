@@ -87,3 +87,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - ja parts 8–14 fini ; 5 questions retirées (japonais) → 12 retirées ; images vérifiées : 98 (Trevi recadrée OK, Durga à recadrer : 429 Wikimedia)
 - images : 100 (Durga et Trevi recadrées, réintégrées) ; crédits fusionnés dans content/duels/images.json ; upload = 85 images + 15 drapeaux
 - texte+images+remplacements intégrés : 1 500 nouvelles questions actives exactement (3 233 au total, 12 retirées) ; pack part15 = 112 (100 images + 12 remplacements) ; traduction part15 lancée (10 agents multi-langues)
+- sl parts 1–7 fini
