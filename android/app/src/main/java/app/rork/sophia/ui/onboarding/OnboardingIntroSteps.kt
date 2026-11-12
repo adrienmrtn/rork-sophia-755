@@ -189,14 +189,6 @@ private fun introArtSize(base: Dp, available: Dp, reserved: Dp): Dp {
  * Courses whose cover fills the wall: the most read and the most telling in picture, three
  * per column (same list as iOS).
  */
-/**
- * Langue de tout le texte de la page d'accueil. L'accroche de marque (« Replace scrolling
- * with… ») est volontairement en anglais dans toutes les tables ; le sous-titre et les deux
- * boutons étaient, eux, lus dans la langue de l'app, d'où une page en deux langues. Tout se
- * résout maintenant depuis cette seule langue : celle de l'accroche.
- */
-private val WELCOME_LANGUAGE = AppLanguage.ENGLISH
-
 private val WELCOME_COVER_COURSE_IDS = listOf(
     "course_67_qu_est_ce_qu_un_trou_noir",
     "course_241_pourquoi_voulait_on_demolir_la_tour_eiffel",
@@ -218,8 +210,7 @@ private val WELCOME_COVER_COURSE_IDS = listOf(
  */
 @Composable
 internal fun WelcomeStep(
-    /** La langue de l'app. Le texte de la page, lui, est lu dans [WELCOME_LANGUAGE]. */
-    @Suppress("UNUSED_PARAMETER") language: AppLanguage,
+    language: AppLanguage,
     onContinue: () -> Unit,
     /** Someone reinstalling or switching phone. Null hides the link (no Google to sign in with). */
     onExistingAccount: (() -> Unit)? = null,
@@ -284,7 +275,7 @@ internal fun WelcomeStep(
                             },
                         contentAlignment = Alignment.CenterStart,
                     ) {
-                        WelcomeTextBlock()
+                        WelcomeTextBlock(language)
                     }
                 }
             }
@@ -298,7 +289,7 @@ internal fun WelcomeStep(
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 OnboardingCta(
-                    text = StringStore.text(context, "onboardingV2.welcome.cta", WELCOME_LANGUAGE),
+                    text = StringStore.text(context, "onboardingV2.welcome.cta", language),
                     onClick = onContinue,
                     bottomInset = if (onExistingAccount == null) 20.dp else 6.dp,
                 )
@@ -316,7 +307,7 @@ internal fun WelcomeStep(
                         contentAlignment = Alignment.Center,
                     ) {
                         Text(
-                            text = StringStore.text(context, "onboardingV2.welcome.existingAccount", WELCOME_LANGUAGE),
+                            text = StringStore.text(context, "onboardingV2.welcome.existingAccount", language),
                             fontFamily = PlusJakartaSans,
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 15.sp,
@@ -331,16 +322,10 @@ internal fun WelcomeStep(
     }
 }
 
-/**
- * The whole logo (symbol + « Sophia »), the brand tagline and the promise. L'accroche et la
- * promesse sont lues dans la même langue ([WELCOME_LANGUAGE]) et posées de gauche à droite,
- * y compris sur un téléphone en arabe ou en hébreu.
- */
+/** The whole logo (symbol + « Sophia »), the tagline and the promise, in the app language. */
 @Composable
-private fun WelcomeTextBlock() {
+private fun WelcomeTextBlock(language: AppLanguage) {
     val context = LocalContext.current
-    val language = WELCOME_LANGUAGE
-    CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
     Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
         Image(
             painter = painterResource(R.drawable.sophia_mark),
@@ -378,7 +363,6 @@ private fun WelcomeTextBlock() {
             textAlign = TextAlign.Start,
             modifier = Modifier.fillMaxWidth(),
         )
-    }
     }
 }
 
