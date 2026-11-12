@@ -17,7 +17,7 @@ enum NewGenRoute: Hashable {
     case training
     /// La page « Deviens créateur », avant la sortie vers le Hub des créateurs.
     case becomeCreator
-    /// La page « Invite un ami » (parrainage).
+    /// La page « Invite un ami » (parrainage), ouverte depuis la carte du fil d'accueil.
     case inviteFriend
 }
 
@@ -137,7 +137,6 @@ struct NewGenTabsView: View {
                 onOpenAntiScroll: onOpenAntiScroll,
                 onDiscoverCreators: { selectedTab = 1 },
                 onBecomeCreator: { profilePath.append(.becomeCreator) },
-                onInviteFriend: { profilePath.append(.inviteFriend) },
                 onShowPaywall: { onShowPaywall(.debloquerCours) },
                 onResetOnboarding: onResetOnboarding
             )
@@ -266,8 +265,11 @@ struct NewGenTabsView: View {
             BecomeCreatorView()
                 .toolbar(.hidden, for: .navigationBar)
         case .inviteFriend:
-            InviteFriendView(progressManager: progressManager)
-                .toolbar(.hidden, for: .navigationBar)
+            InviteFriendView(
+                progressManager: progressManager,
+                showsOffer: InviteFriend.showsOffer(progressManager: progressManager, isPremium: storeVM.isPremium)
+            )
+            .toolbar(.hidden, for: .navigationBar)
         }
     }
 

@@ -176,6 +176,7 @@ class ProgressManager {
 
     init() {
         load()
+        seedFirstCourseFinishedHereIfNeeded()
         updateStreak()
         ProgressSyncService.shared.attach(self)
     }
@@ -301,6 +302,8 @@ class ProgressManager {
     ) {
         var cp = progress.courseProgress[courseId] ?? CourseProgress(lastLessonIndex: 0, isCompleted: false, bestQuizScore: 0)
         cp.isCompleted = true
+        // Un cours vient d'être terminé sur ce téléphone : le parrainage peut se montrer.
+        UserDefaults.standard.set(true, forKey: Self.firstCourseFinishedHereKey)
         if cp.startedAt == nil {
             cp.startedAt = Self.isoFormatter.string(from: Date())
         }
@@ -458,6 +461,24 @@ class ProgressManager {
     /// `true` si le cours a été débloqué avec un crédit de parrainage : lisible en entier.
     func isCourseUnlockedByReferral(_ courseId: String) -> Bool {
         progress.referralUnlockedCourseIds.contains(courseId)
+    }
+
+    private static let firstCourseFinishedHereKey = "sophia_first_course_finished_here"
+
+    /// Vrai une fois qu'un cours a été terminé **sur ce téléphone** : la condition de l'offre
+    /// de parrainage (docs/parrainage.md). Une progression revenue du compte ne suffit pas : à
+    /// la réinstallation, la session restaurée ramène les cours lus ailleurs avant même la
+    /// première lecture, et l'offre s'affichait alors d'entrée.
+    var hasFinishedACourseHere: Bool {
+        completedCount >= 1 && UserDefaults.standard.bool(forKey: Self.firstCourseFinishedHereKey)
+    }
+
+    /// Au premier lancement qui connaît ce repère, il prend l'état de la progression locale,
+    /// lue avant toute synchronisation : un lecteur déjà installé garde l'offre, une
+    /// installation neuve commence sans. Ensuite seul un cours terminé ici le lève.
+    private func seedFirstCourseFinishedHereIfNeeded() {
+        guard UserDefaults.standard.object(forKey: Self.firstCourseFinishedHereKey) == nil else { return }
+        UserDefaults.standard.set(completedCount >= 1, forKey: Self.firstCourseFinishedHereKey)
     }
 
     /// Crédits de cours encore disponibles : trois une fois la récompense acquise, moins ceux
@@ -657,6 +678,7 @@ class ProgressManager {
 
     func resetProgress() {
         progress = .empty
+        UserDefaults.standard.set(false, forKey: Self.firstCourseFinishedHereKey)
         save()
     }
 

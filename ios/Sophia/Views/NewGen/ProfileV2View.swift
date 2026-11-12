@@ -22,8 +22,6 @@ struct ProfileV2View: View {
     let onDiscoverCreators: () -> Void
     /// Plus utilisé ici (la carte « Deviens créateur » a quitté le profil) ; gardé pour l'appelant.
     let onBecomeCreator: () -> Void
-    /// Ouvre la page « Invite un ami » (parrainage).
-    var onInviteFriend: () -> Void = {}
     var onShowPaywall: (() -> Void)? = nil
     var onResetOnboarding: (() -> Void)? = nil
 
@@ -131,12 +129,10 @@ struct ProfileV2View: View {
         }
     }
 
-    /// Les cartes d'entrée illustrées : parrainage, Entraînement, « Ma progression ».
+    /// Les cartes d'entrée illustrées : Entraînement, « Ma progression ». Le parrainage vit
+    /// dans les réglages (`SettingsView.inviteSection`).
     private var entryCards: some View {
         VStack(alignment: .leading, spacing: 10) {
-            if InviteFriend.showsProfileCard(progressManager: progressManager, isPremium: store.isPremium) {
-                inviteCard
-            }
             trainingCard
             progressCard
         }
@@ -434,20 +430,6 @@ struct ProfileV2View: View {
             title: languageManager.text("training.title"),
             subtitle: languageManager.text("training.locked.tagline"),
             action: onOpenTraining
-        )
-    }
-
-    /// « Invite un ami et gagne 3 cours gratuits » : après le premier cours terminé ; une fois la
-    /// récompense gagnée, la ligne dit combien de cours gratuits il reste à utiliser.
-    private var inviteCard: some View {
-        let remaining = progressManager.referralCreditsRemaining
-        return posterCard(
-            image: "invite_poster",
-            title: languageManager.text("invite.cta"),
-            subtitle: ReferralService.shared.rewarded
-                ? String(format: languageManager.text("invite.status.earned"), remaining)
-                : languageManager.text("invite.card.subtitle"),
-            action: onInviteFriend
         )
     }
 
