@@ -56,3 +56,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - ja parts 1–7 fini ; vague 2 lancée pour sv
 - fr parts 8–14 fini (fr complet texte) ; vague 2 lancée pour ru
 - cs parts 8–14 fini ; dq_en_2_337 retirée ; vague 2 lancée pour hr
+- nb parts 8–14 fini ; vague 2 lancée pour sl
