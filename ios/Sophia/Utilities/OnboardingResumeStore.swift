@@ -10,6 +10,7 @@ import Foundation
 enum OnboardingResumeStore {
     private static let stepKey = "sophia_onboarding_step"
     private static let firstNameStorageKey = "sophia_onboarding_first_name"
+    private static let avatarStorageKey = "sophia_onboarding_avatar"
     private static let ageRangeStorageKey = "sophia_onboarding_age_range"
     private static let knowledgeLevelStorageKey = "sophia_onboarding_knowledge_level"
     private static let motivationStorageKey = "sophia_onboarding_motivation"
@@ -29,6 +30,12 @@ enum OnboardingResumeStore {
     static var firstName: String {
         get { UserDefaults.standard.string(forKey: firstNameStorageKey) ?? "" }
         set { UserDefaults.standard.setValue(newValue, forKey: firstNameStorageKey) }
+    }
+
+    /// Avatar picked on the name page (`avatar_01`…); nil until that page was reached.
+    static var avatarId: String? {
+        get { UserDefaults.standard.string(forKey: avatarStorageKey) }
+        set { UserDefaults.standard.setValue(newValue, forKey: avatarStorageKey) }
     }
 
     static var ageRangeKey: String? {
@@ -77,7 +84,7 @@ enum OnboardingResumeStore {
     static func clear() {
         let defaults = UserDefaults.standard
         [
-            stepKey, firstNameStorageKey, ageRangeStorageKey, knowledgeLevelStorageKey,
+            stepKey, firstNameStorageKey, avatarStorageKey, ageRangeStorageKey, knowledgeLevelStorageKey,
             motivationStorageKey, objectivesKey, topicsStorageKey, likedKey, swipedKey, phoneMinutesKey,
         ].forEach {
             defaults.removeObject(forKey: $0)

@@ -5,12 +5,10 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -73,8 +71,6 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.formatted
 import app.rork.sophia.ui.components.DSCheckBadge
 import app.rork.sophia.ui.components.DSHighlightTitle
-import app.rork.sophia.ui.components.DSMotion
-import app.rork.sophia.ui.components.dsPopIn
 import app.rork.sophia.ui.components.dsStagger
 import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.theme.DS
@@ -84,12 +80,12 @@ import kotlinx.coroutines.delay
 // MARK: - Mission
 
 /**
- * « Sophia is free to try »: the mission, and the team counting on the reader, right after
+ * « Our mission »: the mission, and the team counting on the reader, right after
  * « Sophia will help you reach all your goals ».
  *
- * « Elevate arrondi » style: a large rounded illustration, « Sophia is free to try » as a blue
- * chip, the mission as the title (its heart in bold blue), the team's text in grey, then the
- * signature with the professors' faces, and one button.
+ * « Elevate arrondi » style: a large rounded illustration, the mission as the title (its
+ * heart in bold blue), the team's text in grey, then the signature with the professors'
+ * faces, and one button.
  */
 @Composable
 internal fun MissionStep(language: AppLanguage, onContinue: () -> Unit) {
@@ -102,8 +98,6 @@ internal fun MissionStep(language: AppLanguage, onContinue: () -> Unit) {
         highlightKey = "elevateOnboardingCore.mission.leadHighlight",
         language = language,
     )
-    // « Sophia is free to try », without its full stop: it is a label here.
-    val trialChip = OV2Core.trimmingTrailing(StringStore.text(context, "onboardingV2.mission.title", language), ".。")
 
     OV2CorePage(
         footer = {
@@ -133,19 +127,11 @@ internal fun MissionStep(language: AppLanguage, onContinue: () -> Unit) {
                     .clip(RoundedCornerShape(24.dp))
                     .background(DS.accentTint),
             )
-            Text(
-                text = trialChip,
-                style = OV2.caption.copy(fontWeight = FontWeight.Bold, color = DS.accent, letterSpacing = 0.4.sp),
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .dsStagger(1)
-                    .background(DS.accentTint, RoundedCornerShape(14.dp))
-                    .padding(horizontal = 14.dp, vertical = 5.dp),
-            )
+            // L'étiquette « Sophia est gratuite à l'essai » a été retirée : la mission ouvre le texte.
             DSHighlightTitle(
                 text = missionTitle,
                 modifier = Modifier
-                    .dsStagger(2)
+                    .dsStagger(1)
                     .fillMaxWidth()
                     .semantics { heading() },
                 fontSize = 25.sp,
@@ -155,11 +141,11 @@ internal fun MissionStep(language: AppLanguage, onContinue: () -> Unit) {
                 text = StringStore.text(context, "onboardingV2.mission.body2", language),
                 style = OV2.subheadline.copy(fontWeight = FontWeight.Normal, lineHeight = 23.sp, color = DS.inkSecondary),
                 textAlign = TextAlign.Center,
-                modifier = Modifier.dsStagger(3),
+                modifier = Modifier.dsStagger(2),
             )
             // The professors' faces overlapping, and « The Sophia team ».
             Row(
-                modifier = Modifier.padding(top = 2.dp).dsStagger(4),
+                modifier = Modifier.padding(top = 2.dp).dsStagger(3),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
@@ -265,7 +251,7 @@ private fun AboardMedallion(size: Dp, animate: Boolean) {
         delay(250)
         ripple.animateTo(1f, tween(durationMillis = 1100, easing = LinearOutSlowInEasing))
     }
-    val landing by animateFloatAsState(if (shown) 1f else 0f, DSMotion.pop(), label = "aboardLanding")
+    val landing by animateFloatAsState(if (shown) 1f else 0f, OnboardingMotion.settle(460), label = "aboardLanding")
     val drift by if (animate) {
         rememberInfiniteTransition(label = "aboardFloat").animateFloat(
             initialValue = -1f,
@@ -314,7 +300,7 @@ private fun AboardMedallion(size: Dp, animate: Boolean) {
             modifier = Modifier
                 .align(Alignment.BottomEnd)
                 .padding(size * 0.058f)
-                .dsPopIn(450)
+                .ov2PopIn(450)
                 .size(44.dp)
                 .background(DS.surface, CircleShape),
             contentAlignment = Alignment.Center,
@@ -440,7 +426,7 @@ private fun FeatureRail(features: List<Feature>, revealed: Int) {
                 features.forEachIndexed { i, feature ->
                     val progress by animateFloatAsState(
                         targetValue = if (i < revealed) 1f else 0f,
-                        animationSpec = spring(dampingRatio = 0.75f, stiffness = Spring.StiffnessMediumLow),
+                        animationSpec = OnboardingMotion.settle(),
                         label = "featureBadge$i",
                     )
                     Box(
@@ -469,7 +455,7 @@ private fun FeatureRail(features: List<Feature>, revealed: Int) {
             features.forEachIndexed { i, feature ->
                 val progress by animateFloatAsState(
                     targetValue = if (i < revealed) 1f else 0f,
-                    animationSpec = spring(dampingRatio = 0.75f, stiffness = Spring.StiffnessMediumLow),
+                    animationSpec = OnboardingMotion.settle(),
                     label = "featureText$i",
                 )
                 Box(

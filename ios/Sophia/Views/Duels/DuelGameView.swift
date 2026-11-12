@@ -503,7 +503,7 @@ private struct DuelScoreSide: View {
 /// fichier : elle est rognée (`DuelImageTrimmer`) et le drapeau se pose à même la page, avec un
 /// filet pour que ses bords blancs se détachent. L'image est déjà en cache, chargée pendant la
 /// présentation de l'adversaire ; tant qu'elle n'est pas là, la place reste vide.
-private struct DuelQuestionImage: View {
+struct DuelQuestionImage: View {
     let url: String?
     @State private var image: UIImage?
     /// Un drapeau rogné : coins moins ronds et filet.

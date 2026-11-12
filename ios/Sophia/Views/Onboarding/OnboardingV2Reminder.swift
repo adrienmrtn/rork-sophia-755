@@ -36,7 +36,7 @@ struct OnboardingV2Reminder: View {
         }
         .ov2LegacyBackground()
         .onAppear {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.6)) { bellIn = true }
+            withAnimation(DSCalmMotion.settle) { bellIn = true }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 withAnimation(.easeInOut(duration: 0.4).repeatForever(autoreverses: true)) {
                     bellWobble = true

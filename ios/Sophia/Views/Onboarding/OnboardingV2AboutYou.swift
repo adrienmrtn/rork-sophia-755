@@ -12,23 +12,35 @@ import SwiftUI
 
 // MARK: - Prénom
 
-/// « Comment tu t'appelles ? » : un champ, le clavier qui arrive tout seul, « Continuer » dès
-/// qu'il y a un prénom, et « Passer » pour qui ne veut pas le donner.
+/// « Comment tu t'appelles ? » : le carrousel des avatars, un champ, le clavier qui arrive tout
+/// seul, « Continuer » dès qu'il y a un prénom, et « Passer » pour qui ne veut pas le donner.
+/// L'avatar centré dans le carrousel est retenu dans tous les cas (`vm.avatarId`) : il devient
+/// celui du profil, et la page « Ton profil » repart de lui après la création du compte.
 struct OnboardingV2Name: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
     @State private var name = ""
+    /// L'avatar au centre du carrousel : celui déjà choisi, sinon un avatar tiré au hasard.
+    @State private var avatarId: String
     @FocusState private var focused: Bool
+
+    init(vm: OnboardingV2ViewModel, onNext: @escaping () -> Void) {
+        self.vm = vm
+        self.onNext = onNext
+        let fallback: String = Avatars.all.randomElement() ?? "avatar_01"
+        let start: String = Avatars.isValid(vm.avatarId) ? (vm.avatarId ?? fallback) : fallback
+        _avatarId = State(initialValue: start)
+    }
 
     private var trimmed: String {
         name.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     var body: some View {
-        // Le clavier prend la moitié d'un petit écran : l'illustration se réduit (ou s'efface)
-        // selon la hauteur qui reste, le contenu défile au besoin, le CTA reste épinglé.
+        // Le clavier prend la moitié d'un petit écran : les avatars se réduisent selon la
+        // hauteur qui reste, le contenu défile au besoin, le CTA reste épinglé.
         OV2CorePage { height in
             pageBody(height: height)
         } footer: {
@@ -47,29 +59,31 @@ struct OnboardingV2Name: View {
         .ov2Background()
         .onAppear {
             name = vm.firstName
+            // L'avatar présélectionné compte comme un choix, même si on n'y touche pas.
+            vm.avatarId = avatarId
             // Le clavier arrive une fois la transition de page terminée.
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
                 focused = true
             }
         }
+        .onChange(of: avatarId) { _, newValue in
+            vm.avatarId = newValue
+        }
     }
 
     private func pageBody(height: CGFloat) -> some View {
-        let art: CGFloat = OV2CoreMetrics.artSize(base: 116, available: height, reserved: 200)
+        // Pleine taille quand tout tient ; réduits, jamais retirés, quand le clavier ou un
+        // petit écran laissent peu de hauteur (titre, champ et marges en prennent environ 210).
+        let avatarSize: CGFloat = min(104, max(72, height - 210))
         return VStack(spacing: 0) {
-            OV2CoreQuestionTitle(
-                title: languageManager.text("onboardingV2.name.title"),
-                subtitle: languageManager.text("onboardingV2.name.subtitle")
-            )
-            .padding(.top, OV2CoreMetrics.topInset)
-            .dsStagger(0)
+            OV2CoreQuestionTitle(title: languageManager.text("onboardingV2.name.title"))
+                .padding(.top, OV2CoreMetrics.topInset)
+                .dsStagger(0)
 
-            if art > 0 {
-                OV2CoreIllustration(art: .reader, size: art)
-                    .padding(.top, 22)
-                    .dsPopIn(delay: 0.12)
-                    .transition(.scale(scale: 0.6).combined(with: .opacity))
-            }
+            // Le carrousel va d'un bord à l'autre de la page.
+            OV2CoreAvatarCarousel(avatarId: $avatarId, avatarSize: avatarSize)
+                .padding(.top, 24)
+                .dsStagger(1)
 
             field
                 .padding(.horizontal, OV2CoreMetrics.sideInset)
@@ -78,7 +92,7 @@ struct OnboardingV2Name: View {
 
             Spacer(minLength: 12)
         }
-        .animation(DS.Motion.snappy, value: art)
+        .animation(OV2CoreMotion.select, value: avatarSize)
     }
 
     private var field: some View {
@@ -124,7 +138,7 @@ struct OnboardingV2Name: View {
         )
         .contentShape(Rectangle())
         .onTapGesture { focused = true }
-        .animation(DS.Motion.snappy, value: focused)
+        .animation(OV2CoreMotion.select, value: focused)
     }
 
     /// « Passer » : bouton secondaire, contour bleu clair sur fond blanc.
@@ -187,17 +201,14 @@ struct OnboardingV2Age: View {
     private func pageBody(height: CGFloat) -> some View {
         let art: CGFloat = OV2CoreMetrics.artSize(base: 124, available: height, reserved: 506)
         return VStack(spacing: 0) {
-            OV2CoreQuestionTitle(
-                title: languageManager.text("onboardingV2.age.title"),
-                subtitle: languageManager.text("onboardingV2.age.subtitle")
-            )
-            .padding(.top, OV2CoreMetrics.topInset)
-            .dsStagger(0)
+            OV2CoreQuestionTitle(title: languageManager.text("onboardingV2.age.title"))
+                .padding(.top, OV2CoreMetrics.topInset)
+                .dsStagger(0)
 
             if art > 0 {
                 OV2CoreIllustration(art: .mirror, size: art)
                     .padding(.top, 22)
-                    .dsPopIn(delay: 0.12)
+                    .ov2CoreSoftIn(delay: 0.12)
             }
 
             rows
@@ -214,7 +225,7 @@ struct OnboardingV2Age: View {
                     label: OnboardingV2ViewModel.ageRangeLabel(key, language: languageManager.current),
                     isSelected: vm.ageRangeKey == key,
                     action: {
-                        withAnimation(DS.Motion.snappy) {
+                        withAnimation(OV2CoreMotion.select) {
                             vm.ageRangeKey = key
                         }
                     }
@@ -267,7 +278,7 @@ struct OnboardingV2Knowledge: View {
             if art > 0 {
                 OV2CoreIllustration(art: .growth, size: art)
                     .padding(.top, 22)
-                    .dsPopIn(delay: 0.12)
+                    .ov2CoreSoftIn(delay: 0.12)
             }
 
             rows
@@ -292,7 +303,7 @@ struct OnboardingV2Knowledge: View {
 
     private func select(_ level: Int) {
         guard level != step else { return }
-        withAnimation(DS.Motion.snappy) {
+        withAnimation(OV2CoreMotion.select) {
             step = level
         }
         vm.knowledgeLevel = level
@@ -339,7 +350,7 @@ struct OnboardingV2Motivation: View {
                     label: OnboardingV2ViewModel.motivationLabel(key, language: languageManager.current),
                     isSelected: vm.motivationKey == key,
                     action: {
-                        withAnimation(DS.Motion.snappy) {
+                        withAnimation(OV2CoreMotion.select) {
                             vm.motivationKey = key
                         }
                     },
@@ -423,7 +434,7 @@ struct OnboardingV2Topics: View {
                     isSelected: vm.isTopicSelected(subject.storageKey),
                     showsCheckbox: true,
                     action: {
-                        withAnimation(DS.Motion.snappy) {
+                        withAnimation(OV2CoreMotion.select) {
                             vm.toggleTopic(subject.storageKey)
                         }
                     },

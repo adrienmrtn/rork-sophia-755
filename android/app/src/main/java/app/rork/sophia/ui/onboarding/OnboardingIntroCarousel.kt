@@ -3,6 +3,7 @@ package app.rork.sophia.ui.onboarding
 import android.content.Context
 import androidx.annotation.DrawableRes
 import androidx.compose.animation.core.AnimationSpec
+import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.animateIntAsState
@@ -30,7 +31,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Replay
@@ -98,7 +98,6 @@ import app.rork.sophia.ui.components.DSCheckBadge
 import app.rork.sophia.ui.components.DSEyebrow
 import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.components.DSOptionState
-import app.rork.sophia.ui.components.DSSegmentedProgress
 import app.rork.sophia.ui.components.dsHighlighted
 import app.rork.sophia.ui.components.dsOptionCard
 import app.rork.sophia.ui.components.dsStagger
@@ -223,8 +222,10 @@ internal class OnboardingCarouselState(initialPage: Int = 0, initialHold: Boolea
  * themselves every five seconds. A tap or a swipe advances too; « Continue » goes to the
  * next page, then to the next screen; the end of the fourth page moves on by itself.
  *
- * Same layout on the four: illustration (flexible), title and subtitle of fixed height,
- * button. The segments and the back arrow live in the coordinator's header, fed by [state].
+ * Same layout on the four: illustration (flexible), title of fixed height, button. Seule la
+ * dernière page (« Écoute tes cours ») garde un sous-titre ; sur les trois premières, sa
+ * place revient à l'illustration. The segments and the back arrow live in the coordinator's
+ * header, fed by [state].
  */
 @Composable
 internal fun IntroCarouselStep(
@@ -387,13 +388,13 @@ internal fun OnIntroPageActivated(active: Boolean, action: suspend () -> Unit) {
 
 /**
  * Shared frame of the four pages: the illustration in what is left (scaled down as one
- * block when it does not fit), then a title block and a subtitle block of fixed height, so
- * nothing jumps from one page to the next.
+ * block when it does not fit), then a title block of fixed height and, quand la page en a
+ * un ([subtitle] non nul), un bloc de sous-titre de hauteur fixe lui aussi.
  */
 @Composable
 private fun IntroPageFrame(
     title: String,
-    subtitle: String,
+    subtitle: String? = null,
     visual: @Composable () -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxSize().padding(horizontal = ONBOARDING_SIDE_INSET)) {
@@ -406,7 +407,7 @@ private fun IntroPageFrame(
         ) {
             visual()
         }
-        // Three lines of title (four by tightening) and two of subtitle.
+        // Three lines of title (four by tightening) and, when there is one, two of subtitle.
         OnboardingShrinkText(
             text = dsHighlighted(title, DS.accent),
             style = TextStyle(
@@ -423,22 +424,24 @@ private fun IntroPageFrame(
                 .height(96.dp)
                 .semantics { heading() },
         )
-        OnboardingShrinkText(
-            text = AnnotatedString(subtitle),
-            style = TextStyle(
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Normal,
-                fontSize = 15.sp,
-                lineHeight = 21.sp,
-                color = DS.inkSecondary,
-            ),
-            maxLines = 3,
-            minScale = 0.75f,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 8.dp)
-                .height(44.dp),
-        )
+        if (subtitle != null) {
+            OnboardingShrinkText(
+                text = AnnotatedString(subtitle),
+                style = TextStyle(
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 15.sp,
+                    lineHeight = 21.sp,
+                    color = DS.inkSecondary,
+                ),
+                maxLines = 3,
+                minScale = 0.75f,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 8.dp)
+                    .height(44.dp),
+            )
+        }
     }
 }
 
@@ -446,25 +449,19 @@ private fun IntroPageFrame(
 
 // region 5. Quiz
 
-private val COMBO_GOLD = Color(0xFFB17F10)
-private val COMBO_TINT = Color(0xFFFBEFC9)
-private val COMBO_INK = Color(0xFF6B4E00)
-
 /** What the card shows: a multiple-choice question, its right answer and two others. */
 private data class QuizSample(
+    /** La matière du cours, au-dessus de la question. */
     val eyebrow: String,
     val question: String,
     /** The answers in display order. */
     val options: List<String>,
     val correctIndex: Int,
-    /** Rank of the question in its quiz (1 for the first) and size of the quiz. */
-    val position: Int,
-    val total: Int,
 )
 
 /**
  * A multiple-choice question of the black-hole course (the second of the quiz for
- * preference: the x2 combo makes sense there), else the example of the string table.
+ * preference, la même que sur iOS), else the example of the string table.
  */
 private suspend fun loadQuizSample(context: Context, language: AppLanguage): QuizSample =
     withContext(Dispatchers.IO) {
@@ -483,8 +480,6 @@ private suspend fun loadQuizSample(context: Context, language: AppLanguage): Qui
                 StringStore.text(app, "onboardingV2.elevate.quiz.sample.wrong2", language),
             ),
             correctIndex = 0,
-            position = 1,
-            total = 1,
         )
     }
 
@@ -509,15 +504,11 @@ private fun catalogueQuizSample(
         // A question or an answer too long does not fit in the card.
         if (prompt.length > 110 || texts.any { it.length > 100 }) continue
 
-        val subject = StringStore.text(context, "subject.${course.subjectEnum.storageKey}.short", language)
-        val counter = StringStore.text(context, "duel.game.counter", language, index + 1, quiz.size)
         return QuizSample(
-            eyebrow = "$subject · $counter",
+            eyebrow = StringStore.text(context, "subject.${course.subjectEnum.storageKey}.short", language),
             question = prompt,
             options = texts,
             correctIndex = kept.indexOf(correct).coerceAtLeast(0),
-            position = index + 1,
-            total = quiz.size,
         )
     }
     return null
@@ -525,7 +516,7 @@ private fun catalogueQuizSample(
 
 /**
  * « Sophia tests you with fun quizzes »: a real question of the catalogue, the right answer
- * that validates itself, the « Excellent! » banner.
+ * that validates itself, then « Excellent! ».
  */
 @Composable
 private fun IntroQuizPage(language: AppLanguage, active: Boolean) {
@@ -543,131 +534,71 @@ private fun IntroQuizPage(language: AppLanguage, active: Boolean) {
         if (!reduceMotion) haptics.success()
     }
 
-    IntroPageFrame(
-        title = StringStore.text(context, "onboardingV2.intro.quizzes.title", language),
-        subtitle = StringStore.text(context, "onboardingV2.intro.quizzes.subtitle", language),
-    ) {
+    IntroPageFrame(title = StringStore.text(context, "onboardingV2.intro.quizzes.title", language)) {
         sample?.let { QuizCard(sample = it, answered = answered, language = language) }
     }
 }
 
+/**
+ * La carte de la question, volontairement dépouillée : la matière, la question, trois
+ * réponses bien espacées, puis « Excellent ! » quand la bonne se valide. Ni barre de
+ * progression, ni combo, ni compteur : une seule chose à lire à la fois.
+ */
 @Composable
 private fun QuizCard(sample: QuizSample, answered: Boolean, language: AppLanguage) {
     val context = LocalContext.current
-    val verdict by animateFloatAsState(if (answered) 1f else 0f, DSMotion.snappy(), label = "quizVerdict")
+    val verdict by animateFloatAsState(if (answered) 1f else 0f, OV2Calm.settle(), label = "quizVerdict")
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(bottom = 2.dp)
             .ov2Card()
-            .padding(top = 16.dp),
+            .padding(horizontal = 20.dp, vertical = 24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
+        DSEyebrow(text = sample.eyebrow)
+        Text(
+            text = sample.question,
+            fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.Normal,
+            fontSize = 20.sp,
+            lineHeight = 27.sp,
+            color = DS.ink,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(top = 10.dp),
+        )
         Column(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.fillMaxWidth().padding(top = 22.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(10.dp),
-            ) {
-                DSSegmentedProgress(
-                    total = maxOf(sample.total, sample.position).coerceAtMost(10),
-                    filled = sample.position.coerceAtMost(10),
-                    modifier = Modifier.weight(1f),
-                    height = 5.dp,
-                    spacing = 3.dp,
-                )
-                if (sample.position >= 2) {
-                    Row(
-                        modifier = Modifier
-                            .graphicsLayer {
-                                alpha = verdict.coerceIn(0f, 1f)
-                                val scale = 0.6f + 0.4f * verdict
-                                scaleX = scale
-                                scaleY = scale
-                            }
-                            .background(COMBO_TINT, CircleShape)
-                            .padding(horizontal = 8.dp, vertical = 3.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(3.dp),
-                    ) {
-                        Icon(
-                            Icons.Filled.LocalFireDepartment,
-                            contentDescription = null,
-                            tint = COMBO_GOLD,
-                            modifier = Modifier.size(11.dp),
-                        )
-                        Text(
-                            text = "x2",
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.ExtraBold,
-                            fontSize = 11.sp,
-                            color = COMBO_INK,
-                        )
-                    }
-                }
-            }
-            DSEyebrow(text = sample.eyebrow, modifier = Modifier.padding(top = 16.dp))
-            Text(
-                text = sample.question,
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Normal,
-                fontSize = 20.sp,
-                lineHeight = 26.sp,
-                color = DS.ink,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.padding(top = 6.dp),
-            )
-            Column(
-                modifier = Modifier.fillMaxWidth().padding(top = 14.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                sample.options.forEachIndexed { index, option ->
-                    QuizOptionRow(text = option, answered = answered, isCorrect = index == sample.correctIndex)
-                }
+            sample.options.forEachIndexed { index, option ->
+                QuizOptionRow(text = option, answered = answered, isCorrect = index == sample.correctIndex)
             }
         }
-        // The verdict banner, stuck to the bottom of the card: « Excellent! » and the combo.
-        Column(
+        // Le verdict, sous les réponses : sa place est gardée, il arrive en fondu.
+        Row(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 14.dp)
+                .padding(top = 20.dp)
                 .graphicsLayer {
                     alpha = verdict.coerceIn(0f, 1f)
-                    translationY = (1f - verdict) * 12.dp.toPx()
+                    translationY = (1f - verdict) * 8.dp.toPx()
                 },
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
-            Box(modifier = Modifier.fillMaxWidth().height(1.5.dp).background(DS.hairline))
-            Row(
-                modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 14.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            Box(
+                modifier = Modifier.size(24.dp).background(DS.successTint, CircleShape),
+                contentAlignment = Alignment.Center,
             ) {
-                Box(
-                    modifier = Modifier.size(26.dp).background(DS.successTint, CircleShape),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Icon(Icons.Filled.Check, contentDescription = null, tint = DS.success, modifier = Modifier.size(14.dp))
-                }
-                Text(
-                    text = StringStore.text(context, "quiz.feedback.excellent", language),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp,
-                    color = DS.success,
-                    modifier = Modifier.weight(1f),
-                )
-                if (sample.position >= 2) {
-                    Text(
-                        text = StringStore.text(context, "quiz.combo", language, 2),
-                        fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 12.sp,
-                        color = DS.inkSecondary,
-                    )
-                }
+                Icon(Icons.Filled.Check, contentDescription = null, tint = DS.success, modifier = Modifier.size(14.dp))
             }
+            Text(
+                text = StringStore.text(context, "quiz.feedback.excellent", language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Bold,
+                fontSize = 15.sp,
+                color = DS.success,
+            )
         }
     }
 }
@@ -682,9 +613,9 @@ private fun QuizOptionRow(text: String, answered: Boolean, isCorrect: Boolean) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .heightIn(min = 42.dp)
+            .heightIn(min = 50.dp)
             .dsOptionCard(state, RoundedCornerShape(14.dp))
-            .padding(horizontal = 12.dp, vertical = 8.dp),
+            .padding(horizontal = 16.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(10.dp),
     ) {
@@ -692,8 +623,8 @@ private fun QuizOptionRow(text: String, answered: Boolean, isCorrect: Boolean) {
             text = text,
             fontFamily = PlusJakartaSans,
             fontWeight = if (answered && isCorrect) FontWeight.Bold else FontWeight.Medium,
-            fontSize = 13.sp,
-            lineHeight = 17.sp,
+            fontSize = 14.sp,
+            lineHeight = 19.sp,
             color = when {
                 !answered -> DS.ink
                 isCorrect -> DS.success
@@ -718,10 +649,7 @@ private fun QuizOptionRow(text: String, answered: Boolean, isCorrect: Boolean) {
 @Composable
 private fun IntroRoutePage(language: AppLanguage, active: Boolean) {
     val context = LocalContext.current
-    IntroPageFrame(
-        title = StringStore.text(context, "onboardingV2.intro.route.title", language),
-        subtitle = StringStore.text(context, "onboardingV2.intro.route.subtitle", language),
-    ) {
+    IntroPageFrame(title = StringStore.text(context, "onboardingV2.intro.route.title", language)) {
         OnboardingPathPreview(language = language, active = active)
     }
 }
@@ -814,10 +742,7 @@ private fun IntroDuelsPage(language: AppLanguage, active: Boolean) {
     val rows = rivals.toMutableList().apply { add(youRank.coerceIn(0, rivals.size), you) }
     val rowsProgress by animateFloatAsState(if (rowsShown) 1f else 0f, DSMotion.reveal(), label = "duelRows")
 
-    IntroPageFrame(
-        title = StringStore.text(context, "onboardingV2.elevate.duels.title", language),
-        subtitle = StringStore.text(context, "onboardingV2.elevate.duels.subtitle", language),
-    ) {
+    IntroPageFrame(title = StringStore.text(context, "onboardingV2.elevate.duels.title", language)) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -841,7 +766,8 @@ private fun IntroDuelsPage(language: AppLanguage, active: Boolean) {
                 // change of rank slides the rows instead of redrawing them.
                 (rivals + you).forEach { row ->
                     val rank = rows.indexOfFirst { it.id == row.id }
-                    val slot by animateFloatAsState(rank.toFloat(), DSMotion.pop(), label = "duelSlot")
+                    // Le rang glisse à sa nouvelle place et s'y arrête, sans rebond.
+                    val slot by animateFloatAsState(rank.toFloat(), tween(420, easing = FastOutSlowInEasing), label = "duelSlot")
                     DuelRowView(
                         row = row,
                         rank = rank + 1,
@@ -1218,7 +1144,7 @@ internal fun SocialProofStep(language: AppLanguage, onContinue: () -> Unit) {
             delay(70)
         }
     }
-    val laurelsProgress by animateFloatAsState(if (laurelsIn) 1f else 0f, DSMotion.pop(), label = "socialLaurels")
+    val laurelsProgress by animateFloatAsState(if (laurelsIn) 1f else 0f, OV2Calm.settle(), label = "socialLaurels")
 
     // Card, laurels and reviews outgrow a small phone at a large font size: the content
     // scrolls, the button stays pinned.
@@ -1259,7 +1185,7 @@ internal fun SocialProofStep(language: AppLanguage, onContinue: () -> Unit) {
                     .padding(top = 20.dp)
                     .graphicsLayer {
                         alpha = laurelsProgress.coerceIn(0f, 1f)
-                        val scale = 0.8f + 0.2f * laurelsProgress
+                        val scale = 0.92f + 0.08f * laurelsProgress
                         scaleX = scale
                         scaleY = scale
                     },
@@ -1362,7 +1288,7 @@ private fun SocialStars(starSize: Int, shown: Int = SOCIAL_STAR_COUNT) {
         horizontalArrangement = Arrangement.spacedBy(2.dp),
     ) {
         repeat(SOCIAL_STAR_COUNT) { index ->
-            val lit by animateFloatAsState(if (index < shown) 1f else 0f, DSMotion.pop(), label = "socialStar")
+            val lit by animateFloatAsState(if (index < shown) 1f else 0f, OV2Calm.quick(), label = "socialStar")
             Icon(
                 Icons.Filled.Star,
                 contentDescription = null,
@@ -1371,7 +1297,7 @@ private fun SocialStars(starSize: Int, shown: Int = SOCIAL_STAR_COUNT) {
                     .size(starSize.dp)
                     .graphicsLayer {
                         alpha = lit.coerceIn(0f, 1f)
-                        val scale = 0.2f + 0.8f * lit
+                        val scale = 0.6f + 0.4f * lit
                         scaleX = scale
                         scaleY = scale
                     },

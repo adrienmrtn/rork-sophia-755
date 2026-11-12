@@ -44,6 +44,35 @@ enum Haptics {
     }
 }
 
+// MARK: - Mouvement posé
+
+/// Animations sans dépassement (ressorts à amortissement critique, sorties en douceur) :
+/// elles remplacent les rebonds de `DS.Motion` là où `dsCalmMotion` est posé.
+enum DSCalmMotion {
+    /// Pression d'un bouton ou d'une carte.
+    static let press = Animation.easeOut(duration: 0.16)
+    /// Changement d'état (sélection, bascule).
+    static let state = Animation.easeOut(duration: 0.22)
+    /// Apparition d'un bloc de contenu.
+    static let reveal = Animation.spring(response: 0.5, dampingFraction: 1)
+    /// Élément qui se pose (coche, pastille, badge) : il arrive à sa taille sans la dépasser.
+    static let settle = Animation.spring(response: 0.4, dampingFraction: 1)
+}
+
+private struct DSCalmMotionKey: EnvironmentKey {
+    static let defaultValue: Bool = false
+}
+
+extension EnvironmentValues {
+    /// `true` dans un parcours qui ne veut aucun rebond (l'onboarding) : les apparitions
+    /// (`dsStagger`, `dsPopIn`, `DSCheckBadge`) et la pression (`PressableStyle`) passent
+    /// alors par `DSCalmMotion`. Faux partout ailleurs, où rien ne change.
+    var dsCalmMotion: Bool {
+        get { self[DSCalmMotionKey.self] }
+        set { self[DSCalmMotionKey.self] = newValue }
+    }
+}
+
 // MARK: - Pression
 
 /// Style de bouton neutre : le contenu s'enfonce légèrement avec un ressort et vibre au
@@ -51,12 +80,13 @@ enum Haptics {
 struct PressableStyle: ButtonStyle {
     var scale: CGFloat = 0.97
     var haptic: Bool = true
+    @Environment(\.dsCalmMotion) private var calmMotion
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .scaleEffect(configuration.isPressed ? scale : 1)
             .opacity(configuration.isPressed ? 0.94 : 1)
-            .animation(DS.Motion.press, value: configuration.isPressed)
+            .animation(calmMotion ? DSCalmMotion.press : DS.Motion.press, value: configuration.isPressed)
             .sensoryFeedback(.impact(flexibility: .soft, intensity: 0.7), trigger: configuration.isPressed) { _, pressed in
                 haptic && pressed
             }
@@ -225,6 +255,7 @@ private struct DSStaggerModifier: ViewModifier {
     let offset: CGFloat
     @State private var shown = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.dsCalmMotion) private var calmMotion
 
     func body(content: Content) -> some View {
         content
@@ -233,7 +264,8 @@ private struct DSStaggerModifier: ViewModifier {
             .scaleEffect(shown || reduceMotion ? 1 : 0.97)
             .onAppear {
                 guard !shown else { return }
-                withAnimation(DS.Motion.reveal.delay(base + Double(index) * step)) {
+                let animation: Animation = calmMotion ? DSCalmMotion.reveal : DS.Motion.reveal
+                withAnimation(animation.delay(base + Double(index) * step)) {
                     shown = true
                 }
             }
@@ -244,14 +276,17 @@ private struct DSPopInModifier: ViewModifier {
     let delay: Double
     @State private var shown = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.dsCalmMotion) private var calmMotion
 
     func body(content: Content) -> some View {
         content
-            .scaleEffect(shown || reduceMotion ? 1 : 0.4)
+            // En mouvement posé, l'élément part de moins loin et ne dépasse pas sa taille.
+            .scaleEffect(shown || reduceMotion ? 1 : (calmMotion ? 0.86 : 0.4))
             .opacity(shown ? 1 : 0)
             .onAppear {
                 guard !shown else { return }
-                withAnimation(DS.Motion.pop.delay(delay)) { shown = true }
+                let animation: Animation = calmMotion ? DSCalmMotion.settle : DS.Motion.pop
+                withAnimation(animation.delay(delay)) { shown = true }
             }
     }
 }
@@ -295,6 +330,7 @@ struct DSCheckBadge: View {
     var delay: Double = 0
     @State private var drawn = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.dsCalmMotion) private var calmMotion
 
     var body: some View {
         ZStack {
@@ -305,13 +341,14 @@ struct DSCheckBadge: View {
                 .padding(size * 0.27)
         }
         .frame(width: size, height: size)
-        .scaleEffect(drawn || reduceMotion ? 1 : 0.5)
+        .scaleEffect(drawn || reduceMotion ? 1 : (calmMotion ? 0.8 : 0.5))
         .onAppear {
             guard !drawn else { return }
             if reduceMotion {
                 drawn = true
             } else {
-                withAnimation(DS.Motion.pop.delay(delay)) { drawn = true }
+                let animation: Animation = calmMotion ? DSCalmMotion.settle : DS.Motion.pop
+                withAnimation(animation.delay(delay)) { drawn = true }
             }
         }
         .accessibilityHidden(true)

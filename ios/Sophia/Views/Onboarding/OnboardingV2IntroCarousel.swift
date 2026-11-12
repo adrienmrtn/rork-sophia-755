@@ -45,8 +45,8 @@ final class OnboardingV2CarouselModel {
 /// seules toutes les cinq secondes. Toucher ou glisser avance aussi ; « Continuer » passe à
 /// la page suivante, puis à l'écran suivant ; la fin de la quatrième page avance d'elle-même.
 ///
-/// Même mise en page sur les quatre : illustration (flexible), titre et sous-titre de
-/// hauteur fixe, bouton. Les segments et la flèche retour vivent dans l'en-tête du
+/// Même mise en page sur les quatre : illustration (flexible), titre de hauteur fixe, bouton ;
+/// seule la page audio garde un sous-titre. Les segments et la flèche retour vivent dans l'en-tête du
 /// coordinateur, nourris par `model`.
 struct OnboardingV2IntroCarousel: View {
     @Environment(LanguageManager.self) private var languageManager

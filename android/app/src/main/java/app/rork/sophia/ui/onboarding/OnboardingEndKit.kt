@@ -12,12 +12,14 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,8 +41,10 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -54,8 +58,6 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Subject
 import app.rork.sophia.ui.components.DSHighlightTitle
-import app.rork.sophia.ui.components.DSMotion
-import app.rork.sophia.ui.components.dsPopIn
 import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.legal.LegalDocKind
 import app.rork.sophia.ui.theme.DS
@@ -159,7 +161,7 @@ internal fun OV2EndStars(
                 Icons.Filled.Star,
                 contentDescription = null,
                 tint = DS.warm,
-                modifier = Modifier.size(size).dsPopIn(delayMillis = baseDelayMillis + index * 70),
+                modifier = Modifier.size(size).ov2PopIn(delayMillis = baseDelayMillis + index * 70),
             )
         }
     }
@@ -249,7 +251,7 @@ private fun subjectBadgeRes(subject: Subject): Int = when (subject) {
 
 /**
  * The round illustration of the sign-in screens: a reader among their books, from the app's
- * avatar series. It lands with a bounce.
+ * avatar series. It grows into place, without a bounce.
  */
 @Composable
 internal fun OV2EndAccountIllustration(size: Dp, modifier: Modifier = Modifier) {
@@ -258,7 +260,7 @@ internal fun OV2EndAccountIllustration(size: Dp, modifier: Modifier = Modifier) 
         delay(150)
         shown = true
     }
-    val progress by animateFloatAsState(if (shown) 1f else 0f, DSMotion.pop(), label = "accountIllustration")
+    val progress by animateFloatAsState(if (shown) 1f else 0f, OnboardingMotion.settle(), label = "accountIllustration")
     Image(
         painter = painterResource(R.drawable.avatar_04),
         contentDescription = null,
@@ -274,6 +276,63 @@ internal fun OV2EndAccountIllustration(size: Dp, modifier: Modifier = Modifier) 
             .clip(CircleShape),
     )
 }
+
+// MARK: - Google
+
+/**
+ * Le bouton « Continuer avec Google », selon les règles de marque de Google : fond blanc,
+ * bordure fine, le « G » officiel en quatre couleurs (`ic_google_g`, un vectoriel jamais
+ * teinté, dans ses proportions) et le texte à l'encre. [busy] remplace le « G » par un
+ * indicateur d'attente pendant que le sélecteur de compte s'ouvre.
+ */
+@Composable
+internal fun OV2EndGoogleButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    busy: Boolean = false,
+) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .heightIn(min = 56.dp)
+            .graphicsLayer { alpha = if (enabled) 1f else 0.6f }
+            .pressable(onClick = onClick, enabled = enabled)
+            .semantics(mergeDescendants = true) { role = Role.Button }
+            .clip(OV2Shapes.control)
+            .background(DS.surface)
+            .border(1.5.dp, DS.hairline, OV2Shapes.control)
+            .padding(horizontal = 16.dp, vertical = 10.dp),
+        horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterHorizontally),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        if (busy) {
+            CircularProgressIndicator(
+                modifier = Modifier.size(GOOGLE_MARK_SIZE),
+                color = DS.accent,
+                strokeWidth = 2.dp,
+            )
+        } else {
+            // Image, pas Icon : une icône serait teintée d'une seule couleur.
+            Image(
+                painter = painterResource(R.drawable.ic_google_g),
+                contentDescription = null,
+                modifier = Modifier.size(GOOGLE_MARK_SIZE),
+            )
+        }
+        Text(
+            text = text,
+            style = OV2.headline.copy(fontSize = 16.sp, lineHeight = 21.sp, fontWeight = FontWeight.SemiBold),
+            textAlign = TextAlign.Center,
+            maxLines = 2,
+            modifier = Modifier.weight(1f, fill = false),
+        )
+    }
+}
+
+/** Côté du « G » : carré, comme le dessin officiel. */
+private val GOOGLE_MARK_SIZE = 20.dp
 
 // MARK: - Legal
 

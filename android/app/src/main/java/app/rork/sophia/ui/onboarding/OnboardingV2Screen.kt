@@ -4,8 +4,6 @@ import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.EnterTransition
-import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -359,7 +357,22 @@ fun OnboardingV2Screen(
         }
     }
 
+    /**
+     * L'avatar choisi sur la page du prénom devient celui de la progression. Posé après la
+     * page du compte, pas avant : une progression locale qui porterait déjà un avatar ne
+     * serait plus « vide » au moment de la connexion, et quelqu'un qui retrouve son compte
+     * se verrait demander de choisir entre deux progressions. L'avatar d'un compte retrouvé
+     * n'est jamais remplacé.
+     */
+    fun applyChosenAvatar() {
+        val chosen = answers.avatarId ?: return
+        runCatching {
+            if (app.progressManager.progress.value.avatarId == null) app.progressManager.setAvatar(chosen)
+        }
+    }
+
     fun finish() {
+        applyChosenAvatar()
         runCatching {
             likedCourseIds.forEach { id ->
                 if (!app.progressManager.isFavorite(id)) {
@@ -437,6 +450,7 @@ fun OnboardingV2Screen(
 
     /** Login, skipped or done, lands on the same next page. */
     fun advanceFromLogin() {
+        applyChosenAvatar()
         // « Suis des profs » n'a rien à montrer sans créateur dans le catalogue.
         val hasCreators = AuthorStore.all(context.applicationContext).any { it.courseIds.isNotEmpty() }
         goTo(if (hasCreators) OnboardingStep.FollowCreators else OnboardingStep.WelcomeAboard)
@@ -517,14 +531,14 @@ fun OnboardingV2Screen(
         AnimatedContent(
             targetState = step,
             transitionSpec = {
-                // A horizontal slide on a spring with a fade, as the iOS `ov2Slide`: the new
-                // page comes from the reading side going forward, from the other going back.
+                // Un glissement horizontal court avec un fondu, sans rebond (courbe ease-out) :
+                // la nouvelle page vient du côté de la lecture en avançant, de l'autre en reculant.
                 val forward = targetState.ordinal > initialState.ordinal
                 val sign = if (forward != rtl) 1 else -1
-                (slideInHorizontally(spring(dampingRatio = 0.9f, stiffness = 130f)) { sign * slidePx } +
-                    fadeIn(tween(300))) togetherWith
-                    (slideOutHorizontally(spring(dampingRatio = 0.9f, stiffness = 130f)) { -sign * slidePx } +
-                        fadeOut(tween(200)))
+                (slideInHorizontally(OnboardingMotion.settle(340)) { sign * slidePx } +
+                    fadeIn(tween(260))) togetherWith
+                    (slideOutHorizontally(OnboardingMotion.settle(260)) { -sign * slidePx } +
+                        fadeOut(tween(180)))
             },
             label = "onboardingStep",
         ) { current ->
@@ -563,8 +577,11 @@ fun OnboardingV2Screen(
                 OnboardingStep.Name -> NameStep(
                     language = language,
                     initialName = answers.firstName,
-                    onSubmit = { name ->
-                        updateAnswers { it.copy(firstName = name.take(FIRST_NAME_MAX_LENGTH)) }
+                    initialAvatarId = answers.avatarId,
+                    onSubmit = { name, avatarId ->
+                        // L'avatar choisi est gardé avec les réponses ; il rejoint la progression
+                        // après la page du compte (voir `applyChosenAvatar`).
+                        updateAnswers { it.copy(firstName = name.take(FIRST_NAME_MAX_LENGTH), avatarId = avatarId) }
                         goTo(OnboardingStep.Age)
                     },
                 )
@@ -747,7 +764,7 @@ fun OnboardingV2Screen(
         // history, skipping the questions they answered the first time (as on iOS).
         AnimatedVisibility(
             visible = showExistingAccount,
-            enter = slideInVertically(spring(dampingRatio = 0.9f, stiffness = Spring.StiffnessMediumLow)) { it } + fadeIn(),
+            enter = slideInVertically(OnboardingMotion.settle(360)) { it } + fadeIn(),
             exit = slideOutVertically(tween(260)) { it } + fadeOut(tween(200)),
         ) {
             BackHandler { if (!signingIn) showExistingAccount = false }

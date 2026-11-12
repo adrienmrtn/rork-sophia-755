@@ -52,9 +52,9 @@ struct OnboardingV2WelcomeAboard: View {
             }
         }
         .onAppear {
-            // Le trophée se pose avec un rebond, la coche du compte créé suit.
-            withAnimation(DS.Motion.pop.delay(0.05)) { logoIn = true }
-            withAnimation(DS.Motion.pop.delay(0.45)) { badgeIn = true }
+            // Le trophée se pose en douceur (sans rebond), la coche du compte créé suit.
+            withAnimation(DSCalmMotion.settle.delay(0.05)) { logoIn = true }
+            withAnimation(DSCalmMotion.settle.delay(0.45)) { badgeIn = true }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
                 confetti = !reduceMotion
                 OnboardingHaptics.counterComplete()
@@ -213,7 +213,7 @@ struct OnboardingV2Features: View {
             }
             for i in 0..<Self.featureCount {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.25 + Double(i) * 0.14) {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.75)) { revealed = i + 1 }
+                    withAnimation(DSCalmMotion.reveal) { revealed = i + 1 }
                     OnboardingHaptics.selection()
                 }
             }

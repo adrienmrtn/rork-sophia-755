@@ -150,7 +150,7 @@ fun OnboardingLegacyCta(
     val pressed by interaction.collectIsPressedAsState()
     val scale by animateFloatAsState(
         targetValue = if (pressed) 0.98f else 1f,
-        animationSpec = spring(dampingRatio = 0.8f, stiffness = Spring.StiffnessMedium),
+        animationSpec = OnboardingMotion.press(),
         label = "ctaScale",
     )
     androidx.compose.material3.Button(

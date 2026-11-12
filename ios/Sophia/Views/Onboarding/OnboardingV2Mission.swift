@@ -1,11 +1,11 @@
 import SwiftUI
 import UIKit
 
-/// « Sophia est gratuite à l'essai » : la mission, et l'équipe qui compte sur la personne.
+/// « Notre mission » : la mission, et l'équipe qui compte sur la personne.
 ///
-/// Style « Elevate arrondi » : une grande illustration arrondie, « Sophia est gratuite à
-/// l'essai » en pastille bleue, la mission en titre (son cœur en gras bleu), le texte de
-/// l'équipe en gris, puis la signature avec les têtes des profs, et un bouton.
+/// Style « Elevate arrondi » : une grande illustration arrondie, la mission en titre (son
+/// cœur en gras bleu), le texte de l'équipe en gris, puis la signature avec les têtes des
+/// profs, et un bouton. La pastille « Sophia est gratuite à l'essai » a été retirée.
 struct OnboardingV2Mission: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
@@ -33,11 +33,9 @@ struct OnboardingV2Mission: View {
             illustration
                 .dsStagger(0)
 
-            trialChip
-                .dsStagger(1)
-
             OV2CoreHighlightTitle(text: missionTitle, size: 25, alignment: .center)
-                .dsStagger(2)
+                .padding(.top, 4)
+                .dsStagger(1)
 
             Text(languageManager.text("onboardingV2.mission.body2"))
                 .font(DS.sans(.subheadline, .regular))
@@ -45,11 +43,11 @@ struct OnboardingV2Mission: View {
                 .multilineTextAlignment(.center)
                 .lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)
-                .dsStagger(3)
+                .dsStagger(2)
 
             signature
                 .padding(.top, 2)
-                .dsStagger(4)
+                .dsStagger(3)
         }
         .padding(.horizontal, OV2CoreMetrics.sideInset)
         .padding(.top, OV2CoreMetrics.topInset)
@@ -65,11 +63,6 @@ struct OnboardingV2Mission: View {
             highlightKey: "elevateOnboardingCore.mission.leadHighlight",
             language: languageManager.current
         )
-    }
-
-    /// « Sophia est gratuite à l'essai », sans son point final : c'est une étiquette ici.
-    private var trialChipText: String {
-        OV2CoreText.trimmingTrailing(".。", from: languageManager.text("onboardingV2.mission.title"))
     }
 
     // MARK: - Blocs
@@ -108,20 +101,6 @@ struct OnboardingV2Mission: View {
                     .foregroundStyle(.white)
             }
         }
-    }
-
-    private var trialChip: some View {
-        Text(trialChipText)
-            .font(DS.sans(.footnote, .bold))
-            .tracking(0.4)
-            .foregroundStyle(DS.accent)
-            .multilineTextAlignment(.center)
-            .padding(.horizontal, 14)
-            .padding(.vertical, 5)
-            .background(
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(DS.accentTint)
-            )
     }
 
     /// Les têtes des profs qui se chevauchent, et « L'équipe Sophia ».

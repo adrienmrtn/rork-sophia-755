@@ -25,11 +25,17 @@ struct OnboardingV2Curve90: View {
     @State private var labelsIn = false
     @State private var started = false
     @State private var animTask: Task<Void, Never>?
+    /// « Continuer » n'apparaît qu'une seconde après l'arrivée sur la page : le temps de
+    /// voir les courbes partir avant de pouvoir passer.
+    @State private var ctaShown = false
+    @State private var ctaTask: Task<Void, Never>?
 
     init(onNext: @escaping () -> Void) {
         self.onNext = onNext
     }
 
+    /// Attente avant que « Continuer » n'apparaisse.
+    private static let ctaDelay: Duration = .seconds(1)
     private static let markCount = 4
     /// Fond très légèrement bleuté de la carte du graphique.
     private static let cardFill = Color(red: 0.969, green: 0.976, blue: 0.992)
@@ -64,13 +70,35 @@ struct OnboardingV2Curve90: View {
             .padding(.horizontal, OV2End.side)
             .padding(.bottom, 16)
         } footer: {
-            OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
+            // Le bouton garde sa place (rien ne bouge quand il arrive) ; tant qu'il est
+            // invisible, il ne répond ni au doigt ni à VoiceOver.
+            OnboardingV2Button(title: languageManager.text("common.continue"), enabled: ctaShown, action: onNext)
+                .opacity(ctaShown ? 1 : 0)
+                .allowsHitTesting(ctaShown)
+                .accessibilityHidden(!ctaShown)
         }
         .ov2Background()
-        .onAppear(perform: play)
+        .onAppear {
+            play()
+            revealCTA()
+        }
         .onDisappear {
             animTask?.cancel()
             animTask = nil
+            ctaTask?.cancel()
+            ctaTask = nil
+        }
+    }
+
+    /// Montre « Continuer » après `ctaDelay`. Une tâche annulée (page quittée) ne laisse pas
+    /// le bouton caché : il est remontré à la prochaine apparition, après la même attente.
+    private func revealCTA() {
+        guard !ctaShown else { return }
+        ctaTask?.cancel()
+        ctaTask = Task { @MainActor in
+            try? await Task.sleep(for: Self.ctaDelay)
+            if Task.isCancelled { return }
+            withAnimation(.easeOut(duration: 0.3)) { ctaShown = true }
         }
     }
 
@@ -164,23 +192,29 @@ struct OnboardingV2Curve90: View {
         .padding(.horizontal, 6)
     }
 
-    /// Étiquette de la courbe bleue : le logo Sophia en blanc sur fond bleu.
+    /// Étiquette de la courbe bleue : le vrai logo Sophia, en couleur (`sophia_mark`, le
+    /// symbole rose et le nom, celui de l'accueil), sur une pastille blanche cerclée du bleu
+    /// de la courbe.
     private var sophiaBadge: some View {
         Group {
-            if UIImage(named: "logo_white") != nil {
-                Image("logo_white")
+            if UIImage(named: "sophia_mark") != nil {
+                Image("sophia_mark")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 17)
+                    .frame(height: 18)
             } else {
                 Text(verbatim: "Sophia")
                     .font(DS.sans(.footnote, .bold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(DS.ink)
             }
         }
-        .padding(.horizontal, 12)
+        .padding(.horizontal, 11)
         .padding(.vertical, 7)
-        .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(DS.accent))
+        .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Color.white))
+        .overlay(
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .strokeBorder(DS.accent, lineWidth: 1.5)
+        )
     }
 
     /// Étiquette de la courbe sombre.
@@ -221,14 +255,14 @@ struct OnboardingV2Curve90: View {
             for index in 0..<Self.markCount {
                 try? await Task.sleep(for: .milliseconds(waits[index]))
                 if Task.isCancelled { return }
-                withAnimation(DS.Motion.pop) { marks = index + 1 }
+                withAnimation(DSCalmMotion.settle) { marks = index + 1 }
                 Haptics.soft()
             }
 
-            withAnimation(DS.Motion.pop) { endsIn = true }
+            withAnimation(DSCalmMotion.settle) { endsIn = true }
             try? await Task.sleep(for: .milliseconds(200))
             if Task.isCancelled { return }
-            withAnimation(DS.Motion.pop) { labelsIn = true }
+            withAnimation(DSCalmMotion.settle) { labelsIn = true }
         }
     }
 

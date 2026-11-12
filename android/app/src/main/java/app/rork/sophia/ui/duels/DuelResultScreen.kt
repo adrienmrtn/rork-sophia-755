@@ -9,6 +9,8 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.scaleIn
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -29,6 +31,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material3.CircularProgressIndicator
@@ -97,12 +101,14 @@ import androidx.compose.material.icons.filled.Group
 private const val TROPHY_STEPS = 28
 
 /**
- * La fin d'une partie (maquette AEr25) : victoire ou défaite, le score, puis les trophées qui
- * défilent jusqu'à leur nouveau total, la jauge de ligue qui avance, et la montée de ligue quand
- * un seuil tombe.
- * Le titre et le score sont connus tout de suite ; les trophées arrivent avec la réponse du
- * serveur ([result]), qui fait foi. Même écran que
- * `ios/Sophia/Views/Duels/DuelResultView.swift`.
+ * La fin d'une partie (maquette AEr25). L'écran s'ouvre sur les deux joueurs face à face : leurs
+ * bonnes réponses défilent de zéro à leur total, de plus en plus lentement, puis l'issue se
+ * dévoile (titre, couronne, confettis pour une victoire ; plus calme pour une défaite ou une
+ * égalité). Viennent ensuite les trophées qui défilent jusqu'à leur nouveau total, la jauge de
+ * ligue qui avance, et la montée de ligue quand un seuil tombe. « Revoir les questions » ouvre
+ * la relecture de la partie ([DuelReviewScreen]).
+ * Le score est connu tout de suite ; les trophées arrivent avec la réponse du serveur
+ * ([result]), qui fait foi. Même écran que `ios/Sophia/Views/Duels/DuelResultView.swift`.
  *
  * [home] est l'accueil tel qu'il était au lancement de la partie : le compteur part de lui.
  */
@@ -123,7 +129,15 @@ internal fun DuelResultScreen(
     val view = LocalView.current
     fun text(key: String, vararg args: Any): String = StringStore.text(context, key, language, *args)
 
+    // Animations coupées dans les réglages du système : tout est en place d'emblée.
+    val reduceMotion = rememberDuelReduceMotion()
     var appeared by remember { mutableStateOf(false) }
+    // Les bonnes réponses affichées pendant le décompte d'ouverture.
+    var shownPlayerScore by remember { mutableIntStateOf(if (reduceMotion) summary.playerScore else 0) }
+    var shownOpponentScore by remember { mutableIntStateOf(if (reduceMotion) summary.opponentScore else 0) }
+    // Le décompte est fini : le titre, la couronne et les confettis se montrent.
+    var revealed by remember { mutableStateOf(reduceMotion) }
+    var showReview by remember { mutableStateOf(false) }
     var shownTrophies by remember { mutableIntStateOf(0) }
     val barProgress = remember { Animatable(0f) }
     var shownLeaguePosition by remember { mutableStateOf<Int?>(null) }
@@ -150,19 +164,35 @@ internal fun DuelResultScreen(
             playerScore = summary.playerScore,
             opponentScore = summary.opponentScore,
         )
+        // Les deux scores défilent ensemble de zéro à leur total (le plus petit s'arrête le
+        // premier), vite puis de plus en plus lentement, avec un cran de vibration par point.
+        if (!revealed) {
+            delay(550)
+            val steps = maxOf(summary.playerScore, summary.opponentScore)
+            for (step in 1..steps) {
+                shownPlayerScore = minOf(step, summary.playerScore)
+                shownOpponentScore = minOf(step, summary.opponentScore)
+                view.duelHaptic(DuelHaptic.TrophyTick)
+                delay(DuelRules.scoreCountDelayMs(step, steps))
+            }
+            delay(250)
+            revealed = true
+        }
         // Une égalité parfaite (entre amis) n'est ni une victoire ni une défaite. La victoire
         // sonne comme toute récompense de l'app (`Haptics.celebrate`).
         if (won) view.duelHaptic(DuelHaptic.Victory) else if (!summary.draw) view.duelHaptic(DuelHaptic.Defeat)
     }
 
-    // Les trophées défilent de l'ancien total au nouveau, la jauge suit, puis la nouvelle ligue
-    // s'annonce si un seuil vient de tomber.
-    LaunchedEffect(result?.matchId) {
+    // Une fois l'issue dévoilée, les trophées défilent de l'ancien total au nouveau, la jauge
+    // suit, puis la nouvelle ligue s'annonce si un seuil vient de tomber.
+    LaunchedEffect(result?.matchId, revealed) {
         val outcome = result ?: return@LaunchedEffect
         shownTrophies = outcome.trophiesBefore
         shownLeaguePosition = outcome.leagueBefore
         barProgress.snapTo(home?.leagueProgress(outcome.trophiesBefore) ?: 0f)
-        delay(900)
+        // La carte, encore cachée, attend l'issue sur l'ancien total.
+        if (!revealed) return@LaunchedEffect
+        delay(600)
 
         showDelta = true
         val delta = outcome.trophiesDelta
@@ -196,8 +226,19 @@ internal fun DuelResultScreen(
     }
 
     BackHandler {
-        if (promotedLeague != null) promotedLeague = null else onDone()
+        when {
+            showReview -> showReview = false
+            promotedLeague != null -> promotedLeague = null
+            else -> onDone()
+        }
     }
+
+    // L'issue qui se pose : un ressort amorti, sans rebond marqué.
+    val reveal by animateFloatAsState(
+        targetValue = if (revealed) 1f else 0f,
+        animationSpec = duelSpring(response = 0.5f, damping = 0.74f),
+        label = "duelResultReveal",
+    )
 
     val entrance by animateFloatAsState(
         targetValue = if (appeared) 1f else 0f,
@@ -242,10 +283,12 @@ internal fun DuelResultScreen(
                         color = DS.ink,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.graphicsLayer {
-                            val scale = 0.4f + 0.6f * entrance
+                            // Une victoire arrive de plus loin qu'une défaite ou une égalité.
+                            val from = if (won) 0.55f else 0.9f
+                            val scale = from + (1f - from) * reveal
                             scaleX = scale
                             scaleY = scale
-                            alpha = entrance.coerceIn(0f, 1f)
+                            alpha = reveal.coerceIn(0f, 1f)
                         },
                     )
                     val subtitle = when {
@@ -262,6 +305,7 @@ internal fun DuelResultScreen(
                             lineHeight = 20.sp,
                             color = DS.inkSecondary,
                             textAlign = TextAlign.Center,
+                            modifier = Modifier.graphicsLayer { alpha = reveal.coerceIn(0f, 1f) },
                         )
                     }
                 }
@@ -279,13 +323,13 @@ internal fun DuelResultScreen(
                         avatarId = player.avatarId,
                         initial = player.initial,
                         name = "@${player.handle}",
-                        crowned = won && !summary.draw,
-                        faded = !won && !summary.draw,
-                        entrance = entrance,
+                        crowned = revealed && won && !summary.draw,
+                        faded = revealed && !won && !summary.draw,
+                        entrance = reveal,
                         modifier = Modifier.weight(1f),
                     )
                     Text(
-                        text = "${summary.playerScore} – ${summary.opponentScore}",
+                        text = "$shownPlayerScore – $shownOpponentScore",
                         // Mon score d'abord, dans toutes les langues.
                         style = DuelTabularDigits.copy(textDirection = TextDirection.Ltr),
                         fontFamily = PlusJakartaSans,
@@ -298,9 +342,9 @@ internal fun DuelResultScreen(
                         avatarId = opponent.avatarId,
                         initial = opponent.initial,
                         name = "@${opponent.handle} ${opponent.flag}".trim(),
-                        crowned = !won && !summary.draw,
-                        faded = won && !summary.draw,
-                        entrance = entrance,
+                        crowned = revealed && !won && !summary.draw,
+                        faded = revealed && won && !summary.draw,
+                        entrance = reveal,
                         modifier = Modifier.weight(1f),
                     )
                 }
@@ -321,10 +365,52 @@ internal fun DuelResultScreen(
                         onRetrySend()
                     },
                     modifier = Modifier.graphicsLayer {
-                        alpha = entrance.coerceIn(0f, 1f)
-                        translationY = 40.dp.toPx() * (1f - entrance)
+                        alpha = reveal.coerceIn(0f, 1f)
+                        translationY = 40.dp.toPx() * (1f - reveal)
                     },
                 )
+
+                // « Revoir les questions » : la relecture de la partie, question par question.
+                if (summary.review.isNotEmpty()) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .graphicsLayer {
+                                alpha = reveal.coerceIn(0f, 1f)
+                                translationY = 40.dp.toPx() * (1f - reveal)
+                            }
+                            .sophiaCard(elevation = 0.dp)
+                            .clickable(enabled = revealed, role = Role.Button) {
+                                view.duelHaptic(DuelHaptic.Tap)
+                                showReview = true
+                            }
+                            .padding(16.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.MenuBook,
+                            contentDescription = null,
+                            tint = DS.accent,
+                            modifier = Modifier.size(20.dp),
+                        )
+                        Text(
+                            text = text("duel.review.open"),
+                            fontFamily = PlusJakartaSans,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 15.sp,
+                            lineHeight = 20.sp,
+                            color = DS.ink,
+                            modifier = Modifier.weight(1f),
+                        )
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                            contentDescription = null,
+                            tint = DS.inkTertiary,
+                            modifier = Modifier.size(20.dp),
+                        )
+                    }
+                }
             }
 
             Column(
@@ -347,7 +433,7 @@ internal fun DuelResultScreen(
             }
         }
 
-        if (won) {
+        if (won && revealed && !reduceMotion) {
             ConfettiBurst(
                 colors = DuelTheme.confetti,
                 pieceCount = 120,
@@ -363,6 +449,21 @@ internal fun DuelResultScreen(
             (promotedLeague ?: lastPromoted[0])?.let { league ->
                 DuelPromotionOverlay(league = league, language = language, onContinue = { promotedLeague = null })
             }
+        }
+
+        AnimatedVisibility(
+            visible = showReview,
+            enter = slideInVertically(tween(300)) { it } + fadeIn(tween(300)),
+            exit = slideOutVertically(tween(300)) { it } + fadeOut(tween(300)),
+        ) {
+            DuelReviewScreen(
+                entries = summary.review,
+                questionCount = summary.match.questionCount,
+                player = player,
+                opponent = opponent,
+                language = language,
+                onClose = { showReview = false },
+            )
         }
     }
 }
@@ -392,9 +493,14 @@ private fun ResultFace(
                 size = 76.dp,
                 ring = if (crowned) DuelPalette.saffron else DS.hairline,
                 ringWidth = if (crowned) 3.dp else 1.5.dp,
-                // Le perdant passe au second plan.
+                // Le perdant passe au second plan ; le vainqueur grandit un peu quand l'issue tombe.
                 modifier = Modifier
-                    .graphicsLayer { alpha = if (faded) 0.7f else 1f }
+                    .graphicsLayer {
+                        alpha = if (faded) 0.7f else 1f
+                        val scale = if (crowned) 1f + 0.06f * entrance.coerceIn(0f, 1.2f) else 1f
+                        scaleX = scale
+                        scaleY = scale
+                    }
                     .duelSaturation(if (faded) 0f else 1f),
             )
             if (crowned) {

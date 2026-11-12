@@ -71,10 +71,8 @@ import app.rork.sophia.R
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Subject
-import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.components.DSOptionState
 import app.rork.sophia.ui.components.dsOptionCard
-import app.rork.sophia.ui.components.dsPopIn
 import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.theme.DS
@@ -330,7 +328,7 @@ internal fun OV2CoreStars(
                 contentDescription = null,
                 tint = DS.warm,
                 modifier = Modifier
-                    .then(if (animated) Modifier.dsPopIn(baseDelayMillis + index * 70) else Modifier)
+                    .then(if (animated) Modifier.ov2PopIn(baseDelayMillis + index * 70) else Modifier)
                     .size(size),
             )
         }
@@ -367,10 +365,10 @@ internal fun Modifier.ov2CoreOutlined(
 @Composable
 internal fun OV2CoreCheckSquare(isOn: Boolean, modifier: Modifier = Modifier, size: Dp = 22.dp) {
     val accent = DS.accent
-    val fill by animateColorAsState(if (isOn) accent else accent.copy(alpha = 0f), DSMotion.snappy(), label = "checkSquareFill")
-    val edge by animateColorAsState(if (isOn) accent else DS.inkTertiary, DSMotion.snappy(), label = "checkSquareEdge")
+    val fill by animateColorAsState(if (isOn) accent else accent.copy(alpha = 0f), OnboardingMotion.quick(), label = "checkSquareFill")
+    val edge by animateColorAsState(if (isOn) accent else DS.inkTertiary, OnboardingMotion.quick(), label = "checkSquareEdge")
     val stroke by animateFloatAsState(if (isOn) 1f else 0f, tween(durationMillis = 220), label = "checkSquareStroke")
-    val pop by animateFloatAsState(if (isOn) 1f else 0.92f, DSMotion.pop(), label = "checkSquarePop")
+    val pop by animateFloatAsState(if (isOn) 1f else 0.92f, OnboardingMotion.quick(), label = "checkSquarePop")
     Canvas(
         modifier = modifier
             .size(size)

@@ -2,15 +2,16 @@ import SwiftUI
 
 /// Page « Ton profil », juste après la connexion : l'avatar et le @ du nouveau compte.
 ///
-/// Tout est prérempli (un avatar tiré au hasard, le @ que le serveur a généré à la création du
-/// compte) : on peut les changer, ou toucher « Continuer » tel quel. L'avatar suit la
-/// progression (`UserProgress.avatarId`), le @ passe par `update_my_handle` comme dans le profil.
+/// Tout est prérempli (l'avatar choisi sur la page du prénom, à défaut un avatar tiré au
+/// hasard ; le @ que le serveur a généré à la création du compte) : on peut les changer, ou
+/// toucher « Continuer » tel quel. L'avatar suit la progression (`UserProgress.avatarId`), le
+/// @ passe par `update_my_handle` comme dans le profil.
 struct OnboardingV2Account: View {
     @Environment(LanguageManager.self) private var languageManager
     let progressManager: ProgressManager
     let onNext: () -> Void
 
-    @State private var avatarId: String = Avatars.all.randomElement() ?? "avatar_01"
+    @State private var avatarId: String
     @State private var handle = ""
     /// Le @ actuel du compte ; nil tant qu'il n'a pas pu être lu (hors ligne).
     @State private var originalHandle: String?
@@ -26,6 +27,16 @@ struct OnboardingV2Account: View {
     private static let avatarSlot: CGFloat = 84
     private static let avatarSpacing: CGFloat = 18
     private static let neighbourScale: CGFloat = 0.615
+
+    /// - Parameter initialAvatarId: l'avatar choisi plus tôt dans l'onboarding (page du
+    ///   prénom) : le carrousel s'ouvre sur lui. Sans lui, un avatar est tiré au hasard.
+    init(progressManager: ProgressManager, initialAvatarId: String? = nil, onNext: @escaping () -> Void) {
+        self.progressManager = progressManager
+        self.onNext = onNext
+        let fallback: String = Avatars.all.randomElement() ?? "avatar_01"
+        let start: String = Avatars.isValid(initialAvatarId) ? (initialAvatarId ?? fallback) : fallback
+        _avatarId = State(initialValue: start)
+    }
 
     private var sanitizedHandle: String {
         handle

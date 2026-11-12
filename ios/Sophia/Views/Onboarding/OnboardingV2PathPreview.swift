@@ -140,7 +140,7 @@ struct OnboardingV2PathPreview: View {
     /// Retard d'apparition du cours n° `index` : ils se posent l'un après l'autre.
     private func revealAnimation(_ index: Int, extra: Double = 0) -> Animation {
         if reduceMotion { return Animation.easeOut(duration: 0.2) }
-        return DS.Motion.pop.delay(0.15 + Double(index) * 0.28 + extra)
+        return OV2CoreMotion.settle.delay(0.15 + Double(index) * 0.28 + extra)
     }
 
     /// Le pointillé entre le cours `index` et le suivant : vert tant que le suivant est

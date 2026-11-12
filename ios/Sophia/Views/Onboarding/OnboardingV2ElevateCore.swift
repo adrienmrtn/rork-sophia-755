@@ -44,6 +44,55 @@ enum OV2CoreMetrics {
     }
 }
 
+// MARK: - Mouvement
+
+/// Animations du début de l'onboarding : posées, sans rebond. Les ressorts de `DS.Motion`
+/// (`snappy`, `pop`) dépassent leur cible avant d'y revenir ; ici tout arrive à sa place d'un
+/// seul geste.
+enum OV2CoreMotion {
+    /// Changement d'état (sélection, bascule, compteur) : court, en décélération.
+    static let select = Animation.easeOut(duration: 0.22)
+    /// Arrivée d'un élément (carte, portrait, illustration) : ressort à amortissement critique.
+    static let settle = Animation.spring(response: 0.45, dampingFraction: 1)
+    /// Arrivée d'un bloc de contenu : plus ample, toujours sans dépassement.
+    static let reveal = Animation.spring(response: 0.55, dampingFraction: 1)
+}
+
+/// Apparition d'une illustration : un léger agrandissement et un fondu, sans rebond (le
+/// pendant calme de `dsPopIn`).
+private struct OV2CoreSoftInModifier: ViewModifier {
+    let delay: Double
+    @State private var shown = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    func body(content: Content) -> some View {
+        content
+            .scaleEffect(shown || reduceMotion ? 1 : 0.86)
+            .opacity(shown ? 1 : 0)
+            .onAppear {
+                guard !shown else { return }
+                withAnimation(OV2CoreMotion.settle.delay(delay)) { shown = true }
+            }
+    }
+}
+
+extension View {
+    /// Apparition calme d'une illustration, après `delay` secondes.
+    func ov2CoreSoftIn(delay: Double = 0) -> some View {
+        modifier(OV2CoreSoftInModifier(delay: delay))
+    }
+
+    /// Pour un bouton qui ne doit arriver qu'à un moment donné (fin d'une animation, délai) :
+    /// sa place est réservée dès le départ, pour que rien ne saute, mais tant que `shown` est
+    /// faux il est invisible, insensible au toucher et ignoré de VoiceOver.
+    func ov2CoreAppears(_ shown: Bool) -> some View {
+        opacity(shown ? 1 : 0)
+            .allowsHitTesting(shown)
+            .accessibilityHidden(!shown)
+            .animation(.easeOut(duration: 0.3), value: shown)
+    }
+}
+
 // MARK: - Textes
 
 /// Accès aux textes de la table `elevateOnboardingCore`.
@@ -278,6 +327,79 @@ struct OV2CoreSubjectBadge: View {
     }
 }
 
+// MARK: - Carrousel d'avatars
+
+/// Tous les avatars de l'app sur une ligne qui défile et s'aimante : celui du centre est
+/// l'avatar choisi, grand et cerclé de bleu ; ses voisins sont réduits et estompés. Même
+/// principe que le carrousel de la page « Ton profil » (`OnboardingV2Account`), sans rebond.
+struct OV2CoreAvatarCarousel: View {
+    @Binding var avatarId: String
+    /// Diamètre de l'avatar choisi, au centre.
+    var avatarSize: CGFloat = 104
+
+    private static let spacing: CGFloat = 18
+    private static let neighbourScale: CGFloat = 0.615
+
+    /// Largeur d'une case, plus étroite que l'avatar centré : les voisins, réduits, viennent
+    /// se ranger tout près de lui.
+    private var slot: CGFloat { avatarSize * 0.81 }
+
+    /// L'avatar centré est l'avatar choisi : le défilement écrit dans `avatarId`, et changer
+    /// `avatarId` (toucher un voisin) fait défiler jusqu'à lui.
+    private var centered: Binding<String?> {
+        Binding<String?>(
+            get: { avatarId },
+            set: { newValue in
+                if let newValue, newValue != avatarId { avatarId = newValue }
+            }
+        )
+    }
+
+    var body: some View {
+        GeometryReader { geo in
+            let margin: CGFloat = max(0, (geo.size.width - slot) / 2)
+            ScrollView(.horizontal) {
+                HStack(spacing: Self.spacing) {
+                    ForEach(Array(Avatars.all.enumerated()), id: \.element) { index, id in
+                        item(id, number: index + 1)
+                    }
+                }
+                .scrollTargetLayout()
+            }
+            .scrollIndicators(.hidden)
+            .scrollTargetBehavior(.viewAligned)
+            .scrollPosition(id: centered, anchor: .center)
+            .contentMargins(.horizontal, margin, for: .scrollContent)
+        }
+        .frame(height: avatarSize)
+        .sensoryFeedback(.selection, trigger: avatarId)
+    }
+
+    private func item(_ id: String, number: Int) -> some View {
+        let selected: Bool = avatarId == id
+        return Button {
+            withAnimation(OV2CoreMotion.select) {
+                avatarId = id
+            }
+        } label: {
+            AvatarCircle(avatarId: id, initial: "", size: avatarSize)
+                .overlay(
+                    Circle()
+                        .strokeBorder(DS.accent, lineWidth: 4)
+                        .opacity(selected ? 1 : 0)
+                )
+                .scaleEffect(selected ? 1 : Self.neighbourScale)
+                .opacity(selected ? 1 : 0.55)
+                .animation(OV2CoreMotion.select, value: selected)
+                .frame(width: slot, height: avatarSize)
+        }
+        .buttonStyle(.plain)
+        .zIndex(selected ? 1 : 0)
+        .accessibilityLabel(Text(verbatim: "Avatar \(number)"))
+        .accessibilityAddTraits(selected ? .isSelected : [])
+    }
+}
+
 // MARK: - Options
 
 /// Case carrée d'une sélection multiple : la coche se dessine quand la case se remplit.
@@ -297,7 +419,7 @@ struct OV2CoreCheckSquare: View {
                 .padding(size * 0.25)
         }
         .frame(width: size, height: size)
-        .animation(DS.Motion.snappy, value: isOn)
+        .animation(OV2CoreMotion.select, value: isOn)
         .accessibilityHidden(true)
     }
 }

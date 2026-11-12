@@ -33,6 +33,31 @@ data class DuelPlayerIdentity(val handle: String, val avatarId: String?, val tro
     val initial: String get() = handle.take(1).uppercase(java.util.Locale.ROOT)
 }
 
+/**
+ * Une question jouée, pour la relecture en fin de partie : la question, ce que j'ai répondu, ce
+ * que l'adversaire a répondu et qui a marqué. Tout est déjà dans l'app à la fin d'une partie :
+ * les réponses de l'adversaire livrées avec la partie en duel classé, l'état de la partie
+ * (`DuelFriendState.opponentAnswers`) en duel entre amis.
+ */
+data class DuelReviewEntry(
+    /** Le rang de la question dans la partie (à partir de 0 ; 20 : la question décisive). */
+    val index: Int,
+    val question: DuelQuestion,
+    /** Ma réponse ; sans choix ni valeur quand le temps s'est écoulé. */
+    val mine: DuelAnswer?,
+    /** La réponse de l'adversaire ; absente quand l'app ne la connaît pas. */
+    val theirs: DuelBotAnswer?,
+    val playerPoint: Boolean,
+    val opponentPoint: Boolean,
+    val isTiebreak: Boolean,
+) {
+    /** J'ai répondu (un choix, ou une valeur au curseur). */
+    val iAnswered: Boolean get() = mine?.c != null || mine?.v != null
+
+    /** L'adversaire a répondu, pour ce que l'app en sait. */
+    val theyAnswered: Boolean get() = theirs?.choice != null || theirs?.value != null
+}
+
 /** Ce que l'app sait d'une partie dès qu'elle se termine, avant la réponse du serveur. */
 data class DuelSummary(
     val match: DuelMatch,
@@ -50,6 +75,8 @@ data class DuelSummary(
     /** Duel entre amis : aucun trophée en jeu, et une égalité parfaite est possible. */
     val friendly: Boolean = false,
     val draw: Boolean = false,
+    /** Les questions jouées, une à une, pour « Revoir les questions ». */
+    val review: List<DuelReviewEntry> = emptyList(),
 )
 
 /**
@@ -280,6 +307,17 @@ object DuelRules {
 
     // ------------------------------------------------------------ autour de la partie
 
+    /**
+     * L'écran de fin : les bonnes réponses des deux joueurs défilent de zéro à leur total, vite
+     * puis de plus en plus lentement. L'attente après le point n° [step] sur [steps] : de 55 ms
+     * au départ à 330 ms sur le dernier.
+     */
+    fun scoreCountDelayMs(step: Int, steps: Int): Long {
+        if (steps <= 0) return 0L
+        val progress = (step.toDouble() / steps).coerceIn(0.0, 1.0)
+        return 55L + (275 * progress * progress).toLong()
+    }
+
     /** De retour dans l'app après `awayMs` : la partie est-elle abandonnée ? */
     fun abandonsAfterAbsence(awayMs: Long): Boolean = awayMs > MAX_ABSENCE_MS
 }
@@ -380,6 +418,9 @@ class DuelGameModel(
     private val playedOpponentAnswers = mutableListOf<DuelBotAnswer>()
     private val givenAnswers = mutableListOf<DuelAnswer>()
 
+    /** Les questions closes, dans l'ordre, pour la relecture de fin de partie. */
+    private val reviewed = mutableListOf<DuelReviewEntry>()
+
     private var questionStartMs = clock()
     private var sliderTouched = false
     private var lockedAtMs: Long? = null
@@ -399,6 +440,9 @@ class DuelGameModel(
 
     /** Mes réponses jusqu'ici, dans l'ordre de jeu. */
     val answers: List<DuelAnswer> get() = givenAnswers.toList()
+
+    /** Les questions closes jusqu'ici, avec les réponses des deux joueurs. */
+    val review: List<DuelReviewEntry> get() = reviewed.toList()
 
     /** L'instant présent sur l'horloge de la partie (celle des délais de [roundIntro]). */
     fun nowMs(): Long = clock()
@@ -460,6 +504,7 @@ class DuelGameModel(
             pick = myPick,
             friendly = live != null,
             draw = isDraw,
+            review = review,
         )
 
     /** Quitter en pleine partie : une défaite, avec les réponses données jusque-là. */
@@ -473,6 +518,7 @@ class DuelGameModel(
         answers = answers,
         pick = myPick,
         friendly = live != null,
+        review = review,
     )
 
     // ------------------------------------------------------------ actions du joueur
@@ -682,6 +728,16 @@ class DuelGameModel(
         givenAnswers += answer
         val round = DuelRules.score(current, answer, theirs, isTiebreak)
         if (isTiebreak) playerWon = round.player
+        reviewed += DuelReviewEntry(
+            index = i,
+            question = current,
+            mine = answer,
+            // La réponse de l'adversaire n'est connue que si le serveur l'a livrée pour cette question.
+            theirs = if (isTiebreak) match.tiebreakBot else playedOpponentAnswers.getOrNull(i),
+            playerPoint = round.player,
+            opponentPoint = round.opponent,
+            isTiebreak = isTiebreak,
+        )
 
         playerLocked = true
         opponentAnswered = true
@@ -921,7 +977,16 @@ class DuelGameModel(
         val state = closed!!
         frozenFraction = DuelRules.remainingFraction(limitMs, clock() - questionStartMs)
 
-        givenAnswers += currentAnswer()
+        val given = currentAnswer()
+        givenAnswers += given
+        // Les questions closes pendant une coupure réseau n'ont pas été jouées ici : elles
+        // entrent dans la relecture sans réponse de ma part, avec celle de l'ami.
+        val played = playedQuestions
+        while (reviewed.size < minOf(i, played.size)) {
+            val k = reviewed.size
+            reviewed += liveReviewEntry(k, played[k], mine = null, state = state)
+        }
+        reviewed += liveReviewEntry(i, current, mine = given, state = state)
         // La réponse de l'ami et les points de chacun viennent du serveur, qui fait foi.
         state.opponentAnswers.getOrNull(i)?.let { theirs ->
             liveOpponent[i] = DuelBotAnswer(
@@ -954,5 +1019,21 @@ class DuelGameModel(
         }
         haptic(if (round.player) DuelHaptic.Correct else DuelHaptic.Wrong)
         return state
+    }
+
+    /** Une question close d'une partie entre amis, telle que le serveur la rapporte. */
+    private fun liveReviewEntry(k: Int, question: DuelQuestion, mine: DuelAnswer?, state: DuelFriendState): DuelReviewEntry {
+        val theirPoint = state.opponentPoints.getOrElse(k) { false }
+        return DuelReviewEntry(
+            index = k,
+            question = question,
+            mine = mine,
+            theirs = state.opponentAnswers.getOrNull(k)?.let {
+                DuelBotAnswer(correct = theirPoint, choice = it.c, value = it.v, timeMs = it.t)
+            },
+            playerPoint = state.myPoints.getOrElse(k) { false },
+            opponentPoint = theirPoint,
+            isTiebreak = k >= questionCount,
+        )
     }
 }

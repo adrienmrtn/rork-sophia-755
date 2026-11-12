@@ -188,14 +188,14 @@ struct OnboardingV2SocialProof: View {
         }
         await pause(0.25)
         if Task.isCancelled { return }
-        withAnimation(DS.Motion.pop) {
+        withAnimation(OV2CoreMotion.settle) {
             laurelsIn = true
         }
         Haptics.soft()
         await pause(0.15)
         for count in 1...Self.starCount {
             if Task.isCancelled { return }
-            withAnimation(DS.Motion.pop) {
+            withAnimation(OV2CoreMotion.settle) {
                 starsShown = count
             }
             Haptics.tick(0.3 + 0.08 * CGFloat(count))
