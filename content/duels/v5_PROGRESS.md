@@ -81,3 +81,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - sl parts 8–14 fini
 - et parts 8–14 fini ; images lot b fini ; vérification des 100 images lancée → v5/final_images.json
 - fi parts 8–14 fini
+- sk parts 8–14 fini
