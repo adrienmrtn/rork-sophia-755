@@ -48,7 +48,9 @@ struct AppearancePreferenceTests {
         #expect(AppearancePreference.light.presentedUserInterfaceStyle == .light)
     }
 
-    @Test func preferencePersistsAcrossLaunches() {
+    /// Design « Elevate arrondi » : l'app est en clair uniquement. Le choix enregistré reste
+    /// écrit (pour le jour où le mode nuit revient), mais un nouveau lancement l'ignore.
+    @Test func storedPreferenceIsIgnoredAtLaunchWhileLightOnly() {
         let suite = "sophia.appearance.tests.\(UUID().uuidString)"
         guard let defaults = UserDefaults(suiteName: suite) else {
             Issue.record("Could not create isolated UserDefaults suite")
@@ -58,12 +60,7 @@ struct AppearancePreferenceTests {
 
         let writer = AppearanceManager(defaults: defaults)
         writer.setPreference(.dark)
-        #expect(AppearanceManager(defaults: defaults).preference == .dark)
-
-        writer.setPreference(.system)
-        #expect(AppearanceManager(defaults: defaults).preference == .system)
-
-        writer.setPreference(.light)
+        #expect(defaults.string(forKey: AppearanceManager.userDefaultsKey) == AppearancePreference.dark.rawValue)
         #expect(AppearanceManager(defaults: defaults).preference == .light)
 
         defaults.removePersistentDomain(forName: suite)

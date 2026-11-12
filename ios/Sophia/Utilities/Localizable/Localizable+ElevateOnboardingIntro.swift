@@ -86,5 +86,11 @@ extension AppLocalizableAdditions {
             "fr": "Dans le métro, en marchant, en cuisinant : tes cours existent aussi en audio.",
             "en": "On the subway, on a walk, while cooking: your courses come in audio too.",
         ],
+
+        // MARK: Bienvenue — accroche de marque, volontairement en anglais dans toutes les langues
+        "onboardingV2.elevate.welcome.tagline": [
+            "fr": "Replace scrolling with **addictive learning.**",
+            "en": "Replace scrolling with **addictive learning.**",
+        ],
     ]
 }
