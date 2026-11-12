@@ -42,6 +42,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -50,7 +51,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -61,6 +61,9 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -81,10 +84,17 @@ import app.rork.sophia.domain.Campaign
 import app.rork.sophia.domain.Subject
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.domain.locale
-import app.rork.sophia.domain.uppercaseIn
-import app.rork.sophia.ui.components.CalmProgressBar
+import app.rork.sophia.ui.components.DSEyebrow
 import app.rork.sophia.ui.components.SophiaPrimaryButton
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.dsShake
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
+import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.profile.ProfileFillBar
+import app.rork.sophia.ui.profile.ProfileRoundButton
+import app.rork.sophia.ui.profile.ProfileSectionHeader
 import app.rork.sophia.ui.onboarding.ConfettiBurst
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -142,7 +152,7 @@ private val GRAYSCALE = ColorFilter.colorMatrix(ColorMatrix().apply { setToSatur
 
 /**
  * Le rond d'un badge : son illustration en papier découpé (embarquée, ou hébergée pour un
- * événement), cerclée d'or quand il est gagné, grisée sinon. Tant que l'illustration n'existe
+ * événement), en couleur quand il est gagné, grisée sinon. Tant que l'illustration n'existe
  * pas, un pictogramme sur un fond uni.
  */
 @Composable
@@ -157,8 +167,7 @@ fun BadgeMedal(badge: Badge, earned: Boolean, modifier: Modifier = Modifier, siz
             // Pas encore gagné : l'image reste reconnaissable, mais éteinte.
             .alpha(if (earned) 1f else 0.45f)
             .clip(CircleShape)
-            .background(if (earned) DS.accent else DS.surfaceMuted)
-            .border(if (earned) maxOf(2.dp, size * 0.045f) else 1.dp, if (earned) DS.warm else DS.hairline, CircleShape),
+            .background(if (earned) DS.accent else DS.surfaceMuted),
         contentAlignment = Alignment.Center,
     ) {
         when {
@@ -193,7 +202,8 @@ fun BadgeMedal(badge: Badge, earned: Boolean, modifier: Modifier = Modifier, siz
 
 /**
  * Quelques médaillons avec leur nom, côte à côte : les badges qu'une personne affiche. Toutes les
- * cases ont la même hauteur : le titre réserve toujours deux lignes.
+ * cases ont la même hauteur : le titre réserve toujours deux lignes. Le médaillon d'un badge
+ * gagné arrive en rebondissant.
  */
 @Composable
 fun BadgeRow(
@@ -204,27 +214,30 @@ fun BadgeRow(
     onTap: ((Badge) -> Unit)? = null,
 ) {
     val context = LocalContext.current
-    val shape = RoundedCornerShape(18.dp)
     Row(modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-        badges.forEach { badge ->
+        badges.forEachIndexed { index, badge ->
+            val isEarned = earned(badge)
             Column(
                 modifier = Modifier
                     .weight(1f)
-                    .then(if (onTap != null) Modifier.softPress(onClick = { onTap(badge) }) else Modifier)
-                    .clip(shape)
-                    .background(DS.surface)
-                    .border(1.dp, DS.hairline, shape)
-                    .padding(horizontal = 6.dp, vertical = 14.dp),
+                    .then(if (onTap != null) Modifier.pressable(onClick = { onTap(badge) }) else Modifier)
+                    .sophiaCard()
+                    .padding(horizontal = 6.dp, vertical = 12.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
-                BadgeMedal(badge = badge, earned = earned(badge), size = 60.dp)
+                BadgeMedal(
+                    badge = badge,
+                    earned = isEarned,
+                    size = 60.dp,
+                    modifier = if (isEarned) Modifier.dsPopIn(delayMillis = 150 + index * 70) else Modifier,
+                )
                 Text(
                     text = badge.title(context, language),
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 13.sp,
-                    lineHeight = 17.sp,
+                    fontSize = 12.sp,
+                    lineHeight = 16.sp,
                     color = DS.ink,
                     textAlign = TextAlign.Center,
                     minLines = 2,
@@ -265,29 +278,34 @@ fun BadgesScreen(
             .background(DS.canvas)
             .verticalScroll(rememberScrollState())
             .padding(start = 20.dp, end = 20.dp, top = 12.dp, bottom = 44.dp),
-        verticalArrangement = Arrangement.spacedBy(26.dp),
+        verticalArrangement = Arrangement.spacedBy(20.dp),
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Row(
+            modifier = Modifier.dsStagger(0),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 Text(
                     text = StringStore.text(context, "profile.badges", language),
+                    modifier = Modifier.semantics { heading() },
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
+                    fontWeight = FontWeight.SemiBold,
                     fontSize = 28.sp,
+                    lineHeight = 34.sp,
                     color = DS.ink,
                 )
                 Text(
                     text = StringStore.text(context, "badge.progress", language, earnedCount, badges.size),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
                     fontSize = 15.sp,
                     color = DS.inkSecondary,
                 )
             }
-            RoundIconButton(
+            ProfileRoundButton(
                 icon = Icons.Filled.Close,
-                onClick = onBack,
                 contentDescription = StringStore.text(context, "common.close", language),
+                onClick = onBack,
             )
         }
 
@@ -296,11 +314,10 @@ fun BadgesScreen(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(18.dp))
-                .background(DS.surface)
-                .border(1.dp, DS.hairline, RoundedCornerShape(18.dp))
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+                .dsStagger(1)
+                .sophiaCard()
+                .padding(horizontal = 16.dp, vertical = 14.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             Text(
                 text = StringStore.text(context, "badges.featured.title", language),
@@ -313,9 +330,21 @@ fun BadgesScreen(
                 repeat(BadgeRules.MAX_FEATURED) { index ->
                     val badge = featured.getOrNull(index)
                     if (badge != null) {
-                        BadgeMedal(badge = badge, earned = true, size = 60.dp, modifier = Modifier.softPress(onClick = { selected = badge }))
+                        // La clé : un emplacement qui change de badge rejoue son rebond.
+                        androidx.compose.runtime.key(badge.id) {
+                            val label = badge.title(context, language)
+                            BadgeMedal(
+                                badge = badge,
+                                earned = true,
+                                size = 60.dp,
+                                modifier = Modifier
+                                    .dsPopIn(delayMillis = 150 + index * 70)
+                                    .pressable(onClick = { selected = badge }, scaleDown = 0.92f)
+                                    .semantics { contentDescription = label },
+                            )
+                        }
                     } else {
-                        Box(modifier = Modifier.size(60.dp).dashedBorder(DS.inkTertiary, 30.dp))
+                        Box(modifier = Modifier.size(60.dp).dashedBorder(DS.inkSecondary, 30.dp))
                     }
                 }
             }
@@ -324,20 +353,22 @@ fun BadgesScreen(
         BadgeFamily.entries.forEach { family ->
             val items = badges.filter { it.family == family }
             if (items.isEmpty()) return@forEach
-            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                NewGenSectionTitle(
-                    text = StringStore.text(context, family.titleKey, language),
-                    trailing = "${items.count { it.id in progress.earnedBadges }}/${items.size}",
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                ProfileSectionHeader(
+                    title = StringStore.text(context, family.titleKey, language),
+                    detail = "${items.count { it.id in progress.earnedBadges }}/${items.size}",
                 )
                 // Trois colonnes, à la main : la grille vit dans un écran déjà défilant.
-                items.chunked(3).forEach { row ->
-                    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                        row.forEach { badge ->
+                items.chunked(3).forEachIndexed { rowIndex, row ->
+                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        row.forEachIndexed { column, badge ->
                             BadgeCell(
                                 badge = badge,
                                 earned = badge.id in progress.earnedBadges,
                                 stats = stats,
                                 language = language,
+                                // La cascade repart de zéro tous les neuf badges.
+                                order = (rowIndex * 3 + column) % 9,
                                 onClick = { selected = badge },
                                 modifier = Modifier.weight(1f),
                             )
@@ -356,7 +387,8 @@ fun BadgesScreen(
 
 /**
  * Une case de la grille. Toutes ont la même taille : le titre réserve toujours deux lignes et la
- * ligne d'avancement garde sa place même quand elle est vide (badge gagné).
+ * ligne d'avancement garde sa place même quand elle est vide (badge gagné). Les cases arrivent
+ * en cascade ([order]) ; le médaillon d'un badge gagné « pop » en plus.
  */
 @Composable
 private fun BadgeCell(
@@ -364,29 +396,33 @@ private fun BadgeCell(
     earned: Boolean,
     stats: BadgeStats,
     language: AppLanguage,
+    order: Int,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
     val showsProgress = !earned && badge.target > 1 && badge.metric != BadgeMetric.League
-    val shape = RoundedCornerShape(18.dp)
     Column(
         modifier = modifier
-            .softPress(onClick = onClick)
-            .clip(shape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, shape)
+            .dsStagger(order, stepMillis = 35)
+            .pressable(onClick = onClick)
+            .sophiaCard()
             .padding(horizontal = 6.dp, vertical = 12.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
-        BadgeMedal(badge = badge, earned = earned, size = 68.dp)
+        BadgeMedal(
+            badge = badge,
+            earned = earned,
+            size = 60.dp,
+            modifier = if (earned) Modifier.dsPopIn(delayMillis = 180 + order * 35) else Modifier,
+        )
         Text(
             text = badge.title(context, language),
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.Bold,
-            fontSize = 13.sp,
-            lineHeight = 17.sp,
+            fontSize = 12.sp,
+            lineHeight = 16.sp,
             color = if (earned) DS.ink else DS.inkSecondary,
             textAlign = TextAlign.Center,
             minLines = 2,
@@ -396,9 +432,8 @@ private fun BadgeCell(
         Text(
             text = if (showsProgress) StringStore.text(context, "badge.progress", language, stats.progress(badge), badge.target) else " ",
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.SemiBold,
             fontSize = 11.sp,
-            color = DS.inkTertiary,
+            color = DS.inkSecondary,
             maxLines = 1,
         )
     }
@@ -423,25 +458,28 @@ private fun BadgeDetailSheet(
     val earned = earnedAt != null
     val featured = badge.id in progress.featuredBadgeIds && earned
     var showFull by remember { mutableStateOf(false) }
+    // Secousse du bouton quand les trois emplacements du profil sont déjà pris.
+    var fullShake by remember { mutableIntStateOf(0) }
+    val haptics = rememberHaptics()
     ModalBottomSheet(onDismissRequest = onDismiss, containerColor = DS.canvas) {
         Column(
             modifier = Modifier.fillMaxWidth().navigationBarsPadding().padding(horizontal = 24.dp).padding(bottom = 20.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
-            BadgeMedal(badge = badge, earned = earned, size = 120.dp)
+            BadgeMedal(badge = badge, earned = earned, size = 120.dp, modifier = Modifier.dsPopIn(delayMillis = 100))
             Text(
                 text = badge.title(context, language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
+                fontWeight = FontWeight.SemiBold,
                 fontSize = 22.sp,
+                lineHeight = 28.sp,
                 color = DS.ink,
                 textAlign = TextAlign.Center,
             )
             Text(
                 text = badge.condition(context, language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Medium,
                 fontSize = 15.sp,
                 lineHeight = 21.sp,
                 color = DS.inkSecondary,
@@ -473,31 +511,44 @@ private fun BadgeDetailSheet(
                         textAlign = TextAlign.Center,
                     )
                 }
-                val shape = RoundedCornerShape(14.dp)
+                val shape = DS.controlShape
                 Box(
                     modifier = Modifier
                         .padding(top = 8.dp)
                         .fillMaxWidth()
-                        .height(50.dp)
-                        .softPress(onClick = { showFull = !app.progressManager.toggleFeaturedBadge(badge.id) })
+                        .height(54.dp)
+                        .dsShake(trigger = fullShake)
+                        .pressable(
+                            onClick = {
+                                val changed = app.progressManager.toggleFeaturedBadge(badge.id)
+                                if (!changed) {
+                                    // Trois badges déjà affichés : le bouton refuse, et le dit.
+                                    haptics.warning()
+                                    fullShake += 1
+                                }
+                                showFull = !changed
+                            },
+                            scaleDown = 0.96f,
+                        )
                         .clip(shape)
                         .background(if (featured) DS.surface else DS.accent)
-                        .then(if (featured) Modifier.border(1.dp, DS.hairline, shape) else Modifier),
+                        .then(if (featured) Modifier.border(1.5.dp, DS.hairline, shape) else Modifier),
                     contentAlignment = Alignment.Center,
                 ) {
                     Text(
                         text = StringStore.text(context, if (featured) "badges.featured.remove" else "badges.featured.add", language),
                         fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 15.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 17.sp,
                         color = if (featured) DS.ink else Color.White,
                     )
                 }
             } else {
                 if (badge.target > 1 && badge.metric != BadgeMetric.League) {
-                    CalmProgressBar(
+                    ProfileFillBar(
                         fraction = stats.progress(badge).toFloat() / badge.target,
                         modifier = Modifier.widthIn(max = 220.dp),
+                        height = 8.dp,
                     )
                 }
                 Text(
@@ -505,7 +556,7 @@ private fun BadgeDetailSheet(
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 13.sp,
-                    color = DS.inkTertiary,
+                    color = DS.inkSecondary,
                 )
             }
         }
@@ -554,10 +605,11 @@ private fun BadgeCelebration(badge: Badge, language: AppLanguage, onContinue: ()
     var showConfetti by remember { mutableStateOf(false) }
     // Un toucher parti avant la fête (défilement en cours) ne doit pas la fermer aussitôt.
     var canDismiss by remember { mutableStateOf(false) }
-    val haptics = androidx.compose.ui.platform.LocalHapticFeedback.current
+    val haptics = rememberHaptics()
     LaunchedEffect(Unit) {
         backdrop.animateTo(1f, tween(250))
-        haptics.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress)
+        // Une récompense : la vibration de fête du style, à la place du simple appui long.
+        haptics.celebrate()
         showConfetti = true
         medal.animateTo(1f, spring(dampingRatio = 0.55f, stiffness = 220f))
         textIn.animateTo(1f, tween(350))
@@ -580,7 +632,7 @@ private fun BadgeCelebration(badge: Badge, language: AppLanguage, onContinue: ()
             .pointerInput(Unit) { detectTapGestures { if (canDismiss) onContinue() } },
         contentAlignment = Alignment.Center,
     ) {
-        val shape = RoundedCornerShape(30.dp)
+        val shape = RoundedCornerShape(24.dp)
         Column(
             modifier = Modifier
                 .padding(horizontal = 28.dp)
@@ -591,10 +643,9 @@ private fun BadgeCelebration(badge: Badge, language: AppLanguage, onContinue: ()
                     scaleX = scale
                     scaleY = scale
                 }
-                .shadow(24.dp, shape)
                 .clip(shape)
                 .background(DS.canvas)
-                .border(1.dp, DS.hairline, shape)
+                .border(1.5.dp, DS.hairline, shape)
                 // Un toucher sur la carte ne ferme pas la fête.
                 .pointerInput(Unit) { detectTapGestures { } }
                 .padding(start = 22.dp, end = 22.dp, top = 10.dp, bottom = 22.dp),
@@ -655,19 +706,11 @@ private fun BadgeCelebration(badge: Badge, language: AppLanguage, onContinue: ()
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
-                Text(
-                    text = StringStore.text(context, "badgeCelebration.kicker", language).uppercaseIn(language),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp,
-                    letterSpacing = 1.2.sp,
-                    color = DS.accent,
-                    textAlign = TextAlign.Center,
-                )
+                DSEyebrow(text = StringStore.text(context, "badgeCelebration.kicker", language))
                 Text(
                     text = badge.title(context, language),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
+                    fontWeight = FontWeight.SemiBold,
                     fontSize = 28.sp,
                     lineHeight = 33.sp,
                     color = DS.ink,
@@ -678,7 +721,6 @@ private fun BadgeCelebration(badge: Badge, language: AppLanguage, onContinue: ()
                 Text(
                     text = badge.condition(context, language),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Medium,
                     fontSize = 15.sp,
                     lineHeight = 21.sp,
                     color = DS.inkSecondary,
