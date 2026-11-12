@@ -1,8 +1,9 @@
 package app.rork.sophia.ui.newgen
 
+import androidx.compose.animation.core.Animatable
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -41,12 +42,16 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.R
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.CampaignStore
@@ -67,6 +72,8 @@ import app.rork.sophia.domain.DeckContext
 import app.rork.sophia.domain.HomeDeckBuilder
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.AnimatedFlameBadge
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import kotlinx.coroutines.Dispatchers
@@ -101,7 +108,10 @@ fun HomeFeedScreen(
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val skipStore = remember { DeckSkipStore(context.applicationContext) }
-    val haptics = LocalHapticFeedback.current
+    val haptics = rememberHaptics()
+    // L'onglet du fil vibre déjà quand on le choisit : le retour en première page qui suit ne
+    // compte pas pour un swipe.
+    val lastSegmentChange = remember { longArrayOf(0L) }
     val completedCount = progress.courseProgress.count { it.value.isCompleted }
 
     var segment by remember { mutableIntStateOf(HomeFeedSession.segment) }
@@ -225,7 +235,7 @@ fun HomeFeedScreen(
         snapshotFlow { pagerState.settledPage }.collect { page ->
             if (page != previous) {
                 pages.getOrNull(previous)?.courseId?.let { id -> cardLeft(id, previous) }
-                haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                if (android.os.SystemClock.uptimeMillis() - lastSegmentChange[0] > 500L) haptics.tap()
                 previous = page
             }
         }
@@ -243,24 +253,41 @@ fun HomeFeedScreen(
         if (!isPremium) app.discountManager.registerSwipe()
     }
 
+    // Les deux premières cartes entrent l'une après l'autre, à l'arrivée sur l'écran et à chaque
+    // changement d'onglet du fil ; les suivantes sont déjà là. On retient l'onglet dont les cartes
+    // sont entrées : dès qu'on en change, celles du nouveau repartent cachées dans la même
+    // composition, sans image intermédiaire.
+    var revealedSegment by remember { mutableIntStateOf(-1) }
+    val pagesShown = segment == 1 || deckReady
+    val revealed = pagesShown && revealedSegment == segment
+    LaunchedEffect(segment, pagesShown) {
+        if (pagesShown) {
+            delay(16)
+            revealedSegment = segment
+        }
+    }
+
     Column(modifier = modifier.fillMaxSize().background(DS.canvas)) {
         FeedHeader(
             language = language,
             streak = progress.streak,
-            modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 8.dp),
+            modifier = Modifier.padding(start = SIDE_MARGIN, end = SIDE_MARGIN, top = 8.dp),
         )
-        SegmentedPills(
+        // Deux onglets sur toute la largeur, moitié-moitié ; le trait bleu glisse de l'un à l'autre.
+        HomeFeedTabs(
             items = listOf(
                 StringStore.text(context, "home.segment.forYou", language),
                 StringStore.text(context, "home.segment.following", language),
             ),
             selection = segment,
             onSelect = {
+                lastSegmentChange[0] = android.os.SystemClock.uptimeMillis()
                 segment = it
                 HomeFeedSession.segment = it
             },
             dotOn = if (followingHasUnread) 1 else null,
-            modifier = Modifier.padding(horizontal = 20.dp).padding(top = 12.dp, bottom = 10.dp),
+            dotLabel = StringStore.text(context, "home.following.newDot", language),
+            modifier = Modifier.padding(top = 10.dp),
         )
         if (segment == 1 && followedAuthors.isNotEmpty()) {
             FollowedCreatorsRow(
@@ -268,7 +295,7 @@ fun HomeFeedScreen(
                 language = language,
                 onOpen = onOpenCreator,
                 onDiscover = onSearch,
-                modifier = Modifier.padding(horizontal = 20.dp).padding(bottom = 6.dp),
+                modifier = Modifier.padding(horizontal = SIDE_MARGIN).padding(top = 10.dp),
             )
         }
 
@@ -299,7 +326,7 @@ fun HomeFeedScreen(
                 val pageHeight = (maxHeight - peek).coerceAtLeast(320.dp)
                 // La couverture occupe la hauteur que le texte laisse libre (plus de vide sous
                 // l'accroche), jusqu'à un carré ; sur un petit écran elle se raccourcit d'elle-même.
-                val coverMaxHeight = maxWidth - 32.dp
+                val coverMaxHeight = maxWidth - SIDE_MARGIN * 2
                 VerticalPager(
                     state = pagerState,
                     modifier = Modifier.fillMaxSize(),
@@ -311,7 +338,12 @@ fun HomeFeedScreen(
                     key = { index -> latestPages.value.getOrNull(index)?.id ?: index },
                 ) { index ->
                     val item = latestPages.value.getOrNull(index) ?: return@VerticalPager
-                    Box(modifier = Modifier.fillMaxSize().padding(start = 16.dp, end = 16.dp, bottom = 10.dp)) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(start = SIDE_MARGIN, end = SIDE_MARGIN, top = 10.dp)
+                            .homeReveal(shown = revealed || index > 1, index = index),
+                    ) {
                         when (item) {
                             is FeedItem.CourseCard -> {
                                 val course = item.course
@@ -369,45 +401,70 @@ fun HomeFeedScreen(
     }
 }
 
+/** Marge latérale de l'écran (en-tête, cartes). */
+private val SIDE_MARGIN = 24.dp
+
 @Composable
 private fun FeedHeader(language: AppLanguage, streak: Int, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
     Row(
         modifier = modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(10.dp),
     ) {
-        Text(
-            text = "Sophia",
-            fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.ExtraBold,
-            fontSize = 24.sp,
-            color = DS.ink,
+        // `sophia_mark` est le logo complet : le symbole et le mot « Sophia ».
+        Image(
+            painter = painterResource(R.drawable.sophia_mark),
+            contentDescription = "Sophia",
+            contentScale = ContentScale.Fit,
+            modifier = Modifier.height(30.dp),
         )
         Spacer(Modifier.weight(1f))
+        // La flamme rebondit quand la série change.
+        val bounce = remember { Animatable(1f) }
+        var lastStreak by remember { mutableIntStateOf(streak) }
+        LaunchedEffect(streak) {
+            if (streak != lastStreak) {
+                lastStreak = streak
+                bounce.snapTo(0.7f)
+                bounce.animateTo(1f, DSMotion.pop())
+            }
+        }
+        val streakLabel = "$streak " +
+            StringStore.text(context, if (streak > 1) "common.streak.days" else "common.streak.day", language)
         Row(
             modifier = Modifier
                 .height(36.dp)
                 .clip(CircleShape)
-                .background(DS.surface)
-                .border(1.dp, DS.hairline, CircleShape)
-                .padding(horizontal = 12.dp),
+                .background(DS.accentTint)
+                .padding(horizontal = 12.dp)
+                .clearAndSetSemantics { contentDescription = streakLabel },
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(5.dp),
         ) {
-            if (streak > 0) {
-                AnimatedFlameBadge(size = 16.dp, showGlow = false, animated = false, modifier = Modifier.size(18.dp))
-            } else {
-                Icon(
-                    imageVector = Icons.Outlined.LocalFireDepartment,
-                    contentDescription = null,
-                    tint = DS.inkTertiary,
-                    modifier = Modifier.size(16.dp),
-                )
+            Box(
+                modifier = Modifier.graphicsLayer {
+                    scaleX = bounce.value
+                    scaleY = bounce.value
+                },
+                contentAlignment = Alignment.Center,
+            ) {
+                // Une flamme fixe : pleine et chaude quand la série est en cours, en creux sinon.
+                if (streak > 0) {
+                    AnimatedFlameBadge(size = 16.dp, showGlow = false, animated = false, modifier = Modifier.size(18.dp))
+                } else {
+                    Icon(
+                        imageVector = Icons.Outlined.LocalFireDepartment,
+                        contentDescription = null,
+                        tint = DS.inkTertiary,
+                        modifier = Modifier.size(16.dp),
+                    )
+                }
             }
             Text(
                 text = "$streak",
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.ExtraBold,
                 fontSize = 15.sp,
                 color = DS.ink,
             )

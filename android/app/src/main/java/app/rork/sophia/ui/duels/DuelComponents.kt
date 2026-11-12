@@ -2,29 +2,22 @@ package app.rork.sophia.ui.duels
 
 import android.content.Context
 import android.os.Build
+import android.os.SystemClock
 import android.view.HapticFeedbackConstants
 import android.view.View
-import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.animateDpAsState
-import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.AccountBalance
@@ -37,20 +30,21 @@ import androidx.compose.material.icons.filled.Science
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -59,7 +53,9 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.DuelLeague
 import app.rork.sophia.domain.locale
+import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.newgen.AvatarCircle
+import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
@@ -68,7 +64,10 @@ import java.text.NumberFormat
 // Les briques visuelles des duels, partagées par l'accueil, la partie et le résultat.
 // Mêmes couleurs et mêmes proportions que `ios/Sophia/Views/Duels/DuelComponents.swift`.
 
-/** Les couleurs propres aux duels, identiques de jour comme de nuit. */
+/**
+ * Les couleurs des illustrations : celles des ligues, des trophées et des médailles. Le reste
+ * de l'interface des duels passe par les jetons `DS` (et [DuelTheme] pour l'écran de jeu).
+ */
 object DuelPalette {
     val saffron = Color(0xFFF2B134)
     val coral = Color(0xFFE05A3A)
@@ -159,15 +158,19 @@ fun DuelTrophyCount(
         Text(
             text = DuelFormat.number(value, language),
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.ExtraBold,
             fontSize = size.value.sp,
+            style = DuelTabularDigits,
             color = color,
             maxLines = 1,
         )
     }
 }
 
-/** L'avatar d'un joueur (ou son initiale), cerclé d'un anneau. */
+/**
+ * L'avatar d'un joueur (ou son initiale), cerclé d'un liseré : la couleur de son camp. Sans
+ * ombre : le style « Elevate arrondi » sépare par des bordures.
+ */
 @Composable
 fun DuelAvatar(
     avatarId: String?,
@@ -177,15 +180,9 @@ fun DuelAvatar(
     ring: Color = Color.White,
     ringWidth: Dp = 3.dp,
 ) {
-    Box(
-        modifier = modifier
-            .shadow(8.dp, CircleShape, clip = false)
-            .size(size)
-            .border(ringWidth, ring, CircleShape)
-            .padding(ringWidth),
-        contentAlignment = Alignment.Center,
-    ) {
-        AvatarCircle(avatarId = avatarId, initial = initial, size = size - ringWidth * 2)
+    Box(modifier = modifier.size(size), contentAlignment = Alignment.Center) {
+        AvatarCircle(avatarId = avatarId, initial = initial, size = size)
+        Box(modifier = Modifier.matchParentSize().border(ringWidth, ring, CircleShape))
     }
 }
 
@@ -255,8 +252,12 @@ fun DuelProgressBar(
 }
 
 /**
- * Le grand bouton des duels : un aplat safran posé sur une tranche plus sombre, qui s'enfonce
- * sous le doigt.
+ * Le grand bouton des duels : le CTA plein du style « Elevate arrondi » (rectangle arrondi
+ * bleu, texte blanc, pression élastique). Il ne vibre pas de lui-même : chaque appel choisit sa
+ * vibration ([duelHaptic]), plus appuyée pour lancer une partie.
+ *
+ * [edge] est gardé pour les appels existants : le style arrondi n'a plus de tranche sous le
+ * bouton.
  */
 @Composable
 fun DuelPlayButton(
@@ -265,50 +266,34 @@ fun DuelPlayButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     leadingIcon: ImageVector? = null,
-    fill: Color = DuelPalette.saffron,
-    edge: Color = DuelPalette.playEdge,
-    foreground: Color = DuelPalette.night,
+    fill: Color = DS.accent,
+    @Suppress("UNUSED_PARAMETER") edge: Color = Color.Transparent,
+    foreground: Color = Color.White,
 ) {
-    val interaction = remember { MutableInteractionSource() }
-    val pressed by interaction.collectIsPressedAsState()
-    val drop by animateDpAsState(
-        targetValue = if (pressed) 5.dp else 0.dp,
-        animationSpec = spring(dampingRatio = 0.7f, stiffness = Spring.StiffnessMedium),
-        label = "duelPlayPress",
-    )
-    val shape = RoundedCornerShape(20.dp)
-    Box(
+    Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(bottom = 6.dp)
-            .semantics(mergeDescendants = true) {}
-            .clickable(interactionSource = interaction, indication = null, enabled = enabled, onClick = onClick),
+            .semantics(mergeDescendants = true) { role = Role.Button }
+            .pressable(onClick = onClick, enabled = enabled, scaleDown = 0.96f, haptic = false)
+            .clip(DS.controlShape)
+            .background(if (enabled) fill else fill.copy(alpha = 0.55f))
+            .padding(vertical = 17.dp, horizontal = 12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center,
     ) {
-        // La tranche, fixe, puis le dessus qui descend dessus.
-        Box(modifier = Modifier.matchParentSize().offset(y = 6.dp).clip(shape).background(edge))
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .offset(y = drop)
-                .clip(shape)
-                .background(if (enabled) fill else fill.copy(alpha = 0.55f))
-                .padding(vertical = 18.dp, horizontal = 16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center,
-        ) {
-            if (leadingIcon != null) {
-                Icon(leadingIcon, contentDescription = null, tint = foreground, modifier = Modifier.size(20.dp))
-                Box(modifier = Modifier.width(10.dp))
-            }
-            Text(
-                text = text,
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 19.sp,
-                color = foreground,
-                maxLines = 1,
-            )
+        if (leadingIcon != null) {
+            Icon(leadingIcon, contentDescription = null, tint = foreground, modifier = Modifier.size(18.dp))
+            Box(modifier = Modifier.width(8.dp))
         }
+        Text(
+            text = text,
+            fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 17.sp,
+            color = foreground,
+            maxLines = 2,
+            textAlign = TextAlign.Center,
+        )
     }
 }
 
@@ -323,7 +308,17 @@ enum class DuelHaptic {
     OpponentFound, SuddenDeath, Victory, Defeat, TrophyTick, TrophyLanded, Promotion,
 }
 
+/** L'instant du dernier avertissement de chrono (horloge de l'appareil, ms). */
+private var lastClockWarningMs = 0L
+
 fun View.duelHaptic(kind: DuelHaptic) {
+    if (kind == DuelHaptic.Clock) {
+        // Le déroulé appelle ce cran à 3, 2 puis 1 seconde : seul le premier vibre (un
+        // avertissement par question, pas une rafale), comme `DuelHaptics.clock` sur iOS.
+        val now = SystemClock.elapsedRealtime()
+        if (now - lastClockWarningMs <= 2_500L) return
+        lastClockWarningMs = now
+    }
     val confirm = if (Build.VERSION.SDK_INT >= 30) HapticFeedbackConstants.CONFIRM else HapticFeedbackConstants.VIRTUAL_KEY
     val reject = if (Build.VERSION.SDK_INT >= 30) HapticFeedbackConstants.REJECT else HapticFeedbackConstants.LONG_PRESS
     val light = HapticFeedbackConstants.KEYBOARD_TAP
@@ -338,12 +333,14 @@ fun View.duelHaptic(kind: DuelHaptic) {
         DuelHaptic.OpponentAnswered -> listOf(0L to tick)
         DuelHaptic.Correct -> listOf(0L to confirm)
         DuelHaptic.Wrong -> listOf(0L to reject)
-        DuelHaptic.Clock -> listOf(0L to light)
+        // L'avertissement du vocabulaire commun (`Haptics.warning`).
+        DuelHaptic.Clock -> listOf(0L to heavy)
         DuelHaptic.Countdown -> listOf(0L to medium)
         DuelHaptic.CountdownFinal -> listOf(0L to heavy, 70L to medium)
         DuelHaptic.OpponentFound -> listOf(0L to heavy, 90L to medium, 200L to tick)
         DuelHaptic.SuddenDeath -> listOf(0L to reject, 180L to heavy)
-        DuelHaptic.Victory -> listOf(0L to confirm, 140L to heavy, 280L to medium, 420L to medium)
+        // La récompense du vocabulaire commun (`Haptics.celebrate`).
+        DuelHaptic.Victory -> listOf(0L to confirm, 120L to heavy, 240L to medium)
         DuelHaptic.Defeat -> listOf(0L to heavy, 200L to tick)
         DuelHaptic.TrophyLanded -> listOf(0L to medium)
         DuelHaptic.Promotion -> listOf(0L to confirm, 90L to medium, 180L to medium, 270L to medium, 360L to medium, 600L to heavy)

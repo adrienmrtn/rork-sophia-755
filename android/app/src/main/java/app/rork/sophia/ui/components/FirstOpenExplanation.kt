@@ -3,6 +3,7 @@ package app.rork.sophia.ui.components
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
@@ -27,7 +28,10 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -52,12 +56,16 @@ fun FirstOpenExplanation(
     var showMessage by remember { mutableStateOf(false) }
     var showHint by remember { mutableStateOf(false) }
     var leaving by remember { mutableStateOf(false) }
+    val haptics = rememberHaptics()
 
     LaunchedEffect(Unit) {
         dim = 0.64f
         delay(400)
         showIcon = true
-        delay(500)
+        delay(150)
+        // L'explication se pose : une vibration douce quand l'icône arrive.
+        haptics.soft()
+        delay(350)
         showTitle = true
         delay(550)
         showMessage = true
@@ -65,7 +73,11 @@ fun FirstOpenExplanation(
         showHint = true
     }
 
-    val iconScale by animateFloatAsState(if (showIcon) 1f else 0.7f, tween(450), label = "icon")
+    val iconScale by animateFloatAsState(if (showIcon) 1f else 0.7f, DSMotion.reveal(), label = "icon")
+    // Le titre et le texte montent de quelques points en apparaissant.
+    val titleRise by animateFloatAsState(if (showTitle) 0f else 1f, tween(700), label = "titleRise")
+    val msgRise by animateFloatAsState(if (showMessage) 0f else 1f, tween(800), label = "msgRise")
+    val risePx = with(LocalDensity.current) { 14.dp.toPx() }
     val iconAlpha by animateFloatAsState(if (showIcon && !leaving) 1f else 0f, tween(400), label = "ia")
     val titleAlpha by animateFloatAsState(if (showTitle && !leaving) 1f else 0f, tween(400), label = "ta")
     val msgAlpha by animateFloatAsState(if (showMessage && !leaving) 1f else 0f, tween(400), label = "ma")
@@ -74,6 +86,7 @@ fun FirstOpenExplanation(
 
     fun dismiss() {
         if (leaving || dim < 0.3f) return
+        haptics.tap()
         leaving = true
     }
 
@@ -104,7 +117,8 @@ fun FirstOpenExplanation(
                     .scale(iconScale)
                     .alpha(iconAlpha)
                     .clip(CircleShape)
-                    .background(Color.White.copy(alpha = 0.10f)),
+                    .background(Color.White.copy(alpha = 0.10f))
+                    .border(1.dp, Color.White.copy(alpha = 0.16f), CircleShape),
                 contentAlignment = Alignment.Center,
             ) {
                 Text(icon, fontSize = 34.sp)
@@ -115,7 +129,7 @@ fun FirstOpenExplanation(
                 style = SophiaTypography.titleLarge,
                 color = Color.White,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.alpha(titleAlpha),
+                modifier = Modifier.alpha(titleAlpha).graphicsLayer { translationY = titleRise * risePx },
             )
             Spacer(Modifier.height(14.dp))
             Text(
@@ -123,12 +137,14 @@ fun FirstOpenExplanation(
                 style = SophiaTypography.bodyLarge,
                 color = Color.White.copy(alpha = 0.82f),
                 textAlign = TextAlign.Center,
-                modifier = Modifier.alpha(msgAlpha),
+                modifier = Modifier.alpha(msgAlpha).graphicsLayer { translationY = msgRise * risePx },
             )
         }
         Text(
             text = StringStore.text(context, "explain.tapToClose", language),
             fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 13.sp,
             color = Color.White.copy(alpha = 0.6f),
             modifier = Modifier
                 .align(Alignment.BottomCenter)

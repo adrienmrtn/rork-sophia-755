@@ -2,7 +2,6 @@ package app.rork.sophia.ui.newgen
 
 import android.content.Intent
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,12 +23,13 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Share
-import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -37,6 +37,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -55,7 +57,10 @@ import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.realReadsCount
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.CourseImage
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.DSEyebrow
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.uppercaseInApp
@@ -81,6 +86,8 @@ fun CourseDetailScreen(
     modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
+    val haptics = rememberHaptics()
+    var likeBurst by remember(course.id) { mutableIntStateOf(0) }
     val identity = remember(course.id) { CreatorIdentity.forCourse(context.applicationContext, course.id) }
     val info by rememberCourseInfo(course.toStub(), language)
     val summaries = rememberCourseSummaries(language)
@@ -147,10 +154,14 @@ fun CourseDetailScreen(
         }
 
         Column(
-            modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 20.dp, bottom = 32.dp),
+            modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 20.dp, bottom = 32.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            Row(
+                modifier = Modifier.dsStagger(0),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
                 SubjectPill(subject = course.subjectEnum, language = language)
                 info?.let { details ->
                     Text(
@@ -165,26 +176,27 @@ fun CourseDetailScreen(
             Text(
                 text = stripInlineMarkup(course.title),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 28.sp,
-                lineHeight = 34.sp,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 26.sp,
+                lineHeight = 33.sp,
                 color = DS.ink,
+                modifier = Modifier.dsStagger(1),
             )
             Text(
                 text = hook,
                 fontFamily = PlusJakartaSans,
-                fontSize = 17.sp,
-                lineHeight = 24.sp,
+                fontSize = 16.sp,
+                lineHeight = 23.sp,
                 color = DS.inkSecondary,
+                modifier = Modifier.dsStagger(2),
             )
 
             // Carte créateur : ligne d'identité et « Suivre » compact.
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(18.dp))
-                    .background(DS.surface)
-                    .border(1.dp, DS.hairline, RoundedCornerShape(18.dp))
+                    .dsStagger(3)
+                    .homeCard()
                     .padding(14.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -222,19 +234,13 @@ fun CourseDetailScreen(
             }
 
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                Text(
-                    text = StringStore.text(context, "course.detail.introduction", language).uppercaseInApp(),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp,
-                    letterSpacing = 0.6.sp,
-                    color = DS.inkSecondary,
-                )
+                // Sur-titre en petites capitales espacées bleues.
+                DSEyebrow(text = StringStore.text(context, "course.detail.introduction", language))
                 Text(
                     text = introduction,
                     fontFamily = PlusJakartaSans,
-                    fontSize = 17.sp,
-                    lineHeight = 27.sp,
+                    fontSize = 16.sp,
+                    lineHeight = 25.sp,
                     color = DS.ink,
                 )
             }
@@ -248,20 +254,40 @@ fun CourseDetailScreen(
                 // Les vraies ouvertures (serveur) ; rien tant que le chiffre n'est pas arrivé.
                 course.realReadsCount?.let { reads ->
                     StatChip(
-                        icon = Icons.Filled.Visibility,
+                        icon = Icons.Outlined.Visibility,
                         text = reads.compactCount(language) + " " + StringStore.text(context, "creator.stat.reads", language),
                     )
                 }
-                StatChip(
-                    icon = if (liked) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                    text = LocalCounters.likesCount(course.id, liked).compactCount(language),
-                    tint = if (liked) LikedTint else DS.inkSecondary,
-                    modifier = Modifier.softPress(onClick = {
-                        val wasLiked = progressManager.isLiked(course.id)
-                        progressManager.toggleLike(course.id)
-                        Analytics.log(if (wasLiked) "unlike" else "like", courseId = course.id, screen = "course_detail")
-                    }),
-                )
+                // Le cœur rebondit et lâche son éclat quand il s'allume.
+                val likeLabel = StringStore.text(context, if (liked) "common.unlike" else "common.like", language)
+                Row(
+                    modifier = Modifier
+                        .pressable(
+                            onClick = {
+                                val wasLiked = progressManager.isLiked(course.id)
+                                if (wasLiked) haptics.tap() else haptics.confirm()
+                                progressManager.toggleLike(course.id)
+                                if (!wasLiked) likeBurst++
+                                Analytics.log(if (wasLiked) "unlike" else "like", courseId = course.id, screen = "course_detail")
+                            },
+                            scaleDown = 0.9f,
+                            haptic = false,
+                        )
+                        .semantics { contentDescription = likeLabel }
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(5.dp),
+                ) {
+                    LikeHeartIcon(liked = liked, burst = likeBurst, size = 16.dp)
+                    Text(
+                        text = LocalCounters.likesCount(course.id, liked).compactCount(language),
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 13.sp,
+                        color = if (liked) LikedTint else DS.inkSecondary,
+                        maxLines = 1,
+                    )
+                }
                 Spacer(Modifier.weight(1f))
                 Icon(
                     imageVector = Icons.Filled.Share,
@@ -269,7 +295,7 @@ fun CourseDetailScreen(
                     tint = DS.inkSecondary,
                     modifier = Modifier
                         .size(36.dp)
-                        .softPress(onClick = {
+                        .pressable(onClick = {
                             Analytics.log("share", courseId = course.id, props = mapOf("channel" to "sheet", "target" to "course"))
                             // La phrase habituelle, suivie du lien du cours sur le site.
                             val message = app.rork.sophia.domain.SophiaLinks.shareText(
@@ -292,13 +318,12 @@ fun CourseDetailScreen(
                     color = DS.success,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clip(RoundedCornerShape(16.dp))
-                        .background(DS.successTint)
+                        .homeCard(shape = RoundedCornerShape(DS.Radius.small), fill = DS.successTint, border = DS.success)
                         .padding(horizontal = 16.dp, vertical = 14.dp),
                 )
             }
 
-            NewGenPrimaryButton(text = ctaTitle, onClick = onStart, height = 54.dp, fontSize = 17.sp)
+            HomeCtaButton(text = ctaTitle, onClick = onStart)
 
             if (otherCourses.isNotEmpty()) {
                 NewGenSectionTitle(

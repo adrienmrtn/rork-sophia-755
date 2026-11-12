@@ -24,6 +24,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.unit.dp
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.theme.DS
 
 /**
@@ -52,13 +54,18 @@ fun CourseLessonLockOverlay(onUnlock: () -> Unit) {
         label = "ringAlpha",
     )
 
+    // Le cadenas : un arrêt net sous le doigt, puis le paywall.
+    val haptics = rememberHaptics()
     Box(
         modifier = Modifier
             .fillMaxSize()
             .clickable(
                 indication = null,
                 interactionSource = remember { MutableInteractionSource() },
-                onClick = onUnlock,
+                onClick = {
+                    haptics.rigid()
+                    onUnlock()
+                },
             ),
         contentAlignment = Alignment.Center,
     ) {
@@ -86,8 +93,9 @@ fun CourseLessonLockOverlay(onUnlock: () -> Unit) {
             Box(
                 modifier = Modifier
                     .size(88.dp)
+                    .dsPopIn()
                     .background(DS.surface, CircleShape)
-                    .border(1.dp, DS.hairline, CircleShape),
+                    .border(1.5.dp, DS.hairline, CircleShape),
                 contentAlignment = Alignment.Center,
             ) {
                 Box(

@@ -1,5 +1,6 @@
 package app.rork.sophia.ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -29,10 +30,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.R
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.CourseAffinityStore
@@ -128,11 +131,11 @@ fun SophiaRoot(
                                 modifier = Modifier.fillMaxSize().background(DS.canvas),
                                 contentAlignment = Alignment.Center,
                             ) {
-                                Text(
-                                    text = "Sophia",
-                                    fontSize = 28.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = DS.ink,
+                                // Le logo complet (symbole et mot « Sophia »), celui de l'en-tête de l'accueil.
+                                Image(
+                                    painter = painterResource(R.drawable.sophia_mark),
+                                    contentDescription = "Sophia",
+                                    modifier = Modifier.height(40.dp),
                                 )
                             }
                         } else {
@@ -156,8 +159,13 @@ fun SophiaRoot(
                 val remoteLevel = ProgressManager.globalLevelProgress(c.remote.globalXP).level
                 AlertDialog(
                     onDismissRequest = { },
+                    containerColor = DS.surface,
+                    shape = DS.cardShape,
                     title = {
-                        Text(StringStore.text(context, "sync.conflict.title", language))
+                        Text(
+                            StringStore.text(context, "sync.conflict.title", language),
+                            style = SophiaTypography.titleMedium,
+                        )
                     },
                     text = {
                         Column {
@@ -201,12 +209,20 @@ fun SophiaRoot(
                     },
                     confirmButton = {
                         TextButton(onClick = { app.progressSyncService.resolveKeepLocal() }) {
-                            Text(StringStore.text(context, "sync.conflict.local", language))
+                            Text(
+                                StringStore.text(context, "sync.conflict.local", language),
+                                color = DS.accent,
+                                fontWeight = FontWeight.SemiBold,
+                            )
                         }
                     },
                     dismissButton = {
                         TextButton(onClick = { app.progressSyncService.resolveKeepRemote() }) {
-                            Text(StringStore.text(context, "sync.conflict.remote", language))
+                            Text(
+                                StringStore.text(context, "sync.conflict.remote", language),
+                                color = DS.accent,
+                                fontWeight = FontWeight.SemiBold,
+                            )
                         }
                     },
                 )

@@ -1,7 +1,17 @@
 package app.rork.sophia.ui.newgen
 
 import android.content.Context
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.horizontalScroll
@@ -20,6 +30,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.DirectionsRun
 import androidx.compose.material.icons.automirrored.filled.MenuBook
@@ -49,9 +60,13 @@ import androidx.compose.material.icons.filled.WbSunny
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import androidx.compose.ui.AbsoluteAlignment
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
@@ -60,7 +75,12 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -68,6 +88,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.R
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.CourseAuthor
 import app.rork.sophia.data.StringStore
@@ -77,8 +98,10 @@ import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.Subject
 import app.rork.sophia.domain.locale
 import app.rork.sophia.ui.components.CourseImage
-import app.rork.sophia.ui.components.softPress
-import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.components.DSCheckBadge
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.course.AuthorAvatar
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -130,16 +153,22 @@ fun CreatorAvatar(identity: CreatorIdentity, size: Dp, modifier: Modifier = Modi
     when (identity) {
         is CreatorIdentity.Author -> AuthorAvatar(author = identity.value, size = size, modifier = modifier)
         CreatorIdentity.House -> Box(
-            modifier = modifier.size(size).clip(CircleShape).background(DS.accent),
+            modifier = modifier.size(size).clip(CircleShape).background(EventPalette.navy),
             contentAlignment = Alignment.Center,
         ) {
-            Text(
-                text = "S",
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = (size.value * 0.46f).sp,
-                color = Color.White,
-            )
+            // Le symbole seul : `sophia_mark` est le logo complet (symbole + « Sophia »,
+            // 1192 × 334), dont on ne garde que le quart gauche.
+            val glyphHeight = size * 0.6f
+            Box(modifier = Modifier.size(width = glyphHeight * 0.88f, height = glyphHeight).clipToBounds()) {
+                Image(
+                    painter = painterResource(R.drawable.sophia_mark),
+                    contentDescription = null,
+                    contentScale = ContentScale.FillBounds,
+                    modifier = Modifier
+                        .wrapContentWidth(align = AbsoluteAlignment.Left, unbounded = true)
+                        .size(width = glyphHeight * (1192f / 334f), height = glyphHeight),
+                )
+            }
         }
     }
 }
@@ -151,7 +180,7 @@ fun VerifiedCheck(language: AppLanguage, size: Dp = 14.dp, modifier: Modifier = 
     Icon(
         imageVector = Icons.Filled.Verified,
         contentDescription = StringStore.text(context, "creator.badge.verified", language),
-        tint = DS.accentSoft,
+        tint = DS.accent,
         modifier = modifier.size(size),
     )
 }
@@ -160,13 +189,14 @@ fun VerifiedCheck(language: AppLanguage, size: Dp = 14.dp, modifier: Modifier = 
 @Composable
 fun CreatorBadge(verified: Boolean, language: AppLanguage, modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val tint = if (verified) DS.accentSoft else Color(0xFF4D1C94)
+    val tint = if (verified) DS.accent else Color(0xFF4D1C94)
     val background = if (verified) DS.accentTint else Color(0xFFF2EDFA)
     Row(
         modifier = modifier
             .clip(CircleShape)
             .background(background)
-            .padding(horizontal = 12.dp, vertical = 7.dp),
+            .height(28.dp)
+            .padding(horizontal = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(6.dp),
     ) {
@@ -179,8 +209,8 @@ fun CreatorBadge(verified: Boolean, language: AppLanguage, modifier: Modifier = 
         Text(
             text = StringStore.text(context, if (verified) "creator.badge.verified" else "creator.badge.creator", language),
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = 14.sp,
+            fontWeight = FontWeight.Bold,
+            fontSize = 13.sp,
             color = tint,
         )
     }
@@ -201,7 +231,7 @@ fun CreatorLine(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .then(if (clickable) Modifier.softPress(onClick = { onTap?.invoke() }) else Modifier),
+            .then(if (clickable) Modifier.pressable(onClick = { onTap?.invoke() }) else Modifier),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(10.dp),
     ) {
@@ -236,7 +266,10 @@ fun CreatorLine(
     }
 }
 
-/** « Suivre » plein ou « Abonné » en contour. Le geste reste local jusqu'au prompt 6. */
+/**
+ * « Suivre » plein ou « Abonné » en contour. Suivre est une petite victoire (vibration franche) ;
+ * se désabonner, un simple appui.
+ */
 @Composable
 fun FollowButton(
     isFollowing: Boolean,
@@ -246,24 +279,35 @@ fun FollowButton(
     compact: Boolean = false,
 ) {
     val context = LocalContext.current
-    val shape = RoundedCornerShape(if (compact) 10.dp else 14.dp)
+    val haptics = rememberHaptics()
+    val shape = RoundedCornerShape(14.dp)
+    val fill by animateColorAsState(if (isFollowing) DS.surface else DS.accent, DSMotion.snappy(), label = "followFill")
+    val edge by animateColorAsState(if (isFollowing) DS.hairline else DS.accent, DSMotion.snappy(), label = "followBorder")
+    val ink by animateColorAsState(if (isFollowing) DS.accent else Color.White, DSMotion.snappy(), label = "followText")
     Box(
         modifier = modifier
             .then(if (compact) Modifier else Modifier.fillMaxWidth())
-            .height(if (compact) 34.dp else 44.dp)
-            .softPress(onClick = onClick)
+            .height(if (compact) 44.dp else 46.dp)
+            .pressable(
+                onClick = {
+                    if (isFollowing) haptics.tap() else haptics.confirm()
+                    onClick()
+                },
+                scaleDown = 0.94f,
+                haptic = false,
+            )
             .clip(shape)
-            .background(if (isFollowing) DS.surface else DS.accent)
-            .then(if (isFollowing) Modifier.border(1.dp, DS.hairline, shape) else Modifier)
-            .padding(horizontal = if (compact) 14.dp else 18.dp),
+            .background(fill)
+            .border(1.5.dp, edge, shape)
+            .padding(horizontal = 16.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
             text = StringStore.text(context, if (isFollowing) "creator.following" else "creator.follow", language),
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.Bold,
-            fontSize = if (compact) 13.sp else 15.sp,
-            color = if (isFollowing) DS.accent else Color.White,
+            fontSize = 15.sp,
+            color = ink,
             maxLines = 1,
         )
     }
@@ -281,7 +325,7 @@ fun SubjectPill(subject: Subject, language: AppLanguage, modifier: Modifier = Mo
     val name = StringStore.text(context, "subject.${subject.storageKey}.short", language)
     Row(
         modifier = modifier
-            .height(30.dp)
+            .height(26.dp)
             .clip(CircleShape)
             .background(DS.surface)
             .border(1.dp, DS.hairline, CircleShape)
@@ -294,7 +338,7 @@ fun SubjectPill(subject: Subject, language: AppLanguage, modifier: Modifier = Mo
             text = if (extra != null) "$name · $extra" else name,
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.Bold,
-            fontSize = 13.sp,
+            fontSize = 12.sp,
             color = DS.ink,
             maxLines = 1,
         )
@@ -303,12 +347,12 @@ fun SubjectPill(subject: Subject, language: AppLanguage, modifier: Modifier = Mo
 
 enum class TagPillStyle { ACCENT, WARM }
 
-/** Étiquette pleine : « Nouveau » (bleu nuit) ou le nom d'un événement (or). */
+/** Étiquette pleine : « Nouveau » (bleu) ou le nom d'un événement (or). */
 @Composable
 fun TagPill(text: String, modifier: Modifier = Modifier, style: TagPillStyle = TagPillStyle.ACCENT) {
     Box(
         modifier = modifier
-            .height(30.dp)
+            .height(26.dp)
             .clip(CircleShape)
             .background(if (style == TagPillStyle.ACCENT) DS.accent else DS.warm)
             .padding(horizontal = 10.dp),
@@ -318,7 +362,7 @@ fun TagPill(text: String, modifier: Modifier = Modifier, style: TagPillStyle = T
             text = text,
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.Bold,
-            fontSize = 13.sp,
+            fontSize = 12.sp,
             color = if (style == TagPillStyle.ACCENT) Color.White else DS.ink,
             maxLines = 1,
         )
@@ -417,19 +461,16 @@ fun CompactCourseRow(
     secondMeta: String? = null,
     trailing: (@Composable () -> Unit)? = null,
 ) {
-    val shape = RoundedCornerShape(18.dp)
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .softPress(onClick = onTap)
-            .clip(shape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, shape)
-            .padding(10.dp),
+            .pressable(onClick = onTap)
+            .homeCard()
+            .padding(start = 10.dp, end = 12.dp, top = 10.dp, bottom = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        CourseCover(courseId = course.id, modifier = Modifier.size(64.dp), cornerRadius = 14.dp)
+        CourseCover(courseId = course.id, modifier = Modifier.size(64.dp), cornerRadius = 10.dp)
         Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
             Text(
                 text = stripInlineMarkup(course.title),
@@ -453,7 +494,6 @@ fun CompactCourseRow(
                 Text(
                     text = secondMeta,
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
                     fontSize = 12.sp,
                     color = DS.inkSecondary,
                     maxLines = 1,
@@ -465,28 +505,24 @@ fun CompactCourseRow(
     }
 }
 
-/** Disque vert avec une coche : « lu ». */
+/** Disque vert plein avec une coche blanche, qui se dessine à l'apparition de la ligne : « lu ». */
 @Composable
 fun ReadCheck(language: AppLanguage, modifier: Modifier = Modifier) {
     val context = LocalContext.current
+    val label = StringStore.text(context, "common.read", language)
     Box(
-        modifier = modifier.size(32.dp).clip(CircleShape).background(DS.successTint),
+        modifier = modifier.size(22.dp).semantics { contentDescription = label },
         contentAlignment = Alignment.Center,
     ) {
-        Icon(
-            imageVector = Icons.Filled.Check,
-            contentDescription = StringStore.text(context, "common.read", language),
-            tint = DS.success,
-            modifier = Modifier.size(15.dp),
-        )
+        DSCheckBadge(size = 22.dp)
     }
 }
 
 // MARK: - Segments et titres
 
 /**
- * Sélecteur à segments sur fond bleu pâle, segment actif blanc avec ombre (« Pour toi /
- * Abonnements », « Populaires / Récents / Séries », « À lire / Lus / Aimés »).
+ * Sélecteur à pastilles : chaque segment est une pastille bleu pâle, l'active est bleue pleine
+ * et glisse d'un segment à l'autre (« Populaires / Récents / Séries », « À lire / Lus / Aimés »).
  */
 @Composable
 fun SegmentedPills(
@@ -497,61 +533,89 @@ fun SegmentedPills(
     /** Un point bleu sur un segment : quelque chose de nouveau derrière. */
     dotOn: Int? = null,
 ) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
-            .background(DS.surfaceMuted)
-            .padding(4.dp),
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
-    ) {
-        items.forEachIndexed { index, item ->
-            val selected = selection == index
-            Row(
-                modifier = Modifier
-                    .weight(1f)
-                    .height(40.dp)
-                    .then(
-                        if (selected) {
-                            Modifier.sophiaCard(shape = RoundedCornerShape(12.dp), elevation = 3.dp, border = false)
-                        } else {
-                            Modifier
-                        },
-                    )
-                    .softPress(onClick = { onSelect(index) })
-                    .padding(horizontal = 6.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center,
-            ) {
-                Text(
-                    text = item,
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 14.sp,
-                    color = if (selected) DS.ink else DS.inkSecondary,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.weight(1f, fill = false),
+    val haptics = rememberHaptics()
+    val shape = RoundedCornerShape(14.dp)
+    val spacing = 6.dp
+    val count = items.size.coerceAtLeast(1)
+    BoxWithConstraints(modifier = modifier.fillMaxWidth().height(40.dp)) {
+        val segmentWidth = (maxWidth - spacing * (count - 1)) / count
+        val activeX by animateDpAsState(
+            targetValue = (segmentWidth + spacing) * selection.coerceIn(0, count - 1),
+            animationSpec = DSMotion.snappy(),
+            label = "segmentPill",
+        )
+        Row(modifier = Modifier.fillMaxSize(), horizontalArrangement = Arrangement.spacedBy(spacing)) {
+            repeat(count) {
+                Box(modifier = Modifier.weight(1f).fillMaxHeight().clip(shape).background(DS.accentTint))
+            }
+        }
+        Box(
+            modifier = Modifier
+                .offset(x = activeX)
+                .width(segmentWidth)
+                .fillMaxHeight()
+                .clip(shape)
+                .background(DS.accent),
+        )
+        Row(modifier = Modifier.fillMaxSize(), horizontalArrangement = Arrangement.spacedBy(spacing)) {
+            items.forEachIndexed { index, item ->
+                val selected = selection == index
+                val color by animateColorAsState(
+                    targetValue = if (selected) Color.White else DS.ink,
+                    animationSpec = DSMotion.snappy(),
+                    label = "segmentText",
                 )
-                if (dotOn == index && !selected) {
-                    Spacer(Modifier.width(6.dp))
-                    Box(modifier = Modifier.size(7.dp).clip(CircleShape).background(DS.accentSoft))
+                Row(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxHeight()
+                        .clip(shape)
+                        .selectable(
+                            selected = selected,
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null,
+                            role = Role.Tab,
+                            onClick = {
+                                if (!selected) {
+                                    haptics.select()
+                                    onSelect(index)
+                                }
+                            },
+                        )
+                        .padding(horizontal = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center,
+                ) {
+                    Text(
+                        text = item,
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp,
+                        color = color,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.weight(1f, fill = false),
+                    )
+                    if (dotOn == index && !selected) {
+                        Spacer(Modifier.width(6.dp))
+                        Box(modifier = Modifier.size(7.dp).clip(CircleShape).background(DS.accent))
+                    }
                 }
             }
         }
     }
 }
 
-/** Titre de section des nouveaux écrans (20 pt, gras), avec un complément grisé (« · 3 »). */
+/** Titre de section des nouveaux écrans (graisse moyenne), avec un complément gris (« · 3 »). */
 @Composable
 fun NewGenSectionTitle(text: String, modifier: Modifier = Modifier, trailing: String? = null) {
     Row(modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.Bottom) {
         Text(
             text = text,
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.ExtraBold,
-            fontSize = 20.sp,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 18.sp,
             color = DS.ink,
             modifier = Modifier.weight(1f, fill = false),
         )
@@ -560,9 +624,9 @@ fun NewGenSectionTitle(text: String, modifier: Modifier = Modifier, trailing: St
             Text(
                 text = trailing,
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 20.sp,
-                color = DS.inkTertiary,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 18.sp,
+                color = DS.inkSecondary,
             )
         }
     }
@@ -578,16 +642,24 @@ fun RoundIconButton(
     tint: Color = DS.ink,
     contentDescription: String? = null,
 ) {
+    // Le retour est un chevron dans ce design : la flèche des appelants est dessinée ainsi, un
+    // peu plus grande parce que le chevron n'occupe qu'une partie de sa case.
+    val isBack = icon == Icons.AutoMirrored.Filled.ArrowBack || icon == Icons.AutoMirrored.Filled.KeyboardArrowLeft
     Box(
         modifier = modifier
             .size(size)
-            .softPress(onClick = onClick)
+            .pressable(onClick = onClick, scaleDown = 0.92f)
             .clip(CircleShape)
             .background(DS.surface)
-            .border(1.dp, DS.hairline, CircleShape),
+            .border(1.5.dp, DS.hairline, CircleShape),
         contentAlignment = Alignment.Center,
     ) {
-        Icon(imageVector = icon, contentDescription = contentDescription, tint = tint, modifier = Modifier.size(18.dp))
+        Icon(
+            imageVector = if (isBack) Icons.AutoMirrored.Filled.KeyboardArrowLeft else icon,
+            contentDescription = contentDescription,
+            tint = tint,
+            modifier = Modifier.size(if (isBack) 26.dp else 18.dp),
+        )
     }
 }
 
@@ -615,8 +687,9 @@ fun NewGenBackHeader(
             Text(
                 text = title,
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
+                fontWeight = FontWeight.SemiBold,
                 fontSize = 22.sp,
+                lineHeight = 28.sp,
                 color = DS.ink,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
@@ -629,7 +702,7 @@ fun NewGenBackHeader(
     }
 }
 
-/** Bouton plein bleu nuit à coins arrondis (14) des cartes de la maquette. */
+/** Bouton plein bleu à coins arrondis (16) des cartes de la maquette, à pression élastique. */
 @Composable
 fun NewGenPrimaryButton(
     text: String,
@@ -642,8 +715,8 @@ fun NewGenPrimaryButton(
         modifier = modifier
             .fillMaxWidth()
             .height(height)
-            .softPress(onClick = onClick)
-            .clip(RoundedCornerShape(if (height >= 52.dp) 16.dp else 14.dp))
+            .pressable(onClick = onClick, scaleDown = 0.96f)
+            .clip(DS.controlShape)
             .background(DS.accent)
             .padding(horizontal = 16.dp),
         contentAlignment = Alignment.Center,
@@ -651,7 +724,7 @@ fun NewGenPrimaryButton(
         Text(
             text = text,
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.SemiBold,
             fontSize = fontSize,
             color = Color.White,
             textAlign = TextAlign.Center,
@@ -661,7 +734,7 @@ fun NewGenPrimaryButton(
     }
 }
 
-/** Bouton blanc bordé à coins arrondis (14), compagnon de [NewGenPrimaryButton]. */
+/** Bouton blanc bordé à coins arrondis (16), compagnon de [NewGenPrimaryButton]. */
 @Composable
 fun NewGenSecondaryButton(
     text: String,
@@ -669,21 +742,18 @@ fun NewGenSecondaryButton(
     modifier: Modifier = Modifier,
     height: Dp = 48.dp,
 ) {
-    val shape = RoundedCornerShape(14.dp)
     Box(
         modifier = modifier
             .height(height)
-            .softPress(onClick = onClick)
-            .clip(shape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, shape)
+            .pressable(onClick = onClick, scaleDown = 0.96f)
+            .homeCard(shape = DS.controlShape)
             .padding(horizontal = 18.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
             text = text,
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.SemiBold,
             fontSize = 15.sp,
             color = DS.ink,
             maxLines = 1,
@@ -703,17 +773,16 @@ fun NewGenEmptyCard(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .clip(DS.cardShape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, DS.cardShape)
-            .padding(22.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
+            .homeCard()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         Text(
             text = title,
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.ExtraBold,
-            fontSize = 17.sp,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 18.sp,
+            lineHeight = 24.sp,
             color = DS.ink,
         )
         Text(
@@ -723,13 +792,19 @@ fun NewGenEmptyCard(
             lineHeight = 21.sp,
             color = DS.inkSecondary,
         )
-        NewGenPrimaryButton(text = cta, onClick = onClick)
+        NewGenPrimaryButton(
+            text = cta,
+            onClick = onClick,
+            height = 54.dp,
+            fontSize = 16.sp,
+            modifier = Modifier.padding(top = 6.dp),
+        )
     }
 }
 
 /** Bordure en pointillés autour d'un contenu (annonces « en écriture », « en écriture pour »). */
 fun Modifier.dashedBorder(color: Color, cornerRadius: Dp = 16.dp): Modifier = this.drawBehind {
-    val stroke = Stroke(width = 1.dp.toPx(), pathEffect = PathEffect.dashPathEffect(floatArrayOf(10f, 10f), 0f))
+    val stroke = Stroke(width = 1.5.dp.toPx(), pathEffect = PathEffect.dashPathEffect(floatArrayOf(10f, 10f), 0f))
     drawRoundRect(
         color = color,
         cornerRadius = CornerRadius(cornerRadius.toPx(), cornerRadius.toPx()),
@@ -760,7 +835,7 @@ fun FollowedCreatorsRow(
     ) {
         authors.forEach { author ->
             Column(
-                modifier = Modifier.width(64.dp).softPress(onClick = { onOpen(author) }),
+                modifier = Modifier.width(64.dp).pressable(onClick = { onOpen(author) }),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
@@ -768,7 +843,7 @@ fun FollowedCreatorsRow(
                 Text(
                     text = author.name.split(' ').firstOrNull { it.isNotBlank() } ?: author.name,
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     fontSize = 12.sp,
                     color = DS.ink,
                     maxLines = 1,
@@ -777,7 +852,7 @@ fun FollowedCreatorsRow(
             }
         }
         Column(
-            modifier = Modifier.width(64.dp).softPress(onClick = onDiscover),
+            modifier = Modifier.width(64.dp).pressable(onClick = onDiscover),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(6.dp),
         ) {
@@ -786,7 +861,7 @@ fun FollowedCreatorsRow(
                     .size(56.dp)
                     .drawBehind {
                         drawCircle(
-                            color = DS.palette.inkTertiary,
+                            color = DS.palette.inkSecondary,
                             style = Stroke(width = 1.5.dp.toPx(), pathEffect = PathEffect.dashPathEffect(floatArrayOf(10f, 10f), 0f)),
                         )
                     },
@@ -797,7 +872,7 @@ fun FollowedCreatorsRow(
             Text(
                 text = StringStore.text(context, "training.discover", language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 fontSize = 12.sp,
                 color = DS.inkSecondary,
                 maxLines = 1,
@@ -877,7 +952,7 @@ fun SegmentedProgressBar(
     current: Int,
     modifier: Modifier = Modifier,
     height: Dp = 6.dp,
-    activeColor: Color = DS.accentSoft,
+    activeColor: Color = DS.accent,
     trackColor: Color = DS.hairline,
 ) {
     Row(
@@ -958,10 +1033,8 @@ fun PosterCard(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .softPress(onClick = onClick)
-            .clip(DS.cardShape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, DS.cardShape)
+            .pressable(onClick = onClick)
+            .homeCard()
             .padding(14.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(14.dp),
@@ -970,14 +1043,14 @@ fun PosterCard(
             painter = androidx.compose.ui.res.painterResource(imageRes),
             contentDescription = null,
             contentScale = androidx.compose.ui.layout.ContentScale.Crop,
-            modifier = Modifier.size(64.dp).clip(RoundedCornerShape(16.dp)),
+            modifier = Modifier.size(64.dp).clip(RoundedCornerShape(12.dp)),
         )
         Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
             Text(
                 text = title,
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 20.sp,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 18.sp,
                 color = DS.ink,
             )
             Text(

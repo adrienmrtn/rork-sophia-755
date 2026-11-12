@@ -13,8 +13,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -28,9 +28,10 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -39,14 +40,14 @@ import app.rork.sophia.data.CourseCoverUrls
 import app.rork.sophia.data.CourseImagePrefetch
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.ui.components.CoursePalette
 import app.rork.sophia.ui.components.RichTextWithGlossary
 import app.rork.sophia.ui.components.inlineRichText
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.uppercaseInApp
 import app.rork.sophia.ui.theme.PlusJakartaSans
-import app.rork.sophia.ui.theme.SophiaTypography
 import coil.compose.AsyncImage
-import coil.request.ImageRequest
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
@@ -144,8 +145,12 @@ fun ReaderBlockView(
     when (block) {
         is ReaderBlock.Heading -> Text(
             text = block.text,
-            style = SophiaTypography.titleMedium,
+            fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 20.sp,
+            lineHeight = 27.sp,
             color = prose,
+            modifier = Modifier.semantics { heading() },
         )
 
         is ReaderBlock.Paragraph -> RichTextWithGlossary(
@@ -159,8 +164,7 @@ fun ReaderBlockView(
 
         is ReaderBlock.Timeline -> TimelineBlock(block.events)
 
-        is ReaderBlock.FunFact -> CalloutCard(
-            icon = Icons.Filled.Lightbulb,
+        is ReaderBlock.FunFact -> FunFactCard(
             label = StringStore.text(context, "course.funFact", language),
         ) {
             RichTextWithGlossary(
@@ -171,8 +175,7 @@ fun ReaderBlockView(
             )
         }
 
-        is ReaderBlock.Takeaway -> CalloutCard(
-            icon = Icons.Filled.Bookmark,
+        is ReaderBlock.Takeaway -> TakeawayCard(
             label = StringStore.text(context, "course.keyTakeaway", language),
         ) {
             RichTextWithGlossary(
@@ -198,9 +201,9 @@ private fun ImageBlock(block: ReaderBlock.Image) {
                 // "auto" has no authored ratio and the intrinsic size is only known
                 // once decoded, so reserve 4:3 and fit inside it rather than crop.
                 .aspectRatio(block.ratio ?: (4f / 3f))
-                .clip(DS.controlShape)
+                .clip(DS.cardShape)
                 .background(DS.surfaceMuted)
-                .border(1.dp, DS.hairline, DS.controlShape),
+                .border(1.5.dp, DS.hairline, DS.cardShape),
         ) {
             if (url != null) {
                 AsyncImage(
@@ -212,12 +215,16 @@ private fun ImageBlock(block: ReaderBlock.Image) {
             }
         }
         block.caption?.let { caption ->
-            Spacer(Modifier.height(DS.Space.xs))
+            Spacer(Modifier.height(8.dp))
             Text(
                 // Captions are authored with the same markers as body text, so printed raw
                 // they showed `**` and `[[ ]]` under the picture.
                 text = inlineRichText(caption),
-                style = SophiaTypography.bodyMedium,
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Normal,
+                fontSize = 13.sp,
+                lineHeight = 19.sp,
+                color = DS.inkSecondary,
                 modifier = Modifier.padding(horizontal = 4.dp),
             )
         }
@@ -229,14 +236,12 @@ private fun TimelineBlock(events: List<TimelineEvent>) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(DS.cardShape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, DS.cardShape)
-            .padding(DS.Space.l),
+            .sophiaCard()
+            .padding(DS.Space.m),
     ) {
         events.forEachIndexed { index, event ->
             val isLast = index == events.lastIndex
-            val dot = DS.accentSoft
+            val dot = DS.accent
             val rail = DS.hairline
             Column(
                 modifier = Modifier
@@ -261,21 +266,29 @@ private fun TimelineBlock(events: List<TimelineEvent>) {
                 Text(
                     text = event.date,
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 14.sp,
-                    color = DS.accentSoft,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 13.sp,
+                    color = DS.accent,
                 )
-                Spacer(Modifier.height(2.dp))
+                Spacer(Modifier.height(4.dp))
                 Text(
                     text = event.title,
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.SemiBold,
-                    fontSize = 16.sp,
+                    fontSize = 17.sp,
+                    lineHeight = 23.sp,
                     color = DS.ink,
                 )
                 event.detail?.let { detail ->
                     Spacer(Modifier.height(4.dp))
-                    Text(text = detail, style = SophiaTypography.bodyMedium)
+                    Text(
+                        text = detail,
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.Normal,
+                        fontSize = 15.sp,
+                        lineHeight = 22.sp,
+                        color = DS.inkSecondary,
+                    )
                 }
             }
         }
@@ -284,7 +297,7 @@ private fun TimelineBlock(events: List<TimelineEvent>) {
 
 @Composable
 private fun QuoteBlock(block: ReaderBlock.Quote, prose: Color) {
-    val rule = DS.accentSoft
+    val rule = DS.accent
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -292,7 +305,7 @@ private fun QuoteBlock(block: ReaderBlock.Quote, prose: Color) {
                 drawRoundRect(
                     color = rule,
                     size = Size(3.dp.toPx(), size.height),
-                    cornerRadius = CornerRadius(1.5.dp.toPx()),
+                    cornerRadius = CornerRadius(2.dp.toPx()),
                 )
             }
             .padding(start = 18.dp),
@@ -300,27 +313,64 @@ private fun QuoteBlock(block: ReaderBlock.Quote, prose: Color) {
         Text(
             text = block.text,
             fontFamily = PlusJakartaSans,
-            fontSize = 19.sp,
+            fontSize = 20.sp,
             fontStyle = FontStyle.Italic,
             color = prose,
-            lineHeight = 27.sp,
+            lineHeight = 29.sp,
         )
         block.attribution?.let { attribution ->
             Spacer(Modifier.height(10.dp))
             Text(
                 text = attribution.uppercaseInApp(),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.ExtraBold,
                 fontSize = 12.sp,
-                color = DS.inkTertiary,
+                letterSpacing = 0.8.sp,
+                color = DS.inkSecondary,
             )
         }
     }
 }
 
+/** « Le savais-tu ? »: a white bordered card, a golden bulb and its label, then the text. */
 @Composable
-private fun CalloutCard(
-    icon: ImageVector,
+private fun FunFactCard(
+    label: String,
+    content: @Composable () -> Unit,
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .sophiaCard()
+            .padding(14.dp),
+    ) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            Icon(
+                imageVector = Icons.Filled.Lightbulb,
+                contentDescription = null,
+                tint = CoursePalette.goldDeep,
+                modifier = Modifier.size(20.dp),
+            )
+            Text(
+                text = label.uppercaseInApp(),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 12.sp,
+                letterSpacing = 0.8.sp,
+                color = DS.ink,
+            )
+        }
+        Spacer(Modifier.height(DS.Space.s))
+        content()
+    }
+}
+
+/** « À retenir »: a pale green card, a solid green label, then the text. */
+@Composable
+private fun TakeawayCard(
     label: String,
     content: @Composable () -> Unit,
 ) {
@@ -328,29 +378,22 @@ private fun CalloutCard(
         modifier = Modifier
             .fillMaxWidth()
             .clip(DS.cardShape)
-            .background(DS.surfaceMuted)
-            .border(1.dp, DS.hairline, DS.cardShape)
-            .padding(DS.Space.l),
+            .background(DS.successTint)
+            .padding(DS.Space.m),
     ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            Icon(
-                imageVector = icon,
-                contentDescription = null,
-                tint = DS.accentSoft,
-                modifier = Modifier.size(14.dp),
-            )
-            Text(
-                text = label.uppercaseInApp(),
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 11.sp,
-                color = DS.accentSoft,
-            )
-        }
-        Spacer(Modifier.height(DS.Space.s))
+        Text(
+            text = label.uppercaseInApp(),
+            fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.ExtraBold,
+            fontSize = 12.sp,
+            letterSpacing = 0.6.sp,
+            color = Color.White,
+            modifier = Modifier
+                .clip(RoundedCornerShape(10.dp))
+                .background(DS.success)
+                .padding(horizontal = 10.dp, vertical = 3.dp),
+        )
+        Spacer(Modifier.height(10.dp))
         content()
     }
 }

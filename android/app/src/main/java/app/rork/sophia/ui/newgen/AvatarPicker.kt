@@ -1,5 +1,6 @@
 package app.rork.sophia.ui.newgen
 
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -16,7 +17,6 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -25,12 +25,16 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
@@ -39,7 +43,10 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.R
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 
@@ -117,6 +124,7 @@ fun AvatarPickerSheet(
     onDismiss: () -> Unit,
 ) {
     val context = LocalContext.current
+    val haptics = rememberHaptics()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     ModalBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState, containerColor = DS.canvas) {
         Column(
@@ -125,8 +133,9 @@ fun AvatarPickerSheet(
         ) {
             Text(
                 text = StringStore.text(context, "profile.avatar.title", language),
+                modifier = Modifier.semantics { heading() },
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
+                fontWeight = FontWeight.SemiBold,
                 fontSize = 20.sp,
                 color = DS.ink,
             )
@@ -139,23 +148,42 @@ fun AvatarPickerSheet(
                 userScrollEnabled = true,
             ) {
                 items(Avatars.all) { id ->
+                    val isCurrent = current == id
+                    val ring by animateColorAsState(
+                        targetValue = if (isCurrent) DS.accent else DS.accent.copy(alpha = 0f),
+                        animationSpec = DSMotion.snappy(),
+                        label = "avatarRing",
+                    )
                     AvatarCircle(
                         avatarId = id,
                         initial = initial,
                         size = 72.dp,
                         modifier = Modifier
-                            .border(3.dp, if (current == id) DS.accent else Color.Transparent, CircleShape)
-                            .softPress(onClick = { onPick(id) }),
+                            // Un choix : la vibration « sélection », pas celle d'un simple appui.
+                            .pressable(
+                                onClick = {
+                                    haptics.select()
+                                    onPick(id)
+                                },
+                                scaleDown = 0.9f,
+                                haptic = false,
+                            )
+                            .border(3.dp, ring, CircleShape)
+                            .semantics { selected = isCurrent },
                     )
                 }
             }
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(16.dp))
-                    .background(DS.surface)
-                    .border(1.dp, DS.hairline, RoundedCornerShape(16.dp))
-                    .softPress(onClick = { onPick(null) })
+                    .pressable(
+                        onClick = {
+                            haptics.select()
+                            onPick(null)
+                        },
+                        haptic = false,
+                    )
+                    .sophiaCard()
                     .padding(14.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(12.dp),

@@ -3,6 +3,7 @@ package app.rork.sophia.ui.duels
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.StartOffset
@@ -18,7 +19,6 @@ import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -49,15 +49,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.BlurredEdgeTreatment
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.blur
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -70,7 +66,10 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.DuelLeague
 import app.rork.sophia.domain.DuelMatch
+import app.rork.sophia.domain.uppercaseIn
+import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.newgen.Avatars
+import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import coil.imageLoader
 import kotlinx.coroutines.coroutineScope
@@ -92,8 +91,10 @@ private const val FOUND_MS = 1_700L
 private const val COUNTDOWN_STEP_MS = 800L
 
 /**
- * La recherche d'un adversaire : les profils défilent, l'adversaire trouvé se pose,
- * puis 3, 2, 1 et la partie démarre. On peut annuler tant que la partie n'est pas créée.
+ * La recherche d'un adversaire, sur fond blanc : les profils défilent au centre d'un radar,
+ * l'adversaire trouvé se pose, puis 3, 2, 1 et la partie démarre. On peut annuler tant que la
+ * partie n'est pas créée. [league] est la ligue dans laquelle la partie se joue (son nom en
+ * sur-titre).
  * Même déroulé que `ios/Sophia/Views/Duels/DuelMatchmakingView.swift`.
  */
 @Composable
@@ -189,49 +190,51 @@ internal fun DuelMatchmakingScreen(
 
     val entrance by animateFloatAsState(
         targetValue = if (appeared) 1f else 0f,
-        animationSpec = duelSpring(response = 0.6f, damping = 0.8f),
+        animationSpec = DSMotion.reveal(),
         label = "duelMatchEntrance",
     )
 
-    Box(modifier = modifier.fillMaxSize()) {
-        DuelLeagueBackdrop(league = league, modifier = Modifier.fillMaxSize().duelUnderSystemBars())
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .duelUnderSystemBars()
-                .background(
-                    Brush.verticalGradient(
-                        listOf(DuelPalette.night.copy(alpha = 0.72f), DuelPalette.night.copy(alpha = 0.9f)),
-                    ),
-                ),
-        )
-
+    Box(modifier = modifier.fillMaxSize().background(DS.canvas)) {
         Column(
             modifier = Modifier.align(Alignment.Center).widthIn(max = 640.dp).fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Row(
-                modifier = Modifier.fillMaxWidth().height(44.dp).padding(horizontal = 20.dp),
-                verticalAlignment = Alignment.CenterVertically,
+            Box(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp).padding(top = 8.dp).height(44.dp),
             ) {
-                AnimatedVisibility(visible = closable, enter = fadeIn(tween(200)), exit = fadeOut(tween(200))) {
-                    val close = text("common.close")
-                    Box(
-                        modifier = Modifier
-                            .size(40.dp)
-                            .clip(CircleShape)
-                            .background(Color.White.copy(alpha = 0.16f))
-                            .clickable(role = Role.Button) {
-                                // La croix s'efface en 200 ms : pendant ce temps, elle ne ferme
-                                // plus une partie déjà créée (ce serait un abandon).
-                                if (!canCancel && step != MatchmakingStep.Failed) return@clickable
+                androidx.compose.animation.AnimatedVisibility(
+                    visible = closable,
+                    enter = fadeIn(tween(200)),
+                    exit = fadeOut(tween(200)),
+                    modifier = Modifier.align(Alignment.CenterStart),
+                ) {
+                    DuelRoundIconButton(
+                        icon = Icons.Filled.Close,
+                        contentDescription = text("common.close"),
+                        // La fermeture vibre déjà (`DuelHaptic.Tap`).
+                        haptic = false,
+                        onClick = {
+                            // La croix s'efface en 200 ms : pendant ce temps, elle ne ferme
+                            // plus une partie déjà créée (ce serait un abandon).
+                            if (canCancel || step == MatchmakingStep.Failed) {
                                 view.duelHaptic(DuelHaptic.Tap)
                                 onCancel()
-                            },
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        Icon(Icons.Filled.Close, contentDescription = close, tint = Color.White, modifier = Modifier.size(18.dp))
-                    }
+                            }
+                        },
+                    )
+                }
+                // La ligue dans laquelle la partie se joue.
+                if (league != null) {
+                    DuelShrinkText(
+                        text = DuelFormat.leagueName(context, league, language).uppercaseIn(language),
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        color = DS.accent,
+                        textAlign = TextAlign.Center,
+                        minScale = 0.7f,
+                        letterSpacing = 1.sp,
+                        modifier = Modifier.align(Alignment.Center).padding(horizontal = 56.dp),
+                    )
                 }
             }
 
@@ -248,15 +251,27 @@ internal fun DuelMatchmakingScreen(
                 },
             )
 
-            VersusBadge(
-                countdown = countdown,
-                found = step == MatchmakingStep.Found,
-                modifier = Modifier.padding(vertical = 26.dp),
+            val versusScale by animateFloatAsState(
+                targetValue = if (step == MatchmakingStep.Found) 1.12f else 1f,
+                animationSpec = duelSpring(response = 0.45f, damping = 0.6f),
+                label = "duelVersusScale",
+            )
+            DuelVersusBadge(
+                number = countdown,
+                counting = true,
+                modifier = Modifier.padding(vertical = 26.dp).graphicsLayer {
+                    scaleX = versusScale
+                    scaleY = versusScale
+                },
             )
 
-            PlayerCard(
-                player = player,
+            DuelVersusCard(
+                avatarId = player.avatarId,
+                initial = player.initial,
+                handle = player.handle,
                 language = language,
+                trophies = player.trophies,
+                ring = DS.accent,
                 modifier = Modifier.graphicsLayer {
                     translationY = 40.dp.toPx() * (1f - entrance)
                     alpha = entrance.coerceIn(0f, 1f)
@@ -278,13 +293,19 @@ internal fun DuelMatchmakingScreen(
                         },
                     )
                 } else {
+                    val found = step == MatchmakingStep.Found
+                    val hintColor by animateColorAsState(
+                        targetValue = if (found) DS.accent else DS.inkSecondary,
+                        animationSpec = DSMotion.snappy(),
+                        label = "duelMatchHint",
+                    )
                     Text(
-                        text = text(if (step == MatchmakingStep.Found) "duel.match.found" else "duel.match.hint"),
+                        text = text(if (found) "duel.match.found" else "duel.match.hint"),
                         fontFamily = PlusJakartaSans,
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 13.sp,
                         lineHeight = 18.sp,
-                        color = Color.White.copy(alpha = 0.7f),
+                        color = hintColor,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.heightIn(min = 40.dp),
                     )
@@ -296,6 +317,10 @@ internal fun DuelMatchmakingScreen(
 
 // ---------------------------------------------------------------- les deux camps
 
+/**
+ * L'emplacement de l'adversaire : les profils qui défilent au centre du radar pendant la
+ * recherche, puis l'adversaire tiré par le serveur.
+ */
 @Composable
 private fun OpponentSlot(
     step: MatchmakingStep,
@@ -311,9 +336,13 @@ private fun OpponentSlot(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        Box(modifier = Modifier.height(112.dp), contentAlignment = Alignment.Center) {
-            if (step == MatchmakingStep.Searching) {
-                DuelPulseRings(color = Color.White, modifier = Modifier.size(104.dp))
+        Box(modifier = Modifier.height(150.dp), contentAlignment = Alignment.Center) {
+            androidx.compose.animation.AnimatedVisibility(
+                visible = step == MatchmakingStep.Searching,
+                enter = fadeIn(tween(200)),
+                exit = fadeOut(tween(200)),
+            ) {
+                DuelSearchRadar(color = DS.accent, size = 104.dp)
             }
             AnimatedContent(
                 targetState = opponent,
@@ -329,7 +358,7 @@ private fun OpponentSlot(
                         avatarId = found.avatarId,
                         initial = found.initial,
                         size = 104.dp,
-                        ring = DuelPalette.coral,
+                        ring = DuelPalette.saffron,
                         ringWidth = 4.dp,
                     )
                 } else {
@@ -338,11 +367,10 @@ private fun OpponentSlot(
                         avatarId = shuffleAvatar,
                         initial = "?",
                         size = 104.dp,
-                        ring = Color.White.copy(alpha = 0.5f),
+                        ring = DS.surface,
                         ringWidth = 4.dp,
                         modifier = Modifier
                             .alpha(if (failed) 0.4f else 0.9f)
-                            // Sans bord net : l'ombre de l'avatar déborde de son cadre.
                             .blur(if (failed) 6.dp else 1.5.dp, BlurredEdgeTreatment.Unbounded),
                     )
                 }
@@ -367,17 +395,18 @@ private fun OpponentSlot(
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                         DuelShrinkText(
                             text = "@${found.handle}",
-                            fontSize = 22.sp,
-                            fontWeight = FontWeight.ExtraBold,
-                            color = Color.White,
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = DS.ink,
+                            minScale = 0.7f,
                             modifier = Modifier.weight(1f, fill = false),
                         )
                         if (found.flag.isNotEmpty()) {
                             // Le drapeau n'ajoute rien à la lecture d'écran du pseudo.
-                            Text(text = found.flag, fontSize = 22.sp, modifier = Modifier.clearAndSetSemantics {})
+                            Text(text = found.flag, fontSize = 20.sp, modifier = Modifier.clearAndSetSemantics {})
                         }
                     }
-                    DuelTrophyCount(value = found.trophies, language = language, size = 16.dp, color = Color.White)
+                    DuelTrophyCount(value = found.trophies, language = language, size = 15.dp, color = DS.inkSecondary)
                 }
             } else {
                 val failed = step == MatchmakingStep.Failed
@@ -389,10 +418,10 @@ private fun OpponentSlot(
                     Text(
                         text = StringStore.text(context, if (failed) "duel.match.failed.title" else "duel.match.searching", language),
                         fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.ExtraBold,
+                        fontWeight = FontWeight.Bold,
                         fontSize = 20.sp,
                         lineHeight = 26.sp,
-                        color = Color.White,
+                        color = DS.ink,
                         textAlign = TextAlign.Center,
                     )
                     Text(
@@ -401,88 +430,21 @@ private fun OpponentSlot(
                         fontWeight = FontWeight.Medium,
                         fontSize = 15.sp,
                         lineHeight = 20.sp,
-                        color = Color.White.copy(alpha = 0.75f),
+                        color = DS.inkSecondary,
                         textAlign = TextAlign.Center,
                     )
+                    if (!failed) {
+                        DuelWaitingDots(color = DS.accent, modifier = Modifier.padding(top = 8.dp))
+                    }
                 }
             }
         }
     }
 }
 
-@Composable
-private fun PlayerCard(player: DuelPlayerIdentity, language: AppLanguage, modifier: Modifier = Modifier) {
-    Column(
-        modifier = modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        DuelAvatar(
-            avatarId = player.avatarId,
-            initial = player.initial,
-            size = 104.dp,
-            ring = DuelPalette.saffron,
-            ringWidth = 4.dp,
-        )
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(6.dp),
-            modifier = Modifier.padding(horizontal = 24.dp),
-        ) {
-            DuelShrinkText(
-                text = "@${player.handle}",
-                fontSize = 22.sp,
-                fontWeight = FontWeight.ExtraBold,
-                color = Color.White,
-            )
-            DuelTrophyCount(value = player.trophies, language = language, size = 16.dp, color = Color.White)
-        }
-    }
-}
-
-/** La pastille « VS » entre les deux camps ; le compte à rebours s'y affiche avant le départ. */
-@Composable
-private fun VersusBadge(countdown: Int?, found: Boolean, modifier: Modifier = Modifier) {
-    val scale by animateFloatAsState(
-        targetValue = if (found) 1.12f else 1f,
-        animationSpec = duelSpring(response = 0.45f, damping = 0.6f),
-        label = "duelVersusScale",
-    )
-    Box(
-        modifier = modifier
-            .graphicsLayer {
-                scaleX = scale
-                scaleY = scale
-            }
-            .shadow(18.dp, CircleShape, clip = false, ambientColor = DuelPalette.saffron, spotColor = DuelPalette.saffron)
-            .size(72.dp)
-            .background(DuelPalette.saffron, CircleShape)
-            // Le compte à rebours est une animation : rien à lire.
-            .clearAndSetSemantics {},
-        contentAlignment = Alignment.Center,
-    ) {
-        AnimatedContent(
-            targetState = countdown,
-            transitionSpec = {
-                val initial = if (targetState == null) 0.5f else 2.2f
-                (scaleIn(duelSpring(response = 0.3f, damping = 0.55f), initialScale = initial) + fadeIn(tween(120)))
-                    .togetherWith(fadeOut(tween(120)))
-            },
-            contentAlignment = Alignment.Center,
-            label = "duelCountdown",
-        ) { value ->
-            Text(
-                text = value?.toString() ?: "VS",
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = if (value != null) 38.sp else 24.sp,
-                color = DuelPalette.night,
-            )
-        }
-    }
-}
-
-/** Des anneaux qui s'élargissent autour de l'avatar pendant la recherche. */
+/**
+ * Des anneaux qui s'élargissent (l'adversaire choisit sa matière, un ami tarde à répondre).
+ */
 @Composable
 internal fun DuelPulseRings(color: Color, modifier: Modifier = Modifier) {
     val transition = rememberInfiniteTransition(label = "duelPulse")
@@ -498,7 +460,7 @@ internal fun DuelPulseRings(color: Color, modifier: Modifier = Modifier) {
             label = "duelPulse$index",
         )
     }
-    Canvas(modifier = modifier) {
+    Canvas(modifier = modifier.clearAndSetSemantics {}) {
         val radius = size.minDimension / 2
         rings.forEach { ring ->
             val progress = ring.value

@@ -24,8 +24,9 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
-import androidx.compose.material.icons.filled.PersonAdd
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.filled.QrCode2
 import androidx.compose.material.icons.filled.QrCodeScanner
 import android.widget.Toast
@@ -36,7 +37,6 @@ import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -44,6 +44,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -58,6 +59,8 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
@@ -72,6 +75,7 @@ import app.rork.sophia.data.FeatureFlags
 import app.rork.sophia.data.FriendLeaderboardEntry
 import app.rork.sophia.data.FriendLinkRouter
 import app.rork.sophia.data.FriendPresence
+import app.rork.sophia.data.FriendRequest
 import app.rork.sophia.data.FriendsLeaderboardPeriod
 import app.rork.sophia.data.SendRequestOutcome
 import app.rork.sophia.data.SocialService
@@ -80,12 +84,26 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.SophiaLinks
 import app.rork.sophia.domain.formatted
 import app.rork.sophia.domain.locale
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.DSCheckBadge
+import app.rork.sophia.ui.components.DSEyebrow
+import app.rork.sophia.ui.components.DSOptionState
+import app.rork.sophia.ui.components.SophiaPrimaryButton
+import app.rork.sophia.ui.components.dsOptionCard
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.dsShake
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.duels.DuelOnlineDot
 import app.rork.sophia.ui.duels.DuelPalette
 import app.rork.sophia.ui.newgen.AvatarCircle
-import app.rork.sophia.ui.newgen.NewGenPrimaryButton
-import app.rork.sophia.ui.newgen.NewGenSectionTitle
+import app.rork.sophia.ui.profile.ProfilePillTabs
+import app.rork.sophia.ui.profile.ProfileRowChevron
+import app.rork.sophia.ui.profile.ProfileRowDivider
+import app.rork.sophia.ui.profile.ProfileSectionHeader
+import app.rork.sophia.ui.profile.ProfileTextField
+import app.rork.sophia.ui.profile.profileRowPress
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import com.google.zxing.BarcodeFormat
@@ -95,7 +113,7 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel
 import kotlinx.coroutines.launch
 
 /** Or, argent, bronze : les médailles des trois premiers rangs. */
-private fun medalColor(rank: Int): Color = when (rank) {
+internal fun friendMedalColor(rank: Int): Color = when (rank) {
     1 -> DuelPalette.saffron
     2 -> Color(0xFF9EABBD)
     else -> Color(0xFFCC804F)
@@ -177,84 +195,67 @@ fun ProfileFriendsSection(
         MyFriendQrSheet(language = language, handle = handle, avatarId = myAvatarId, onDismiss = { showQr = false })
     }
 
-    Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        NewGenSectionTitle(text = StringStore.text(context, "profile.friends.title", language))
+    val periods = listOf(FriendsLeaderboardPeriod.WEEK, FriendsLeaderboardPeriod.ALL)
+    Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        ProfileSectionHeader(title = StringStore.text(context, "profile.friends.title", language))
 
         if (signedIn == null) {
-            Column(
-                modifier = Modifier.fillMaxWidth().friendsCard().padding(18.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                Text(
-                    text = StringStore.text(context, "friends.signedOut.title", language),
-                    fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = DS.ink,
-                )
-                Text(
-                    text = StringStore.text(context, "friends.signedOut.body", language),
-                    fontFamily = PlusJakartaSans, fontSize = 14.sp, lineHeight = 20.sp, color = DS.inkSecondary,
-                )
-            }
+            FriendsInfoCard(
+                title = StringStore.text(context, "friends.signedOut.title", language),
+                body = StringStore.text(context, "friends.signedOut.body", language),
+            )
             return@Column
         }
 
         // Les demandes reçues : la seule chose ici qui attend une réponse.
         if (pending.isNotEmpty()) {
-            Column(modifier = Modifier.fillMaxWidth().friendsCard()) {
-                pending.forEachIndexed { index, request ->
-                    if (index > 0) Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(DS.hairline))
-                    Row(
-                        modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 10.dp, top = 10.dp, bottom = 10.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    ) {
-                        AvatarCircle(avatarId = null, initial = request.handle.take(1).uppercase(), size = 38.dp)
-                        Text(
-                            text = "@${request.handle}",
-                            fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold, fontSize = 15.sp, color = DS.ink,
-                            maxLines = 1, overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.weight(1f),
-                        )
-                        RequestPill(StringStore.text(context, "friends.requests.accept", language), filled = true) {
-                            scope.launch {
-                                social.respondToRequest(request.request_id, true)
-                                social.refreshLeaderboard()
-                            }
-                        }
-                        RequestPill(StringStore.text(context, "friends.requests.decline", language), filled = false) {
-                            scope.launch { social.respondToRequest(request.request_id, false) }
-                        }
+            FriendRequestsCard(
+                requests = pending,
+                language = language,
+                onRespond = { request, accept ->
+                    scope.launch {
+                        social.respondToRequest(request.request_id, accept)
+                        if (accept) social.refreshLeaderboard()
                     }
-                }
-            }
+                },
+            )
         }
 
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            PeriodChip(StringStore.text(context, "friends.period.week", language), period == FriendsLeaderboardPeriod.WEEK) {
-                social.setPeriod(FriendsLeaderboardPeriod.WEEK)
-            }
-            PeriodChip(StringStore.text(context, "friends.period.all", language), period == FriendsLeaderboardPeriod.ALL) {
-                social.setPeriod(FriendsLeaderboardPeriod.ALL)
-            }
-        }
+        ProfilePillTabs(
+            items = listOf(
+                StringStore.text(context, "friends.period.week", language),
+                StringStore.text(context, "friends.period.all", language),
+            ),
+            selectedIndex = periods.indexOf(period).coerceAtLeast(0),
+            onSelect = { social.setPeriod(periods[it]) },
+        )
 
         // Le classement : un podium à partir de trois, de simples lignes médaillées avant.
         if (leaderboard.none { !it.is_me }) {
             Column(
-                modifier = Modifier.fillMaxWidth().friendsCard().padding(18.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp),
+                modifier = Modifier.fillMaxWidth().sophiaCard().padding(horizontal = 16.dp, vertical = 18.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(6.dp),
             ) {
+                AvatarCircle(
+                    avatarId = myAvatarId,
+                    initial = handle?.takeIf { it.isNotBlank() }?.take(1)?.uppercase() ?: "S",
+                    size = 52.dp,
+                )
                 Text(
                     text = StringStore.text(context, "friends.empty.title", language),
-                    fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = DS.ink,
+                    fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 16.sp, lineHeight = 21.sp, color = DS.ink,
+                    textAlign = TextAlign.Center,
                 )
                 Text(
                     text = StringStore.text(context, "friends.empty.body", language),
-                    fontFamily = PlusJakartaSans, fontSize = 14.sp, lineHeight = 20.sp, color = DS.inkSecondary,
+                    fontFamily = PlusJakartaSans, fontSize = 15.sp, lineHeight = 21.sp, color = DS.inkSecondary,
+                    textAlign = TextAlign.Center,
                 )
             }
         } else {
             val podium = if (leaderboard.size >= 3) leaderboard.take(3) else emptyList()
-            Column(modifier = Modifier.fillMaxWidth().friendsCard()) {
+            Column(modifier = Modifier.fillMaxWidth().sophiaCard()) {
                 if (podium.isNotEmpty()) {
                     // Deuxième à gauche, premier au centre, troisième à droite, quelle que soit la langue.
                     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
@@ -279,7 +280,7 @@ fun ProfileFriendsSection(
                 }
                 leaderboard.forEachIndexed { index, entry ->
                     if (index < podium.size) return@forEachIndexed
-                    if (index > 0) Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(DS.hairline))
+                    if (index > 0) ProfileRowDivider(inset = 0.dp)
                     LeaderRow(
                         rank = index + 1,
                         entry = entry,
@@ -287,97 +288,156 @@ fun ProfileFriendsSection(
                         online = onlineOf(entry),
                         language = language,
                         onClick = { open(entry) },
+                        modifier = Modifier.dsStagger(minOf(index, 8), stepMillis = 40),
                     )
                 }
             }
         }
 
-        // « Ajouter un ami » en bouton principal, puis « Mon QR code ».
+        // « Ajouter un ami » en bouton principal, puis « Mon QR code » et « Scanner » côte à côte.
+        // Les vibrations viennent des boutons (CTA plein, pression élastique).
         Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(52.dp)
-                    .softPress(onClick = { showAdd = true })
-                    .clip(CircleShape)
-                    .background(DS.accent),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center,
-            ) {
-                Icon(Icons.Filled.PersonAdd, contentDescription = null, tint = Color.White, modifier = Modifier.size(19.dp))
-                Spacer(Modifier.width(10.dp))
-                Text(
-                    text = StringStore.text(context, "friends.add.title", language),
-                    fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.White,
-                    maxLines = 1,
+            SophiaPrimaryButton(
+                text = StringStore.text(context, "friends.add.title", language),
+                leadingIcon = Icons.Outlined.Person,
+                onClick = { showAdd = true },
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                FriendQrActionButton(
+                    icon = Icons.Filled.QrCode2,
+                    title = StringStore.text(context, "profile.qr.mine", language),
+                    onClick = { showQr = true },
+                    modifier = Modifier.weight(1f),
+                )
+                // « Scanner » : le code d'un ami ouvre la même confirmation qu'un lien d'ami.
+                FriendQrActionButton(
+                    icon = Icons.Filled.QrCodeScanner,
+                    title = StringStore.text(context, "profile.qr.scan", language),
+                    onClick = {
+                        fun toast(key: String) =
+                            Toast.makeText(context, StringStore.text(context, key, language), Toast.LENGTH_LONG).show()
+                        runCatching {
+                            val options = GmsBarcodeScannerOptions.Builder().setBarcodeFormats(Barcode.FORMAT_QR_CODE).build()
+                            GmsBarcodeScanning.getClient(context, options).startScan()
+                                .addOnSuccessListener { code ->
+                                    val friend = code.rawValue?.let { SophiaLinks.friendHandle(it) }
+                                    if (friend != null) FriendLinkRouter.open(friend) else toast("profile.qr.invalid")
+                                }
+                                // Fermé par le lecteur : rien à dire. Sinon, l'appareil ne peut pas scanner.
+                                .addOnFailureListener { toast("profile.qr.camera.unavailable") }
+                        }.onFailure { toast("profile.qr.camera.unavailable") }
+                    },
+                    modifier = Modifier.weight(1f),
                 )
             }
-            SecondaryAction(
-                icon = Icons.Filled.QrCode2,
-                title = StringStore.text(context, "profile.qr.mine", language),
-                onClick = { showQr = true },
-            )
-            // « Scanner » : le code d'un ami ouvre la même confirmation qu'un lien d'ami.
-            SecondaryAction(
-                icon = Icons.Filled.QrCodeScanner,
-                title = StringStore.text(context, "profile.qr.scan", language),
-                onClick = {
-                    fun toast(key: String) =
-                        Toast.makeText(context, StringStore.text(context, key, language), Toast.LENGTH_LONG).show()
-                    runCatching {
-                        val options = GmsBarcodeScannerOptions.Builder().setBarcodeFormats(Barcode.FORMAT_QR_CODE).build()
-                        GmsBarcodeScanning.getClient(context, options).startScan()
-                            .addOnSuccessListener { code ->
-                                val friend = code.rawValue?.let { SophiaLinks.friendHandle(it) }
-                                if (friend != null) FriendLinkRouter.open(friend) else toast("profile.qr.invalid")
-                            }
-                            // Fermé par le lecteur : rien à dire. Sinon, l'appareil ne peut pas scanner.
-                            .addOnFailureListener { toast("profile.qr.camera.unavailable") }
-                    }.onFailure { toast("profile.qr.camera.unavailable") }
-                },
-            )
         }
     }
 }
 
-private fun Modifier.friendsCard(): Modifier = this
-    .clip(RoundedCornerShape(20.dp))
-    .background(DS.surface)
-    .border(1.dp, DS.hairline, RoundedCornerShape(20.dp))
-
+/**
+ * Les demandes d'amis reçues, sur une carte : le sur-titre et leur nombre, puis une rangée par
+ * demande. Refuser, accepter : deux pastilles qui rebondissent franchement sous le doigt.
+ */
 @Composable
-private fun RequestPill(text: String, filled: Boolean, onClick: () -> Unit) {
-    Text(
-        text = text,
-        fontFamily = PlusJakartaSans,
-        fontWeight = FontWeight.Bold,
-        fontSize = 13.sp,
-        color = if (filled) Color.White else DS.inkSecondary,
-        maxLines = 1,
-        modifier = Modifier
-            .softPress(onClick = onClick)
-            .clip(CircleShape)
-            .background(if (filled) DS.accent else DS.surfaceMuted)
-            .padding(horizontal = 12.dp, vertical = 8.dp),
-    )
+internal fun FriendRequestsCard(
+    requests: List<FriendRequest>,
+    language: AppLanguage,
+    onRespond: (FriendRequest, Boolean) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val context = LocalContext.current
+    val haptics = rememberHaptics()
+    Column(modifier = modifier.fillMaxWidth().sophiaCard()) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 14.dp, bottom = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            DSEyebrow(
+                text = StringStore.text(context, "friends.requests.title", language),
+                modifier = Modifier.weight(1f).semantics { heading() },
+            )
+            Text(
+                text = "${requests.size}",
+                fontFamily = PlusJakartaSans, fontWeight = FontWeight.ExtraBold, fontSize = 11.sp, color = Color.White,
+                maxLines = 1,
+                modifier = Modifier.clip(CircleShape).background(DS.accent).padding(horizontal = 7.dp, vertical = 2.dp),
+            )
+        }
+        requests.forEachIndexed { index, request ->
+            if (index > 0) ProfileRowDivider()
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                AvatarCircle(avatarId = null, initial = request.handle.take(1).uppercase(), size = 38.dp)
+                Text(
+                    text = "@${request.handle}",
+                    fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = DS.ink,
+                    maxLines = 1, overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f),
+                )
+                // Un refus : un simple toucher sourd ; un nouvel ami : la vibration du succès.
+                RequestRoundButton(
+                    icon = Icons.Filled.Close,
+                    label = StringStore.text(context, "friends.requests.decline", language),
+                    filled = false,
+                    onClick = {
+                        haptics.soft()
+                        onRespond(request, false)
+                    },
+                )
+                RequestRoundButton(
+                    icon = Icons.Filled.Check,
+                    label = StringStore.text(context, "friends.requests.accept", language),
+                    filled = true,
+                    onClick = {
+                        haptics.success()
+                        onRespond(request, true)
+                    },
+                )
+            }
+        }
+        Spacer(Modifier.height(6.dp))
+    }
 }
 
+/** Une pastille ronde de réponse (accepter en bleu plein, refuser en blanc bordé), au rebond franc. */
 @Composable
-private fun SecondaryAction(icon: ImageVector, title: String, onClick: () -> Unit) {
-    Row(
+private fun RequestRoundButton(icon: ImageVector, label: String, filled: Boolean, onClick: () -> Unit) {
+    Box(
         modifier = Modifier
-            .fillMaxWidth()
-            .height(50.dp)
-            .softPress(onClick = onClick)
+            .size(40.dp)
+            .pressable(onClick = onClick, scaleDown = 0.84f, haptic = false)
             .clip(CircleShape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, CircleShape),
+            .background(if (filled) DS.accent else DS.surface)
+            .then(if (filled) Modifier else Modifier.border(1.5.dp, DS.hairline, CircleShape)),
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(icon, contentDescription = label, tint = if (filled) Color.White else DS.inkSecondary, modifier = Modifier.size(17.dp))
+    }
+}
+
+/** « Mon QR code », « Scanner » : un bouton secondaire (carte blanche bordée) avec son pictogramme. */
+@Composable
+private fun FriendQrActionButton(icon: ImageVector, title: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    Row(
+        modifier = modifier
+            .height(50.dp)
+            .pressable(onClick = onClick)
+            .dsOptionCard(DSOptionState.Idle)
+            .padding(horizontal = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center,
     ) {
-        Icon(icon, contentDescription = null, tint = DS.accentSoft, modifier = Modifier.size(19.dp))
+        Icon(icon, contentDescription = null, tint = DS.ink, modifier = Modifier.size(19.dp))
         Spacer(Modifier.width(8.dp))
-        Text(text = title, fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = DS.ink, maxLines = 1)
+        Text(
+            text = title,
+            fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 14.sp, color = DS.ink,
+            maxLines = 1, overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f, fill = false),
+        )
     }
 }
 
@@ -405,20 +465,23 @@ private fun PodiumColumn(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val medal = medalColor(rank)
+    val medal = friendMedalColor(rank)
     Column(
-        modifier = modifier.softPress(onClick = onClick),
+        modifier = modifier.pressable(onClick = onClick),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         if (rank == 1) Icon(Icons.Filled.WorkspacePremium, contentDescription = null, tint = medal, modifier = Modifier.size(22.dp))
-        FriendAvatar(entry.handle, avatarId, online, size = if (rank == 1) 72.dp else 56.dp, ring = medal)
+        // Les avatars arrivent en rebondissant, le troisième d'abord, le premier en dernier.
+        Box(modifier = Modifier.dsPopIn(delayMillis = 100 + (3 - rank) * 90)) {
+            FriendAvatar(entry.handle, avatarId, online, size = if (rank == 1) 72.dp else 56.dp, ring = medal)
+        }
         Text(
             text = "@${entry.handle}",
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.Bold,
             fontSize = 13.sp,
-            color = if (entry.is_me) DS.accentSoft else DS.ink,
+            color = if (entry.is_me) DS.accent else DS.ink,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             modifier = if (entry.is_me) {
@@ -429,7 +492,7 @@ private fun PodiumColumn(
         )
         Text(
             text = "${entry.xp.formatted(language)} XP",
-            fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold, fontSize = 12.sp, color = DS.inkSecondary,
+            fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 12.sp, color = DS.inkSecondary,
             maxLines = 1,
         )
         // La marche du podium, à la couleur de la médaille.
@@ -458,12 +521,13 @@ private fun LeaderRow(
     online: Boolean,
     language: AppLanguage,
     onClick: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .softPress(onClick = onClick)
+            .profileRowPress(onClick = onClick)
             // La ligne du lecteur ressort sur un fond teinté.
             .background(if (entry.is_me) DS.accentTint else Color.Transparent)
             .padding(horizontal = 16.dp, vertical = 11.dp),
@@ -471,16 +535,7 @@ private fun LeaderRow(
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         // Une médaille pleine pour les trois premiers, un simple nombre ensuite.
-        Box(
-            modifier = Modifier.size(26.dp).clip(CircleShape).background(if (rank <= 3) medalColor(rank) else Color.Transparent),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = "$rank",
-                fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 13.sp,
-                color = if (rank <= 3) Color.White else DS.inkTertiary,
-            )
-        }
+        FriendRankBadge(rank)
         FriendAvatar(entry.handle, avatarId, online, size = 42.dp)
         Row(
             modifier = Modifier.weight(1f),
@@ -489,28 +544,19 @@ private fun LeaderRow(
         ) {
             Text(
                 text = "@${entry.handle}",
-                fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold, fontSize = 16.sp, color = DS.ink,
+                fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = DS.ink,
                 maxLines = 1, overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.weight(1f, fill = false),
             )
-            if (entry.is_me) {
-                Text(
-                    text = StringStore.text(context, "friends.you", language),
-                    fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 11.sp, color = Color.White,
-                    maxLines = 1,
-                    modifier = Modifier.clip(CircleShape).background(DS.accent).padding(horizontal = 7.dp, vertical = 2.dp),
-                )
-            }
+            if (entry.is_me) FriendYouPill(StringStore.text(context, "friends.you", language))
         }
         Text(
             text = "${entry.xp.formatted(language)} XP",
-            fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 14.sp,
+            fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 15.sp,
             color = if (entry.is_me) DS.ink else DS.inkSecondary,
             maxLines = 1,
         )
-        if (!entry.is_me) {
-            Icon(Icons.AutoMirrored.Filled.ArrowForwardIos, contentDescription = null, tint = DS.inkTertiary, modifier = Modifier.size(12.dp))
-        }
+        if (!entry.is_me) ProfileRowChevron()
     }
 }
 
@@ -537,9 +583,12 @@ private fun AddFriendSheet(language: AppLanguage, onDismiss: () -> Unit, onSent:
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val scope = rememberCoroutineScope()
+    val haptics = rememberHaptics()
     var input by remember { mutableStateOf("") }
     var sending by remember { mutableStateOf(false) }
     var feedback by remember { mutableStateOf<Pair<Boolean, String>?>(null) }
+    // Secousse du champ à chaque demande refusée.
+    var errorShake by remember { mutableIntStateOf(0) }
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
@@ -552,49 +601,57 @@ private fun AddFriendSheet(language: AppLanguage, onDismiss: () -> Unit, onSent:
         ) {
             Text(
                 text = StringStore.text(context, "friends.add.title", language),
-                fontFamily = PlusJakartaSans, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp, color = DS.ink,
+                fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold, fontSize = 22.sp, color = DS.ink,
+                modifier = Modifier.semantics { heading() },
             )
             Text(
                 text = StringStore.text(context, "friends.add.requestSubtitle", language),
                 fontFamily = PlusJakartaSans, fontSize = 15.sp, lineHeight = 21.sp, color = DS.inkSecondary,
             )
-            OutlinedTextField(
+            // Le champ : neutre, vert une fois la demande partie, rouge si elle est refusée.
+            ProfileTextField(
                 value = input,
                 onValueChange = {
                     input = it.trim().removePrefix("@").take(20)
                     feedback = null
                 },
-                singleLine = true,
-                prefix = { Text("@", color = DS.inkSecondary) },
-                placeholder = { Text(StringStore.text(context, "friends.handle.placeholder", language), color = DS.inkTertiary) },
+                placeholder = StringStore.text(context, "friends.handle.placeholder", language),
+                prefix = "@",
                 keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.None, autoCorrectEnabled = false, imeAction = ImeAction.Done),
-                shape = RoundedCornerShape(16.dp),
-                modifier = Modifier.fillMaxWidth(),
+                borderOverride = feedback?.let { if (it.first) DS.success else DS.danger },
+                fillOverride = feedback?.let { if (it.first) DS.successTint else DS.dangerTint },
+                modifier = Modifier.dsShake(trigger = errorShake),
             )
             feedback?.let { (success, message) ->
-                Text(
-                    text = message,
-                    fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold, fontSize = 14.sp,
-                    color = if (success) DS.accentSoft else DS.danger,
-                )
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    // Demande partie : la coche se dessine, avec rebond.
+                    if (success) DSCheckBadge(size = 22.dp)
+                    Text(
+                        text = message,
+                        fontFamily = PlusJakartaSans, fontWeight = FontWeight.Bold, fontSize = 14.sp, lineHeight = 19.sp,
+                        color = if (success) DS.success else DS.danger,
+                    )
+                }
             }
-            NewGenPrimaryButton(
+            SophiaPrimaryButton(
                 text = StringStore.text(context, "friends.request.send", language),
                 onClick = {
-                    if (sending || input.isBlank()) return@NewGenPrimaryButton
+                    if (sending || input.isBlank()) return@SophiaPrimaryButton
                     sending = true
                     scope.launch {
                         val outcome = sendFriendRequest(context, app.socialService, input, language)
                         feedback = outcome
                         sending = false
                         if (outcome.first) {
+                            haptics.success()
                             input = ""
                             onSent()
+                        } else {
+                            haptics.error()
+                            errorShake += 1
                         }
                     }
                 },
-                height = 52.dp,
-                fontSize = 16.sp,
             )
         }
     }
@@ -631,8 +688,8 @@ private fun MyFriendQrSheet(language: AppLanguage, handle: String?, avatarId: St
         ) {
             Text(
                 text = StringStore.text(context, "profile.qr.mine", language),
-                fontFamily = PlusJakartaSans, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp, color = DS.ink,
-                modifier = Modifier.fillMaxWidth(),
+                fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold, fontSize = 22.sp, color = DS.ink,
+                modifier = Modifier.fillMaxWidth().semantics { heading() },
             )
             // La carte crème au liseré marine, posée sur un aplat safran décalé (papier découpé).
             Box(modifier = Modifier.padding(top = 30.dp).fillMaxWidth(0.82f)) {
@@ -681,7 +738,7 @@ private fun MyFriendQrSheet(language: AppLanguage, handle: String?, avatarId: St
             }
             Text(
                 text = StringStore.text(context, "profile.qr.mine.hint", language),
-                fontFamily = PlusJakartaSans, fontWeight = FontWeight.Medium, fontSize = 15.sp, lineHeight = 21.sp,
+                fontFamily = PlusJakartaSans, fontSize = 15.sp, lineHeight = 21.sp,
                 color = DS.inkSecondary, textAlign = TextAlign.Center,
                 modifier = Modifier.padding(horizontal = 8.dp),
             )
@@ -701,6 +758,7 @@ fun FriendLinkHost(language: AppLanguage) {
     val scope = rememberCoroutineScope()
     val handle by FriendLinkRouter.pendingHandle.collectAsState()
     val signedIn by app.authService.userId.collectAsState()
+    val haptics = rememberHaptics()
     var sending by remember { mutableStateOf(false) }
     var feedback by remember(handle) { mutableStateOf<Pair<Boolean, String>?>(null) }
     val target = handle ?: return
@@ -712,10 +770,15 @@ fun FriendLinkHost(language: AppLanguage) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            AvatarCircle(avatarId = null, initial = target.take(1).uppercase(), size = 72.dp)
+            AvatarCircle(
+                avatarId = null,
+                initial = target.take(1).uppercase(),
+                size = 72.dp,
+                modifier = Modifier.dsPopIn(delayMillis = 100),
+            )
             Text(
                 text = StringStore.text(context, "profile.friendLink.title", language, target),
-                fontFamily = PlusJakartaSans, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp, lineHeight = 28.sp,
+                fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold, fontSize = 22.sp, lineHeight = 28.sp,
                 color = DS.ink, textAlign = TextAlign.Center,
             )
             val message = feedback?.second
@@ -724,28 +787,34 @@ fun FriendLinkHost(language: AppLanguage) {
                 Text(
                     text = it,
                     fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold, fontSize = 15.sp, lineHeight = 21.sp,
-                    color = if (feedback?.first == false) DS.danger else DS.inkSecondary, textAlign = TextAlign.Center,
+                    color = when (feedback?.first) {
+                        false -> DS.danger
+                        true -> DS.success
+                        null -> DS.inkSecondary
+                    },
+                    textAlign = TextAlign.Center,
                 )
             }
             if (feedback?.first == true || signedIn == null) {
-                NewGenPrimaryButton(text = StringStore.text(context, "common.close", language), onClick = dismiss, height = 52.dp, fontSize = 16.sp)
+                SophiaPrimaryButton(text = StringStore.text(context, "common.close", language), onClick = dismiss)
             } else {
-                NewGenPrimaryButton(
+                SophiaPrimaryButton(
                     text = StringStore.text(context, "friends.request.send", language),
                     onClick = {
-                        if (sending) return@NewGenPrimaryButton
+                        if (sending) return@SophiaPrimaryButton
                         sending = true
                         scope.launch {
                             feedback = sendFriendRequest(context, app.socialService, target, language)
                             sending = false
                             if (feedback?.first == true) {
+                                haptics.success()
                                 app.socialService.refreshLeaderboard()
                                 app.socialService.refreshPendingRequests()
+                            } else {
+                                haptics.error()
                             }
                         }
                     },
-                    height = 52.dp,
-                    fontSize = 16.sp,
                 )
             }
         }

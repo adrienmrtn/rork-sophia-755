@@ -1,12 +1,15 @@
 package app.rork.sophia.ui.onboarding
 
+import android.content.Context
 import android.os.Build
+import android.os.SystemClock
+import android.provider.Settings
 import android.view.HapticFeedbackConstants
 import android.view.View
+import android.view.accessibility.AccessibilityManager
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
@@ -60,6 +63,42 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.drawOutline
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.drawscope.translate
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Constraints
+import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.unit.isSpecified
+import app.rork.sophia.data.CourseCoverUrls
+import app.rork.sophia.ui.components.pressable
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.DSPalette
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -90,11 +129,11 @@ object OV2 {
     // system-fallback letters.
     val title: TextStyle
         @Composable @ReadOnlyComposable
-        get() = ov2Style(FontWeight.ExtraBold, 27.sp, 34.sp, DS.ink)
+        get() = ov2Style(FontWeight.SemiBold, 27.sp, 34.sp, DS.ink)
 
     val titleLarge: TextStyle
         @Composable @ReadOnlyComposable
-        get() = ov2Style(FontWeight.ExtraBold, 34.sp, 40.sp, DS.ink)
+        get() = ov2Style(FontWeight.SemiBold, 34.sp, 40.sp, DS.ink)
 
     val headline: TextStyle
         @Composable @ReadOnlyComposable
@@ -141,19 +180,40 @@ object OV2Shapes {
 class OnboardingHaptics(private val view: View?) {
     fun selection() = perform(HapticFeedbackConstants.CLOCK_TICK)
 
-    fun primary() = perform(
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            HapticFeedbackConstants.CONFIRM
-        } else {
-            HapticFeedbackConstants.VIRTUAL_KEY
-        },
-    )
+    fun primary() {
+        // The page change that follows must not vibrate a second time.
+        OnboardingHapticGate.markConfirm()
+        perform(
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                HapticFeedbackConstants.CONFIRM
+            } else {
+                HapticFeedbackConstants.VIRTUAL_KEY
+            },
+        )
+    }
 
     fun commit() = perform(HapticFeedbackConstants.LONG_PRESS)
 
     private fun perform(constant: Int) {
         runCatching { view?.performHapticFeedback(constant) }
     }
+}
+
+/**
+ * Keeps the page change from doubling the vibration of the button that caused it: the
+ * coordinator asks [justConfirmed] before vibrating in its turn (iOS `OV2HapticGate`).
+ */
+internal object OnboardingHapticGate {
+    @Volatile
+    private var lastConfirmAt = 0L
+
+    fun markConfirm() {
+        lastConfirmAt = SystemClock.uptimeMillis()
+    }
+
+    /** True during the quarter of a second after a primary action vibrated. */
+    val justConfirmed: Boolean
+        get() = SystemClock.uptimeMillis() - lastConfirmAt < 250L
 }
 
 @Composable
@@ -237,7 +297,7 @@ fun Modifier.readableWidth(max: Dp = READABLE_WIDTH): Modifier = this.widthIn(ma
 
 val READABLE_WIDTH: Dp = 440.dp
 
-/** Full-width capsule CTA with the soft press feedback used across the iOS flow. */
+/** Full-width rounded-rectangle CTA (« Elevate arrondi ») with the soft press feedback used across the iOS flow. */
 @Composable
 fun OnboardingCta(
     text: String,
@@ -251,7 +311,7 @@ fun OnboardingCta(
     val interaction = remember { MutableInteractionSource() }
     val pressed by interaction.collectIsPressedAsState()
     val scale by animateFloatAsState(
-        targetValue = if (pressed) 0.98f else 1f,
+        targetValue = if (pressed) 0.96f else 1f,
         animationSpec = spring(dampingRatio = 0.8f, stiffness = Spring.StiffnessMedium),
         label = "ctaScale",
     )
@@ -271,7 +331,7 @@ fun OnboardingCta(
                 scaleY = scale
             }
             .height(56.dp),
-        shape = CircleShape,
+        shape = OV2Shapes.control,
         colors = androidx.compose.material3.ButtonDefaults.buttonColors(
             containerColor = OV2.accent,
             contentColor = Color.White,
@@ -288,33 +348,6 @@ fun OnboardingCta(
             maxLines = 2,
             textAlign = TextAlign.Center,
         )
-    }
-}
-
-@Composable
-fun OnboardingProgressDots(current: Int, total: Int, modifier: Modifier = Modifier) {
-    if (total <= 1) return
-    Row(
-        modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        repeat(total) { i ->
-            val width by animateDpAsState(
-                targetValue = if (i == current) 22.dp else 7.dp,
-                animationSpec = spring(dampingRatio = 0.8f, stiffness = Spring.StiffnessMediumLow),
-                label = "dot",
-            )
-            Box(
-                modifier = Modifier
-                    .width(width)
-                    .height(6.dp)
-                    .background(
-                        if (i <= current) OV2.accent else OV2.accent.copy(alpha = 0.15f),
-                        CircleShape,
-                    ),
-            )
-        }
     }
 }
 
@@ -463,3 +496,275 @@ fun OnboardingCircleBadge(
         content()
     }
 }
+
+// region « Elevate arrondi » : header, cards, fitted illustrations
+
+/** Height the coordinator reserves above a step that carries the header (row of 44 + 6 on top). */
+internal val ONBOARDING_HEADER_HEIGHT: Dp = 50.dp
+
+/** Width of the bar (progress or carousel segments) centred in the header. */
+internal val ONBOARDING_HEADER_BAR_WIDTH: Dp = 200.dp
+
+/** Side margin of the redesigned pages. */
+internal val ONBOARDING_SIDE_INSET: Dp = 24.dp
+
+/** « Remove animations » is on (animator scale 0): the flow shows its end states instead of moving. */
+@Composable
+internal fun rememberOnboardingReduceMotion(): Boolean {
+    val context = LocalContext.current
+    return remember(context) {
+        runCatching {
+            Settings.Global.getFloat(context.contentResolver, Settings.Global.ANIMATOR_DURATION_SCALE, 1f) == 0f
+        }.getOrDefault(false)
+    }
+}
+
+/** A screen reader explores the screen by touch: content must not change on its own. */
+@Composable
+internal fun rememberOnboardingScreenReader(): Boolean {
+    val context = LocalContext.current
+    return remember(context) {
+        runCatching {
+            (context.getSystemService(Context.ACCESSIBILITY_SERVICE) as? AccessibilityManager)
+                ?.isTouchExplorationEnabled == true
+        }.getOrDefault(false)
+    }
+}
+
+/**
+ * Card background of the style (1.5 dp border, small bottom edge, no shadow) with a free
+ * border colour and no padding, for the cards of the illustrations (iOS `ov2Card`).
+ */
+internal fun Modifier.ov2Card(
+    border: Color = DS.hairline,
+    fill: Color = DS.surface,
+    shape: Shape = DS.cardShape,
+    lip: Dp = 1.dp,
+): Modifier = this
+    .drawBehind {
+        val outline = shape.createOutline(size, layoutDirection, this)
+        translate(top = lip.toPx()) { drawOutline(outline, border) }
+    }
+    .clip(shape)
+    .background(fill)
+    .border(1.5.dp, border, shape)
+
+/** The header's back chevron: 44 dp touch target and elastic press. */
+@Composable
+internal fun OnboardingBackButton(label: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    val ink = DS.ink
+    val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
+    Box(
+        modifier = modifier
+            .size(44.dp)
+            // No tick of its own: going back vibrates once, from the arrow as from the system gesture.
+            .pressable(onClick = onClick, scaleDown = 0.88f, haptic = false)
+            .semantics {
+                contentDescription = label
+                role = Role.Button
+            },
+        contentAlignment = Alignment.Center,
+    ) {
+        Canvas(modifier = Modifier.size(width = 10.dp, height = 17.dp)) {
+            // The point of the chevron sits on the side the reading comes from.
+            val tip = if (rtl) size.width else 0f
+            val tail = if (rtl) 0f else size.width
+            val chevron = Path().apply {
+                moveTo(tail, 0f)
+                lineTo(tip, size.height / 2f)
+                lineTo(tail, size.height)
+            }
+            drawPath(
+                path = chevron,
+                color = ink,
+                style = Stroke(width = 2.4.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round),
+            )
+        }
+    }
+}
+
+/**
+ * The header shared by the flow: the back chevron at the start and, centred, what the step
+ * shows of its progress (nothing, a 200 dp bar, the carousel segments). Laid over the pages
+ * by the coordinator, which reserves [ONBOARDING_HEADER_HEIGHT] above them.
+ */
+@Composable
+internal fun OnboardingHeader(
+    backLabel: String,
+    onBack: () -> Unit,
+    modifier: Modifier = Modifier,
+    center: @Composable () -> Unit,
+) {
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .readableWidth()
+            .padding(horizontal = 14.dp)
+            .padding(top = 6.dp)
+            .height(44.dp),
+    ) {
+        Box(
+            modifier = Modifier.align(Alignment.Center).width(ONBOARDING_HEADER_BAR_WIDTH),
+            contentAlignment = Alignment.Center,
+        ) {
+            center()
+        }
+        OnboardingBackButton(
+            label = backLabel,
+            onClick = onBack,
+            modifier = Modifier.align(Alignment.CenterStart),
+        )
+    }
+}
+
+/**
+ * Segmented bar of the presentation carousel: past pages are full, the current segment
+ * fills while its page is on screen. [progress] is read while drawing, so the bar follows
+ * the clock without recomposing.
+ */
+@Composable
+internal fun OnboardingStorySegments(
+    count: Int,
+    current: Int,
+    progress: () -> Float,
+    modifier: Modifier = Modifier,
+    height: Dp = 5.dp,
+) {
+    val tint = DS.accent
+    val track = DS.accentTint
+    val total = count.coerceAtLeast(1)
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(height)
+            .clearAndSetSemantics { stateDescription = "${minOf(current + 1, total)} / $total" },
+        horizontalArrangement = Arrangement.spacedBy(5.dp),
+    ) {
+        repeat(total) { index ->
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxHeight()
+                    .clip(CircleShape)
+                    .background(track)
+                    .drawBehind {
+                        val fill = when {
+                            index < current -> 1f
+                            index == current -> progress().coerceIn(0f, 1f)
+                            else -> 0f
+                        }
+                        if (fill <= 0f) return@drawBehind
+                        val width = size.width * fill
+                        drawRoundRect(
+                            color = tint,
+                            topLeft = Offset(if (layoutDirection == LayoutDirection.Rtl) size.width - width else 0f, 0f),
+                            size = Size(width, size.height),
+                            cornerRadius = CornerRadius(size.height / 2f),
+                        )
+                    },
+            )
+        }
+    }
+}
+
+/**
+ * Shows [content] at its natural height when it fits in the height received, and scales it
+ * down as one block otherwise (small phone, large font). The illustrations of the
+ * presentation pages are interface mock-ups with fixed sizes: scaling keeps their
+ * proportions where squeezing would distort them (iOS `OnboardingV2FitHeight`).
+ */
+@Composable
+internal fun OnboardingFitHeight(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    Layout(content = { Box { content() } }, modifier = modifier) { measurables, constraints ->
+        val width = constraints.maxWidth
+        val placeable = measurables.first().measure(
+            Constraints(minWidth = width, maxWidth = width, minHeight = 0, maxHeight = Constraints.Infinity),
+        )
+        val height = if (constraints.hasBoundedHeight) constraints.maxHeight else placeable.height
+        val scale = if (placeable.height > height && placeable.height > 0) {
+            (height.toFloat() / placeable.height).coerceIn(0.5f, 1f)
+        } else {
+            1f
+        }
+        layout(width, height) {
+            placeable.placeWithLayer(0, (height - placeable.height) / 2) {
+                scaleX = scale
+                scaleY = scale
+            }
+        }
+    }
+}
+
+/**
+ * A text that shrinks, down to [minScale], until it fits its [maxLines] and the height its
+ * modifier gives it — iOS's `minimumScaleFactor`. Hidden until the size has settled, so the
+ * reader never sees it jump.
+ */
+@Composable
+internal fun OnboardingShrinkText(
+    text: AnnotatedString,
+    style: TextStyle,
+    maxLines: Int,
+    modifier: Modifier = Modifier,
+    minScale: Float = 0.7f,
+    textAlign: TextAlign = TextAlign.Center,
+) {
+    var scale by remember(text.text, style.fontSize) { mutableFloatStateOf(1f) }
+    var settled by remember(text.text, style.fontSize) { mutableStateOf(false) }
+    Text(
+        text = text,
+        style = style.copy(
+            fontSize = style.fontSize * scale,
+            lineHeight = if (style.lineHeight.isSpecified) style.lineHeight * scale else style.lineHeight,
+        ),
+        textAlign = textAlign,
+        maxLines = maxLines,
+        overflow = TextOverflow.Ellipsis,
+        onTextLayout = { layout ->
+            if (layout.hasVisualOverflow && scale > minScale) {
+                scale = (scale - 0.06f).coerceAtLeast(minScale)
+            } else {
+                settled = true
+            }
+        },
+        modifier = modifier.drawWithContent { if (settled) drawContent() },
+    )
+}
+
+/**
+ * A course cover for the illustrations of the flow, small and cached on its own key. Covers
+ * are fetched (Android ships none): until one arrives, or without network, the tile keeps
+ * its [placeholder] tint rather than a letter.
+ */
+@Composable
+internal fun OnboardingCover(
+    courseId: String?,
+    modifier: Modifier = Modifier,
+    placeholder: Color = DS.accentTint,
+    edgePx: Int = 360,
+    colorFilter: ColorFilter? = null,
+    imageAlpha: Float = 1f,
+) {
+    val context = LocalContext.current
+    val url = remember(courseId) { courseId?.let { CourseCoverUrls.url(context, it) } }
+    Box(modifier = modifier.background(placeholder)) {
+        if (url != null) {
+            AsyncImage(
+                model = ImageRequest.Builder(context)
+                    .data(url)
+                    .size(edgePx)
+                    .memoryCacheKey("onboarding:$courseId:$edgePx")
+                    .diskCacheKey(courseId)
+                    .crossfade(true)
+                    .build(),
+                contentDescription = null,
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop,
+                colorFilter = colorFilter,
+                alpha = imageAlpha,
+            )
+        }
+    }
+}
+
+// endregion

@@ -1,6 +1,11 @@
 package app.rork.sophia.ui.newgen
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.horizontalScroll
@@ -24,7 +29,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.automirrored.filled.TrendingUp
-import androidx.compose.material.icons.filled.Cancel
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -41,9 +46,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
@@ -69,8 +77,10 @@ import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.Subject
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.domain.readsCount
-import app.rork.sophia.ui.components.ScreenTitle
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.course.AuthorAvatar
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -122,6 +132,8 @@ fun ExploreScreen(
     val authors = remember { AuthorStore.all(context.applicationContext) }
     var query by remember { mutableStateOf("") }
     var selectedTrend by remember { mutableStateOf<String?>(null) }
+    var searchFocused by remember { mutableStateOf(false) }
+    val haptics = rememberHaptics()
     val trimmed = query.trim()
     val isSearching = trimmed.length >= 2
 
@@ -241,151 +253,198 @@ fun ExploreScreen(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(top = 8.dp, bottom = 32.dp),
-        verticalArrangement = Arrangement.spacedBy(22.dp),
+            .padding(top = 16.dp, bottom = 32.dp),
+        verticalArrangement = Arrangement.spacedBy(24.dp),
     ) {
-        ScreenTitle(text = StringStore.text(context, "tab.explore", language), modifier = Modifier.padding(horizontal = 20.dp))
+        Column(modifier = Modifier.padding(horizontal = SIDE_MARGIN), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+            Text(
+                text = StringStore.text(context, "tab.explore", language),
+                fontFamily = PlusJakartaSans,
+                fontWeight = FontWeight.Medium,
+                fontSize = 32.sp,
+                color = DS.ink,
+            )
 
-        // Champ de recherche.
-        Row(
-            modifier = Modifier
-                .padding(horizontal = 20.dp)
-                .fillMaxWidth()
-                .height(52.dp)
-                .clip(DS.controlShape)
-                .background(DS.surface)
-                .border(1.dp, DS.hairline, DS.controlShape)
-                .padding(horizontal = 16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
-        ) {
-            Icon(Icons.Filled.Search, contentDescription = null, tint = DS.inkTertiary, modifier = Modifier.size(18.dp))
-            Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.CenterStart) {
-                if (query.isEmpty()) {
-                    Text(
-                        text = StringStore.text(context, "explore.search.placeholder", language),
-                        style = SophiaTypography.bodyLarge,
-                        color = DS.inkTertiary,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
+            // Champ de recherche : actif, il prend la bordure bleue des états sélectionnés.
+            val fieldBorder by animateColorAsState(
+                targetValue = if (searchFocused) DS.accent else DS.hairline,
+                animationSpec = DSMotion.snappy(),
+                label = "searchBorder",
+            )
+            val searchTint by animateColorAsState(
+                targetValue = if (searchFocused) DS.accent else DS.inkSecondary,
+                animationSpec = DSMotion.snappy(),
+                label = "searchIcon",
+            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp)
+                    .homeCard(border = fieldBorder)
+                    .padding(start = 14.dp, end = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                Icon(Icons.Filled.Search, contentDescription = null, tint = searchTint, modifier = Modifier.size(20.dp))
+                Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.CenterStart) {
+                    if (query.isEmpty()) {
+                        Text(
+                            text = StringStore.text(context, "explore.search.placeholder", language),
+                            fontFamily = PlusJakartaSans,
+                            fontSize = 15.sp,
+                            color = DS.inkTertiary,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                    BasicTextField(
+                        value = query,
+                        onValueChange = { query = it },
+                        singleLine = true,
+                        textStyle = SophiaTypography.bodyLarge.copy(color = DS.ink, fontSize = 15.sp),
+                        cursorBrush = SolidColor(DS.accent),
+                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                        modifier = Modifier.fillMaxWidth().onFocusChanged { searchFocused = it.isFocused },
                     )
                 }
-                BasicTextField(
-                    value = query,
-                    onValueChange = { query = it },
-                    singleLine = true,
-                    textStyle = SophiaTypography.bodyLarge.copy(color = DS.ink),
-                    cursorBrush = SolidColor(DS.accentSoft),
-                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                    modifier = Modifier.fillMaxWidth(),
-                )
-            }
-            if (query.isNotEmpty()) {
-                Icon(
-                    Icons.Filled.Cancel,
-                    contentDescription = null,
-                    tint = DS.inkTertiary,
-                    modifier = Modifier.size(18.dp).softPress(onClick = { query = "" }),
-                )
+                AnimatedVisibility(
+                    visible = query.isNotEmpty(),
+                    enter = scaleIn(DSMotion.pop()) + fadeIn(),
+                    exit = scaleOut() + fadeOut(),
+                ) {
+                    val clearLabel = StringStore.text(context, "explore.search.clear", language)
+                    Box(
+                        modifier = Modifier
+                            .size(28.dp)
+                            .pressable(onClick = { query = "" }, scaleDown = 0.88f)
+                            .clip(CircleShape)
+                            .background(DS.accentTint)
+                            .semantics { contentDescription = clearLabel },
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Icon(Icons.Filled.Close, contentDescription = null, tint = DS.ink, modifier = Modifier.size(14.dp))
+                    }
+                }
             }
         }
 
         if (isSearching) {
-            Column(modifier = Modifier.padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Column(modifier = Modifier.padding(horizontal = SIDE_MARGIN), verticalArrangement = Arrangement.spacedBy(24.dp)) {
                 if (matchingCourses.isEmpty() && matchingAuthors.isEmpty() && glossaryHits.isEmpty()) {
                     Column(
-                        modifier = Modifier.fillMaxWidth().padding(vertical = 40.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.spacedBy(6.dp),
+                        modifier = Modifier.fillMaxWidth().homeCard().padding(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(4.dp),
                     ) {
                         Text(
                             text = StringStore.text(context, "library.empty.title", language),
                             fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.ExtraBold,
-                            fontSize = 17.sp,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp,
                             color = DS.ink,
-                            textAlign = TextAlign.Center,
                         )
                         Text(
                             text = StringStore.text(context, "library.empty.subtitle", language),
                             fontFamily = PlusJakartaSans,
                             fontSize = 15.sp,
+                            lineHeight = 21.sp,
                             color = DS.inkSecondary,
-                            textAlign = TextAlign.Center,
                         )
                     }
                 }
+                // Chaque famille de résultats : son titre, puis ses lignes serrées dessous.
                 if (matchingCourses.isNotEmpty()) {
-                    NewGenSectionTitle(
-                        text = StringStore.text(context, "library.tab.courses", language),
-                        trailing = "· ${matchingCourses.size}",
-                    )
-                    matchingCourses.take(12).forEach { course -> courseRow(course) }
+                    Column(verticalArrangement = Arrangement.spacedBy(9.dp)) {
+                        NewGenSectionTitle(
+                            text = StringStore.text(context, "library.tab.courses", language),
+                            trailing = "· ${matchingCourses.size}",
+                        )
+                        matchingCourses.take(12).forEach { course -> courseRow(course) }
+                    }
                 }
                 if (matchingAuthors.isNotEmpty()) {
-                    NewGenSectionTitle(
-                        text = StringStore.text(context, "explore.results.creators", language),
-                        trailing = "· ${matchingAuthors.size}",
-                    )
-                    matchingAuthors.forEach { author ->
-                        CreatorRow(author, language, progress, progressManager, onOpenCreator)
+                    Column(verticalArrangement = Arrangement.spacedBy(9.dp)) {
+                        NewGenSectionTitle(
+                            text = StringStore.text(context, "explore.results.creators", language),
+                            trailing = "· ${matchingAuthors.size}",
+                        )
+                        matchingAuthors.forEach { author ->
+                            CreatorRow(author, language, progress, progressManager, onOpenCreator)
+                        }
                     }
                 }
                 if (glossaryHits.isNotEmpty()) {
-                    NewGenSectionTitle(
-                        text = StringStore.text(context, "explore.results.glossary", language),
-                        trailing = "· ${glossaryHits.size}",
-                    )
-                    glossaryHits.forEach { hit ->
-                        val course = summaries.firstOrNull { it.id == hit.courseId }
-                        GlossaryRow(hit = hit, course = course, onTap = { course?.let(onOpenCourse) })
+                    Column(verticalArrangement = Arrangement.spacedBy(9.dp)) {
+                        NewGenSectionTitle(
+                            text = StringStore.text(context, "explore.results.glossary", language),
+                            trailing = "· ${glossaryHits.size}",
+                        )
+                        glossaryHits.forEach { hit ->
+                            val course = summaries.firstOrNull { it.id == hit.courseId }
+                            GlossaryRow(hit = hit, course = course, onTap = { course?.let(onOpenCourse) })
+                        }
                     }
                 }
             }
         } else {
             // Les événements que le serveur sert : en cours, puis terminés (grisés).
-            EventsRow(language = language, summaries = summaries, onOpenCampaign = onOpenCampaign)
+            EventsRow(
+                language = language,
+                summaries = summaries,
+                onOpenCampaign = onOpenCampaign,
+                modifier = Modifier.dsStagger(0),
+            )
 
             // On cherche beaucoup cette semaine.
             if (trending.isNotEmpty()) {
-                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Column(modifier = Modifier.dsStagger(1), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                     Text(
                         text = StringStore.text(context, "explore.trending", language),
                         fontFamily = PlusJakartaSans,
                         fontWeight = FontWeight.Bold,
                         fontSize = 13.sp,
                         color = DS.inkSecondary,
-                        modifier = Modifier.padding(horizontal = 20.dp),
+                        modifier = Modifier.padding(horizontal = SIDE_MARGIN),
                     )
                     Row(
-                        modifier = Modifier.horizontalScroll(rememberScrollState()).padding(horizontal = 20.dp),
+                        modifier = Modifier
+                            .horizontalScroll(rememberScrollState())
+                            .padding(horizontal = SIDE_MARGIN)
+                            .padding(bottom = 2.dp),
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                     ) {
                         trending.forEach { course ->
                             val selected = selectedTrend == course.id
+                            val chipFill by animateColorAsState(if (selected) DS.accent else DS.surface, DSMotion.snappy(), label = "trendFill")
+                            val chipBorder by animateColorAsState(if (selected) DS.accent else DS.hairline, DSMotion.snappy(), label = "trendBorder")
+                            val chipInk by animateColorAsState(if (selected) Color.White else DS.ink, DSMotion.snappy(), label = "trendInk")
                             Row(
                                 modifier = Modifier
-                                    .softPress(onClick = { selectedTrend = if (selected) null else course.id })
-                                    .height(38.dp)
-                                    .clip(CircleShape)
-                                    .background(if (selected) DS.accent else DS.surface)
-                                    .border(1.dp, if (selected) DS.accent else DS.hairline, CircleShape)
+                                    .pressable(
+                                        onClick = {
+                                            haptics.select()
+                                            selectedTrend = if (selected) null else course.id
+                                        },
+                                        scaleDown = 0.96f,
+                                        haptic = false,
+                                    )
+                                    .height(44.dp)
+                                    .homeCard(fill = chipFill, border = chipBorder)
                                     .padding(horizontal = 14.dp),
                                 verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
                             ) {
                                 Icon(
                                     imageVector = Icons.AutoMirrored.Filled.TrendingUp,
                                     contentDescription = null,
-                                    tint = if (selected) Color.White else DS.ink,
-                                    modifier = Modifier.size(14.dp),
+                                    tint = chipInk,
+                                    modifier = Modifier.size(15.dp),
                                 )
                                 Text(
                                     text = stripInlineMarkup(course.title),
                                     fontFamily = PlusJakartaSans,
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 14.sp,
-                                    color = if (selected) Color.White else DS.ink,
+                                    fontSize = 15.sp,
+                                    color = chipInk,
                                     maxLines = 1,
                                 )
                             }
@@ -402,8 +461,8 @@ fun ExploreScreen(
                                 .take(2)
                         }
                         Column(
-                            modifier = Modifier.padding(horizontal = 20.dp).padding(top = 4.dp),
-                            verticalArrangement = Arrangement.spacedBy(8.dp),
+                            modifier = Modifier.padding(horizontal = SIDE_MARGIN).padding(bottom = 2.dp),
+                            verticalArrangement = Arrangement.spacedBy(9.dp),
                         ) {
                             results.forEach { result -> courseRow(result) }
                         }
@@ -412,7 +471,10 @@ fun ExploreScreen(
             }
 
             // Univers.
-            Column(modifier = Modifier.padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Column(
+                modifier = Modifier.padding(horizontal = SIDE_MARGIN).dsStagger(2),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
                 NewGenSectionTitle(text = StringStore.text(context, "explore.universes", language))
                 // Deux colonnes, à la main : la grille vit dans un écran déjà défilant.
                 universes.chunked(2).forEach { pair ->
@@ -431,15 +493,15 @@ fun ExploreScreen(
             }
 
             // Créateurs à suivre.
-            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Column(modifier = Modifier.dsStagger(3), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 NewGenSectionTitle(
                     text = StringStore.text(context, "explore.creatorsToFollow", language),
-                    modifier = Modifier.padding(horizontal = 20.dp),
+                    modifier = Modifier.padding(horizontal = SIDE_MARGIN),
                 )
                 Row(
                     modifier = Modifier
                         .horizontalScroll(rememberScrollState())
-                        .padding(horizontal = 20.dp)
+                        .padding(horizontal = SIDE_MARGIN)
                         .padding(bottom = 8.dp),
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
                     verticalAlignment = Alignment.Top,
@@ -455,12 +517,15 @@ fun ExploreScreen(
                 language = language,
                 progress = progress,
                 onClick = onOpenPath,
-                modifier = Modifier.padding(horizontal = 20.dp),
+                modifier = Modifier.padding(horizontal = SIDE_MARGIN).dsStagger(4),
             )
         }
     }
     }
 }
+
+/** Marge latérale de l'écran. */
+private val SIDE_MARGIN = 24.dp
 
 /**
  * Les événements que le serveur sert (publiés, dans la région du téléphone) : ceux en cours
@@ -473,6 +538,7 @@ private fun EventsRow(
     language: AppLanguage,
     summaries: List<CourseSummary>,
     onOpenCampaign: (Campaign) -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
     val campaigns by CampaignStore.flow.collectAsState()
@@ -480,15 +546,15 @@ private fun EventsRow(
         CampaignStore.active().map { it to false } + CampaignStore.ended().map { it to true }
     }
     if (items.isEmpty()) return
-    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(10.dp)) {
         NewGenSectionTitle(
             text = StringStore.text(context, "badges.family.events", language),
-            modifier = Modifier.padding(horizontal = 20.dp),
+            modifier = Modifier.padding(horizontal = SIDE_MARGIN),
         )
         Row(
             modifier = Modifier
                 .horizontalScroll(rememberScrollState())
-                .padding(horizontal = 20.dp)
+                .padding(horizontal = SIDE_MARGIN)
                 .padding(bottom = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalAlignment = Alignment.Top,
@@ -506,7 +572,7 @@ private fun EventsRow(
     }
 }
 
-private val EVENT_CARD_WIDTH = 248.dp
+private val EVENT_CARD_WIDTH = 232.dp
 
 /** Gris pour les événements terminés : l'image comme le texte perdent leur couleur. */
 private val ENDED_EVENT_FILTER = ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0f) })
@@ -536,11 +602,10 @@ private fun EventCard(
         start == null -> NewGenFormat.shortDay(end, language)
         else -> NewGenFormat.shortDay(start, language) + " – " + NewGenFormat.shortDay(end, language)
     }
-    val shape = RoundedCornerShape(18.dp)
     Column(
         modifier = Modifier
             .width(EVENT_CARD_WIDTH)
-            .softPress(onClick = onClick)
+            .pressable(onClick = onClick)
             // Terminé : la carte passe en gris et s'efface un peu, mais reste ouvrable.
             .then(
                 if (ended) {
@@ -559,32 +624,33 @@ private fun EventCard(
                     Modifier
                 },
             )
-            .clip(shape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, shape),
+            .homeCard(),
     ) {
-        Box(modifier = Modifier.fillMaxWidth().height(140.dp)) {
+        Box(modifier = Modifier.fillMaxWidth().height(130.dp)) {
             EventArtwork(campaign = campaign, courses = courses, modifier = Modifier.fillMaxSize())
             if (ended) {
                 EventPill(text = StringStore.text(context, "event.ended", language), dark = true, modifier = Modifier.padding(10.dp))
             }
         }
-        Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Column(
+            modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 10.dp, bottom = 12.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
             Text(
                 text = dates,
                 fontFamily = PlusJakartaSans,
                 fontWeight = FontWeight.Bold,
                 fontSize = 12.sp,
-                color = if (ended) DS.inkTertiary else DS.accentSoft,
+                color = if (ended) DS.inkTertiary else DS.accent,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
             Text(
                 text = campaign.title(language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 17.sp,
-                lineHeight = 22.sp,
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp,
+                lineHeight = 21.sp,
                 color = DS.ink,
                 // Toujours deux lignes, pour que toutes les cartes aient la même hauteur.
                 minLines = 2,
@@ -594,7 +660,7 @@ private fun EventCard(
             Text(
                 text = StringStore.text(context, "event.card.coursesToRead", language, courses.size),
                 fontFamily = PlusJakartaSans,
-                fontSize = 12.sp,
+                fontSize = 13.sp,
                 color = DS.inkSecondary,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
@@ -646,7 +712,7 @@ private fun PathCard(
         modifier = modifier
             .fillMaxWidth()
             .height(IntrinsicSize.Min)
-            .softPress(onClick = onClick)
+            .pressable(onClick = onClick)
             .clip(DS.cardShape)
             .background(PATH_CARD_NAVY),
     ) {
@@ -659,7 +725,7 @@ private fun PathCard(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .heightIn(min = 148.dp)
+                .heightIn(min = 132.dp)
                 .padding(16.dp)
                 .padding(end = posterWidth),
             verticalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterVertically),
@@ -668,7 +734,7 @@ private fun PathCard(
                 text = StringStore.text(context, "path.title", language),
                 fontFamily = PlusJakartaSans,
                 fontWeight = FontWeight.ExtraBold,
-                fontSize = 22.sp,
+                fontSize = 20.sp,
                 color = Color.White,
             )
             Text(
@@ -676,11 +742,11 @@ private fun PathCard(
                 fontFamily = PlusJakartaSans,
                 fontSize = 15.sp,
                 lineHeight = 20.sp,
-                color = Color.White.copy(alpha = 0.85f),
+                color = EventPalette.softText,
             )
             Row(
                 modifier = Modifier
-                    .padding(top = 6.dp)
+                    .padding(top = 4.dp)
                     .height(32.dp)
                     .clip(CircleShape)
                     .background(PATH_CARD_SAFFRON)
@@ -691,15 +757,15 @@ private fun PathCard(
                 Text(
                     text = StringStore.text(context, "path.levelCaption", language, level),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 13.sp,
-                    color = PATH_CARD_NAVY,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 15.sp,
+                    color = EventPalette.ink,
                     maxLines = 1,
                 )
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
                     contentDescription = null,
-                    tint = PATH_CARD_NAVY,
+                    tint = EventPalette.ink,
                     modifier = Modifier.size(16.dp),
                 )
             }
@@ -708,13 +774,16 @@ private fun PathCard(
 }
 
 /** Marine et safran des illustrations du site (`EventPalette` sur iOS). */
-private val PATH_CARD_NAVY = Color(0xFF1A3A6B)
-private val PATH_CARD_SAFFRON = Color(0xFFF2B134)
+private val PATH_CARD_NAVY = EventPalette.navy
+private val PATH_CARD_SAFFRON = EventPalette.saffron
 
 /** Une sous-catégorie du catalogue, avec la couverture de son cours le plus lu. */
 internal data class Universe(val name: String, val courses: List<CourseSummary>, val cover: CourseSummary)
 
-/** La tuile d'un univers : la couverture plein fond, un bandeau sombre avec le nom et le compte. */
+/**
+ * La tuile d'un univers : la couverture en haut, le nom (deux lignes réservées) et le nombre de
+ * cours dessous, sur fond blanc.
+ */
 @Composable
 private fun UniverseTile(
     universe: Universe,
@@ -723,30 +792,31 @@ private fun UniverseTile(
     modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
-    val shape = RoundedCornerShape(18.dp)
-    Box(
+    Column(
         modifier = modifier
-            .height(128.dp)
-            .softPress(onClick = onClick)
-            .clip(shape)
-            .background(DS.surfaceMuted),
-        contentAlignment = Alignment.BottomStart,
+            .pressable(onClick = onClick)
+            .homeCard(),
     ) {
-        CourseCover(courseId = universe.cover.id, modifier = Modifier.fillMaxSize(), cornerRadius = 0.dp, letterSize = 36.sp)
+        CourseCover(
+            courseId = universe.cover.id,
+            modifier = Modifier.fillMaxWidth().height(84.dp),
+            cornerRadius = 0.dp,
+            letterSize = 30.sp,
+        )
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(Color(0x9E0B1220))
-                .padding(horizontal = 12.dp, vertical = 10.dp),
-            verticalArrangement = Arrangement.spacedBy(1.dp),
+                .padding(start = 10.dp, end = 10.dp, top = 8.dp, bottom = 10.dp),
+            verticalArrangement = Arrangement.spacedBy(2.dp),
         ) {
             Text(
                 text = universe.name,
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 15.sp,
-                lineHeight = 19.sp,
-                color = Color.White,
+                fontWeight = FontWeight.Bold,
+                fontSize = 13.sp,
+                lineHeight = 17.sp,
+                color = DS.ink,
+                minLines = 2,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
             )
@@ -754,7 +824,8 @@ private fun UniverseTile(
                 text = StringStore.text(context, "subject.courses.count", language, universe.courses.size),
                 fontFamily = PlusJakartaSans,
                 fontSize = 12.sp,
-                color = Color.White.copy(alpha = 0.88f),
+                color = DS.inkSecondary,
+                maxLines = 1,
             )
         }
     }
@@ -771,19 +842,16 @@ private fun CreatorCard(
 ) {
     val context = LocalContext.current
     val following = author.slug in progress.followedCreatorSlugs
-    val shape = RoundedCornerShape(18.dp)
     Column(
         modifier = Modifier
-            .width(156.dp)
-            .clip(shape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, shape)
-            .padding(14.dp),
+            .width(168.dp)
+            .homeCard()
+            .padding(horizontal = 12.dp, vertical = 14.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth().softPress(onClick = { onOpenCreator(author) }),
+            modifier = Modifier.fillMaxWidth().pressable(onClick = { onOpenCreator(author) }),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(6.dp),
         ) {
@@ -792,14 +860,14 @@ private fun CreatorCard(
                 Text(
                     text = author.name,
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
-                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
                     color = DS.ink,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.weight(1f, fill = false),
                 )
-                if (author.isVerified) VerifiedCheck(language = language, size = 12.dp)
+                if (author.isVerified) VerifiedCheck(language = language, size = 13.dp)
             }
             Text(
                 text = author.title(language).orEmpty(),
@@ -816,9 +884,9 @@ private fun CreatorCard(
                 text = (LocalCounters.followers(author.slug) + (if (following) 1 else 0)).compactCount(language) + " " +
                     StringStore.text(context, "creator.stat.followers", language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp,
-                color = DS.inkSecondary,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 13.sp,
+                color = DS.ink,
                 maxLines = 1,
             )
         }
@@ -826,7 +894,7 @@ private fun CreatorCard(
             isFollowing = following,
             language = language,
             compact = true,
-            modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
+            modifier = Modifier.padding(top = 2.dp),
             onClick = {
                 val wasFollowing = progressManager.isFollowing(author.slug)
                 progressManager.toggleFollow(author.slug)
@@ -847,19 +915,16 @@ private fun CreatorRow(
 ) {
     val context = LocalContext.current
     val following = author.slug in progress.followedCreatorSlugs
-    val shape = RoundedCornerShape(18.dp)
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(shape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, shape)
-            .padding(12.dp),
+            .homeCard()
+            .padding(horizontal = 12.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         Row(
-            modifier = Modifier.weight(1f).softPress(onClick = { onOpenCreator(author) }),
+            modifier = Modifier.weight(1f).pressable(onClick = { onOpenCreator(author) }),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
@@ -883,8 +948,9 @@ private fun CreatorRow(
                         text = pedigree,
                         fontFamily = PlusJakartaSans,
                         fontSize = 12.sp,
+                        lineHeight = 16.sp,
                         color = DS.inkSecondary,
-                        maxLines = 1,
+                        maxLines = 3,
                         overflow = TextOverflow.Ellipsis,
                     )
                 }
@@ -894,7 +960,7 @@ private fun CreatorRow(
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 12.sp,
-                    color = DS.inkSecondary,
+                    color = DS.ink,
                     maxLines = 1,
                 )
             }
@@ -914,29 +980,21 @@ private fun CreatorRow(
 
 @Composable
 private fun GlossaryRow(hit: GlossaryHit, course: CourseSummary?, onTap: () -> Unit) {
-    val shape = RoundedCornerShape(18.dp)
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .softPress(onClick = onTap)
-            .clip(shape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, shape)
+            .pressable(onClick = onTap)
+            .homeCard()
             .padding(12.dp),
         verticalAlignment = Alignment.Top,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        Box(
-            modifier = Modifier.size(40.dp).clip(RoundedCornerShape(12.dp)).background(DS.accentTint),
-            contentAlignment = Alignment.Center,
-        ) {
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.MenuBook,
-                contentDescription = null,
-                tint = DS.accentSoft,
-                modifier = Modifier.size(16.dp),
-            )
-        }
+        Icon(
+            imageVector = Icons.AutoMirrored.Filled.MenuBook,
+            contentDescription = null,
+            tint = DS.accent,
+            modifier = Modifier.size(22.dp),
+        )
         Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
             Text(
                 text = hit.entry.displayTerm,
@@ -948,19 +1006,19 @@ private fun GlossaryRow(hit: GlossaryHit, course: CourseSummary?, onTap: () -> U
             Text(
                 text = hit.entry.explanation,
                 fontFamily = PlusJakartaSans,
-                fontSize = 12.sp,
-                lineHeight = 16.sp,
+                fontSize = 13.sp,
+                lineHeight = 18.sp,
                 color = DS.inkSecondary,
-                maxLines = 2,
+                maxLines = 3,
                 overflow = TextOverflow.Ellipsis,
             )
             if (course != null) {
                 Text(
                     text = stripInlineMarkup(course.title),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     fontSize = 12.sp,
-                    color = DS.accentSoft,
+                    color = DS.accent,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                 )
@@ -989,8 +1047,8 @@ fun UniverseCoursesScreen(
             .fillMaxSize()
             .background(DS.canvas)
             .verticalScroll(rememberScrollState())
-            .padding(start = 20.dp, end = 20.dp, top = 12.dp, bottom = 32.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
+            .padding(start = SIDE_MARGIN, end = SIDE_MARGIN, top = 12.dp, bottom = 32.dp),
+        verticalArrangement = Arrangement.spacedBy(9.dp),
     ) {
         NewGenBackHeader(
             language = language,
@@ -998,7 +1056,7 @@ fun UniverseCoursesScreen(
             title = "$subcategory · ${courses.size}",
             modifier = Modifier.padding(bottom = 8.dp),
         )
-        courses.forEach { course ->
+        courses.forEachIndexed { index, course ->
             val identity = remember(course.id) { CreatorIdentity.forCourse(context.applicationContext, course.id) }
             val completed = progress.courseProgress[course.id]?.isCompleted == true
             CompactCourseRow(
@@ -1010,6 +1068,8 @@ fun UniverseCoursesScreen(
                 } else {
                     null
                 },
+                // Les premières lignes entrent en cascade ; au-delà, elles sont hors écran.
+                modifier = if (index < 10) Modifier.dsStagger(index) else Modifier,
             )
         }
         Spacer(Modifier.height(4.dp))

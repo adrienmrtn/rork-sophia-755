@@ -23,7 +23,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -36,8 +35,7 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.DuelHome
 import app.rork.sophia.domain.DuelMatch
 import app.rork.sophia.domain.DuelResult
-import app.rork.sophia.ui.LocalFullBleedBackground
-import app.rork.sophia.ui.theme.SophiaAppearance
+import app.rork.sophia.ui.theme.DS
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -146,17 +144,9 @@ fun DuelFlow(language: AppLanguage, onClose: () -> Unit, modifier: Modifier = Mo
         onDispose { service.setPlaying(false) }
     }
 
-    // Les marges des barres du système sont peintes par la racine de l'app : en nuit, comme
-    // l'écran, avec des icônes claires.
-    val setFullBleed = LocalFullBleedBackground.current
-    DisposableEffect(Unit) {
-        setFullBleed(SolidColor(DuelPalette.night))
-        SophiaAppearance.darkBackdropBehindBars = true
-        onDispose {
-            setFullBleed(null)
-            SophiaAppearance.darkBackdropBehindBars = false
-        }
-    }
+    // Les écrans d'une partie sont blancs, comme le reste de l'app : les marges des barres du
+    // système gardent le fond de la racine et leurs icônes sombres. Seule l'annonce d'une
+    // montée de ligue passe sous les barres (`DuelPromotionOverlay`).
 
     // Quitter l'app en pleine partie au-delà de 15 s est un abandon : un adversaire ne reste
     // pas à attendre. En deçà (une notification, un appel refusé), la partie continue, et le
@@ -206,7 +196,7 @@ fun DuelFlow(language: AppLanguage, onClose: () -> Unit, modifier: Modifier = Mo
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(DuelPalette.night)
+            .background(DS.canvas)
             // Rien de ce qui est sous la partie (les onglets) ne doit recevoir de touche.
             .pointerInput(Unit) {},
     ) {

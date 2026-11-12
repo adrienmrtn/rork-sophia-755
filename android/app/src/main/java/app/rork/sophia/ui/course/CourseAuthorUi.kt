@@ -1,6 +1,7 @@
 package app.rork.sophia.ui.course
 
 import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -16,7 +17,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import androidx.compose.material.icons.filled.ExpandMore
@@ -43,8 +44,11 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.data.CourseAuthor
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.ui.components.DSEyebrow
+import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.components.SophiaSecondaryButton
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.newgen.FollowButton
 import app.rork.sophia.ui.newgen.VerifiedCheck
@@ -75,9 +79,9 @@ fun AuthorAvatar(author: CourseAuthor, size: Dp, modifier: Modifier = Modifier) 
         Text(
             text = author.initials,
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.SemiBold,
-            fontSize = (size.value * 0.38f).sp,
-            color = DS.accentSoft,
+            fontWeight = FontWeight.ExtraBold,
+            fontSize = (size.value * 0.36f).sp,
+            color = DS.accent,
         )
         author.photoModel?.let { model ->
             AsyncImage(
@@ -102,7 +106,7 @@ fun AuthorByline(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .softPress(onClick = onClick),
+            .pressable(onClick = onClick),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
@@ -126,10 +130,10 @@ fun AuthorByline(
             }
         }
         Icon(
-            imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+            imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
             contentDescription = null,
             tint = DS.inkTertiary,
-            modifier = Modifier.size(16.dp),
+            modifier = Modifier.size(20.dp),
         )
     }
 }
@@ -160,17 +164,11 @@ fun AuthorCard(
             Icon(
                 imageVector = Icons.Filled.Person,
                 contentDescription = null,
-                tint = DS.accentSoft,
+                tint = DS.accent,
                 modifier = Modifier.size(14.dp),
             )
-            Text(
-                text = StringStore.text(context, "course.author.writtenBy", language).uppercaseInApp(),
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 11.sp,
-                letterSpacing = 1.2.sp,
-                color = DS.accentSoft,
-            )
+            // Sur-titre en petites capitales espacées bleues.
+            DSEyebrow(text = StringStore.text(context, "course.author.writtenBy", language))
         }
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
             AuthorAvatar(author = author, size = 56.dp)
@@ -229,7 +227,7 @@ fun TranslatedFromLine(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .clip(androidx.compose.foundation.shape.RoundedCornerShape(14.dp))
+            .clip(androidx.compose.foundation.shape.RoundedCornerShape(DS.Radius.small))
             .background(DS.accentTint)
             .padding(horizontal = 12.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -255,8 +253,8 @@ fun TranslatedFromLine(
                 fontFamily = PlusJakartaSans,
                 fontWeight = FontWeight.Bold,
                 fontSize = 13.sp,
-                color = DS.accentSoft,
-                modifier = Modifier.softPress(onClick = onShowOriginal),
+                color = DS.accent,
+                modifier = Modifier.pressable(onClick = onShowOriginal),
             )
         }
     }
@@ -272,19 +270,26 @@ fun SourcesCard(
     val context = LocalContext.current
     val uriHandler = LocalUriHandler.current
     var revealed by remember { mutableStateOf(false) }
+    val haptics = rememberHaptics()
+    val chevron by animateFloatAsState(if (revealed) 180f else 0f, DSMotion.snappy(), label = "sourcesChevron")
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .clip(DS.cardShape)
-            .background(DS.surfaceMuted)
-            .border(1.dp, DS.hairline, DS.cardShape)
+            .sophiaCard()
             .padding(DS.Space.l)
             .animateContentSize(),
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .softPress(onClick = { revealed = !revealed }),
+                .pressable(
+                    onClick = {
+                        haptics.select()
+                        revealed = !revealed
+                    },
+                    scaleDown = 0.99f,
+                    haptic = false,
+                ),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
@@ -295,7 +300,7 @@ fun SourcesCard(
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.MenuBook,
                     contentDescription = null,
-                    tint = DS.accentSoft,
+                    tint = DS.accent,
                     modifier = Modifier.size(16.dp),
                 )
             }
@@ -320,7 +325,7 @@ fun SourcesCard(
                 imageVector = Icons.Filled.ExpandMore,
                 contentDescription = null,
                 tint = DS.inkTertiary,
-                modifier = Modifier.size(18.dp).rotate(if (revealed) 180f else 0f),
+                modifier = Modifier.size(18.dp).rotate(chevron),
             )
         }
         if (revealed) {
@@ -333,7 +338,7 @@ fun SourcesCard(
                             fontFamily = PlusJakartaSans,
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 11.sp,
-                            color = DS.accentSoft,
+                            color = DS.accent,
                             modifier = Modifier.width(18.dp),
                         )
                         Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -346,14 +351,14 @@ fun SourcesCard(
                             )
                             source.url?.let { url ->
                                 Row(
-                                    modifier = Modifier.softPress(onClick = { runCatching { uriHandler.openUri(url) } }),
+                                    modifier = Modifier.pressable(onClick = { runCatching { uriHandler.openUri(url) } }),
                                     verticalAlignment = Alignment.CenterVertically,
                                     horizontalArrangement = Arrangement.spacedBy(4.dp),
                                 ) {
                                     Icon(
                                         imageVector = Icons.AutoMirrored.Filled.OpenInNew,
                                         contentDescription = null,
-                                        tint = DS.accentSoft,
+                                        tint = DS.accent,
                                         modifier = Modifier.size(12.dp),
                                     )
                                     Text(
@@ -361,7 +366,7 @@ fun SourcesCard(
                                         fontFamily = PlusJakartaSans,
                                         fontWeight = FontWeight.SemiBold,
                                         fontSize = 12.sp,
-                                        color = DS.accentSoft,
+                                        color = DS.accent,
                                     )
                                 }
                             }

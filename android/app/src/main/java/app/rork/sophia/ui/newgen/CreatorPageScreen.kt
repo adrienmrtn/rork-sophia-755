@@ -1,8 +1,9 @@
 package app.rork.sophia.ui.newgen
 
 import android.content.Intent
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Animatable
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,7 +13,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -23,6 +23,8 @@ import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -30,7 +32,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -51,7 +53,10 @@ import app.rork.sophia.domain.Campaign
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.readsCount
 import app.rork.sophia.domain.UserProgress
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.course.AuthorAvatar
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -74,6 +79,7 @@ fun CreatorPageScreen(
     modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
+    val haptics = rememberHaptics()
     val summaries = rememberCourseSummaries(language)
     val courses = remember(summaries, author) {
         author.courseIds.mapNotNull { id -> summaries.firstOrNull { it.id == id } }
@@ -101,8 +107,7 @@ fun CreatorPageScreen(
             .fillMaxSize()
             .background(DS.canvas)
             .verticalScroll(rememberScrollState())
-            .padding(start = 20.dp, end = 20.dp, top = 12.dp, bottom = 32.dp),
-        verticalArrangement = Arrangement.spacedBy(18.dp),
+            .padding(start = 24.dp, end = 24.dp, top = 12.dp, bottom = 48.dp),
     ) {
         NewGenBackHeader(
             language = language,
@@ -123,8 +128,9 @@ fun CreatorPageScreen(
             },
         )
 
+        // Portrait, nom, statut et pedigree, centrés.
         Column(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().padding(top = 6.dp).dsStagger(0),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
@@ -132,8 +138,9 @@ fun CreatorPageScreen(
             Text(
                 text = author.name,
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 28.sp,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 24.sp,
+                lineHeight = 30.sp,
                 color = DS.ink,
                 textAlign = TextAlign.Center,
             )
@@ -142,7 +149,8 @@ fun CreatorPageScreen(
                 Text(
                     text = pedigree,
                     fontFamily = PlusJakartaSans,
-                    fontSize = 17.sp,
+                    fontSize = 15.sp,
+                    lineHeight = 21.sp,
                     color = DS.inkSecondary,
                     textAlign = TextAlign.Center,
                 )
@@ -152,11 +160,11 @@ fun CreatorPageScreen(
         // Quatre compteurs : abonnés, lectures, cours, langues.
         Row(
             modifier = Modifier
+                .padding(top = 16.dp)
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(18.dp))
-                .background(DS.surface)
-                .border(1.dp, DS.hairline, RoundedCornerShape(18.dp))
-                .padding(vertical = 16.dp),
+                .dsStagger(1)
+                .homeCard()
+                .padding(horizontal = 8.dp, vertical = 14.dp),
         ) {
             CreatorStat(followers.compactCount(language), StringStore.text(context, "creator.stat.followers", language), Modifier.weight(1f))
             CreatorStat(LocalCounters.reads(author).compactCount(language), StringStore.text(context, "creator.stat.reads", language), Modifier.weight(1f))
@@ -164,23 +172,48 @@ fun CreatorPageScreen(
             CreatorStat("${AppLanguage.entries.size}", StringStore.text(context, "creator.stat.languages", language), Modifier.weight(1f))
         }
 
-        Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
+        // « Suivre » sur toute la largeur et, à côté, la cloche (qui abonne si ce n'est pas fait).
+        Row(
+            modifier = Modifier.padding(top = 12.dp).dsStagger(2),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
             FollowButton(isFollowing = isFollowing, language = language, onClick = { toggleFollow() }, modifier = Modifier.weight(1f))
+            // La cloche rebondit quand l'abonnement change.
+            val bellBounce = remember { Animatable(1f) }
+            var bellFollowing by remember { mutableStateOf(isFollowing) }
+            LaunchedEffect(isFollowing) {
+                if (isFollowing != bellFollowing) {
+                    bellFollowing = isFollowing
+                    bellBounce.snapTo(0.7f)
+                    bellBounce.animateTo(1f, DSMotion.pop())
+                }
+            }
+            val bellTint by animateColorAsState(if (isFollowing) DS.accent else DS.ink, DSMotion.snappy(), label = "bellTint")
             Box(
                 modifier = Modifier
-                    .width(54.dp)
-                    .height(44.dp)
-                    .softPress(onClick = { if (!isFollowing) toggleFollow() })
-                    .clip(RoundedCornerShape(14.dp))
-                    .background(DS.surface)
-                    .border(1.dp, DS.hairline, RoundedCornerShape(14.dp)),
+                    .size(46.dp)
+                    .pressable(
+                        onClick = {
+                            haptics.select()
+                            if (!isFollowing) toggleFollow()
+                        },
+                        scaleDown = 0.93f,
+                        haptic = false,
+                    )
+                    .homeCard(shape = RoundedCornerShape(14.dp)),
                 contentAlignment = Alignment.Center,
             ) {
                 Icon(
                     imageVector = if (isFollowing) Icons.Filled.Notifications else Icons.Outlined.Notifications,
                     contentDescription = StringStore.text(context, "creator.notify", language),
-                    tint = DS.ink,
-                    modifier = Modifier.size(18.dp),
+                    tint = bellTint,
+                    modifier = Modifier
+                        .size(20.dp)
+                        .graphicsLayer {
+                            scaleX = bellBounce.value
+                            scaleY = bellBounce.value
+                        },
                 )
             }
         }
@@ -189,9 +222,10 @@ fun CreatorPageScreen(
             Text(
                 text = bio,
                 fontFamily = PlusJakartaSans,
-                fontSize = 17.sp,
-                lineHeight = 25.sp,
-                color = DS.ink,
+                fontSize = 15.sp,
+                lineHeight = 22.sp,
+                color = DS.inkSecondary,
+                modifier = Modifier.padding(top = 14.dp).dsStagger(3),
             )
         }
 
@@ -203,25 +237,31 @@ fun CreatorPageScreen(
             ),
             selection = segment,
             onSelect = { segment = it },
+            modifier = Modifier.padding(top = 16.dp).dsStagger(4),
         )
 
+        // Les cours de l'onglet choisi, ou le mot de l'onglet Séries tant qu'il est vide.
         if (segment == 2) {
             Text(
                 text = StringStore.text(context, "creator.series.empty", language),
                 fontFamily = PlusJakartaSans,
                 fontSize = 15.sp,
+                lineHeight = 21.sp,
                 color = DS.inkSecondary,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp),
+                modifier = Modifier.fillMaxWidth().padding(top = 9.dp).padding(vertical = 8.dp),
             )
         } else {
-            listed.forEach { course ->
-                CreatorCourseRow(
-                    course = course,
-                    language = language,
-                    progress = progress,
-                    onTap = { onOpenCourse(course) },
-                )
+            Column(modifier = Modifier.padding(top = 9.dp), verticalArrangement = Arrangement.spacedBy(9.dp)) {
+                listed.forEachIndexed { index, course ->
+                    Box(modifier = Modifier.dsStagger(minOf(index, 8), baseMillis = 200)) {
+                        CreatorCourseRow(
+                            course = course,
+                            language = language,
+                            progress = progress,
+                            onTap = { onOpenCourse(course) },
+                        )
+                    }
+                }
             }
         }
     }
@@ -234,7 +274,7 @@ private fun CreatorStat(value: String, label: String, modifier: Modifier = Modif
             text = value,
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.ExtraBold,
-            fontSize = 20.sp,
+            fontSize = 17.sp,
             color = DS.ink,
             maxLines = 1,
         )

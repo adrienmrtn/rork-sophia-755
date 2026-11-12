@@ -1,6 +1,11 @@
 package app.rork.sophia.ui.newgen
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,10 +16,10 @@ import androidx.compose.material.icons.filled.EmojiEvents
 import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material3.Icon
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.material.icons.outlined.EmojiEvents
+import androidx.compose.material.icons.outlined.Explore
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,10 +30,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.billing.StoreViewModel
@@ -44,7 +50,6 @@ import app.rork.sophia.domain.PathLevel
 import app.rork.sophia.domain.Subject
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.audio.AudioMiniPlayer
-import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.duels.DUELS_TAB_INDEX
 import app.rork.sophia.ui.duels.DuelsTabHost
 import app.rork.sophia.ui.path.LearningPathScreen
@@ -147,22 +152,37 @@ fun NewGenTabs(
         }
     }
 
-    val tabs = remember(showsDuels) {
+    // Icône en creux au repos, pleine pour l'onglet actif.
+    val tabs = remember(showsDuels, language) {
         buildList {
-            add(Triple("tab.home", Icons.Filled.Home, 0))
-            add(Triple("tab.explore", Icons.Filled.Explore, 1))
+            add(SophiaBottomTab(0, StringStore.text(context, "tab.home", language), Icons.Outlined.Home, Icons.Filled.Home))
+            add(SophiaBottomTab(1, StringStore.text(context, "tab.explore", language), Icons.Outlined.Explore, Icons.Filled.Explore))
             // Dessiné avant le Profil mais avec son propre index (5, comme sur iOS) : les
             // onglets existants gardent leurs numéros.
-            if (showsDuels) add(Triple("tab.duels", Icons.Filled.EmojiEvents, DUELS_TAB_INDEX))
-            add(Triple("tab.profile", Icons.Filled.Person, PROFILE_TAB_INDEX))
+            if (showsDuels) {
+                add(
+                    SophiaBottomTab(
+                        DUELS_TAB_INDEX,
+                        StringStore.text(context, "tab.duels", language),
+                        Icons.Outlined.EmojiEvents,
+                        Icons.Filled.EmojiEvents,
+                    ),
+                )
+            }
+            add(
+                SophiaBottomTab(
+                    PROFILE_TAB_INDEX,
+                    StringStore.text(context, "tab.profile", language),
+                    Icons.Outlined.Person,
+                    Icons.Filled.Person,
+                ),
+            )
         }
     }
-    // Quatre onglets au plus : les libellés tiennent largement en 11 sp.
-    val tabLabelSize = 11.sp
     // Un index sans onglet (2 et 3, anciens Parcours et Entraînement ; celui des Duels quand
     // l'onglet n'est pas affiché ; un index inconnu) retombe sur le Profil.
     val tabIndex = selectedTab.coerceIn(0, NEWGEN_TAB_COUNT - 1)
-        .let { if (tabs.none { tab -> tab.third == it }) PROFILE_TAB_INDEX else it }
+        .let { if (tabs.none { tab -> tab.index == it }) PROFILE_TAB_INDEX else it }
     val stack = routeStacks[tabIndex]
     fun push(route: NewGenRoute) {
         stack.add(route)
@@ -177,33 +197,10 @@ fun NewGenTabs(
             // Le mini-lecteur audio juste au-dessus de la barre d'onglets, comme en classique.
             Column {
                 AudioMiniPlayer(language = language, onOpen = onOpenAudioPlayer)
-                NavigationBar(containerColor = DS.canvas, contentColor = DS.accent) {
-                    tabs.forEach { (key, icon, index) ->
-                        NavigationBarItem(
-                            selected = tabIndex == index,
-                            onClick = { onSelectTab(index) },
-                            icon = { Icon(icon, contentDescription = null) },
-                            label = {
-                                Text(
-                                    text = StringStore.text(context, key, language),
-                                    fontFamily = PlusJakartaSans,
-                                    fontSize = tabLabelSize,
-                                    fontWeight = if (tabIndex == index) FontWeight.SemiBold else FontWeight.Normal,
-                                    maxLines = 1,
-                                    softWrap = false,
-                                    overflow = TextOverflow.Ellipsis,
-                                )
-                            },
-                            colors = NavigationBarItemDefaults.colors(
-                                selectedIconColor = DS.accent,
-                                selectedTextColor = DS.accent,
-                                unselectedIconColor = DS.inkTertiary,
-                                unselectedTextColor = DS.inkTertiary,
-                                indicatorColor = DS.accentTint,
-                            ),
-                        )
-                    }
-                }
+                // Fond blanc, filet en haut, bleu pour l'onglet actif : l'icône choisie rebondit
+                // et le téléphone fait un cran. Quatre onglets au plus : les libellés tiennent
+                // largement en 11 sp.
+                SophiaBottomBar(tabs = tabs, selectedIndex = tabIndex, onSelect = onSelectTab)
             }
         },
     ) { padding ->
@@ -271,13 +268,31 @@ fun NewGenTabs(
             }
 
             // L'écran en tête de pile, opaque, au-dessus de la racine qui garde ainsi son état
-            // (deck du fil, position de défilement) pour le retour.
+            // (deck du fil, position de défilement) pour le retour. Un écran poussé arrive d'un
+            // court glissement ; au retour, le précédent est déjà là.
+            val depth = stack.size
+            val previousDepth = remember(tabIndex) { intArrayOf(depth) }
+            val enter = remember(tabIndex, depth) { Animatable(if (depth > previousDepth[0]) 0f else 1f) }
+            LaunchedEffect(enter) {
+                previousDepth[0] = depth
+                if (enter.value < 1f) enter.animateTo(1f, tween(durationMillis = 240, easing = FastOutSlowInEasing))
+            }
+            val enterOffset = with(LocalDensity.current) { 28.dp.toPx() }
             stack.lastOrNull()?.let { route ->
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
+                        .graphicsLayer {
+                            alpha = enter.value
+                            translationY = (1f - enter.value) * enterOffset
+                        }
                         .background(DS.canvas)
-                        .softPress(onClick = {}),
+                        // Arrête les touches : l'onglet dessous ne doit pas y répondre.
+                        .clickable(
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null,
+                            onClick = {},
+                        ),
                     contentAlignment = Alignment.TopCenter,
                 ) {
                     RouteScreen(
