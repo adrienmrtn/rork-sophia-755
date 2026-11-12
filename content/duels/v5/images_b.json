@@ -120,10 +120,10 @@
   "name": "Pyramid of the Sun, Teotihuacan, Mexico"
  },
  "v5b_monument_golden_temple": {
-  "file": "Vintage postcard of the Golden Temple, Amritsar, ca.1905 (detail).jpg",
+  "file": "Photograph of the Golden Temple, Amritsar, ca.1900–10.jpg",
   "fit": "cover",
   "focus": "center",
-  "name": "Golden Temple (Harmandir Sahib), Amritsar, postcard c. 1905"
+  "name": "Golden Temple (Harmandir Sahib), Amritsar, c. 1900-1910"
  },
  "v5b_monument_temple_of_heaven": {
   "file": "20200110 Temple of Heaven-1.jpg",
@@ -233,12 +233,6 @@
   "focus": "center",
   "name": "Great Hypostyle Hall, Karnak, Luxor, Egypt"
  },
- "v5b_monument_kinkakuji": {
-  "file": "Kusakabe Kimbei 1337 Kinkakuji.JPG",
-  "fit": "cover",
-  "focus": "center",
-  "name": "Kinkaku-ji, Kyoto, photograph by Kusakabe Kimbei, 1880s"
- },
  "v5b_monument_shwedagon": {
   "file": "Shwedagon pagode, Rangoon Shwé Dagon pagoda. Rangoon, 565 (titel op object), RP-F-00-5342-2.jpg",
   "fit": "cover",
@@ -252,7 +246,7 @@
   "name": "El Castillo, Chichén Itzá, Frederick Catherwood, 1844"
  },
  "v5b_monument_us_capitol": {
-  "file": "The United States Capitol building sits atop Capitol Hill 10107v.jpg",
+  "file": "Aerial view, United States Capitol building, Washington, D.C LCCN2010630477.jpg",
   "fit": "cover",
   "focus": "center",
   "name": "United States Capitol, Washington, D.C., Carol M. Highsmith"
@@ -287,12 +281,6 @@
   "focus": "center",
   "name": "Okapi, Pearson Scott Foresman illustration"
  },
- "v5b_science_aye_aye": {
-  "file": "Ayeaye, Daubentonia madagascariensis, Joseph Wolf (touched).jpg",
-  "fit": "contain",
-  "focus": "center",
-  "name": "Aye-aye, Joseph Wolf"
- },
  "v5b_science_rafflesia": {
   "file": "Rafflesia-arnoldii.jpg",
   "fit": "cover",
@@ -310,5 +298,17 @@
   "fit": "contain",
   "focus": "center",
   "name": "Victoria Falls, Thomas Baines, 1860s"
+ },
+ "v5b_monument_cologne_cathedral": {
+  "file": "Kölner Dom um 1900.jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "Cologne Cathedral, photochrom, c. 1900"
+ },
+ "v5b_science_manatee": {
+  "file": "Hello There, Manatee (23105073981).jpg",
+  "fit": "cover",
+  "focus": "center",
+  "name": "West Indian manatee (US Fish and Wildlife Service)"
  }
 }
