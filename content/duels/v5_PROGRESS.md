@@ -53,3 +53,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - pt-PT parts 8–14 fini ; vague 2 lancée pour ro
 - sr parts 1–7 fini ; vague 2 lancée pour bg
 - nl parts 8–14 fini (nl complet texte) ; vague 2 lancée pour da
+- ja parts 1–7 fini ; vague 2 lancée pour sv
