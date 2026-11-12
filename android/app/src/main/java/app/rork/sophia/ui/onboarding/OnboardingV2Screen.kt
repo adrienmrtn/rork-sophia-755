@@ -3,17 +3,23 @@ package app.rork.sophia.ui.onboarding
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -32,6 +38,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
@@ -50,6 +59,7 @@ import app.rork.sophia.data.TrialReminderScheduler
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.Subject
+import app.rork.sophia.ui.components.DSProgressBar
 import app.rork.sophia.ui.paywall.OnboardingPaywallFlow
 import app.rork.sophia.ui.theme.ForceLightAppearance
 import app.rork.sophia.ui.theme.DS
@@ -59,21 +69,26 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 /**
- * The fixed sequence of the iOS 1.1.8 onboarding:
+ * The fixed sequence of the onboarding, as on iOS (`OnboardingV2View`):
  *
- * Welcome · Language · Presentation (pages joined by dots) · Social proof (500,000 users) ·
- * First name · Age · General knowledge (slider) · Motivation · Objectives · Subjects ·
- * « Sophia will help you » · Mission · Questions · Phone time · Life in years · « Turn that
- * time » · Reviews · Personalize · Swipe · Loading · Profile · Notifications · Login ·
- * Welcome aboard · Strengths · Trial · Reminder · Paywall.
+ * Welcome · Language · Lessons · Researchers · Presentation (a carousel of four pages that
+ * advance by themselves: quiz, path, duels, audio) · Social proof (500,000 users) · First
+ * name · Age · General knowledge (slider) · Motivation · Objectives · Subjects · « Sophia
+ * will help you » · Phone time · Life in years · « Turn that time » · Questions · Mission ·
+ * Personalize · Swipe · 90-day curve · Notifications · Reviews · Loading · Profile ·
+ * Login · Follow creators · Welcome aboard · Strengths · Trial · Reminder · Paywall.
  *
  * Two iOS pages are not here: the reading-time page sets the hour of the daily-course
- * notification, which Android does not send, and the presentation page previewing the
- * Parcours tab, which Android does not have.
+ * notification, which Android does not send, and the account page (avatar and handle).
+ *
+ * The header (back arrow, carousel segments, progress bar) is laid here, once, over the
+ * pages: each page gets [ONBOARDING_HEADER_HEIGHT] of room above it and knows nothing of it.
  */
 private enum class OnboardingStep {
     Welcome,
     Language,
+    Lessons,
+    Researchers,
     Intro,
     SocialProof,
     Name,
@@ -83,17 +98,18 @@ private enum class OnboardingStep {
     Objectives,
     Topics,
     ObjectiveIntro,
-    Mission,
-    Questions,
     PhoneTime,
     YearsGrid,
     Transform,
-    Review,
+    Questions,
+    Mission,
     Personalize,
     Swipe,
+    Curve90,
+    Notifications,
+    Review,
     Loading,
     Profile,
-    Notifications,
     Login,
     FollowCreators,
     WelcomeAboard,
@@ -108,6 +124,8 @@ private enum class OnboardingStep {
         get() = when (this) {
             Welcome -> "welcome"
             Language -> "language"
+            Lessons -> "lessons"
+            Researchers -> "researchers"
             Intro -> "intro"
             SocialProof -> "social_proof"
             Name -> "name"
@@ -117,17 +135,18 @@ private enum class OnboardingStep {
             Objectives -> "objective"
             Topics -> "topics"
             ObjectiveIntro -> "objective_intro"
-            Mission -> "mission"
-            Questions -> "questions"
             PhoneTime -> "phone_time"
             YearsGrid -> "years_grid"
             Transform -> "transform"
-            Review -> "review"
+            Questions -> "questions"
+            Mission -> "mission"
             Personalize -> "personalize"
             Swipe -> "swipe_courses"
+            Curve90 -> "curve_90"
+            Notifications -> "notifications"
+            Review -> "review"
             Loading -> "loading"
             Profile -> "profile"
-            Notifications -> "notifications"
             Login -> "login"
             FollowCreators -> "follow_creators"
             WelcomeAboard -> "welcome_aboard"
@@ -140,8 +159,27 @@ private enum class OnboardingStep {
         }
 }
 
-/** Steps that carry the progress dots, matching the iOS `dotScreens` set. */
-private val DOT_STEPS = listOf(
+/** What the header shows above a step. */
+private enum class HeaderKind {
+    /** No header: the welcome page, then the login and everything after it. */
+    None,
+
+    /** The back arrow alone. */
+    Back,
+
+    /** The back arrow and the four segments of the carousel. */
+    Segments,
+
+    /** The back arrow and the 200 dp progress bar. */
+    Progress,
+}
+
+/** Opening steps: the back arrow, no bar. */
+private val BACK_ONLY_STEPS = setOf(OnboardingStep.Language, OnboardingStep.Lessons, OnboardingStep.Researchers)
+
+/** Steps counted by the progress bar, in flow order: from the social proof to the profile included. */
+private val PROGRESS_STEPS = listOf(
+    OnboardingStep.SocialProof,
     OnboardingStep.Name,
     OnboardingStep.Age,
     OnboardingStep.Knowledge,
@@ -149,14 +187,39 @@ private val DOT_STEPS = listOf(
     OnboardingStep.Objectives,
     OnboardingStep.Topics,
     OnboardingStep.ObjectiveIntro,
-    OnboardingStep.Mission,
-    OnboardingStep.Questions,
     OnboardingStep.PhoneTime,
     OnboardingStep.YearsGrid,
-    OnboardingStep.Review,
+    OnboardingStep.Transform,
+    OnboardingStep.Questions,
+    OnboardingStep.Mission,
+    OnboardingStep.Personalize,
     OnboardingStep.Swipe,
+    OnboardingStep.Curve90,
+    OnboardingStep.Notifications,
+    OnboardingStep.Review,
     OnboardingStep.Loading,
+    OnboardingStep.Profile,
 )
+
+private fun headerKind(step: OnboardingStep): HeaderKind = when (step) {
+    OnboardingStep.Intro -> HeaderKind.Segments
+    in BACK_ONLY_STEPS -> HeaderKind.Back
+    in PROGRESS_STEPS -> HeaderKind.Progress
+    else -> HeaderKind.None
+}
+
+/**
+ * How full the bar is: the first counted step shows it barely started, the last fills it.
+ * Before the counted steps it is empty, after them full, so it fades in and out at rest.
+ */
+private fun progressValue(step: OnboardingStep): Float {
+    val index = PROGRESS_STEPS.indexOf(step)
+    return when {
+        index >= 0 -> (index + 1f) / PROGRESS_STEPS.size
+        step.ordinal < PROGRESS_STEPS.first().ordinal -> 0f
+        else -> 1f
+    }
+}
 
 /** Subjects behind each objective, for the swipe deck when the subjects page gave nothing. */
 private fun subjectsFor(objective: String): List<String> = when (objective) {
@@ -184,7 +247,8 @@ private val OnboardingStepSaver: Saver<OnboardingStep, String> = Saver(
  * The page back should land on. Mostly the declaration order, with the branches the forward
  * flow can skip: the notifications page is not shown once the permission is settled, and
  * the trial explanation is skipped when the served product has no trial. Going back
- * through a page that was never shown would strand the user on a dead end.
+ * through a page that was never shown would strand the user on a dead end. The loading
+ * page is skipped too: it moves on by itself and would send the user straight back.
  */
 private fun previousStep(
     step: OnboardingStep,
@@ -195,7 +259,8 @@ private fun previousStep(
     // The paywall is the end of the flow; its own close button decides what "leaving" means.
     OnboardingStep.Paywall -> null
     OnboardingStep.Reminder -> if (showsTrialSteps) OnboardingStep.Trial else OnboardingStep.Features
-    OnboardingStep.Login -> if (showsNotifications) OnboardingStep.Notifications else OnboardingStep.Profile
+    OnboardingStep.Review -> if (showsNotifications) OnboardingStep.Notifications else OnboardingStep.Curve90
+    OnboardingStep.Profile -> OnboardingStep.Review
     else -> OnboardingStep.entries.getOrNull(step.ordinal - 1)
 }
 
@@ -253,12 +318,24 @@ fun OnboardingV2Screen(
     val scope = rememberCoroutineScope()
     // « I already have an account », opened from the welcome page.
     var showExistingAccount by remember { mutableStateOf(false) }
+    val haptics = rememberOnboardingHaptics()
+    val reduceMotion = rememberOnboardingReduceMotion()
+    // Page and clock of the presentation carousel, shared with the segments of the header.
+    val carousel = rememberSaveable(saver = OnboardingCarouselState.StateSaver) { OnboardingCarouselState() }
+    // The animated logo, played once when the onboarding opens on the welcome page (first
+    // launch, or a resume that stayed there). A resume further along does not replay it.
+    var showSplash by rememberSaveable { mutableStateOf(step == OnboardingStep.Welcome) }
 
     // A racing timer (last swipe card, word animation) must not skip a whole screen.
     fun goTo(next: OnboardingStep) {
         val now = System.currentTimeMillis()
         if (now - lastAdvanceAt < 400L) return
         lastAdvanceAt = now
+        // The button just vibrated: no doubling. Advances without a button (carousel, end of
+        // the swipe) keep their light tick.
+        if (!OnboardingHapticGate.justConfirmed) haptics.selection()
+        // The carousel always starts from its first page when entered going forward.
+        if (next == OnboardingStep.Intro) carousel.go(0)
         step = next
     }
 
@@ -310,11 +387,11 @@ fun OnboardingV2Screen(
     }
 
     /** The notifications page has nothing to add once the permission is already settled. */
-    fun stepAfterProfile(): OnboardingStep =
+    fun stepAfterCurve90(): OnboardingStep =
         if (NotificationPermission.shouldAsk(context)) {
             OnboardingStep.Notifications
         } else {
-            OnboardingStep.Login
+            OnboardingStep.Review
         }
 
     /**
@@ -399,19 +476,35 @@ fun OnboardingV2Screen(
         swipeReady = true
     }
 
-    // Back walks the flow backwards. The welcome page is the one place with nothing behind
-    // it, so there the system default (leave the app) is the right answer.
-    BackHandler(enabled = step != OnboardingStep.Welcome) {
+    // Back walks the flow backwards, from the header's arrow as from the system gesture.
+    fun goBack() {
+        // In the carousel, back walks its pages first.
+        if (step == OnboardingStep.Intro && carousel.page > 0) {
+            haptics.selection()
+            carousel.go(carousel.page - 1, hold = true)
+            return
+        }
         val previous = previousStep(
             step,
             showsTrialSteps = storeViewModel.shouldShowTrialSteps(),
             showsNotifications = NotificationPermission.shouldAsk(context),
-        )
-        if (previous != null) {
-            lastAdvanceAt = System.currentTimeMillis()
-            step = previous
+        ) ?: return
+        // Back from the social proof, the carousel shows its last page, at rest: it must not
+        // send the user by itself to the screen they just left.
+        if (previous == OnboardingStep.Intro) {
+            carousel.go(OnboardingCarouselState.PAGE_COUNT - 1, hold = true)
         }
+        lastAdvanceAt = System.currentTimeMillis()
+        haptics.selection()
+        step = previous
     }
+
+    // The welcome page is the one place with nothing behind it, so there the system default
+    // (leave the app) is the right answer.
+    BackHandler(enabled = step != OnboardingStep.Welcome) { goBack() }
+
+    val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
+    val slidePx = with(LocalDensity.current) { (if (reduceMotion) 0.dp else 64.dp).roundToPx() }
 
     Box(
         modifier = Modifier.fillMaxSize().background(DS.canvas),
@@ -424,18 +517,30 @@ fun OnboardingV2Screen(
         AnimatedContent(
             targetState = step,
             transitionSpec = {
-                // Pages arrive from above and leave downwards, like the iOS `ov2` transition.
-                (slideInVertically(spring(dampingRatio = 0.9f, stiffness = Spring.StiffnessMediumLow)) {
-                    -it / 8
-                } + fadeIn(tween(280))) togetherWith
-                    (slideOutVertically(tween(240)) { it / 6 } + fadeOut(tween(200)))
+                // A horizontal slide on a spring with a fade, as the iOS `ov2Slide`: the new
+                // page comes from the reading side going forward, from the other going back.
+                val forward = targetState.ordinal > initialState.ordinal
+                val sign = if (forward != rtl) 1 else -1
+                (slideInHorizontally(spring(dampingRatio = 0.9f, stiffness = 130f)) { sign * slidePx } +
+                    fadeIn(tween(300))) togetherWith
+                    (slideOutHorizontally(spring(dampingRatio = 0.9f, stiffness = 130f)) { -sign * slidePx } +
+                        fadeOut(tween(200)))
             },
             label = "onboardingStep",
         ) { current ->
+            // Room for the header above the steps that carry one.
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = if (headerKind(current) == HeaderKind.None) 0.dp else ONBOARDING_HEADER_HEIGHT),
+            ) {
             when (current) {
                 OnboardingStep.Welcome -> WelcomeStep(
                     language = language,
                     onContinue = { goTo(OnboardingStep.Language) },
+                    // The entrance of the page waits for the animated logo to finish playing.
+                    entranceDelayMillis = if (showSplash) ONBOARDING_SPLASH_MILLIS else 0,
+                    animateWall = richMotion,
                     // Without Google there is nothing to sign in with: no door to show.
                     onExistingAccount = if (googleAvailable) {
                         {
@@ -449,9 +554,11 @@ fun OnboardingV2Screen(
                 OnboardingStep.Language -> LanguageStep(
                     language = language,
                     onSelect = onLanguageSelected,
-                    onContinue = { goTo(OnboardingStep.Intro) },
+                    onContinue = { goTo(OnboardingStep.Lessons) },
                 )
-                OnboardingStep.Intro -> IntroCarouselStep(language) { goTo(OnboardingStep.SocialProof) }
+                OnboardingStep.Lessons -> LessonsStep(language) { goTo(OnboardingStep.Researchers) }
+                OnboardingStep.Researchers -> ResearchersStep(language) { goTo(OnboardingStep.Intro) }
+                OnboardingStep.Intro -> IntroCarouselStep(language, carousel) { goTo(OnboardingStep.SocialProof) }
                 OnboardingStep.SocialProof -> SocialProofStep(language) { goTo(OnboardingStep.Name) }
                 OnboardingStep.Name -> NameStep(
                     language = language,
@@ -504,10 +611,6 @@ fun OnboardingV2Screen(
                     onContinue = { goTo(OnboardingStep.ObjectiveIntro) },
                 )
                 OnboardingStep.ObjectiveIntro -> ObjectiveIntroStep(language, answers.firstName) {
-                    goTo(OnboardingStep.Mission)
-                }
-                OnboardingStep.Mission -> MissionStep(language) { goTo(OnboardingStep.Questions) }
-                OnboardingStep.Questions -> QuestionsStep(language, richMotion) {
                     goTo(OnboardingStep.PhoneTime)
                 }
                 OnboardingStep.PhoneTime -> PhoneTimeStep(
@@ -521,7 +624,25 @@ fun OnboardingV2Screen(
                     phoneMinutes = phoneMinutes,
                     onContinue = { goTo(OnboardingStep.Transform) },
                 )
-                OnboardingStep.Transform -> TransformStep(language) { goTo(OnboardingStep.Review) }
+                OnboardingStep.Transform -> TransformStep(language) { goTo(OnboardingStep.Questions) }
+                OnboardingStep.Questions -> QuestionsStep(language, richMotion) {
+                    goTo(OnboardingStep.Mission)
+                }
+                OnboardingStep.Mission -> MissionStep(language) { goTo(OnboardingStep.Personalize) }
+                OnboardingStep.Personalize -> PersonalizeStep(language) { goTo(OnboardingStep.Swipe) }
+                OnboardingStep.Swipe -> SwipeCoursesStep(
+                    language = language,
+                    courses = swipeCourses,
+                    ready = swipeReady,
+                    onFinished = { liked ->
+                        likedCourseIds = liked
+                        goTo(OnboardingStep.Curve90)
+                    },
+                )
+                OnboardingStep.Curve90 -> Curve90Step(language) { goTo(stepAfterCurve90()) }
+                OnboardingStep.Notifications -> NotificationsStep(language) {
+                    goTo(OnboardingStep.Review)
+                }
                 OnboardingStep.Review -> {
                     // Ask for the Play rating on the page that already talks about ratings,
                     // once the entrance animation has settled.
@@ -530,19 +651,9 @@ fun OnboardingV2Screen(
                         InAppReviewHelper.requestOnce(context, app.progressManager)
                     }
                     ReviewStep(language, richMotion) {
-                        goTo(OnboardingStep.Personalize)
+                        goTo(OnboardingStep.Loading)
                     }
                 }
-                OnboardingStep.Personalize -> PersonalizeStep(language) { goTo(OnboardingStep.Swipe) }
-                OnboardingStep.Swipe -> SwipeCoursesStep(
-                    language = language,
-                    courses = swipeCourses,
-                    ready = swipeReady,
-                    onFinished = { liked ->
-                        likedCourseIds = liked
-                        goTo(OnboardingStep.Loading)
-                    },
-                )
                 OnboardingStep.Loading -> LoadingProfileStep(language, answers.firstName) {
                     goTo(OnboardingStep.Profile)
                 }
@@ -551,11 +662,8 @@ fun OnboardingV2Screen(
                     firstName = answers.firstName,
                     objectiveKeys = selectedObjectives.toList().ifEmpty { listOf(primaryObjective) },
                     likedCourseIds = likedCourseIds,
-                    onContinue = { goTo(stepAfterProfile()) },
+                    onContinue = { goTo(OnboardingStep.Login) },
                 )
-                OnboardingStep.Notifications -> NotificationsStep(language) {
-                    goTo(OnboardingStep.Login)
-                }
                 OnboardingStep.Login -> LoginStep(
                     language = language,
                     signingIn = signingIn,
@@ -599,17 +707,40 @@ fun OnboardingV2Screen(
                     )
                 }
             }
+            }
         }
 
         }
 
-        val dotIndex = DOT_STEPS.indexOf(step)
-        if (dotIndex >= 0) {
-            OnboardingProgressDots(
-                current = dotIndex,
-                total = DOT_STEPS.size,
-                modifier = Modifier.align(Alignment.TopCenter).padding(top = 14.dp),
-            )
+        // The header of the current step; nothing on the welcome page, nor from the login on.
+        val kind = headerKind(step)
+        AnimatedVisibility(
+            visible = kind != HeaderKind.None,
+            modifier = Modifier.align(Alignment.TopCenter),
+            enter = fadeIn(tween(220)),
+            exit = fadeOut(tween(160)),
+        ) {
+            OnboardingHeader(
+                backLabel = StringStore.text(context, "training.backToTraining", language),
+                onBack = { goBack() },
+            ) {
+                AnimatedContent(
+                    targetState = kind,
+                    transitionSpec = { fadeIn(tween(200)) togetherWith fadeOut(tween(150)) },
+                    label = "onboardingHeader",
+                ) { shown ->
+                    when (shown) {
+                        HeaderKind.Segments -> OnboardingStorySegments(
+                            count = OnboardingCarouselState.PAGE_COUNT,
+                            current = carousel.page,
+                            // A page that does not advance by itself shows its segment full.
+                            progress = { if (carousel.isRunning) carousel.progress else 1f },
+                        )
+                        HeaderKind.Progress -> DSProgressBar(value = progressValue(step))
+                        HeaderKind.Back, HeaderKind.None -> Spacer(Modifier.fillMaxWidth().height(5.dp))
+                    }
+                }
+            }
         }
 
         // Someone reinstalling or switching phone: sign in and land in the app with their
@@ -632,6 +763,14 @@ fun OnboardingV2Screen(
                 },
                 onClose = { if (!signingIn) showExistingAccount = false },
             )
+        }
+
+        AnimatedVisibility(
+            visible = showSplash,
+            enter = EnterTransition.None,
+            exit = fadeOut(tween(350)),
+        ) {
+            OnboardingSplash(onFinished = { showSplash = false })
         }
     }
 }
