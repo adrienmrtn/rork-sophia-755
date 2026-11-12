@@ -62,9 +62,13 @@ struct OnboardingV2Loading: View {
         ]
     }
 
-    /// Nom stable de chaque question dans l'événement d'analyse.
+    /// Nom stable de chaque question dans l'événement d'analyse, dans l'ordre de `questionKeys`.
+    /// Ils décrivent les questions telles qu'elles sont posées (un livre par mois, oublier ce
+    /// qu'on vient de lire, trop de téléphone, apprendre chaque jour) : les anciens noms
+    /// (`reads_daily`, `curious`, `wants_to_remember`) dataient des premières formulations et
+    /// rangeaient les réponses sous une autre question que celle affichée.
     private static let questionAnalyticsNames: [String] = [
-        "reads_daily", "curious", "too_much_phone", "wants_to_remember",
+        "reads_monthly", "forgets_reading", "too_much_phone", "likes_learning_daily",
     ]
 
     private var isPaused: Bool { waitingFor != nil }
