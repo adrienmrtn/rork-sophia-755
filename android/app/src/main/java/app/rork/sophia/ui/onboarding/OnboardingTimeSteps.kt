@@ -1,6 +1,9 @@
 package app.rork.sophia.ui.onboarding
 
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.SizeTransform
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloat
@@ -18,11 +21,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsDraggedAsState
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
@@ -36,6 +40,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
@@ -52,19 +57,38 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.R
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.domain.formatted
 import app.rork.sophia.domain.locale
+import app.rork.sophia.ui.components.DSHighlightTitle
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.rememberHaptics
+import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import kotlin.math.roundToInt
 import kotlinx.coroutines.delay
@@ -77,6 +101,14 @@ internal fun screenTimeLabel(context: android.content.Context, minutes: Int, lan
     return if (rest == 0) "${hours}h" else String.format("%dh%02d", hours, rest)
 }
 
+/**
+ * « How long do you spend on your phone each day? »: a slider from 30 min to 10 h in blocks
+ * of 30 min; the big number rolls as it changes.
+ *
+ * « Elevate arrondi » style: centred title, a round illustration when the height allows, the
+ * time very large and in blue, the slider and its bounds, then the pinned call to action.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 internal fun PhoneTimeStep(
     language: AppLanguage,
@@ -85,12 +117,16 @@ internal fun PhoneTimeStep(
     onContinue: () -> Unit,
 ) {
     val context = LocalContext.current
-    val haptics = rememberOnboardingHaptics()
+    val haptics = rememberHaptics()
     var slider by remember { mutableFloatStateOf(minutes.toFloat()) }
     var lastStep by remember { mutableIntStateOf(minutes / 30) }
+    val title = StringStore.text(context, "onboardingV2.phoneTime.title", language)
+    // Already the biggest text of the flow: it does not grow with the font scale, and it
+    // steps down on a narrow screen so « 30 min » stays on one line.
+    val fontScale = LocalDensity.current.fontScale.coerceAtLeast(1f)
+    val numberSize = ((if (LocalConfiguration.current.screenWidthDp < 340) 66f else 84f) / fontScale).sp
 
-    OnboardingPage(
-        contentArrangement = Arrangement.Top,
+    OV2CorePage(
         footer = {
             OnboardingCta(
                 text = StringStore.text(context, "common.continue", language),
@@ -100,40 +136,68 @@ internal fun PhoneTimeStep(
                 },
             )
         },
-    ) {
-        Spacer(Modifier.height(84.dp))
-        Text(
-            text = StringStore.text(context, "onboardingV2.phoneTime.title", language),
-            style = OV2.title,
-            textAlign = TextAlign.Center,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 28.dp)
-                .ov2Reveal(100),
+    ) { available ->
+        val art = OV2Core.artSize(base = 116.dp, available = available, reserved = 360.dp)
+        OV2CoreQuestionTitle(
+            title = title,
+            modifier = Modifier.padding(top = OV2Core.topInset).dsStagger(0),
         )
+        if (art > 0.dp) {
+            OV2CoreIllustration(
+                art = R.drawable.antiscroll_poster,
+                size = art,
+                modifier = Modifier.padding(top = 22.dp).dsPopIn(120),
+            )
+        }
+        // The number and the slider sit in the middle of the height left under the illustration.
+        Spacer(Modifier.height(24.dp))
+        Spacer(Modifier.weight(1f))
         AnimatedContent(
             targetState = slider.toInt(),
             transitionSpec = {
-                if (targetState > initialState) {
-                    (slideInVertically { it / 2 } + fadeIn()) togetherWith
-                        (slideOutVertically { -it / 2 } + fadeOut())
-                } else {
-                    (slideInVertically { -it / 2 } + fadeIn()) togetherWith
-                        (slideOutVertically { it / 2 } + fadeOut())
-                }
+                val up = targetState > initialState
+                (slideInVertically(DSMotion.snappy<IntOffset>()) { if (up) it / 2 else -it / 2 } + fadeIn(tween(160))) togetherWith
+                    (slideOutVertically(tween(160)) { if (up) -it / 2 else it / 2 } + fadeOut(tween(120))) using
+                    SizeTransform(clip = false)
             },
+            modifier = Modifier.padding(horizontal = OV2Core.sideInset).dsStagger(1),
             label = "minutes",
         ) { value ->
             Text(
                 text = screenTimeLabel(context, value, language),
+                style = TextStyle(fontFeatureSettings = "tnum"),
                 fontFamily = PlusJakartaSans,
                 fontWeight = FontWeight.ExtraBold,
-                fontSize = 62.sp,
-                color = OV2.accent,
+                fontSize = numberSize,
+                letterSpacing = (-2).sp,
+                color = DS.accent,
+                maxLines = 1,
+                softWrap = false,
             )
         }
-        Spacer(Modifier.height(32.dp))
-        Column(modifier = Modifier.padding(horizontal = 36.dp).ov2Reveal(300)) {
+        Column(
+            modifier = Modifier
+                .padding(horizontal = 32.dp)
+                .padding(top = 20.dp)
+                .dsStagger(2),
+        ) {
+            val sliderColors = SliderDefaults.colors(
+                thumbColor = DS.accent,
+                activeTrackColor = DS.accent,
+                inactiveTrackColor = DS.accentTint,
+                activeTickColor = Color.Transparent,
+                inactiveTickColor = Color.Transparent,
+            )
+            val interaction = remember { MutableInteractionSource() }
+            val pressed by interaction.collectIsPressedAsState()
+            val dragged by interaction.collectIsDraggedAsState()
+            val thumbScale by animateFloatAsState(
+                targetValue = if (pressed || dragged) 1.18f else 1f,
+                animationSpec = DSMotion.press(),
+                label = "phoneTimeThumb",
+            )
+            // The slider of the style: a thin rounded track without notches, a round blue thumb
+            // that swells under the finger.
             Slider(
                 value = slider,
                 onValueChange = { raw ->
@@ -141,23 +205,50 @@ internal fun PhoneTimeStep(
                     slider = snapped.toFloat()
                     if (snapped / 30 != lastStep) {
                         lastStep = snapped / 30
-                        haptics.selection()
+                        haptics.select()
                         onMinutesChange(snapped)
                     }
                 },
                 valueRange = 30f..600f,
                 steps = 18,
-                colors = SliderDefaults.colors(
-                    thumbColor = OV2.accent,
-                    activeTrackColor = OV2.accent,
-                    inactiveTrackColor = OV2.hairline,
-                ),
+                colors = sliderColors,
+                interactionSource = interaction,
+                thumb = {
+                    Box(
+                        modifier = Modifier
+                            .size(24.dp)
+                            .graphicsLayer {
+                                scaleX = thumbScale
+                                scaleY = thumbScale
+                            }
+                            .background(DS.accent, CircleShape)
+                            .border(3.dp, DS.surface, CircleShape),
+                    )
+                },
+                track = { state ->
+                    SliderDefaults.Track(
+                        sliderState = state,
+                        modifier = Modifier.height(6.dp),
+                        colors = sliderColors,
+                        drawStopIndicator = null,
+                        drawTick = { _, _ -> },
+                        thumbTrackGapSize = 0.dp,
+                        trackInsideCornerSize = 0.dp,
+                    )
+                },
+                modifier = Modifier.semantics {
+                    contentDescription = title
+                    stateDescription = screenTimeLabel(context, slider.toInt(), language)
+                },
             )
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(screenTimeLabel(context, 30, language), style = OV2.caption.copy(color = OV2.inkTertiary))
-                Text(screenTimeLabel(context, 600, language), style = OV2.caption.copy(color = OV2.inkTertiary))
+                val boundStyle = OV2.caption.copy(color = DS.inkSecondary)
+                Text(screenTimeLabel(context, 30, language), style = boundStyle)
+                Text(screenTimeLabel(context, 600, language), style = boundStyle)
             }
         }
+        Spacer(Modifier.height(24.dp))
+        Spacer(Modifier.weight(1f))
     }
 }
 
@@ -177,20 +268,29 @@ private val SleepColor = Color(0xFF4D9E6B)
 private val WorkColor = Color(0xFF8C613D)
 private val FreeColor = Color(0xFFB8D1F2)
 
+/** Red of the years spent on the phone. */
+private val PhoneColor = Color(0xFFC8402F)
+
+private val GRID_SPACING = 7.dp
+
 /**
- * 80 squares, one per year of a life. They colour in by thirds: sleep in green, work in
- * brown, then the free time that is left. Sleep and work then fade out, and inside the free
- * time, square after square, in red, the years spent on the phone (from the daily screen
- * time given before); the number lands big, then the sentence.
+ * 80 squares, one per year of a life. They colour in slowly, one third after the other: sleep
+ * in green, work in brown, then the free time that is left. Then, inside that free time,
+ * square after square, in red, the years spent on the phone (from the daily screen time given
+ * before); the conclusion, the number set large and its sentence, only arrives at the very end.
+ *
+ * The sequence lasts about 14 seconds and nothing gives the number away before: the title is
+ * neutral (« Here's your life in years »), the « phone » line of the legend counts along with
+ * the squares. « Continue » works from the first frame to the last.
  *
  * Every counter is saved, so a rotation or a trip to the background resumes the sequence
- * where it was instead of replaying it, and the button always ends up on screen.
+ * where it was instead of replaying it.
  */
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue: () -> Unit) {
     val context = LocalContext.current
-    val haptics = rememberOnboardingHaptics()
+    val haptics = rememberHaptics()
+    val reducedMotion = rememberOV2CoreReducedMotion()
     // Free-time years spent on the phone: the daily screen time over 80 years, capped at
     // the free time (beyond it, all the free time goes there).
     val screenYears = remember(phoneMinutes) {
@@ -201,93 +301,73 @@ internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue:
     var workFilled by rememberSaveable { mutableIntStateOf(0) }
     var freeFilled by rememberSaveable { mutableIntStateOf(0) }
     var screenFilled by rememberSaveable { mutableIntStateOf(0) }
-    var focusPhone by rememberSaveable { mutableStateOf(false) }
-    var showTitle by rememberSaveable { mutableStateOf(false) }
-    var showNumber by rememberSaveable { mutableStateOf(false) }
-    var showCaption by rememberSaveable { mutableStateOf(false) }
-    var showButton by rememberSaveable { mutableStateOf(false) }
+    var showConclusion by rememberSaveable { mutableStateOf(false) }
 
     LaunchedEffect(screenYears) {
-        try {
-            // 1 — the grey squares open.
-            if (revealed < TOTAL_YEARS) {
-                delay(300)
-                for (i in revealed + 1..TOTAL_YEARS) {
-                    revealed = i
-                    if (i % 10 == 0) haptics.selection()
-                    delay(10)
-                }
+        if (reducedMotion) {
+            // With animations off, the page opens in its final state.
+            revealed = TOTAL_YEARS
+            sleepFilled = SLEEP_YEARS
+            workFilled = WORK_YEARS
+            freeFilled = FREE_YEARS
+            screenFilled = screenYears
+            showConclusion = true
+            return@LaunchedEffect
+        }
+        // 1 — the grey squares open (≈ 0.3 → 1.2 s).
+        if (revealed < TOTAL_YEARS) {
+            delay(300)
+            for (i in revealed + 1..TOTAL_YEARS) {
+                revealed = i
+                if (i % 10 == 0) haptics.select()
+                delay(11)
             }
-            // 2 — « Here is your life in years ».
-            if (!showTitle) {
-                delay(400)
-                showTitle = true
-                delay(700)
+            delay(800)
+        }
+        // 2, 3, 4 — the three thirds, each with its legend line and the time to read it.
+        suspend fun fill(target: Int, current: Int, apply: (Int) -> Unit) {
+            for (i in current + 1..target) {
+                apply(i)
+                if (i % 9 == 0) haptics.select()
+                delay(50)
             }
-            // 3 — the three thirds, each given time to be read.
-            suspend fun fill(target: Int, current: Int, apply: (Int) -> Unit) {
-                for (i in current + 1..target) {
-                    apply(i)
-                    if (i % 9 == 0) haptics.selection()
-                    delay(30)
-                }
+        }
+        if (sleepFilled < SLEEP_YEARS) {
+            fill(SLEEP_YEARS, sleepFilled) { sleepFilled = it }
+            delay(1250)
+        }
+        if (workFilled < WORK_YEARS) {
+            fill(WORK_YEARS, workFilled) { workFilled = it }
+            delay(1250)
+        }
+        if (freeFilled < FREE_YEARS) {
+            fill(FREE_YEARS, freeFilled) { freeFilled = it }
+            delay(1500)
+        }
+        // 5 — the free-time years spent on the phone, one by one (≈ 3 s whatever their number).
+        if (screenFilled < screenYears) {
+            val perSquare = (3000L / screenYears).coerceIn(120L, 450L)
+            for (i in screenFilled + 1..screenYears) {
+                screenFilled = i
+                haptics.tick()
+                delay(perSquare)
             }
-            if (sleepFilled < SLEEP_YEARS) {
-                fill(SLEEP_YEARS, sleepFilled) { sleepFilled = it }
-                delay(550)
-            }
-            if (workFilled < WORK_YEARS) {
-                fill(WORK_YEARS, workFilled) { workFilled = it }
-                delay(550)
-            }
-            if (freeFilled < FREE_YEARS) {
-                fill(FREE_YEARS, freeFilled) { freeFilled = it }
-                delay(700)
-            }
-            // 4 — sleep and work fade: only the free time is left.
-            if (!focusPhone) {
-                focusPhone = true
-                delay(700)
-            }
-            // 5 — the free-time years spent on the phone, one by one.
-            if (screenFilled < screenYears) {
-                for (i in screenFilled + 1..screenYears) {
-                    screenFilled = i
-                    haptics.selection()
-                    delay(140)
-                }
-                haptics.commit()
-            }
-            // 6 — the number, big, then the sentence, then the button.
-            if (!showNumber) {
-                delay(250)
-                showNumber = true
-                delay(450)
-            }
-            showCaption = true
+            haptics.rigid()
+        }
+        // 6 — the conclusion, last.
+        if (!showConclusion) {
             delay(600)
-        } finally {
-            // Finished or interrupted, the page always offers a way out.
-            showButton = true
+            showConclusion = true
         }
     }
 
-    val titleAlpha by animateFloatAsState(if (showTitle) 1f else 0f, tween(700), label = "gridTitle")
-    val numberProgress by animateFloatAsState(
-        targetValue = if (showNumber) 1f else 0f,
-        animationSpec = spring(dampingRatio = 0.6f, stiffness = Spring.StiffnessMediumLow),
-        label = "gridNumber",
-    )
-    val captionAlpha by animateFloatAsState(if (showCaption) 1f else 0f, tween(600), label = "gridCaption")
-    val buttonAlpha by animateFloatAsState(if (showButton) 1f else 0f, tween(500), label = "gridCta")
-
     fun squareColor(i: Int): Color {
-        if (i < SLEEP_YEARS) return if (i < sleepFilled) SleepColor else OV2.hairline.copy(alpha = 0.7f)
+        if (i < SLEEP_YEARS) return if (i < sleepFilled) SleepColor else DS.hairline
         val work = i - SLEEP_YEARS
-        if (work < WORK_YEARS) return if (work < workFilled) WorkColor else OV2.hairline.copy(alpha = 0.7f)
+        if (work < WORK_YEARS) return if (work < workFilled) WorkColor else DS.hairline
         val free = i - SLEEP_YEARS - WORK_YEARS
-        if (free < screenFilled) return OV2.danger
-        return if (free < freeFilled) FreeColor else OV2.hairline.copy(alpha = 0.7f)
+        if (free < screenFilled) return PhoneColor
+        return if (free < freeFilled) FreeColor else DS.hairline
     }
 
     fun isFilled(i: Int): Boolean {
@@ -298,186 +378,217 @@ internal fun YearsGridStep(language: AppLanguage, phoneMinutes: Int, onContinue:
         return free < freeFilled || free < screenFilled
     }
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        // The CTA is pinned outside the scroll, and the grid is capped: on a tablet each
-        // square used to grow to ~100dp and push the button off the screen for good.
+    // The CTA is pinned outside the scroll, always there and always active: one can move on
+    // without waiting for the end.
+    OV2CorePage(
+        footer = {
+            OnboardingCta(
+                text = StringStore.text(context, "common.continue", language),
+                onClick = onContinue,
+            )
+        },
+    ) { available ->
+        // « Here's **your life in years** » and « One square, one year. »: there from the
+        // start, saying nothing of the result.
         Column(
             modifier = Modifier
-                .weight(1f)
                 .fillMaxWidth()
-                .verticalScroll(rememberScrollState()),
-            horizontalAlignment = Alignment.CenterHorizontally,
+                .padding(horizontal = OV2Core.sideInset)
+                .padding(top = 16.dp)
+                .dsStagger(0),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
         ) {
-            Spacer(Modifier.height(64.dp))
-            Text(
-                text = StringStore.text(context, "onboardingV2.yearsGrid.title", language),
-                style = OV2.title,
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 28.dp)
-                    .graphicsLayer { alpha = titleAlpha; translationY = (1f - titleAlpha) * 14f * density },
+            DSHighlightTitle(
+                text = OV2Core.marked(
+                    context,
+                    titleKey = "onboardingV2.yearsGrid.title",
+                    highlightKey = "elevateOnboardingCore.yearsGrid.titleHighlight",
+                    language = language,
+                ),
+                modifier = Modifier.fillMaxWidth().semantics { heading() },
+                fontSize = 25.sp,
+                lineHeight = 32.sp,
+                textAlign = TextAlign.Start,
             )
-            Spacer(Modifier.height(26.dp))
-            Column(
-                modifier = Modifier
-                    .widthIn(max = GRID_MAX_WIDTH)
-                    .fillMaxWidth()
-                    .padding(horizontal = 36.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                repeat(TOTAL_YEARS / GRID_COLUMNS) { row ->
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        repeat(GRID_COLUMNS) { column ->
-                            val index = row * GRID_COLUMNS + column
-                            YearCell(
-                                revealed = index < revealed,
-                                filled = isFilled(index),
-                                color = squareColor(index),
-                                dimmed = focusPhone && index < SLEEP_YEARS + WORK_YEARS,
-                                modifier = Modifier.weight(1f),
-                            )
-                        }
+            Text(
+                text = StringStore.text(context, "elevateOnboardingCore.yearsGrid.subtitle", language),
+                style = ov2CoreSubtitleStyle.copy(fontSize = 15.sp, lineHeight = 22.sp),
+            )
+        }
+        Spacer(Modifier.height(20.dp))
+        Spacer(Modifier.weight(1f))
+        // The squares shrink on a short screen rather than push the legend and the conclusion,
+        // which comes last under them, out of sight. 292 dp is the height of the rest of the page.
+        val rows = TOTAL_YEARS / GRID_COLUMNS
+        val cell = (available - 292.dp - GRID_SPACING * (rows - 1)) / rows
+        val gridWidth = (cell * GRID_COLUMNS + GRID_SPACING * (GRID_COLUMNS - 1)).coerceAtLeast(200.dp)
+        Column(
+            modifier = Modifier
+                .padding(horizontal = OV2Core.sideInset)
+                .widthIn(max = gridWidth)
+                .fillMaxWidth()
+                .clearAndSetSemantics { },
+            verticalArrangement = Arrangement.spacedBy(GRID_SPACING),
+        ) {
+            repeat(rows) { row ->
+                Row(horizontalArrangement = Arrangement.spacedBy(GRID_SPACING)) {
+                    repeat(GRID_COLUMNS) { column ->
+                        val index = row * GRID_COLUMNS + column
+                        val free = index - SLEEP_YEARS - WORK_YEARS
+                        YearCell(
+                            revealed = index < revealed,
+                            filled = isFilled(index),
+                            phone = free in 0 until screenFilled,
+                            color = squareColor(index),
+                            modifier = Modifier.weight(1f),
+                        )
                     }
                 }
             }
-            Spacer(Modifier.height(20.dp))
-            FlowRow(
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                LegendChip(SleepColor, SleepColor, "onboardingV2.yearsGrid.sleep", SLEEP_YEARS, sleepFilled > 0, focusPhone, language)
-                LegendChip(WorkColor, WorkColor, "onboardingV2.yearsGrid.work", WORK_YEARS, workFilled > 0, focusPhone, language)
-                LegendChip(FreeColor, OV2.accentSoft, "onboardingV2.yearsGrid.free", FREE_YEARS, freeFilled > 0, false, language)
-                LegendChip(OV2.danger, OV2.danger, "onboardingV2.yearsGrid.screen", screenYears, screenFilled > 0, false, language)
+        }
+        // One line per colour, on two columns; each appears when its colour starts to land.
+        // The « phone » line counts with the red squares.
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = OV2Core.sideInset)
+                .padding(top = 20.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                LegendRow(SleepColor, "onboardingV2.yearsGrid.sleep", SLEEP_YEARS, sleepFilled > 0, language, Modifier.weight(1f))
+                LegendRow(WorkColor, "onboardingV2.yearsGrid.work", WORK_YEARS, workFilled > 0, language, Modifier.weight(1f))
             }
-            Spacer(Modifier.height(18.dp))
-            // The number, big, then the sentence: what the page wants remembered.
-            Text(
-                text = yearsText(context, screenYears, language),
-                style = OV2.titleLarge.copy(fontSize = 44.sp, lineHeight = 50.sp, color = OV2.danger),
-                modifier = Modifier.graphicsLayer {
-                    val s = 0.6f + 0.4f * numberProgress
+            Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                LegendRow(FreeColor, "onboardingV2.yearsGrid.free", FREE_YEARS, freeFilled > 0, language, Modifier.weight(1f))
+                LegendRow(PhoneColor, "onboardingV2.yearsGrid.screen", screenFilled.coerceAtLeast(1), screenFilled > 0, language, Modifier.weight(1f))
+            }
+        }
+        // The number, large, then the sentence: what the page wants remembered. Its place is
+        // kept from the start, so nothing jumps when it arrives.
+        val conclusion by animateFloatAsState(if (showConclusion) 1f else 0f, DSMotion.pop(), label = "gridConclusion")
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = OV2Core.sideInset)
+                .padding(top = 20.dp)
+                .graphicsLayer {
+                    alpha = conclusion.coerceIn(0f, 1f)
+                    translationY = (1f - conclusion) * 14.dp.toPx()
+                    val s = 0.96f + 0.04f * conclusion
                     scaleX = s
                     scaleY = s
-                    alpha = numberProgress.coerceIn(0f, 1f)
-                },
+                }
+                .clip(DS.cardShape)
+                .background(DS.dangerTint)
+                .border(1.5.dp, DS.danger.copy(alpha = 0.28f), DS.cardShape)
+                .padding(horizontal = 16.dp, vertical = 14.dp)
+                .then(
+                    if (showConclusion) Modifier.semantics(mergeDescendants = true) { } else Modifier.clearAndSetSemantics { },
+                ),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(14.dp),
+        ) {
+            Text(
+                text = yearsText(context, screenYears, language),
+                style = OV2.titleLarge.copy(fontSize = 36.sp, lineHeight = 42.sp, fontWeight = FontWeight.ExtraBold, color = DS.danger),
+                maxLines = 1,
             )
             Text(
                 text = StringStore.text(context, "onboardingV2.yearsGrid.captionFree", language, FREE_YEARS, screenYears),
-                style = OV2.body.copy(color = OV2.danger, fontWeight = FontWeight.Bold),
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 32.dp)
-                    .padding(top = 8.dp)
-                    .graphicsLayer { alpha = captionAlpha; translationY = (1f - captionAlpha) * 12f * density },
-            )
-            Spacer(Modifier.height(48.dp))
-        }
-        Box(modifier = Modifier.alpha(buttonAlpha)) {
-            OnboardingCta(
-                text = StringStore.text(context, "common.continue", language),
-                onClick = { if (showButton) onContinue() },
-                enabled = showButton,
+                style = OV2.subheadline.copy(fontSize = 14.sp, lineHeight = 20.sp, fontWeight = FontWeight.SemiBold, color = DS.danger),
+                modifier = Modifier.weight(1f),
             )
         }
+        Spacer(Modifier.height(16.dp))
+        Spacer(Modifier.weight(1f))
     }
 }
-
-/** Ten square cells per row stay phone-sized instead of ballooning on a tablet. */
-private val GRID_MAX_WIDTH = 460.dp
 
 @Composable
 private fun YearCell(
     revealed: Boolean,
     filled: Boolean,
+    phone: Boolean,
     color: Color,
-    dimmed: Boolean,
     modifier: Modifier = Modifier,
 ) {
     val scale by animateFloatAsState(
-        targetValue = if (!revealed) 0.3f else if (filled) 1f else 0.9f,
+        targetValue = if (!revealed) 0.3f else if (filled) 1f else 0.88f,
         animationSpec = spring(dampingRatio = 0.72f, stiffness = Spring.StiffnessMedium),
         label = "yearScale",
     )
-    val animatedColor by androidx.compose.animation.animateColorAsState(
-        targetValue = color,
-        animationSpec = tween(250),
-        label = "yearColor",
-    )
-    val alpha by animateFloatAsState(
-        targetValue = if (!revealed) 0f else if (dimmed) 0.3f else 1f,
-        animationSpec = tween(if (dimmed) 600 else 200),
-        label = "yearAlpha",
-    )
+    val alpha by animateFloatAsState(if (revealed) 1f else 0f, tween(200), label = "yearAlpha")
+    val animatedColor by animateColorAsState(color, tween(400), label = "yearColor")
+    // A year going to the phone lands with a small bounce (not on a restored page).
+    val startedAsPhone = remember { phone }
+    val bump = remember { Animatable(1f) }
+    LaunchedEffect(phone) {
+        if (phone && !startedAsPhone) {
+            bump.snapTo(1.3f)
+            bump.animateTo(1f, DSMotion.pop())
+        }
+    }
     Box(
         modifier = modifier
             .aspectRatio(1f)
             .graphicsLayer {
-                scaleX = scale
-                scaleY = scale
+                val s = scale * bump.value
+                scaleX = s
+                scaleY = s
                 this.alpha = alpha
             }
-            .clip(RoundedCornerShape(4.dp))
-            .background(animatedColor),
+            // Read while drawing: a colour on its way does not recompose the cell.
+            .drawBehind { drawRoundRect(color = animatedColor, cornerRadius = CornerRadius(5.dp.toPx())) },
     )
 }
 
-/** One chip per third, shown when its third starts to colour in. */
+/** One line of the legend, shown when its colour starts to land. */
 @Composable
-private fun LegendChip(
-    dot: Color,
-    textColor: Color,
+private fun LegendRow(
+    color: Color,
     key: String,
     years: Int,
     shown: Boolean,
-    dimmed: Boolean,
     language: AppLanguage,
+    modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
-    val progress by animateFloatAsState(
-        targetValue = if (shown) 1f else 0f,
-        animationSpec = spring(dampingRatio = 0.75f, stiffness = Spring.StiffnessMediumLow),
-        label = "legendIn",
-    )
-    val dim by animateFloatAsState(if (dimmed) 0.45f else 1f, tween(500), label = "legendDim")
+    val progress by animateFloatAsState(if (shown) 1f else 0f, DSMotion.reveal(), label = "legendIn")
     Row(
-        modifier = Modifier
+        modifier = modifier
             .graphicsLayer {
-                alpha = progress.coerceIn(0f, 1f) * dim
-                val s = 0.85f + 0.15f * progress
-                scaleX = s
-                scaleY = s
+                alpha = progress.coerceIn(0f, 1f)
+                translationY = (1f - progress) * 10.dp.toPx()
             }
-            .clip(CircleShape)
-            .background(OV2.surface)
-            .border(1.dp, OV2.hairline, CircleShape)
-            .padding(horizontal = 10.dp, vertical = 6.dp),
+            .then(if (shown) Modifier.semantics(mergeDescendants = true) { } else Modifier.clearAndSetSemantics { }),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(7.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        Box(modifier = Modifier.size(10.dp).background(dot, CircleShape))
+        Box(modifier = Modifier.size(12.dp).background(color, RoundedCornerShape(4.dp)))
         Text(
             text = StringStore.text(context, key, language),
-            style = OV2.caption.copy(fontSize = 12.sp, color = OV2.ink),
+            style = OV2.caption.copy(fontWeight = FontWeight.Normal, lineHeight = 17.sp, color = DS.inkSecondary),
+            maxLines = 2,
+            modifier = Modifier.weight(1f),
         )
         Text(
             text = yearsText(context, years, language),
-            style = OV2.caption.copy(fontSize = 12.sp, fontWeight = FontWeight.Bold, color = textColor),
+            style = OV2.caption.copy(fontSize = 14.sp, fontWeight = FontWeight.Bold, color = DS.ink, fontFeatureSettings = "tnum"),
+            maxLines = 1,
         )
     }
 }
 
 /**
- * « Avec Sophia, transforme ce temps en culture » — the sentence turns bold word by word,
- * then the last word keeps swapping (culture, art, philosophie…) in a new colour.
+ * « With Sophia, turn that time into knowledge »: the sentence turns bold word by word, then
+ * the last word keeps swapping (knowledge, art, philosophy…) in the blue of the style.
+ * No button: a tap anywhere moves on.
  */
 @Composable
 internal fun TransformStep(language: AppLanguage, onContinue: () -> Unit) {
     val context = LocalContext.current
-    val haptics = rememberOnboardingHaptics()
+    val haptics = rememberHaptics()
     val words = remember(language) {
         StringStore.text(context, "onboardingV2.transform.text", language)
             .split(' ')
@@ -489,7 +600,6 @@ internal fun TransformStep(language: AppLanguage, onContinue: () -> Unit) {
             .map { it.trim() }
             .filter { it.isNotEmpty() }
     }
-    val swapColors = listOf(OV2.accent, OV2.danger, OV2.warm, OV2.success, Color(0xFF7B5CD1))
     var boldCount by remember { mutableIntStateOf(0) }
     var showHint by remember { mutableStateOf(false) }
     var swapping by remember { mutableStateOf(false) }
@@ -499,7 +609,7 @@ internal fun TransformStep(language: AppLanguage, onContinue: () -> Unit) {
         delay(500)
         words.indices.forEach {
             boldCount = it + 1
-            haptics.selection()
+            haptics.select()
             delay(320)
         }
         showHint = true
@@ -509,32 +619,31 @@ internal fun TransformStep(language: AppLanguage, onContinue: () -> Unit) {
         while (true) {
             delay(1150)
             swapIndex += 1
-            haptics.selection()
+            haptics.select()
         }
     }
 
     TapToContinueScaffold(
+        art = R.drawable.onb_art_nightbook,
+        artBase = 150.dp,
+        sentenceWords = words + swapWords,
         hint = StringStore.text(context, "onboardingV2.transform.tapHint", language),
         hintVisible = showHint,
         onContinue = onContinue,
-    ) {
+    ) { style ->
         ProgressiveWords(
             words = words,
             boldCount = boldCount,
-            modifier = Modifier.padding(horizontal = 28.dp),
+            style = style,
             lastCell = { bold ->
                 SwapWordCell(
                     words = swapWords.ifEmpty { listOf(words.lastOrNull().orEmpty()) },
                     index = swapIndex,
                     swapping = swapping,
                     bold = bold,
-                    color = if (swapping) {
-                        swapColors[swapIndex % swapColors.size]
-                    } else if (bold) {
-                        OV2.accent
-                    } else {
-                        OV2.inkTertiary
-                    },
+                    style = style,
+                    // The swapping word is in accent blue as soon as the bold reaches it.
+                    color = if (swapping || bold) DS.accent else DS.inkTertiary,
                 )
             },
         )
@@ -547,41 +656,47 @@ private fun SwapWordCell(
     index: Int,
     swapping: Boolean,
     bold: Boolean,
+    style: TextStyle,
     color: Color,
 ) {
+    val animatedColor by animateColorAsState(color, tween(300), label = "swapColor")
     Box(contentAlignment = Alignment.Center) {
         // Invisible stack of every candidate: keeps the slot as wide as the longest word,
         // so the sentence never reflows while the last word cycles.
         words.forEach { candidate ->
             Text(
                 text = candidate,
-                style = OV2.title.copy(fontWeight = FontWeight.ExtraBold),
-                modifier = Modifier.alpha(0f),
+                style = style.copy(fontWeight = FontWeight.ExtraBold),
+                modifier = Modifier.alpha(0f).clearAndSetSemantics { },
             )
         }
         AnimatedContent(
             targetState = if (swapping) index % words.size else 0,
             transitionSpec = {
-                (slideInVertically { -it } + fadeIn()) togetherWith
+                (slideInVertically(DSMotion.snappy<IntOffset>()) { -it } + fadeIn()) togetherWith
                     (slideOutVertically { it } + fadeOut())
             },
             label = "swapWord",
         ) { i ->
             Text(
                 text = words[i],
-                style = OV2.title.copy(
+                style = style.copy(
                     fontWeight = if (bold || swapping) FontWeight.ExtraBold else FontWeight.Normal,
-                    color = color,
+                    color = animatedColor,
                 ),
             )
         }
     }
 }
 
+/**
+ * « Let's personalize your content », right before the course swipe: the sentence turns bold
+ * word by word, like « Turn that time ». No button: a tap anywhere opens the next page.
+ */
 @Composable
 internal fun PersonalizeStep(language: AppLanguage, onContinue: () -> Unit) {
     val context = LocalContext.current
-    val haptics = rememberOnboardingHaptics()
+    val haptics = rememberHaptics()
     val words = remember(language) {
         StringStore.text(context, "onboardingV2.personalize.text", language)
             .split(' ')
@@ -593,36 +708,47 @@ internal fun PersonalizeStep(language: AppLanguage, onContinue: () -> Unit) {
         delay(500)
         words.indices.forEach {
             boldCount = it + 1
-            haptics.selection()
+            haptics.select()
             delay(320)
         }
         showHint = true
     }
 
     TapToContinueScaffold(
+        art = R.drawable.onb_art_mirror,
+        artBase = 160.dp,
+        sentenceWords = words,
         hint = StringStore.text(context, "onboardingV2.personalize.tapHint", language),
         hintVisible = showHint,
         onContinue = onContinue,
-    ) {
+    ) { style ->
         ProgressiveWords(
             words = words,
             boldCount = boldCount,
-            modifier = Modifier.padding(horizontal = 28.dp),
+            style = style,
         )
     }
 }
 
+/**
+ * A page without a button: a round illustration above a sentence set very large and centred,
+ * the invitation to touch the screen at the bottom. The sentence gets the largest style that
+ * keeps its longest word on one line.
+ */
 @Composable
 private fun TapToContinueScaffold(
+    @androidx.annotation.DrawableRes art: Int,
+    artBase: Dp,
+    sentenceWords: List<String>,
     hint: String,
     hintVisible: Boolean,
     onContinue: () -> Unit,
-    content: @Composable () -> Unit,
+    content: @Composable (style: TextStyle) -> Unit,
 ) {
-    val haptics = rememberOnboardingHaptics()
+    val haptics = rememberHaptics()
     var advanced by remember { mutableStateOf(false) }
     val hintAlpha by animateFloatAsState(if (hintVisible) 1f else 0f, tween(500), label = "hint")
-    Box(
+    BoxWithConstraints(
         modifier = Modifier
             .fillMaxSize()
             .clickable(
@@ -631,32 +757,47 @@ private fun TapToContinueScaffold(
             ) {
                 if (!advanced) {
                     advanced = true
-                    haptics.primary()
+                    haptics.confirm()
                     onContinue()
                 }
             },
         contentAlignment = Alignment.Center,
     ) {
-        content()
-        Text(
+        val style = ov2CoreSentenceStyle(sentenceWords, maxWidth - OV2Core.sideInset * 2)
+        // The illustration shrinks, then goes, when the sentence and the hint need the height.
+        val artSize = OV2Core.artSize(base = artBase, available = maxHeight, reserved = 330.dp)
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = OV2Core.sideInset)
+                .padding(bottom = 36.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(26.dp),
+        ) {
+            if (artSize > 0.dp) {
+                OV2CoreIllustration(art = art, size = artSize, modifier = Modifier.dsPopIn(100))
+            }
+            content(style)
+        }
+        OV2CoreTapHint(
             text = hint,
-            style = OV2.caption.copy(color = OV2.inkTertiary),
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-                .padding(bottom = 40.dp)
+                .padding(bottom = 28.dp)
                 .alpha(hintAlpha),
         )
     }
 }
 
 /**
- * Social proof: a title that fades in, the laurels « 4.8 · 500,000 users », then reviews on
- * the same blurred wheel as the questions screen, each with the reviewer's photo.
+ * Social proof: the title, five stars with the rating and the number of users, then the
+ * reviews as stacked cards (the quote, then the portrait and the first name). The cards land
+ * in a cascade; those that do not fit are found by scrolling, the button staying pinned.
  */
 @Composable
 internal fun ReviewStep(
     language: AppLanguage,
-    richMotion: Boolean,
+    @Suppress("UNUSED_PARAMETER") richMotion: Boolean,
     onContinue: () -> Unit,
 ) {
     val context = LocalContext.current
@@ -671,51 +812,67 @@ internal fun ReviewStep(
             )
         }
     }
-    var listIn by remember { mutableStateOf(false) }
-    LaunchedEffect(Unit) {
-        delay(700)
-        listIn = true
-    }
-    val listAlpha by animateFloatAsState(if (listIn) 1f else 0f, tween(900), label = "reviewIn")
 
-    OnboardingPage(
-        contentArrangement = Arrangement.Top,
-        footer = {
-            OnboardingCta(StringStore.text(context, "common.continue", language), onContinue)
-        },
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Spacer(Modifier.height(84.dp))
-        Text(
-            text = StringStore.text(context, "onboardingV2.review.title", language),
-            style = OV2.title,
-            textAlign = TextAlign.Center,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 28.dp)
-                .ov2Reveal(50),
-        )
-        Spacer(Modifier.height(18.dp))
-        LaurelBadge(size = 46.dp, modifier = Modifier.ov2Reveal(150)) {
-            RatingStack(
-                caption = StringStore.text(context, "onboardingV2.loading.social.count", language),
-                language = language,
-                compact = true,
+        // Six reviews do not fit on one screen: the list scrolls, the CTA stays pinned and a
+        // fade above it says there is more.
+        Box(modifier = Modifier.weight(1f).fillMaxWidth().readableWidth()) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = OV2Core.sideInset)
+                    .padding(bottom = 36.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
+                OV2CoreQuestionTitle(
+                    title = StringStore.text(context, "onboardingV2.review.title", language),
+                    modifier = Modifier.padding(top = 22.dp).dsStagger(0),
+                    horizontalInset = 0.dp,
+                )
+                // Five stars, the rating and the number of users, on one line.
+                Row(
+                    modifier = Modifier
+                        .padding(top = 12.dp)
+                        .dsStagger(1)
+                        .semantics(mergeDescendants = true) { },
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    OV2CoreStars(size = 17.dp, baseDelayMillis = 200)
+                    Text(
+                        text = 4.8.formatted(language, 1) + " · " +
+                            StringStore.text(context, "onboardingV2.loading.social.count", language),
+                        style = OV2.caption.copy(fontSize = 14.sp, fontWeight = FontWeight.Bold, color = DS.ink),
+                        maxLines = 1,
+                    )
+                }
+                Spacer(Modifier.height(14.dp))
+                Column(verticalArrangement = Arrangement.spacedBy(9.dp)) {
+                    testimonials.forEachIndexed { i, testimonial ->
+                        ReviewCard(
+                            testimonial = testimonial,
+                            modifier = Modifier.dsStagger(i, stepMillis = 80, baseMillis = 220),
+                        )
+                    }
+                }
+            }
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .fillMaxWidth()
+                    .height(44.dp)
+                    .background(Brush.verticalGradient(listOf(DS.canvas.copy(alpha = 0f), DS.canvas))),
             )
         }
-        Spacer(Modifier.height(24.dp))
-        OnboardingRoulette(
-            items = testimonials,
-            slotSpacing = 188.dp,
-            tickMillis = 3000,
-            running = listIn,
-            blurEnabled = richMotion,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(400.dp)
-                .padding(horizontal = 24.dp)
-                .alpha(listAlpha),
-        ) { testimonial, focused ->
-            ReviewCard(testimonial = testimonial, focused = focused)
+        Column(
+            modifier = Modifier.fillMaxWidth().readableWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            OnboardingCta(StringStore.text(context, "common.continue", language), onContinue)
         }
     }
 }
@@ -723,36 +880,28 @@ internal fun ReviewStep(
 private data class Testimonial(val index: Int, val quote: String, val author: String, val avatar: String?)
 
 @Composable
-private fun ReviewCard(testimonial: Testimonial, focused: Boolean) {
+private fun ReviewCard(testimonial: Testimonial, modifier: Modifier = Modifier) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .height(164.dp)
-            .shadow(
-                if (focused) 10.dp else 4.dp,
-                OV2Shapes.card,
-                ambientColor = Color.Black.copy(alpha = 0.06f),
-                spotColor = Color.Black.copy(alpha = 0.06f),
-            )
-            .clip(OV2Shapes.card)
-            .background(OV2.surface)
-            .border(1.dp, OV2.hairline, OV2Shapes.card)
-            .padding(16.dp),
+            .sophiaCard()
+            .padding(14.dp)
+            .semantics(mergeDescendants = true) { },
         verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            ReviewAvatar(testimonial)
-            Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
-                Text(text = testimonial.author, style = OV2.caption.copy(color = OV2.ink))
-                StarRow(starSize = 11.dp, spacing = 2.dp)
-            }
-        }
         Text(
             text = testimonial.quote,
-            style = OV2.body.copy(color = OV2.ink, fontSize = 15.sp, lineHeight = 21.sp),
-            maxLines = 4,
-            overflow = TextOverflow.Ellipsis,
+            style = OV2.body.copy(color = DS.ink, fontWeight = FontWeight.Normal, fontSize = 14.sp, lineHeight = 20.sp),
         )
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            ReviewAvatar(testimonial)
+            Text(
+                text = testimonial.author,
+                style = OV2.caption.copy(fontSize = 14.sp, fontWeight = FontWeight.Bold, color = DS.ink),
+                modifier = Modifier.weight(1f),
+            )
+            OV2CoreStars(size = 11.dp, spacing = 2.dp, animated = false)
+        }
     }
 }
 
@@ -770,9 +919,9 @@ private val AvatarPalettes = listOf(
 @Composable
 private fun ReviewAvatar(testimonial: Testimonial) {
     val modifier = Modifier
-        .size(36.dp)
+        .size(40.dp)
         .clip(CircleShape)
-        .border(1.dp, Color.White.copy(alpha = 0.6f), CircleShape)
+        .border(1.dp, DS.hairline, CircleShape)
     if (testimonial.avatar != null) {
         AssetPicture(url = testimonial.avatar, modifier = modifier)
     } else {
@@ -785,7 +934,7 @@ private fun ReviewAvatar(testimonial: Testimonial) {
                 text = testimonial.author.trim().take(1).uppercase(),
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
-                fontSize = 15.sp,
+                fontSize = 16.sp,
             )
         }
     }
