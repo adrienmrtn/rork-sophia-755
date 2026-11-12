@@ -62,9 +62,8 @@ struct AudioPlayerView: View {
                     AudioCoverView(courseId: item.courseId, subject: course?.subject, cornerRadius: DS.Radius.card)
                         .aspectRatio(1, contentMode: .fit)
                         .frame(maxWidth: 320)
-                        .scaleEffect(player.isPlaying ? 1 : 0.9)
-                        .animation(.spring(response: 0.45, dampingFraction: 0.75), value: player.isPlaying)
-                        .dsSoftShadow()
+                        .scaleEffect(player.isPlaying ? 1 : 0.92)
+                        .animation(DS.Motion.reveal, value: player.isPlaying)
                         .padding(.horizontal, 36)
                         .padding(.top, 12)
 
@@ -105,26 +104,22 @@ struct AudioPlayerView: View {
             Button {
                 dismiss()
             } label: {
-                Image(systemName: "chevron.down")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundStyle(DS.inkSecondary)
-                    .frame(width: 40, height: 40)
-                    .background(DS.surface, in: Circle())
-                    .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                CourseRoundIcon(systemName: "chevron.down")
             }
+            .buttonStyle(.pressable)
             .accessibilityLabel(Text(languageManager.text("common.close")))
 
             Spacer()
 
             Text(languageManager.text("audio.nowPlaying").uppercasedInApp())
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.inkTertiary)
-                .tracking(1.2)
+                .font(DS.sans(.caption, .heavy))
+                .foregroundStyle(DS.accent)
+                .tracking(0.9)
 
             Spacer()
 
             AirPlayButton()
-                .frame(width: 40, height: 40)
+                .frame(width: 44, height: 44)
                 .background(DS.surface, in: Circle())
                 .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
         }
@@ -133,14 +128,14 @@ struct AudioPlayerView: View {
     private func titleBlock(item: AudioQueueItem, course: Course?) -> some View {
         VStack(spacing: 6) {
             Text(course?.title ?? "Sophia")
-                .font(DS.title(.title3, .bold))
+                .font(DS.title(.title2, .semibold))
                 .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
                 .lineLimit(3)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(subtitle(item: item, course: course))
-                .font(DS.sans(.subheadline, .medium))
+                .font(DS.sans(.subheadline))
                 .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
@@ -190,8 +185,8 @@ struct AudioPlayerView: View {
                 Spacer()
                 Text(player.duration > 0 ? "-" + AudioFormat.time(player.duration - shown) : "--:--")
             }
-            .font(DS.sans(.caption, .medium))
-            .foregroundStyle(DS.inkTertiary)
+            .font(DS.sans(.caption, .semibold))
+            .foregroundStyle(DS.inkSecondary)
             .monospacedDigit()
         }
     }
@@ -208,8 +203,8 @@ struct AudioPlayerView: View {
             Button(languageManager.text("audio.retry")) {
                 player.resume()
             }
-            .font(DS.sans(.footnote, .semibold))
-            .foregroundStyle(DS.accentSoft)
+            .font(DS.sans(.footnote, .bold))
+            .foregroundStyle(DS.accent)
         }
         .padding(12)
         .background(DS.dangerTint, in: RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
@@ -218,7 +213,7 @@ struct AudioPlayerView: View {
     // MARK: Transport
 
     private var transport: some View {
-        HStack(spacing: 34) {
+        HStack(spacing: 28) {
             transportButton(
                 systemImage: "gobackward.15",
                 size: 28,
@@ -232,13 +227,14 @@ struct AudioPlayerView: View {
                 player.togglePlayPause()
             } label: {
                 Image(systemName: player.isPlaying ? "pause.fill" : "play.fill")
-                    .font(.system(size: 30, weight: .bold))
+                    .font(.system(size: 28, weight: .bold))
                     .foregroundStyle(.white)
                     .contentTransition(.symbolEffect(.replace))
-                    .frame(width: 78, height: 78)
+                    .frame(width: 76, height: 76)
                     .background(DS.accent, in: Circle())
             }
-            .buttonStyle(SoftPressButtonStyle())
+            // La vibration vient de `playTrigger` (`sensoryFeedback` de l'écran).
+            .buttonStyle(PressableStyle(scale: 0.93, haptic: false))
             .accessibilityLabel(Text(languageManager.text(player.isPlaying ? "audio.pause" : "audio.play")))
 
             transportButton(
@@ -252,10 +248,10 @@ struct AudioPlayerView: View {
         .overlay(alignment: .trailing) {
             // Next narration, only when there is one.
             if !player.queue.isEmpty {
-                transportButton(systemImage: "forward.end.fill", size: 20, label: "audio.next") {
+                transportButton(systemImage: "forward.end.fill", size: 18, label: "audio.next") {
                     player.skipToNext()
                 }
-                .offset(x: 64)
+                .offset(x: 62)
             }
         }
     }
@@ -271,12 +267,15 @@ struct AudioPlayerView: View {
             action()
         } label: {
             Image(systemName: systemImage)
-                .font(.system(size: size, weight: .semibold))
+                .font(.system(size: size * 0.8, weight: .semibold))
                 .foregroundStyle(DS.ink)
                 .frame(width: 52, height: 52)
-                .contentShape(Rectangle())
+                .background(DS.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
+                .contentShape(Circle())
         }
-        .buttonStyle(.plain)
+        // Le geste garde sa vibration d'origine ; le style n'en ajoute pas.
+        .buttonStyle(PressableStyle(scale: 0.93, haptic: false))
         .accessibilityLabel(Text(languageManager.text(label)))
     }
 
@@ -290,8 +289,8 @@ struct AudioPlayerView: View {
                     .foregroundStyle(DS.ink)
                 Spacer()
                 Text(AudioFormat.speed(speedValue, locale: languageManager.locale))
-                    .font(DS.sans(.subheadline, .bold))
-                    .foregroundStyle(DS.accentSoft)
+                    .font(DS.sans(.subheadline, .heavy))
+                    .foregroundStyle(DS.accent)
                     .monospacedDigit()
                     .contentTransition(.numericText())
                 if abs(speedValue - 1) > 0.001 {
@@ -299,11 +298,11 @@ struct AudioPlayerView: View {
                         withAnimation(.snappy) { speedValue = 1 }
                         commitSpeed()
                     }
-                    .font(DS.sans(.caption, .semibold))
-                    .foregroundStyle(DS.inkSecondary)
+                    .font(DS.sans(.caption, .bold))
+                    .foregroundStyle(DS.accent)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
-                    .background(DS.accentTint, in: Capsule())
+                    .background(DS.accentTint, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                 }
             }
 
@@ -322,21 +321,16 @@ struct AudioPlayerView: View {
                     if !editing { commitSpeed() }
                 }
             )
-            .font(DS.sans(.caption2, .medium))
-            .foregroundStyle(DS.inkTertiary)
+            .font(DS.sans(.caption2, .semibold))
+            .foregroundStyle(DS.inkSecondary)
             .tint(DS.accent)
+            .sensoryFeedback(.selection, trigger: speedValue)
             .onChange(of: speedValue) { _, value in
                 // Live, so the listener hears the speed while dragging.
                 player.setRate(value)
             }
         }
-        .padding(16)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.control))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
+        .dsCard(padding: 16)
     }
 
     private func commitSpeed() {
@@ -441,7 +435,7 @@ struct AudioPlayerView: View {
         VStack(spacing: 6) {
             icon()
                 .font(.system(size: 18, weight: .semibold))
-                .foregroundStyle(DS.accentSoft)
+                .foregroundStyle(DS.accent)
                 .frame(height: 22)
             Text(value)
                 .font(DS.sans(.subheadline, .bold))
@@ -449,19 +443,15 @@ struct AudioPlayerView: View {
                 .monospacedDigit()
                 .lineLimit(1)
             Text(title)
-                .font(DS.sans(.caption2, .medium))
-                .foregroundStyle(DS.inkTertiary)
+                .font(DS.sans(.caption2, .semibold))
+                .foregroundStyle(DS.inkSecondary)
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 12)
-        .background(DS.surface)
-        .clipShape(.rect(cornerRadius: DS.Radius.control))
-        .overlay {
-            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
-        }
+        .padding(.horizontal, 4)
+        .dsOptionCard(.idle)
         .contentShape(Rectangle())
     }
 }
@@ -599,7 +589,7 @@ struct ProgressRing: View {
             Circle().stroke(DS.hairline, lineWidth: 2.5)
             Circle()
                 .trim(from: 0, to: max(0.03, fraction))
-                .stroke(DS.accentSoft, style: StrokeStyle(lineWidth: 2.5, lineCap: .round))
+                .stroke(DS.accent, style: StrokeStyle(lineWidth: 2.5, lineCap: .round))
                 .rotationEffect(.degrees(-90))
                 .animation(.linear(duration: 0.2), value: fraction)
         }

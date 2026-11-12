@@ -15,7 +15,7 @@ struct AudioMiniPlayer: View {
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
-        .animation(.spring(response: 0.4, dampingFraction: 0.85), value: player.current?.id)
+        .animation(DS.Motion.reveal, value: player.current?.id)
     }
 
     private func bar(_ item: AudioQueueItem) -> some View {
@@ -44,17 +44,20 @@ struct AudioMiniPlayer: View {
                 Group {
                     if player.isBuffering && player.isPlaying {
                         ProgressView()
+                            .tint(.white)
                     } else {
                         Image(systemName: player.isPlaying ? "pause.fill" : "play.fill")
-                            .font(.system(size: 20, weight: .semibold))
+                            .font(.system(size: 15, weight: .bold))
                             .contentTransition(.symbolEffect(.replace))
                     }
                 }
-                .foregroundStyle(DS.ink)
-                .frame(width: 40, height: 40)
-                .contentShape(Rectangle())
+                .foregroundStyle(.white)
+                .frame(width: 38, height: 38)
+                .background(DS.accent, in: Circle())
+                .contentShape(Circle())
             }
-            .buttonStyle(.plain)
+            // Le geste garde sa vibration d'origine ; le style n'en ajoute pas.
+            .buttonStyle(PressableStyle(scale: 0.92, haptic: false))
             .accessibilityLabel(Text(languageManager.text(player.isPlaying ? "audio.pause" : "audio.play")))
 
             Button {
@@ -72,23 +75,32 @@ struct AudioMiniPlayer: View {
         }
         .padding(.leading, 8)
         .padding(.trailing, 6)
-        .padding(.vertical, 7)
+        .padding(.vertical, 8)
         .background(DS.surface, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
         .overlay(alignment: .bottom) {
-            // Position, as a hairline along the bottom edge.
+            // Position, as a thin blue line along the bottom edge.
             GeometryReader { geo in
-                Capsule()
-                    .fill(DS.accent)
-                    .frame(width: geo.size.width * player.progress, height: 2)
+                ZStack(alignment: .leading) {
+                    Capsule().fill(DS.accentTint)
+                    Capsule()
+                        .fill(DS.accent)
+                        .frame(width: geo.size.width * player.progress)
+                }
             }
-            .frame(height: 2)
+            .frame(height: 3)
             .padding(.horizontal, 14)
+            .padding(.bottom, 3)
         }
         .overlay {
             RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                .strokeBorder(DS.hairline, lineWidth: 1)
+                .strokeBorder(DS.hairline, lineWidth: 1.5)
         }
-        .dsSoftShadow()
+        // Rebord bas du style, à la place de l'ombre diffuse.
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                .fill(DS.hairline)
+                .offset(y: 1.5)
+        )
         .contentShape(Rectangle())
         .onTapGesture(perform: onOpen)
         .padding(.horizontal, 10)

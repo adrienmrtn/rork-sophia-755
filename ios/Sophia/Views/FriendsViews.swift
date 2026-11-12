@@ -335,7 +335,10 @@ struct FriendProfileView: View {
     /// Le retour à gauche, le @ centré (et le pendant vide à droite, pour le centrage).
     private var header: some View {
         HStack(spacing: 10) {
-            ProfileRoundButton(systemImage: "chevron.backward") {
+            ProfileRoundButton(
+                systemImage: "chevron.backward",
+                accessibilityLabel: languageManager.text("elevateProfile.back")
+            ) {
                 dismiss()
             }
             Spacer(minLength: 0)

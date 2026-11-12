@@ -99,7 +99,7 @@ struct InviteFriendView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 HStack {
-                    ProfileRoundButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
+                    ProfileRoundButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("elevateProfile.back")) { dismiss() }
                     Spacer()
                 }
 

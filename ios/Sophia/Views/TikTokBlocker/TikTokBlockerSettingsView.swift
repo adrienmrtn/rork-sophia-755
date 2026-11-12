@@ -115,7 +115,10 @@ struct TikTokBlockerSettingsView: View {
     private var titleBar: some View {
         HStack(spacing: 12) {
             // La vibration vient du style du bouton rond.
-            ProfileRoundButton(systemImage: presentedAsCover ? "xmark" : "chevron.backward") {
+            ProfileRoundButton(
+                systemImage: presentedAsCover ? "xmark" : "chevron.backward",
+                accessibilityLabel: languageManager.text(presentedAsCover ? "common.close" : "elevateProfile.back")
+            ) {
                 dismiss()
             }
 

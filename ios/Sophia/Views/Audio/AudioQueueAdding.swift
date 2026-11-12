@@ -137,7 +137,7 @@ struct AudioSuggestionsSection: View {
         let suggestions = AudioSuggestions.courses(after: courseId)
         VStack(alignment: .leading, spacing: 12) {
             Text(languageManager.text("audio.suggestions.title"))
-                .font(DS.title(.headline, .semibold))
+                .font(DS.title(.title3, .semibold))
                 .foregroundStyle(DS.ink)
 
             if !suggestions.isEmpty {
@@ -152,12 +152,7 @@ struct AudioSuggestionsSection: View {
                 }
                 .padding(.horizontal, 12)
                 .padding(.vertical, 4)
-                .background(DS.surface)
-                .clipShape(.rect(cornerRadius: DS.Radius.control))
-                .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
-                }
+                .dsCard(padding: nil)
             }
 
             Button(action: onBrowse) {
@@ -244,14 +239,21 @@ struct AudioBrowseView: View {
     private func chip(title: String, selected: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(title)
-                .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(selected ? Color.white : DS.ink)
+                .font(DS.sans(.subheadline, selected ? .bold : .semibold))
+                .foregroundStyle(selected ? DS.accent : DS.ink)
                 .padding(.horizontal, 14)
                 .padding(.vertical, 8)
-                .background(selected ? DS.accent : DS.surface, in: Capsule())
-                .overlay { Capsule().strokeBorder(DS.hairline, lineWidth: selected ? 0 : 1) }
+                .background(
+                    selected ? DS.accentTint : DS.surface,
+                    in: RoundedRectangle(cornerRadius: 12, style: .continuous)
+                )
+                .overlay {
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .strokeBorder(selected ? DS.accent : DS.hairline, lineWidth: 1.5)
+                }
         }
         .buttonStyle(.plain)
+        .sensoryFeedback(.selection, trigger: selected)
     }
 }
 
