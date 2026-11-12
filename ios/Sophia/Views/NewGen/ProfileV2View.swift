@@ -39,22 +39,26 @@ struct ProfileV2View: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 22) {
-                titleRow
-                identity
-                statsCard
-                trophiesCard
-                if InviteFriend.showsProfileCard(progressManager: progressManager, isPremium: store.isPremium) {
-                    inviteCard
-                }
-                trainingCard
-                progressCard
+            VStack(alignment: .leading, spacing: 0) {
+                headerBlock
+                entryCards
+                    .padding(.top, 10)
                 followingSection
+                    .padding(.top, 24)
+                    .dsStagger(4)
                 // Les amis et leur classement, à même la page (plus de page à part).
                 FriendsLeaderboardSection(social: social, myAvatarId: progressManager.avatarId)
+                    .padding(.top, 24)
+                    .dsStagger(5)
                 badgesSection
+                    .padding(.top, 24)
+                    .dsStagger(6)
                 listsSection
+                    .padding(.top, 24)
+                    .dsStagger(7)
                 secondaryPages
+                    .padding(.top, 10)
+                    .dsStagger(8)
             }
             .padding(20)
             .padding(.bottom, 24)
@@ -110,13 +114,42 @@ struct ProfileV2View: View {
 
     // MARK: - Identité
 
+    /// Le titre, l'identité, les compteurs et la carte des trophées.
+    private var headerBlock: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            titleRow
+                .dsStagger(0)
+            identity
+                .padding(.top, 14)
+                .dsStagger(1)
+            statsCard
+                .padding(.top, 14)
+                .dsStagger(2)
+            trophiesCard
+                .padding(.top, 10)
+                .dsStagger(3)
+        }
+    }
+
+    /// Les cartes d'entrée illustrées : parrainage, Entraînement, « Ma progression ».
+    private var entryCards: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            if InviteFriend.showsProfileCard(progressManager: progressManager, isPremium: store.isPremium) {
+                inviteCard
+            }
+            trainingCard
+            progressCard
+        }
+        .dsStagger(3)
+    }
+
     private var titleRow: some View {
-        HStack {
+        HStack(spacing: 12) {
             Text(languageManager.text("profile.title"))
-                .font(DS.title(.largeTitle, .heavy))
+                .font(DS.title(.largeTitle, .medium))
                 .foregroundStyle(DS.ink)
-            Spacer()
-            RoundIconButton(systemImage: "gearshape", accessibilityLabel: languageManager.text("settings.title")) {
+            Spacer(minLength: 8)
+            ProfileRoundButton(systemImage: "gearshape", accessibilityLabel: languageManager.text("settings.title")) {
                 showSettings = true
             }
         }
@@ -129,36 +162,27 @@ struct ProfileV2View: View {
 
     private var displayName: String {
         if let handle = social.myHandle, !handle.isEmpty { return handle }
-        let interests = OnboardingViewModel.userInterestKeys()
-        let keys = Subject.allCases.map(\.storageKey).filter { interests.contains($0) }
-        guard let first = keys.first else { return languageManager.text("onboarding.program.nickname.default") }
-        return languageManager.text("onboarding.program.nickname.\(first)")
+        return ProfileIdentity.rankTitle(languageManager: languageManager)
     }
 
     /// Le mois du premier cours ouvert, faute de date de création de compte.
     private var memberSince: String? {
-        let starts = progressManager.progress.courseProgress.values.compactMap(\.startedAt).sorted()
-        guard let first = starts.first, let date = Campaign.parseDay(String(first.prefix(10))) else { return nil }
-        let formatter = DateFormatter()
-        formatter.locale = language.foundationLocale
-        formatter.setLocalizedDateFormatFromTemplate("MMMM yyyy")
-        return formatter.string(from: date)
+        ProfileIdentity.memberSince(progressManager: progressManager, language: language)
     }
 
     private var identity: some View {
         HStack(spacing: 14) {
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 showAvatarPicker = true
             } label: {
                 AvatarCircle(avatarId: progressManager.avatarId, initial: String(displayName.prefix(1)).uppercased(), size: 64)
             }
-            .buttonStyle(.plain)
+            .buttonStyle(.pressable)
             .accessibilityLabel(languageManager.text("profile.avatar.title"))
             VStack(alignment: .leading, spacing: 3) {
                 // Le @ du compte ; sans compte (ou tant qu'il n'est pas lu), le surnom de l'onboarding.
                 Text(hasHandle ? "@\(displayName)" : displayName)
-                    .font(DS.title(.title3, .heavy))
+                    .font(DS.title(.title3, .semibold))
                     .foregroundStyle(DS.ink)
                     .lineLimit(1)
                     .minimumScaleFactor(0.7)
@@ -174,27 +198,47 @@ struct ProfileV2View: View {
     }
 
     private var statsCard: some View {
-        HStack(spacing: 8) {
-            StatCounter(
+        HStack(spacing: 16) {
+            statCell(
                 systemImage: "flame.fill",
                 iconTint: DS.warm,
-                iconBackground: DS.warm.opacity(0.18),
-                value: String(format: languageManager.text("common.daysShort"), progressManager.streak),
+                value: progressManager.streak,
+                format: languageManager.text("common.daysShort"),
                 label: languageManager.text("friends.stats.streak").lowercased()
             )
             Rectangle().fill(DS.hairline).frame(width: 1, height: 36)
-            StatCounter(
+            statCell(
                 systemImage: "book",
                 iconTint: DS.accent,
-                iconBackground: DS.accentTint,
-                value: "\(progressManager.completedCount)",
+                value: progressManager.completedCount,
+                format: nil,
                 label: languageManager.text("profile.stat.read")
             )
         }
-        .padding(.horizontal, 14)
+        .padding(.horizontal, 16)
         .padding(.vertical, 14)
-        .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .dsCard(padding: 0)
+    }
+
+    /// Un compteur du profil : pictogramme sur disque bleu pâle, valeur qui défile, libellé.
+    private func statCell(systemImage: String, iconTint: Color, value: Int, format: String?, label: String) -> some View {
+        HStack(spacing: 10) {
+            Image(systemName: systemImage)
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundStyle(iconTint)
+                .frame(width: 40, height: 40)
+                .background(Circle().fill(DS.accentTint))
+                .accessibilityHidden(true)
+            VStack(alignment: .leading, spacing: 0) {
+                ProfileCountText(value: value, format: format, font: DS.title(.headline, .heavy))
+                Text(label)
+                    .font(DS.sans(.caption))
+                    .foregroundStyle(DS.inkSecondary)
+                    .lineLimit(1)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: - Trophées et ligue
@@ -211,21 +255,18 @@ struct ProfileV2View: View {
         if duelsVisible, auth.isSignedIn, let home = DuelService.shared.home {
             let league = home.currentLeague
             let shape = RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-            ZStack(alignment: .bottomLeading) {
+            ZStack {
                 DuelLeagueBackdrop(league: league, thumb: true)
-                LinearGradient(
-                    colors: [DuelPalette.night.opacity(0.05), DuelPalette.night.opacity(0.85)],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                HStack(alignment: .bottom, spacing: 8) {
+                // Voile uni, pour que le texte blanc reste lisible sur toute l'illustration.
+                DuelPalette.night.opacity(0.6)
+                HStack(alignment: .center, spacing: 8) {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(languageManager.text("duel.trophies.title").uppercasedInApp())
-                            .font(DS.sans(.caption2, .bold))
-                            .tracking(1.1)
-                            .foregroundStyle(.white.opacity(0.8))
+                            .font(DS.sans(.caption, .heavy))
+                            .tracking(0.8)
+                            .foregroundStyle(.white)
                         Text(DuelFormat.leagueName(league, language: language))
-                            .font(.jakarta(size: 22, weight: .heavy))
+                            .font(DS.title(.title3, .heavy))
                             .foregroundStyle(.white)
                             .lineLimit(1)
                             .minimumScaleFactor(0.6)
@@ -233,13 +274,12 @@ struct ProfileV2View: View {
                     Spacer(minLength: 8)
                     DuelTrophyCount(value: home.profile.trophies, size: 20, color: .white)
                 }
-                .padding(14)
+                .padding(.horizontal, 16)
+                .frame(maxHeight: .infinity)
             }
-            .frame(height: 104)
+            .frame(height: 96)
             .frame(maxWidth: .infinity)
             .clipShape(shape)
-            .overlay(shape.strokeBorder(DS.hairline, lineWidth: 1))
-            .dsSoftShadow()
             .accessibilityElement(children: .combine)
         }
     }
@@ -251,40 +291,43 @@ struct ProfileV2View: View {
     }
 
     private var followingSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            NewGenSectionTitle(text: languageManager.text("profile.following"), trailing: followedAuthors.isEmpty ? nil : "· \(followedAuthors.count)")
+        VStack(alignment: .leading, spacing: 10) {
+            ProfileSectionHeader(
+                title: languageManager.text("profile.following"),
+                detail: followedAuthors.isEmpty ? nil : "· \(followedAuthors.count)"
+            )
             ScrollView(.horizontal) {
                 HStack(alignment: .top, spacing: 16) {
                     ForEach(followedAuthors) { author in
                         Button { onOpenCreator(author) } label: {
-                            VStack(spacing: 6) {
+                            VStack(spacing: 5) {
                                 AuthorAvatarView(author: author, size: 56)
                                 Text(author.name.split(separator: " ").first.map(String.init) ?? author.name)
-                                    .font(DS.sans(.caption, .semibold))
+                                    .font(DS.sans(.caption, .bold))
                                     .foregroundStyle(DS.ink)
                                     .lineLimit(1)
                             }
                             .frame(width: 64)
                         }
-                        .buttonStyle(.plain)
+                        .buttonStyle(.pressable)
                     }
                     Button(action: onDiscoverCreators) {
-                        VStack(spacing: 6) {
+                        VStack(spacing: 5) {
                             ZStack {
-                                Circle().strokeBorder(DS.inkTertiary, style: StrokeStyle(lineWidth: 1.5, dash: [4, 4]))
+                                Circle().strokeBorder(DS.inkSecondary, style: StrokeStyle(lineWidth: 1.5, dash: [4, 4]))
                                 Image(systemName: "plus")
                                     .font(.system(size: 18, weight: .medium))
                                     .foregroundStyle(DS.inkSecondary)
                             }
                             .frame(width: 56, height: 56)
                             Text(languageManager.text("training.discover"))
-                                .font(DS.sans(.caption, .semibold))
+                                .font(DS.sans(.caption, .bold))
                                 .foregroundStyle(DS.inkSecondary)
                                 .lineLimit(1)
                         }
                         .frame(width: 64)
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(.pressable)
                 }
                 .padding(.vertical, 2)
             }
@@ -314,23 +357,11 @@ struct ProfileV2View: View {
     }
 
     private var badgesSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .firstTextBaseline) {
-                NewGenSectionTitle(text: languageManager.text("profile.badges"))
-                Button {
+        VStack(alignment: .leading, spacing: 10) {
+            ProfileSectionHeader(title: languageManager.text("profile.badges")) {
+                ProfileHeaderLink(title: languageManager.text("badges.seeAll")) {
                     showBadges = true
-                } label: {
-                    HStack(spacing: 4) {
-                        Text(languageManager.text("badges.seeAll"))
-                            .font(DS.sans(.subheadline, .bold))
-                        Image(systemName: "chevron.forward")
-                            .font(.system(size: 11, weight: .bold))
-                    }
-                    .foregroundStyle(DS.accent)
-                    .padding(.vertical, 4)
-                    .contentShape(Rectangle())
                 }
-                .buttonStyle(.plain)
             }
             BadgeRow(
                 badges: profileBadges,
@@ -358,11 +389,11 @@ struct ProfileV2View: View {
         let kinds = ProfileListKind.allCases
         let kind = kinds[min(listSegment, kinds.count - 1)]
         let items = courses(for: kind)
-        return VStack(alignment: .leading, spacing: 12) {
-            SegmentedPills(
-                items: kinds.map { "\(languageManager.text($0.titleKey)) · \(courses(for: $0).count)" },
-                selection: $listSegment
-            )
+        let titles: [String] = kinds.map { "\(languageManager.text($0.titleKey)) · \(courses(for: $0).count)" }
+        return VStack(alignment: .leading, spacing: 9) {
+            ProfilePillTabs(items: titles, selectedIndex: listSegment, fills: true) { index in
+                withAnimation(DS.Motion.snappy) { listSegment = index }
+            }
             if items.isEmpty {
                 Text(languageManager.text(kind.emptyKey))
                     .font(DS.sans(.subheadline))
@@ -383,11 +414,12 @@ struct ProfileV2View: View {
                     } label: {
                         Text(languageManager.text("library.seeMore"))
                             .font(DS.sans(.subheadline, .bold))
-                            .foregroundStyle(DS.accentSoft)
+                            .foregroundStyle(DS.accent)
                             .frame(maxWidth: .infinity)
-                            .frame(height: 40)
+                            .frame(height: 44)
+                            .contentShape(Rectangle())
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(.pressable)
                 }
             }
         }
@@ -431,40 +463,7 @@ struct ProfileV2View: View {
 
     /// Une carte d'entrée illustrée (papier découpé du site) : vignette, titre, une ligne, chevron.
     private func posterCard(image: String, title: String, subtitle: String, action: @escaping () -> Void) -> some View {
-        Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            action()
-        } label: {
-            HStack(spacing: 14) {
-                Image(image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 64, height: 64)
-                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                    .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 3) {
-                    Text(title)
-                        .font(DS.title(.title3, .heavy))
-                        .foregroundStyle(DS.ink)
-                    Text(subtitle)
-                        .font(DS.sans(.subheadline))
-                        .foregroundStyle(DS.inkSecondary)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                Spacer(minLength: 4)
-                Image(systemName: "chevron.forward")
-                    .font(.system(size: 13, weight: .semibold))
-                    .foregroundStyle(DS.inkTertiary)
-            }
-            .padding(14)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
-            .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-            .dsSoftShadow()
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
+        ProfilePosterCard(image: image, title: title, subtitle: subtitle, action: action)
     }
 
     // MARK: - Anti-scroll
@@ -529,7 +528,7 @@ struct ProfileCourseListView: View {
                 HStack(spacing: 12) {
                     RoundIconButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
                     Text("\(languageManager.text(kind.titleKey)) · \(courses.count)")
-                        .font(DS.title(.title2, .heavy))
+                        .font(DS.title(.title2, .semibold))
                         .foregroundStyle(DS.ink)
                     Spacer()
                 }

@@ -12,71 +12,47 @@ struct OnboardingAuthScreen: View {
 
     var body: some View {
         ZStack {
-            BrutalPalette.cream.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
-                Spacer()
-
-                VStack(spacing: 16) {
-                    Image(systemName: "sparkles")
-                        .font(.system(size: 40, weight: .bold))
-                        .foregroundStyle(BrutalPalette.ink)
-
-                    Text(languageManager.text("auth.onboarding.title"))
-                        .font(.jakarta(.title, design: .rounded, weight: .heavy))
-                        .foregroundStyle(BrutalPalette.ink)
-                        .multilineTextAlignment(.center)
-
-                    Text(languageManager.text("auth.onboarding.subtitle"))
-                        .font(.jakarta(.body, weight: .medium))
-                        .foregroundStyle(BrutalPalette.ink.opacity(0.7))
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 12)
+                VStack(spacing: 10) {
+                    OV2EndTitle(text: languageManager.text("auth.onboarding.title"))
+                    OV2EndSubtitle(text: languageManager.text("auth.onboarding.subtitle"))
                 }
-                .padding(.horizontal, 28)
+                .padding(.top, OV2End.topWithoutHeader)
+                .padding(.horizontal, OV2End.side)
                 .opacity(appeared ? 1 : 0)
-                .offset(y: appeared ? 0 : 20)
+                .offset(y: appeared ? 0 : 14)
 
-                Spacer()
+                Spacer(minLength: 16)
 
-                VStack(spacing: 16) {
+                OV2EndAccountIllustration()
+                    .layoutPriority(1)
+
+                Spacer(minLength: 16)
+
+                VStack(spacing: 14) {
                     AuthProvidersView(onSignedIn: onSignedIn)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, OV2End.side)
 
-                    legalNote
-                        .padding(.horizontal, 32)
+                    OV2EndLegalNote(
+                        onTerms: { showTerms = true },
+                        onPrivacy: { showPrivacy = true }
+                    )
+                    .padding(.horizontal, 32)
                 }
                 .padding(.bottom, 44)
                 .opacity(appeared ? 1 : 0)
-                .offset(y: appeared ? 0 : 30)
+                .offset(y: appeared ? 0 : 20)
             }
         }
         .preferredColorScheme(.light)
         .sheet(isPresented: $showTerms) { TermsView() }
         .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
         .onAppear {
-            withAnimation(.spring(response: 0.7, dampingFraction: 0.8)) {
+            withAnimation(DS.Motion.reveal) {
                 appeared = true
             }
         }
-    }
-
-    private var legalNote: some View {
-        VStack(spacing: 2) {
-            Text(languageManager.text("auth.legal.prefix"))
-                .font(.jakarta(.caption2, weight: .medium))
-                .foregroundStyle(BrutalPalette.ink.opacity(0.5))
-            HStack(spacing: 4) {
-                Button(languageManager.text("settings.terms.title")) { showTerms = true }
-                    .font(.jakarta(.caption2, weight: .semibold))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.7))
-                Text("·")
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.4))
-                Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
-                    .font(.jakarta(.caption2, weight: .semibold))
-                    .foregroundStyle(BrutalPalette.ink.opacity(0.7))
-            }
-        }
-        .multilineTextAlignment(.center)
     }
 }

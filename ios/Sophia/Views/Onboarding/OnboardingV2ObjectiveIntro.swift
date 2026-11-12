@@ -3,13 +3,15 @@ import SwiftUI
 /// Page de transition après les objectifs : « Sophia va t'aider à atteindre tous tes objectifs »,
 /// avec le prénom devant quand il a été donné.
 /// Gras progressif sur le texte (guide la lecture), pas de CTA : tap n'importe où pour continuer.
+///
+/// Style « Elevate arrondi » : l'illustration ronde du chemin, puis la phrase en très grand,
+/// centrée, et l'invitation à toucher l'écran en bas.
 struct OnboardingV2ObjectiveIntro: View {
     @Environment(LanguageManager.self) private var languageManager
     var firstName: String = ""
     let onNext: () -> Void
 
     @State private var boldCount = 0
-    @State private var glowIn = false
     @State private var hintPulse = false
     @State private var canTap = false
 
@@ -23,39 +25,24 @@ struct OnboardingV2ObjectiveIntro: View {
         ZStack {
             OV2.bg.ignoresSafeArea()
 
-            // Halo doux qui « respire ».
-            Circle()
-                .fill(OV2.accentSoft.opacity(0.10))
-                .frame(width: 320, height: 320)
-                .scaleEffect(glowIn ? 1.05 : 0.8)
-                .blur(radius: 30)
-                .opacity(glowIn ? 1 : 0)
-
             VStack(spacing: 0) {
-                Spacer()
+                Spacer(minLength: 16)
 
-                ZStack {
-                    Circle().fill(OV2.accent.opacity(0.10)).frame(width: 108, height: 108)
-                    Image(systemName: "target")
-                        .font(.system(size: 46, weight: .semibold))
-                        .foregroundStyle(OV2.accent)
-                        .scaleEffect(glowIn ? 1 : 0.6)
-                        .opacity(glowIn ? 1 : 0)
-                }
+                OV2CoreIllustration(art: .path, size: 160)
+                    .dsPopIn(delay: 0.1)
 
-                Spacer().frame(height: 36)
+                Spacer().frame(height: 26)
 
                 progressiveText
-                    .padding(.horizontal, 34)
+                    .padding(.horizontal, OV2CoreMetrics.sideInset)
 
-                Spacer()
+                Spacer(minLength: 16)
 
-                Text(languageManager.text("onboardingV2.tapToContinue"))
-                    .font(DS.sans(.subheadline, .semibold))
-                    .foregroundStyle(OV2.inkTertiary)
-                    .opacity(canTap ? (hintPulse ? 1 : 0.4) : 0)
-                    .padding(.bottom, 48)
+                OV2CoreTapHint(text: languageManager.text("onboardingV2.tapToContinue"))
+                    .opacity(canTap ? (hintPulse ? 1 : 0.45) : 0)
+                    .padding(.bottom, 28)
             }
+            .frame(maxWidth: OV2.readableWidth)
         }
         .contentShape(Rectangle())
         .onTapGesture {
@@ -64,10 +51,6 @@ struct OnboardingV2ObjectiveIntro: View {
             onNext()
         }
         .onAppear {
-            withAnimation(.spring(response: 0.8, dampingFraction: 0.7)) { glowIn = true }
-            withAnimation(.easeInOut(duration: 1.8).repeatForever(autoreverses: true)) {
-                // léger « souffle » du halo
-            }
             for i in 0...words.count {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.35 + Double(i) * 0.13) {
                     boldCount = i
@@ -83,14 +66,18 @@ struct OnboardingV2ObjectiveIntro: View {
         }
     }
 
+    /// La phrase, mot après mot : gris et demi-gras avant le passage du gras, encre et très
+    /// gras après.
     private var progressiveText: some View {
         words.indices.reduce(Text("")) { partial, i in
             let word = words[i] + (i < words.count - 1 ? " " : "")
             let styled = Text(word)
-                .font(DS.title(.title, i < boldCount ? .heavy : .semibold))
-                .foregroundColor(i < boldCount ? OV2.ink : OV2.inkTertiary.opacity(0.5))
+                .font(DS.title(.largeTitle, i < boldCount ? .heavy : .semibold))
+                .foregroundColor(i < boldCount ? OV2.ink : OV2.inkTertiary.opacity(0.6))
             return partial + styled
         }
         .multilineTextAlignment(.center)
+        .lineSpacing(2)
+        .minimumScaleFactor(0.7)
     }
 }

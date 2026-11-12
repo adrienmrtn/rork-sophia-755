@@ -60,17 +60,24 @@ struct CreatorAvatar: View {
             AuthorAvatarView(author: author, size: size)
         case .house:
             ZStack {
-                Circle().fill(DS.accent)
-                Image("sophia_mark")
-                    .resizable()
-                    .renderingMode(.template)
-                    .scaledToFit()
-                    .foregroundStyle(.white)
-                    .padding(size * 0.24)
+                Circle().fill(EventPalette.navy)
+                houseGlyph
             }
             .frame(width: size, height: size)
+            .clipShape(Circle())
             .accessibilityHidden(true)
         }
+    }
+
+    /// Le symbole seul : `sophia_mark` est le logo complet (symbole + « Sophia », 1192 × 334),
+    /// dont on ne garde que le quart gauche.
+    private var houseGlyph: some View {
+        let glyphHeight: CGFloat = size * 0.6
+        return Image("sophia_mark")
+            .resizable()
+            .frame(width: glyphHeight * (1192.0 / 334.0), height: glyphHeight)
+            .frame(width: glyphHeight * 0.88, height: glyphHeight, alignment: .leading)
+            .clipped()
     }
 }
 
@@ -79,9 +86,10 @@ struct VerifiedCheck: View {
     var size: CGFloat = 14
 
     var body: some View {
-        Image(systemName: "checkmark.seal.fill")
+        Image(systemName: "checkmark.circle.fill")
             .font(.system(size: size, weight: .semibold))
-            .foregroundStyle(DS.accentSoft)
+            .symbolRenderingMode(.palette)
+            .foregroundStyle(Color.white, DS.accent)
             .accessibilityLabel(Text(AppLocalizable.string("creator.badge.verified", language: AppLanguage.currentPersisted())))
     }
 }
@@ -94,14 +102,14 @@ struct CreatorBadge: View {
 
     var body: some View {
         HStack(spacing: 6) {
-            Image(systemName: verified ? "checkmark.seal.fill" : "pencil.line")
-                .font(.system(size: 13, weight: .semibold))
+            Image(systemName: verified ? "checkmark.circle" : "pencil.line")
+                .font(.system(size: 13, weight: .bold))
             Text(AppLocalizable.string(verified ? "creator.badge.verified" : "creator.badge.creator", language: language))
-                .font(DS.sans(.subheadline, .semibold))
+                .font(DS.sans(.footnote, .bold))
         }
-        .foregroundStyle(verified ? DS.accentSoft : Color(red: 0.30, green: 0.11, blue: 0.58))
+        .foregroundStyle(verified ? DS.accent : Color(red: 0.30, green: 0.11, blue: 0.58))
         .padding(.horizontal, 12)
-        .frame(height: 32)
+        .frame(height: 28)
         .background(
             Capsule().fill(verified ? DS.accentTint : Color(red: 0.95, green: 0.93, blue: 0.98))
         )
@@ -111,7 +119,7 @@ struct CreatorBadge: View {
 /// Avatar, nom avec coche, pedigree : la ligne « qui a écrit ça » des cartes et des fiches.
 struct CreatorLine: View {
     let identity: CreatorIdentity
-    var avatarSize: CGFloat = 36
+    var avatarSize: CGFloat = 34
     var showsPedigree = true
     var onTap: (() -> Void)? = nil
 
@@ -141,10 +149,9 @@ struct CreatorLine: View {
 
         if let onTap, identity.isFollowable {
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 onTap()
             } label: { content }
-            .buttonStyle(.plain)
+            .buttonStyle(.pressable)
             .accessibilityLabel(Text(identity.name))
         } else {
             content
@@ -159,33 +166,41 @@ struct FollowButton: View {
     let action: () -> Void
 
     private var language: AppLanguage { AppLanguage.currentPersisted() }
+    private var height: CGFloat { compact ? 44 : 46 }
 
     var body: some View {
         Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            // Suivre est une petite victoire (vibration franche) ; se désabonner, un simple appui.
+            if isFollowing { Haptics.tap() } else { Haptics.confirm() }
             action()
         } label: {
             Text(AppLocalizable.string(isFollowing ? "creator.following" : "creator.follow", language: language))
-                .font(DS.sans(compact ? .footnote : .subheadline, .bold))
+                .font(DS.sans(.subheadline, .bold))
                 .foregroundStyle(isFollowing ? DS.accent : .white)
-                .padding(.horizontal, compact ? 14 : 18)
-                .frame(height: compact ? 34 : 44)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+                .padding(.horizontal, 16)
+                .frame(height: height)
                 .frame(maxWidth: compact ? nil : .infinity)
-                .background {
-                    if isFollowing {
-                        RoundedRectangle(cornerRadius: compact ? 10 : 14, style: .continuous)
-                            .fill(DS.surface)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: compact ? 10 : 14, style: .continuous)
-                                    .strokeBorder(DS.hairline, lineWidth: 1)
-                            }
-                    } else {
-                        RoundedRectangle(cornerRadius: compact ? 10 : 14, style: .continuous).fill(DS.accent)
-                    }
-                }
+                .background { fillShape }
+                .contentTransition(.opacity)
         }
-        .buttonStyle(.plain)
-        .animation(.easeInOut(duration: 0.15), value: isFollowing)
+        .buttonStyle(PressableStyle(scale: 0.94, haptic: false))
+        .animation(DS.Motion.snappy, value: isFollowing)
+    }
+
+    @ViewBuilder
+    private var fillShape: some View {
+        if isFollowing {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .fill(DS.surface)
+                .overlay {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .strokeBorder(DS.hairline, lineWidth: 1.5)
+                }
+        } else {
+            RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accent)
+        }
     }
 }
 
@@ -203,12 +218,12 @@ struct SubjectPill: View {
         HStack(spacing: 6) {
             Circle().fill(subject.color).frame(width: 8, height: 8)
             Text(extra.map { "\(subject.localizedShortName(language: language)) · \($0)" } ?? subject.localizedShortName(language: language))
-                .font(DS.sans(.footnote, .bold))
+                .font(DS.sans(.caption, .bold))
                 .foregroundStyle(DS.ink)
                 .lineLimit(1)
         }
         .padding(.horizontal, 10)
-        .frame(height: 30)
+        .frame(height: 26)
         .background(Capsule().fill(DS.surface))
         .overlay(Capsule().strokeBorder(DS.hairline, lineWidth: 1))
     }
@@ -222,10 +237,10 @@ struct TagPill: View {
 
     var body: some View {
         Text(text)
-            .font(DS.sans(.footnote, .bold))
+            .font(DS.sans(.caption, .bold))
             .foregroundStyle(style == .accent ? .white : DS.ink)
             .padding(.horizontal, 10)
-            .frame(height: 30)
+            .frame(height: 26)
             .background(Capsule().fill(style == .accent ? DS.accent : DS.warm))
             .lineLimit(1)
     }
@@ -240,7 +255,7 @@ struct StatChip: View {
     var body: some View {
         HStack(spacing: 5) {
             Image(systemName: systemImage)
-                .font(.system(size: 14, weight: .medium))
+                .font(.system(size: 15, weight: .medium))
             Text(text)
                 .font(DS.sans(.footnote, .semibold))
                 .monospacedDigit()
@@ -329,11 +344,10 @@ struct CompactCourseRow<Trailing: View>: View {
 
     var body: some View {
         Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             onTap()
         } label: {
             HStack(spacing: 12) {
-                CourseCover(course: course, cornerRadius: 14)
+                CourseCover(course: course, cornerRadius: 10)
                     .frame(width: 64, height: 64)
                 VStack(alignment: .leading, spacing: 3) {
                     Text(course.title.withoutInlineMarkup)
@@ -342,12 +356,12 @@ struct CompactCourseRow<Trailing: View>: View {
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
                     Text(meta)
-                        .font(DS.sans(.caption))
+                        .font(DS.sans(.footnote))
                         .foregroundStyle(DS.inkSecondary)
                         .lineLimit(1)
                     if let secondMeta {
                         Text(secondMeta)
-                            .font(DS.sans(.caption, .semibold))
+                            .font(DS.sans(.caption))
                             .foregroundStyle(DS.inkSecondary)
                             .lineLimit(1)
                     }
@@ -355,16 +369,13 @@ struct CompactCourseRow<Trailing: View>: View {
                 Spacer(minLength: 6)
                 trailing()
             }
-            .padding(10)
-            .background(
-                RoundedRectangle(cornerRadius: 18, style: .continuous).fill(DS.surface)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: 18, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1)
-            )
+            .padding(.leading, 10)
+            .padding(.trailing, 12)
+            .padding(.vertical, 10)
+            .homeCard()
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.pressable)
     }
 }
 
@@ -378,67 +389,80 @@ extension CompactCourseRow where Trailing == EmptyView {
     }
 }
 
-/// Disque vert avec une coche : « lu ».
+/// Disque vert plein avec une coche blanche : « lu ».
 struct ReadCheck: View {
     var body: some View {
-        ZStack {
-            Circle().fill(DS.successTint)
-            Image(systemName: "checkmark")
-                .font(.system(size: 13, weight: .bold))
-                .foregroundStyle(DS.success)
-        }
-        .frame(width: 32, height: 32)
-        .accessibilityLabel(Text(AppLocalizable.string("common.read", language: AppLanguage.currentPersisted())))
+        // La coche se dessine à l'apparition de la ligne.
+        DSCheckBadge(size: 22)
+            .frame(width: 22, height: 22)
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(Text(AppLocalizable.string("common.read", language: AppLanguage.currentPersisted())))
     }
 }
 
 // MARK: - Segments et titres
 
-/// Sélecteur à segments sur fond bleu pâle, segment actif blanc avec ombre (« Pour toi /
-/// Abonnements », « Populaires / Récents / Séries », « À lire / Lus / Aimés »).
+/// Sélecteur à pastilles : chaque segment est une pastille bleu pâle, l'active est bleue pleine
+/// et glisse d'un segment à l'autre (« Populaires / Récents / Séries », « À lire / Lus / Aimés »).
 struct SegmentedPills: View {
     let items: [String]
     @Binding var selection: Int
     /// Un point bleu sur un segment : quelque chose de nouveau derrière.
     var dotOn: Int? = nil
 
+    @Namespace private var pill
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     var body: some View {
-        HStack(spacing: 4) {
+        HStack(spacing: 6) {
             ForEach(Array(items.enumerated()), id: \.offset) { index, item in
-                Button {
-                    UISelectionFeedbackGenerator().selectionChanged()
-                    withAnimation(.spring(response: 0.3, dampingFraction: 0.85)) { selection = index }
-                } label: {
-                    HStack(spacing: 6) {
-                        Text(item)
-                            .font(DS.sans(.subheadline, .bold))
-                            .foregroundStyle(selection == index ? DS.ink : DS.inkSecondary)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.85)
-                        if dotOn == index, selection != index {
-                            Circle().fill(DS.accentSoft).frame(width: 7, height: 7)
-                        }
-                    }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 40)
-                    .background {
-                        if selection == index {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .fill(DS.surface)
-                                .shadow(color: .black.opacity(0.06), radius: 6, y: 2)
-                        }
-                    }
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
+                segment(index: index, title: item)
             }
         }
-        .padding(4)
-        .background(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(DS.surfaceMuted))
+    }
+
+    private func segment(index: Int, title: String) -> some View {
+        let selected: Bool = selection == index
+        return Button {
+            guard selection != index else { return }
+            Haptics.select()
+            if reduceMotion {
+                selection = index
+            } else {
+                withAnimation(DS.Motion.snappy) { selection = index }
+            }
+        } label: {
+            HStack(spacing: 6) {
+                Text(title)
+                    .font(DS.sans(.subheadline, .bold))
+                    .foregroundStyle(selected ? Color.white : DS.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+                if dotOn == index, !selected {
+                    Circle().fill(DS.accent).frame(width: 7, height: 7)
+                }
+            }
+            .padding(.horizontal, 8)
+            .frame(maxWidth: .infinity)
+            .frame(height: 40)
+            .background {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accentTint)
+                    if selected {
+                        RoundedRectangle(cornerRadius: 14, style: .continuous)
+                            .fill(DS.accent)
+                            .matchedGeometryEffect(id: "pill", in: pill)
+                    }
+                }
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityAddTraits(selected ? [.isSelected] : [])
     }
 }
 
-/// Titre de section des nouveaux écrans (20 pt, gras).
+/// Titre de section des nouveaux écrans (graisse moyenne), avec un complément gris (« · 3 »).
 struct NewGenSectionTitle: View {
     let text: String
     var trailing: String? = nil
@@ -446,12 +470,12 @@ struct NewGenSectionTitle: View {
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
             Text(text)
-                .font(DS.title(.title3, .heavy))
+                .font(DS.title(.headline, .semibold))
                 .foregroundStyle(DS.ink)
             if let trailing {
                 Text(trailing)
-                    .font(DS.title(.title3, .heavy))
-                    .foregroundStyle(DS.inkTertiary)
+                    .font(DS.title(.headline, .semibold))
+                    .foregroundStyle(DS.inkSecondary)
             }
             Spacer(minLength: 0)
         }
@@ -467,7 +491,6 @@ struct RoundIconButton: View {
 
     var body: some View {
         Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             action()
         } label: {
             Image(systemName: systemImage)
@@ -475,9 +498,10 @@ struct RoundIconButton: View {
                 .foregroundStyle(DS.ink)
                 .frame(width: size, height: size)
                 .background(Circle().fill(DS.surface))
-                .overlay(Circle().strokeBorder(DS.hairline, lineWidth: 1))
+                .overlay(Circle().strokeBorder(DS.hairline, lineWidth: 1.5))
+                .contentShape(Circle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(PressableStyle(scale: 0.92))
         .accessibilityLabel(Text(accessibilityLabel ?? ""))
     }
 }
@@ -525,7 +549,7 @@ enum NewGenFormat {
 
 extension DS {
     /// Le rose des cœurs allumés (fil, fiche, fin de cours).
-    static var liked: Color { Color(red: 0.93, green: 0.35, blue: 0.45) }
+    static var liked: Color { Color(red: 0.839, green: 0.200, blue: 0.424) }
 }
 
 /// Le cœur d'un bouton « j'aime » : il rebondit quand il s'allume et lâche un éclat de petites
@@ -534,7 +558,7 @@ extension DS {
 struct LikeHeartIcon: View {
     let liked: Bool
     let burst: Int
-    var size: CGFloat = 15
+    var size: CGFloat = 16
     var idleTint: Color = DS.inkSecondary
 
     @State private var scale: CGFloat = 1
@@ -544,6 +568,7 @@ struct LikeHeartIcon: View {
         Image(systemName: liked ? "heart.fill" : "heart")
             .font(.system(size: size, weight: .medium))
             .foregroundStyle(liked ? DS.liked : idleTint)
+            .contentTransition(.symbolEffect(.replace))
             .scaleEffect(scale)
             .background {
                 HeartBurst(progress: burstProgress)

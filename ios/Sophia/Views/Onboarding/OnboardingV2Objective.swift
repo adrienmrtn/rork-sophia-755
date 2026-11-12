@@ -1,43 +1,20 @@
 import SwiftUI
 
 /// Page objectifs — sélection **multiple**, puis CTA « Continuer ».
+///
+/// Style « Elevate arrondi » : titre centré, sous-titre gris, illustration ronde (le trophée)
+/// quand la hauteur le permet, puis une carte d'option par objectif. Une carte choisie se
+/// teinte en bleu ; il n'y a ni pastille ni case, le sous-titre dit qu'on peut en prendre
+/// plusieurs.
 struct OnboardingV2Objective: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
-    @State private var revealed = 0
-
     var body: some View {
-        VStack(spacing: 0) {
-            Spacer().frame(height: 72)
-
-            VStack(spacing: 8) {
-                Text(languageManager.text("onboardingV2.objective.title"))
-                    .font(DS.title(.title, .heavy))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
-                Text(languageManager.text("onboardingV2.objective.subtitle"))
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-            }
-            .padding(.horizontal, 28)
-            .ov2Reveal(delay: 0.1)
-
-            Spacer().frame(height: 24)
-
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 12) {
-                    ForEach(Array(OnboardingV2ViewModel.objectiveKeys.enumerated()), id: \.element) { index, key in
-                        objectiveRow(key)
-                            .opacity(index < revealed ? 1 : 0)
-                            .offset(y: index < revealed ? 0 : 18)
-                    }
-                }
-                .padding(.horizontal, 24)
-            }
-
+        OV2CorePage { height in
+            pageBody(height: height)
+        } footer: {
             OnboardingV2Button(
                 title: languageManager.text("common.continue"),
                 enabled: !vm.objectiveKeys.isEmpty,
@@ -45,66 +22,45 @@ struct OnboardingV2Objective: View {
             )
         }
         .ov2Background()
-        .onAppear {
-            for i in 0..<OnboardingV2ViewModel.objectiveKeys.count {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15 + Double(i) * 0.07) {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
-                        revealed = i + 1
-                    }
-                }
+    }
+
+    private func pageBody(height: CGFloat) -> some View {
+        let art: CGFloat = OV2CoreMetrics.artSize(base: 116, available: height, reserved: 464)
+        return VStack(spacing: 0) {
+            OV2CoreQuestionTitle(
+                title: languageManager.text("onboardingV2.objective.title"),
+                subtitle: languageManager.text("onboardingV2.objective.subtitle")
+            )
+            .padding(.top, OV2CoreMetrics.topInset)
+            .dsStagger(0)
+
+            if art > 0 {
+                OV2CoreIllustration(art: .trophy, size: art)
+                    .padding(.top, 22)
+                    .dsPopIn(delay: 0.12)
             }
+
+            rows
+                .padding(.horizontal, OV2CoreMetrics.sideInset)
+                .padding(.top, 24)
+                .padding(.bottom, 16)
         }
     }
 
-    private func objectiveRow(_ key: String) -> some View {
-        let isSelected = vm.isSelected(key)
-        return Button {
-            OnboardingHaptics.selection()
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
-                vm.toggleObjective(key)
-            }
-        } label: {
-            HStack(spacing: 14) {
-                Text(OnboardingV2ViewModel.objectiveEmoji(key))
-                    .font(.system(size: 24))
-                    .frame(width: 44, height: 44)
-                    .background((isSelected ? OV2.accent : OV2.accentSoft).opacity(isSelected ? 0.16 : 0.12), in: Circle())
-                Text(OnboardingV2ViewModel.objectiveLabel(key, language: languageManager.current))
-                    .font(DS.sans(.body, .semibold))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                checkbox(isSelected)
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 14)
-            .background(
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .fill(isSelected ? OV2.accentSoft.opacity(0.06) : OV2.surface)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(isSelected ? OV2.accent : OV2.hairline, lineWidth: isSelected ? 2 : 1)
-            )
-        }
-        .buttonStyle(SoftPressButtonStyle())
-    }
-
-    private func checkbox(_ isSelected: Bool) -> some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 7, style: .continuous)
-                .strokeBorder(isSelected ? OV2.accent : OV2.hairline, lineWidth: 2)
-                .frame(width: 24, height: 24)
-            if isSelected {
-                RoundedRectangle(cornerRadius: 7, style: .continuous)
-                    .fill(OV2.accent)
-                    .frame(width: 24, height: 24)
-                    .overlay {
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 12, weight: .bold))
-                            .foregroundStyle(.white)
+    private var rows: some View {
+        VStack(spacing: 9) {
+            ForEach(Array(OnboardingV2ViewModel.objectiveKeys.enumerated()), id: \.element) { index, key in
+                OV2CoreOptionRow(
+                    label: OnboardingV2ViewModel.objectiveLabel(key, language: languageManager.current),
+                    isSelected: vm.isSelected(key),
+                    minHeight: 56,
+                    action: {
+                        withAnimation(DS.Motion.snappy) {
+                            vm.toggleObjective(key)
+                        }
                     }
-                    .transition(.scale.combined(with: .opacity))
+                )
+                .dsStagger(index, base: 0.18)
             }
         }
     }

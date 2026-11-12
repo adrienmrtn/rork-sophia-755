@@ -3,8 +3,8 @@ import UIKit
 
 // MARK: - Palette
 
-/// Les couleurs des illustrations (direction affiche du site) : les duels sont le seul endroit
-/// de l'app qui les porte en aplats, sur les fonds de ligue.
+/// Les couleurs des illustrations (direction affiche du site) : celles des ligues, des trophées
+/// et des médailles. Le reste de l'interface des duels passe par les jetons `DS`.
 enum DuelPalette {
     static let saffron = Color(red: 0.949, green: 0.694, blue: 0.204)
     static let coral = Color(red: 0.878, green: 0.353, blue: 0.227)
@@ -60,16 +60,27 @@ enum DuelHaptics {
     /// L'adversaire vient de répondre.
     static func opponentAnswered() { impact(.soft, 0.8) }
 
+    /// Bonne réponse : le verdict du vocabulaire commun (`Haptics`).
     static func correct() {
-        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        Haptics.success()
     }
 
+    /// Mauvaise réponse, recherche ou défi qui échoue.
     static func wrong() {
-        UINotificationFeedbackGenerator().notificationOccurred(.error)
+        Haptics.error()
     }
 
-    /// Les dernières secondes du chrono.
-    static func clock() { impact(.light, 0.9) }
+    /// L'instant du dernier avertissement de chrono.
+    private static var lastClockWarning = Date.distantPast
+
+    /// Les dernières secondes du chrono. Le déroulé appelle ce cran à 3, 2 puis 1 seconde :
+    /// seul le premier vibre (un avertissement par question, pas une rafale).
+    static func clock() {
+        let now = Date()
+        guard now.timeIntervalSince(lastClockWarning) > 2.5 else { return }
+        lastClockWarning = now
+        Haptics.warning()
+    }
 
     /// 3, 2, 1 ; puis le départ, plus appuyé.
     static func countdown(final: Bool) {
@@ -92,11 +103,9 @@ enum DuelHaptics {
         after(0.18) { impact(.heavy, 1) }
     }
 
+    /// Victoire : la récompense du vocabulaire commun.
     static func victory() {
-        UINotificationFeedbackGenerator().notificationOccurred(.success)
-        after(0.14) { impact(.heavy, 1) }
-        after(0.28) { impact(.rigid, 0.9) }
-        after(0.42) { impact(.medium, 0.8) }
+        Haptics.celebrate()
     }
 
     static func defeat() {
@@ -148,9 +157,10 @@ struct DuelTrophyCount: View {
         HStack(spacing: size * 0.3) {
             DuelTrophyIcon(size: size * 0.92)
             Text(value.formatted(language: languageManager.current))
-                .font(.jakarta(size: size, weight: .bold))
+                .font(.jakarta(size: size, weight: .heavy))
                 .monospacedDigit()
                 .foregroundStyle(color)
+                .contentTransition(.numericText())
         }
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Text(String(format: languageManager.text("duel.trophies.count"), value)))
@@ -159,7 +169,8 @@ struct DuelTrophyCount: View {
 
 // MARK: - Avatars
 
-/// L'avatar d'un joueur, cerclé d'un liseré (la couleur du camp).
+/// L'avatar d'un joueur, cerclé d'un liseré (la couleur du camp). Sans ombre : le style
+/// « Elevate arrondi » sépare par des bordures.
 struct DuelAvatar: View {
     let avatarId: String?
     let initial: String
@@ -170,7 +181,6 @@ struct DuelAvatar: View {
     var body: some View {
         AvatarCircle(avatarId: avatarId, initial: initial, size: size)
             .overlay(Circle().strokeBorder(ring, lineWidth: ringWidth))
-            .shadow(color: .black.opacity(0.18), radius: 8, x: 0, y: 4)
     }
 }
 
@@ -197,7 +207,7 @@ struct DuelLeagueBackdrop: View {
     }
 }
 
-/// Jauge vers la ligue suivante.
+/// Jauge vers la ligue suivante (safran, la couleur des trophées).
 struct DuelProgressBar: View {
     let progress: Double
     var tint: Color = DuelPalette.saffron
@@ -343,30 +353,30 @@ enum DuelImageTrimmer {
 
 // MARK: - Boutons
 
-/// Le grand bouton des duels : un aplat safran posé sur une tranche plus sombre, qui s'enfonce
-/// sous le doigt.
+/// Le grand bouton des duels : le CTA plein du style « Elevate arrondi » (rectangle arrondi
+/// bleu, texte blanc, pression élastique). Il ne vibre pas de lui-même : chaque appel choisit sa
+/// vibration (`DuelHaptics`), plus appuyée pour lancer une partie.
 struct DuelPlayButtonStyle: ButtonStyle {
-    var fill: Color = DuelPalette.saffron
-    var edge: Color = Color(red: 0.74, green: 0.50, blue: 0.08)
-    var foreground: Color = DuelPalette.night
+    var fill: Color = DS.accent
+    /// Gardé pour les appels existants : le style arrondi n'a plus de tranche sous le bouton.
+    var edge: Color = .clear
+    var foreground: Color = .white
 
     func makeBody(configuration: Configuration) -> some View {
-        let pressed = configuration.isPressed
-        return configuration.label
-            .font(.jakarta(size: 19, weight: .heavy))
+        configuration.label
+            .font(DS.sans(.headline, .semibold))
             .foregroundStyle(foreground)
+            .lineLimit(2)
+            .minimumScaleFactor(0.8)
+            .multilineTextAlignment(.center)
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 18)
+            .padding(.vertical, 17)
+            .padding(.horizontal, 12)
             .background(
-                RoundedRectangle(cornerRadius: 20, style: .continuous).fill(fill)
+                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous).fill(fill)
             )
-            .offset(y: pressed ? 5 : 0)
-            .background(
-                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .fill(edge)
-                    .offset(y: 6)
-            )
-            .padding(.bottom, 6)
-            .animation(.spring(response: 0.22, dampingFraction: 0.7), value: pressed)
+            .opacity(configuration.isPressed ? 0.9 : 1)
+            .scaleEffect(configuration.isPressed ? 0.96 : 1)
+            .animation(DS.Motion.press, value: configuration.isPressed)
     }
 }

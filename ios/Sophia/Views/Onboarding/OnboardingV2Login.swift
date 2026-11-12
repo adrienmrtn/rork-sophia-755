@@ -11,70 +11,72 @@ struct OnboardingV2Login: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
+            OV2EndTitle(text: languageManager.text("onboardingV2.login.title"))
+                .padding(.top, OV2End.topWithoutHeader)
+                .padding(.horizontal, OV2End.side)
+                .dsStagger(0)
 
-            VStack(spacing: 16) {
-                ZStack {
-                    Circle().fill(OV2.accentSoft.opacity(0.12)).frame(width: 96, height: 96)
-                    Image(systemName: "person.crop.circle.badge.checkmark")
-                        .font(.system(size: 44, weight: .semibold))
-                        .foregroundStyle(OV2.accent)
-                }
-                .ov2Reveal(delay: 0.05)
+            OV2EndSubtitle(text: languageManager.text("onboardingV2.login.subtitle"))
+                .padding(.top, 10)
+                .padding(.horizontal, OV2End.side)
+                .dsStagger(1)
 
-                Text(languageManager.text("onboardingV2.login.title"))
-                    .font(DS.title(.title, .heavy))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
-                    .ov2Reveal(delay: 0.12)
+            Spacer(minLength: 16)
 
-                Text(languageManager.text("onboardingV2.login.subtitle"))
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 32)
-                    .ov2Reveal(delay: 0.18)
-            }
+            OV2EndAccountIllustration()
+                .layoutPriority(1)
 
-            Spacer()
+            Spacer(minLength: 16)
 
-            VStack(spacing: 16) {
+            VStack(spacing: 14) {
                 AuthProvidersView(onSignedIn: onSignedIn)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, OV2End.side)
                 #if DEBUG && targetEnvironment(simulator)
                 Button("Skip login · simulator only") {
                     onSignedIn()
                 }
                 .font(DS.sans(.footnote, .semibold))
-                .foregroundStyle(OV2.inkTertiary)
+                .foregroundStyle(DS.inkTertiary)
                 .padding(.top, 4)
                 #endif
-                legalNote.padding(.horizontal, 32)
+                OV2EndLegalNote(
+                    onTerms: { showTerms = true },
+                    onPrivacy: { showPrivacy = true }
+                )
+                .padding(.horizontal, 32)
             }
             .padding(.bottom, 40)
-            .ov2Reveal(delay: 0.24)
+            .dsStagger(2)
         }
         .ov2Background()
         .sheet(isPresented: $showTerms) { TermsView() }
         .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
     }
+}
 
-    private var legalNote: some View {
-        VStack(spacing: 2) {
-            Text(languageManager.text("auth.legal.prefix"))
-                .font(DS.sans(.caption2, .medium))
-                .foregroundStyle(OV2.inkTertiary)
-            HStack(spacing: 4) {
-                Button(languageManager.text("settings.terms.title")) { showTerms = true }
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(OV2.inkSecondary)
-                Text("·").foregroundStyle(OV2.inkTertiary)
-                Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(OV2.inkSecondary)
+/// Illustration ronde des écrans de connexion : un lecteur parmi ses livres, pris dans la
+/// série des avatars de l'app. Elle se pose avec un rebond, et rétrécit d'elle-même quand
+/// l'écran est court (petit iPhone, grande taille de texte).
+struct OV2EndAccountIllustration: View {
+    var maxSize: CGFloat = 190
+    @State private var shown = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    private static let avatarId = "avatar_04"
+
+    var body: some View {
+        Image(Self.avatarId)
+            .resizable()
+            .aspectRatio(1, contentMode: .fit)
+            .frame(maxWidth: maxSize, maxHeight: maxSize)
+            .clipShape(Circle())
+            .scaleEffect(shown || reduceMotion ? 1 : 0.7)
+            .opacity(shown ? 1 : 0)
+            .onAppear {
+                guard !shown else { return }
+                withAnimation(DS.Motion.pop.delay(0.15)) { shown = true }
             }
-        }
-        .multilineTextAlignment(.center)
+            .accessibilityHidden(true)
     }
 }
 
@@ -103,34 +105,39 @@ struct OnboardingV2ExistingAccountSheet: View {
                 } label: {
                     Image(systemName: "xmark")
                         .font(.system(size: 15, weight: .semibold))
-                        .foregroundStyle(OV2.inkSecondary)
+                        .foregroundStyle(DS.inkSecondary)
                         .frame(width: 40, height: 40)
                 }
+                .buttonStyle(.pressable)
             }
             .padding(.horizontal, 12)
             .padding(.top, 8)
 
-            Spacer()
+            OV2EndTitle(text: languageManager.text("onboardingV2.existingAccount.title"))
+                .padding(.top, 8)
+                .padding(.horizontal, OV2End.side)
 
-            VStack(spacing: 12) {
-                Text(languageManager.text("onboardingV2.existingAccount.title"))
-                    .font(DS.title(.title, .heavy))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
+            OV2EndSubtitle(text: languageManager.text("onboardingV2.existingAccount.subtitle"))
+                .padding(.top, 10)
+                .padding(.horizontal, OV2End.side)
 
-                Text(languageManager.text("onboardingV2.existingAccount.subtitle"))
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 32)
-            }
+            Spacer(minLength: 16)
 
-            Spacer()
+            OV2EndAccountIllustration()
+                .layoutPriority(1)
 
-            VStack(spacing: 16) {
+            Spacer(minLength: 16)
+
+            VStack(spacing: 14) {
                 AuthProvidersView(onSignedIn: onSignedIn)
-                    .padding(.horizontal, 24)
-                legalNote.padding(.horizontal, 32)
+                    .padding(.horizontal, OV2End.side)
+                // Signing in with Apple creates the account when there isn't one, so the
+                // terms belong on this screen exactly as they do on the login step.
+                OV2EndLegalNote(
+                    onTerms: { showTerms = true },
+                    onPrivacy: { showPrivacy = true }
+                )
+                .padding(.horizontal, 32)
             }
             .padding(.bottom, 40)
         }
@@ -139,25 +146,5 @@ struct OnboardingV2ExistingAccountSheet: View {
         .preferredColorScheme(.light)
         .sheet(isPresented: $showTerms) { TermsView() }
         .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
-    }
-
-    /// Signing in with Apple creates the account when there isn't one, so the terms
-    /// belong on this screen exactly as they do on the login step.
-    private var legalNote: some View {
-        VStack(spacing: 2) {
-            Text(languageManager.text("auth.legal.prefix"))
-                .font(DS.sans(.caption2, .medium))
-                .foregroundStyle(OV2.inkTertiary)
-            HStack(spacing: 4) {
-                Button(languageManager.text("settings.terms.title")) { showTerms = true }
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(OV2.inkSecondary)
-                Text("·").foregroundStyle(OV2.inkTertiary)
-                Button(languageManager.text("settings.privacy.title")) { showPrivacy = true }
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(OV2.inkSecondary)
-            }
-        }
-        .multilineTextAlignment(.center)
     }
 }

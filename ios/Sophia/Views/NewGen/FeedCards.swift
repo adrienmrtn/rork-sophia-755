@@ -64,6 +64,8 @@ struct CourseFeedCard: View {
     @State private var minutes: Int?
     @State private var likeBurst = 0
     @State private var bigHeart = 0
+    /// Incrémenté à chaque ouverture : la carte s'enfonce un instant (pression élastique).
+    @State private var tapPulse = 0
 
     private var identity: CreatorIdentity { CreatorIdentity.forCourse(course.id) }
     private var liked: Bool { progressManager.isLiked(course.id) }
@@ -97,26 +99,26 @@ struct CourseFeedCard: View {
                 }
                 .clipped()
 
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 9) {
                 if let kicker {
                     Text(kicker)
                         .font(DS.sans(.caption, .semibold))
                         .foregroundStyle(DS.inkSecondary)
                 }
                 Text(course.title.withoutInlineMarkup)
-                    .font(DS.title(.title3, .heavy))
+                    .font(DS.title(.title3, .semibold))
                     .foregroundStyle(DS.ink)
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
                 Text(hook)
                     .font(DS.sans(.subheadline))
                     .foregroundStyle(DS.inkSecondary)
-                    .lineSpacing(2)
+                    .lineSpacing(3)
                     .lineLimit(3)
                     .fixedSize(horizontal: false, vertical: true)
 
                 CreatorLine(identity: identity, onTap: identity.author.map { author in { onOpenCreator(author) } })
-                    .padding(.top, 2)
+                    .padding(.top, 1)
 
                 if fillsPage { Spacer(minLength: 0) }
 
@@ -124,15 +126,15 @@ struct CourseFeedCard: View {
 
                 statsRow
             }
-            .padding(16)
+            .padding(.horizontal, 16)
+            .padding(.top, 14)
+            .padding(.bottom, 10)
             .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
         }
         .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
-        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
+        .homeCard()
         .overlay { BigHeartOverlay(trigger: bigHeart) }
-        .dsSoftShadow()
+        .homeTapPulse(trigger: tapPulse)
         .contentShape(Rectangle())
         // Un tap ouvre le cours, deux taps l'aiment (le simple tap attend donc un instant,
         // le temps de savoir s'il est doublé).
@@ -140,7 +142,8 @@ struct CourseFeedCard: View {
             TapGesture(count: 2)
                 .onEnded { toggleLike(fromDoubleTap: true) }
                 .exclusively(before: TapGesture().onEnded {
-                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    Haptics.tap()
+                    tapPulse += 1
                     onOpen()
                 })
         )
@@ -153,15 +156,17 @@ struct CourseFeedCard: View {
     /// Le cœur : au bouton, il bascule ; au double-tap, il n'allume jamais vers l'éteint (comme
     /// sur les réseaux vidéo), mais le grand cœur s'affiche quand même.
     private func toggleLike(fromDoubleTap: Bool = false) {
-        UIImpactFeedbackGenerator(style: fromDoubleTap ? .medium : .light).impactOccurred()
         let wasLiked = liked
+        // Aimer vibre franchement (comme le double-tap) ; retirer son « j'aime », à peine.
+        if fromDoubleTap || !wasLiked { Haptics.confirm() } else { Haptics.tap() }
         if fromDoubleTap {
             bigHeart += 1
             if wasLiked { return }
         }
-        progressManager.toggleLike(course.id)
+        withAnimation(DS.Motion.snappy) { progressManager.toggleLike(course.id) }
         if !wasLiked {
-            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) { likeBurst += 1 }
+            // Le cœur rebondit et lâche son éclat (voir `LikeHeartIcon`).
+            withAnimation(DS.Motion.pop) { likeBurst += 1 }
         }
         AnalyticsService.shared.log(wasLiked ? .unlike : .like, courseId: course.id, screen: screen)
     }
@@ -184,10 +189,12 @@ struct CourseFeedCard: View {
                         .monospacedDigit()
                         .contentTransition(.numericText())
                 }
-                .padding(.vertical, 6)
+                .padding(.vertical, 8)
+                .padding(.horizontal, 4)
                 .contentShape(Rectangle())
             }
-            .buttonStyle(.plain)
+            .buttonStyle(PressableStyle(scale: 0.9, haptic: false))
+            .padding(.horizontal, -4)
             .accessibilityLabel(Text(AppLocalizable.string(liked ? "common.unlike" : "common.like", language: languageManager.current)))
 
             Spacer(minLength: 0)
@@ -203,8 +210,7 @@ struct CourseFeedCard: View {
 
 /// L'événement dans le fil : son illustration en grand (l'image de l'équipe, sinon un éventail
 /// des couvertures de la collection) avec la date et le titre posés dessus, puis l'accroche, le
-/// nombre de cours, le défi avec le badge à gagner, l'objectif commun quand il y en a un, et le
-/// bouton vers la collection.
+/// nombre de cours, le défi avec le badge à gagner, et le bouton vers la collection.
 struct EventFeedCard: View {
     @Environment(LanguageManager.self) private var languageManager
     let campaign: Campaign
@@ -212,6 +218,9 @@ struct EventFeedCard: View {
     /// Dans le fil paginé, la carte remplit sa page.
     var fillsPage = false
     let onOpen: () -> Void
+
+    /// Incrémenté à chaque ouverture : la carte s'enfonce un instant (pression élastique).
+    @State private var tapPulse = 0
 
     private var courses: [Course] {
         campaign.courseIds.compactMap { ContentCatalog.course(withId: $0) }
@@ -224,12 +233,12 @@ struct EventFeedCard: View {
         VStack(alignment: .leading, spacing: 0) {
             hero(language: language)
 
-            VStack(alignment: .leading, spacing: 14) {
+            VStack(alignment: .leading, spacing: 12) {
                 if !tagline.isEmpty {
                     Text(tagline)
                         .font(DS.sans(.subheadline))
                         .foregroundStyle(DS.inkSecondary)
-                        .lineSpacing(2)
+                        .lineSpacing(3)
                         .lineLimit(3)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -247,32 +256,25 @@ struct EventFeedCard: View {
 
                 progressPanel(done: done, language: language)
 
-                HStack(spacing: 6) {
-                    Text(AppLocalizable.string("event.card.seeCollection", language: language))
-                        .font(DS.sans(.subheadline, .bold))
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.8)
-                    Image(systemName: "chevron.forward")
-                        .font(.system(size: 12, weight: .bold))
-                }
-                .foregroundStyle(.white)
-                .padding(.horizontal, 12)
-                .frame(maxWidth: .infinity)
-                .frame(height: 48)
-                .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accent))
+                // La carte entière ouvre la collection : ce n'est que l'apparence du CTA.
+                HomeCTALabel(
+                    text: AppLocalizable.string("event.card.seeCollection", language: language),
+                    systemImage: "chevron.forward"
+                )
             }
-            .padding(16)
+            .padding(.horizontal, 16)
+            .padding(.top, 14)
+            .padding(.bottom, 16)
             .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .frame(maxHeight: fillsPage ? .infinity : nil, alignment: .top)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
-        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-        .dsSoftShadow()
+        .homeCard()
+        .homeTapPulse(trigger: tapPulse)
         .contentShape(Rectangle())
         .onTapGesture {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            Haptics.confirm()
+            tapPulse += 1
             onOpen()
         }
         .accessibilityElement(children: .combine)
@@ -292,17 +294,6 @@ struct EventFeedCard: View {
             }
         }
         .overlay { EventArtwork(campaign: campaign, courses: courses, collageLift: 0.08) }
-        .overlay {
-            LinearGradient(
-                stops: [
-                    .init(color: EventPalette.night.opacity(0), location: 0.3),
-                    .init(color: EventPalette.night.opacity(0.5), location: 0.68),
-                    .init(color: EventPalette.night.opacity(0.9), location: 1),
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-        }
         .overlay(alignment: .topLeading) {
             Group {
                 if campaign.hasEnded() {
@@ -313,65 +304,45 @@ struct EventFeedCard: View {
             }
             .padding(12)
         }
-        .overlay(alignment: .bottomLeading) {
+        // Le titre sur un voile sombre uni, posé en bas de l'illustration.
+        .overlay(alignment: .bottom) {
             Text(campaign.title(for: language))
-                .font(DS.title(.title, .heavy))
+                .font(DS.title(.title2, .heavy))
                 .foregroundStyle(.white)
                 .multilineTextAlignment(.leading)
                 .lineLimit(3)
                 .minimumScaleFactor(0.7)
-                .shadow(color: Color.black.opacity(0.35), radius: 6, x: 0, y: 2)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 14)
-                .padding(.top, 52)
+                .padding(.top, 14)
+                .frame(maxWidth: .infinity, minHeight: 96, alignment: .bottomLeading)
+                .background(EventPalette.night.opacity(0.62))
         }
         .clipped()
     }
 
-    /// Le défi du lecteur (badge dans son anneau, segments) et, dessous, l'objectif commun.
+    /// Le défi du lecteur : le badge dans son anneau, l'avancement en toutes lettres et un
+    /// segment par cours. (L'objectif commun « Ensemble : N cours lus » n'est plus affiché.)
     private func progressPanel(done: Int, language: AppLanguage) -> some View {
-        let complete = done >= campaign.challengeTarget
-        return VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 12) {
-                EventBadgeRing(campaign: campaign, done: done, size: 52)
-                VStack(alignment: .leading, spacing: 7) {
-                    Text(
-                        complete
-                            ? String(format: AppLocalizable.string("event.challenge.unlocked", language: language), campaign.badgeName(for: language))
-                            : String(format: AppLocalizable.string("event.card.challenge", language: language), done, campaign.challengeTarget)
-                    )
-                    .font(DS.sans(.footnote, .bold))
+        let complete: Bool = done >= campaign.challengeTarget
+        let label: String = complete
+            ? String(format: AppLocalizable.string("event.challenge.unlocked", language: language), campaign.badgeName(for: language))
+            : String(format: AppLocalizable.string("event.card.challenge", language: language), done, campaign.challengeTarget)
+        return HStack(spacing: 12) {
+            EventBadgeRing(campaign: campaign, done: done, size: 52, track: DS.ink.opacity(0.14))
+            VStack(alignment: .leading, spacing: 6) {
+                Text(label)
+                    .font(DS.sans(.subheadline, .bold))
                     .foregroundStyle(DS.ink)
                     .monospacedDigit()
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
-                    EventChallengeMeter(done: done, target: campaign.challengeTarget, track: DS.hairline, height: 6)
-                }
-            }
-
-            // L'objectif commun : tous les lecteurs ensemble, chiffre recalculé par le serveur.
-            if let goal = campaign.goalTarget, goal > 0 {
-                let read = campaign.goalCount ?? 0
-                Rectangle().fill(DS.hairline).frame(height: 1)
-                VStack(alignment: .leading, spacing: 7) {
-                    HStack(spacing: 6) {
-                        Image(systemName: "person.3.fill")
-                            .font(.system(size: 11, weight: .semibold))
-                            .foregroundStyle(DS.accentSoft)
-                        Text(String(format: AppLocalizable.string("event.goal.progress", language: language), read.formatted(language: language), goal.formatted(language: language)))
-                            .font(DS.sans(.caption, .semibold))
-                            .foregroundStyle(DS.inkSecondary)
-                            .monospacedDigit()
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.75)
-                    }
-                    EventProgressBar(fraction: Double(read) / Double(goal), tint: DS.accentSoft, track: DS.hairline, height: 6)
-                }
+                EventChallengeMeter(done: done, target: campaign.challengeTarget, track: DS.ink.opacity(0.14), height: 6)
             }
         }
         .padding(12)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(DS.canvas))
+        .background(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous).fill(DS.accentTint))
     }
 }
 

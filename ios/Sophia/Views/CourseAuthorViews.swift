@@ -23,8 +23,8 @@ struct AuthorAvatarView: View {
                     .scaledToFill()
             } else {
                 Text(author.initials)
-                    .font(.jakarta(size: size * 0.38, weight: .semibold))
-                    .foregroundStyle(DS.accentSoft)
+                    .font(.jakarta(size: size * 0.36, weight: .heavy))
+                    .foregroundStyle(DS.accent)
             }
         }
         .frame(width: size, height: size)
@@ -54,7 +54,6 @@ struct AuthorBylineV2: View {
 
     var body: some View {
         Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             onTap(author)
         } label: {
             HStack(spacing: 12) {
@@ -82,7 +81,7 @@ struct AuthorBylineV2: View {
             }
             .contentShape(Rectangle())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.pressable)
         .accessibilityLabel(String(format: AppLocalizable.string("course.author.by", language: language), author.name))
     }
 }
@@ -107,9 +106,9 @@ struct AuthorCardV2: View {
                     .font(.jakarta(size: 12, weight: .semibold))
                     .foregroundStyle(DS.accentSoft)
                 Text(AppLocalizable.string("course.author.writtenBy", language: language).uppercasedInApp())
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(DS.accentSoft)
-                    .tracking(1.2)
+                    .font(DS.sans(.caption2, .heavy))
+                    .foregroundStyle(DS.accent)
+                    .tracking(0.9)
             }
 
             HStack(alignment: .center, spacing: 14) {
@@ -143,8 +142,8 @@ struct AuthorCardV2: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
 
+            // Le style du bouton vibre déjà à la pression.
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 onTap(author)
             } label: {
                 HStack(spacing: 8) {
@@ -155,17 +154,7 @@ struct AuthorCardV2: View {
             }
             .buttonStyle(DSSecondaryButtonStyle())
         }
-        .padding(DS.Space.l)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .fill(DS.surface)
-                .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
-                }
-        }
-        .dsSoftShadow()
+        .dsCard()
     }
 }
 
@@ -200,7 +189,7 @@ struct TranslatedFromLine: View {
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 10)
-        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(DS.accentTint))
+        .background(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous).fill(DS.accentTint))
     }
 }
 
@@ -218,8 +207,8 @@ struct SourcesCardV2: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Button {
-                UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                withAnimation(.spring(response: 0.42, dampingFraction: 0.78)) {
+                Haptics.select()
+                withAnimation(DS.Motion.snappy) {
                     revealed.toggle()
                 }
             } label: {
@@ -288,15 +277,6 @@ struct SourcesCardV2: View {
                 .transition(.opacity)
             }
         }
-        .padding(DS.Space.l)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .fill(DS.surfaceMuted)
-                .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
-                }
-        }
+        .dsCard()
     }
 }

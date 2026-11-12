@@ -27,11 +27,11 @@ struct FavoritesView: View {
 
                             LazyVGrid(
                                 columns: [
-                                    GridItem(.flexible(), spacing: 14),
-                                    GridItem(.flexible(), spacing: 14)
+                                    GridItem(.flexible(), spacing: 12),
+                                    GridItem(.flexible(), spacing: 12)
                                 ],
                                 alignment: .leading,
-                                spacing: 18
+                                spacing: 14
                             ) {
                                 ForEach(favorites) { course in
                                     LibraryCardView(
@@ -62,7 +62,7 @@ struct FavoritesView: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(languageManager.text("library.filter.favorites"))
-                .font(DS.title(.largeTitle, .semibold))
+                .font(DS.title(.largeTitle, .medium))
                 .foregroundStyle(DS.ink)
 
             HStack(spacing: 6) {
@@ -71,7 +71,7 @@ struct FavoritesView: View {
                 Text(String(format: languageManager.text("favorites.badge.count"), favorites.count))
                     .font(DS.sans(.caption, .medium))
             }
-            .foregroundStyle(DS.accentSoft)
+            .foregroundStyle(DS.accent)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
             .background(DS.accentTint, in: Capsule())
@@ -89,6 +89,7 @@ struct FavoritesView: View {
                     .foregroundStyle(DS.accentSoft)
             }
             .frame(width: 136, height: 136)
+            .dsPopIn()
             .padding(.bottom, 28)
 
             Text(languageManager.text("favorites.empty.title"))

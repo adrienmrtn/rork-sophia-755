@@ -16,8 +16,15 @@ struct OnboardingV2Account: View {
     @State private var originalHandle: String?
     @State private var isSaving = false
     @State private var errorMessage: String?
+    /// Incrémenté à chaque @ refusé : le champ se secoue.
+    @State private var errorShake = 0
 
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 12), count: 5)
+    /// Diamètre de l'avatar choisi, au centre du carrousel ; ses voisins sont réduits.
+    private static let avatarSize: CGFloat = 104
+    /// Largeur d'une case du carrousel, plus étroite que l'avatar centré : les voisins,
+    /// réduits, viennent ainsi se ranger tout près de lui.
+    private static let avatarSlot: CGFloat = 80
+    private static let neighbourScale: CGFloat = 0.615
 
     private var sanitizedHandle: String {
         handle
@@ -36,77 +43,49 @@ struct OnboardingV2Account: View {
         !isSaving && (originalHandle == nil || handleIsValid)
     }
 
+    /// L'avatar centré dans le carrousel est l'avatar choisi : le défilement écrit dans
+    /// `avatarId`, et changer `avatarId` (toucher un voisin, avatar déjà enregistré) fait
+    /// défiler jusqu'à lui.
+    private var centeredAvatar: Binding<String?> {
+        Binding<String?>(
+            get: { avatarId },
+            set: { newValue in
+                if let newValue, newValue != avatarId { avatarId = newValue }
+            }
+        )
+    }
+
     var body: some View {
         OV2ScrollableContent {
-            VStack(spacing: 22) {
-                VStack(spacing: 10) {
-                    Text(languageManager.text("onboardingV2.account.title"))
-                        .font(DS.title(.title, .heavy))
-                        .foregroundStyle(OV2.ink)
-                        .multilineTextAlignment(.center)
-                    Text(languageManager.text("onboardingV2.account.subtitle"))
-                        .font(DS.sans(.body, .medium))
-                        .foregroundStyle(OV2.inkSecondary)
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                .padding(.top, 36)
-                .ov2Reveal(delay: 0.05)
+            VStack(spacing: 0) {
+                OV2EndTitle(text: languageManager.text("onboardingV2.account.title"))
+                    .padding(.top, OV2End.topWithoutHeader)
+                    .dsStagger(0)
 
-                AvatarCircle(avatarId: avatarId, initial: "", size: 116)
-                    .overlay(Circle().strokeBorder(OV2.accent, lineWidth: 4))
-                    .dsSoftShadow()
-                    .id(avatarId)
-                    .transition(.scale(scale: 0.85).combined(with: .opacity))
-                    .ov2Reveal(delay: 0.12)
+                OV2EndSubtitle(text: languageManager.text("onboardingV2.account.subtitle"))
+                    .padding(.top, 10)
+                    .dsStagger(1)
 
-                VStack(alignment: .leading, spacing: 8) {
-                    HStack(spacing: 8) {
-                        Text("@")
-                            .font(DS.title(.title3, .semibold))
-                            .foregroundStyle(OV2.inkTertiary)
-                        TextField(languageManager.text("friends.handle.placeholder"), text: $handle)
-                            .font(DS.title(.title3, .semibold))
-                            .foregroundStyle(OV2.ink)
-                            .textInputAutocapitalization(.never)
-                            .autocorrectionDisabled()
-                            .keyboardType(.asciiCapable)
-                            .submitLabel(.done)
-                            .disabled(originalHandle == nil)
-                    }
-                    .padding(16)
-                    .background(OV2.surface, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                            .strokeBorder(errorMessage == nil ? OV2.hairline : OV2.danger, lineWidth: 1)
-                    }
+                avatarCarousel
+                    .padding(.top, 28)
+                    // Le carrousel va d'un bord à l'autre de la colonne de contenu.
+                    .padding(.horizontal, -OV2End.side)
+                    .dsStagger(2)
 
-                    Text(errorMessage ?? languageManager.text("friends.handle.rules"))
-                        .font(DS.sans(.caption, .medium))
-                        .foregroundStyle(errorMessage == nil ? OV2.inkTertiary : OV2.danger)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                .ov2Reveal(delay: 0.18)
+                handleField
+                    .padding(.top, 28)
+                    .dsStagger(3)
 
-                LazyVGrid(columns: columns, spacing: 12) {
-                    ForEach(Avatars.all, id: \.self) { id in
-                        Button {
-                            OnboardingHaptics.selection()
-                            withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-                                avatarId = id
-                            }
-                        } label: {
-                            AvatarCircle(avatarId: id, initial: "", size: 56)
-                                .overlay(Circle().strokeBorder(avatarId == id ? OV2.accent : Color.clear, lineWidth: 3))
-                                .scaleEffect(avatarId == id ? 1.06 : 1)
-                        }
-                        .buttonStyle(.plain)
-                        .accessibilityLabel(id)
-                    }
-                }
-                .ov2Reveal(delay: 0.24)
+                Text(errorMessage ?? languageManager.text("friends.handle.rules"))
+                    .font(DS.sans(.footnote, .regular))
+                    .foregroundStyle(errorMessage == nil ? DS.inkSecondary : DS.danger)
+                    .lineSpacing(2)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 10)
+                    .dsStagger(4)
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, OV2End.side)
             .padding(.bottom, 20)
             .ov2ReadableWidth()
         } footer: {
@@ -120,6 +99,77 @@ struct OnboardingV2Account: View {
         // Relancé quand la session est connue : juste après la connexion, elle peut arriver un
         // instant plus tard, et sans elle le @ ne peut pas être lu.
         .task(id: AuthService.shared.isSignedIn) { await load() }
+    }
+
+    // MARK: - Carrousel d'avatars
+
+    /// Tous les avatars sur une ligne qui défile et s'aimante : celui du centre est choisi,
+    /// grand et cerclé de bleu ; les autres sont réduits et estompés.
+    private var avatarCarousel: some View {
+        GeometryReader { geo in
+            let margin: CGFloat = max(0, (geo.size.width - Self.avatarSlot) / 2)
+            ScrollView(.horizontal) {
+                HStack(spacing: 0) {
+                    ForEach(Avatars.all, id: \.self) { id in
+                        avatarItem(id)
+                    }
+                }
+                .scrollTargetLayout()
+            }
+            .scrollIndicators(.hidden)
+            .scrollTargetBehavior(.viewAligned)
+            .scrollPosition(id: centeredAvatar, anchor: .center)
+            .contentMargins(.horizontal, margin, for: .scrollContent)
+        }
+        .frame(height: Self.avatarSize + 8)
+        .sensoryFeedback(.selection, trigger: avatarId)
+    }
+
+    private func avatarItem(_ id: String) -> some View {
+        let selected: Bool = avatarId == id
+        return Button {
+            withAnimation(DS.Motion.snappy) {
+                avatarId = id
+            }
+        } label: {
+            AvatarCircle(avatarId: id, initial: "", size: Self.avatarSize)
+                .overlay(
+                    Circle()
+                        .strokeBorder(DS.accent, lineWidth: 4)
+                        .opacity(selected ? 1 : 0)
+                )
+                .scaleEffect(selected ? 1 : Self.neighbourScale)
+                .opacity(selected ? 1 : 0.55)
+                .animation(DS.Motion.snappy, value: selected)
+                .frame(width: Self.avatarSlot, height: Self.avatarSize)
+        }
+        .buttonStyle(.plain)
+        .zIndex(selected ? 1 : 0)
+        .accessibilityLabel(id)
+        .accessibilityAddTraits(selected ? .isSelected : [])
+    }
+
+    // MARK: - Champ du @
+
+    private var handleField: some View {
+        HStack(spacing: 6) {
+            Text(verbatim: "@")
+                .font(DS.sans(.headline, .bold))
+                .foregroundStyle(DS.inkSecondary)
+            TextField(languageManager.text("friends.handle.placeholder"), text: $handle)
+                .font(DS.sans(.headline, .bold))
+                .foregroundStyle(DS.ink)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
+                .keyboardType(.asciiCapable)
+                .submitLabel(.done)
+                .disabled(originalHandle == nil)
+        }
+        .padding(.horizontal, 16)
+        .frame(height: 58)
+        .ov2EndCard(border: errorMessage == nil ? DS.hairline : DS.danger)
+        .animation(DS.Motion.snappy, value: errorMessage)
+        .dsShake(trigger: errorShake)
     }
 
     private func load() async {
@@ -151,10 +201,18 @@ struct OnboardingV2Account: View {
             } catch let error as SocialError {
                 errorMessage = error.localizedMessage(languageManager: languageManager)
                 isSaving = false
+                signalError()
             } catch {
                 errorMessage = languageManager.text("friends.error.generic")
                 isSaving = false
+                signalError()
             }
         }
+    }
+
+    /// Le @ a été refusé : secousse du champ et vibration d'erreur.
+    private func signalError() {
+        errorShake += 1
+        Haptics.error()
     }
 }

@@ -591,7 +591,7 @@ struct LibraryFeaturedCard: View {
     }
 }
 
-/// Calm library card — white surface, hairline border, soft diffuse shadow.
+/// Carte de cours en grille (favoris) : fond blanc, bordure nette et léger rebord bas.
 struct LibraryCardView: View {
     @Environment(LanguageManager.self) private var languageManager
     let course: Course
@@ -609,16 +609,11 @@ struct LibraryCardView: View {
                 illustration
                 bottomPanel
             }
-            .background(DS.surface)
-            .clipShape(.rect(cornerRadius: DS.Radius.control))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
-                    .strokeBorder(DS.hairline, lineWidth: 1)
-            }
-            .dsSoftShadow()
+            .homeCard()
             .opacity(status == .completed ? 0.82 : 1.0)
         }
-        .buttonStyle(BrutalCardButtonStyle(depth: 2))
+        // Sans vibration : l'appelant en déclenche déjà une à l'ouverture.
+        .buttonStyle(PressableStyle(haptic: false))
         .courseAudioContextMenu(courseId: course.id, source: "library_card", enabled: showsAudio)
     }
 
@@ -648,8 +643,7 @@ struct LibraryCardView: View {
             .overlay(alignment: .topTrailing) {
                 if let pm = progressManager {
                     Button {
-                        let g = UIImpactFeedbackGenerator(style: .light)
-                        g.impactOccurred()
+                        // La vibration vient du `sensoryFeedback` ci-dessous.
                         favTrigger += 1
                         let liked = !pm.isFavorite(course.id)
                         pm.toggleFavorite(course.id)
@@ -658,8 +652,9 @@ struct LibraryCardView: View {
                         Image(systemName: pm.isFavorite(course.id) ? "bookmark.fill" : "bookmark")
                             .font(.jakarta(size: 13, weight: .medium))
                             .foregroundStyle(pm.isFavorite(course.id) ? DS.accent : DS.inkSecondary)
+                            .symbolEffect(.bounce, value: favTrigger)
                             .frame(width: 30, height: 30)
-                            .background(.ultraThinMaterial, in: Circle())
+                            .background(DS.surface, in: Circle())
                             .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
                     }
                     .buttonStyle(.plain)
@@ -678,9 +673,9 @@ struct LibraryCardView: View {
     private var bottomPanel: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(DS.accentSoft)
-                .tracking(1.0)
+                .font(DS.sans(.caption2, .heavy))
+                .foregroundStyle(DS.accent)
+                .tracking(0.9)
 
             Text(course.title)
                 .font(DS.title(.subheadline, .semibold))
@@ -718,10 +713,10 @@ struct LibraryCardView: View {
                     .font(DS.sans(.caption2, .semibold))
                     .tracking(0.3)
             }
-            .foregroundStyle(DS.accentSoft)
+            .foregroundStyle(DS.accent)
             .padding(.horizontal, 8)
             .padding(.vertical, 5)
-            .background(.ultraThinMaterial, in: Capsule())
+            .background(DS.surface, in: Capsule())
             .overlay { Capsule().strokeBorder(DS.hairline, lineWidth: 1) }
         case .notStarted:
             EmptyView()

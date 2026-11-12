@@ -1,18 +1,52 @@
 import SwiftUI
 import UIKit
 
-/// Calm tab bar chrome — matches the `DS` design system (soft canvas, navy accent,
-/// muted slate for unselected items), replacing the previous cream/black neo-brutalist look.
+/// Barre d'onglets « Elevate arrondi » : fond blanc opaque, filet en haut, icône et libellé
+/// bleus pour l'onglet actif, gris sinon, libellés en Plus Jakarta Sans.
 enum SophiaTabBarStyle {
     static func apply() {
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = DS.uiCanvas
         appearance.shadowColor = DS.uiHairline
+
+        let item = UITabBarItemAppearance()
+        style(item.normal, color: DS.uiInkSecondary)
+        style(item.selected, color: DS.uiAccent)
+        appearance.stackedLayoutAppearance = item
+        appearance.inlineLayoutAppearance = item
+        appearance.compactInlineLayoutAppearance = item
+
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = appearance
         UITabBar.appearance().tintColor = DS.uiAccent
-        UITabBar.appearance().unselectedItemTintColor = DS.uiInkTertiary
+        UITabBar.appearance().unselectedItemTintColor = DS.uiInkSecondary
+    }
+
+    /// À appeler avant la création de la barre (valeur initiale d'un `@State` de la vue qui porte
+    /// la `TabView`) : l'apparence posée plus tard, dans `onAppear`, n'atteint pas toujours une
+    /// barre déjà construite. Sans effet après le premier appel.
+    @discardableResult
+    static func applyOnce() -> Bool {
+        if !applied {
+            applied = true
+            apply()
+        }
+        return true
+    }
+
+    private static var applied = false
+
+    private static func style(_ state: UITabBarItemStateAppearance, color: UIColor) {
+        let descriptor = UIFontDescriptor(fontAttributes: [
+            .family: "Plus Jakarta Sans",
+            .traits: [UIFontDescriptor.TraitKey.weight: UIFont.Weight.medium],
+        ])
+        state.iconColor = color
+        state.titleTextAttributes = [
+            .foregroundColor: color,
+            .font: UIFont(descriptor: descriptor, size: 11),
+        ]
     }
 }
 

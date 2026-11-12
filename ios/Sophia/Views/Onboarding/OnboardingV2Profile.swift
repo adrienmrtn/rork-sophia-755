@@ -2,17 +2,15 @@ import SwiftUI
 
 /// Écran « Voici ton profil » — moment de **récompense** inséré juste avant la création de
 /// compte / le paywall. On attribue un surnom à l'utilisateur selon ses réponses, on lui
-/// rappelle l'objectif qu'il a saisi et on lui montre les cours qui l'attendent, pour qu'il
-/// se sente identifié et impatient de commencer.
-///
-/// Direction artistique : identique aux autres écrans de l'OB (calme, premium), animations
-/// lentes et étagées.
+/// rappelle l'objectif qu'il a saisi (carte bleutée « Ton objectif ») et on lui montre les
+/// cours qui l'attendent, numérotés le long d'un fil, pour qu'il se sente identifié et
+/// impatient de commencer.
 struct OnboardingV2Profile: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
-    @State private var haloIn = false
     @State private var badgeIn = false
     @State private var nameRevealed = false
     @State private var reveal = 0
@@ -25,258 +23,229 @@ struct OnboardingV2Profile: View {
         vm.objectiveKeys.isEmpty ? [vm.profileArchetypeKey] : vm.objectiveKeys
     }
 
-    /// Tailles resserrées sur les petits écrans (iPhone SE / mini) pour que la « récompense »
-    /// tienne sans scroll. Le conteneur scrollable reste le garde-fou quand ça ne suffit pas
-    /// (plusieurs objectifs, grande taille de texte, traduction longue).
-    struct Metrics {
-        let topSpacing: CGFloat
-        let sectionSpacing: CGFloat
-        let badge: CGFloat
-        let emoji: CGFloat
-        let cardWidth: CGFloat
-        let cardHeight: CGFloat
-
-        static let regular = Metrics(
-            topSpacing: 44, sectionSpacing: 22,
-            badge: 116, emoji: 52,
-            cardWidth: 168, cardHeight: 214
+    /// « Les cours qui **t'attendent** » : la version à passage surligné quand la langue en
+    /// a une, le titre existant sinon.
+    private var coursesTitle: String {
+        OV2End.marked(
+            "onboardingV2.profile.coursesTitleMarked",
+            fallback: languageManager.text("onboardingV2.profile.coursesTitle"),
+            language: languageManager.current
         )
-
-        static let compact = Metrics(
-            topSpacing: 16, sectionSpacing: 16,
-            badge: 92, emoji: 42,
-            cardWidth: 148, cardHeight: 188
-        )
-
-        /// `height` = hauteur disponible pour l'écran (hors safe areas). Le seuil couvre les
-        /// iPhone SE / 8 / mini (≈ 647–728 pt utiles), où la version « regular » ne tient pas.
-        static func fitting(height: CGFloat) -> Metrics {
-            height < 740 ? .compact : .regular
-        }
     }
 
     var body: some View {
-        GeometryReader { proxy in
-            let metrics = Metrics.fitting(height: proxy.size.height)
+        // Contenu scrollable + CTA épinglé : la pile (surnom, objectifs, cours) dépasse la
+        // hauteur d'un petit iPhone avec plusieurs objectifs sélectionnés, une grande taille
+        // de texte ou une traduction longue. Sans ce conteneur le CTA sortait de l'écran :
+        // l'utilisateur ne pouvait plus avancer dans l'onboarding.
+        OV2ScrollableContent {
+            VStack(alignment: .leading, spacing: 0) {
+                header
+                    .padding(.top, 18)
 
-            // Contenu scrollable + CTA épinglé : la pile (badge, chips d'objectifs, cartes de
-            // cours) a une hauteur minimale supérieure à l'écran sur les petits iPhone, avec
-            // plusieurs objectifs sélectionnés, une grande taille de texte ou une traduction
-            // longue. Sans ce conteneur le CTA sortait de l'écran (et le badge était rogné en
-            // haut) : l'utilisateur ne pouvait plus avancer dans l'onboarding.
-            OV2ScrollableContent {
-                VStack(spacing: 0) {
-                    Spacer().frame(height: metrics.topSpacing)
+                objectiveCard
+                    .padding(.top, 16)
+                    .opacity(reveal >= 1 ? 1 : 0)
+                    .offset(y: reveal >= 1 || reduceMotion ? 0 : 14)
 
-                    header(metrics)
+                DSHighlightTitle(text: coursesTitle, style: .title2, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .accessibilityAddTraits(.isHeader)
+                    .padding(.top, 22)
+                    .opacity(reveal >= 2 ? 1 : 0)
+                    .offset(y: reveal >= 2 || reduceMotion ? 0 : 14)
 
-                    Spacer().frame(height: metrics.sectionSpacing)
-
-                    objectiveReminder
-                        .opacity(reveal >= 1 ? 1 : 0)
-                        .offset(y: reveal >= 1 ? 0 : 16)
-
-                    Spacer().frame(height: metrics.sectionSpacing)
-
-                    coursesSection(metrics)
-                        .opacity(reveal >= 2 ? 1 : 0)
-                        .offset(y: reveal >= 2 ? 0 : 20)
-
-                    Spacer().frame(height: 16)
-                }
-            } footer: {
-                // Reveal autonome (état interne au modifieur) : le CTA apparaît toujours,
-                // même si la séquence d'animation du contenu est interrompue.
-                OnboardingV2Button(
-                    title: languageManager.text("onboardingV2.profile.cta"),
-                    enabled: true,
-                    action: onNext
-                )
-                .ov2Reveal(delay: 1.5, yOffset: 0)
+                coursesTimeline
+                    .padding(.top, 18)
             }
-            // Halo doux qui « respire » derrière le badge.
-            .background(alignment: .top) {
-                Circle()
-                    .fill(OV2.accentSoft.opacity(0.10))
-                    .frame(width: 340, height: 340)
-                    .scaleEffect(haloIn ? 1.05 : 0.75)
-                    .blur(radius: 34)
-                    .opacity(haloIn ? 1 : 0)
-                    .offset(y: -60)
-            }
+            .padding(.horizontal, OV2End.side)
+            .padding(.bottom, 20)
+        } footer: {
+            // Reveal autonome (état interne au modifieur) : le CTA apparaît toujours,
+            // même si la séquence d'animation du contenu est interrompue.
+            OnboardingV2Button(
+                title: languageManager.text("onboardingV2.profile.cta"),
+                enabled: true,
+                action: onNext
+            )
+            .ov2Reveal(delay: 0.9, yOffset: 0)
         }
         .ov2Background()
         .onAppear(perform: runAnimation)
     }
 
-    // MARK: - Header (badge + surnom)
+    // MARK: - En-tête (pastille + surnom)
 
-    private func header(_ metrics: Metrics) -> some View {
-        VStack(spacing: 16) {
+    private var header: some View {
+        HStack(spacing: 12) {
             ZStack {
-                Circle()
-                    .fill(OV2.accent.opacity(0.10))
-                    .frame(width: metrics.badge, height: metrics.badge)
-                Circle()
-                    .strokeBorder(OV2.accent.opacity(0.18), lineWidth: 1)
-                    .frame(width: metrics.badge, height: metrics.badge)
+                Circle().fill(DS.accentTint)
                 Text(vm.profileEmoji)
-                    .font(.system(size: metrics.emoji))
-                    .scaleEffect(badgeIn ? 1 : 0.4)
-                    .opacity(badgeIn ? 1 : 0)
+                    .font(.system(size: 28))
             }
+            .frame(width: 56, height: 56)
+            .scaleEffect(badgeIn || reduceMotion ? 1 : 0.4)
+            .opacity(badgeIn ? 1 : 0)
+            .accessibilityHidden(true)
 
-            VStack(spacing: 8) {
-                Text(vm.personalizedText("onboardingV2.profile.eyebrow", language: languageManager.current).uppercasedInApp())
-                    .font(DS.sans(.caption, .bold))
-                    .tracking(1.6)
-                    .foregroundStyle(OV2.accentSoft)
-                    .opacity(nameRevealed ? 1 : 0)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(vm.personalizedText("onboardingV2.profile.eyebrow", language: languageManager.current))
+                    .font(DS.sans(.footnote, .regular))
+                    .foregroundStyle(DS.inkSecondary)
 
                 Text(vm.profileNickname(language: languageManager.current))
-                    .font(DS.title(.largeTitle, .heavy))
-                    .foregroundStyle(OV2.ink)
-                    .multilineTextAlignment(.center)
+                    .font(DS.title(.title3, .bold))
+                    .foregroundStyle(DS.ink)
+                    .multilineTextAlignment(.leading)
                     .minimumScaleFactor(0.7)
                     .lineLimit(2)
-                    .scaleEffect(nameRevealed ? 1 : 0.86)
-                    .opacity(nameRevealed ? 1 : 0)
-
-                Text(vm.profileTagline(language: languageManager.current))
-                    .font(DS.sans(.body, .medium))
-                    .foregroundStyle(OV2.inkSecondary)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(nil)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity)
-                    .padding(.horizontal, 20)
-                    .opacity(nameRevealed ? 1 : 0)
             }
+            .opacity(nameRevealed ? 1 : 0)
+            .offset(x: nameRevealed || reduceMotion ? 0 : -10)
+
+            Spacer(minLength: 0)
         }
-        .padding(.horizontal, 28)
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: - Rappel de l'objectif
 
-    private var objectiveReminder: some View {
-        VStack(spacing: 10) {
-            Text(languageManager.text("onboardingV2.profile.objectiveTitle").uppercasedInApp())
-                .font(DS.sans(.caption2, .bold))
-                .tracking(1.2)
-                .foregroundStyle(OV2.inkTertiary)
+    /// Carte bleutée « Ton objectif » : la phrase du profil, puis les objectifs choisis.
+    private var objectiveCard: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            DSEyebrow(text: languageManager.text("onboardingV2.profile.objectiveTitle"))
 
-            FlexibleChips(items: objectives) { key in
-                HStack(spacing: 8) {
-                    Text(OnboardingV2ViewModel.objectiveEmoji(key))
-                        .font(.system(size: 15))
-                    Text(OnboardingV2ViewModel.objectiveLabel(key, language: languageManager.current))
-                        .font(DS.sans(.subheadline, .semibold))
-                        .foregroundStyle(OV2.ink)
+            Text(vm.profileTagline(language: languageManager.current))
+                .font(DS.sans(.callout, .semibold))
+                .foregroundStyle(DS.ink)
+                .lineSpacing(2)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+
+            VStack(alignment: .leading, spacing: 6) {
+                ForEach(objectives, id: \.self) { key in
+                    objectiveChip(key)
                 }
-                .padding(.horizontal, 14)
-                .padding(.vertical, 9)
-                .background(OV2.surface, in: Capsule())
-                .overlay(Capsule().strokeBorder(OV2.accent.opacity(0.25), lineWidth: 1))
             }
-            .padding(.horizontal, 24)
+            .padding(.top, 4)
         }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .ov2EndCard(fill: DS.accentTint, border: Self.objectiveBorder)
+    }
+
+    /// Bordure de la carte objectif : le bleu d'accent très éclairci.
+    private static let objectiveBorder = Color(red: 0.773, green: 0.835, blue: 0.945)
+
+    private func objectiveChip(_ key: String) -> some View {
+        HStack(spacing: 8) {
+            Text(OnboardingV2ViewModel.objectiveEmoji(key))
+                .font(.system(size: 14))
+            Text(OnboardingV2ViewModel.objectiveLabel(key, language: languageManager.current))
+                .font(DS.sans(.footnote, .semibold))
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 7)
+        .background(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous).fill(DS.surface))
     }
 
     // MARK: - Cours qui t'attendent
 
-    private func coursesSection(_ metrics: Metrics) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text(languageManager.text("onboardingV2.profile.coursesTitle"))
-                .font(DS.title(.title3, .heavy))
-                .foregroundStyle(OV2.ink)
-                .padding(.horizontal, 28)
-
-            ScrollView(.horizontal) {
-                HStack(spacing: 14) {
-                    ForEach(Array(courses.prefix(6).enumerated()), id: \.element.id) { i, course in
-                        courseCard(course, metrics)
-                            .opacity(reveal >= 2 ? 1 : 0)
-                            .offset(y: reveal >= 2 ? 0 : 18)
-                            .animation(.spring(response: 0.6, dampingFraction: 0.85).delay(Double(i) * 0.08), value: reveal)
-                    }
-                }
-                .padding(.horizontal, 28)
-                .padding(.vertical, 4)
+    /// Les cours numérotés le long d'un fil vertical, le premier mis en avant.
+    private var coursesTimeline: some View {
+        let shown: [Course] = Array(courses.prefix(6))
+        return VStack(spacing: 12) {
+            ForEach(Array(shown.enumerated()), id: \.element.id) { i, course in
+                timelineRow(course, index: i)
+                    .opacity(reveal >= 2 ? 1 : 0)
+                    .offset(y: reveal >= 2 || reduceMotion ? 0 : 16)
+                    .animation(DS.Motion.reveal.delay(0.06 + Double(i) * 0.08), value: reveal)
             }
-            .scrollIndicators(.hidden)
+        }
+        .background(alignment: .leading) {
+            Rectangle()
+                .fill(Self.objectiveBorder)
+                .frame(width: 2)
+                .padding(.vertical, 20)
+                .padding(.leading, 13)
+                .scaleEffect(x: 1, y: reveal >= 2 || reduceMotion ? 1 : 0, anchor: .top)
+                .opacity(reveal >= 2 ? 1 : 0)
+                .animation(DS.Motion.reveal.delay(0.1), value: reveal)
         }
     }
 
-    private func courseCard(_ course: Course, _ metrics: Metrics) -> some View {
-        ZStack(alignment: .bottomLeading) {
-            Group {
-                if let img = CourseImageMap.loadImage(for: course.id) {
-                    Image(uiImage: img).resizable().scaledToFill()
-                } else {
-                    LinearGradient(
-                        colors: [course.subject.color, course.subject.color.opacity(0.6)],
-                        startPoint: .topLeading, endPoint: .bottomTrailing
-                    )
-                }
-            }
-            .frame(width: metrics.cardWidth, height: metrics.cardHeight)
-            .clipped()
+    private func timelineRow(_ course: Course, index: Int) -> some View {
+        let isFirst: Bool = index == 0
+        return HStack(spacing: 12) {
+            Text(verbatim: "\(index + 1)")
+                .font(DS.sans(.footnote, .bold))
+                .foregroundStyle(isFirst ? Color.white : DS.accent)
+                .frame(width: 28, height: 28)
+                .background(Circle().fill(isFirst ? DS.accent : DS.accentTint))
+                .accessibilityHidden(true)
 
-            LinearGradient(
-                colors: [.clear, .black.opacity(0.15), .black.opacity(0.78)],
-                startPoint: .center, endPoint: .bottom
-            )
+            courseCard(course)
+        }
+    }
 
-            VStack(alignment: .leading, spacing: 6) {
-                Text(course.subject.localizedShortName(language: languageManager.current).uppercasedInApp())
-                    .font(DS.sans(.caption2, .bold))
-                    .foregroundStyle(.white.opacity(0.92))
-                    .padding(.horizontal, 8).padding(.vertical, 4)
-                    .background(.white.opacity(0.22), in: Capsule())
+    private func courseCard(_ course: Course) -> some View {
+        HStack(spacing: 12) {
+            courseThumbnail(course)
+                .frame(width: 56, height: 56)
+                .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
+                .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 3) {
+                DSEyebrow(text: course.subject.localizedShortName(language: languageManager.current))
                 Text(course.title)
-                    .font(DS.sans(.subheadline, .bold))
-                    .foregroundStyle(.white)
+                    .font(DS.sans(.footnote, .semibold))
+                    .foregroundStyle(DS.ink)
+                    .lineSpacing(1)
                     .lineLimit(3)
                     .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(12)
+
+            Spacer(minLength: 0)
         }
-        .frame(width: metrics.cardWidth, height: metrics.cardHeight)
-        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).strokeBorder(OV2.hairline, lineWidth: 1))
-        .shadow(color: .black.opacity(0.12), radius: 14, y: 8)
+        .padding(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 12))
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .ov2EndCard()
+        .accessibilityElement(children: .combine)
     }
 
-    // MARK: - Animation (lente et étagée)
+    @ViewBuilder
+    private func courseThumbnail(_ course: Course) -> some View {
+        if let img = CourseImageMap.loadImage(for: course.id) {
+            Image(uiImage: img)
+                .resizable()
+                .scaledToFill()
+        } else {
+            LinearGradient(
+                colors: [course.subject.color, course.subject.color.opacity(0.6)],
+                startPoint: .topLeading, endPoint: .bottomTrailing
+            )
+        }
+    }
+
+    // MARK: - Animation (étagée)
 
     private func runAnimation() {
-        withAnimation(.easeInOut(duration: 1.4)) { haloIn = true }
-        withAnimation(.spring(response: 0.9, dampingFraction: 0.7).delay(0.2)) { badgeIn = true }
-        withAnimation(.spring(response: 0.9, dampingFraction: 0.82).delay(0.55)) { nameRevealed = true }
+        withAnimation(DS.Motion.pop.delay(0.1)) { badgeIn = true }
+        withAnimation(DS.Motion.reveal.delay(0.22)) { nameRevealed = true }
         OnboardingHaptics.selection()
 
         for step in 1...2 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9 + Double(step) * 0.45) {
-                withAnimation(.spring(response: 0.8, dampingFraction: 0.85)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2 + Double(step) * 0.3) {
+                withAnimation(DS.Motion.reveal) {
                     reveal = step
                 }
                 if step == 1 { OnboardingHaptics.selection() }
             }
         }
-    }
-}
-
-/// Petit wrap horizontal (chips) qui passe à la ligne — utilisé pour rappeler les objectifs.
-private struct FlexibleChips<Content: View>: View {
-    let items: [String]
-    @ViewBuilder let content: (String) -> Content
-
-    var body: some View {
-        OV2FlowLayout(spacing: 8, lineSpacing: 8) {
-            ForEach(items, id: \.self) { item in
-                content(item)
-            }
-        }
-        .frame(maxWidth: .infinity)
     }
 }

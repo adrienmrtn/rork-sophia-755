@@ -30,7 +30,7 @@ enum DuelSubjects {
 
 /// L'annonce d'une manche, par-dessus l'écran de jeu : trois matières au choix (et le temps qui
 /// reste pour choisir), la matière que l'adversaire est en train de choisir puis celle qu'il a
-/// retenue, ou le sprint final.
+/// retenue, ou le sprint final. Fond blanc, comme le reste du duel.
 struct DuelRoundIntroView: View {
     @Environment(LanguageManager.self) private var languageManager
     let model: DuelGameModel
@@ -41,13 +41,13 @@ struct DuelRoundIntroView: View {
 
     var body: some View {
         ZStack {
-            DuelPalette.night.opacity(0.96).ignoresSafeArea()
+            DS.canvas.opacity(0.98).ignoresSafeArea()
 
-            VStack(spacing: 22) {
+            VStack(spacing: 20) {
                 Text(String(format: languageManager.text("duel.round.title"), intro.number).uppercased())
-                    .font(DS.sans(.subheadline, .bold))
-                    .tracking(2.2)
-                    .foregroundStyle(DuelPalette.saffron)
+                    .font(.jakarta(size: 12, weight: .heavy))
+                    .tracking(1.6)
+                    .foregroundStyle(DS.accent)
 
                 switch intro.kind {
                 case .pick:
@@ -62,21 +62,18 @@ struct DuelRoundIntroView: View {
                     EmptyView()
                 }
             }
-            .padding(.horizontal, 28)
+            .padding(.horizontal, 24)
             .frame(maxWidth: 520)
         }
         .overlay(alignment: .topLeading) {
-            Button(action: onQuit) {
-                Image(systemName: "xmark")
-                    .font(.system(size: 13, weight: .bold))
-                    .foregroundStyle(.white.opacity(0.85))
-                    .frame(width: 32, height: 32)
-                    .background(Circle().fill(Color.white.opacity(0.14)))
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(Text(languageManager.text("duel.quit.title")))
-            .padding(.leading, 16)
-            .padding(.top, 6)
+            // Même place que le bouton de l'écran de jeu, qu'elle recouvre.
+            RoundIconButton(
+                systemImage: "xmark",
+                accessibilityLabel: languageManager.text("duel.quit.title"),
+                action: onQuit
+            )
+            .padding(.leading, 24)
+            .padding(.top, 8)
         }
     }
 
@@ -85,29 +82,31 @@ struct DuelRoundIntroView: View {
     private var myPick: some View {
         VStack(spacing: 18) {
             Text(languageManager.text("duel.round.pick.title"))
-                .font(.jakarta(size: 30, weight: .heavy))
-                .foregroundStyle(.white)
+                .font(DS.title(.title, .semibold))
+                .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
 
             if let deadline = intro.deadline, intro.chosen == nil {
                 TimelineView(.animation(minimumInterval: 1.0 / 20.0)) { timeline in
                     let window = max(deadline.timeIntervalSince(intro.opensAt), 0.1)
                     let remaining = max(deadline.timeIntervalSince(timeline.date), 0)
-                    DuelProgressBar(progress: min(remaining / window, 1), tint: DuelPalette.saffron, track: Color.white.opacity(0.18), height: 5)
+                    DuelProgressBar(progress: min(remaining / window, 1), tint: DS.accent, track: DS.accentTint, height: 5)
                 }
             } else {
                 Color.clear.frame(height: 5)
             }
 
-            VStack(spacing: 12) {
-                ForEach(intro.options, id: \.self) { subject in
+            VStack(spacing: 10) {
+                ForEach(Array(intro.options.enumerated()), id: \.element) { index, subject in
                     Button {
                         model.pickSubject(subject)
                     } label: {
                         subjectCard(subject, selected: intro.chosen == subject, dimmed: intro.chosen != nil && intro.chosen != subject)
                     }
-                    .buttonStyle(SoftPressButtonStyle())
+                    // Le choix vibre déjà (`DuelHaptics.lock`).
+                    .buttonStyle(PressableStyle(scale: 0.97, haptic: false))
                     .disabled(intro.chosen != nil)
+                    .dsStagger(index, step: 0.07, base: 0.1)
                 }
             }
         }
@@ -120,18 +119,19 @@ struct DuelRoundIntroView: View {
             if let chosen = intro.chosen {
                 Text(String(format: languageManager.text("duel.round.pick.theirChoice"), opponentHandle))
                     .font(DS.sans(.headline, .semibold))
-                    .foregroundStyle(.white.opacity(0.85))
+                    .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
                 subjectCard(chosen, selected: true, dimmed: false)
                     .transition(.scale(scale: 0.7).combined(with: .opacity))
             } else {
-                DuelPulseRings(color: .white)
+                DuelPulseRings(color: DS.accent)
                     .frame(width: 64, height: 64)
                     .padding(.vertical, 26)
                 Text(String(format: languageManager.text("duel.round.pick.theirs"), opponentHandle))
-                    .font(.jakarta(size: 22, weight: .heavy))
-                    .foregroundStyle(.white)
+                    .font(DS.title(.title3, .semibold))
+                    .foregroundStyle(DS.ink)
                     .multilineTextAlignment(.center)
+                DuelWaitingDots(color: DS.accent)
             }
         }
     }
@@ -141,51 +141,49 @@ struct DuelRoundIntroView: View {
     private var sprint: some View {
         VStack(spacing: 14) {
             Image(systemName: "bolt.fill")
-                .font(.system(size: 52, weight: .heavy))
-                .foregroundStyle(DuelPalette.saffron)
+                .font(.system(size: 36, weight: .heavy))
+                .foregroundStyle(DS.accent)
+                .frame(width: 88, height: 88)
+                .background(Circle().fill(DS.accentTint))
+                .dsPopIn(delay: 0.1)
             Text(languageManager.text("duel.round.sprint.title"))
-                .font(.jakarta(size: 34, weight: .heavy))
-                .foregroundStyle(.white)
+                .font(DS.title(.largeTitle, .heavy))
+                .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
             Text(languageManager.text("duel.round.sprint.body"))
                 .font(DS.sans(.body, .medium))
-                .foregroundStyle(.white.opacity(0.8))
+                .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
         }
     }
 
     // MARK: - Une matière
 
+    /// Une matière en carte d'option : sa pastille de couleur, son nom, et la coche une fois
+    /// retenue.
     private func subjectCard(_ subject: String, selected: Bool, dimmed: Bool) -> some View {
-        HStack(spacing: 14) {
+        let state: DSOptionState = selected ? .selected : (dimmed ? .dimmed : .idle)
+        return HStack(spacing: 14) {
             Image(systemName: DuelSubjects.icon(subject))
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 18, weight: .bold))
                 .foregroundStyle(.white)
-                .frame(width: 48, height: 48)
+                .frame(width: 44, height: 44)
                 .background(Circle().fill(DuelSubjects.color(subject)))
             Text(DuelSubjects.name(subject, language: languageManager.current))
-                .font(.jakarta(size: 19, weight: .heavy))
-                .foregroundStyle(.white)
+                .font(DS.sans(.headline, selected ? .bold : .semibold))
+                .foregroundStyle(DS.ink)
                 .lineLimit(2)
                 .multilineTextAlignment(.leading)
                 .minimumScaleFactor(0.75)
             Spacer(minLength: 0)
             if selected {
-                Image(systemName: "checkmark.circle.fill")
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundStyle(DuelPalette.saffron)
+                DSCheckBadge(size: 26, fill: DS.accent)
                     .transition(.scale.combined(with: .opacity))
             }
         }
         .padding(.horizontal, 16)
-        .padding(.vertical, 14)
+        .padding(.vertical, 12)
         .frame(maxWidth: .infinity)
-        .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.white.opacity(selected ? 0.18 : 0.1)))
-        .overlay(
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .strokeBorder(selected ? DuelPalette.saffron : Color.white.opacity(0.14), lineWidth: selected ? 2.5 : 1)
-        )
-        .opacity(dimmed ? 0.4 : 1)
-        .scaleEffect(selected ? 1.02 : 1)
+        .dsOptionCard(state)
     }
 }

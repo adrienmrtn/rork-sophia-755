@@ -53,6 +53,10 @@ struct NewGenTabsView: View {
     /// l'écran ouvert, l'onglet suit au prochain lancement.
     @State private var showsDuels = FeatureFlags.duelsVisible(language: AppLanguage.currentPersisted())
 
+    /// L'apparence de la barre d'onglets (fond blanc, filet, bleu / gris, Plus Jakarta Sans),
+    /// posée avant que la barre soit construite. La valeur elle-même ne sert pas.
+    @State private var tabBarStyled: Bool = SophiaTabBarStyle.applyOnce()
+
     var body: some View {
         TabView(selection: $selectedTab) {
             Tab(languageManager.text("tab.home"), systemImage: "house", value: 0) {

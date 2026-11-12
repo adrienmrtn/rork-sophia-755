@@ -29,7 +29,7 @@ struct BlockContentView: View {
     var onShowOriginal: ((AppLanguage) -> Void)? = nil
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 24) {
+        VStack(alignment: .leading, spacing: 20) {
             SectionHeaderV2(
                 content: content,
                 section: section,
@@ -115,7 +115,7 @@ struct SectionHeaderV2: View {
 
     var body: some View {
         if isFirst, let hero = content.hero {
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: 18) {
                 HeroBlockView(
                     hero: hero,
                     title: content.title,
@@ -133,9 +133,12 @@ struct SectionHeaderV2: View {
             }
         } else {
             Text(section.title)
-                .font(DS.title(.largeTitle, .semibold))
+                .font(CourseType.font(24, .semibold, relativeTo: .title2))
                 .foregroundStyle(DS.ink)
+                .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 6)
+                .accessibilityAddTraits(.isHeader)
         }
     }
 }
@@ -152,10 +155,12 @@ struct ContentBlockViewV2: View {
         switch block {
         case .heading(let text):
             Text(text)
-                .font(DS.title(.title2, .semibold))
+                .font(DS.title(.title3, .semibold))
                 .foregroundStyle(DS.ink)
+                .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.top, 4)
+                .accessibilityAddTraits(.isHeader)
 
         case .paragraph(let text):
             ProseParagraph(
@@ -213,7 +218,7 @@ struct SectionFooterV2: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 24) {
+        VStack(alignment: .leading, spacing: 12) {
             if let author {
                 AuthorCardV2(
                     author: author,
@@ -250,7 +255,7 @@ struct SectionFooterV2: View {
 
 // MARK: - Prose (native attributed text)
 
-/// A justified prose paragraph with restyled highlights and tappable glossary links.
+/// A prose paragraph (ragged right, generous leading) with tappable glossary links.
 struct ProseParagraph: View {
     let raw: String
     let accent: Color
@@ -299,7 +304,7 @@ enum InlineAttributedBuilder {
         accent: UIColor,
         baseItalic: Bool = false,
         baseBold: Bool = false,
-        alignment: NSTextAlignment = .justified
+        alignment: NSTextAlignment = .natural
     ) -> NSAttributedString {
         let normalized = raw.replacingOccurrences(of: "\\n", with: "\n")
         let chars = Array(normalized)
@@ -307,8 +312,11 @@ enum InlineAttributedBuilder {
 
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = alignment
-        paragraphStyle.lineSpacing = 5
-        paragraphStyle.hyphenationFactor = 1
+        // Confort de lecture : un interlignage généreux (≈ 1,6 fois le corps, comme la maquette),
+        // et la césure réservée au texte justifié, qui en a besoin pour ne pas s'étirer.
+        paragraphStyle.lineSpacing = 7
+        paragraphStyle.paragraphSpacing = 4
+        paragraphStyle.hyphenationFactor = alignment == .justified ? 1 : 0
         paragraphStyle.lineBreakMode = .byWordWrapping
 
         var bold = baseBold
@@ -399,8 +407,10 @@ enum InlineAttributedBuilder {
         if GlossaryStore.entry(courseId: courseId, courseTitle: courseTitle, displayTerm: term) != nil,
            let url = GlossaryStore.linkURL(courseId: courseId, courseTitle: courseTitle, displayTerm: term) {
             attributes[glossaryURLKey] = url
-            attributes[.underlineStyle] = NSUnderlineStyle.single.rawValue
-            attributes[.underlineColor] = accent
+            // Un mot du glossaire : souligné en pointillés, dans l'encre du texte (maquette).
+            _ = accent
+            attributes[.underlineStyle] = NSUnderlineStyle.single.rawValue | NSUnderlineStyle.patternDot.rawValue
+            attributes[.underlineColor] = DS.uiInk
             attributes[.foregroundColor] = DS.uiInk
         }
         result.append(NSAttributedString(string: term, attributes: attributes))
@@ -421,8 +431,42 @@ enum InlineAttributedBuilder {
         return attributes
     }
 
+    private static let jakartaFamily = "Plus Jakarta Sans"
+
+    /// Plus Jakarta Sans (la police de toute l'app) pour le corps du cours, à la taille de
+    /// texte choisie par l'utilisateur. La police est une seule fonte variable : la graisse
+    /// se demande par le trait de graisse, sinon par le nom de la coupe. Renvoie nil si la
+    /// police n'est pas disponible, pour retomber sur la police système.
+    private static func jakartaFont(size: CGFloat, bold: Bool) -> UIFont? {
+        let weight: UIFont.Weight = bold ? .bold : .regular
+        let byWeight = UIFont(
+            descriptor: UIFontDescriptor(fontAttributes: [
+                .family: jakartaFamily,
+                .traits: [UIFontDescriptor.TraitKey.weight: weight],
+            ]),
+            size: size
+        )
+        guard byWeight.familyName == jakartaFamily else { return nil }
+        guard bold else { return byWeight }
+        if byWeight.fontDescriptor.symbolicTraits.contains(.traitBold) { return byWeight }
+        let byFace = UIFont(
+            descriptor: UIFontDescriptor(fontAttributes: [
+                .family: jakartaFamily,
+                .face: "Bold",
+            ]),
+            size: size
+        )
+        return byFace.familyName == jakartaFamily ? byFace : byWeight
+    }
+
     private static func proseFont(bold: Bool, italic: Bool) -> UIFont {
         let base = UIFont.preferredFont(forTextStyle: .body)
+        if let jakarta = jakartaFont(size: base.pointSize, bold: bold) {
+            guard italic else { return jakarta }
+            // La police n'embarque pas d'italique : le romain est incliné.
+            let slant = CGAffineTransform(a: 1, b: 0, c: 0.2, d: 1, tx: 0, ty: 0)
+            return UIFont(descriptor: jakarta.fontDescriptor.withMatrix(slant), size: base.pointSize)
+        }
         var descriptor = base.fontDescriptor
         var traits: UIFontDescriptor.SymbolicTraits = []
         if bold { traits.insert(.traitBold) }
@@ -639,11 +683,7 @@ private struct HeroBlockView: View {
                 failed = loaded == nil
             }
             .frame(maxWidth: .infinity)
-            .clipShape(.rect(cornerRadius: DS.Radius.card))
-            .overlay {
-                RoundedRectangle(cornerRadius: DS.Radius.card)
-                    .strokeBorder(DS.hairline, lineWidth: 1)
-            }
+            .clipShape(.rect(cornerRadius: DS.Radius.card, style: .continuous))
 
             if let creditText, !creditText.isEmpty {
                 Text(creditText)
@@ -653,24 +693,29 @@ private struct HeroBlockView: View {
                     .padding(.horizontal, 4)
             }
 
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 6) {
                 if let subtitle, !subtitle.isEmpty {
                     Text(subtitle.uppercasedInApp())
-                        .font(DS.sans(.caption, .semibold))
-                        .foregroundStyle(DS.accentSoft)
-                        .tracking(1.2)
+                        .font(DS.sans(.caption, .heavy))
+                        .foregroundStyle(DS.accent)
+                        .tracking(1.0)
                 }
 
                 Text(title)
-                    .font(DS.title(.largeTitle, .semibold))
+                    .font(DS.title(.title, .semibold))
+                    .tracking(-0.4)
                     .foregroundStyle(DS.ink)
+                    .lineSpacing(1)
                     .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityAddTraits(.isHeader)
 
                 if let hook = hero.hook, !hook.isEmpty {
                     Text(hook)
-                        .font(DS.title(.title3, .regular))
+                        .font(DS.sans(.callout))
                         .foregroundStyle(DS.inkSecondary)
+                        .lineSpacing(5)
                         .fixedSize(horizontal: false, vertical: true)
+                        .padding(.top, 2)
                 }
             }
         }
@@ -829,7 +874,7 @@ struct TimelineBlockView: View {
                 HStack(alignment: .top, spacing: 14) {
                     VStack(spacing: 0) {
                         Circle()
-                            .fill(DS.accentSoft)
+                            .fill(DS.accent)
                             .frame(width: 10, height: 10)
                             .padding(.top, 5)
                         if index < events.count - 1 {
@@ -843,8 +888,8 @@ struct TimelineBlockView: View {
 
                     VStack(alignment: .leading, spacing: 4) {
                         Text(event.date)
-                            .font(DS.sans(.subheadline, .semibold))
-                            .foregroundStyle(DS.accentSoft)
+                            .font(DS.sans(.footnote, .heavy))
+                            .foregroundStyle(DS.accent)
                         Text(event.title)
                             .font(DS.sans(.body, .semibold))
                             .foregroundStyle(DS.ink)
@@ -860,16 +905,7 @@ struct TimelineBlockView: View {
                 }
             }
         }
-        .padding(DS.Space.l)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .fill(DS.surface)
-                .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
-                }
-        }
+        .dsCard(padding: 16)
     }
 }
 
@@ -888,19 +924,20 @@ struct QuoteBlockView: View {
                 .font(DS.title(.title3, .regular))
                 .italic()
                 .foregroundStyle(DS.ink)
+                .lineSpacing(5)
                 .fixedSize(horizontal: false, vertical: true)
             if let attribution, !attribution.isEmpty {
                 Text(attribution.uppercasedInApp())
-                    .font(DS.sans(.caption, .semibold))
-                    .foregroundStyle(DS.inkTertiary)
-                    .tracking(1.0)
+                    .font(DS.sans(.caption, .heavy))
+                    .foregroundStyle(DS.inkSecondary)
+                    .tracking(0.8)
             }
         }
         .padding(.leading, 18)
         .frame(maxWidth: .infinity, alignment: .leading)
         .overlay(alignment: .leading) {
             RoundedRectangle(cornerRadius: 2)
-                .fill(DS.accentSoft)
+                .fill(DS.accent)
                 .frame(width: 3)
         }
     }
@@ -931,10 +968,11 @@ struct FunFactCardV2: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
+            // Le geste garde sa vibration d'origine ; le style du bouton n'en ajoute pas.
             Button {
                 UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 let opening = !revealed
-                withAnimation(.spring(response: 0.42, dampingFraction: 0.78)) {
+                withAnimation(DS.Motion.snappy) {
                     revealed.toggle()
                 }
                 if opening {
@@ -942,35 +980,34 @@ struct FunFactCardV2: View {
                 }
             } label: {
                 HStack(spacing: 12) {
-                    ZStack {
-                        Circle().fill(DS.accentTint)
-                        Image(systemName: "lightbulb")
-                            .font(.jakarta(size: 15, weight: .medium))
-                            .foregroundStyle(DS.accentSoft)
-                    }
-                    .frame(width: 36, height: 36)
+                    Image(systemName: revealed ? "lightbulb.fill" : "lightbulb")
+                        .font(.system(size: 18, weight: .semibold))
+                        .foregroundStyle(CoursePalette.goldDeep)
+                        .frame(width: 24, height: 24)
+                        .contentTransition(.symbolEffect(.replace))
 
-                    VStack(alignment: .leading, spacing: 1) {
+                    VStack(alignment: .leading, spacing: 2) {
                         Text(title)
-                            .font(DS.sans(.subheadline, .semibold))
+                            .font(DS.sans(.caption, .heavy))
+                            .tracking(0.8)
                             .foregroundStyle(DS.ink)
                         if !revealed {
                             Text(hint)
-                                .font(DS.sans(.caption2))
-                                .foregroundStyle(DS.inkTertiary)
+                                .font(DS.sans(.footnote))
+                                .foregroundStyle(DS.inkSecondary)
                         }
                     }
 
                     Spacer(minLength: 8)
 
-                    Image(systemName: "chevron.down")
-                        .font(.jakarta(size: 13, weight: .semibold))
-                        .foregroundStyle(DS.inkTertiary)
-                        .rotationEffect(.degrees(revealed ? 180 : 0))
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundStyle(DS.inkSecondary)
+                        .rotationEffect(.degrees(revealed ? 90 : 0))
                 }
                 .contentShape(Rectangle())
             }
-            .buttonStyle(.plain)
+            .buttonStyle(PressableStyle(scale: 0.98, haptic: false))
 
             if revealed {
                 ProseTextView(
@@ -979,26 +1016,16 @@ struct FunFactCardV2: View {
                         courseId: courseId,
                         courseTitle: courseTitle,
                         accent: UIColor(accent),
-                        alignment: .left
+                        alignment: .natural
                     ),
                     linkUnderlineColor: UIColor(accent),
                     onGlossaryTap: onGlossaryTap
                 )
-                .padding(.top, 14)
+                .padding(.top, 12)
                 .transition(.opacity)
             }
         }
-        .padding(DS.Space.l)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .fill(DS.surface)
-                .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
-                }
-        }
-        .dsSoftShadow()
+        .dsCard(padding: 14)
     }
 }
 
@@ -1012,7 +1039,6 @@ struct TakeawayCardV2: View {
 
     var body: some View {
         CalloutCard(
-            badgeIcon: "bookmark",
             badgeText: AppLocalizable.string("course.keyTakeaway", language: AppLanguage.currentPersisted())
         ) {
             ProseTextView(
@@ -1021,8 +1047,7 @@ struct TakeawayCardV2: View {
                     courseId: courseId,
                     courseTitle: courseTitle,
                     accent: UIColor(accent),
-                    baseBold: true,
-                    alignment: .left
+                    alignment: .natural
                 ),
                 linkUnderlineColor: UIColor(accent),
                 onGlossaryTap: onGlossaryTap
@@ -1031,39 +1056,29 @@ struct TakeawayCardV2: View {
     }
 }
 
-/// Shared calm callout container: a quiet header row (icon + label) above the content,
-/// wrapped in a soft surface card.
+/// L'encart « À retenir » : fond vert pâle, étiquette verte pleine, puis le texte.
 private struct CalloutCard<Content: View>: View {
-    let badgeIcon: String?
     let badgeText: String
     @ViewBuilder let content: () -> Content
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 8) {
-                if let badgeIcon {
-                    Image(systemName: badgeIcon)
-                        .font(.jakarta(size: 12, weight: .semibold))
-                        .foregroundStyle(DS.accentSoft)
-                }
-                Text(badgeText.uppercasedInApp())
-                    .font(DS.sans(.caption2, .semibold))
-                    .foregroundStyle(DS.accentSoft)
-                    .tracking(1.2)
-            }
+        VStack(alignment: .leading, spacing: 10) {
+            Text(badgeText.uppercasedInApp())
+                .font(DS.sans(.caption, .heavy))
+                .foregroundStyle(.white)
+                .tracking(0.6)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 3)
+                .background(DS.success, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
 
             content()
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(DS.Space.l)
+        .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background {
             RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                .fill(DS.surfaceMuted)
-                .overlay {
-                    RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-                        .strokeBorder(DS.hairline, lineWidth: 1)
-                }
+                .fill(DS.successTint)
         }
     }
 }

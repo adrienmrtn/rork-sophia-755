@@ -12,10 +12,11 @@ nonisolated enum PathScrollAnchor {
     static let revealFocus = UnitPoint(x: 0.5, y: 0.36)
 }
 
-/// The "Parcours" tab. Every collection is a level drawn as a winding trail of pods, closed
-/// by a quiz pod. Levels open one after the other, the courses of a level one after the
-/// other, and whatever changed since the reader last looked (a course finished, a level
-/// passed) is played back as a staged animation when they come back.
+/// The "Parcours" tab. Every collection is a level: a banner, then its courses as cards
+/// zigzagging down the page, joined by dotted curves and closed by a quiz pill. Levels still
+/// locked fold into one compact row. Levels open one after the other, the courses of a level
+/// one after the other, and whatever changed since the reader last looked (a course
+/// finished, a level passed) is played back as a staged animation when they come back.
 ///
 /// A translucent bar sits at the top. It reads "Parcours" until a level's banner slides
 /// under it; from then on it names that level, and each banner that passes takes its turn.
@@ -42,6 +43,13 @@ struct LearningPathView: View {
     @State private var shakeCounts: [String: Int] = [:]
     @State private var lockShakes: [String: Int] = [:]
     @State private var poppingNodeId: String? = nil
+    /// Card whose padlock is swinging open, just before it is drawn available.
+    @State private var openingNodeId: String? = nil
+    /// Locked level whose padlock is swinging open, just before it unfolds.
+    @State private var openingLevelId: String? = nil
+    /// Locked levels the reader unfolded to look inside (a course read elsewhere stays
+    /// open to re-read there).
+    @State private var expandedLockedLevelIds: Set<String> = []
     @State private var celebratingLevelId: String? = nil
     @State private var showExplain = false
     /// Levels whose banner has slid under the top bar; the last of them is the one the bar names.
@@ -132,7 +140,7 @@ struct LearningPathView: View {
     private var trail: some View {
         ScrollViewReader { proxy in
             ScrollView {
-                LazyVStack(spacing: 30) {
+                LazyVStack(spacing: 20) {
                     ForEach(snapshot.levels) { level in
                         PathLevelSection(
                             level: level,
@@ -142,11 +150,17 @@ struct LearningPathView: View {
                             shakeCounts: shakeCounts,
                             lockShakes: CGFloat(lockShakes[level.id] ?? 0),
                             poppingNodeId: poppingNodeId,
+                            openingNodeId: openingNodeId,
+                            isOpeningLevel: openingLevelId == level.id,
+                            isExpanded: expandedLockedLevelIds.contains(level.id),
                             isCelebrating: celebratingLevelId == level.id,
                             accentIndex: level.number - 1,
                             barHeight: barHeight,
                             onTapNode: { node in
                                 handleTap(node: node, in: level)
+                            },
+                            onTapLockedLevel: {
+                                handleTapLockedLevel(level)
                             },
                             onBannerCrossing: { passed in
                                 bannerCrossed(levelId: level.id, passed: passed)
@@ -164,7 +178,7 @@ struct LearningPathView: View {
 
                     pathEnd
                 }
-                .padding(.top, 14)
+                .padding(.top, 12)
                 .padding(.bottom, 40)
             }
             .scrollIndicators(.hidden)
@@ -196,12 +210,12 @@ struct LearningPathView: View {
                 if let level = compactLevel {
                     VStack(spacing: 1) {
                         Text(level.collection.title)
-                            .font(DS.title(.headline, .semibold))
+                            .font(DS.sans(.callout, .bold))
                             .foregroundStyle(DS.ink)
                             .lineLimit(1)
                             .minimumScaleFactor(0.9)
                         Text(compactSubtitle(for: level))
-                            .font(DS.sans(.caption2, .medium))
+                            .font(DS.sans(.caption2, .semibold))
                             .foregroundStyle(DS.inkSecondary)
                             .lineLimit(1)
                     }
@@ -212,7 +226,7 @@ struct LearningPathView: View {
                     ))
                 } else {
                     Text(languageManager.text("path.title"))
-                        .font(DS.title(.headline, .semibold))
+                        .font(DS.sans(.callout, .bold))
                         .foregroundStyle(DS.ink)
                         .transition(.asymmetric(
                             insertion: .move(edge: .top).combined(with: .opacity),
@@ -227,15 +241,15 @@ struct LearningPathView: View {
 
             // Same width as the leading button, so the title sits in the middle of the screen.
             Color.clear
-                .frame(width: 36, height: 36)
+                .frame(width: 40, height: 40)
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, 20)
         .frame(height: 52)
         .background(.bar, ignoresSafeAreaEdges: .top)
         .overlay(alignment: .bottom) {
             Rectangle()
                 .fill(DS.hairline)
-                .frame(height: 0.5)
+                .frame(height: 1)
                 .opacity(compactLevel == nil ? 0 : 1)
         }
         .onGeometryChange(for: CGFloat.self) { proxy in
@@ -243,7 +257,7 @@ struct LearningPathView: View {
         } action: { height in
             if height > 0 { barHeight = height }
         }
-        .animation(.spring(response: 0.35, dampingFraction: 0.85), value: compactLevel?.id)
+        .animation(DS.Motion.snappy, value: compactLevel?.id)
     }
 
     private func compactSubtitle(for level: PathLevel) -> String {
@@ -253,41 +267,51 @@ struct LearningPathView: View {
     }
 
     private var jumpToCurrentButton: some View {
+        // The pressable style carries the tap's vibration.
         Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             scrollToCurrentNode()
         } label: {
             Image(systemName: "arrow.down.circle")
                 .font(.jakarta(size: 18, weight: .medium))
-                .foregroundStyle(DS.accentSoft)
-                .frame(width: 36, height: 36)
-                .contentShape(Rectangle())
+                .foregroundStyle(DS.ink)
+                .frame(width: 40, height: 40)
+                .background(DS.surface, in: Circle())
+                .overlay {
+                    Circle().strokeBorder(DS.hairline, lineWidth: 1)
+                }
+                .contentShape(Circle())
         }
-        .buttonStyle(SoftPressButtonStyle())
+        .buttonStyle(.pressable)
         .accessibilityLabel(languageManager.text("library.section.continue"))
         .opacity(snapshot.currentNodeId == nil ? 0 : 1)
         .disabled(snapshot.currentNodeId == nil)
     }
 
     private var pathEnd: some View {
-        VStack(spacing: 10) {
-            Image(systemName: snapshot.isEverythingPassed ? "flag.checkered" : "flag.fill")
-                .font(.jakarta(size: 26, weight: .medium))
-                .foregroundStyle(snapshot.isEverythingPassed ? PathPalette.gold : DS.inkTertiary)
-                .frame(width: 64, height: 64)
-                .background(DS.surfaceMuted, in: Circle())
+        VStack(spacing: 4) {
+            if snapshot.isEverythingPassed {
+                Image(systemName: "flag.checkered")
+                    .font(.jakarta(size: 20, weight: .semibold))
+                    .foregroundStyle(PathCardPalette.goldInk)
+                    .frame(width: 48, height: 48)
+                    .background(PathCardPalette.goldTint, in: Circle())
+                    .padding(.bottom, 6)
+                    .dsPopIn(delay: 0.1)
+            }
             Text(languageManager.text(snapshot.isEverythingPassed ? "path.end.doneTitle" : "path.end.title"))
-                .font(DS.title(.headline, .semibold))
+                .font(DS.sans(.subheadline, .bold))
                 .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
             Text(languageManager.text(snapshot.isEverythingPassed ? "path.end.doneBody" : "path.end.body"))
-                .font(DS.sans(.subheadline))
+                .font(DS.sans(.footnote))
                 .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
+                .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .padding(.horizontal, 36)
-        .padding(.top, 8)
+        .padding(.top, 4)
+        .dsStagger(0)
     }
 
     // MARK: - Taps
@@ -298,13 +322,14 @@ struct LearningPathView: View {
         // answered with a shake.
         switch node.state {
         case .locked:
-            UINotificationFeedbackGenerator().notificationOccurred(.error)
+            Haptics.error()
             withAnimation(.linear(duration: 0.45)) {
                 shakeCounts[node.id, default: 0] += 1
             }
             showToast(lockedMessage(for: node, in: level), icon: "lock.fill")
         case .available, .completed:
-            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+            // The cards press without a vibration of their own: this one is the tap's.
+            Haptics.confirm()
             if node.isQuiz {
                 quizLevel = level
             } else if let course = node.course {
@@ -312,6 +337,33 @@ struct LearningPathView: View {
                 selectedCourse = course
             }
         }
+    }
+
+    /// The compact row of a locked level unfolds on its courses (those already read elsewhere
+    /// stay open to re-read) and says what the level is waiting for; a second tap folds it.
+    private func handleTapLockedLevel(_ level: PathLevel) {
+        let willExpand = !expandedLockedLevelIds.contains(level.id)
+        withAnimation(DS.Motion.reveal) {
+            if willExpand {
+                expandedLockedLevelIds.insert(level.id)
+            } else {
+                expandedLockedLevelIds.remove(level.id)
+            }
+        }
+        // The real state decides, as for the cards: while the replay runs, a level already
+        // open can still be drawn locked, and there is nothing to refuse then.
+        guard willExpand, !level.isUnlocked else {
+            Haptics.select()
+            return
+        }
+        Haptics.error()
+        withAnimation(.linear(duration: 0.45)) {
+            lockShakes[level.id, default: 0] += 1
+        }
+        showToast(
+            String(format: languageManager.text("path.locked.level"), max(1, level.number - 1)),
+            icon: "lock.fill"
+        )
     }
 
     private func lockedMessage(for node: PathNode, in level: PathLevel) -> String {
@@ -328,7 +380,7 @@ struct LearningPathView: View {
 
     private func showToast(_ text: String, icon: String) {
         toastTask?.cancel()
-        withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+        withAnimation(DS.Motion.snappy) {
             toast = PathToast(text: text, icon: icon)
         }
         toastTask = Task {
@@ -355,7 +407,6 @@ struct LearningPathView: View {
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
             .background(DS.accent, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
-            .dsSoftShadow()
             .padding(.horizontal, 24)
             .padding(.bottom, 16)
         }
@@ -400,6 +451,8 @@ struct LearningPathView: View {
         revealTask = nil
         isRevealing = false
         poppingNodeId = nil
+        openingNodeId = nil
+        openingLevelId = nil
         segmentFills = [:]
     }
 
@@ -511,8 +564,8 @@ struct LearningPathView: View {
         }
     }
 
-    /// The pod fills with its colour and pops; then the connector below it creeps to the
-    /// next pod (a quiz pod, last of its level, has none).
+    /// The card gets its green check and pops; then the dots below it turn green one by one
+    /// down to the next card (the quiz pill, last of its level, has none).
     private func animateCompletion(of id: String) async {
         let isLastOfLevel = snapshot.level(containing: id)?.nodes.last?.id == id
         if !isLastOfLevel {
@@ -533,10 +586,11 @@ struct LearningPathView: View {
         await fillConnector(after: id)
     }
 
-    /// The connector's colour advances from the finished pod towards the next one, slowing
-    /// down as it gets close, ticking all along and knocking once it touches.
+    /// The dots turn green from the finished card towards the next one, slowing down as they
+    /// get close, ticking all along and knocking once they touch.
     private func fillConnector(after id: String) async {
-        let duration: Double = 1.7
+        // A handful of dots between two cards: shorter than the long curve between two pods.
+        let duration: Double = 1.0
         let ticker = UIImpactFeedbackGenerator(style: .soft)
         ticker.prepare()
 
@@ -545,7 +599,7 @@ struct LearningPathView: View {
         }
 
         // Ticks at even steps of the fill: as the fill slows, they spread out and firm up.
-        let ticks = 12
+        let ticks = 6
         var elapsed: Double = 0
         for tick in 1...ticks {
             let fraction = Double(tick) / Double(ticks)
@@ -571,7 +625,7 @@ struct LearningPathView: View {
         try? await Task.sleep(for: .milliseconds(120))
     }
 
-    /// The pod's own lock rattles and gives way.
+    /// The card's own padlock rattles, swings open, and the card is uncovered.
     private func animateUnlock(of id: String) async {
         withAnimation(.linear(duration: 0.45)) {
             shakeCounts[id, default: 0] += 1
@@ -579,11 +633,17 @@ struct LearningPathView: View {
         UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 0.8)
         try? await Task.sleep(for: .milliseconds(430))
         guard !Task.isCancelled else { return }
+        withAnimation(DS.Motion.snappy) {
+            openingNodeId = id
+        }
+        try? await Task.sleep(for: .milliseconds(280))
+        guard !Task.isCancelled else { return }
         withAnimation(.spring(response: 0.55, dampingFraction: 0.6)) {
             displayedStates[id] = .available
             poppingNodeId = id
+            openingNodeId = nil
         }
-        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        Haptics.success()
         try? await Task.sleep(for: .milliseconds(420))
         withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) {
             poppingNodeId = nil
@@ -591,9 +651,9 @@ struct LearningPathView: View {
         try? await Task.sleep(for: .milliseconds(300))
     }
 
-    /// The padlock rattles on the level's artwork, then flies off as the artwork comes back
-    /// to life under a shower of confetti, and the level's first pod to play lights up (the
-    /// courses already finished elsewhere before it are drawn completed already).
+    /// The padlock of the folded level rattles and swings open, then the level unfolds into
+    /// its banner and its cards under a shower of confetti, the first card to play already
+    /// lit (the courses finished elsewhere before it are drawn completed already).
     private func animateLevelUnlock(_ level: PathLevel, entryNodeId id: String?) async {
         scrollTo(levelId: level.id)
         try? await Task.sleep(for: .milliseconds(750))
@@ -610,9 +670,17 @@ struct LearningPathView: View {
         }
         guard !Task.isCancelled else { return }
 
+        withAnimation(DS.Motion.snappy) {
+            openingLevelId = level.id
+        }
+        try? await Task.sleep(for: .milliseconds(320))
+        guard !Task.isCancelled else { return }
+
         celebratingLevelId = level.id
         withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
             displayedStates[level.levelKey] = .available
+            openingLevelId = nil
+            expandedLockedLevelIds.remove(level.id)
             if let id {
                 displayedStates[id] = .available
                 poppingNodeId = id
@@ -698,7 +766,9 @@ struct LearningPathView: View {
 
 // MARK: - Level section
 
-/// One level: its banner, then its pods down a winding trail with the connectors behind.
+/// One level: its banner, then its courses as cards alternating left and right, the dotted
+/// connectors behind them and the quiz pill at the end. A level drawn locked is folded
+/// into its compact row, and only shows its cards once the reader unfolds it.
 private struct PathLevelSection: View {
     @Environment(LanguageManager.self) private var languageManager
     let level: PathLevel
@@ -708,10 +778,14 @@ private struct PathLevelSection: View {
     let shakeCounts: [String: Int]
     let lockShakes: CGFloat
     let poppingNodeId: String?
+    let openingNodeId: String?
+    let isOpeningLevel: Bool
+    let isExpanded: Bool
     let isCelebrating: Bool
     let accentIndex: Int
     let barHeight: CGFloat
     let onTapNode: (PathNode) -> Void
+    let onTapLockedLevel: () -> Void
     let onBannerCrossing: (Bool) -> Void
     let onBuiltChange: (Bool) -> Void
 
@@ -729,6 +803,10 @@ private struct PathLevelSection: View {
         return shownState(quiz) == .completed
     }
 
+    private var showsCards: Bool {
+        displayedUnlocked || isExpanded
+    }
+
     private var confettiColors: [Color] {
         var colors: [Color] = [PathPalette.gold, DS.accentSoft]
         var seen = Set<String>()
@@ -741,14 +819,16 @@ private struct PathLevelSection: View {
     }
 
     var body: some View {
-        VStack(spacing: 18) {
+        VStack(spacing: 16) {
             PathLevelBannerHost(
                 level: level,
                 isUnlocked: displayedUnlocked,
                 isPassed: displayedPassed,
                 lockShakes: lockShakes,
+                isOpening: isOpeningLevel,
                 accentIndex: accentIndex,
                 barHeight: barHeight,
+                onTapLocked: onTapLockedLevel,
                 onCrossingChange: onBannerCrossing
             )
             .overlay {
@@ -757,126 +837,109 @@ private struct PathLevelSection: View {
                         .frame(height: 360)
                 }
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, PathCardLayout.sideInset)
             .zIndex(2)
 
-            // Room above the first pod for its "start" bubble.
-            trailBody
-                .padding(.top, 30)
+            if showsCards {
+                cardTrail
+                    .transition(.opacity)
+            }
         }
+        .frame(maxWidth: PathCardLayout.maxSectionWidth)
+        .frame(maxWidth: .infinity)
         .onAppear { onBuiltChange(true) }
         .onDisappear { onBuiltChange(false) }
     }
 
-    private var trailBody: some View {
-        ZStack(alignment: .top) {
-            PathTrailBaseShape(count: level.nodes.count, phase: level.wavePhase)
-                .stroke(DS.hairline, style: StrokeStyle(lineWidth: 4, lineCap: .round))
-
-            // Filled connectors follow the drawn state, or the fill being animated; the
-            // transaction that changes the fill drives the animation.
-            ForEach(Array(level.nodes.dropLast().enumerated()), id: \.element.id) { index, node in
-                let fill = segmentFills[node.id] ?? (shownState(node) == .completed ? 1 : 0)
-                PathSegmentShape(index: index, phase: level.wavePhase)
-                    .trim(from: 0, to: fill)
-                    .stroke(segmentColor(after: node), style: StrokeStyle(lineWidth: 4, lineCap: .round))
-            }
-
-            VStack(spacing: 0) {
-                ForEach(level.nodes) { node in
-                    podRow(node)
-                }
+    private var cardTrail: some View {
+        VStack(spacing: PathCardLayout.rowSpacing) {
+            ForEach(level.nodes) { node in
+                nodeRow(node)
             }
         }
-        .frame(height: CGFloat(level.nodes.count) * PathLayout.rowHeight)
-    }
-
-    private func segmentColor(after node: PathNode) -> Color {
-        if let course = node.course {
-            return PathPalette.tint(for: course.subject)
-        }
-        return DS.accent
-    }
-
-    private func podRow(_ node: PathNode) -> some View {
-        let state = shownState(node)
-        let isCurrent = node.id == currentNodeId && state == .available
-        let diameter = node.isQuiz ? PathLayout.quizPodSize : PathLayout.podSize
-        let tint = accentTint(node)
-
-        return VStack(spacing: 8) {
-            ZStack {
-                Button {
-                    onTapNode(node)
-                } label: {
-                    podFace(node, state: state, diameter: diameter, tint: tint)
-                }
-                .buttonStyle(PathPodPressStyle(plateColor: plateColor(node, state: state, tint: tint), diameter: diameter))
-                .background {
-                    if isCurrent {
-                        PathPulseHalo(tint: tint, diameter: diameter)
-                            .offset(y: -PathLayout.plateDepth / 2)
-                    }
-                }
-                .overlay(alignment: .top) {
-                    if isCurrent {
-                        PathStartBubble(
-                            text: languageManager.text("home.start").uppercased(with: languageManager.current.foundationLocale),
-                            tint: tint
-                        )
-                        // « COMMENCER » is what the eye goes to: it opens the pod too.
-                        .contentShape(Rectangle())
-                        .onTapGesture { onTapNode(node) }
-                        .offset(y: -50)
-                        .transition(.scale(scale: 0.7, anchor: .bottom).combined(with: .opacity))
-                    }
-                }
-                .modifier(PathShakeEffect(shakes: CGFloat(shakeCounts[node.id] ?? 0)))
-                .scaleEffect(poppingNodeId == node.id ? 1.16 : 1)
-            }
-            .frame(height: PathLayout.podAreaHeight)
-
-            Text(caption(node))
-                .font(DS.sans(.caption2, .semibold))
-                .foregroundStyle(state == .locked ? DS.inkTertiary : DS.inkSecondary)
-                .multilineTextAlignment(.center)
-                .lineLimit(2)
-                .frame(width: 132)
-        }
+        .frame(maxWidth: PathCardLayout.maxTrailWidth)
+        .padding(.horizontal, PathCardLayout.sideInset)
         .frame(maxWidth: .infinity)
-        .frame(height: PathLayout.rowHeight, alignment: .top)
-        .offset(x: PathLayout.xOffset(for: node.index + level.wavePhase))
-        .zIndex(isCurrent ? 1 : 0)
+    }
+
+    // MARK: Rows
+
+    private func nodeRow(_ node: PathNode) -> some View {
+        let state: PathNodeState = shownState(node)
+        let isCurrent: Bool = node.id == currentNodeId && state == .available
+        let isLeading: Bool = PathCardLayout.isLeading(node.index)
+        let shakes: CGFloat = CGFloat(shakeCounts[node.id] ?? 0)
+
+        return Button {
+            onTapNode(node)
+        } label: {
+            nodeFace(node, state: state, isCurrent: isCurrent)
+        }
+        // No vibration on the press itself: the tap answers with its own (open or refused).
+        .buttonStyle(PressableStyle(scale: 0.97, haptic: false))
+        .background {
+            if isCurrent {
+                PathCardHalo()
+                    .transition(.opacity)
+            }
+        }
+        .modifier(PathShakeEffect(shakes: shakes, amplitude: 5))
+        .scaleEffect(poppingNodeId == node.id ? 1.06 : 1)
+        .frame(maxWidth: .infinity, alignment: rowAlignment(node, isLeading: isLeading))
+        .background(alignment: isLeading ? .bottomLeading : .bottomTrailing) {
+            connector(after: node, isLeading: isLeading)
+        }
         .id(node.id)
+        .dsStagger(node.index, step: 0.07)
         .accessibilityElement(children: .combine)
         .accessibilityLabel(caption(node))
         .accessibilityValue(accessibilityState(state))
     }
 
+    private func rowAlignment(_ node: PathNode, isLeading: Bool) -> Alignment {
+        if node.isQuiz { return .center }
+        return isLeading ? .leading : .trailing
+    }
+
     @ViewBuilder
-    private func podFace(_ node: PathNode, state: PathNodeState, diameter: CGFloat, tint: Color) -> some View {
+    private func nodeFace(_ node: PathNode, state: PathNodeState, isCurrent: Bool) -> some View {
         if let course = node.course {
-            PathPodFace(state: state, tint: tint, icon: course.subject.icon, diameter: diameter)
+            PathCourseCard(
+                course: course,
+                number: node.index + 1,
+                state: state,
+                isCurrent: isCurrent,
+                isUnlocking: openingNodeId == node.id
+            )
         } else {
-            PathQuizPodFace(state: state, diameter: diameter)
+            PathQuizPill(
+                state: state,
+                isCurrent: isCurrent,
+                courseCount: level.courseCount,
+                completedCourseCount: level.completedCourseCount,
+                isUnlocking: openingNodeId == node.id
+            )
         }
     }
 
-    private func accentTint(_ node: PathNode) -> Color {
-        if let course = node.course {
-            return PathPalette.tint(for: course.subject)
-        }
-        return PathPalette.gold
-    }
-
-    private func plateColor(_ node: PathNode, state: PathNodeState, tint: Color) -> Color {
-        switch state {
-        case .locked:
-            return PathPalette.lockedPlate
-        case .available:
-            return node.isQuiz ? PathPalette.plate(for: PathPalette.gold) : PathPalette.availablePlate
-        case .completed:
-            return PathPalette.plate(for: tint)
+    /// The dotted curve hung under a row, down to the next one. Green as far as the drawn
+    /// state says (or as far as the fill being animated has got); the transaction that
+    /// changes the fill drives the animation. The quiz pill, last of its level, has none.
+    @ViewBuilder
+    private func connector(after node: PathNode, isLeading: Bool) -> some View {
+        if !node.isQuiz, node.id != level.nodes.last?.id {
+            let fill: CGFloat = segmentFills[node.id] ?? (shownState(node) == .completed ? 1 : 0)
+            let reachesQuiz: Bool = node.index == level.nodes.count - 2
+            PathDottedConnector(
+                towardsTrailing: isLeading,
+                fill: fill,
+                width: reachesQuiz ? PathCardLayout.quizConnectorWidth : PathCardLayout.connectorWidth,
+                appearDelay: 0.3 + Double(node.index) * 0.07
+            )
+            .offset(
+                x: isLeading ? PathCardLayout.connectorStartX : -PathCardLayout.connectorStartX,
+                y: PathCardLayout.connectorDrop
+            )
         }
     }
 
@@ -898,16 +961,20 @@ private struct PathLevelSection: View {
 
 // MARK: - Banner host
 
-/// The banner of a level as it lives in the trail: it tracks its own position under the top
-/// bar, shrinks and fades as it slides underneath (the "retract"), and tells the page once
-/// when it crosses the bar, so the page only re-renders on a crossing, not on every frame.
+/// The header of a level as it lives in the trail (its banner, or its compact row while it
+/// is locked): it tracks its own position under the top bar, shrinks and fades as it slides
+/// underneath (the "retract"), and tells the page once when it crosses the bar, so the page
+/// only re-renders on a crossing, not on every frame.
 private struct PathLevelBannerHost: View {
+    @Environment(LanguageManager.self) private var languageManager
     let level: PathLevel
     let isUnlocked: Bool
     let isPassed: Bool
     let lockShakes: CGFloat
+    let isOpening: Bool
     let accentIndex: Int
     let barHeight: CGFloat
+    let onTapLocked: () -> Void
     let onCrossingChange: (Bool) -> Void
 
     /// 0 while the banner is well below the bar, 1 once it is under it.
@@ -915,29 +982,53 @@ private struct PathLevelBannerHost: View {
     @State private var hasCrossed = false
 
     var body: some View {
-        PathLevelBanner(
-            level: level,
-            isUnlocked: isUnlocked,
-            isPassed: isPassed,
-            accentIndex: accentIndex,
-            lockShakes: lockShakes
-        )
-        .scaleEffect(1 - 0.06 * retract, anchor: .top)
-        .opacity(1 - 0.35 * retract)
-        .onGeometryChange(for: CGFloat.self) { proxy in
-            proxy.frame(in: .named(learningPathScrollSpace)).minY
-        } action: { minY in
-            let distanceBelowBar = minY - barHeight
-            let newRetract = min(1, max(0, (72 - distanceBelowBar) / 72))
-            if abs(newRetract - retract) > 0.005 {
-                retract = newRetract
+        header
+            .scaleEffect(1 - 0.06 * retract, anchor: .top)
+            .opacity(1 - 0.35 * retract)
+            .onGeometryChange(for: CGFloat.self) { proxy in
+                proxy.frame(in: .named(learningPathScrollSpace)).minY
+            } action: { minY in
+                let distanceBelowBar = minY - barHeight
+                let newRetract = min(1, max(0, (72 - distanceBelowBar) / 72))
+                if abs(newRetract - retract) > 0.005 {
+                    retract = newRetract
+                }
+                // A little hysteresis so the bar does not flicker right at the edge.
+                let crossed = hasCrossed ? (minY < barHeight + 4) : (minY < barHeight - 4)
+                if crossed != hasCrossed {
+                    hasCrossed = crossed
+                    onCrossingChange(crossed)
+                }
             }
-            // A little hysteresis so the bar does not flicker right at the edge.
-            let crossed = hasCrossed ? (minY < barHeight + 4) : (minY < barHeight - 4)
-            if crossed != hasCrossed {
-                hasCrossed = crossed
-                onCrossingChange(crossed)
+    }
+
+    @ViewBuilder
+    private var header: some View {
+        if isUnlocked {
+            PathLevelBanner(
+                level: level,
+                isUnlocked: isUnlocked,
+                isPassed: isPassed,
+                accentIndex: accentIndex,
+                lockShakes: lockShakes
+            )
+            .transition(.scale(scale: 0.94, anchor: .top).combined(with: .opacity))
+        } else {
+            Button {
+                onTapLocked()
+            } label: {
+                PathLockedLevelCard(
+                    level: level,
+                    accentIndex: accentIndex,
+                    lockShakes: lockShakes,
+                    isOpening: isOpening
+                )
             }
+            // No vibration on the press itself: the tap answers with its own.
+            .buttonStyle(PressableStyle(scale: 0.98, haptic: false))
+            .accessibilityElement(children: .combine)
+            .accessibilityValue(languageManager.text("path.status.locked"))
+            .transition(.opacity)
         }
     }
 }

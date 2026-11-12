@@ -16,6 +16,7 @@ struct BecomeCreatorView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 22) {
                 hero
+                    .dsStagger(0)
 
                 VStack(alignment: .leading, spacing: 12) {
                     if !authors.isEmpty {
@@ -34,7 +35,7 @@ struct BecomeCreatorView: View {
                     }
 
                     Text(languageManager.text("creator.invite.title"))
-                        .font(DS.title(.largeTitle, .heavy))
+                        .font(DS.title(.title, .semibold))
                         .foregroundStyle(DS.ink)
                         .fixedSize(horizontal: false, vertical: true)
 
@@ -51,10 +52,12 @@ struct BecomeCreatorView: View {
                     }
                     .padding(.top, 2)
                 }
+                .dsStagger(1)
 
                 stepsCard
+                    .dsStagger(2)
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 24)
             .padding(.top, 8)
             .padding(.bottom, 24)
         }
@@ -70,8 +73,7 @@ struct BecomeCreatorView: View {
             .resizable()
             .aspectRatio(4.0 / 3.0, contentMode: .fit)
             .frame(maxWidth: .infinity)
-            .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
-            .dsSoftShadow()
+            .homeCard()
             .overlay(alignment: .topLeading) {
                 RoundIconButton(systemImage: "chevron.left", accessibilityLabel: languageManager.text("common.close")) { dismiss() }
                     .padding(12)
@@ -87,10 +89,10 @@ struct BecomeCreatorView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 72, height: 72)
-                    .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+                    .clipShape(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous))
                 VStack(alignment: .leading, spacing: 4) {
                     Text(languageManager.text("profile.creator.title"))
-                        .font(DS.title(.title3, .heavy))
+                        .font(DS.title(.title3, .semibold))
                         .foregroundStyle(DS.ink)
                     Text(languageManager.text("profile.creator.subtitle"))
                         .font(DS.sans(.subheadline))
@@ -104,11 +106,9 @@ struct BecomeCreatorView: View {
                 step(3, languageManager.text("profile.creator.step3"))
             }
         }
-        .padding(20)
+        .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.surface))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(DS.hairline, lineWidth: 1))
-        .dsSoftShadow()
+        .homeCard()
     }
 
     private func step(_ number: Int, _ text: String) -> some View {
@@ -136,31 +136,25 @@ struct BecomeCreatorView: View {
         }
         .padding(.horizontal, 12)
         .frame(height: 32)
-        .background(Capsule().fill(DS.surface))
-        .overlay(Capsule().strokeBorder(DS.hairline, lineWidth: 1))
+        .background(Capsule().fill(DS.accentTint))
     }
 
     // MARK: - Sortie vers le Hub
 
     private var cta: some View {
+        // Le style du CTA fournit la pression élastique et la vibration.
         Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             guard let url = AppConfig.creatorHubURL(language: language) else { return }
             openURL(url)
         } label: {
             HStack(spacing: 8) {
                 Text(languageManager.text("creator.invite.cta"))
-                    .font(DS.sans(.headline, .bold))
                 Image(systemName: "arrow.up.forward")
                     .font(.system(size: 14, weight: .bold))
             }
-            .foregroundStyle(.white)
-            .frame(maxWidth: .infinity)
-            .frame(height: 54)
-            .background(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(DS.accent))
         }
-        .buttonStyle(.plain)
-        .padding(.horizontal, 20)
+        .buttonStyle(DSPrimaryButtonStyle())
+        .padding(.horizontal, 24)
         .padding(.top, 10)
         .padding(.bottom, 8)
         .background(DS.canvas)
