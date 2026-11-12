@@ -47,3 +47,4 @@ Les 20 agents interrompus ont été relancés (ils reprennent où ils étaient) 
 - images a et b
 Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro bg da sv ru hr sl hu el pl
   sk sr ar he fi et lt lv ja (au fil des places libres) ; puis images (part 15) et remplacements (part 16).
+- 03:25 : pl et hu parts 1–7 finis ; vague 2 lancée aussi pour fr de
