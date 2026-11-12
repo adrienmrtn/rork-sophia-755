@@ -4,6 +4,7 @@ import UIKit
 /// Page 1 — Bienvenue. Un mur de couvertures de cours qui défile lentement, le logo Sophia,
 /// la phrase d'accroche, le CTA « Commencer » et la porte « J'ai déjà un compte ».
 struct OnboardingV2Welcome: View {
+    @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
     /// Tapped by someone who is reinstalling or switching phone. Optional so the
     /// screen still renders in a preview that has no coordinator behind it.
@@ -35,15 +36,10 @@ struct OnboardingV2Welcome: View {
         "course_11_la_prise_de_la_bastille_1789",
     ]
 
-    /// La langue de toute la page. L'accroche de marque (« Replace scrolling with… ») est en
-    /// anglais dans toutes les langues ; le sous-titre et les deux boutons suivaient, eux, la
-    /// langue de l'appareil, d'où une page à moitié en anglais, à moitié dans une autre
-    /// langue. Les quatre textes se lisent désormais dans cette seule langue : la langue de
-    /// l'app se choisit à la page suivante.
-    private static let pageLanguage: AppLanguage = .english
-
+    /// Tous les textes de la page (accroche, sous-titre, boutons) se lisent dans la langue de
+    /// l'app, celle du téléphone au premier lancement.
     private func pageText(_ key: String) -> String {
-        AppLocalizable.string(key, language: Self.pageLanguage)
+        languageManager.text(key)
     }
 
     var body: some View {
@@ -64,10 +60,6 @@ struct OnboardingV2Welcome: View {
                 actions
             }
             .frame(width: geo.size.width, height: geo.size.height)
-            // Page en anglais : elle se lit de gauche à droite, même sur un appareil en arabe
-            // ou en hébreu, et VoiceOver la prononce en anglais.
-            .environment(\.layoutDirection, .leftToRight)
-            .environment(\.locale, Locale(identifier: Self.pageLanguage.rawValue))
             .background(alignment: .top) {
                 OnboardingV2CoverWall(images: covers)
                     .frame(height: wallHeight + geo.safeAreaInsets.top)
