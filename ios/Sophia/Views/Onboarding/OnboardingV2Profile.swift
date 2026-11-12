@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Écran « Voici ton profil » — moment de **récompense** inséré juste avant la création de
 /// compte / le paywall. On attribue un surnom à l'utilisateur selon ses réponses, on lui
@@ -76,17 +77,55 @@ struct OnboardingV2Profile: View {
 
     // MARK: - En-tête (pastille + surnom)
 
-    private var header: some View {
-        HStack(spacing: 12) {
-            ZStack {
-                Circle().fill(DS.accentTint)
+    /// Diamètre de la pastille du profil.
+    private static let badgeSize: CGFloat = 72
+
+    /// Nom de l'illustration d'un profil ou d'un objectif dans le catalogue d'images
+    /// (`onboarding_profile_cultivate`, `…_reduce_screen`, `…_exams`, `…_impress`,
+    /// `…_curiosity`) : des affiches carrées sur fond crème, dans le style des avatars.
+    static func illustrationName(for key: String) -> String? {
+        switch key {
+        case "cultivate": "onboarding_profile_cultivate"
+        case "reduceScreen": "onboarding_profile_reduce_screen"
+        case "exams": "onboarding_profile_exams"
+        case "impress": "onboarding_profile_impress"
+        case "curiosity": "onboarding_profile_curiosity"
+        default: nil
+        }
+    }
+
+    /// L'illustration de `key`, quand elle est dans le catalogue.
+    private static func illustration(for key: String) -> UIImage? {
+        guard let name: String = illustrationName(for: key) else { return nil }
+        return UIImage(named: name)
+    }
+
+    /// La pastille ronde du profil : son illustration, rognée en cercle. Si l'image venait à
+    /// manquer dans le catalogue, l'ancien pictogramme reste affiché plutôt qu'un rond vide.
+    private var profileBadge: some View {
+        ZStack {
+            Circle().fill(DS.accentTint)
+            if let image: UIImage = Self.illustration(for: vm.profileArchetypeKey) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: Self.badgeSize, height: Self.badgeSize)
+                    .clipShape(Circle())
+            } else {
                 Text(vm.profileEmoji)
-                    .font(.system(size: 28))
+                    .font(.system(size: 34))
             }
-            .frame(width: 56, height: 56)
-            .scaleEffect(badgeIn || reduceMotion ? 1 : 0.4)
-            .opacity(badgeIn ? 1 : 0)
-            .accessibilityHidden(true)
+        }
+        .frame(width: Self.badgeSize, height: Self.badgeSize)
+        .overlay(Circle().strokeBorder(Self.objectiveBorder, lineWidth: 1.5))
+    }
+
+    private var header: some View {
+        HStack(spacing: 14) {
+            profileBadge
+                .scaleEffect(badgeIn || reduceMotion ? 1 : 0.86)
+                .opacity(badgeIn ? 1 : 0)
+                .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(vm.personalizedText("onboardingV2.profile.eyebrow", language: languageManager.current))
@@ -138,18 +177,28 @@ struct OnboardingV2Profile: View {
     /// Bordure de la carte objectif : le bleu d'accent très éclairci.
     private static let objectiveBorder = Color(red: 0.773, green: 0.835, blue: 0.945)
 
+    /// Un objectif choisi : sa petite illustration ronde (la même série que la pastille du
+    /// profil) et son libellé. Sans illustration dans le catalogue, le libellé seul : plus
+    /// d'emoji ici.
     private func objectiveChip(_ key: String) -> some View {
         HStack(spacing: 8) {
-            Text(OnboardingV2ViewModel.objectiveEmoji(key))
-                .font(.system(size: 14))
+            if let image: UIImage = Self.illustration(for: key) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 24, height: 24)
+                    .clipShape(Circle())
+                    .accessibilityHidden(true)
+            }
             Text(OnboardingV2ViewModel.objectiveLabel(key, language: languageManager.current))
                 .font(DS.sans(.footnote, .semibold))
                 .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(.horizontal, 12)
-        .padding(.vertical, 7)
+        .padding(.leading, 8)
+        .padding(.trailing, 12)
+        .padding(.vertical, 6)
         .background(RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous).fill(DS.surface))
     }
 
@@ -163,7 +212,7 @@ struct OnboardingV2Profile: View {
                 timelineRow(course, index: i)
                     .opacity(reveal >= 2 ? 1 : 0)
                     .offset(y: reveal >= 2 || reduceMotion ? 0 : 16)
-                    .animation(DS.Motion.reveal.delay(0.06 + Double(i) * 0.08), value: reveal)
+                    .animation(DSCalmMotion.reveal.delay(0.06 + Double(i) * 0.08), value: reveal)
             }
         }
         .background(alignment: .leading) {
@@ -174,7 +223,7 @@ struct OnboardingV2Profile: View {
                 .padding(.leading, 13)
                 .scaleEffect(x: 1, y: reveal >= 2 || reduceMotion ? 1 : 0, anchor: .top)
                 .opacity(reveal >= 2 ? 1 : 0)
-                .animation(DS.Motion.reveal.delay(0.1), value: reveal)
+                .animation(DSCalmMotion.reveal.delay(0.1), value: reveal)
         }
     }
 
@@ -235,13 +284,14 @@ struct OnboardingV2Profile: View {
     // MARK: - Animation (étagée)
 
     private func runAnimation() {
-        withAnimation(DS.Motion.pop.delay(0.1)) { badgeIn = true }
-        withAnimation(DS.Motion.reveal.delay(0.22)) { nameRevealed = true }
+        // Tout se pose sans rebond : la pastille grandit jusqu'à sa taille et s'y arrête.
+        withAnimation(DSCalmMotion.settle.delay(0.1)) { badgeIn = true }
+        withAnimation(DSCalmMotion.reveal.delay(0.22)) { nameRevealed = true }
         OnboardingHaptics.selection()
 
         for step in 1...2 {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2 + Double(step) * 0.3) {
-                withAnimation(DS.Motion.reveal) {
+                withAnimation(DSCalmMotion.reveal) {
                     reveal = step
                 }
                 if step == 1 { OnboardingHaptics.selection() }

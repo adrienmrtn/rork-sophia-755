@@ -109,19 +109,19 @@ enum OV2HapticGate {
     }
 }
 
-/// Pression élastique du CTA, sans vibration propre (le bouton vibre une seule fois, à
-/// l'action).
+/// Pression du CTA : il s'enfonce en douceur, sans rebond ni vibration propre (le bouton
+/// vibre une seule fois, à l'action).
 private struct OV2CTAPressStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .scaleEffect(configuration.isPressed ? 0.96 : 1)
+            .scaleEffect(configuration.isPressed ? 0.97 : 1)
             .opacity(configuration.isPressed ? 0.9 : 1)
-            .animation(DS.Motion.press, value: configuration.isPressed)
+            .animation(DSCalmMotion.press, value: configuration.isPressed)
     }
 }
 
 /// CTA plein « Elevate arrondi » : rectangle arrondi (16 pt) bleu, texte blanc, pression
-/// élastique et une vibration franche à l'action.
+/// douce et une vibration franche à l'action.
 struct OnboardingV2Button: View {
     let title: String
     var enabled: Bool = true
@@ -151,7 +151,7 @@ struct OnboardingV2Button: View {
                     RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
                         .fill(enabled ? OV2.accent : OV2.accent.opacity(0.35))
                 )
-                .animation(DS.Motion.snappy, value: enabled)
+                .animation(DSCalmMotion.state, value: enabled)
         }
         .buttonStyle(OV2CTAPressStyle())
         .disabled(!enabled)
@@ -439,7 +439,7 @@ struct OnboardingV2ProgressDots: View {
                 Capsule()
                     .fill(i <= current ? OV2.accent : OV2.accent.opacity(0.15))
                     .frame(width: i == current ? 22 : 7, height: 6)
-                    .animation(.spring(response: 0.35, dampingFraction: 0.8), value: current)
+                    .animation(DSCalmMotion.state, value: current)
             }
         }
     }
@@ -460,7 +460,8 @@ struct OnboardingV2Reveal: ViewModifier {
             .offset(y: appeared ? 0 : yOffset)
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                    withAnimation(.spring(response: 0.6, dampingFraction: 0.82)) {
+                    // Sans rebond : le bloc monte et s'arrête à sa place.
+                    withAnimation(DSCalmMotion.reveal) {
                         appeared = true
                     }
                 }

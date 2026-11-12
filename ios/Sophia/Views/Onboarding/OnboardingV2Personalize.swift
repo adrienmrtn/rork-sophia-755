@@ -3,8 +3,8 @@ import SwiftUI
 /// Moment doux inséré juste avant le swipe de cours : la phrase « Personnalisons ton contenu »
 /// se met en gras progressivement (mot par mot), exactement comme l'écran « Transforme ce
 /// temps ». Chaque mot occupe un emplacement de largeur fixe (largeur « gras ») pour éviter tout
-/// décalage du texte quand le gras arrive. Pas de CTA : on tape n'importe où pour ouvrir l'écran
-/// « Des cours faits pour toi ».
+/// décalage du texte quand le gras arrive. Pas de CTA : une fois l'animation terminée, on tape
+/// n'importe où pour ouvrir l'écran « Des cours faits pour toi ».
 ///
 /// Style « Elevate arrondi » : une illustration ronde au-dessus de la phrase, en très grand et
 /// centrée ; l'invitation à toucher l'écran en bas.
@@ -102,8 +102,11 @@ struct OnboardingV2Personalize: View {
         }
     }
 
+    /// On ne passe à la suite qu'une fois la phrase entièrement en gras : `showHint` est posé
+    /// à la fin de l'animation (ou à son interruption, pour ne jamais laisser la page sans
+    /// issue). Un appui plus tôt est ignoré.
     private func advance() {
-        guard !advanced else { return }
+        guard showHint, !advanced else { return }
         advanced = true
         animTask?.cancel()
         onNext()

@@ -199,7 +199,10 @@ struct OnboardingV2View: View {
             }
         }
         .preferredColorScheme(.light)
-        .animation(.spring(response: 0.55, dampingFraction: 0.9), value: stepIndex)
+        // Ressort à amortissement critique : l'écran arrive à sa place sans la dépasser.
+        .animation(.spring(response: 0.5, dampingFraction: 1), value: stepIndex)
+        // Tout l'onboarding se pose sans rebond (apparitions, coches, pression des boutons).
+        .environment(\.dsCalmMotion, true)
         .onChange(of: auth.isSignedIn) { _, signedIn in
             if signedIn, current == .login { advance() }
         }
