@@ -72,3 +72,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - sv parts 8–14 fini ; images lot a fini (50) ; agent remplacements (5) lancé → v5/final_replacements.json
 - ru parts 8–14 fini
 - pl parts 8–14 fini
+- bg parts 8–14 fini
