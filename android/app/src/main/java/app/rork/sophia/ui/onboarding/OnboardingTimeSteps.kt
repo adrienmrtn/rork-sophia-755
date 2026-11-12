@@ -691,7 +691,8 @@ private fun SwapWordCell(
 
 /**
  * « Let's personalize your content », right before the course swipe: the sentence turns bold
- * word by word, like « Turn that time ». No button: a tap anywhere opens the next page.
+ * word by word, like « Turn that time ». No button: a tap anywhere opens the next page, once
+ * the whole sentence has turned bold (the hint appears at that moment).
  */
 @Composable
 internal fun PersonalizeStep(language: AppLanguage, onContinue: () -> Unit) {
@@ -720,6 +721,8 @@ internal fun PersonalizeStep(language: AppLanguage, onContinue: () -> Unit) {
         sentenceWords = words,
         hint = StringStore.text(context, "onboardingV2.personalize.tapHint", language),
         hintVisible = showHint,
+        // On ne passe à la suite qu'une fois la phrase entièrement animée.
+        canContinue = showHint,
         onContinue = onContinue,
     ) { style ->
         ProgressiveWords(
@@ -743,6 +746,8 @@ private fun TapToContinueScaffold(
     hint: String,
     hintVisible: Boolean,
     onContinue: () -> Unit,
+    // Faux tant que l'animation de la page n'est pas terminée : le toucher ne fait rien.
+    canContinue: Boolean = true,
     content: @Composable (style: TextStyle) -> Unit,
 ) {
     val haptics = rememberHaptics()
@@ -752,6 +757,7 @@ private fun TapToContinueScaffold(
         modifier = Modifier
             .fillMaxSize()
             .clickable(
+                enabled = canContinue,
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
             ) {
@@ -775,7 +781,7 @@ private fun TapToContinueScaffold(
             verticalArrangement = Arrangement.spacedBy(26.dp),
         ) {
             if (artSize > 0.dp) {
-                OV2CoreIllustration(art = art, size = artSize, modifier = Modifier.dsPopIn(100))
+                OV2CoreIllustration(art = art, size = artSize, modifier = Modifier.ov2PopIn(100))
             }
             content(style)
         }
@@ -962,7 +968,7 @@ internal fun ReminderStep(language: AppLanguage, onContinue: () -> Unit) {
     }
     val bellScale by animateFloatAsState(
         targetValue = if (bellIn) 1f else 0.5f,
-        animationSpec = spring(dampingRatio = 0.6f, stiffness = Spring.StiffnessLow),
+        animationSpec = OnboardingMotion.settle(420),
         label = "bellScale",
     )
     val wobble by rememberInfiniteTransition(label = "bell").animateFloat(
@@ -1086,7 +1092,7 @@ private fun TrialTimelineRow(
     val alpha by animateFloatAsState(if (visible) 1f else 0f, tween(400), label = "trialAlpha")
     val shift by animateFloatAsState(
         targetValue = if (visible) 0f else -12f,
-        animationSpec = spring(dampingRatio = 0.82f, stiffness = Spring.StiffnessMediumLow),
+        animationSpec = OnboardingMotion.settle(),
         label = "trialShift",
     )
     Row(

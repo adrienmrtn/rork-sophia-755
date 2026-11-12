@@ -6,6 +6,7 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -56,7 +57,6 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.R
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
-import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.components.dsStagger
 import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.theme.DS
@@ -80,6 +80,9 @@ private val CURVE_MARK_KEYS = listOf(
 /** Wait before each mark: they follow the tip of the blue curve. */
 private val CURVE_MARK_WAITS = listOf(60L, 540L, 380L, 620L)
 
+/** Le bouton « Continuer » n'apparaît qu'après ce délai : le temps de voir les courbes partir. */
+private const val CURVE_CTA_DELAY_MILLIS = 1000L
+
 /** Very slightly blue background of the chart card. */
 private val CurveCardFill = Color(0xFFF7F9FD)
 private val CurveAxisColor = Color(0xFFC3CBD8)
@@ -91,6 +94,9 @@ private val CurveAxisColor = Color(0xFFC3CBD8)
  * scrolling elsewhere, dark, which stays almost flat. The curves draw themselves when the page
  * arrives, then the marks of the axis (today, 7, 30 and 90 days) land one after the other with
  * a soft vibration. No result figure anywhere: only trends. Port of iOS's `OnboardingV2Curve90`.
+ *
+ * Le bouton « Continuer » n'apparaît qu'une seconde après l'arrivée sur la page, et la courbe
+ * bleue est étiquetée du vrai logo Sophia, en couleurs.
  */
 @Composable
 internal fun Curve90Step(language: AppLanguage, onContinue: () -> Unit) {
@@ -104,7 +110,12 @@ internal fun Curve90Step(language: AppLanguage, onContinue: () -> Unit) {
     var marks by remember { mutableIntStateOf(0) }
     var endsIn by remember { mutableStateOf(false) }
     var labelsIn by remember { mutableStateOf(false) }
+    var ctaIn by remember { mutableStateOf(false) }
 
+    LaunchedEffect(Unit) {
+        delay(CURVE_CTA_DELAY_MILLIS)
+        ctaIn = true
+    }
     LaunchedEffect(Unit) {
         delay(280)
         axisIn = true
@@ -121,19 +132,31 @@ internal fun Curve90Step(language: AppLanguage, onContinue: () -> Unit) {
 
     val axisAlpha = animateFloatAsState(if (axisIn) 1f else 0f, tween(350), label = "curveAxis")
     val markProgress = List(CURVE_MARK_KEYS.size) { index ->
-        animateFloatAsState(if (marks > index) 1f else 0f, DSMotion.pop(), label = "curveMark$index")
+        animateFloatAsState(if (marks > index) 1f else 0f, OnboardingMotion.settle(), label = "curveMark$index")
     }
-    val endsProgress = animateFloatAsState(if (endsIn) 1f else 0f, DSMotion.pop(), label = "curveEnds")
-    val labelsProgress = animateFloatAsState(if (labelsIn) 1f else 0f, DSMotion.pop(), label = "curveLabels")
+    val endsProgress = animateFloatAsState(if (endsIn) 1f else 0f, OnboardingMotion.settle(), label = "curveEnds")
+    val labelsProgress = animateFloatAsState(if (labelsIn) 1f else 0f, OnboardingMotion.settle(), label = "curveLabels")
+    val ctaProgress = animateFloatAsState(if (ctaIn) 1f else 0f, OnboardingMotion.settle(320), label = "curveCta")
     val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
 
     OnboardingPage(
         contentArrangement = Arrangement.Top,
         footer = {
-            OnboardingCta(
-                text = StringStore.text(context, "common.continue", language),
-                onClick = onContinue,
-            )
+            // Sa place est gardée dès le départ : le bouton apparaît sans déplacer la page, et
+            // ne répond qu'une fois visible.
+            Box(
+                modifier = Modifier.graphicsLayer {
+                    val progress = ctaProgress.value.coerceIn(0f, 1f)
+                    alpha = progress
+                    translationY = (1f - progress) * 10.dp.toPx()
+                },
+            ) {
+                OnboardingCta(
+                    text = StringStore.text(context, "common.continue", language),
+                    onClick = onContinue,
+                    enabled = ctaIn,
+                )
+            }
         },
     ) {
         Column(modifier = Modifier.fillMaxWidth().padding(horizontal = OV2End.side)) {
@@ -190,7 +213,8 @@ internal fun Curve90Step(language: AppLanguage, onContinue: () -> Unit) {
                     }
                     Curve90MarkLabels(language = language, markProgress = markProgress)
                 }
-                // Label of the blue curve: the Sophia logo in white on blue.
+                // Étiquette de la courbe bleue : le vrai logo Sophia, en couleurs et jamais teinté,
+                // sur une pastille blanche cerclée du bleu de la courbe.
                 Box(
                     modifier = Modifier
                         .align(Alignment.TopEnd)
@@ -203,14 +227,15 @@ internal fun Curve90Step(language: AppLanguage, onContinue: () -> Unit) {
                             alpha = progress.coerceIn(0f, 1f)
                             transformOrigin = TransformOrigin(if (rtl) 0f else 1f, 0f)
                         }
-                        .background(DS.accent, RoundedCornerShape(12.dp))
-                        .padding(horizontal = 12.dp, vertical = 7.dp),
+                        .background(DS.surface, RoundedCornerShape(12.dp))
+                        .border(1.5.dp, DS.accent, RoundedCornerShape(12.dp))
+                        .padding(horizontal = 11.dp, vertical = 7.dp),
                 ) {
                     Image(
-                        painter = painterResource(R.drawable.logo_white),
+                        painter = painterResource(R.drawable.sophia_mark),
                         contentDescription = null,
                         contentScale = ContentScale.Fit,
-                        modifier = Modifier.height(17.dp).aspectRatio(LOGO_RATIO),
+                        modifier = Modifier.height(18.dp).aspectRatio(LOGO_RATIO),
                     )
                 }
             }
@@ -219,8 +244,8 @@ internal fun Curve90Step(language: AppLanguage, onContinue: () -> Unit) {
     }
 }
 
-/** Width over height of the `logo_white` picture. */
-private const val LOGO_RATIO = 628f / 160f
+/** Largeur sur hauteur de l'image `sophia_mark` (1192 × 334) : le symbole rose et le mot « Sophia ». */
+private const val LOGO_RATIO = 1192f / 334f
 
 /** The four marks of the axis, under the chart: each rises into place with its tick. */
 @Composable
