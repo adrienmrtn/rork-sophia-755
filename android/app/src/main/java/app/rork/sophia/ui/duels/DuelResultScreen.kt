@@ -29,11 +29,13 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -77,9 +79,14 @@ import app.rork.sophia.domain.DuelHome
 import app.rork.sophia.domain.DuelLeague
 import app.rork.sophia.domain.DuelResult
 import app.rork.sophia.domain.uppercaseIn
+import app.rork.sophia.ui.components.DSCountUp
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.SophiaSecondaryButton
+import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.onboarding.ConfettiBurst
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.ui.theme.SophiaAppearance
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.math.abs
@@ -90,8 +97,9 @@ import androidx.compose.material.icons.filled.Group
 private const val TROPHY_STEPS = 28
 
 /**
- * La fin d'une partie : victoire ou défaite, le score, puis les trophées qui défilent jusqu'à
- * leur nouveau total, la jauge de ligue qui avance, et la montée de ligue quand un seuil tombe.
+ * La fin d'une partie (maquette AEr25) : victoire ou défaite, le score, puis les trophées qui
+ * défilent jusqu'à leur nouveau total, la jauge de ligue qui avance, et la montée de ligue quand
+ * un seuil tombe.
  * Le titre et le score sont connus tout de suite ; les trophées arrivent avec la réponse du
  * serveur ([result]), qui fait foi. Même écran que
  * `ios/Sophia/Views/Duels/DuelResultView.swift`.
@@ -142,7 +150,8 @@ internal fun DuelResultScreen(
             playerScore = summary.playerScore,
             opponentScore = summary.opponentScore,
         )
-        // Une égalité parfaite (entre amis) n'est ni une victoire ni une défaite.
+        // Une égalité parfaite (entre amis) n'est ni une victoire ni une défaite. La victoire
+        // sonne comme toute récompense de l'app (`Haptics.celebrate`).
         if (won) view.duelHaptic(DuelHaptic.Victory) else if (!summary.draw) view.duelHaptic(DuelHaptic.Defeat)
     }
 
@@ -192,23 +201,11 @@ internal fun DuelResultScreen(
 
     val entrance by animateFloatAsState(
         targetValue = if (appeared) 1f else 0f,
-        animationSpec = duelSpring(response = 0.55f, damping = 0.62f),
+        animationSpec = DSMotion.pop(),
         label = "duelResultEntrance",
     )
 
-    Box(modifier = modifier.fillMaxSize()) {
-        DuelLeagueBackdrop(league = shownLeague, modifier = Modifier.fillMaxSize().duelUnderSystemBars())
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .duelUnderSystemBars()
-                .background(
-                    Brush.verticalGradient(
-                        listOf(DuelPalette.night.copy(alpha = 0.78f), DuelPalette.night.copy(alpha = 0.94f)),
-                    ),
-                ),
-        )
-
+    Box(modifier = modifier.fillMaxSize().background(DS.canvas)) {
         Column(
             modifier = Modifier.align(Alignment.Center).widthIn(max = 640.dp).fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -218,10 +215,10 @@ internal fun DuelResultScreen(
                     .weight(1f)
                     .fillMaxWidth()
                     .verticalScroll(rememberScrollState())
-                    .padding(horizontal = 20.dp)
-                    .padding(top = 28.dp, bottom = 16.dp),
+                    .padding(horizontal = 24.dp)
+                    .padding(top = 44.dp, bottom = 16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(22.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
                 // Titre : l'issue, puis comment elle s'est décidée.
                 Column(
@@ -240,9 +237,9 @@ internal fun DuelResultScreen(
                         ),
                         fontFamily = PlusJakartaSans,
                         fontWeight = FontWeight.ExtraBold,
-                        fontSize = 44.sp,
-                        lineHeight = 50.sp,
-                        color = if (won) DuelPalette.saffron else Color.White,
+                        fontSize = 34.sp,
+                        lineHeight = 40.sp,
+                        color = DS.ink,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.graphicsLayer {
                             val scale = 0.4f + 0.6f * entrance
@@ -260,10 +257,10 @@ internal fun DuelResultScreen(
                         Text(
                             text = subtitle,
                             fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.SemiBold,
+                            fontWeight = FontWeight.Medium,
                             fontSize = 15.sp,
                             lineHeight = 20.sp,
-                            color = Color.White.copy(alpha = 0.75f),
+                            color = DS.inkSecondary,
                             textAlign = TextAlign.Center,
                         )
                     }
@@ -276,14 +273,14 @@ internal fun DuelResultScreen(
                         translationY = 24.dp.toPx() * (1f - entrance)
                     },
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(14.dp),
+                    horizontalArrangement = Arrangement.spacedBy(18.dp),
                 ) {
                     ResultFace(
                         avatarId = player.avatarId,
                         initial = player.initial,
                         name = "@${player.handle}",
-                        ring = DuelPalette.saffron,
                         crowned = won && !summary.draw,
+                        faded = !won && !summary.draw,
                         entrance = entrance,
                         modifier = Modifier.weight(1f),
                     )
@@ -293,16 +290,16 @@ internal fun DuelResultScreen(
                         style = DuelTabularDigits.copy(textDirection = TextDirection.Ltr),
                         fontFamily = PlusJakartaSans,
                         fontWeight = FontWeight.ExtraBold,
-                        fontSize = 40.sp,
-                        color = Color.White,
+                        fontSize = 34.sp,
+                        color = DS.ink,
                         maxLines = 1,
                     )
                     ResultFace(
                         avatarId = opponent.avatarId,
                         initial = opponent.initial,
                         name = "@${opponent.handle} ${opponent.flag}".trim(),
-                        ring = DuelPalette.coral,
                         crowned = !won && !summary.draw,
+                        faded = won && !summary.draw,
                         entrance = entrance,
                         modifier = Modifier.weight(1f),
                     )
@@ -333,39 +330,26 @@ internal fun DuelResultScreen(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 20.dp, vertical = 12.dp)
+                    .padding(horizontal = 24.dp, vertical = 12.dp)
                     .graphicsLayer { alpha = entrance.coerceIn(0f, 1f) },
-                verticalArrangement = Arrangement.spacedBy(12.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
                 DuelPlayButton(
                     text = text(if (summary.friendly) "duel.friend.rematch" else "duel.result.again"),
+                    leadingIcon = Icons.Filled.Bolt,
                     onClick = {
                         view.duelHaptic(DuelHaptic.Countdown)
                         onPlayAgain()
                     },
                 )
-                Text(
-                    text = text("duel.result.done"),
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 17.sp,
-                    color = Color.White.copy(alpha = 0.85f),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clip(CircleShape)
-                        .clickable(role = Role.Button) {
-                            view.duelHaptic(DuelHaptic.Tap)
-                            onDone()
-                        }
-                        .padding(vertical = 10.dp),
-                )
+                // Le bouton secondaire vibre de lui-même.
+                SophiaSecondaryButton(text = text("duel.result.done"), onClick = onDone)
             }
         }
 
         if (won) {
             ConfettiBurst(
-                colors = DuelPalette.confetti,
+                colors = DuelTheme.confetti,
                 pieceCount = 120,
                 durationMillis = 3_000,
                 origin = Offset(0.5f, 0.22f),
@@ -385,36 +369,39 @@ internal fun DuelResultScreen(
 
 // ---------------------------------------------------------------- les deux joueurs
 
+/** Un joueur : le vainqueur porte la couronne et un cercle safran, le perdant passe en gris. */
 @Composable
 private fun ResultFace(
     avatarId: String?,
     initial: String,
     name: String,
-    ring: Color,
     crowned: Boolean,
+    faded: Boolean,
     entrance: Float,
     modifier: Modifier = Modifier,
 ) {
     Column(
         modifier = modifier.padding(top = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         Box(contentAlignment = Alignment.TopCenter) {
             DuelAvatar(
                 avatarId = avatarId,
                 initial = initial,
                 size = 76.dp,
-                ring = ring,
-                ringWidth = 4.dp,
+                ring = if (crowned) DuelPalette.saffron else DS.hairline,
+                ringWidth = if (crowned) 3.dp else 1.5.dp,
                 // Le perdant passe au second plan.
-                modifier = Modifier.duelSaturation(if (crowned) 1f else 0.55f),
+                modifier = Modifier
+                    .graphicsLayer { alpha = if (faded) 0.7f else 1f }
+                    .duelSaturation(if (faded) 0f else 1f),
             )
             if (crowned) {
                 DuelCrown(
                     size = 28.dp,
                     modifier = Modifier.offset(y = (-24).dp).graphicsLayer {
-                        val scale = 0.1f + 0.9f * entrance
+                        val scale = (0.1f + 0.9f * entrance).coerceAtLeast(0f)
                         scaleX = scale
                         scaleY = scale
                     },
@@ -423,9 +410,9 @@ private fun ResultFace(
         }
         DuelShrinkText(
             text = name,
-            fontSize = 12.sp,
+            fontSize = 13.sp,
             fontWeight = FontWeight.Bold,
-            color = Color.White.copy(alpha = 0.85f),
+            color = DS.ink,
             minScale = 0.6f,
         )
     }
@@ -435,13 +422,11 @@ private fun ResultFace(
 private fun Modifier.duelSaturation(value: Float): Modifier {
     if (value >= 1f) return this
     return drawWithContent {
-        // L'ombre de l'avatar déborde de son cadre : la couche la garde.
-        val margin = 24.dp.toPx()
         val paint = Paint().apply {
             colorFilter = ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(value) })
         }
         drawIntoCanvas { canvas ->
-            canvas.saveLayer(Rect(-margin, -margin, size.width + margin, size.height + margin), paint)
+            canvas.saveLayer(Rect(0f, 0f, size.width, size.height), paint)
             drawContent()
             canvas.restore()
         }
@@ -464,8 +449,6 @@ private fun DuelCrown(size: Dp, modifier: Modifier = Modifier) {
             lineTo(w * 0.86f, h * 0.84f)
             close()
         }
-        // Une ombre portée légère, pour qu'elle se détache de l'illustration du fond.
-        drawPath(path, Color.Black.copy(alpha = 0.3f), style = Stroke(width = w * 0.16f, join = StrokeJoin.Round))
         drawPath(path, DuelPalette.saffron)
         drawPath(path, DuelPalette.saffron, style = Stroke(width = w * 0.08f, join = StrokeJoin.Round))
     }
@@ -491,14 +474,12 @@ private fun TrophyCard(
 ) {
     val context = LocalContext.current
     fun text(key: String, vararg args: Any): String = StringStore.text(context, key, language, *args)
-    val shape = RoundedCornerShape(26.dp)
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .shadow(16.dp, shape, ambientColor = Color.Black.copy(alpha = 0.3f), spotColor = Color.Black.copy(alpha = 0.3f))
-            .background(DS.surface, shape)
-            .padding(20.dp),
-        verticalArrangement = Arrangement.spacedBy(18.dp),
+            .sophiaCard()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {
         when {
             friendly -> Column(
@@ -506,16 +487,21 @@ private fun TrophyCard(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                Icon(
-                    imageVector = Icons.Filled.Group,
-                    contentDescription = null,
-                    tint = DS.accentSoft,
-                    modifier = Modifier.size(28.dp),
-                )
+                Box(
+                    modifier = Modifier.size(52.dp).background(DS.accentTint, CircleShape),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.Group,
+                        contentDescription = null,
+                        tint = DS.accent,
+                        modifier = Modifier.size(26.dp),
+                    )
+                }
                 Text(
                     text = text("duel.friend.noTrophies"),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Medium,
                     fontSize = 15.sp,
                     lineHeight = 20.sp,
                     color = DS.inkSecondary,
@@ -523,7 +509,8 @@ private fun TrophyCard(
                 )
             }
             result != null -> {
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                // L'illustration du trophée, le total qui défile et le gain (ou la perte) de la partie.
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     val lift by animateFloatAsState(
                         targetValue = if (showDelta && won) 1f else 0f,
                         animationSpec = duelSpring(response = 0.4f, damping = 0.55f),
@@ -540,43 +527,42 @@ private fun TrophyCard(
                                 scaleX = scale
                                 scaleY = scale
                             }
-                            .size(76.dp)
-                            .clip(RoundedCornerShape(20.dp)),
+                            .size(56.dp)
+                            .clip(RoundedCornerShape(14.dp)),
                     )
-                    Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                         Text(
                             text = text("duel.trophies.title").uppercaseIn(language),
                             fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.Bold,
+                            fontWeight = FontWeight.ExtraBold,
                             fontSize = 12.sp,
-                            letterSpacing = 1.1.sp,
-                            color = DS.inkTertiary,
+                            letterSpacing = 0.8.sp,
+                            color = DS.inkSecondary,
                         )
-                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text(
-                                text = DuelFormat.number(shownTrophies, language),
-                                fontFamily = PlusJakartaSans,
-                                fontWeight = FontWeight.ExtraBold,
-                                fontSize = 40.sp,
-                                lineHeight = 46.sp,
-                                style = DuelTabularDigits,
-                                color = DS.ink,
-                                maxLines = 1,
-                            )
-                            AnimatedVisibility(
-                                visible = showDelta,
-                                enter = scaleIn(
-                                    duelSpring(response = 0.4f, damping = 0.55f),
-                                    initialScale = 0.3f,
-                                    transformOrigin = TransformOrigin(0f, 0.5f),
-                                ) + fadeIn(),
-                            ) {
-                                DeltaChip(result.trophiesDelta)
-                            }
-                        }
+                        Text(
+                            text = DuelFormat.number(shownTrophies, language),
+                            fontFamily = PlusJakartaSans,
+                            fontWeight = FontWeight.ExtraBold,
+                            fontSize = 26.sp,
+                            lineHeight = 32.sp,
+                            style = DuelTabularDigits,
+                            color = DS.ink,
+                            maxLines = 1,
+                        )
+                    }
+                    AnimatedVisibility(
+                        visible = showDelta,
+                        enter = scaleIn(
+                            duelSpring(response = 0.4f, damping = 0.55f),
+                            initialScale = 0.3f,
+                            transformOrigin = TransformOrigin(1f, 0.5f),
+                        ) + fadeIn(),
+                    ) {
+                        DeltaChip(result.trophiesDelta)
                     }
                 }
 
+                // La ligue affichée, le seuil de la suivante, la jauge et ce qu'il reste à gagner.
                 val next = home?.nextLeague(shownLeague)
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -584,16 +570,21 @@ private fun TrophyCard(
                             text = DuelFormat.leagueName(context, shownLeague, language),
                             fontFamily = PlusJakartaSans,
                             fontWeight = FontWeight.Bold,
-                            fontSize = 15.sp,
+                            fontSize = 13.sp,
                             color = DS.ink,
                             maxLines = 1,
                             modifier = Modifier.weight(1f),
                         )
                         if (next != null) {
-                            DuelTrophyCount(value = next.minTrophies, language = language, size = 13.dp, color = DS.inkSecondary)
+                            DuelTrophyCount(value = next.minTrophies, language = language, size = 13.dp, color = DS.ink)
                         }
                     }
-                    DuelProgressBar(progress = barProgress, tint = DuelPalette.saffron, track = DS.surfaceMuted, height = 12.dp)
+                    DuelProgressBar(
+                        progress = barProgress,
+                        tint = DuelPalette.saffron,
+                        track = DS.ink.copy(alpha = 0.12f),
+                        height = 8.dp,
+                    )
                     Text(
                         text = if (next == null) {
                             text("duel.league.top")
@@ -605,9 +596,9 @@ private fun TrophyCard(
                             )
                         },
                         fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.Medium,
-                        fontSize = 12.sp,
-                        lineHeight = 16.sp,
+                        fontWeight = FontWeight.Normal,
+                        fontSize = 13.sp,
+                        lineHeight = 17.sp,
                         color = DS.inkSecondary,
                     )
                 }
@@ -617,7 +608,7 @@ private fun TrophyCard(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                Icon(Icons.Filled.WifiOff, contentDescription = null, tint = DS.inkTertiary, modifier = Modifier.size(30.dp))
+                Icon(Icons.Filled.WifiOff, contentDescription = null, tint = DS.inkTertiary, modifier = Modifier.size(28.dp))
                 Text(
                     text = text("duel.result.syncFailed"),
                     fontFamily = PlusJakartaSans,
@@ -632,33 +623,40 @@ private fun TrophyCard(
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.Bold,
                     fontSize = 15.sp,
-                    color = DS.accentSoft,
+                    color = DS.accent,
                     modifier = Modifier
-                        .clip(CircleShape)
+                        .clip(DS.controlShape)
                         .clickable(role = Role.Button, onClick = onRetrySend)
                         .padding(horizontal = 14.dp, vertical = 8.dp),
                 )
             }
             else -> Box(modifier = Modifier.fillMaxWidth().padding(vertical = 28.dp), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator(color = DS.accentSoft, strokeWidth = 3.dp, modifier = Modifier.size(28.dp))
+                CircularProgressIndicator(color = DS.accent, strokeWidth = 3.dp, modifier = Modifier.size(28.dp))
             }
         }
     }
 }
 
+/**
+ * Le gain de la partie, qui défile de zéro à sa valeur pendant que le total avance. Sans
+ * vibration propre : le défilement du total vibre déjà (`DuelHaptic.TrophyTick`).
+ */
 @Composable
 private fun DeltaChip(delta: Int) {
     val color = if (delta > 0) DS.success else if (delta < 0) DS.danger else DS.inkTertiary
-    val tint = if (delta > 0) DS.successTint else if (delta < 0) DS.dangerTint else DS.surfaceMuted
-    Text(
-        text = if (delta > 0) "+$delta" else delta.toString(),
-        fontFamily = PlusJakartaSans,
-        fontWeight = FontWeight.ExtraBold,
-        fontSize = 17.sp,
-        style = DuelTabularDigits,
+    val tint = if (delta > 0) DS.successTint else if (delta < 0) DS.dangerTint else DS.accentTint
+    DSCountUp(
+        value = delta,
+        durationMillis = 800,
+        style = DuelTabularDigits.copy(
+            fontFamily = PlusJakartaSans,
+            fontWeight = FontWeight.ExtraBold,
+            fontSize = 15.sp,
+        ),
         color = color,
-        maxLines = 1,
-        modifier = Modifier.background(tint, CircleShape).padding(horizontal = 10.dp, vertical = 4.dp),
+        prefix = if (delta > 0) "+" else "",
+        haptics = false,
+        modifier = Modifier.background(tint, RoundedCornerShape(12.dp)).padding(horizontal = 12.dp, vertical = 5.dp),
     )
 }
 
@@ -674,6 +672,11 @@ private fun DuelPromotionOverlay(league: DuelLeague, language: AppLanguage, onCo
     val view = LocalView.current
     val revealed = remember { Animatable(0f) }
     LaunchedEffect(Unit) { revealed.animateTo(1f, tween(1_300, easing = LinearOutSlowInEasing)) }
+    // L'illustration passe sous les barres du système : leurs icônes en clair, le temps de l'annonce.
+    DisposableEffect(Unit) {
+        SophiaAppearance.darkBackdropBehindBars = true
+        onDispose { SophiaAppearance.darkBackdropBehindBars = false }
+    }
 
     Box(
         modifier = Modifier
@@ -698,7 +701,7 @@ private fun DuelPromotionOverlay(league: DuelLeague, language: AppLanguage, onCo
                 .duelUnderSystemBars()
                 .background(
                     Brush.verticalGradient(
-                        listOf(Color.Transparent, DuelPalette.night.copy(alpha = 0.35f), DuelPalette.night.copy(alpha = 0.92f)),
+                        listOf(Color.Transparent, DuelTheme.scrim.copy(alpha = 0.35f), DuelTheme.scrim.copy(alpha = 0.92f)),
                     ),
                 ),
         )
@@ -716,9 +719,9 @@ private fun DuelPromotionOverlay(league: DuelLeague, language: AppLanguage, onCo
             Text(
                 text = StringStore.text(context, "duel.promotion.title", language).uppercaseIn(language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
-                fontSize = 15.sp,
-                letterSpacing = 2.4.sp,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 13.sp,
+                letterSpacing = 1.6.sp,
                 color = DuelPalette.saffron,
                 modifier = Modifier.graphicsLayer {
                     alpha = revealed.value
@@ -727,7 +730,7 @@ private fun DuelPromotionOverlay(league: DuelLeague, language: AppLanguage, onCo
             )
             DuelShrinkText(
                 text = DuelFormat.leagueName(context, league, language),
-                fontSize = 46.sp,
+                fontSize = 40.sp,
                 fontWeight = FontWeight.ExtraBold,
                 color = Color.White,
                 maxLines = 2,
@@ -750,7 +753,7 @@ private fun DuelPromotionOverlay(league: DuelLeague, language: AppLanguage, onCo
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 15.sp,
-                    color = Color.White.copy(alpha = 0.8f),
+                    color = DuelTheme.onArtSecondary,
                 )
                 Text(text = "·", fontSize = 15.sp, color = Color.White.copy(alpha = 0.5f))
                 DuelTrophyCount(value = league.minTrophies, language = language, size = 15.dp, color = Color.White)

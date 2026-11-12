@@ -10,8 +10,6 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.scaleIn
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,11 +23,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Bolt
-import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -42,13 +38,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -57,7 +50,13 @@ import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.DuelRoundKind
 import app.rork.sophia.domain.uppercaseIn
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.DSCheckBadge
+import app.rork.sophia.ui.components.DSOptionState
+import app.rork.sophia.ui.components.dsOptionCard
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 
 /**
@@ -78,26 +77,25 @@ internal fun duelSubjectName(context: Context, key: String, language: AppLanguag
     return StringStore.text(context, stringKey, language).takeIf { it != stringKey } ?: DuelSubjects.of(key).name
 }
 
-/** La croix qui ouvre « Quitter le duel ? », sur l'en-tête de la partie et sur ses annonces. */
+/**
+ * La croix qui ouvre « Quitter le duel ? », sur l'en-tête de la partie et sur ses annonces. Elle
+ * ne vibre pas d'elle-même : la question qu'elle pose le fait déjà (`DuelHaptic.Tap`).
+ */
 @Composable
 internal fun DuelQuitButton(language: AppLanguage, onClick: () -> Unit, modifier: Modifier = Modifier) {
-    val label = StringStore.text(LocalContext.current, "duel.quit.title", language)
-    Box(
-        modifier = modifier
-            .size(32.dp)
-            .clip(CircleShape)
-            .background(Color.White.copy(alpha = 0.14f))
-            .clickable(role = Role.Button, onClick = onClick),
-        contentAlignment = Alignment.Center,
-    ) {
-        Icon(Icons.Filled.Close, contentDescription = label, tint = Color.White.copy(alpha = 0.85f), modifier = Modifier.size(16.dp))
-    }
+    DuelRoundIconButton(
+        icon = Icons.Filled.Close,
+        contentDescription = StringStore.text(LocalContext.current, "duel.quit.title", language),
+        onClick = onClick,
+        modifier = modifier,
+        haptic = false,
+    )
 }
 
 /**
  * L'annonce d'une manche, par-dessus l'écran de jeu : trois matières au choix (et le temps qui
  * reste pour choisir), la matière que l'adversaire est en train de choisir puis celle qu'il a
- * retenue, ou le sprint final. Même contenu que
+ * retenue, ou le sprint final. Fond blanc, comme le reste du duel. Même contenu que
  * `ios/Sophia/Views/Duels/DuelRoundIntroView.swift`.
  */
 @Composable
@@ -116,7 +114,7 @@ internal fun DuelRoundIntroOverlay(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(DuelPalette.night.copy(alpha = 0.96f))
+            .background(DS.canvas.copy(alpha = 0.98f))
             // L'annonce prend les touches : pas de réponse donnée à travers elle.
             .pointerInput(Unit) {},
     ) {
@@ -126,17 +124,17 @@ internal fun DuelRoundIntroOverlay(
                 .widthIn(max = 520.dp)
                 .fillMaxWidth()
                 .verticalScroll(rememberScrollState())
-                .padding(horizontal = 28.dp, vertical = 48.dp),
+                .padding(horizontal = 24.dp, vertical = 60.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(22.dp),
+            verticalArrangement = Arrangement.spacedBy(20.dp),
         ) {
             Text(
                 text = text("duel.round.title", intro.number).uppercaseIn(language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
-                fontSize = 15.sp,
-                letterSpacing = 2.2.sp,
-                color = DuelPalette.saffron,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 12.sp,
+                letterSpacing = 1.6.sp,
+                color = DS.accent,
             )
             when (intro.kind) {
                 DuelRoundKind.PICK -> if (intro.mine) {
@@ -149,10 +147,11 @@ internal fun DuelRoundIntroOverlay(
             }
         }
 
+        // Même place que le bouton de l'écran de jeu, qu'elle recouvre.
         DuelQuitButton(
             language = language,
             onClick = onQuit,
-            modifier = Modifier.align(Alignment.TopStart).padding(start = 16.dp, top = 6.dp),
+            modifier = Modifier.align(Alignment.TopStart).padding(start = 24.dp, top = 8.dp),
         )
     }
 }
@@ -166,10 +165,10 @@ private fun MyPick(model: DuelGameModel, intro: DuelRoundAnnouncement, language:
         Text(
             text = StringStore.text(context, "duel.round.pick.title", language),
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.ExtraBold,
-            fontSize = 30.sp,
-            lineHeight = 36.sp,
-            color = Color.White,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 26.sp,
+            lineHeight = 32.sp,
+            color = DS.ink,
             textAlign = TextAlign.Center,
         )
 
@@ -181,17 +180,21 @@ private fun MyPick(model: DuelGameModel, intro: DuelRoundAnnouncement, language:
             Spacer(Modifier.height(5.dp))
         }
 
-        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            intro.options.forEach { subject ->
+        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            intro.options.forEachIndexed { index, subject ->
                 SubjectCard(
                     subject = subject,
                     language = language,
                     selected = intro.chosen == subject,
                     dimmed = intro.chosen != null && intro.chosen != subject,
-                    modifier = Modifier.softPress(
-                        onClick = { model.pickSubject(subject) },
-                        enabled = intro.chosen == null,
-                    ),
+                    modifier = Modifier
+                        .dsStagger(index, stepMillis = 70, baseMillis = 100)
+                        // Le choix vibre déjà (`DuelHaptic.Lock`).
+                        .pressable(
+                            onClick = { model.pickSubject(subject) },
+                            enabled = intro.chosen == null,
+                            haptic = false,
+                        ),
                 )
             }
         }
@@ -225,21 +228,22 @@ private fun TheirPick(intro: DuelRoundAnnouncement, opponentHandle: String, lang
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 17.sp,
                     lineHeight = 22.sp,
-                    color = Color.White.copy(alpha = 0.85f),
+                    color = DS.inkSecondary,
                     textAlign = TextAlign.Center,
                 )
                 SubjectCard(subject = chosen, language = language, selected = true, dimmed = false)
             } else {
-                DuelPulseRings(color = Color.White, modifier = Modifier.padding(vertical = 26.dp).size(64.dp))
+                DuelPulseRings(color = DS.accent, modifier = Modifier.padding(vertical = 26.dp).size(64.dp))
                 Text(
                     text = StringStore.text(context, "duel.round.pick.theirs", language, opponentHandle),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
-                    fontSize = 22.sp,
-                    lineHeight = 28.sp,
-                    color = Color.White,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 20.sp,
+                    lineHeight = 26.sp,
+                    color = DS.ink,
                     textAlign = TextAlign.Center,
                 )
+                DuelWaitingDots(color = DS.accent)
             }
         }
     }
@@ -251,14 +255,19 @@ private fun TheirPick(intro: DuelRoundAnnouncement, opponentHandle: String, lang
 private fun Sprint(language: AppLanguage) {
     val context = LocalContext.current
     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        Icon(Icons.Filled.Bolt, contentDescription = null, tint = DuelPalette.saffron, modifier = Modifier.size(60.dp))
+        Box(
+            modifier = Modifier.dsPopIn(delayMillis = 100).size(88.dp).background(DS.accentTint, CircleShape),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(Icons.Filled.Bolt, contentDescription = null, tint = DS.accent, modifier = Modifier.size(40.dp))
+        }
         Text(
             text = StringStore.text(context, "duel.round.sprint.title", language),
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.ExtraBold,
-            fontSize = 34.sp,
-            lineHeight = 40.sp,
-            color = Color.White,
+            fontSize = 32.sp,
+            lineHeight = 38.sp,
+            color = DS.ink,
             textAlign = TextAlign.Center,
         )
         Text(
@@ -267,7 +276,7 @@ private fun Sprint(language: AppLanguage) {
             fontWeight = FontWeight.Medium,
             fontSize = 17.sp,
             lineHeight = 23.sp,
-            color = Color.White.copy(alpha = 0.8f),
+            color = DS.inkSecondary,
             textAlign = TextAlign.Center,
         )
     }
@@ -275,6 +284,10 @@ private fun Sprint(language: AppLanguage) {
 
 // ---------------------------------------------------------------- une matière
 
+/**
+ * Une matière en carte d'option : sa pastille de couleur, son nom, et la coche une fois
+ * retenue.
+ */
 @Composable
 private fun SubjectCard(
     subject: String,
@@ -285,17 +298,16 @@ private fun SubjectCard(
 ) {
     val context = LocalContext.current
     val look = DuelSubjects.of(subject)
-    val shape = RoundedCornerShape(20.dp)
     val scale by animateFloatAsState(
         targetValue = if (selected) 1.02f else 1f,
         animationSpec = duelSpring(response = 0.35f, damping = 0.7f),
         label = "duelSubjectScale",
     )
-    val opacity by animateFloatAsState(
-        targetValue = if (dimmed) 0.4f else 1f,
-        animationSpec = tween(200),
-        label = "duelSubjectAlpha",
-    )
+    val state = when {
+        selected -> DSOptionState.Selected
+        dimmed -> DSOptionState.Dimmed
+        else -> DSOptionState.Idle
+    }
     Row(
         modifier = modifier
             .fillMaxWidth()
@@ -303,30 +315,24 @@ private fun SubjectCard(
                 scaleX = scale
                 scaleY = scale
             }
-            .alpha(opacity)
-            .background(Color.White.copy(alpha = if (selected) 0.18f else 0.1f), shape)
-            .border(
-                width = if (selected) 2.5.dp else 1.dp,
-                color = if (selected) DuelPalette.saffron else Color.White.copy(alpha = 0.14f),
-                shape = shape,
-            )
-            .padding(horizontal = 16.dp, vertical = 14.dp),
+            .dsOptionCard(state)
+            .padding(horizontal = 16.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(14.dp),
     ) {
-        Box(modifier = Modifier.size(48.dp).background(look.color, CircleShape), contentAlignment = Alignment.Center) {
-            Icon(look.icon, contentDescription = null, tint = Color.White, modifier = Modifier.size(24.dp))
+        Box(modifier = Modifier.size(44.dp).background(look.color, CircleShape), contentAlignment = Alignment.Center) {
+            Icon(look.icon, contentDescription = null, tint = Color.White, modifier = Modifier.size(22.dp))
         }
         DuelShrinkText(
             text = duelSubjectName(context, subject, language),
-            fontSize = 19.sp,
-            fontWeight = FontWeight.ExtraBold,
-            color = Color.White,
+            fontSize = 17.sp,
+            fontWeight = if (selected) FontWeight.Bold else FontWeight.SemiBold,
+            color = DS.ink,
             maxLines = 2,
             modifier = Modifier.weight(1f),
         )
         if (selected) {
-            Icon(Icons.Filled.CheckCircle, contentDescription = null, tint = DuelPalette.saffron, modifier = Modifier.size(26.dp))
+            DSCheckBadge(size = 26.dp, fill = DS.accent)
         }
     }
 }
@@ -347,8 +353,8 @@ private fun PickCountdownBar(model: DuelGameModel, opensAtMs: Long, deadlineMs: 
     }
     DuelProgressBar(
         progress = remaining,
-        tint = DuelPalette.saffron,
-        track = Color.White.copy(alpha = 0.18f),
+        tint = DS.accent,
+        track = DS.accentTint,
         height = 5.dp,
     )
 }

@@ -11,6 +11,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,6 +26,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -32,6 +34,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -39,12 +42,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
@@ -62,10 +64,11 @@ import app.rork.sophia.domain.DuelFriendStart
 import app.rork.sophia.domain.DuelFriendState
 import app.rork.sophia.domain.DuelOpponent
 import app.rork.sophia.domain.uppercaseIn
-import app.rork.sophia.ui.LocalFullBleedBackground
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.SophiaSecondaryButton
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
-import app.rork.sophia.ui.theme.SophiaAppearance
 import coil.imageLoader
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
@@ -321,16 +324,8 @@ fun DuelFriendFlow(
         }
     }
 
-    // Les marges des barres du système sont peintes par la racine de l'app : en nuit, comme l'écran.
-    val setFullBleed = LocalFullBleedBackground.current
-    DisposableEffect(Unit) {
-        setFullBleed(SolidColor(DuelPalette.night))
-        SophiaAppearance.darkBackdropBehindBars = true
-        onDispose {
-            setFullBleed(null)
-            SophiaAppearance.darkBackdropBehindBars = false
-        }
-    }
+    // Les écrans d'un duel entre amis sont blancs, comme le reste de l'app : les marges des
+    // barres du système gardent le fond de la racine et leurs icônes sombres.
 
     BackHandler(enabled = stage == FriendStage.Waiting || stage == FriendStage.Failed) {
         if (stage == FriendStage.Waiting) cancel() else onClose()
@@ -341,7 +336,7 @@ fun DuelFriendFlow(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(DuelPalette.night)
+            .background(DS.canvas)
             // Rien de ce qui est sous la partie ne doit recevoir de touche.
             .pointerInput(Unit) {},
     ) {
@@ -376,12 +371,9 @@ fun DuelFriendFlow(
                     countdown = countdown,
                     failureKey = failureKey,
                     canCancel = target != null,
-                    league = home?.currentLeague,
                     language = language,
-                    onCancel = {
-                        view.duelHaptic(DuelHaptic.Tap)
-                        cancel()
-                    },
+                    // Le bouton secondaire vibre de lui-même.
+                    onCancel = { cancel() },
                     onClose = {
                         view.duelHaptic(DuelHaptic.Tap)
                         onClose()
@@ -412,7 +404,7 @@ fun DuelFriendFlow(
 
 private const val LIVE_CALL_TIMEOUT_MS = 5_000L
 
-/** L'attente et le compte à rebours : l'ami en haut, le rond central, moi en bas. */
+/** L'attente et le compte à rebours, sur fond blanc : l'ami en haut, le rond central, moi en bas. */
 @Composable
 private fun Lobby(
     stage: FriendStage,
@@ -426,7 +418,6 @@ private fun Lobby(
     countdown: Int?,
     failureKey: String,
     canCancel: Boolean,
-    league: app.rork.sophia.domain.DuelLeague?,
     language: AppLanguage,
     onCancel: () -> Unit,
     onClose: () -> Unit,
@@ -434,16 +425,8 @@ private fun Lobby(
     val context = LocalContext.current
     fun text(key: String, vararg args: Any): String = StringStore.text(context, key, language, *args)
     val friendHandle = friend?.handle ?: fallbackFriendHandle ?: ""
-    Box(modifier = Modifier.fillMaxSize()) {
-        DuelLeagueBackdrop(league = league, modifier = Modifier.fillMaxSize().duelUnderSystemBars())
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .duelUnderSystemBars()
-                .background(
-                    Brush.verticalGradient(listOf(DuelPalette.night.copy(alpha = 0.72f), DuelPalette.night.copy(alpha = 0.9f))),
-                ),
-        )
+    val myHandle = me?.handle ?: player.handle
+    Box(modifier = Modifier.fillMaxSize().background(DS.canvas)) {
         Column(
             modifier = Modifier
                 .align(Alignment.Center)
@@ -456,31 +439,42 @@ private fun Lobby(
             Text(
                 text = text("duel.friend.title").uppercaseIn(language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.ExtraBold,
                 fontSize = 12.sp,
-                letterSpacing = 1.6.sp,
-                color = DuelPalette.saffron,
-                modifier = Modifier.padding(top = 18.dp),
+                letterSpacing = 1.2.sp,
+                color = DS.accent,
+                modifier = Modifier.padding(top = 20.dp),
             )
-            Spacer(Modifier.weight(1f))
-            LobbyCard(
-                who = friend,
-                handle = friendHandle,
-                avatarId = friend?.avatarId ?: fallbackFriendAvatar,
-                ring = DuelPalette.coral,
-                online = friendOnline && stage == FriendStage.Waiting,
-                language = language,
-            )
+            Spacer(Modifier.weight(1f).heightIn(min = 12.dp))
+            Box(contentAlignment = Alignment.TopCenter) {
+                // Le défi est parti : des ondes autour de l'ami tant qu'il n'a pas répondu.
+                androidx.compose.animation.AnimatedVisibility(
+                    visible = stage == FriendStage.Waiting && canCancel,
+                    enter = fadeIn(tween(200)),
+                    exit = fadeOut(tween(200)),
+                ) {
+                    DuelPulseRings(color = DS.accent, modifier = Modifier.size(104.dp))
+                }
+                DuelVersusCard(
+                    avatarId = friend?.avatarId ?: fallbackFriendAvatar,
+                    initial = friendHandle.take(1).uppercase(java.util.Locale.ROOT),
+                    handle = friendHandle,
+                    language = language,
+                    trophies = friend?.trophies,
+                    ring = DuelPalette.saffron,
+                    online = friendOnline && stage == FriendStage.Waiting,
+                )
+            }
             LobbyBadge(stage = stage, waitingDeadline = waitingDeadline, countdown = countdown)
-            LobbyCard(
-                who = me,
-                handle = me?.handle ?: player.handle,
+            DuelVersusCard(
                 avatarId = me?.avatarId ?: player.avatarId,
-                ring = DuelPalette.saffron,
-                online = false,
+                initial = myHandle.take(1).uppercase(java.util.Locale.ROOT),
+                handle = myHandle,
                 language = language,
+                trophies = me?.trophies,
+                ring = DS.accent,
             )
-            Spacer(Modifier.weight(1f))
+            Spacer(Modifier.weight(1f).heightIn(min = 12.dp))
 
             Column(
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp).padding(bottom = 24.dp),
@@ -491,28 +485,23 @@ private fun Lobby(
                     // Invitation acceptée : la partie arrive, rien à attendre ni à annuler.
                     stage == FriendStage.Waiting && !canCancel -> Spacer(Modifier.heightIn(min = 40.dp))
                     stage == FriendStage.Waiting -> {
-                        Text(
-                            text = text("duel.game.waiting", friendHandle),
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.SemiBold,
-                            fontSize = 15.sp,
-                            color = Color.White.copy(alpha = 0.8f),
-                            textAlign = TextAlign.Center,
-                        )
-                        Text(
-                            text = text("duel.friend.cancel"),
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.SemiBold,
-                            fontSize = 17.sp,
-                            color = Color.White,
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .softPress(onClick = onCancel)
-                                .clip(CircleShape)
-                                .background(Color.White.copy(alpha = 0.16f))
-                                .padding(vertical = 15.dp),
-                        )
+                        androidx.compose.foundation.layout.Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        ) {
+                            Text(
+                                text = text("duel.game.waiting", friendHandle),
+                                fontFamily = PlusJakartaSans,
+                                fontWeight = FontWeight.SemiBold,
+                                fontSize = 15.sp,
+                                color = DS.inkSecondary,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.weight(1f, fill = false),
+                            )
+                            DuelWaitingDots(color = DS.inkSecondary, size = 5.dp)
+                        }
+                        // Le bouton secondaire vibre de lui-même.
+                        SophiaSecondaryButton(text = text("duel.friend.cancel"), onClick = onCancel)
                     }
                     stage == FriendStage.Failed -> {
                         Text(
@@ -521,7 +510,7 @@ private fun Lobby(
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 17.sp,
                             lineHeight = 23.sp,
-                            color = Color.White,
+                            color = DS.ink,
                             textAlign = TextAlign.Center,
                         )
                         DuelPlayButton(text = text("common.close"), onClick = onClose)
@@ -531,7 +520,7 @@ private fun Lobby(
                         fontFamily = PlusJakartaSans,
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
-                        color = Color.White.copy(alpha = 0.85f),
+                        color = DS.accent,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.heightIn(min = 40.dp),
                     )
@@ -541,39 +530,9 @@ private fun Lobby(
     }
 }
 
-@Composable
-private fun LobbyCard(
-    who: DuelOpponent?,
-    handle: String,
-    avatarId: String?,
-    ring: Color,
-    online: Boolean,
-    language: AppLanguage,
-) {
-    Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Box {
-            DuelAvatar(
-                avatarId = avatarId,
-                initial = handle.take(1).uppercase(java.util.Locale.ROOT),
-                size = 104.dp,
-                ring = ring,
-                ringWidth = 4.dp,
-            )
-            if (online) {
-                DuelOnlineDot(size = 20.dp, modifier = Modifier.align(Alignment.BottomEnd).offset(x = (-4).dp, y = (-4).dp))
-            }
-        }
-        Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(6.dp)) {
-            DuelFitText(text = "@$handle", fontSize = 22.sp, color = Color.White)
-            if (who != null) DuelTrophyCount(value = who.trophies, language = language, size = 16.dp, color = Color.White)
-        }
-    }
-}
-
 /** Le rond central : les secondes qui restent à l'ami pour répondre, puis 3, 2, 1. */
 @Composable
 private fun LobbyBadge(stage: FriendStage, waitingDeadline: Long, countdown: Int?) {
-    val failed = stage == FriendStage.Failed
     val scale by animateFloatAsState(
         targetValue = if (stage == FriendStage.Countdown) 1.12f else 1f,
         animationSpec = duelSpring(response = 0.45f, damping = 0.6f),
@@ -587,37 +546,19 @@ private fun LobbyBadge(stage: FriendStage, waitingDeadline: Long, countdown: Int
             delay(250)
         }
     }
-    Box(
+    val waiting = countdown == null && stage == FriendStage.Waiting && waitingDeadline > 0L
+    DuelVersusBadge(
+        number = countdown ?: if (waiting) secondsLeft else null,
+        // Un compte à rebours arrive en grand ; les secondes d'attente changent sur place.
+        counting = countdown != null,
+        muted = stage == FriendStage.Failed,
         modifier = Modifier
             .padding(vertical = 26.dp)
-            .size(72.dp)
             .graphicsLayer {
                 scaleX = scale
                 scaleY = scale
-            }
-            .clip(CircleShape)
-            .background(if (failed) Color.White.copy(alpha = 0.2f) else DuelPalette.saffron),
-        contentAlignment = Alignment.Center,
-    ) {
-        val label = when {
-            countdown != null -> countdown.toString()
-            stage == FriendStage.Waiting && waitingDeadline > 0L -> secondsLeft.toString()
-            else -> "VS"
-        }
-        Text(
-            text = label,
-            fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.ExtraBold,
-            fontSize = when {
-                countdown != null -> 38.sp
-                label == "VS" -> 24.sp
-                else -> 30.sp
             },
-            style = DuelTabularDigits,
-            color = if (failed) Color.White else DuelPalette.night,
-            maxLines = 1,
-        )
-    }
+    )
 }
 
 /**
@@ -639,8 +580,9 @@ object DuelFriendPresenter {
 }
 
 /**
- * Une invitation reçue, en bandeau par-dessus l'écran en cours : qui défie, puis Refuser et
- * Accepter. Elle disparaît d'elle-même quand elle expire (`DuelLiveService.incoming`).
+ * Une invitation reçue, en bandeau par-dessus l'écran en cours : qui défie, ses trophées, le
+ * temps qui reste pour répondre, puis Refuser et Accepter. Elle disparaît d'elle-même quand
+ * elle expire (`DuelLiveService.incoming`).
  */
 @Composable
 fun DuelInviteBanner(language: AppLanguage, modifier: Modifier = Modifier) {
@@ -661,20 +603,18 @@ fun DuelInviteBanner(language: AppLanguage, modifier: Modifier = Modifier) {
     var answering by remember { mutableStateOf(false) }
     androidx.compose.animation.AnimatedVisibility(
         visible = invite != null && DuelFriendPresenter.entry == null,
-        enter = slideInVertically(tween(350, easing = FastOutSlowInEasing)) { -it } + fadeIn(),
+        enter = slideInVertically(duelSpring(response = 0.5f, damping = 0.78f)) { -it } + fadeIn(),
         exit = androidx.compose.animation.slideOutVertically(tween(250)) { -it } + fadeOut(),
         modifier = modifier,
     ) {
         val current = shown ?: return@AnimatedVisibility
-        val shape = androidx.compose.foundation.shape.RoundedCornerShape(22.dp)
         Column(
             modifier = Modifier
                 .statusBarsPadding()
                 .padding(horizontal = 12.dp, vertical = 8.dp)
                 .widthIn(max = 560.dp)
                 .fillMaxWidth()
-                .clip(shape)
-                .background(DuelPalette.night)
+                .sophiaCard()
                 .pointerInput(Unit) {}
                 .padding(14.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -686,38 +626,53 @@ fun DuelInviteBanner(language: AppLanguage, modifier: Modifier = Modifier) {
                 DuelAvatar(
                     avatarId = current.from.avatarId,
                     initial = current.from.initial,
-                    size = 44.dp,
+                    size = 46.dp,
                     ring = DuelPalette.saffron,
-                    ringWidth = 2.dp,
+                    ringWidth = 3.dp,
                 )
                 Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                    DuelFitText(text = "@${current.from.handle}", fontSize = 17.sp, color = Color.White)
+                    DuelFitText(text = "@${current.from.handle}", fontSize = 17.sp, color = DS.ink, fontWeight = FontWeight.Bold)
                     Text(
                         text = StringStore.text(context, "duel.invite.banner", language),
                         fontFamily = PlusJakartaSans,
                         fontWeight = FontWeight.Medium,
                         fontSize = 14.sp,
-                        color = Color.White.copy(alpha = 0.8f),
+                        color = DS.inkSecondary,
                     )
                 }
+                DuelTrophyCount(value = current.from.trophies, language = language, size = 14.dp, color = DS.ink)
             }
+
+            InviteCountdownBar(
+                inviteId = current.inviteId,
+                lifetimeMs = current.expiresInMs,
+                deadlineMs = { service.incomingDeadlineMs },
+            )
+
             androidx.compose.foundation.layout.Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                val buttonShape = RoundedCornerShape(DS.Radius.small)
                 Text(
                     text = StringStore.text(context, "friends.requests.decline", language),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     fontSize = 15.sp,
-                    color = Color.White,
+                    color = DS.ink,
                     textAlign = TextAlign.Center,
                     maxLines = 1,
                     modifier = Modifier
                         .weight(1f)
-                        .softPress(onClick = {
-                            view.duelHaptic(DuelHaptic.Tap)
-                            service.decline(current)
-                        })
-                        .clip(CircleShape)
-                        .background(Color.White.copy(alpha = 0.16f))
+                        // La réponse vibre déjà (`DuelHaptic.Tap`).
+                        .pressable(
+                            onClick = {
+                                view.duelHaptic(DuelHaptic.Tap)
+                                service.decline(current)
+                            },
+                            scaleDown = 0.96f,
+                            haptic = false,
+                        )
+                        .clip(buttonShape)
+                        .background(DS.surface)
+                        .border(1.5.dp, DS.hairline, buttonShape)
                         .padding(vertical = 12.dp),
                 )
                 Text(
@@ -725,27 +680,51 @@ fun DuelInviteBanner(language: AppLanguage, modifier: Modifier = Modifier) {
                     fontFamily = PlusJakartaSans,
                     fontWeight = FontWeight.Bold,
                     fontSize = 15.sp,
-                    color = DuelPalette.night,
+                    color = Color.White,
                     textAlign = TextAlign.Center,
                     maxLines = 1,
                     modifier = Modifier
                         .weight(1f)
-                        .softPress(onClick = {
-                            if (answering) return@softPress
-                            answering = true
-                            view.duelHaptic(DuelHaptic.CountdownFinal)
-                            scope.launch {
-                                // Acceptée et encore valable : la partie s'ouvre par-dessus l'écran en cours.
-                                val start = service.respond(current, accept = true)
-                                answering = false
-                                if (start != null) DuelFriendPresenter.present(DuelFriendEntry.Incoming(start))
-                            }
-                        })
-                        .clip(CircleShape)
-                        .background(DuelPalette.saffron)
+                        // L'acceptation vibre déjà (`DuelHaptic.CountdownFinal`).
+                        .pressable(
+                            onClick = {
+                                if (!answering) {
+                                    answering = true
+                                    view.duelHaptic(DuelHaptic.CountdownFinal)
+                                    scope.launch {
+                                        // Acceptée et encore valable : la partie s'ouvre par-dessus l'écran en cours.
+                                        val start = service.respond(current, accept = true)
+                                        answering = false
+                                        if (start != null) DuelFriendPresenter.present(DuelFriendEntry.Incoming(start))
+                                    }
+                                }
+                            },
+                            scaleDown = 0.96f,
+                            haptic = false,
+                        )
+                        .clip(buttonShape)
+                        .background(DS.accent)
                         .padding(vertical = 12.dp),
                 )
             }
         }
     }
+}
+
+/**
+ * Le temps qui reste pour répondre à une invitation, en barre qui se vide. À part, pour que
+ * seule cette jauge se recompose à chaque image. [deadlineMs] est l'instant où l'invitation
+ * tombe (horloge murale de l'appareil, comme `DuelLiveService.incomingDeadlineMs`).
+ */
+@Composable
+private fun InviteCountdownBar(inviteId: String, lifetimeMs: Int, deadlineMs: () -> Long) {
+    var remaining by remember(inviteId) { mutableFloatStateOf(1f) }
+    LaunchedEffect(inviteId) {
+        val window = maxOf(lifetimeMs, 1_000).toFloat()
+        while (true) {
+            remaining = ((deadlineMs() - System.currentTimeMillis()) / window).coerceIn(0f, 1f)
+            withFrameNanos { }
+        }
+    }
+    DuelProgressBar(progress = remaining, tint = DS.accent, track = DS.accentTint, height = 5.dp)
 }

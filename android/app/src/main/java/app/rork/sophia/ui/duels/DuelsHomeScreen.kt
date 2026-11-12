@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -53,7 +54,6 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
@@ -80,11 +80,14 @@ import app.rork.sophia.domain.DuelHome
 import app.rork.sophia.domain.DuelLeaderboardEntry
 import app.rork.sophia.domain.DuelProfile
 import app.rork.sophia.domain.DuelRecentMatch
+import app.rork.sophia.ui.components.DSCountUp
+import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.components.ScreenTitle
-import app.rork.sophia.ui.components.SectionLabel
 import app.rork.sophia.ui.components.SophiaPrimaryButton
 import app.rork.sophia.ui.components.SophiaSecondaryButton
-import app.rork.sophia.ui.components.softPress
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.newgen.AvatarCircle
 import app.rork.sophia.ui.theme.DS
@@ -124,9 +127,9 @@ import androidx.compose.ui.semantics.contentDescription
 private const val LEADERBOARD_REFRESH_MS = 15_000L
 
 /**
- * L'onglet Duels : ma ligue et mes trophées, le bouton pour chercher un adversaire, mes
- * statistiques, le classement des amis et mes dernières parties. Sans compte, il propose de
- * se connecter : trophées et parties sont gardés côté serveur.
+ * L'onglet Duels (maquette AEr22) : ma ligue et mes trophées, le bouton pour chercher un
+ * adversaire, mes statistiques, le classement des amis et mes dernières parties. Sans compte,
+ * il propose de se connecter : trophées et parties sont gardés côté serveur.
  *
  * [isActive] : l'onglet est à l'écran (il reste monté quand on en sort) ; [flowShown] : une
  * partie est en cours par-dessus, l'accueil ne se recharge pas pendant ce temps ; [onPlay]
@@ -385,10 +388,8 @@ fun DuelsHomeScreen(
                 }
             homeFailed -> DuelsLoadFailed(
                 language = language,
-                onRetry = {
-                    view.duelHaptic(DuelHaptic.Tap)
-                    scope.launch { refresh() }
-                },
+                // Le bouton secondaire vibre de lui-même.
+                onRetry = { scope.launch { refresh() } },
             )
             else -> DuelsLoading()
         }
@@ -415,10 +416,10 @@ private fun DuelsContent(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(scrollState)
-            .padding(horizontal = 20.dp)
+            .padding(horizontal = 24.dp)
             .padding(top = 12.dp, bottom = 28.dp),
-        verticalArrangement = Arrangement.spacedBy(22.dp),
     ) {
+        // Le titre de l'onglet et, à droite, les trophées du joueur dans leur pastille.
         Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             ScreenTitle(
                 text = StringStore.text(context, "tab.duels", language),
@@ -427,13 +428,12 @@ private fun DuelsContent(
             DuelTrophyCount(
                 value = heroGain?.trophies ?: home.profile.trophies,
                 language = language,
-                size = 17.dp,
+                size = 14.dp,
                 color = DS.ink,
                 modifier = Modifier
                     .clip(CircleShape)
-                    .background(DS.surface)
-                    .border(1.dp, DS.hairline, CircleShape)
-                    .padding(horizontal = 14.dp, vertical = 8.dp),
+                    .background(DS.accentTint)
+                    .padding(horizontal = 12.dp, vertical = 8.dp),
             )
         }
 
@@ -444,12 +444,31 @@ private fun DuelsContent(
             pulse = heroPulse,
             showGainChip = showGainChip,
             onClick = onOpenLeagues,
+            modifier = Modifier.padding(top = 14.dp).dsStagger(0),
         )
-        PlayButton(language = language, pulsing = pulsing, onClick = onPlay)
-        StatsSection(profile = home.profile, language = language)
-        LeaderboardSection(home = home, leaderboard = leaderboard, language = language)
+        PlayButton(
+            language = language,
+            pulsing = pulsing,
+            onClick = onPlay,
+            modifier = Modifier.padding(top = 14.dp).dsStagger(1),
+        )
+        StatsSection(
+            profile = home.profile,
+            language = language,
+            modifier = Modifier.padding(top = 24.dp).dsStagger(2),
+        )
+        LeaderboardSection(
+            home = home,
+            leaderboard = leaderboard,
+            language = language,
+            modifier = Modifier.padding(top = 24.dp).dsStagger(3),
+        )
         if (home.recent.isNotEmpty()) {
-            RecentSection(matches = home.recent, language = language)
+            RecentSection(
+                matches = home.recent,
+                language = language,
+                modifier = Modifier.padding(top = 24.dp).dsStagger(4),
+            )
         }
     }
 }
@@ -463,6 +482,7 @@ private fun LeagueHero(
     pulse: Boolean,
     showGainChip: Boolean,
     onClick: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
     val trophies = gain?.trophies ?: home.profile.trophies
@@ -482,22 +502,17 @@ private fun LeagueHero(
         label = "leaguePulse",
     )
     val pulseBorder by animateFloatAsState(targetValue = if (pulse) 1f else 0f, label = "leaguePulseBorder")
-    val shape = RoundedCornerShape(28.dp)
+    val shape = DS.cardShape
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .height(280.dp)
+            .height(210.dp)
             .graphicsLayer {
                 scaleX = pulseScale
                 scaleY = pulseScale
             }
-            .softPress(onClick = onClick)
-            .shadow(
-                elevation = 8.dp,
-                shape = shape,
-                ambientColor = Color.Black.copy(alpha = 0.28f),
-                spotColor = Color.Black.copy(alpha = 0.24f),
-            )
+            // L'ouverture de la route vibre déjà (`DuelHaptic.Tap`).
+            .pressable(onClick = onClick, scaleDown = 0.98f, haptic = false)
             .clip(shape),
     ) {
         DuelLeagueBackdrop(league = league, modifier = Modifier.matchParentSize())
@@ -507,36 +522,40 @@ private fun LeagueHero(
                 .background(
                     Brush.verticalGradient(
                         listOf(
-                            Color.Transparent,
-                            DuelPalette.night.copy(alpha = 0.25f),
-                            DuelPalette.night.copy(alpha = 0.88f),
+                            DuelTheme.scrim.copy(alpha = 0.32f),
+                            DuelTheme.scrim.copy(alpha = 0.5f),
+                            DuelTheme.scrim.copy(alpha = 0.82f),
                         ),
                     ),
                 ),
         )
         Column(
-            modifier = Modifier.align(Alignment.BottomStart).fillMaxWidth().padding(18.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
+            modifier = Modifier
+                .align(Alignment.BottomStart)
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 14.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
         ) {
             Text(
                 text = StringStore.text(context, "duel.league.position", language, league?.position ?: 1)
                     .uppercaseInApp(),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.ExtraBold,
                 fontSize = 12.sp,
-                letterSpacing = 1.4.sp,
-                color = DuelPalette.saffron,
+                letterSpacing = 0.8.sp,
+                color = Color.White,
                 maxLines = 1,
             )
             DuelFitText(
                 text = DuelFormat.leagueName(context, league, language),
-                fontSize = 30.sp,
+                fontSize = 24.sp,
                 color = Color.White,
                 modifier = Modifier.fillMaxWidth(),
             )
             // Les trophées du joueur à gauche, le seuil de la ligue suivante à droite.
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                DuelTrophyCount(value = trophies, language = language, size = 17.dp, color = Color.White)
+                DuelTrophyCount(value = trophies, language = language, size = 14.dp, color = Color.White)
                 AnimatedVisibility(
                     visible = showGainChip && gained > 0,
                     enter = scaleIn(initialScale = 0.3f, animationSpec = duelSpring(response = 0.4f, damping = 0.55f)) + fadeIn(),
@@ -546,26 +565,22 @@ private fun LeagueHero(
                         text = "+$gained",
                         fontFamily = PlusJakartaSans,
                         fontWeight = FontWeight.ExtraBold,
-                        fontSize = 14.sp,
+                        fontSize = 13.sp,
+                        style = DuelTabularDigits,
                         color = DuelPalette.night,
                         maxLines = 1,
                         modifier = Modifier
                             .clip(CircleShape)
                             .background(DuelPalette.saffron)
-                            .padding(horizontal = 9.dp, vertical = 3.dp),
+                            .padding(horizontal = 8.dp, vertical = 2.dp),
                     )
                 }
                 Spacer(Modifier.weight(1f))
                 if (next != null) {
-                    DuelTrophyCount(
-                        value = next.minTrophies,
-                        language = language,
-                        size = 14.dp,
-                        color = Color.White.copy(alpha = 0.75f),
-                    )
+                    DuelTrophyCount(value = next.minTrophies, language = language, size = 13.dp, color = Color.White)
                 }
             }
-            DuelProgressBar(progress = progress)
+            DuelProgressBar(progress = progress, height = 8.dp)
             Text(
                 text = if (next != null) {
                     StringStore.text(
@@ -579,18 +594,21 @@ private fun LeagueHero(
                     StringStore.text(context, "duel.league.top", language)
                 },
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Medium,
                 fontSize = 13.sp,
-                color = Color.White.copy(alpha = 0.85f),
+                lineHeight = 17.sp,
+                color = DuelTheme.onArtSecondary,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
             )
         }
         Row(
             modifier = Modifier
                 .align(Alignment.TopEnd)
-                .padding(14.dp)
+                .padding(12.dp)
                 .clip(CircleShape)
-                .background(DuelPalette.night.copy(alpha = 0.55f))
-                .padding(start = 12.dp, end = 8.dp, top = 7.dp, bottom = 7.dp),
+                .background(Color.White.copy(alpha = 0.2f))
+                .padding(start = 10.dp, end = 6.dp, top = 6.dp, bottom = 6.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
@@ -622,7 +640,7 @@ private fun LeagueHero(
 private data class HeroGain(val trophies: Int, val league: DuelLeague?, val progress: Float, val delta: Int)
 
 @Composable
-private fun PlayButton(language: AppLanguage, pulsing: Boolean, onClick: () -> Unit) {
+private fun PlayButton(language: AppLanguage, pulsing: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier) {
     val context = LocalContext.current
     // Le bouton respire doucement pour appeler la touche. L'animation ne tourne que lorsque
     // l'onglet est à l'écran : il reste monté, elle redessinerait sans fin une page cachée.
@@ -636,7 +654,7 @@ private fun PlayButton(language: AppLanguage, pulsing: Boolean, onClick: () -> U
     } else {
         null
     }
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         DuelPlayButton(
             text = StringStore.text(context, "duel.play", language),
             onClick = onClick,
@@ -650,7 +668,7 @@ private fun PlayButton(language: AppLanguage, pulsing: Boolean, onClick: () -> U
         Text(
             text = StringStore.text(context, "duel.play.caption", language),
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.Medium,
+            fontWeight = FontWeight.Normal,
             fontSize = 13.sp,
             color = DS.inkSecondary,
             textAlign = TextAlign.Center,
@@ -666,35 +684,48 @@ private fun PlayButton(language: AppLanguage, pulsing: Boolean, onClick: () -> U
  * défaites en haut, les séries et le record de trophées en bas.
  */
 @Composable
-private fun StatsSection(profile: DuelProfile, language: AppLanguage) {
+private fun StatsSection(profile: DuelProfile, language: AppLanguage, modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        SectionLabel(text = StringStore.text(context, "duel.stats.title", language))
-        Column(modifier = Modifier.fillMaxWidth().sophiaCard()) {
+    val statValueStyle = DuelTabularDigits.copy(
+        fontFamily = PlusJakartaSans,
+        fontWeight = FontWeight.ExtraBold,
+        fontSize = 16.sp,
+    )
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        DuelSectionTitle(text = StringStore.text(context, "duel.stats.title", language))
+        Column(
+            modifier = Modifier.fillMaxWidth().sophiaCard().padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
             Row(
-                modifier = Modifier.padding(16.dp),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(18.dp),
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
             ) {
                 WinRateRing(profile = profile, language = language)
-                Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                        Text(
-                            text = profile.games.toString(),
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.ExtraBold,
-                            fontSize = 26.sp,
+                // « 12 Duels », puis la barre victoires / défaites et sa légende (ou l'invitation à jouer).
+                Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Row(
+                        modifier = Modifier.semantics(mergeDescendants = true) {},
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        DSCountUp(
+                            value = profile.games,
+                            durationMillis = 700,
+                            style = DuelTabularDigits.copy(
+                                fontFamily = PlusJakartaSans,
+                                fontWeight = FontWeight.ExtraBold,
+                                fontSize = 20.sp,
+                            ),
                             color = DS.ink,
-                            style = DuelTabularDigits,
-                            maxLines = 1,
+                            haptics = false,
                         )
                         DuelFitText(
                             text = StringStore.text(context, "duel.stats.games", language),
-                            fontSize = 15.sp,
-                            color = DS.inkSecondary,
-                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 20.sp,
+                            color = DS.ink,
                             minScale = 0.7f,
-                            modifier = Modifier.weight(1f).padding(bottom = 3.dp),
+                            modifier = Modifier.weight(1f),
                         )
                     }
                     if (profile.games > 0) {
@@ -716,8 +747,9 @@ private fun StatsSection(profile: DuelProfile, language: AppLanguage) {
                         Text(
                             text = StringStore.text(context, "duel.stats.empty", language),
                             fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.Medium,
+                            fontWeight = FontWeight.Normal,
                             fontSize = 13.sp,
+                            lineHeight = 18.sp,
                             color = DS.inkSecondary,
                         )
                     }
@@ -725,32 +757,39 @@ private fun StatsSection(profile: DuelProfile, language: AppLanguage) {
             }
             Hairline()
             Row(
-                modifier = Modifier.fillMaxWidth().padding(vertical = 14.dp),
+                modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.Top,
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
             ) {
                 StatCell(
                     icon = Icons.Filled.LocalFireDepartment,
-                    tint = DuelPalette.coral,
-                    value = profile.winStreak.toString(),
+                    tint = DuelPalette.saffron,
                     label = StringStore.text(context, "duel.stats.streak", language),
                     modifier = Modifier.weight(1f),
-                )
-                Box(modifier = Modifier.width(1.dp).height(44.dp).background(DS.hairline))
+                ) {
+                    DSCountUp(value = profile.winStreak, durationMillis = 600, style = statValueStyle, color = DS.ink, haptics = false)
+                }
                 StatCell(
                     icon = Icons.Filled.Bolt,
-                    tint = DuelPalette.saffron,
-                    value = profile.bestWinStreak.toString(),
+                    tint = DS.accent,
                     label = StringStore.text(context, "duel.stats.bestStreak", language),
                     modifier = Modifier.weight(1f),
-                )
-                Box(modifier = Modifier.width(1.dp).height(44.dp).background(DS.hairline))
+                ) {
+                    DSCountUp(value = profile.bestWinStreak, durationMillis = 600, style = statValueStyle, color = DS.ink, haptics = false)
+                }
                 StatCell(
                     icon = Icons.Filled.EmojiEvents,
                     tint = DuelPalette.saffron,
-                    value = DuelFormat.number(profile.bestTrophies, language),
                     label = StringStore.text(context, "duel.stats.best", language),
                     modifier = Modifier.weight(1f),
-                )
+                ) {
+                    Text(
+                        text = DuelFormat.number(profile.bestTrophies, language),
+                        style = statValueStyle,
+                        color = DS.ink,
+                        maxLines = 1,
+                    )
+                }
             }
         }
     }
@@ -768,14 +807,14 @@ private fun WinRateRing(profile: DuelProfile, language: AppLanguage) {
         animationSpec = tween(durationMillis = 900),
         label = "winRate",
     )
-    val trackColor = if (profile.games > 0) DS.danger.copy(alpha = 0.22f) else DS.hairline
+    val trackColor = if (profile.games > 0) DS.dangerTint else DS.accentTint
     val winColor = DS.success
     Box(
-        modifier = Modifier.size(100.dp).semantics(mergeDescendants = true) {},
+        modifier = Modifier.size(76.dp).semantics(mergeDescendants = true) {},
         contentAlignment = Alignment.Center,
     ) {
         Canvas(modifier = Modifier.matchParentSize()) {
-            val stroke = 9.dp.toPx()
+            val stroke = 7.dp.toPx()
             val inset = stroke / 2
             val arcSize = Size(size.width - stroke, size.height - stroke)
             drawArc(
@@ -800,20 +839,19 @@ private fun WinRateRing(profile: DuelProfile, language: AppLanguage) {
             }
         }
         Column(
-            modifier = Modifier.padding(horizontal = 14.dp),
+            modifier = Modifier.padding(horizontal = 12.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(1.dp),
         ) {
             DuelFitText(
                 text = profile.winRate?.let { "$it %" } ?: "–",
-                fontSize = 20.sp,
+                fontSize = 18.sp,
                 color = DS.ink,
             )
             DuelFitText(
                 text = StringStore.text(context, "duel.stats.winRate", language),
-                fontSize = 11.sp,
-                color = DS.inkTertiary,
-                fontWeight = FontWeight.SemiBold,
+                fontSize = 10.sp,
+                color = DS.inkSecondary,
+                fontWeight = FontWeight.Normal,
                 minScale = 0.6f,
             )
         }
@@ -865,32 +903,29 @@ private fun SplitLegend(color: Color, value: Int, label: String, modifier: Modif
     }
 }
 
+/** Une case du bas de la carte : le pictogramme, la valeur, puis son libellé. */
 @Composable
-private fun StatCell(icon: ImageVector, tint: Color, value: String, label: String, modifier: Modifier = Modifier) {
+private fun StatCell(
+    icon: ImageVector,
+    tint: Color,
+    label: String,
+    modifier: Modifier = Modifier,
+    value: @Composable () -> Unit,
+) {
     Column(
-        modifier = modifier.padding(horizontal = 6.dp).semantics(mergeDescendants = true) {},
+        modifier = modifier.semantics(mergeDescendants = true) {},
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(4.dp),
+        verticalArrangement = Arrangement.spacedBy(3.dp),
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(5.dp)) {
-            Icon(icon, contentDescription = null, tint = tint, modifier = Modifier.size(15.dp))
-            Text(
-                text = value,
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 19.sp,
-                color = DS.ink,
-                style = DuelTabularDigits,
-                maxLines = 1,
-            )
-        }
+        Icon(icon, contentDescription = null, tint = tint, modifier = Modifier.size(20.dp))
+        value()
         Text(
             text = label,
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.SemiBold,
+            fontWeight = FontWeight.Normal,
             fontSize = 11.sp,
             lineHeight = 14.sp,
-            color = DS.inkTertiary,
+            color = DS.inkSecondary,
             textAlign = TextAlign.Center,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
@@ -901,25 +936,33 @@ private fun StatCell(icon: ImageVector, tint: Color, value: String, label: Strin
 // ---------------------------------------------------------------- classement entre amis
 
 @Composable
-private fun LeaderboardSection(home: DuelHome, leaderboard: List<DuelLeaderboardEntry>, language: AppLanguage) {
+private fun LeaderboardSection(
+    home: DuelHome,
+    leaderboard: List<DuelLeaderboardEntry>,
+    language: AppLanguage,
+    modifier: Modifier = Modifier,
+) {
     val context = LocalContext.current
-    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        SectionLabel(text = StringStore.text(context, "duel.friends.title", language))
-        Column(modifier = Modifier.fillMaxWidth().sophiaCard()) {
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        DuelSectionTitle(text = StringStore.text(context, "duel.friends.title", language))
+        Column(
+            modifier = Modifier.fillMaxWidth().sophiaCard().padding(8.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
             // Le serveur renvoie toujours ma ligne : seul, c'est encore « pas d'amis ».
             if (leaderboard.none { !it.isMe }) {
                 Text(
                     text = StringStore.text(context, "duel.friends.empty", language),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Medium,
-                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 13.sp,
+                    lineHeight = 18.sp,
                     color = DS.inkSecondary,
-                    modifier = Modifier.fillMaxWidth().padding(16.dp),
+                    modifier = Modifier.fillMaxWidth().padding(8.dp),
                 )
             } else {
                 leaderboard.forEachIndexed { index, entry ->
                     key(entry.userId) {
-                        if (index > 0) Hairline()
                         LeaderboardRow(rank = index + 1, entry = entry, home = home, language = language)
                     }
                 }
@@ -934,28 +977,29 @@ private fun LeaderboardRow(rank: Int, entry: DuelLeaderboardEntry, home: DuelHom
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(if (entry.isMe) DS.accentTint.copy(alpha = 0.6f) else Color.Transparent)
-            .padding(horizontal = 16.dp, vertical = 12.dp)
+            .background(if (entry.isMe) DS.accentTint else Color.Transparent, RoundedCornerShape(10.dp))
+            .padding(horizontal = 8.dp, vertical = 10.dp)
             .semantics(mergeDescendants = true) {},
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
     ) {
         Text(
             text = rank.toString(),
             fontFamily = PlusJakartaSans,
-            fontWeight = FontWeight.Bold,
-            fontSize = 15.sp,
-            color = if (rank == 1) DuelPalette.saffron else DS.inkTertiary,
+            fontWeight = FontWeight.ExtraBold,
+            fontSize = 14.sp,
+            style = DuelTabularDigits,
+            color = if (rank == 1) DuelPalette.saffron else DS.inkSecondary,
             maxLines = 1,
-            modifier = Modifier.width(22.dp),
+            modifier = Modifier.width(20.dp),
         )
         Box {
-            AvatarCircle(avatarId = entry.avatarId, initial = entry.handle.take(1).uppercaseInApp(), size = 38.dp)
+            AvatarCircle(avatarId = entry.avatarId, initial = entry.handle.take(1).uppercaseInApp(), size = 36.dp)
             if (entry.online) {
                 DuelOnlineDot(size = 12.dp, modifier = Modifier.align(Alignment.BottomEnd).offset(x = 2.dp, y = 2.dp))
             }
         }
-        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(1.dp)) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
@@ -963,8 +1007,8 @@ private fun LeaderboardRow(rank: Int, entry: DuelLeaderboardEntry, home: DuelHom
                 Text(
                     text = "@${entry.handle}",
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 14.sp,
                     color = DS.ink,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
@@ -974,9 +1018,9 @@ private fun LeaderboardRow(rank: Int, entry: DuelLeaderboardEntry, home: DuelHom
                     Text(
                         text = StringStore.text(context, "duel.you", language),
                         fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
-                        color = DS.accentSoft,
+                        color = DS.accent,
                         maxLines = 1,
                     )
                 }
@@ -985,33 +1029,38 @@ private fun LeaderboardRow(rank: Int, entry: DuelLeaderboardEntry, home: DuelHom
                 Text(
                     text = DuelFormat.leagueName(context, league, language),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Medium,
+                    fontWeight = FontWeight.Normal,
                     fontSize = 12.sp,
-                    color = DS.inkTertiary,
+                    color = DS.inkSecondary,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                 )
             }
         }
-        DuelTrophyCount(value = entry.trophies, language = language, size = 15.dp, color = DS.ink)
+        DuelTrophyCount(value = entry.trophies, language = language, size = 14.dp, color = DS.ink)
         // Défier cet ami en duel (aucun trophée en jeu), s'il a les duels.
         if (!entry.isMe && entry.canChallenge) {
             val view = LocalView.current
             Box(
                 modifier = Modifier
-                    .size(36.dp)
-                    .softPress(onClick = {
-                        view.duelHaptic(DuelHaptic.CountdownFinal)
-                        DuelFriendPresenter.present(
-                            DuelFriendEntry.Challenge(userId = entry.userId, handle = entry.handle, avatarId = entry.avatarId),
-                        )
-                    })
+                    .size(44.dp)
+                    // Le lancement du défi vibre déjà (`DuelHaptic.CountdownFinal`).
+                    .pressable(
+                        onClick = {
+                            view.duelHaptic(DuelHaptic.CountdownFinal)
+                            DuelFriendPresenter.present(
+                                DuelFriendEntry.Challenge(userId = entry.userId, handle = entry.handle, avatarId = entry.avatarId),
+                            )
+                        },
+                        scaleDown = 0.92f,
+                        haptic = false,
+                    )
                     .clip(CircleShape)
                     .background(DuelPalette.saffron)
                     .semantics { contentDescription = StringStore.text(context, "duel.friend.challenge", language) },
                 contentAlignment = Alignment.Center,
             ) {
-                Icon(Icons.Filled.Bolt, contentDescription = null, tint = DuelPalette.night, modifier = Modifier.size(18.dp))
+                Icon(Icons.Filled.Bolt, contentDescription = null, tint = DuelPalette.night, modifier = Modifier.size(20.dp))
             }
         }
     }
@@ -1027,16 +1076,22 @@ private const val RECENT_PAGE = 5
  * serveur en garde dix) ; une fois tout montré, le bouton replie la liste.
  */
 @Composable
-private fun RecentSection(matches: List<DuelRecentMatch>, language: AppLanguage) {
+private fun RecentSection(matches: List<DuelRecentMatch>, language: AppLanguage, modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val view = LocalView.current
     var shownCount by rememberSaveable { mutableIntStateOf(RECENT_PAGE) }
     val shown = matches.take(maxOf(shownCount, RECENT_PAGE))
     val canExpand = shown.size < matches.size
     val canCollapse = !canExpand && matches.size > RECENT_PAGE
-    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        SectionLabel(text = StringStore.text(context, "duel.recent.title", language))
-        Column(modifier = Modifier.fillMaxWidth().sophiaCard().animateContentSize()) {
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        DuelSectionTitle(text = StringStore.text(context, "duel.recent.title", language))
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .sophiaCard()
+                .animateContentSize(DSMotion.snappy())
+                .padding(horizontal = 16.dp, vertical = 2.dp),
+        ) {
             shown.forEachIndexed { index, match ->
                 key(match.matchId) {
                     if (index > 0) Hairline()
@@ -1048,26 +1103,31 @@ private fun RecentSection(matches: List<DuelRecentMatch>, language: AppLanguage)
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .softPress(onClick = {
-                            view.duelHaptic(DuelHaptic.Tap)
-                            shownCount = if (canExpand) shown.size + RECENT_PAGE else RECENT_PAGE
-                        })
-                        .padding(vertical = 13.dp),
+                        // « Voir plus » vibre déjà (`DuelHaptic.Tap`).
+                        .pressable(
+                            onClick = {
+                                view.duelHaptic(DuelHaptic.Tap)
+                                shownCount = if (canExpand) shown.size + RECENT_PAGE else RECENT_PAGE
+                            },
+                            scaleDown = 0.98f,
+                            haptic = false,
+                        )
+                        .heightIn(min = 40.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally),
                 ) {
                     Text(
                         text = StringStore.text(context, if (canExpand) "duel.recent.more" else "duel.recent.less", language),
                         fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 15.sp,
-                        color = DS.accentSoft,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp,
+                        color = DS.accent,
                         maxLines = 1,
                     )
                     Icon(
                         imageVector = if (canExpand) Icons.Filled.KeyboardArrowDown else Icons.Filled.KeyboardArrowUp,
                         contentDescription = null,
-                        tint = DS.accentSoft,
+                        tint = DS.accent,
                         modifier = Modifier.size(18.dp),
                     )
                 }
@@ -1089,18 +1149,18 @@ private fun RecentRow(match: DuelRecentMatch, language: AppLanguage) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp)
+            .padding(vertical = 10.dp)
             .semantics(mergeDescendants = true) {},
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
     ) {
-        AvatarCircle(avatarId = match.opponent.avatarId, initial = match.opponent.initial, size = 38.dp)
-        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+        AvatarCircle(avatarId = match.opponent.avatarId, initial = match.opponent.initial, size = 36.dp)
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(1.dp)) {
             Text(
                 text = "@${match.opponent.handle} ${match.opponent.flag}".trim(),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 15.sp,
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp,
                 color = DS.ink,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
@@ -1108,8 +1168,8 @@ private fun RecentRow(match: DuelRecentMatch, language: AppLanguage) {
             Text(
                 text = if (match.abandoned) outcome else "$outcome · ${match.playerScore} – ${match.opponentScore}",
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 12.sp,
+                fontWeight = FontWeight.Bold,
+                fontSize = 13.sp,
                 color = if (match.won) DS.success else DS.danger,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
@@ -1119,8 +1179,9 @@ private fun RecentRow(match: DuelRecentMatch, language: AppLanguage) {
             Text(
                 text = delta,
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Bold,
-                fontSize = 15.sp,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 14.sp,
+                style = DuelTabularDigits,
                 color = when {
                     match.trophiesDelta > 0 -> DS.success
                     match.trophiesDelta < 0 -> DS.danger
@@ -1150,7 +1211,6 @@ private fun DuelsLoading() {
 @Composable
 private fun DuelsSignedOut(language: AppLanguage, signingIn: Boolean, error: String?, onSignIn: () -> Unit) {
     val context = LocalContext.current
-    val shape = RoundedCornerShape(40.dp)
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -1165,29 +1225,28 @@ private fun DuelsSignedOut(language: AppLanguage, signingIn: Boolean, error: Str
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier
+                .dsPopIn()
                 .size(168.dp)
-                .shadow(
-                    elevation = 8.dp,
-                    shape = shape,
-                    ambientColor = Color.Black.copy(alpha = 0.28f),
-                    spotColor = Color.Black.copy(alpha = 0.24f),
-                )
-                .clip(shape),
+                .clip(RoundedCornerShape(40.dp)),
         )
-        Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        Column(
+            modifier = Modifier.dsStagger(1),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
             Text(
                 text = StringStore.text(context, "duel.signedOut.title", language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 28.sp,
-                lineHeight = 34.sp,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 26.sp,
+                lineHeight = 32.sp,
                 color = DS.ink,
                 textAlign = TextAlign.Center,
             )
             Text(
                 text = StringStore.text(context, "duel.signedOut.body", language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Medium,
+                fontWeight = FontWeight.Normal,
                 fontSize = 17.sp,
                 lineHeight = 24.sp,
                 color = DS.inkSecondary,
@@ -1199,7 +1258,7 @@ private fun DuelsSignedOut(language: AppLanguage, signingIn: Boolean, error: Str
             text = StringStore.text(context, "auth.continueWithGoogle", language),
             onClick = onSignIn,
             enabled = !signingIn,
-            modifier = Modifier.padding(top = 6.dp).widthIn(max = 420.dp),
+            modifier = Modifier.padding(top = 6.dp).widthIn(max = 420.dp).dsStagger(2),
         )
         if (error != null) {
             Text(
@@ -1232,6 +1291,7 @@ private fun DuelsLoadFailed(language: AppLanguage, onRetry: () -> Unit) {
             color = DS.inkSecondary,
             textAlign = TextAlign.Center,
         )
+        // Le bouton secondaire vibre de lui-même.
         SophiaSecondaryButton(
             text = StringStore.text(context, "duel.match.retry", language),
             onClick = onRetry,
