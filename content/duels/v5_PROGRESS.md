@@ -63,3 +63,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - fi parts 1–7 fini ; vague 2 lancée pour sk
 - pt parts 8–14 fini ; vague 2 lancée pour ar
 - he parts 1–7 fini ; vague 2 lancée pour fi
+- et parts 1–7 fini ; vague 2 lancée pour he (en attente : et lt lv ja, + lt/lv vague 1 en cours)
