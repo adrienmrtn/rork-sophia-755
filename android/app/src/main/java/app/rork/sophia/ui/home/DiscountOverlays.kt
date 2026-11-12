@@ -1,5 +1,7 @@
 package app.rork.sophia.ui.home
 
+import app.rork.sophia.ui.theme.DSLegacy
+import app.rork.sophia.ui.theme.SophiaLegacyTypography
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloat
@@ -146,8 +148,8 @@ fun DiscountGiftOverlay(
             modifier = Modifier
                 .padding(horizontal = 32.dp)
                 .scale(cardScale)
-                .clip(DS.cardShape)
-                .background(DS.surface)
+                .clip(DSLegacy.cardShape)
+                .background(DSLegacy.surface)
                 .padding(horizontal = 24.dp, vertical = 32.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(22.dp),
@@ -156,15 +158,15 @@ fun DiscountGiftOverlay(
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(
                         text = StringStore.text(context, "discount.gift.title", language),
-                        style = SophiaTypography.titleLarge,
+                        style = SophiaLegacyTypography.titleLarge,
                         textAlign = TextAlign.Center,
                     )
                     Spacer(Modifier.height(8.dp))
                     Text(
                         text = prompt,
-                        style = SophiaTypography.bodyMedium,
+                        style = SophiaLegacyTypography.bodyMedium,
                         textAlign = TextAlign.Center,
-                        color = DS.inkSecondary,
+                        color = DSLegacy.inkSecondary,
                     )
                 }
             }
@@ -183,11 +185,11 @@ fun DiscountGiftOverlay(
                 Canvas(modifier = Modifier.fillMaxSize()) {
                     val stroke = 8.dp.toPx()
                     drawCircle(
-                        color = DS.hairline,
+                        color = DSLegacy.hairline,
                         style = Stroke(width = stroke),
                     )
                     drawArc(
-                        color = DS.accent,
+                        color = DSLegacy.accent,
                         startAngle = -90f,
                         sweepAngle = 360f * ringProgress,
                         useCenter = false,
@@ -198,7 +200,7 @@ fun DiscountGiftOverlay(
                     modifier = Modifier
                         .size(100.dp)
                         .clip(CircleShape)
-                        .background(DS.accentTint),
+                        .background(DSLegacy.accentTint),
                     contentAlignment = Alignment.Center,
                 ) {
                     Text(if (opened) "🎁" else "🎀", fontSize = 42.sp)
@@ -213,7 +215,7 @@ fun DiscountGiftOverlay(
                                 .width(28.dp)
                                 .height(6.dp)
                                 .clip(RoundedCornerShape(3.dp))
-                                .background(if (i < taps) DS.accent else DS.hairline),
+                                .background(if (i < taps) DSLegacy.accent else DSLegacy.hairline),
                         )
                     }
                 }
@@ -258,7 +260,7 @@ fun DiscountSideTab(
                 .offset { IntOffset((enterOffset + if (entered) bob else 0f).roundToInt(), -30) }
                 .softPress(onClick = onClick)
                 .clip(RoundedCornerShape(topStart = 18.dp, bottomStart = 18.dp))
-                .background(DS.accent)
+                .background(DSLegacy.accent)
                 .border(
                     1.dp,
                     Color.White.copy(alpha = 0.15f),

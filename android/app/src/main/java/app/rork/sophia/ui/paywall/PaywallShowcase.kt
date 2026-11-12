@@ -1,5 +1,8 @@
 package app.rork.sophia.ui.paywall
 
+import app.rork.sophia.ui.theme.DSLegacy
+import app.rork.sophia.ui.theme.SophiaLegacyTypography
+import app.rork.sophia.ui.components.sophiaLegacyCard
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.Spring
@@ -94,7 +97,7 @@ fun ComparisonTable(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .sophiaCard(elevation = 4.dp)
+            .sophiaLegacyCard(elevation = 4.dp)
             .height(IntrinsicSize.Min),
     ) {
         // The PRO band, from the top of the card to the bottom.
@@ -103,10 +106,10 @@ fun ComparisonTable(
                 .align(Alignment.TopEnd)
                 .width(columnWidth)
                 .fillMaxHeight()
-                .background(Brush.verticalGradient(listOf(DS.accent.copy(alpha = 0.14f), DS.accentSoft.copy(alpha = 0.05f))))
+                .background(Brush.verticalGradient(listOf(DSLegacy.accent.copy(alpha = 0.14f), DSLegacy.accentSoft.copy(alpha = 0.05f))))
                 .drawBehind {
                     val x = if (layoutDirection == LayoutDirection.Rtl) size.width - 1f else 0f
-                    drawRect(DS.accent.copy(alpha = 0.18f), topLeft = Offset(x, 0f), size = androidx.compose.ui.geometry.Size(1.dp.toPx(), size.height))
+                    drawRect(DSLegacy.accent.copy(alpha = 0.18f), topLeft = Offset(x, 0f), size = androidx.compose.ui.geometry.Size(1.dp.toPx(), size.height))
                 },
         )
         Column(modifier = Modifier.fillMaxWidth().padding(start = 16.dp)) {
@@ -117,7 +120,7 @@ fun ComparisonTable(
                 Spacer(Modifier.weight(1f))
                 Text(
                     text = freeLabel,
-                    style = SophiaTypography.labelMedium.copy(fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = DS.inkTertiary),
+                    style = SophiaLegacyTypography.labelMedium.copy(fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = DSLegacy.inkTertiary),
                     textAlign = TextAlign.Center,
                     maxLines = 2,
                     modifier = Modifier.width(columnWidth),
@@ -138,27 +141,27 @@ fun ComparisonTable(
                         textAlign = TextAlign.Center,
                         modifier = Modifier
                             .clip(CircleShape)
-                            .background(DS.accent)
+                            .background(DSLegacy.accent)
                             .padding(horizontal = 10.dp, vertical = 4.dp),
                     )
                 }
             }
             features.forEachIndexed { index, feature ->
-                if (index > 0) HorizontalDivider(color = DS.hairline)
+                if (index > 0) HorizontalDivider(color = DSLegacy.hairline)
                 Row(
                     modifier = Modifier.fillMaxWidth().heightIn(min = 46.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Text(
                         text = feature.label,
-                        style = SophiaTypography.bodyMedium.copy(fontSize = 15.sp, color = DS.ink, fontWeight = FontWeight.SemiBold),
+                        style = SophiaLegacyTypography.bodyMedium.copy(fontSize = 15.sp, color = DSLegacy.ink, fontWeight = FontWeight.SemiBold),
                         modifier = Modifier.weight(1f).padding(vertical = 10.dp),
                     )
                     Box(modifier = Modifier.width(columnWidth), contentAlignment = Alignment.Center) {
                         if (feature.free) {
-                            Icon(Icons.Filled.Check, contentDescription = null, tint = DS.inkTertiary, modifier = Modifier.size(16.dp))
+                            Icon(Icons.Filled.Check, contentDescription = null, tint = DSLegacy.inkTertiary, modifier = Modifier.size(16.dp))
                         } else {
-                            Icon(Icons.Filled.Close, contentDescription = null, tint = DS.inkTertiary.copy(alpha = 0.6f), modifier = Modifier.size(15.dp))
+                            Icon(Icons.Filled.Close, contentDescription = null, tint = DSLegacy.inkTertiary.copy(alpha = 0.6f), modifier = Modifier.size(15.dp))
                         }
                     }
                     Box(modifier = Modifier.width(columnWidth), contentAlignment = Alignment.Center) {
@@ -174,7 +177,7 @@ fun ComparisonTable(
 @Composable
 fun FilledCheck(size: Dp, modifier: Modifier = Modifier) {
     Box(
-        modifier = modifier.size(size).background(DS.accent, CircleShape),
+        modifier = modifier.size(size).background(DSLegacy.accent, CircleShape),
         contentAlignment = Alignment.Center,
     ) {
         Icon(Icons.Filled.Check, contentDescription = null, tint = Color.White, modifier = Modifier.size(size * 0.6f))
@@ -203,13 +206,13 @@ fun PaywallUnlockList(
     modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
-    val shape = DS.cardShape
+    val shape = DSLegacy.cardShape
     Column(
         modifier = modifier
             .fillMaxWidth()
             .clip(shape)
-            .background(Brush.linearGradient(listOf(DS.accentTint, DS.accentTint.copy(alpha = 0.55f))))
-            .border(1.dp, DS.accentSoft.copy(alpha = 0.18f), shape)
+            .background(Brush.linearGradient(listOf(DSLegacy.accentTint, DSLegacy.accentTint.copy(alpha = 0.55f))))
+            .border(1.dp, DSLegacy.accentSoft.copy(alpha = 0.18f), shape)
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
@@ -219,12 +222,12 @@ fun PaywallUnlockList(
             fontWeight = FontWeight.ExtraBold,
             fontSize = 12.sp,
             letterSpacing = 0.8.sp,
-            color = DS.accentSoft,
+            color = DSLegacy.accentSoft,
         )
         Column {
             items.forEachIndexed { index, item ->
                 if (index > 0) {
-                    HorizontalDivider(color = DS.accentSoft.copy(alpha = 0.14f), modifier = Modifier.padding(start = 44.dp))
+                    HorizontalDivider(color = DSLegacy.accentSoft.copy(alpha = 0.14f), modifier = Modifier.padding(start = 44.dp))
                 }
                 Row(
                     modifier = Modifier.fillMaxWidth().padding(vertical = 9.dp),
@@ -232,14 +235,14 @@ fun PaywallUnlockList(
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
                     Box(
-                        modifier = Modifier.size(32.dp).background(DS.surface, RoundedCornerShape(9.dp)),
+                        modifier = Modifier.size(32.dp).background(DSLegacy.surface, RoundedCornerShape(9.dp)),
                         contentAlignment = Alignment.Center,
                     ) {
                         Text(item.emoji, fontSize = 18.sp)
                     }
                     Text(
                         text = StringStore.text(context, item.key, language),
-                        style = SophiaTypography.bodyMedium.copy(fontSize = 15.sp, color = DS.ink, fontWeight = FontWeight.SemiBold),
+                        style = SophiaLegacyTypography.bodyMedium.copy(fontSize = 15.sp, color = DSLegacy.ink, fontWeight = FontWeight.SemiBold),
                         modifier = Modifier.weight(1f),
                     )
                     FilledCheck(size = 20.dp)
@@ -259,16 +262,16 @@ fun PaywallOrDivider(text: String, modifier: Modifier = Modifier) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        Box(Modifier.weight(1f).height(1.dp).background(DS.hairline))
+        Box(Modifier.weight(1f).height(1.dp).background(DSLegacy.hairline))
         Text(
             text = text,
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.ExtraBold,
             fontSize = 12.sp,
             letterSpacing = 1.2.sp,
-            color = DS.inkTertiary,
+            color = DSLegacy.inkTertiary,
         )
-        Box(Modifier.weight(1f).height(1.dp).background(DS.hairline))
+        Box(Modifier.weight(1f).height(1.dp).background(DSLegacy.hairline))
     }
 }
 
@@ -310,13 +313,13 @@ fun QuizRetentionChart(language: AppLanguage, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .sophiaCard(elevation = 4.dp)
+            .sophiaLegacyCard(elevation = 4.dp)
             .padding(18.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
         Row(horizontalArrangement = Arrangement.spacedBy(14.dp), verticalAlignment = Alignment.CenterVertically) {
-            ChartLegend(DS.accentSoft, StringStore.text(context, "paywall.quiz.chart.with", language), strong = true)
-            ChartLegend(DS.inkTertiary, StringStore.text(context, "paywall.quiz.chart.without", language), strong = false)
+            ChartLegend(DSLegacy.accentSoft, StringStore.text(context, "paywall.quiz.chart.with", language), strong = true)
+            ChartLegend(DSLegacy.inkTertiary, StringStore.text(context, "paywall.quiz.chart.without", language), strong = false)
         }
         // A chart reads left to right in every language.
         androidx.compose.runtime.CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
@@ -325,7 +328,7 @@ fun QuizRetentionChart(language: AppLanguage, modifier: Modifier = Modifier) {
                 Box(modifier = Modifier.width(14.dp).height(PLOT_HEIGHT), contentAlignment = Alignment.Center) {
                     Text(
                         text = StringStore.text(context, "paywall.quiz.chart.axis", language),
-                        style = SophiaTypography.labelMedium.copy(fontSize = 11.sp, fontWeight = FontWeight.SemiBold, color = DS.inkTertiary),
+                        style = SophiaLegacyTypography.labelMedium.copy(fontSize = 11.sp, fontWeight = FontWeight.SemiBold, color = DSLegacy.inkTertiary),
                         maxLines = 1,
                         softWrap = false,
                         modifier = Modifier
@@ -348,10 +351,10 @@ private fun ChartLegend(color: Color, label: String, strong: Boolean) {
         Box(Modifier.size(width = 16.dp, height = 4.dp).background(color, CircleShape))
         Text(
             text = label,
-            style = SophiaTypography.labelMedium.copy(
+            style = SophiaLegacyTypography.labelMedium.copy(
                 fontSize = 12.sp,
                 fontWeight = if (strong) FontWeight.Bold else FontWeight.Medium,
-                color = if (strong) DS.ink else DS.inkSecondary,
+                color = if (strong) DSLegacy.ink else DSLegacy.inkSecondary,
             ),
             maxLines = 1,
         )
@@ -370,14 +373,14 @@ private fun RetentionPlot(progress: Float) {
             // Three very light grid lines.
             for (i in 1..3) {
                 val y = size.height * i / 4f
-                drawLine(DS.hairline.copy(alpha = 0.8f), Offset(0f, y), Offset(size.width, y), strokeWidth = 1.dp.toPx())
+                drawLine(DSLegacy.hairline.copy(alpha = 0.8f), Offset(0f, y), Offset(size.width, y), strokeWidth = 1.dp.toPx())
             }
             val without = smoothPath(WITHOUT_QUIZ.map(::point))
             val with = smoothPath(WITH_QUIZ.map(::point))
             // Without quizzes: the fall, in grey.
             drawPath(
                 trimmed(without, progress),
-                color = DS.inkTertiary.copy(alpha = 0.75f),
+                color = DSLegacy.inkTertiary.copy(alpha = 0.75f),
                 style = Stroke(width = 3.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round),
             )
             // With quizzes: the tinted area, then the blue line.
@@ -391,12 +394,12 @@ private fun RetentionPlot(progress: Float) {
             }
             drawPath(
                 area,
-                brush = Brush.verticalGradient(listOf(DS.accentSoft.copy(alpha = 0.22f), DS.accentSoft.copy(alpha = 0f))),
+                brush = Brush.verticalGradient(listOf(DSLegacy.accentSoft.copy(alpha = 0.22f), DSLegacy.accentSoft.copy(alpha = 0f))),
                 alpha = progress,
             )
             drawPath(
                 trimmed(with, progress),
-                color = DS.accentSoft,
+                color = DSLegacy.accentSoft,
                 style = Stroke(width = 3.5.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round),
             )
         }
@@ -421,8 +424,8 @@ private fun ReminderDot(fractionX: Float, fractionY: Float, shown: Boolean) {
                 modifier = Modifier
                     .size(11.dp)
                     .graphicsLayer { scaleX = scale; scaleY = scale; alpha = scale.coerceIn(0f, 1f) }
-                    .background(DS.surface, CircleShape)
-                    .border(2.5.dp, DS.accentSoft, CircleShape),
+                    .background(DSLegacy.surface, CircleShape)
+                    .border(2.5.dp, DSLegacy.accentSoft, CircleShape),
             )
         },
         modifier = Modifier.fillMaxWidth().height(PLOT_HEIGHT),
@@ -446,10 +449,10 @@ private fun DayLabels(language: AppLanguage) {
             DAY_MARKS.forEach { (day, _) ->
                 Text(
                     text = StringStore.text(context, "paywall.quiz.chart.day", language, day),
-                    style = SophiaTypography.labelMedium.copy(
+                    style = SophiaLegacyTypography.labelMedium.copy(
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
-                        color = if (day == 1) DS.inkTertiary else DS.accentSoft,
+                        color = if (day == 1) DSLegacy.inkTertiary else DSLegacy.accentSoft,
                     ),
                     maxLines = 1,
                     softWrap = false,

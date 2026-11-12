@@ -37,6 +37,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.DSLegacy
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.graphics.drawOutline
+import androidx.compose.ui.graphics.drawscope.translate
 import app.rork.sophia.ui.theme.uppercaseInApp
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -47,10 +51,39 @@ import app.rork.sophia.ui.theme.SophiaTypography
  * the canvas; this is the shared chrome every tab now draws from.
  */
 
-/** Surface, rounded corners, hairline border and the gentle diffuse elevation. */
+/**
+ * The « Elevate arrondi » card: surface, 16dp corners, a crisp 1.5dp border and a slightly
+ * thicker bottom edge instead of a shadow. [elevation] is kept for the call sites that pass
+ * it; `0.dp` drops the bottom edge.
+ */
 fun Modifier.sophiaCard(
     shape: Shape = DS.cardShape,
     fill: Color = DS.surface,
+    elevation: Dp = 6.dp,
+    border: Boolean = true,
+): Modifier {
+    val edge = DS.hairline
+    val lip = if (border && elevation > 0.dp) 1.5.dp else 0.dp
+    return this
+        .then(
+            if (lip > 0.dp) {
+                Modifier.drawBehind {
+                    val outline = shape.createOutline(size, layoutDirection, this)
+                    translate(top = lip.toPx()) { drawOutline(outline, edge) }
+                }
+            } else {
+                Modifier
+            },
+        )
+        .clip(shape)
+        .background(fill)
+        .then(if (border) Modifier.border(1.5.dp, edge, shape) else Modifier)
+}
+
+/** The card before « Elevate arrondi » (hairline + diffuse shadow), for [DSLegacy] screens. */
+fun Modifier.sophiaLegacyCard(
+    shape: Shape = DSLegacy.cardShape,
+    fill: Color = DSLegacy.surface,
     elevation: Dp = 6.dp,
     border: Boolean = true,
 ): Modifier = this
@@ -62,7 +95,7 @@ fun Modifier.sophiaCard(
     )
     .clip(shape)
     .background(fill)
-    .then(if (border) Modifier.border(1.dp, DS.hairline, shape) else Modifier)
+    .then(if (border) Modifier.border(1.dp, DSLegacy.hairline, shape) else Modifier)
 
 /** Press feedback of the iOS `SoftPressButtonStyle`: a touch of scale and opacity. */
 @Composable
@@ -104,8 +137,8 @@ fun SophiaPrimaryButton(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .softPress(onClick = onClick, enabled = enabled)
-            .clip(CircleShape)
+            .pressable(onClick = onClick, enabled = enabled, scaleDown = 0.96f)
+            .clip(DS.controlShape)
             .background(if (enabled) fill else fill.copy(alpha = 0.35f))
             .padding(vertical = 17.dp, horizontal = 14.dp),
         horizontalArrangement = Arrangement.Center,
@@ -138,10 +171,10 @@ fun SophiaSecondaryButton(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .softPress(onClick = onClick, enabled = enabled)
-            .clip(CircleShape)
+            .pressable(onClick = onClick, enabled = enabled, scaleDown = 0.96f)
+            .clip(DS.controlShape)
             .background(DS.surface)
-            .border(1.dp, DS.hairline, CircleShape)
+            .border(1.5.dp, DS.hairline, DS.controlShape)
             .padding(vertical = 16.dp, horizontal = 14.dp),
         horizontalArrangement = Arrangement.Center,
     ) {
@@ -176,7 +209,7 @@ fun ScreenTitle(text: String, modifier: Modifier = Modifier) {
     Text(
         text = text,
         fontFamily = PlusJakartaSans,
-        fontWeight = FontWeight.ExtraBold,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 32.sp,
         color = DS.ink,
         modifier = modifier,
@@ -223,7 +256,7 @@ fun CircleIconButton(
             .softPress(onClick = onClick)
             .clip(CircleShape)
             .background(background)
-            .border(1.dp, DS.hairline, CircleShape),
+            .border(1.5.dp, DS.hairline, CircleShape),
         contentAlignment = Alignment.Center,
     ) {
         Icon(icon, contentDescription = null, tint = tint, modifier = Modifier.size(size * 0.4f))

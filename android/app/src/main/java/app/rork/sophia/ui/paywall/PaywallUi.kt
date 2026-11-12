@@ -1,5 +1,8 @@
 package app.rork.sophia.ui.paywall
 
+import app.rork.sophia.ui.theme.DSLegacy
+import app.rork.sophia.ui.theme.SophiaLegacyTypography
+import app.rork.sophia.ui.components.sophiaLegacyCard
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.Spring
@@ -131,14 +134,14 @@ fun PaywallCloseButton(
                 .size(40.dp)
                 .softPress(onClick = onClose)
                 .clip(CircleShape)
-                .background(if (light) Color.White.copy(alpha = 0.15f) else DS.surface)
-                .then(if (light) Modifier else Modifier.border(1.dp, DS.hairline, CircleShape)),
+                .background(if (light) Color.White.copy(alpha = 0.15f) else DSLegacy.surface)
+                .then(if (light) Modifier else Modifier.border(1.dp, DSLegacy.hairline, CircleShape)),
             contentAlignment = Alignment.Center,
         ) {
             Icon(
                 Icons.Filled.Close,
                 contentDescription = null,
-                tint = if (light) Color.White else DS.inkSecondary,
+                tint = if (light) Color.White else DSLegacy.inkSecondary,
                 modifier = Modifier.size(17.dp),
             )
         }
@@ -148,10 +151,10 @@ fun PaywallCloseButton(
 @Composable
 fun PaywallHero(icon: ImageVector, modifier: Modifier = Modifier, size: androidx.compose.ui.unit.Dp = 92.dp) {
     Box(
-        modifier = modifier.size(size).clip(CircleShape).background(DS.accentTint),
+        modifier = modifier.size(size).clip(CircleShape).background(DSLegacy.accentTint),
         contentAlignment = Alignment.Center,
     ) {
-        Icon(icon, contentDescription = null, tint = DS.accent, modifier = Modifier.size(size * 0.47f))
+        Icon(icon, contentDescription = null, tint = DSLegacy.accent, modifier = Modifier.size(size * 0.47f))
     }
 }
 
@@ -162,9 +165,9 @@ fun PaywallCourseHero(courseId: String, modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier
                 .size(92.dp)
-                .clip(DS.controlShape)
-                .background(DS.surfaceMuted)
-                .border(1.dp, DS.hairline, DS.controlShape),
+                .clip(DSLegacy.controlShape)
+                .background(DSLegacy.surfaceMuted)
+                .border(1.dp, DSLegacy.hairline, DSLegacy.controlShape),
         ) {
             CourseImage(
                 courseId = courseId,
@@ -181,7 +184,7 @@ fun PaywallCourseHero(courseId: String, modifier: Modifier = Modifier) {
                 .background(Color.White)
                 .padding(2.dp)
                 .clip(CircleShape)
-                .background(DS.accent),
+                .background(DSLegacy.accent),
             contentAlignment = Alignment.Center,
         ) {
             Icon(Icons.Filled.Lock, contentDescription = null, tint = Color.White, modifier = Modifier.size(15.dp))
@@ -195,12 +198,12 @@ fun BenefitRow(text: String) {
         Icon(
             Icons.Filled.CheckCircle,
             contentDescription = null,
-            tint = DS.success,
+            tint = DSLegacy.success,
             modifier = Modifier.size(18.dp),
         )
         Text(
             text = text,
-            style = SophiaTypography.bodyMedium.copy(color = DS.ink, fontWeight = FontWeight.Medium),
+            style = SophiaLegacyTypography.bodyMedium.copy(color = DSLegacy.ink, fontWeight = FontWeight.Medium),
         )
     }
 }
@@ -209,8 +212,8 @@ fun BenefitRow(text: String) {
 fun PriceLine(text: String, modifier: Modifier = Modifier, light: Boolean = false) {
     Text(
         text = text,
-        style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
-        color = if (light) Color.White.copy(alpha = 0.85f) else DS.inkTertiary,
+        style = SophiaLegacyTypography.labelMedium.copy(fontSize = 12.sp),
+        color = if (light) Color.White.copy(alpha = 0.85f) else DSLegacy.inkTertiary,
         textAlign = TextAlign.Center,
         modifier = modifier.fillMaxWidth(),
     )
@@ -224,7 +227,7 @@ fun PurchaseButton(
     purchasing: Boolean = false,
     enabled: Boolean = true,
     leadingIcon: ImageVector? = null,
-    fill: Color = DS.accent,
+    fill: Color = DSLegacy.accent,
     contentColor: Color = Color.White,
 ) {
     Row(
@@ -278,30 +281,30 @@ fun PlanSelectorCard(
             modifier = Modifier
                 .fillMaxWidth()
                 .softPress(onClick = onClick)
-                .clip(DS.controlShape)
-                .background(if (selected) DS.accentSoft.copy(alpha = 0.08f) else DS.surface)
+                .clip(DSLegacy.controlShape)
+                .background(if (selected) DSLegacy.accentSoft.copy(alpha = 0.08f) else DSLegacy.surface)
                 .border(
                     width = if (selected) 2.dp else 1.dp,
-                    color = if (selected) DS.accent else DS.hairline,
-                    shape = DS.controlShape,
+                    color = if (selected) DSLegacy.accent else DSLegacy.hairline,
+                    shape = DSLegacy.controlShape,
                 )
                 .padding(16.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-                Text(text = name, style = SophiaTypography.bodyLarge.copy(fontWeight = FontWeight.Bold))
-                Text(text = subtitle, style = SophiaTypography.labelMedium)
+                Text(text = name, style = SophiaLegacyTypography.bodyLarge.copy(fontWeight = FontWeight.Bold))
+                Text(text = subtitle, style = SophiaLegacyTypography.labelMedium)
             }
             Column(horizontalAlignment = Alignment.End, verticalArrangement = Arrangement.spacedBy(3.dp)) {
-                Text(text = price, style = SophiaTypography.bodyLarge.copy(fontWeight = FontWeight.Bold))
+                Text(text = price, style = SophiaLegacyTypography.bodyLarge.copy(fontWeight = FontWeight.Bold))
                 if (trialBadge != null) {
                     Text(
                         text = trialBadge,
-                        style = SophiaTypography.labelMedium.copy(
+                        style = SophiaLegacyTypography.labelMedium.copy(
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
-                            color = DS.success,
+                            color = DSLegacy.success,
                         ),
                     )
                 }
@@ -319,7 +322,7 @@ fun PlanSelectorCard(
                     .padding(end = 12.dp)
                     .offset(y = (-12).dp)
                     .clip(CircleShape)
-                    .background(DS.accent)
+                    .background(DSLegacy.accent)
                     .padding(horizontal = 8.dp, vertical = 4.dp),
             )
         }
@@ -341,7 +344,7 @@ fun CountdownCard(
         }
     }
     Column(
-        modifier = modifier.fillMaxWidth().sophiaCard().padding(vertical = 14.dp, horizontal = 20.dp),
+        modifier = modifier.fillMaxWidth().sophiaLegacyCard().padding(vertical = 14.dp, horizontal = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(6.dp),
     ) {
@@ -349,12 +352,12 @@ fun CountdownCard(
             Icon(
                 Icons.Filled.Schedule,
                 contentDescription = null,
-                tint = DS.inkSecondary,
+                tint = DSLegacy.inkSecondary,
                 modifier = Modifier.size(13.dp),
             )
             Text(
                 text = label,
-                style = SophiaTypography.labelMedium.copy(fontSize = 12.sp, fontWeight = FontWeight.SemiBold),
+                style = SophiaLegacyTypography.labelMedium.copy(fontSize = 12.sp, fontWeight = FontWeight.SemiBold),
             )
         }
         Text(
@@ -362,7 +365,7 @@ fun CountdownCard(
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.Bold,
             fontSize = 22.sp,
-            color = DS.ink,
+            color = DSLegacy.ink,
         )
     }
 }
@@ -373,10 +376,10 @@ fun PaywallStatCard(
     value: String,
     label: String,
     modifier: Modifier = Modifier,
-    valueColor: Color = DS.accent,
+    valueColor: Color = DSLegacy.accent,
 ) {
     Column(
-        modifier = modifier.sophiaCard().padding(vertical = 18.dp, horizontal = 12.dp),
+        modifier = modifier.sophiaLegacyCard().padding(vertical = 18.dp, horizontal = 12.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
@@ -387,7 +390,7 @@ fun PaywallStatCard(
             fontSize = 28.sp,
             color = valueColor,
         )
-        Text(text = label, style = SophiaTypography.labelMedium, textAlign = TextAlign.Center)
+        Text(text = label, style = SophiaLegacyTypography.labelMedium, textAlign = TextAlign.Center)
     }
 }
 
@@ -395,7 +398,7 @@ fun PaywallStatCard(
 fun NumberedStepRow(number: Int, text: String) {
     Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
         Box(
-            modifier = Modifier.size(26.dp).clip(CircleShape).background(DS.accent),
+            modifier = Modifier.size(26.dp).clip(CircleShape).background(DSLegacy.accent),
             contentAlignment = Alignment.Center,
         ) {
             Text(
@@ -408,7 +411,7 @@ fun NumberedStepRow(number: Int, text: String) {
         }
         Text(
             text = text,
-            style = SophiaTypography.bodyMedium.copy(color = DS.ink, fontWeight = FontWeight.Medium),
+            style = SophiaLegacyTypography.bodyMedium.copy(color = DSLegacy.ink, fontWeight = FontWeight.Medium),
         )
     }
 }
@@ -439,7 +442,7 @@ fun DiscountPriceBlock(regular: String?, promo: String, perMonth: String, billed
         Text(
             text = perMonth,
             color = Color.White.copy(alpha = 0.85f),
-            style = SophiaTypography.labelMedium.copy(fontWeight = FontWeight.SemiBold, color = Color.White),
+            style = SophiaLegacyTypography.labelMedium.copy(fontWeight = FontWeight.SemiBold, color = Color.White),
             textAlign = TextAlign.Center,
         )
         // Ce que la boutique prélève réellement : le prix mensuel mis en avant ne le
@@ -447,7 +450,7 @@ fun DiscountPriceBlock(regular: String?, promo: String, perMonth: String, billed
         Text(
             text = billedYearly,
             color = Color.White.copy(alpha = 0.75f),
-            style = SophiaTypography.bodySmall.copy(color = Color.White.copy(alpha = 0.75f)),
+            style = SophiaLegacyTypography.bodySmall.copy(color = Color.White.copy(alpha = 0.75f)),
             textAlign = TextAlign.Center,
         )
     }
@@ -466,7 +469,7 @@ fun DiscountCountdownChip(label: String, time: String) {
         modifier = Modifier
             .graphicsLayer { scaleX = pulse; scaleY = pulse }
             .clip(CircleShape)
-            .background(DS.danger)
+            .background(DSLegacy.danger)
             .border(1.dp, Color.White.copy(alpha = 0.35f), CircleShape)
             .padding(horizontal = 16.dp, vertical = 9.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -500,7 +503,7 @@ fun PaywallLegalRow(
     light: Boolean = false,
 ) {
     val context = LocalContext.current
-    val color = if (light) Color.White.copy(alpha = 0.75f) else DS.inkTertiary
+    val color = if (light) Color.White.copy(alpha = 0.75f) else DSLegacy.inkTertiary
     Row(
         modifier = Modifier.fillMaxWidth().padding(top = 4.dp, bottom = 6.dp),
         horizontalArrangement = Arrangement.Center,
@@ -514,7 +517,7 @@ fun PaywallLegalRow(
             if (index > 0) Text("·", color = color, fontSize = 11.sp)
             Text(
                 text = StringStore.text(context, key, language),
-                style = SophiaTypography.labelMedium.copy(fontSize = 11.sp),
+                style = SophiaLegacyTypography.labelMedium.copy(fontSize = 11.sp),
                 color = color,
                 modifier = Modifier
                     .softPress(onClick = action)
@@ -528,12 +531,12 @@ fun PaywallLegalRow(
 @Composable
 fun RatingLine(text: String, language: AppLanguage, light: Boolean = false) {
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-        Text("★★★★★", color = DS.warm, fontSize = 11.sp)
+        Text("★★★★★", color = DSLegacy.warm, fontSize = 11.sp)
         Text(
             // The decimal separator of the reading language: « 4,8 » in French, « 4.8 » in English.
             text = "${4.8.formatted(language, 1)} · $text",
-            style = SophiaTypography.labelMedium.copy(fontSize = 11.sp),
-            color = if (light) Color.White.copy(alpha = 0.8f) else DS.inkTertiary,
+            style = SophiaLegacyTypography.labelMedium.copy(fontSize = 11.sp),
+            color = if (light) Color.White.copy(alpha = 0.8f) else DSLegacy.inkTertiary,
         )
     }
 }
@@ -541,8 +544,8 @@ fun RatingLine(text: String, language: AppLanguage, light: Boolean = false) {
 @Composable
 fun CheckedFeatureRow(text: String) {
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-        Icon(Icons.Filled.Check, contentDescription = null, tint = DS.success, modifier = Modifier.size(15.dp))
-        Text(text = text, style = SophiaTypography.bodyMedium)
+        Icon(Icons.Filled.Check, contentDescription = null, tint = DSLegacy.success, modifier = Modifier.size(15.dp))
+        Text(text = text, style = SophiaLegacyTypography.bodyMedium)
     }
 }
 
@@ -554,13 +557,13 @@ fun CheckedFeatureRow(text: String) {
 fun PaywallNotice(message: String, light: Boolean = false) {
     Text(
         text = message,
-        style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
-        color = if (light) Color.White else DS.accentSoft,
+        style = SophiaLegacyTypography.labelMedium.copy(fontSize = 12.sp),
+        color = if (light) Color.White else DSLegacy.accentSoft,
         textAlign = TextAlign.Center,
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .background(if (light) Color.White.copy(alpha = 0.18f) else DS.accentTint)
+            .background(if (light) Color.White.copy(alpha = 0.18f) else DSLegacy.accentTint)
             .padding(horizontal = 12.dp, vertical = 10.dp),
     )
 }
@@ -569,13 +572,13 @@ fun PaywallNotice(message: String, light: Boolean = false) {
 fun PaywallErrorNote(message: String, light: Boolean = false) {
     Text(
         text = message,
-        style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
-        color = if (light) Color.White else DS.danger,
+        style = SophiaLegacyTypography.labelMedium.copy(fontSize = 12.sp),
+        color = if (light) Color.White else DSLegacy.danger,
         textAlign = TextAlign.Center,
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(12.dp))
-            .background(if (light) Color.Black.copy(alpha = 0.2f) else DS.dangerTint)
+            .background(if (light) Color.Black.copy(alpha = 0.2f) else DSLegacy.dangerTint)
             .padding(horizontal = 12.dp, vertical = 10.dp),
     )
 }

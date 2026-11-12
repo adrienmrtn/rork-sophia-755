@@ -30,7 +30,31 @@ class DSPalette(
     val warm: Color,
 ) {
     companion object {
+        /** « Elevate arrondi » : fond blanc, encre gris-noir, un seul bleu, filets nets. */
         val Light = DSPalette(
+            canvas = Color.White,
+            surface = Color.White,
+            surfaceMuted = Color(0xFFE4ECFA),
+            ink = Color(0xFF22262E),
+            inkSecondary = Color(0xFF6B7280),
+            inkTertiary = Color(0xFF8A93A3),
+            accent = Color(0xFF2E62C4),
+            accentSoft = Color(0xFF2E62C4),
+            accentTint = Color(0xFFE4ECFA),
+            hairline = Color(0xFFDADDE2),
+            success = Color(0xFF387D5A),
+            successTint = Color(0xFFE0EDE4),
+            danger = Color(0xFFB14F42),
+            dangerTint = Color(0xFFF6E7E4),
+            warm = Color(0xFFE6B233),
+        )
+
+        /**
+         * The palette before « Elevate arrondi » (navy calm), frozen on 12/11/2026 for the
+         * screens that keep their old look: the paywalls and the end of the onboarding
+         * (strengths, trial steps, reminder). Read through [DSLegacy], never directly.
+         */
+        val Legacy = DSPalette(
             canvas = Color(0xFFF7F8FA),
             surface = Color.White,
             surfaceMuted = Color(0xFFE9EFF8),
@@ -47,6 +71,7 @@ class DSPalette(
             dangerTint = Color(0xFFF6E7E4),
             warm = Color(0xFFE6B233),
         )
+
 
         /** The iOS Night palette (`DesignSystem.swift`), value for value. */
         val Dark = DSPalette(
@@ -97,6 +122,47 @@ object DS {
     val warm: Color get() = palette.warm
 
     object Radius {
+        val card = 16.dp
+        val control = 16.dp
+        val small = 12.dp
+    }
+
+    object Space {
+        val xs = 6.dp
+        val s = 12.dp
+        val m = 16.dp
+        val l = 20.dp
+        val xl = 28.dp
+    }
+
+    val cardShape = RoundedCornerShape(Radius.card)
+    val controlShape = RoundedCornerShape(Radius.control)
+}
+
+/**
+ * The tokens as they were before « Elevate arrondi », for the screens that keep their old
+ * look (paywalls, strengths, trial steps, reminder). Do not use anywhere else.
+ */
+object DSLegacy {
+    private val palette: DSPalette get() = DSPalette.Legacy
+
+    val canvas: Color get() = palette.canvas
+    val surface: Color get() = palette.surface
+    val surfaceMuted: Color get() = palette.surfaceMuted
+    val ink: Color get() = palette.ink
+    val inkSecondary: Color get() = palette.inkSecondary
+    val inkTertiary: Color get() = palette.inkTertiary
+    val accent: Color get() = palette.accent
+    val accentSoft: Color get() = palette.accentSoft
+    val accentTint: Color get() = palette.accentTint
+    val hairline: Color get() = palette.hairline
+    val success: Color get() = palette.success
+    val successTint: Color get() = palette.successTint
+    val danger: Color get() = palette.danger
+    val dangerTint: Color get() = palette.dangerTint
+    val warm: Color get() = palette.warm
+
+    object Radius {
         val card = 22.dp
         val control = 16.dp
         val small = 12.dp
@@ -124,49 +190,65 @@ val SophiaTypography: Typography
     @ReadOnlyComposable
     get() = typographyFor(LocalSophiaFontFamily.current)
 
-private fun typographyFor(family: androidx.compose.ui.text.font.FontFamily) = Typography(
+private fun typographyFor(
+    family: androidx.compose.ui.text.font.FontFamily,
+    ink: Color = DS.ink,
+    inkSecondary: Color = DS.inkSecondary,
+    titleWeight: FontWeight = FontWeight.SemiBold,
+) = Typography(
     displayLarge = TextStyle(
         fontFamily = family,
-        fontWeight = FontWeight.ExtraBold,
+        fontWeight = titleWeight,
         fontSize = 34.sp,
-        color = DS.ink,
+        color = ink,
     ),
     titleLarge = TextStyle(
         fontFamily = family,
-        fontWeight = FontWeight.ExtraBold,
+        fontWeight = titleWeight,
         fontSize = 22.sp,
-        color = DS.ink,
+        color = ink,
     ),
     titleMedium = TextStyle(
         fontFamily = family,
         fontWeight = FontWeight.Bold,
         fontSize = 18.sp,
-        color = DS.ink,
+        color = ink,
     ),
     bodyLarge = TextStyle(
         fontFamily = family,
         fontWeight = FontWeight.Normal,
         fontSize = 17.sp,
-        color = DS.ink,
+        color = ink,
         lineHeight = 24.sp,
     ),
     bodyMedium = TextStyle(
         fontFamily = family,
         fontWeight = FontWeight.Normal,
         fontSize = 15.sp,
-        color = DS.inkSecondary,
+        color = inkSecondary,
         lineHeight = 22.sp,
     ),
     labelLarge = TextStyle(
         fontFamily = family,
         fontWeight = FontWeight.SemiBold,
         fontSize = 16.sp,
-        color = DS.ink,
+        color = ink,
     ),
     labelMedium = TextStyle(
         fontFamily = family,
         fontWeight = FontWeight.Medium,
         fontSize = 13.sp,
-        color = DS.inkSecondary,
+        color = inkSecondary,
     ),
 )
+
+/** The type scale before « Elevate arrondi » (extra-bold titles, navy ink), for [DSLegacy] screens. */
+val SophiaLegacyTypography: Typography
+    @Composable
+    @ReadOnlyComposable
+    get() = typographyFor(
+        LocalSophiaFontFamily.current,
+        ink = DSLegacy.ink,
+        inkSecondary = DSLegacy.inkSecondary,
+        titleWeight = FontWeight.ExtraBold,
+    )

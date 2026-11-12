@@ -1,5 +1,6 @@
 package app.rork.sophia.ui.components
 
+import app.rork.sophia.ui.theme.DSLegacy
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -28,7 +29,7 @@ fun TrialEndingMiniBanner(
         text = StringStore.text(context, "trial.endingSoon.banner", language),
         modifier = modifier
             .fillMaxWidth()
-            .background(DS.accent.copy(alpha = 0.94f))
+            .background(DSLegacy.accent.copy(alpha = 0.94f))
             .padding(horizontal = 14.dp, vertical = 7.dp),
         color = Color.White,
         fontFamily = PlusJakartaSans,

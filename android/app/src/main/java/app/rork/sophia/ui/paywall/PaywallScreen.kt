@@ -1,5 +1,8 @@
 package app.rork.sophia.ui.paywall
 
+import app.rork.sophia.ui.theme.DSLegacy
+import app.rork.sophia.ui.theme.SophiaLegacyTypography
+import app.rork.sophia.ui.components.sophiaLegacyCard
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -299,7 +302,7 @@ private fun PaywallLegalOverlay(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(DS.canvas)
+                    .background(DSLegacy.canvas)
                     .softPress(onClick = {}),
             ) {
                 LegalDocumentScreen(kind = doc, language = language, onBack = onBack)
@@ -365,14 +368,14 @@ private fun OnboardingAnnualPaywall(
     LaunchedEffect(Unit) { storeViewModel.trackPaywallImpression("onboarding_annual") }
 
     Column(
-        modifier = Modifier.fillMaxSize().background(DS.canvas),
+        modifier = Modifier.fillMaxSize().background(DSLegacy.canvas),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .readableWidth()
-                .padding(horizontal = DS.Space.l, vertical = 8.dp),
+                .padding(horizontal = DSLegacy.Space.l, vertical = 8.dp),
         ) {
             PaywallCloseButton(onClose = onDismiss)
         }
@@ -391,7 +394,7 @@ private fun OnboardingAnnualPaywall(
                 // the free days in green, then the monthly equivalent.
                 val headline = if (hasTrial) {
                     buildAnnotatedString {
-                        withStyle(SpanStyle(color = DS.success)) {
+                        withStyle(SpanStyle(color = DSLegacy.success)) {
                             append(StringStore.trialText(context, "onboardingV2.pw.tryFree", language, trialDays))
                         }
                         append(" ")
@@ -402,13 +405,13 @@ private fun OnboardingAnnualPaywall(
                 }
                 Text(
                     text = headline,
-                    style = SophiaTypography.titleLarge.copy(fontSize = 22.sp, lineHeight = 29.sp, fontWeight = FontWeight.ExtraBold),
+                    style = SophiaLegacyTypography.titleLarge.copy(fontSize = 22.sp, lineHeight = 29.sp, fontWeight = FontWeight.ExtraBold),
                     textAlign = TextAlign.Center,
                 )
                 AnnualSocialProofRow(language = language, photos = photos)
                 Text(
                     text = StringStore.text(context, "onboardingV2.pw.viewAllPlans", language),
-                    style = SophiaTypography.labelLarge.copy(fontSize = 15.sp, color = DS.accentSoft),
+                    style = SophiaLegacyTypography.labelLarge.copy(fontSize = 15.sp, color = DSLegacy.accentSoft),
                     modifier = Modifier.softPress(onClick = onViewAllPlans).padding(8.dp),
                 )
                 if (error != null) PaywallErrorNote(error!!)
@@ -426,7 +429,7 @@ private fun OnboardingAnnualPaywall(
         ) {
             Text(
                 text = StringStore.text(context, "onboardingV2.pw.twoTaps", language),
-                style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
+                style = SophiaLegacyTypography.labelMedium.copy(fontSize = 12.sp),
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(bottom = 10.dp),
             )
@@ -456,7 +459,7 @@ private fun OnboardingAnnualPaywall(
             if (yearly != StoreViewModel.UNKNOWN_PRICE) {
                 Text(
                     text = "(" + StringStore.text(context, "paywall.plan.billedYearly", language, yearly) + ")",
-                    style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
+                    style = SophiaLegacyTypography.labelMedium.copy(fontSize = 12.sp),
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(top = 8.dp, bottom = 8.dp),
                 )
@@ -475,14 +478,14 @@ private fun AnnualSocialProofRow(language: AppLanguage, photos: List<String>) {
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
         if (photos.isNotEmpty()) PhotoRow(photos = photos, size = 28.dp)
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-            Icon(Icons.Filled.Star, contentDescription = null, tint = DS.warm, modifier = Modifier.size(12.dp))
+            Icon(Icons.Filled.Star, contentDescription = null, tint = DSLegacy.warm, modifier = Modifier.size(12.dp))
             Text(
                 text = 4.8.formatted(language, 1),
-                style = SophiaTypography.labelMedium.copy(fontSize = 13.sp, fontWeight = FontWeight.Bold, color = DS.ink),
+                style = SophiaLegacyTypography.labelMedium.copy(fontSize = 13.sp, fontWeight = FontWeight.Bold, color = DSLegacy.ink),
             )
             Text(
                 text = "· " + StringStore.text(context, "onboardingV2.loading.social.count", language),
-                style = SophiaTypography.labelMedium.copy(fontSize = 13.sp),
+                style = SophiaLegacyTypography.labelMedium.copy(fontSize = 13.sp),
                 maxLines = 1,
             )
         }
@@ -533,14 +536,14 @@ private fun ComparisonPaywall(
     }
 
     Column(
-        modifier = Modifier.fillMaxSize().background(DS.canvas),
+        modifier = Modifier.fillMaxSize().background(DSLegacy.canvas),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .readableWidth()
-                .padding(horizontal = DS.Space.l, vertical = 8.dp),
+                .padding(horizontal = DSLegacy.Space.l, vertical = 8.dp),
         ) {
             PaywallCloseButton(onClose = onDismiss)
         }
@@ -553,7 +556,7 @@ private fun ComparisonPaywall(
         ) {
             Text(
                 text = StringStore.text(context, "onboardingV2.pw.compare.title", language),
-                style = SophiaTypography.titleLarge.copy(fontSize = 26.sp, lineHeight = 32.sp),
+                style = SophiaLegacyTypography.titleLarge.copy(fontSize = 26.sp, lineHeight = 32.sp),
             )
             Spacer(Modifier.height(20.dp))
             ComparisonTable(
@@ -713,7 +716,7 @@ private fun CourseUnlockPaywall(
         Spacer(Modifier.height(20.dp))
         Text(
             text = StringStore.text(context, "paywall.course.title", language),
-            style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 30.sp),
+            style = SophiaLegacyTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 30.sp),
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(20.dp))
@@ -730,7 +733,7 @@ private fun CourseUnlockPaywall(
         // « Débloque Sophia PRO, étudié pour maximiser ce que tu retiens. »
         Text(
             text = StringStore.text(context, "paywall.course.proPitch", language),
-            style = SophiaTypography.titleLarge.copy(fontSize = 20.sp, lineHeight = 26.sp, color = DS.accent),
+            style = SophiaLegacyTypography.titleLarge.copy(fontSize = 20.sp, lineHeight = 26.sp, color = DSLegacy.accent),
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(horizontal = 4.dp),
         )
@@ -801,13 +804,13 @@ private fun TrainingPaywall(
         Spacer(Modifier.height(18.dp))
         Text(
             text = StringStore.text(context, "paywall.training.title", language),
-            style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 30.sp),
+            style = SophiaLegacyTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 30.sp),
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(8.dp))
         Text(
             text = StringStore.text(context, "paywall.training.subtitle", language),
-            style = SophiaTypography.bodyMedium,
+            style = SophiaLegacyTypography.bodyMedium,
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(20.dp))
@@ -815,19 +818,19 @@ private fun TrainingPaywall(
             PaywallStatCard(
                 value = StringStore.text(context, "paywall.training.stat1.value", language),
                 label = StringStore.text(context, "paywall.training.stat1.label", language),
-                valueColor = DS.success,
+                valueColor = DSLegacy.success,
                 modifier = Modifier.weight(1f),
             )
             PaywallStatCard(
                 value = StringStore.text(context, "paywall.training.stat2.value", language),
                 label = StringStore.text(context, "paywall.training.stat2.label", language),
-                valueColor = DS.danger,
+                valueColor = DSLegacy.danger,
                 modifier = Modifier.weight(1f),
             )
         }
         Spacer(Modifier.height(16.dp))
         Column(
-            modifier = Modifier.fillMaxWidth().sophiaCard().padding(18.dp),
+            modifier = Modifier.fillMaxWidth().sophiaLegacyCard().padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp),
         ) {
             SectionLabel(StringStore.text(context, "paywall.training.how.title", language))
@@ -843,7 +846,7 @@ private fun TrainingPaywall(
             Text("✨", fontSize = 13.sp)
             Text(
                 text = StringStore.text(context, "paywall.training.footnote", language),
-                style = SophiaTypography.labelMedium.copy(fontSize = 12.sp),
+                style = SophiaLegacyTypography.labelMedium.copy(fontSize = 12.sp),
             )
         }
     }
@@ -911,18 +914,18 @@ private fun AudioPaywall(
         Spacer(Modifier.height(18.dp))
         Text(
             text = StringStore.text(context, "paywall.audio.title", language),
-            style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 30.sp),
+            style = SophiaLegacyTypography.titleLarge.copy(fontSize = 24.sp, lineHeight = 30.sp),
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(8.dp))
         Text(
             text = StringStore.text(context, "paywall.audio.subtitle", language),
-            style = SophiaTypography.bodyMedium,
+            style = SophiaLegacyTypography.bodyMedium,
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(20.dp))
         Column(
-            modifier = Modifier.fillMaxWidth().sophiaCard().padding(18.dp),
+            modifier = Modifier.fillMaxWidth().sophiaLegacyCard().padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             listOf(
@@ -935,7 +938,7 @@ private fun AudioPaywall(
                     PaywallHero(icon = icon, size = 36.dp)
                     Text(
                         text = StringStore.text(context, key, language),
-                        style = SophiaTypography.bodyMedium.copy(color = DS.ink, fontWeight = FontWeight.Medium),
+                        style = SophiaLegacyTypography.bodyMedium.copy(color = DSLegacy.ink, fontWeight = FontWeight.Medium),
                     )
                 }
             }
@@ -1001,13 +1004,13 @@ private fun QuizPaywall(
         Spacer(Modifier.height(6.dp))
         Text(
             text = StringStore.text(context, "paywall.quiz.title", language),
-            style = SophiaTypography.titleLarge.copy(fontSize = 26.sp, lineHeight = 32.sp),
+            style = SophiaLegacyTypography.titleLarge.copy(fontSize = 26.sp, lineHeight = 32.sp),
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(10.dp))
         Text(
             text = StringStore.text(context, "paywall.quiz.subtitle", language),
-            style = SophiaTypography.bodyMedium,
+            style = SophiaLegacyTypography.bodyMedium,
             textAlign = TextAlign.Center,
         )
         Spacer(Modifier.height(22.dp))
@@ -1067,7 +1070,7 @@ private fun DiscountPaywall(
     // behind the status and navigation bars on the pale canvas. Handing the brush up paints it
     // edge to edge instead, and the bar icons are flipped to light for the dark gradient.
     val setFullBleed = LocalFullBleedBackground.current
-    val gradient = remember { Brush.verticalGradient(listOf(DS.accent, DS.accentSoft)) }
+    val gradient = remember { Brush.verticalGradient(listOf(DSLegacy.accent, DSLegacy.accentSoft)) }
     DisposableEffect(Unit) {
         setFullBleed(gradient)
         SophiaAppearance.darkBackdropBehindBars = true
@@ -1088,7 +1091,7 @@ private fun DiscountPaywall(
                 modifier = Modifier
                     .fillMaxWidth()
                     .readableWidth()
-                    .padding(horizontal = DS.Space.l, vertical = 8.dp),
+                    .padding(horizontal = DSLegacy.Space.l, vertical = 8.dp),
             ) {
                 PaywallCloseButton(onClose = onDismiss, light = true)
             }
@@ -1123,14 +1126,14 @@ private fun DiscountPaywall(
                     Text(
                         text = StringStore.text(context, "paywall.discount.title", language),
                         color = Color.White,
-                        style = SophiaTypography.titleLarge.copy(fontSize = 24.sp, color = Color.White),
+                        style = SophiaLegacyTypography.titleLarge.copy(fontSize = 24.sp, color = Color.White),
                         textAlign = TextAlign.Center,
                     )
                     Spacer(Modifier.height(8.dp))
                     Text(
                         text = StringStore.text(context, "paywall.discount.subtitle", language),
                         color = Color.White.copy(alpha = 0.85f),
-                        style = SophiaTypography.bodyMedium.copy(color = Color.White.copy(alpha = 0.85f)),
+                        style = SophiaLegacyTypography.bodyMedium.copy(color = Color.White.copy(alpha = 0.85f)),
                         textAlign = TextAlign.Center,
                     )
                     Spacer(Modifier.height(18.dp))
@@ -1165,7 +1168,7 @@ private fun DiscountPaywall(
                     purchasing = purchasing,
                     leadingIcon = Icons.Filled.Bolt,
                     fill = Color.White,
-                    contentColor = DS.accent,
+                    contentColor = DSLegacy.accent,
                     onClick = {
                         purchasePackage(
                             context = context,
@@ -1185,7 +1188,7 @@ private fun DiscountPaywall(
                 Text(
                     text = StringStore.text(context, "paywall.discount.noTrial", language),
                     color = Color.White.copy(alpha = 0.75f),
-                    style = SophiaTypography.labelMedium.copy(
+                    style = SophiaLegacyTypography.labelMedium.copy(
                         fontSize = 11.sp,
                         color = Color.White.copy(alpha = 0.75f),
                     ),
@@ -1225,14 +1228,14 @@ private fun PaywallShell(
     content: @Composable () -> Unit,
 ) {
     Column(
-        modifier = Modifier.fillMaxSize().background(DS.canvas),
+        modifier = Modifier.fillMaxSize().background(DSLegacy.canvas),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .readableWidth()
-                .padding(horizontal = DS.Space.l, vertical = 8.dp),
+                .padding(horizontal = DSLegacy.Space.l, vertical = 8.dp),
         ) {
             PaywallCloseButton(onClose = onDismiss, delayMillis = closeDelayMillis)
         }

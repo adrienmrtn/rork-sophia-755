@@ -90,11 +90,11 @@ object OV2 {
     // system-fallback letters.
     val title: TextStyle
         @Composable @ReadOnlyComposable
-        get() = ov2Style(FontWeight.ExtraBold, 27.sp, 34.sp, DS.ink)
+        get() = ov2Style(FontWeight.SemiBold, 27.sp, 34.sp, DS.ink)
 
     val titleLarge: TextStyle
         @Composable @ReadOnlyComposable
-        get() = ov2Style(FontWeight.ExtraBold, 34.sp, 40.sp, DS.ink)
+        get() = ov2Style(FontWeight.SemiBold, 34.sp, 40.sp, DS.ink)
 
     val headline: TextStyle
         @Composable @ReadOnlyComposable
@@ -237,7 +237,7 @@ fun Modifier.readableWidth(max: Dp = READABLE_WIDTH): Modifier = this.widthIn(ma
 
 val READABLE_WIDTH: Dp = 440.dp
 
-/** Full-width capsule CTA with the soft press feedback used across the iOS flow. */
+/** Full-width rounded-rectangle CTA (« Elevate arrondi ») with the soft press feedback used across the iOS flow. */
 @Composable
 fun OnboardingCta(
     text: String,
@@ -251,7 +251,7 @@ fun OnboardingCta(
     val interaction = remember { MutableInteractionSource() }
     val pressed by interaction.collectIsPressedAsState()
     val scale by animateFloatAsState(
-        targetValue = if (pressed) 0.98f else 1f,
+        targetValue = if (pressed) 0.96f else 1f,
         animationSpec = spring(dampingRatio = 0.8f, stiffness = Spring.StiffnessMedium),
         label = "ctaScale",
     )
@@ -271,7 +271,7 @@ fun OnboardingCta(
                 scaleY = scale
             }
             .height(56.dp),
-        shape = CircleShape,
+        shape = OV2Shapes.control,
         colors = androidx.compose.material3.ButtonDefaults.buttonColors(
             containerColor = OV2.accent,
             contentColor = Color.White,

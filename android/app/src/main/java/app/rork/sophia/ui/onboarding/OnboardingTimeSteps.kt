@@ -825,7 +825,7 @@ internal fun ReminderStep(language: AppLanguage, onContinue: () -> Unit) {
 
     OnboardingPage(
         footer = {
-            OnboardingCta(StringStore.text(context, "onboardingV2.reminder.cta", language), onContinue)
+            OnboardingLegacyCta(StringStore.text(context, "onboardingV2.reminder.cta", language), onContinue)
         },
     ) {
         ProgressiveWords(
@@ -896,13 +896,13 @@ internal fun TrialStepsStep(language: AppLanguage, trialDays: Int = 3, onContinu
     OnboardingPage(
         contentArrangement = Arrangement.Top,
         footer = {
-            OnboardingCta(StringStore.text(context, "onboardingV2.trial.cta", language), onContinue)
+            OnboardingLegacyCta(StringStore.text(context, "onboardingV2.trial.cta", language), onContinue)
         },
     ) {
         Spacer(Modifier.height(72.dp))
         Text(
             text = StringStore.text(context, "onboardingV2.trial.title", language),
-            style = OV2.titleLarge,
+            style = OV2Legacy.titleLarge,
             modifier = Modifier.padding(horizontal = 28.dp).ov2Reveal(50),
         )
         Spacer(Modifier.height(36.dp))
@@ -949,7 +949,7 @@ private fun TrialTimelineRow(
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             OnboardingCircleBadge(
                 size = 40.dp,
-                background = if (done || active) OV2.accent else OV2.inkTertiary.copy(alpha = 0.35f),
+                background = if (done || active) OV2Legacy.accent else OV2Legacy.inkTertiary.copy(alpha = 0.35f),
             ) {
                 Text(emoji, fontSize = 16.sp, color = Color.White)
             }
@@ -957,16 +957,16 @@ private fun TrialTimelineRow(
                 Box(
                     modifier = Modifier
                         .size(width = 3.dp, height = 46.dp)
-                        .background(OV2.accent.copy(alpha = 0.18f)),
+                        .background(OV2Legacy.accent.copy(alpha = 0.18f)),
                 )
             }
         }
         Column(modifier = Modifier.padding(bottom = if (last) 0.dp else 14.dp)) {
             Text(
                 text = title,
-                style = OV2.headline.copy(color = if (active) OV2.accent else OV2.ink),
+                style = OV2Legacy.headline.copy(color = if (active) OV2Legacy.accent else OV2Legacy.ink),
             )
-            Text(text = detail, style = OV2.subheadline)
+            Text(text = detail, style = OV2Legacy.subheadline)
         }
     }
 }
