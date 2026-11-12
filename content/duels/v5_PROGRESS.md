@@ -78,3 +78,4 @@ Restent à lancer ensuite : vague 1 rien d'autre ; vague 2 pour fr de pt it ro b
 - sr parts 8–14 fini
 - el parts 8–14 fini
 - hr parts 8–14 et he parts 8–14 finis ; hr et sl parts 1–7 n'avaient jamais été lancées → lancées ; 2 questions retirées (Mer Morte, Roch Hachana) → 7 retirées au total, prévoir 2 remplacements de plus
+- sl parts 8–14 fini
