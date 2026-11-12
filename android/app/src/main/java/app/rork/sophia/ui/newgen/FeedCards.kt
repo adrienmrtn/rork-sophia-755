@@ -31,6 +31,10 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.outlined.Group
+import androidx.compose.material.icons.outlined.Schedule
+import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,10 +48,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
@@ -68,6 +74,9 @@ import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.domain.formatted
 import app.rork.sophia.domain.realReadsCount
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.pressable
+import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.course.AuthorAvatar
@@ -103,8 +112,8 @@ enum class FeedNotice { FOLLOWING_EMPTY, FOLLOWING_UP_TO_DATE, ALL_CAUGHT_UP }
 /** La hauteur sous laquelle la couverture d'une carte du fil paginé ne descend pas. */
 private val FEED_COVER_MIN_HEIGHT = 110.dp
 
-/** Rose des cœurs allumés, comme sur iOS. */
-internal val LikedTint = Color(0xFFED5973)
+/** Rose des cœurs allumés, comme sur iOS (`DS.liked`). */
+internal val LikedTint = Color(0xFFD6336C)
 
 // MARK: - Carte cours
 
@@ -146,15 +155,16 @@ fun CourseFeedCard(
     val info by rememberCourseInfo(course.toStub(), language)
     val liked = course.id in progress.likedCourseIds
     val hook = info?.hook ?: stripInlineMarkup(course.description)
-    val haptics = LocalHapticFeedback.current
+    val haptics = rememberHaptics()
     var likeBurst by remember(course.id) { mutableIntStateOf(0) }
     var bigHeart by remember(course.id) { mutableIntStateOf(0) }
 
     // Le cœur : au bouton, il bascule ; au double-tap, il n'éteint jamais (comme sur les
     // réseaux vidéo), mais le grand cœur s'affiche quand même.
     fun toggleLike(fromDoubleTap: Boolean) {
-        haptics.performHapticFeedback(if (fromDoubleTap) HapticFeedbackType.LongPress else HapticFeedbackType.TextHandleMove)
         val wasLiked = progressManager.isLiked(course.id)
+        // Aimer vibre franchement (comme le double-tap) ; retirer son « j'aime », à peine.
+        if (fromDoubleTap || !wasLiked) haptics.confirm() else haptics.tap()
         if (fromDoubleTap) {
             bigHeart++
             if (wasLiked) return
@@ -165,10 +175,15 @@ fun CourseFeedCard(
     }
 
     // Un tap ouvre le cours, deux taps l'aiment (le simple tap attend donc un instant, le
-    // temps de savoir s'il est doublé). Même enfoncement doux que `softPress`.
+    // temps de savoir s'il est doublé). Pression élastique : la carte s'enfonce sous le doigt
+    // et revient sur un ressort.
     val interaction = remember { MutableInteractionSource() }
     val pressed by interaction.collectIsPressedAsState()
-    val pressScale by animateFloatAsState(targetValue = if (pressed) 0.98f else 1f, label = "feedCardPress")
+    val pressScale by animateFloatAsState(
+        targetValue = if (pressed) 0.975f else 1f,
+        animationSpec = DSMotion.press(),
+        label = "feedCardPress",
+    )
 
     Box(
         modifier = modifier
@@ -181,7 +196,10 @@ fun CourseFeedCard(
             .combinedClickable(
                 interactionSource = interaction,
                 indication = null,
-                onClick = onOpen,
+                onClick = {
+                    haptics.tap()
+                    onOpen()
+                },
                 onDoubleClick = { toggleLike(fromDoubleTap = true) },
             )
             .sophiaCard(),
@@ -200,8 +218,8 @@ fun CourseFeedCard(
     }
     val body: @Composable (Modifier) -> Unit = { bodyModifier ->
         Column(
-            modifier = bodyModifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
+            modifier = bodyModifier.padding(start = 16.dp, end = 16.dp, top = 14.dp, bottom = 10.dp),
+            verticalArrangement = Arrangement.spacedBy(9.dp),
         ) {
             if (kicker != null) {
                 Text(
@@ -215,7 +233,7 @@ fun CourseFeedCard(
             Text(
                 text = stripInlineMarkup(course.title),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
+                fontWeight = FontWeight.SemiBold,
                 fontSize = 20.sp,
                 lineHeight = 26.sp,
                 color = DS.ink,
@@ -234,7 +252,7 @@ fun CourseFeedCard(
             CreatorLine(
                 identity = identity,
                 language = language,
-                modifier = Modifier.padding(top = 2.dp),
+                modifier = Modifier.padding(top = 1.dp),
                 onTap = identity.author?.let { author -> { onOpenCreator(author) } },
             )
             if (fillsPage) Spacer(Modifier.weight(1f))
@@ -246,14 +264,16 @@ fun CourseFeedCard(
             ) {
                 // Les vraies ouvertures (serveur) ; rien tant que le chiffre n'est pas arrivé.
                 course.realReadsCount?.let { reads ->
-                    StatChip(icon = Icons.Filled.Visibility, text = reads.compactCount(language))
+                    StatChip(icon = Icons.Outlined.Visibility, text = reads.compactCount(language))
                 }
+                val likeLabel = StringStore.text(context, if (liked) "common.unlike" else "common.like", language)
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(5.dp),
                     modifier = Modifier
-                        .softPress(onClick = { toggleLike(fromDoubleTap = false) })
-                        .padding(vertical = 6.dp),
+                        .pressable(onClick = { toggleLike(fromDoubleTap = false) }, scaleDown = 0.9f, haptic = false)
+                        .semantics { contentDescription = likeLabel }
+                        .padding(vertical = 8.dp),
                 ) {
                     LikeHeartIcon(liked = liked, burst = likeBurst, size = 15.dp)
                     Text(
@@ -267,7 +287,7 @@ fun CourseFeedCard(
                 Spacer(Modifier.weight(1f))
                 info?.let { details ->
                     StatChip(
-                        icon = Icons.Filled.Schedule,
+                        icon = Icons.Outlined.Schedule,
                         text = NewGenFormat.minutes(context, details.minutes, language),
                     )
                 }
@@ -314,7 +334,8 @@ fun CourseFeedCard(
 /**
  * L'événement dans le fil, comme sur iOS : l'illustration (image de l'équipe ou éventail de
  * couvertures) avec la date et le titre posés dessus, l'accroche, le nombre de cours, le défi du
- * lecteur avec son badge en anneau, l'objectif commun, et le bouton vers la collection.
+ * lecteur avec son badge en anneau, et le bouton vers la collection. (L'objectif commun
+ * « Ensemble : N cours lus » n'est plus affiché.)
  */
 @Composable
 fun EventFeedCard(
@@ -327,6 +348,7 @@ fun EventFeedCard(
     fillsPage: Boolean = false,
 ) {
     val context = LocalContext.current
+    val haptics = rememberHaptics()
     val summaries = rememberCourseSummaries(language)
     val courses = remember(summaries, campaign.slug) {
         campaign.courseIds.mapNotNull { id -> summaries.firstOrNull { it.id == id } }
@@ -339,10 +361,19 @@ fun EventFeedCard(
         modifier = modifier
             .fillMaxWidth()
             .then(if (fillsPage) Modifier.fillMaxHeight() else Modifier)
-            .softPress(onClick = onOpen)
+            // La carte entière ouvre la collection, d'une vibration franche.
+            .pressable(
+                onClick = {
+                    haptics.confirm()
+                    onOpen()
+                },
+                scaleDown = 0.975f,
+                haptic = false,
+            )
+            .semantics { role = Role.Button }
             .sophiaCard(),
     ) {
-        // L'illustration, la pastille de date en haut, le titre en bas sur un voile sombre. Dans
+        // L'illustration, la pastille de date en haut, le titre en bas sur un voile sombre uni. Dans
         // le fil paginé elle prend la hauteur que le reste de la carte laisse libre.
         Box(
             modifier = if (fillsPage) {
@@ -352,17 +383,6 @@ fun EventFeedCard(
             },
         ) {
             EventArtwork(campaign = campaign, courses = courses, modifier = Modifier.fillMaxSize(), collageLift = 0.08f)
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(
-                        Brush.verticalGradient(
-                            0.3f to EventPalette.night.copy(alpha = 0f),
-                            0.68f to EventPalette.night.copy(alpha = 0.5f),
-                            1f to EventPalette.night.copy(alpha = 0.9f),
-                        ),
-                    ),
-            )
             if (campaign.hasEnded()) {
                 EventPill(text = StringStore.text(context, "event.ended", language), dark = true, modifier = Modifier.padding(12.dp))
             } else {
@@ -373,20 +393,32 @@ fun EventFeedCard(
                     )
                 }
             }
-            Text(
-                text = campaign.title(language),
-                fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.ExtraBold,
-                fontSize = 28.sp,
-                lineHeight = 33.sp,
-                color = Color.White,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.align(Alignment.BottomStart).padding(horizontal = 16.dp).padding(bottom = 14.dp),
-            )
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomStart)
+                    .fillMaxWidth()
+                    .heightIn(min = 96.dp)
+                    .background(EventPalette.night.copy(alpha = 0.62f))
+                    .padding(horizontal = 16.dp, vertical = 14.dp),
+                contentAlignment = Alignment.BottomStart,
+            ) {
+                Text(
+                    text = campaign.title(language),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 24.sp,
+                    lineHeight = 30.sp,
+                    color = Color.White,
+                    maxLines = 3,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            }
         }
 
-        Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+        Column(
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 14.dp, bottom = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
             if (tagline.isNotEmpty()) {
                 Text(
                     text = tagline,
@@ -404,75 +436,50 @@ fun EventFeedCard(
                     text = StringStore.text(context, "event.card.coursesToRead", language, courses.size),
                 )
                 if (campaign.participants > 0) {
-                    StatChip(icon = Icons.Filled.Group, text = campaign.participants.formatted(language))
+                    StatChip(icon = Icons.Outlined.Group, text = campaign.participants.formatted(language))
                 }
             }
 
-            // Le défi du lecteur (badge dans son anneau, segments) et, dessous, l'objectif commun.
-            Column(
+            // Le défi du lecteur : le badge dans son anneau, l'avancement en toutes lettres et un
+            // segment par cours.
+            Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(16.dp))
-                    .background(DS.canvas)
+                    .clip(RoundedCornerShape(DS.Radius.small))
+                    .background(DS.accentTint)
                     .padding(12.dp),
-                verticalArrangement = Arrangement.spacedBy(12.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    EventBadgeRing(campaign = campaign, done = done, size = 52.dp)
-                    Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(7.dp)) {
-                        Text(
-                            text = if (complete) {
-                                StringStore.text(context, "event.challenge.unlocked", language, campaign.badgeName(language))
-                            } else {
-                                StringStore.text(context, "event.card.challenge", language, done, campaign.challengeTarget)
-                            },
-                            fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 13.sp,
-                            color = DS.ink,
-                            maxLines = 2,
-                            overflow = TextOverflow.Ellipsis,
-                        )
-                        EventChallengeMeter(done = done, target = campaign.challengeTarget, track = DS.hairline, height = 6.dp)
-                    }
-                }
-                val goal = campaign.goalTarget
-                if (goal != null && goal > 0) {
-                    Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(DS.hairline))
-                    Column(verticalArrangement = Arrangement.spacedBy(7.dp)) {
-                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                            Icon(
-                                imageVector = Icons.Filled.Groups,
-                                contentDescription = null,
-                                tint = DS.accentSoft,
-                                modifier = Modifier.size(14.dp),
-                            )
-                            Text(
-                                text = StringStore.text(
-                                    context, "event.goal.progress", language,
-                                    campaign.goalCount.formatted(language), goal.formatted(language),
-                                ),
-                                fontFamily = PlusJakartaSans,
-                                fontWeight = FontWeight.SemiBold,
-                                fontSize = 12.sp,
-                                color = DS.inkSecondary,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis,
-                            )
-                        }
-                        EventProgressBar(
-                            fraction = campaign.goalCount.toFloat() / goal,
-                            tint = DS.accentSoft,
-                            track = DS.hairline,
-                            height = 6.dp,
-                        )
-                    }
+                EventBadgeRing(campaign = campaign, done = done, size = 52.dp, track = DS.ink.copy(alpha = 0.14f))
+                Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text(
+                        text = if (complete) {
+                            StringStore.text(context, "event.challenge.unlocked", language, campaign.badgeName(language))
+                        } else {
+                            StringStore.text(context, "event.card.challenge", language, done, campaign.challengeTarget)
+                        },
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 15.sp,
+                        lineHeight = 20.sp,
+                        color = DS.ink,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                    EventChallengeMeter(
+                        done = done,
+                        target = campaign.challengeTarget,
+                        track = DS.ink.copy(alpha = 0.14f),
+                        height = 6.dp,
+                    )
                 }
             }
 
-            NewGenPrimaryButton(
-                text = StringStore.text(context, "event.card.seeCollection", language) + "  ›",
-                onClick = onOpen,
+            // Ce n'est que l'apparence du CTA : c'est la carte qui reçoit le geste.
+            HomeCtaLabel(
+                text = StringStore.text(context, "event.card.seeCollection", language),
+                trailingIcon = Icons.AutoMirrored.Filled.KeyboardArrowRight,
             )
         }
     }

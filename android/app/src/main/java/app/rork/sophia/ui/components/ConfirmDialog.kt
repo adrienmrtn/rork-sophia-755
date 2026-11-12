@@ -4,7 +4,9 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.text.font.FontWeight
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
 
 /** Destructive confirmation, styled like the iOS alerts: settings resets, removing a friend. */
@@ -24,10 +26,14 @@ fun ConfirmDialog(
         title = { Text(title, style = SophiaTypography.titleMedium) },
         text = { Text(message, style = SophiaTypography.bodyMedium) },
         confirmButton = {
-            TextButton(onClick = onConfirm) { Text(confirm, color = DS.danger) }
+            TextButton(onClick = onConfirm) {
+                Text(confirm, color = DS.danger, fontFamily = PlusJakartaSans, fontWeight = FontWeight.SemiBold)
+            }
         },
         dismissButton = {
-            TextButton(onClick = onDismiss) { Text(cancel, color = DS.inkSecondary) }
+            TextButton(onClick = onDismiss) {
+                Text(cancel, color = DS.inkSecondary, fontFamily = PlusJakartaSans, fontWeight = FontWeight.Medium)
+            }
         },
     )
 }
