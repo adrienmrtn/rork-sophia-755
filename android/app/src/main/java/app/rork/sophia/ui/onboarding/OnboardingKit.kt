@@ -8,10 +8,11 @@ import android.view.HapticFeedbackConstants
 import android.view.View
 import android.view.accessibility.AccessibilityManager
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.CubicBezierEasing
+import androidx.compose.animation.core.Easing
+import androidx.compose.animation.core.FiniteAnimationSpec
 import androidx.compose.animation.core.FastOutSlowInEasing
-import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
@@ -222,6 +223,42 @@ fun rememberOnboardingHaptics(): OnboardingHaptics {
     return remember(view) { OnboardingHaptics(view) }
 }
 
+/**
+ * Les mouvements de l'onboarding : aucun rebond. Tout se pose sur une courbe qui ralentit
+ * (ease-out), sans dépasser sa cible ; les ressorts « pop » du reste de l'app restent hors
+ * de ce parcours.
+ */
+internal object OnboardingMotion {
+    /** Départ franc, arrivée très douce, jamais de dépassement. */
+    val EaseOut: Easing = CubicBezierEasing(0.22f, 1f, 0.36f, 1f)
+
+    /** Un bloc ou une page qui se pose. */
+    fun <T> settle(durationMillis: Int = 380): FiniteAnimationSpec<T> = tween(durationMillis, easing = EaseOut)
+
+    /** Un changement d'état (sélection, pastille, couleur). */
+    fun <T> quick(): FiniteAnimationSpec<T> = tween(220, easing = EaseOut)
+
+    /** Un bouton sous le doigt. */
+    fun <T> press(): FiniteAnimationSpec<T> = tween(140, easing = EaseOut)
+}
+
+/** Entrée d'un élément (badge, étoile, illustration) : il grandit et se pose, sans rebond. */
+@Composable
+internal fun Modifier.ov2PopIn(delayMillis: Int = 0): Modifier {
+    var shown by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) {
+        delay(delayMillis.toLong())
+        shown = true
+    }
+    val progress by animateFloatAsState(if (shown) 1f else 0f, OnboardingMotion.settle(), label = "ov2PopIn")
+    return this.graphicsLayer {
+        alpha = progress.coerceIn(0f, 1f)
+        val scale = 0.7f + 0.3f * progress
+        scaleX = scale
+        scaleY = scale
+    }
+}
+
 /** Fade + lift that starts after [delayMillis], so it reads as a reveal, not a jump. */
 @Composable
 fun Modifier.ov2Reveal(delayMillis: Int = 120, yOffset: Dp = 16.dp): Modifier {
@@ -232,7 +269,7 @@ fun Modifier.ov2Reveal(delayMillis: Int = 120, yOffset: Dp = 16.dp): Modifier {
     }
     val progress by animateFloatAsState(
         targetValue = if (shown) 1f else 0f,
-        animationSpec = spring(dampingRatio = 0.82f, stiffness = Spring.StiffnessMediumLow),
+        animationSpec = OnboardingMotion.settle(),
         label = "ov2Reveal",
     )
     val offsetPx = with(LocalDensity.current) { yOffset.toPx() }
@@ -312,7 +349,7 @@ fun OnboardingCta(
     val pressed by interaction.collectIsPressedAsState()
     val scale by animateFloatAsState(
         targetValue = if (pressed) 0.96f else 1f,
-        animationSpec = spring(dampingRatio = 0.8f, stiffness = Spring.StiffnessMedium),
+        animationSpec = OnboardingMotion.press(),
         label = "ctaScale",
     )
     androidx.compose.material3.Button(
