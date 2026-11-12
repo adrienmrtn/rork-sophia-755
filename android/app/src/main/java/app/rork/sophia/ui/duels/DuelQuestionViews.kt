@@ -2,6 +2,8 @@ package app.rork.sophia.ui.duels
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -21,6 +23,7 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -31,6 +34,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -48,6 +52,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.withFrameNanos
@@ -72,6 +77,7 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
@@ -83,13 +89,21 @@ import app.rork.sophia.domain.DuelMatch
 import app.rork.sophia.domain.DuelOpponent
 import app.rork.sophia.domain.DuelQuestion
 import app.rork.sophia.domain.DuelQuestionKind
-import app.rork.sophia.ui.components.softPress
-import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.components.DSCheckBadge
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.DSOptionState
+import app.rork.sophia.ui.components.dsOptionCard
+import app.rork.sophia.ui.components.dsPopIn
+import app.rork.sophia.ui.components.dsShake
+import app.rork.sophia.ui.components.dsStagger
+import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.newgen.AvatarCircle
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import coil.compose.AsyncImage
+import kotlin.math.PI
 import kotlin.math.ceil
+import kotlin.math.sin
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.Image
 import coil.compose.AsyncImagePainter
@@ -139,7 +153,7 @@ internal enum class DuelOptionState {
     /** La bonne réponse, dévoilée. */
     Correct,
 
-    /** Le mauvais choix du joueur, dévoilé. */
+    /** Un mauvais choix dévoilé : celui du joueur, ou celui de l'adversaire. */
     Wrong,
 
     /** Une option ni choisie ni juste : en retrait. */
@@ -150,12 +164,19 @@ internal fun duelOptionState(option: Int, ui: DuelQuestionUi): DuelOptionState =
     ui.revealed -> when (option) {
         ui.question.correctIndex -> DuelOptionState.Correct
         ui.selectedChoice -> DuelOptionState.Wrong
+        // Le mauvais choix de l'adversaire se lit aussi en rouge, sous son avatar.
+        ui.opponentAnswer.choice -> DuelOptionState.Wrong
         else -> DuelOptionState.Dimmed
     }
     ui.playerLocked -> if (option == ui.selectedChoice) DuelOptionState.Selected else DuelOptionState.Dimmed
     else -> DuelOptionState.Idle
 }
 
+/**
+ * Une réponse en carte : blanche bordée au repos, bleue une fois choisie, verte avec sa coche
+ * quand elle est juste, rouge quand elle est fausse. À la révélation, « Toi » marque le choix
+ * du joueur et l'avatar de l'adversaire le sien.
+ */
 @Composable
 internal fun DuelOptionButton(
     text: String,
@@ -167,99 +188,133 @@ internal fun DuelOptionButton(
     modifier: Modifier = Modifier,
     icon: ImageVector? = null,
     minHeight: Dp = 56.dp,
+    /** L'option que le joueur a choisie. */
+    isPlayerChoice: Boolean = false,
+    /** Carte étroite (grille 2 × 2, vrai/faux) : les marques se réduisent aux pastilles. */
+    compact: Boolean = false,
+    /** « Toi », écrit à côté de la marque du joueur quand la carte est assez large. */
+    youLabel: String = "",
 ) {
-    val fill by animateColorAsState(
+    val cardState = when (state) {
+        DuelOptionState.Idle -> DSOptionState.Idle
+        DuelOptionState.Selected -> DSOptionState.Selected
+        DuelOptionState.Correct -> DSOptionState.Correct
+        DuelOptionState.Wrong -> DSOptionState.Wrong
+        DuelOptionState.Dimmed -> DSOptionState.Dimmed
+    }
+    val foreground by animateColorAsState(
         targetValue = when (state) {
-            DuelOptionState.Idle, DuelOptionState.Dimmed -> DS.surface
-            DuelOptionState.Selected -> DS.accentTint
-            DuelOptionState.Correct -> DS.successTint
-            DuelOptionState.Wrong -> DS.dangerTint
-        },
-        animationSpec = tween(220),
-        label = "duelOptionFill",
-    )
-    val border by animateColorAsState(
-        targetValue = when (state) {
-            DuelOptionState.Idle, DuelOptionState.Dimmed -> DS.hairline
-            DuelOptionState.Selected -> DS.accent
+            DuelOptionState.Idle, DuelOptionState.Selected, DuelOptionState.Wrong -> DS.ink
             DuelOptionState.Correct -> DS.success
-            DuelOptionState.Wrong -> DS.danger
+            DuelOptionState.Dimmed -> DS.inkTertiary
         },
-        animationSpec = tween(220),
-        label = "duelOptionBorder",
+        animationSpec = DSMotion.snappy(),
+        label = "duelOptionInk",
     )
-    val foreground = when (state) {
-        DuelOptionState.Idle, DuelOptionState.Selected -> DS.ink
+    val weight = when (state) {
+        DuelOptionState.Idle, DuelOptionState.Wrong -> FontWeight.SemiBold
+        DuelOptionState.Selected -> FontWeight.Bold
+        DuelOptionState.Correct -> FontWeight.ExtraBold
+        DuelOptionState.Dimmed -> FontWeight.Medium
+    }
+    // La couleur des marques (« Toi », pseudo de l'adversaire) sur une carte dévoilée.
+    val tagColor = when (state) {
         DuelOptionState.Correct -> DS.success
         DuelOptionState.Wrong -> DS.danger
-        DuelOptionState.Dimmed -> DS.inkTertiary
+        else -> DS.inkSecondary
     }
+    // Le joueur a choisi cette option et son verdict est tombé.
+    val playerRevealed = isPlayerChoice && (state == DuelOptionState.Correct || state == DuelOptionState.Wrong)
     val scale by animateFloatAsState(
         targetValue = when (state) {
             DuelOptionState.Correct -> 1.02f
             DuelOptionState.Selected -> 0.985f
             else -> 1f
         },
-        animationSpec = duelSpring(response = 0.38f, damping = 0.62f),
+        animationSpec = DSMotion.pop(),
         label = "duelOptionScale",
     )
-    val plain = state == DuelOptionState.Idle || state == DuelOptionState.Dimmed
-    Box(
-        modifier = modifier.graphicsLayer {
-            scaleX = scale
-            scaleY = scale
-        },
+    Row(
+        modifier = modifier
+            .graphicsLayer {
+                scaleX = scale
+                scaleY = scale
+            }
+            // Le verrouillage de la réponse vibre déjà (`DuelHaptic.Lock`).
+            .pressable(onClick = onClick, enabled = state == DuelOptionState.Idle, haptic = false)
+            .heightIn(min = minHeight)
+            .dsOptionCard(cardState)
+            .padding(horizontal = if (compact) 12.dp else 16.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
     ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .alpha(if (state == DuelOptionState.Dimmed) 0.55f else 1f)
-                .softPress(onClick = onClick, enabled = state == DuelOptionState.Idle)
-                .heightIn(min = minHeight)
-                .background(fill, DS.controlShape)
-                .border(if (plain) 1.dp else 2.dp, border, DS.controlShape)
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
-        ) {
-            if (icon != null) {
-                Icon(icon, contentDescription = null, tint = foreground, modifier = Modifier.size(20.dp))
-            }
-            DuelShrinkText(
-                text = text,
-                fontSize = 16.sp,
-                fontWeight = FontWeight.SemiBold,
-                color = foreground,
-                maxLines = 2,
-                modifier = Modifier.weight(1f),
-            )
-            when (state) {
-                DuelOptionState.Correct ->
-                    Icon(Icons.Filled.CheckCircle, contentDescription = null, tint = foreground, modifier = Modifier.size(22.dp))
-                DuelOptionState.Wrong ->
-                    Icon(Icons.Filled.Cancel, contentDescription = null, tint = foreground, modifier = Modifier.size(22.dp))
-                else -> Unit
-            }
+        if (icon != null) {
+            Icon(icon, contentDescription = null, tint = foreground, modifier = Modifier.size(18.dp))
         }
-        // L'avatar de l'adversaire se pose sur le coin de l'option, hors du texte : dans la grille
-        // 2 × 2 d'une question à image, il ne prend pas la place d'un nom déjà à l'étroit.
+        DuelShrinkText(
+            text = text,
+            fontSize = 16.sp,
+            fontWeight = weight,
+            color = foreground,
+            maxLines = if (compact) 3 else 2,
+            modifier = Modifier.weight(1f),
+        )
+        // L'avatar de l'adversaire (et son pseudo quand il y a la place) sur l'option qu'il a choisie.
         AnimatedVisibility(
             visible = showsOpponent,
-            enter = scaleIn(duelSpring(response = 0.38f, damping = 0.62f), initialScale = 0.2f) + fadeIn(),
+            enter = scaleIn(DSMotion.pop(), initialScale = 0.2f) + fadeIn(),
             exit = fadeOut(tween(100)),
-            modifier = Modifier.align(Alignment.TopEnd).offset(x = 7.dp, y = (-9).dp),
         ) {
-            DuelOpponentMarker(opponent)
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                if (!compact && !playerRevealed && opponent.handle.isNotEmpty()) {
+                    Text(
+                        text = "@${opponent.handle}",
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp,
+                        color = tagColor,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.widthIn(max = 110.dp),
+                    )
+                }
+                DuelOpponentMarker(opponent)
+            }
+        }
+        // La coche de la bonne réponse, ou la croix du mauvais choix du joueur, précédée de « Toi ».
+        if (state == DuelOptionState.Correct || (state == DuelOptionState.Wrong && isPlayerChoice)) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                if (playerRevealed && !compact && youLabel.isNotEmpty()) {
+                    Text(
+                        text = youLabel,
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp,
+                        color = tagColor,
+                        maxLines = 1,
+                    )
+                }
+                if (state == DuelOptionState.Correct) {
+                    DSCheckBadge(size = 26.dp, fill = DS.success)
+                } else {
+                    Box(
+                        modifier = Modifier.dsPopIn().size(26.dp).background(DS.danger, CircleShape),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Icon(Icons.Filled.Close, contentDescription = null, tint = Color.White, modifier = Modifier.size(14.dp))
+                    }
+                }
+            }
         }
     }
 }
 
-/** Le petit avatar de l'adversaire, cerclé de sa couleur : là où il a répondu. */
+/** Le petit avatar de l'adversaire, cerclé de sa couleur (safran) : là où il a répondu. */
 @Composable
 internal fun DuelOpponentMarker(opponent: DuelOpponent, modifier: Modifier = Modifier) {
     Box(modifier = modifier.size(26.dp)) {
         AvatarCircle(avatarId = opponent.avatarId, initial = opponent.initial, size = 26.dp)
-        Box(modifier = Modifier.matchParentSize().border(2.dp, DuelPalette.coral, CircleShape))
+        Box(modifier = Modifier.matchParentSize().border(2.dp, DuelPalette.saffron, CircleShape))
     }
 }
 
@@ -271,10 +326,12 @@ internal fun DuelOpponentMarker(opponent: DuelOpponent, modifier: Modifier = Mod
 internal fun DuelChoiceAnswers(
     ui: DuelQuestionUi,
     opponent: DuelOpponent,
+    language: AppLanguage,
     onChoose: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val options = ui.question.options.orEmpty()
+    val youLabel = StringStore.text(LocalContext.current, "duel.you", language)
     when (ui.question.kind) {
         DuelQuestionKind.TRUE_FALSE -> Row(
             modifier = modifier.fillMaxWidth().height(IntrinsicSize.Min),
@@ -282,10 +339,11 @@ internal fun DuelChoiceAnswers(
         ) {
             options.indices.forEach { index ->
                 ChoiceOption(
-                    ui, index, opponent, onChoose,
+                    ui, index, opponent, youLabel, onChoose,
                     modifier = Modifier.weight(1f).fillMaxHeight(),
                     icon = if (index == 0) Icons.Filled.Check else Icons.Filled.Close,
                     minHeight = 84.dp,
+                    compact = true,
                 )
             }
         }
@@ -297,10 +355,11 @@ internal fun DuelChoiceAnswers(
                 ) {
                     pair.forEach { index ->
                         ChoiceOption(
-                            ui, index, opponent, onChoose,
+                            ui, index, opponent, youLabel, onChoose,
                             modifier = Modifier.weight(1f).fillMaxHeight(),
                             icon = null,
                             minHeight = 60.dp,
+                            compact = true,
                         )
                     }
                     // Un nombre impair d'options : la dernière garde la largeur d'une colonne.
@@ -310,7 +369,13 @@ internal fun DuelChoiceAnswers(
         }
         else -> Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             options.indices.forEach { index ->
-                ChoiceOption(ui, index, opponent, onChoose, modifier = Modifier.fillMaxWidth(), icon = null, minHeight = 56.dp)
+                ChoiceOption(
+                    ui, index, opponent, youLabel, onChoose,
+                    modifier = Modifier.fillMaxWidth(),
+                    icon = null,
+                    minHeight = 56.dp,
+                    compact = false,
+                )
             }
         }
     }
@@ -321,20 +386,35 @@ private fun ChoiceOption(
     ui: DuelQuestionUi,
     index: Int,
     opponent: DuelOpponent,
+    youLabel: String,
     onChoose: (Int) -> Unit,
     modifier: Modifier,
     icon: ImageVector?,
     minHeight: Dp,
+    compact: Boolean,
 ) {
+    val mine = ui.selectedChoice == index
+    // Le mauvais choix du joueur est dévoilé : sa carte tremble. La vibration du verdict vient
+    // du déroulé (`DuelHaptic.Wrong`).
+    val mineWrong = ui.revealed && mine && index != ui.question.correctIndex
+    var shakes by remember { mutableIntStateOf(0) }
+    LaunchedEffect(mineWrong) {
+        if (mineWrong) shakes += 1
+    }
     DuelOptionButton(
         text = ui.question.options.orEmpty().getOrNull(index).orEmpty(),
         state = duelOptionState(index, ui),
         opponent = opponent,
         showsOpponent = ui.revealed && ui.opponentAnswer.choice == index,
         onClick = { onChoose(index) },
-        modifier = modifier,
+        modifier = modifier
+            .dsStagger(index, stepMillis = 50, baseMillis = 60, offset = 10.dp)
+            .dsShake(trigger = shakes),
         icon = icon,
         minHeight = minHeight,
+        isPlayerChoice = mine,
+        compact = compact,
+        youLabel = youLabel,
     )
 }
 
@@ -365,7 +445,7 @@ internal fun DuelQuestionImage(url: String?, modifier: Modifier = Modifier) {
             val painter = rememberAsyncImagePainter(model = request)
             val intrinsic = painter.intrinsicSize
             if (painter.state is AsyncImagePainter.State.Success && intrinsic.width > 0f && intrinsic.height > 0f) {
-                // Un drapeau rogné : coins moins ronds, filet et ombre légère.
+                // Un drapeau rogné : coins moins ronds et filet.
                 val flat = DuelImageTrim.isFlat(intrinsic.width, intrinsic.height)
                 val shape = RoundedCornerShape(if (flat) 8.dp else 16.dp)
                 Image(
@@ -375,9 +455,8 @@ internal fun DuelQuestionImage(url: String?, modifier: Modifier = Modifier) {
                     modifier = Modifier
                         .padding(vertical = if (flat) 8.dp else 0.dp)
                         .aspectRatio(intrinsic.width / intrinsic.height)
-                        .then(if (flat) Modifier.shadow(elevation = 6.dp, shape = shape) else Modifier)
                         .clip(shape)
-                        .then(if (flat) Modifier.border(1.dp, DS.ink.copy(alpha = 0.14f), shape) else Modifier),
+                        .then(if (flat) Modifier.border(1.5.dp, DS.hairline, shape) else Modifier),
                 )
             } else {
                 // Le peintre doit être posé pour charger : une place vide, sans rien dessiner.
@@ -432,7 +511,7 @@ internal fun DuelSliderAnswer(
             fontSize = 44.sp,
             lineHeight = 50.sp,
             style = DuelTabularDigits,
-            color = DS.ink,
+            color = DS.accent,
             maxLines = 1,
         )
 
@@ -478,14 +557,14 @@ internal fun DuelSliderAnswer(
                             .align(Alignment.CenterStart)
                             .fillMaxWidth()
                             .height(12.dp)
-                            .background(DS.surfaceMuted, CircleShape),
+                            .background(DS.accentTint, CircleShape),
                     )
                     Box(
                         modifier = Modifier
                             .align(Alignment.CenterStart)
                             .width(SLIDER_THUMB / 2 + position)
                             .height(12.dp)
-                            .background(DS.accentSoft.copy(alpha = 0.55f), CircleShape),
+                            .background(DS.accent, CircleShape),
                     )
 
                     val correct = question.correctValue
@@ -504,12 +583,7 @@ internal fun DuelSliderAnswer(
                                 y = (-30).dp,
                             ),
                     ) {
-                        Box(
-                            modifier = Modifier.size(SLIDER_MARKER).background(DS.success, CircleShape),
-                            contentAlignment = Alignment.Center,
-                        ) {
-                            Icon(Icons.Filled.Check, contentDescription = null, tint = Color.White, modifier = Modifier.size(15.dp))
-                        }
+                        DSCheckBadge(size = SLIDER_MARKER, fill = DS.success)
                     }
                     val theirs = ui.opponentAnswer.value
                     androidx.compose.animation.AnimatedVisibility(
@@ -534,9 +608,8 @@ internal fun DuelSliderAnswer(
                         modifier = Modifier
                             .align(Alignment.CenterStart)
                             .offset(x = position)
-                            .shadow(6.dp, CircleShape)
                             .size(SLIDER_THUMB)
-                            .background(if (ui.playerLocked) DS.accent else Color.White, CircleShape)
+                            .background(if (ui.playerLocked) DS.accent else DS.surface, CircleShape)
                             .border(3.dp, DS.accent, CircleShape),
                     )
                 }
@@ -601,13 +674,13 @@ internal fun DuelSliderAnswer(
                 }
             }
         } else {
-            // Validé, le bouton reste en place, éteint : la valeur ne bouge plus.
+            // Validé, le bouton reste en place, éteint : la valeur ne bouge plus. La validation
+            // vibre d'elle-même (`DuelHaptic.Lock`).
             DuelPlayButton(
                 text = StringStore.text(context, if (ui.playerLocked) "duel.game.locked" else "duel.game.lock", language),
                 onClick = { if (canMove) onLock() },
-                fill = if (ui.playerLocked) DS.surfaceMuted else DuelPalette.saffron,
-                edge = if (ui.playerLocked) DS.hairline else DuelPalette.playEdge,
-                foreground = if (ui.playerLocked) DS.inkSecondary else DuelPalette.night,
+                fill = if (ui.playerLocked) DS.accentTint else DS.accent,
+                foreground = if (ui.playerLocked) DS.inkSecondary else Color.White,
             )
         }
     }
@@ -619,9 +692,10 @@ private fun SliderStepButton(icon: ImageVector, description: String, enabled: Bo
         modifier = Modifier
             .alpha(if (enabled) 1f else 0.4f)
             .size(44.dp)
-            .softPress(onClick = onClick, enabled = enabled)
+            // Chaque cran du curseur vibre déjà (`DuelHaptic.Tick`).
+            .pressable(onClick = onClick, enabled = enabled, scaleDown = 0.94f, haptic = false)
             .background(DS.surface, CircleShape)
-            .border(1.dp, DS.hairline, CircleShape),
+            .border(1.5.dp, DS.hairline, CircleShape),
         contentAlignment = Alignment.Center,
     ) {
         Icon(icon, contentDescription = description, tint = DS.ink, modifier = Modifier.size(18.dp))
@@ -631,8 +705,9 @@ private fun SliderStepButton(icon: ImageVector, description: String, enabled: Bo
 // ---------------------------------------------------------------- chrono
 
 /**
- * Le cadran du chrono : un anneau qui se vide, et les secondes restantes au centre. Il vire au
- * rouge dans les trois dernières secondes, et se fige à la révélation.
+ * Le minuteur : un anneau bleu qui se vide, et les secondes restantes au centre. Dans les trois
+ * dernières secondes il vire au rouge et bat une fois par seconde (l'avertissement haptique,
+ * unique, vient de `DuelHaptic.Clock`). Il se fige à la révélation.
  */
 @Composable
 internal fun DuelTimerRing(model: DuelGameModel, modifier: Modifier = Modifier, size: Dp = 58.dp) {
@@ -649,20 +724,30 @@ internal fun DuelTimerRing(model: DuelGameModel, modifier: Modifier = Modifier, 
     val limitSeconds = model.question.timeLimitMs / 1000.0
     val seconds by remember(limitSeconds) { derivedStateOf { ceil(fraction * limitSeconds).toInt() } }
     val urgent = answering && seconds <= DuelRules.CLOCK_SECONDS
-    val scale by animateFloatAsState(
-        targetValue = if (urgent) 1.08f else 1f,
-        animationSpec = duelSpring(response = 0.25f, damping = 0.55f),
-        label = "duelTimerScale",
+    val reduceMotion = rememberDuelReduceMotion()
+    val beats = urgent && !reduceMotion
+    val tint by animateColorAsState(
+        targetValue = if (urgent) DuelTheme.stripWrong else DS.accent,
+        animationSpec = tween(180),
+        label = "duelTimerTint",
     )
-    val tint = if (urgent) DuelPalette.coral else DuelPalette.saffron
+    val surface = DS.surface
     Box(
         modifier = modifier
             .size(size)
             .graphicsLayer {
-                scaleX = scale
-                scaleY = scale
+                // Un battement par seconde dans les dernières secondes : nul à chaque seconde
+                // pleine, au plus fort à mi-chemin.
+                val beat = if (beats) {
+                    val wave = sin(fraction * limitSeconds * PI).toFloat()
+                    1f + 0.09f * wave * wave
+                } else {
+                    1f
+                }
+                scaleX = beat
+                scaleY = beat
             }
-            // Le chrono change à chaque image : la ligne d'état dit l'essentiel à la lecture d'écran.
+            // Le chrono change à chaque image : le bandeau dit l'essentiel à la lecture d'écran.
             .clearAndSetSemantics {},
         contentAlignment = Alignment.Center,
     ) {
@@ -670,8 +755,9 @@ internal fun DuelTimerRing(model: DuelGameModel, modifier: Modifier = Modifier, 
             val stroke = 5.dp.toPx()
             val inset = stroke / 2
             val arcSize = Size(this.size.width - stroke, this.size.height - stroke)
+            drawCircle(color = surface)
             drawArc(
-                color = Color.White.copy(alpha = 0.18f),
+                color = DuelTheme.timerTrack,
                 startAngle = 0f,
                 sweepAngle = 360f,
                 useCenter = false,
@@ -695,36 +781,137 @@ internal fun DuelTimerRing(model: DuelGameModel, modifier: Modifier = Modifier, 
             fontWeight = FontWeight.ExtraBold,
             fontSize = (size.value * 0.38f).sp,
             style = DuelTabularDigits,
-            color = if (urgent) DuelPalette.coral else Color.White,
+            color = if (urgent) DuelTheme.stripWrong else DS.ink,
             maxLines = 1,
         )
     }
 }
 
-// ---------------------------------------------------------------- fil du score
+// ---------------------------------------------------------------- bandes de résultats
 
 /**
- * Les 20 questions en une ligne de segments par camp, groupés par manche : vert quand il a
- * marqué, rouge sinon, vide tant que la question n'est pas jouée.
+ * Une case d'une bande : verte quand le camp a marqué, rouge sinon, bleue pour la question en
+ * cours, grise tant qu'elle est à venir. Elle « saute » au moment où elle prend sa couleur.
  */
+@Composable
+private fun RowScope.DuelStripCell(mark: Boolean?, isCurrent: Boolean) {
+    val color by animateColorAsState(
+        targetValue = when (mark) {
+            true -> DuelTheme.stripRight
+            false -> DuelTheme.stripWrong
+            null -> if (isCurrent) DS.accent else DuelTheme.stripIdle
+        },
+        animationSpec = DSMotion.snappy(),
+        label = "duelStripColor",
+    )
+    val pop = remember { Animatable(0f) }
+    // La marque vue à la composition précédente : seul le passage de « à venir » à « jouée » saute.
+    val seen = remember { arrayOf(mark) }
+    LaunchedEffect(mark) {
+        val before = seen[0]
+        seen[0] = mark
+        if (before == null && mark != null) {
+            pop.snapTo(0f)
+            pop.animateTo(1f, tween(120, easing = LinearOutSlowInEasing))
+            pop.animateTo(0f, DSMotion.pop())
+        }
+    }
+    Box(
+        modifier = Modifier
+            .weight(1f)
+            .height(5.dp)
+            .graphicsLayer {
+                scaleX = 1f + 0.15f * pop.value
+                scaleY = 1f + 1.6f * pop.value
+            }
+            .clip(RoundedCornerShape(3.dp))
+            .background(color),
+    )
+}
+
+/** Les questions d'un camp en une ligne de cases, regroupées par manche (cinq questions). */
 @Composable
 internal fun DuelScoreStrip(marks: List<Boolean?>, current: Int, modifier: Modifier = Modifier) {
     val groups = marks.indices.chunked(DuelMatch.QUESTIONS_PER_ROUND)
     Row(
         modifier = modifier.fillMaxWidth().clearAndSetSemantics {},
-        horizontalArrangement = Arrangement.spacedBy(9.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         groups.forEach { group ->
-            Row(modifier = Modifier.weight(1f), horizontalArrangement = Arrangement.spacedBy(3.dp)) {
+            Row(modifier = Modifier.weight(1f), horizontalArrangement = Arrangement.spacedBy(2.dp)) {
                 group.forEach { index ->
-                    val color = when (marks[index]) {
-                        true -> DuelPalette.scored
-                        false -> DuelPalette.coral
-                        null -> Color.White.copy(alpha = if (index == current) 0.75f else 0.2f)
-                    }
-                    Box(modifier = Modifier.weight(1f).height(5.dp).clip(CircleShape).background(color))
+                    DuelStripCell(mark = marks[index], isCurrent = index == current)
                 }
             }
         }
+    }
+}
+
+private val SCORE_BOARD_LABEL = 52.dp
+
+/**
+ * Les deux bandes de résultats (le joueur, puis l'adversaire) sous les étiquettes des manches
+ * M1…Mn ; la manche en cours est en bleu.
+ *
+ * [current] : l'indice de la question en cours ; [currentRound] : le numéro de la manche en
+ * cours (à partir de 1), 0 quand aucune ne l'est (question décisive).
+ */
+@Composable
+internal fun DuelScoreBoard(
+    playerMarks: List<Boolean?>,
+    opponentMarks: List<Boolean?>,
+    current: Int,
+    currentRound: Int,
+    opponentName: String,
+    language: AppLanguage,
+    modifier: Modifier = Modifier,
+) {
+    val context = LocalContext.current
+    val perRound = maxOf(DuelMatch.QUESTIONS_PER_ROUND, 1)
+    val roundCount = maxOf((playerMarks.size + perRound - 1) / perRound, 1)
+    Column(
+        modifier = modifier.fillMaxWidth().clearAndSetSemantics {},
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+            Spacer(Modifier.width(SCORE_BOARD_LABEL))
+            Row(modifier = Modifier.weight(1f), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                for (number in 1..roundCount) {
+                    val tint by animateColorAsState(
+                        targetValue = if (number == currentRound) DS.accent else DuelTheme.faint,
+                        animationSpec = DSMotion.snappy(),
+                        label = "duelRoundLabel",
+                    )
+                    Text(
+                        text = StringStore.text(context, "duel.round.short", language, number),
+                        fontFamily = PlusJakartaSans,
+                        fontWeight = FontWeight.ExtraBold,
+                        fontSize = 10.sp,
+                        letterSpacing = 0.6.sp,
+                        color = tint,
+                        maxLines = 1,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.weight(1f),
+                    )
+                }
+            }
+        }
+        ScoreBoardRow(label = StringStore.text(context, "duel.you", language), strong = true, marks = playerMarks, current = current)
+        ScoreBoardRow(label = opponentName, strong = false, marks = opponentMarks, current = current)
+    }
+}
+
+@Composable
+private fun ScoreBoardRow(label: String, strong: Boolean, marks: List<Boolean?>, current: Int) {
+    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+        DuelShrinkText(
+            text = label,
+            fontSize = 11.sp,
+            fontWeight = if (strong) FontWeight.Bold else FontWeight.SemiBold,
+            color = if (strong) DS.ink else DS.inkSecondary,
+            minScale = 0.7f,
+            modifier = Modifier.width(SCORE_BOARD_LABEL),
+        )
+        DuelScoreStrip(marks = marks, current = current, modifier = Modifier.weight(1f))
     }
 }

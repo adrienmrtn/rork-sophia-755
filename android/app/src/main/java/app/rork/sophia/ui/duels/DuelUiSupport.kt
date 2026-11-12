@@ -98,6 +98,7 @@ internal fun DuelShrinkText(
     maxLines: Int = 1,
     textAlign: TextAlign? = null,
     minScale: Float = 0.75f,
+    letterSpacing: TextUnit = TextUnit.Unspecified,
 ) {
     var scale by remember(text, fontSize) { mutableFloatStateOf(1f) }
     Text(
@@ -112,6 +113,7 @@ internal fun DuelShrinkText(
             fontWeight = fontWeight,
             fontSize = (fontSize.value * scale).sp,
             lineHeight = (fontSize.value * scale * 1.25f).sp,
+            letterSpacing = letterSpacing,
         ),
         onTextLayout = { layout ->
             // Trop long pour ses lignes, ou un mot coupé en deux (« Rembrand / t ») : on réduit.
