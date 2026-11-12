@@ -18,6 +18,9 @@ enum OnboardingScreenTimeFormat {
 
 /// « Combien de temps passes-tu par jour sur ton téléphone ? »
 /// Slider de 30 min à 10 h par blocs de 30 min ; le grand chiffre roule en slide-up.
+///
+/// Style « Elevate arrondi » : titre centré, illustration ronde quand la hauteur le permet,
+/// le temps en très grand et en bleu, le curseur et ses bornes, puis le CTA épinglé.
 struct OnboardingV2PhoneTime: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
@@ -29,11 +32,15 @@ struct OnboardingV2PhoneTime: View {
     private let range: ClosedRange<Double> = 30...600
     private let step: Double = 30
 
+    private var timeLabel: String {
+        OnboardingScreenTimeFormat.label(minutes: Int(minutes), language: languageManager.current)
+    }
+
     var body: some View {
         // Big number, slider and labels: at a large text size on a short phone the CTA below
         // them went off screen. Scrolls instead, with the button pinned.
-        OV2ScrollableContent {
-            pageBody
+        OV2CorePage { height in
+            pageBody(height: height)
         } footer: {
             OnboardingV2Button(title: languageManager.text("common.continue")) {
                 vm.phoneDailyMinutes = Int(minutes)
@@ -47,65 +54,83 @@ struct OnboardingV2PhoneTime: View {
         }
     }
 
-    /// Page content, unchanged; the container above is what keeps the CTA on screen.
-    private var pageBody: some View {
-        VStack(spacing: 0) {
-            Spacer().frame(height: 84)
+    private func pageBody(height: CGFloat) -> some View {
+        let art: CGFloat = OV2CoreMetrics.artSize(base: 116, available: height, reserved: 360)
+        return VStack(spacing: 0) {
+            OV2CoreQuestionTitle(title: languageManager.text("onboardingV2.phoneTime.title"))
+                .padding(.top, OV2CoreMetrics.topInset)
+                .dsStagger(0)
 
-            Text(languageManager.text("onboardingV2.phoneTime.title"))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(OV2.ink)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 28)
-                .ov2Reveal(delay: 0.1)
+            if art > 0 {
+                OV2CoreIllustration(art: .phone, size: art)
+                    .padding(.top, 22)
+                    .dsPopIn(delay: 0.12)
+            }
 
-            Spacer()
+            Spacer(minLength: 24)
 
-            Text(OnboardingScreenTimeFormat.label(minutes: Int(minutes), language: languageManager.current))
-                .font(.system(size: 68, weight: .heavy, design: .rounded))
+            Text(timeLabel)
+                .font(.jakarta(size: 84, weight: .heavy))
                 .foregroundStyle(OV2.accent)
                 .monospacedDigit()
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
                 .contentTransition(.numericText(value: minutes))
-                .animation(.spring(response: 0.35, dampingFraction: 0.82), value: minutes)
+                .animation(DS.Motion.snappy, value: minutes)
+                .padding(.horizontal, OV2CoreMetrics.sideInset)
+                .dsStagger(1)
 
-            Spacer().frame(height: 32)
+            sliderBlock
+                .padding(.horizontal, 32)
+                .padding(.top, 28)
+                .dsStagger(2)
 
-            VStack(spacing: 8) {
-                Slider(value: $minutes, in: range, step: step)
-                    .tint(OV2.accent)
-                    .onChange(of: minutes) { _, newValue in
-                        let s = Int(newValue / step)
-                        if s != lastStep {
-                            lastStep = s
-                            vm.phoneDailyMinutes = Int(newValue)
-                            OnboardingHaptics.selection()
-                        }
+            Spacer(minLength: 24)
+        }
+        // Le bloc chiffre + curseur se centre dans la hauteur qui reste sous l'illustration.
+        .frame(minHeight: height)
+    }
+
+    private var sliderBlock: some View {
+        VStack(spacing: 8) {
+            Slider(value: $minutes, in: range, step: step)
+                .tint(OV2.accent)
+                .accessibilityLabel(Text(languageManager.text("onboardingV2.phoneTime.title")))
+                .accessibilityValue(Text(timeLabel))
+                .onChange(of: minutes) { _, newValue in
+                    let s = Int(newValue / step)
+                    if s != lastStep {
+                        lastStep = s
+                        vm.phoneDailyMinutes = Int(newValue)
+                        OnboardingHaptics.selection()
                     }
-
-                HStack {
-                    Text(OnboardingScreenTimeFormat.label(minutes: Int(range.lowerBound), language: languageManager.current))
-                    Spacer()
-                    Text(OnboardingScreenTimeFormat.label(minutes: Int(range.upperBound), language: languageManager.current))
                 }
-                .font(DS.sans(.caption, .semibold))
-                .foregroundStyle(OV2.inkTertiary)
-            }
-            .padding(.horizontal, 36)
-            .ov2Reveal(delay: 0.3)
 
-            Spacer()
+            HStack {
+                Text(OnboardingScreenTimeFormat.label(minutes: Int(range.lowerBound), language: languageManager.current))
+                Spacer()
+                Text(OnboardingScreenTimeFormat.label(minutes: Int(range.upperBound), language: languageManager.current))
+            }
+            .font(DS.sans(.footnote, .semibold))
+            .foregroundStyle(OV2.inkSecondary)
         }
     }
 }
 
 // MARK: - Page 2/4 — Ta vie en années (80 carrés)
 
-/// 80 carrés = 80 années de vie. Ils se colorent par tiers : le sommeil en vert, le travail
-/// en marron, puis le temps libre qui reste. Ensuite tout s'efface sauf le temps libre, et
-/// dedans, carré après carré, en rouge, les années passées sur le téléphone (d'après le temps
-/// d'écran quotidien déclaré) ; le nombre s'affiche en grand, puis la phrase.
+/// 80 carrés = 80 années de vie. Ils se colorent lentement, un tiers après l'autre : le
+/// sommeil en vert, le travail en marron, puis le temps libre qui reste. Ensuite, dans ce temps
+/// libre, carré après carré, en rouge, les années passées sur le téléphone (d'après le temps
+/// d'écran quotidien déclaré) ; la conclusion — le nombre en grand et sa phrase — n'arrive
+/// qu'à la toute fin.
+///
+/// La séquence dure environ 14 secondes et rien n'annonce le nombre avant : le titre est
+/// neutre (« Voici ta vie en années »), la ligne « téléphone » de la légende compte en même
+/// temps que les carrés. Le bouton « Continuer » reste utilisable du début à la fin.
 struct OnboardingV2YearsGrid: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
@@ -115,14 +140,10 @@ struct OnboardingV2YearsGrid: View {
     @State private var sleepFilled: Int = 0
     @State private var workFilled: Int = 0
     @State private var freeFilled: Int = 0
-    /// Carrés rouges dans le temps libre (phase finale : années passées sur le téléphone).
+    /// Carrés rouges dans le temps libre (années passées sur le téléphone).
     @State private var screenFilled: Int = 0
-    /// `true` quand le sommeil et le travail s'effacent pour ne laisser que le temps libre.
-    @State private var focusPhone = false
-    @State private var showTitle = false
-    @State private var showNumber = false
-    @State private var showCaption = false
-    @State private var showButton = false
+    /// La conclusion (nombre en grand + phrase), dernière à arriver.
+    @State private var showConclusion = false
     /// `true` une fois la séquence jouée jusqu'au bout : inutile de la rejouer si la page
     /// réapparaît (rotation, retour d'arrière-plan).
     @State private var sequenceDone = false
@@ -137,6 +158,9 @@ struct OnboardingV2YearsGrid: View {
     private static let sleepColor = Color(red: 0.30, green: 0.62, blue: 0.42)
     private static let workColor = Color(red: 0.55, green: 0.38, blue: 0.24)
     private static let freeColor = Color(red: 0.72, green: 0.82, blue: 0.95)
+    /// Rouge des années passées sur le téléphone.
+    private static let phoneColor = Color(red: 0.784, green: 0.251, blue: 0.184)
+    private static let gridSpacing: CGFloat = 7
 
     private var freeYears: Int {
         totalYears - sleepYears - workYears
@@ -149,7 +173,7 @@ struct OnboardingV2YearsGrid: View {
     }
 
     private var gridColumns: [GridItem] {
-        Array(repeating: GridItem(.flexible(), spacing: 8), count: columns)
+        Array(repeating: GridItem(.flexible(), spacing: Self.gridSpacing), count: columns)
     }
 
     var body: some View {
@@ -157,12 +181,12 @@ struct OnboardingV2YearsGrid: View {
         // grew until the button sat hundreds of points below the fold, and on a short
         // phone at a large text size the caption pushed it off the bottom. Scrolls, with
         // the button pinned; `ov2Background` caps the width on a tablet.
-        OV2ScrollableContent {
+        OV2CorePage { height in
             pageBody
+                .frame(minHeight: height, alignment: .top)
         } footer: {
+            // Toujours là, toujours actif : on peut passer sans attendre la fin.
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
-                .opacity(showButton ? 1 : 0)
-                .allowsHitTesting(showButton)
         }
         .ov2Background()
         .onAppear { startSequence() }
@@ -171,81 +195,77 @@ struct OnboardingV2YearsGrid: View {
 
     /// Page content; the container above is what keeps the CTA on screen.
     private var pageBody: some View {
-        VStack(spacing: 0) {
-            Spacer(minLength: 64)
+        VStack(alignment: .leading, spacing: 0) {
+            header
+                .padding(.top, 16)
 
-            Text(languageManager.text("onboardingV2.yearsGrid.title"))
-                .font(DS.title(.title, .heavy))
-                .foregroundStyle(OV2.ink)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 28)
-                .opacity(showTitle ? 1 : 0)
-                .offset(y: showTitle ? 0 : 14)
+            Spacer(minLength: 20)
 
-            Spacer().frame(height: 26)
-
-            LazyVGrid(columns: gridColumns, spacing: 8) {
-                ForEach(0..<totalYears, id: \.self) { i in
-                    let isRevealed = i < revealed
-                    let filled = isFilled(i)
-                    RoundedRectangle(cornerRadius: 4, style: .continuous)
-                        .fill(squareColor(i))
-                        .aspectRatio(1, contentMode: .fit)
-                        .scaleEffect(isRevealed ? (filled ? 1 : 0.9) : 0.3)
-                        .opacity(isRevealed ? squareOpacity(i) : 0)
-                }
-            }
-            .padding(.horizontal, 36)
-
-            Spacer().frame(height: 20)
+            grid
 
             legend
-                .padding(.horizontal, 28)
+                .padding(.top, 20)
 
-            Spacer().frame(height: 18)
+            conclusion
+                .padding(.top, 20)
 
-            // Le nombre en grand, puis la phrase : c'est ce que la page veut faire retenir.
-            Text(AppLocalizable.yearsString(screenYears, language: languageManager.current))
-                .font(.jakarta(size: 44, weight: .heavy))
-                .foregroundStyle(OV2.danger)
-                .monospacedDigit()
-                .scaleEffect(showNumber ? 1 : 0.6)
-                .opacity(showNumber ? 1 : 0)
-
-            Text(String(
-                format: languageManager.text("onboardingV2.yearsGrid.captionFree"),
-                freeYears, screenYears
-            ))
-            .font(DS.sans(.body, .bold))
-            .foregroundStyle(OV2.danger)
-            .multilineTextAlignment(.center)
-            .fixedSize(horizontal: false, vertical: true)
-            .padding(.horizontal, 32)
-            .padding(.top, 8)
-            .opacity(showCaption ? 1 : 0)
-            .offset(y: showCaption ? 0 : 12)
-
-            // Le pendant du `Spacer(minLength: 64)` du haut : les deux ensemble recentrent
-            // le contenu quand il tient, et se réduisent dès que ça défile.
-            Spacer(minLength: 48)
+            Spacer(minLength: 16)
         }
+        .padding(.horizontal, OV2CoreMetrics.sideInset)
     }
 
-    // MARK: - Couleurs des carrés
+    // MARK: - En-tête
+
+    /// « Voici **ta vie en années** » et « Une case, une année. » : visibles dès l'ouverture,
+    /// sans rien dire du résultat.
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            OV2CoreHighlightTitle(
+                text: OV2CoreText.marked(
+                    "onboardingV2.yearsGrid.title",
+                    highlightKey: "elevateOnboardingCore.yearsGrid.titleHighlight",
+                    language: languageManager.current
+                ),
+                size: 25
+            )
+            Text(OV2CoreText.string("elevateOnboardingCore.yearsGrid.subtitle", language: languageManager.current))
+                .font(DS.sans(.subheadline, .regular))
+                .foregroundStyle(OV2.inkSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .dsStagger(0)
+    }
+
+    // MARK: - Grille
+
+    private var grid: some View {
+        LazyVGrid(columns: gridColumns, spacing: Self.gridSpacing) {
+            ForEach(0..<totalYears, id: \.self) { i in
+                let isRevealed: Bool = i < revealed
+                let filled: Bool = isFilled(i)
+                RoundedRectangle(cornerRadius: 5, style: .continuous)
+                    .fill(squareColor(i))
+                    .aspectRatio(1, contentMode: .fit)
+                    .scaleEffect(isRevealed ? (filled ? 1 : 0.88) : 0.3)
+                    .opacity(isRevealed ? 1 : 0)
+            }
+        }
+        .accessibilityHidden(true)
+    }
 
     /// Le carré `i` dans l'ordre de la grille : sommeil, travail, puis temps libre (où les
     /// premiers carrés deviennent rouges).
     private func squareColor(_ i: Int) -> Color {
         if i < sleepYears {
-            return i < sleepFilled ? Self.sleepColor : OV2.hairline.opacity(0.7)
+            return i < sleepFilled ? Self.sleepColor : OV2.hairline
         }
         let work = i - sleepYears
         if work < workYears {
-            return work < workFilled ? Self.workColor : OV2.hairline.opacity(0.7)
+            return work < workFilled ? Self.workColor : OV2.hairline
         }
         let free = i - sleepYears - workYears
-        if free < screenFilled { return OV2.danger }
-        return free < freeFilled ? Self.freeColor : OV2.hairline.opacity(0.7)
+        if free < screenFilled { return Self.phoneColor }
+        return free < freeFilled ? Self.freeColor : OV2.hairline
     }
 
     private func isFilled(_ i: Int) -> Bool {
@@ -256,135 +276,187 @@ struct OnboardingV2YearsGrid: View {
         return free < freeFilled || free < screenFilled
     }
 
-    /// Le sommeil et le travail s'effacent quand le temps libre devient le sujet.
-    private func squareOpacity(_ i: Int) -> Double {
-        (focusPhone && i < sleepYears + workYears) ? 0.3 : 1
-    }
-
     // MARK: - Légende
 
-    /// Une pastille par tiers, qui apparaît quand son tiers commence à se colorer.
+    /// Une ligne par couleur, sur deux colonnes ; chacune apparaît quand sa couleur commence
+    /// à se poser. La ligne « téléphone » compte avec les carrés rouges.
     private var legend: some View {
-        OV2FlowLayout(spacing: 8, lineSpacing: 8) {
-            legendChip(color: Self.sleepColor, textColor: Self.sleepColor, key: "onboardingV2.yearsGrid.sleep", years: sleepYears, shown: sleepFilled > 0, dimmed: focusPhone)
-            legendChip(color: Self.workColor, textColor: Self.workColor, key: "onboardingV2.yearsGrid.work", years: workYears, shown: workFilled > 0, dimmed: focusPhone)
-            legendChip(color: Self.freeColor, textColor: OV2.accentSoft, key: "onboardingV2.yearsGrid.free", years: freeYears, shown: freeFilled > 0, dimmed: false)
-            legendChip(color: OV2.danger, textColor: OV2.danger, key: "onboardingV2.yearsGrid.screen", years: screenYears, shown: screenFilled > 0, dimmed: false)
+        let legendColumns: [GridItem] = [
+            GridItem(.flexible(), spacing: 16, alignment: .leading),
+            GridItem(.flexible(), spacing: 16, alignment: .leading),
+        ]
+        return LazyVGrid(columns: legendColumns, alignment: .leading, spacing: 12) {
+            legendRow(color: Self.sleepColor, key: "onboardingV2.yearsGrid.sleep", years: sleepYears, shown: sleepFilled > 0)
+            legendRow(color: Self.workColor, key: "onboardingV2.yearsGrid.work", years: workYears, shown: workFilled > 0)
+            legendRow(color: Self.freeColor, key: "onboardingV2.yearsGrid.free", years: freeYears, shown: freeFilled > 0)
+            legendRow(color: Self.phoneColor, key: "onboardingV2.yearsGrid.screen", years: max(screenFilled, 1), shown: screenFilled > 0)
         }
     }
 
-    private func legendChip(color: Color, textColor: Color, key: String, years: Int, shown: Bool, dimmed: Bool) -> some View {
-        HStack(spacing: 7) {
-            Circle().fill(color).frame(width: 10, height: 10)
+    private func legendRow(color: Color, key: String, years: Int, shown: Bool) -> some View {
+        HStack(spacing: 8) {
+            RoundedRectangle(cornerRadius: 4, style: .continuous)
+                .fill(color)
+                .frame(width: 12, height: 12)
             Text(languageManager.text(key))
-                .font(DS.sans(.caption, .semibold))
-                .foregroundStyle(OV2.ink)
+                .font(DS.sans(.footnote, .regular))
+                .foregroundStyle(OV2.inkSecondary)
+                .lineLimit(2)
+                .minimumScaleFactor(0.8)
+            Spacer(minLength: 4)
             Text(AppLocalizable.yearsString(years, language: languageManager.current))
-                .font(DS.sans(.caption, .bold))
-                .foregroundStyle(textColor)
+                .font(DS.sans(.subheadline, .bold))
+                .foregroundStyle(OV2.ink)
+                .monospacedDigit()
+                .lineLimit(1)
+                .contentTransition(.numericText(value: Double(years)))
         }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 6)
-        .background(OV2.surface, in: Capsule())
-        .overlay(Capsule().strokeBorder(OV2.hairline, lineWidth: 1))
-        .opacity(shown ? (dimmed ? 0.45 : 1) : 0)
-        .scaleEffect(shown ? 1 : 0.85)
-        .animation(.spring(response: 0.4, dampingFraction: 0.75), value: shown)
-        .animation(.easeInOut(duration: 0.5), value: dimmed)
+        .opacity(shown ? 1 : 0)
+        .offset(y: shown || reduceMotion ? 0 : 10)
+        .animation(DS.Motion.reveal, value: shown)
+        .accessibilityElement(children: .combine)
+        .accessibilityHidden(!shown)
+    }
+
+    // MARK: - Conclusion
+
+    /// Le nombre en grand, puis la phrase : c'est ce que la page veut faire retenir. Sa place
+    /// est réservée dès le début pour que rien ne saute quand elle arrive.
+    private var conclusion: some View {
+        HStack(alignment: .center, spacing: 14) {
+            Text(AppLocalizable.yearsString(screenYears, language: languageManager.current))
+                .font(.jakarta(size: 36, weight: .heavy))
+                .foregroundStyle(DS.danger)
+                .monospacedDigit()
+                .lineLimit(1)
+                .fixedSize()
+
+            Text(String(
+                format: languageManager.text("onboardingV2.yearsGrid.captionFree"),
+                freeYears, screenYears
+            ))
+            .font(DS.sans(.subheadline, .semibold))
+            .foregroundStyle(DS.danger)
+            .multilineTextAlignment(.leading)
+            .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 14)
+        .background(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(DS.dangerTint)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .strokeBorder(DS.danger.opacity(0.28), lineWidth: 1.5)
+        )
+        .opacity(showConclusion ? 1 : 0)
+        .offset(y: showConclusion || reduceMotion ? 0 : 14)
+        .scaleEffect(showConclusion || reduceMotion ? 1 : 0.96)
+        .accessibilityElement(children: .combine)
+        .accessibilityHidden(!showConclusion)
     }
 
     // MARK: - Séquence
 
-    /// Démarre (ou reprend) l'enchaînement, et garantit que le CTA finit toujours par
-    /// apparaître.
+    /// Démarre (ou reprend) l'enchaînement.
     ///
-    /// La séquence était annulée par `onDisappear`, et `guard animTask == nil` empêchait
-    /// ensuite tout redémarrage : une seule interruption (rotation, redimensionnement de
-    /// fenêtre sur iPad, retour depuis l'arrière-plan) laissait la grille figée **sans
-    /// bouton**, donc un onboarding sans issue. C'est le blocage signalé par l'App Store
-    /// (Guideline 2.1(a), « indefinite loading during onboarding », iPad Air M3 / iPadOS 26.6.2).
+    /// La séquence est annulée par `onDisappear` (rotation, redimensionnement de fenêtre sur
+    /// iPad, retour depuis l'arrière-plan) : elle reprend ici là où elle s'était arrêtée. Elle
+    /// ne conditionne plus la sortie de la page — le bouton est là dès l'ouverture —, ce qui
+    /// écarte pour de bon le blocage signalé par l'App Store (Guideline 2.1(a), « indefinite
+    /// loading during onboarding », iPad Air M3 / iPadOS 26.6.2).
     ///
-    /// Désormais : la séquence reprend là où elle s'était arrêtée, et qu'elle aille au bout
-    /// ou qu'elle soit interrompue, le bouton est révélé dans tous les cas.
+    /// Avec « Réduire les animations », la page s'affiche directement dans son état final.
     private func startSequence() {
         guard !sequenceDone else { return }
         animTask?.cancel()
+        if reduceMotion {
+            showFinalState()
+            return
+        }
         animTask = Task { @MainActor in
             let finished = await playSequence()
             if finished { sequenceDone = true }
-            // Terminée ou interrompue, la page offre toujours une sortie.
-            withAnimation(.easeOut(duration: 0.5)) { showButton = true }
         }
     }
 
-    /// Enchaînement scénarisé, posé : (1) ouverture des 80 carrés gris, (2) titre, (3) sommeil
-    /// en vert, travail en marron, temps libre en bleu pâle, chacun avec sa pastille,
-    /// (4) le sommeil et le travail s'effacent, (5) carré après carré, en rouge, les années de
-    /// temps libre passées sur le téléphone, (6) le nombre en grand, la phrase, le bouton.
+    private func showFinalState() {
+        revealed = totalYears
+        sleepFilled = sleepYears
+        workFilled = workYears
+        freeFilled = freeYears
+        screenFilled = screenYears
+        showConclusion = true
+        sequenceDone = true
+    }
+
+    /// Enchaînement lent et séquentiel, environ 14 s : (1) ouverture des 80 carrés gris,
+    /// (2) le sommeil en vert, (3) le travail en marron, (4) le temps libre en bleu pâle —
+    /// chacun avec sa ligne de légende et un temps de lecture —, (5) carré après carré, en
+    /// rouge, les années de temps libre passées sur le téléphone, (6) la conclusion.
     /// Reprend à l'état courant, donc rejouable sans repartir de zéro. Retourne `false` si
     /// elle a été annulée en cours de route.
     private func playSequence() async -> Bool {
-        // Phase 1 — ouverture des carrés gris.
+        // Phase 1 — ouverture des carrés gris (≈ 0,3 → 1,2 s).
         if revealed < totalYears {
-            try? await Task.sleep(nanoseconds: 300_000_000)
+            guard await pause(0.3) else { return false }
             for i in (revealed + 1)...totalYears {
                 if Task.isCancelled { return false }
                 withAnimation(.spring(response: 0.4, dampingFraction: 0.72)) { revealed = i }
                 if i % 10 == 0 { OnboardingHaptics.selection() }
-                try? await Task.sleep(nanoseconds: 10_000_000)
+                try? await Task.sleep(nanoseconds: 11_000_000)
             }
+            guard await pause(0.8) else { return false }
         }
 
-        // Phase 2 — « Voici ta vie en années ».
-        if !showTitle {
-            try? await Task.sleep(nanoseconds: 400_000_000)
-            if Task.isCancelled { return false }
-            withAnimation(.easeOut(duration: 0.7)) { showTitle = true }
-            try? await Task.sleep(nanoseconds: 700_000_000)
+        // Phase 2 — le sommeil (≈ 2,0 → 3,4 s), puis le temps de le lire.
+        if sleepFilled < sleepYears {
+            let done = await fill(to: sleepYears, from: sleepFilled, interval: 50_000_000) { sleepFilled = $0 }
+            guard done else { return false }
+            guard await pause(1.25) else { return false }
         }
 
-        // Phase 3 — les trois tiers, chacun le temps d'être lu.
-        let sleepDone = await fill(to: sleepYears, from: sleepFilled, interval: 30_000_000) { sleepFilled = $0 }
-        guard sleepDone else { return false }
-        try? await Task.sleep(nanoseconds: 550_000_000)
-        let workDone = await fill(to: workYears, from: workFilled, interval: 30_000_000) { workFilled = $0 }
-        guard workDone else { return false }
-        try? await Task.sleep(nanoseconds: 550_000_000)
-        let freeDone = await fill(to: freeYears, from: freeFilled, interval: 30_000_000) { freeFilled = $0 }
-        guard freeDone else { return false }
-        try? await Task.sleep(nanoseconds: 700_000_000)
-
-        // Phase 4 — le sommeil et le travail s'effacent : il ne reste que le temps libre.
-        if !focusPhone {
-            if Task.isCancelled { return false }
-            withAnimation(.easeInOut(duration: 0.6)) { focusPhone = true }
-            try? await Task.sleep(nanoseconds: 700_000_000)
+        // Phase 3 — le travail (≈ 4,6 → 6,0 s).
+        if workFilled < workYears {
+            let done = await fill(to: workYears, from: workFilled, interval: 50_000_000) { workFilled = $0 }
+            guard done else { return false }
+            guard await pause(1.25) else { return false }
         }
 
-        // Phase 5 — les années de temps libre passées sur le téléphone, une par une.
+        // Phase 4 — le temps libre (≈ 7,2 → 8,5 s).
+        if freeFilled < freeYears {
+            let done = await fill(to: freeYears, from: freeFilled, interval: 50_000_000) { freeFilled = $0 }
+            guard done else { return false }
+            guard await pause(1.5) else { return false }
+        }
+
+        // Phase 5 — les années de temps libre passées sur le téléphone, une par une
+        // (≈ 10 → 13 s, quel que soit leur nombre).
         let target = screenYears
         if screenFilled < target {
+            let perSquare: Double = min(0.45, max(0.12, 3.0 / Double(target)))
             for i in (screenFilled + 1)...target {
                 if Task.isCancelled { return false }
                 withAnimation(.spring(response: 0.35, dampingFraction: 0.6)) { screenFilled = i }
                 OnboardingHaptics.counterTick(progress: Double(i) / Double(target))
-                try? await Task.sleep(nanoseconds: 140_000_000)
+                guard await pause(perSquare) else { return false }
             }
             OnboardingHaptics.counterComplete()
         }
 
-        // Phase 6 — le nombre en grand, puis la phrase, puis le bouton (révélé par l'appelant).
-        if !showNumber {
-            try? await Task.sleep(nanoseconds: 250_000_000)
-            if Task.isCancelled { return false }
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.6)) { showNumber = true }
-            try? await Task.sleep(nanoseconds: 450_000_000)
+        // Phase 6 — la conclusion, en dernier (≈ 13,6 s).
+        if !showConclusion {
+            guard await pause(0.6) else { return false }
+            withAnimation(DS.Motion.pop) { showConclusion = true }
         }
-        if !showCaption {
-            if Task.isCancelled { return false }
-            withAnimation(.easeOut(duration: 0.6)) { showCaption = true }
-        }
-        try? await Task.sleep(nanoseconds: 600_000_000)
+        return await pause(0.8)
+    }
+
+    /// Attend `seconds` ; retourne `false` si la tâche a été annulée entre-temps.
+    private func pause(_ seconds: Double) async -> Bool {
+        try? await Task.sleep(nanoseconds: UInt64(seconds * 1_000_000_000))
         return !Task.isCancelled
     }
 
@@ -394,7 +466,7 @@ struct OnboardingV2YearsGrid: View {
         guard current < count else { return true }
         for i in (current + 1)...count {
             if Task.isCancelled { return false }
-            withAnimation(.easeOut(duration: 0.25)) { apply(i) }
+            withAnimation(.easeOut(duration: 0.4)) { apply(i) }
             if i % 9 == 0 { OnboardingHaptics.selection() }
             try? await Task.sleep(nanoseconds: interval)
         }
@@ -407,8 +479,11 @@ struct OnboardingV2YearsGrid: View {
 /// Moment doux : la phrase « Avec Sophia, transforme ce temps en culture » se met en gras
 /// progressivement (mot par mot). Chaque mot occupe un emplacement de largeur fixe (largeur
 /// « gras ») pour éviter tout décalage du texte quand le gras arrive. Une fois le gras au bout,
-/// le dernier mot bascule (par le haut) entre « culture », « art », « philosophie »… en couleur.
+/// le dernier mot bascule (par le haut) entre « culture », « art », « philosophie »… en bleu.
 /// Pas de CTA : on tape n'importe où pour continuer.
+///
+/// Style « Elevate arrondi » : une illustration ronde au-dessus de la phrase, en très grand et
+/// centrée ; l'invitation à toucher l'écran en bas.
 struct OnboardingV2Transform: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
@@ -419,16 +494,6 @@ struct OnboardingV2Transform: View {
     @State private var swapping = false
     @State private var swapIndex = 0
     @State private var animTask: Task<Void, Never>?
-
-    /// Couleurs successives du mot qui bascule (la première reste l'accent, en continuité
-    /// avec le dernier mot mis en gras).
-    private let swapColors: [Color] = [
-        OV2.accent,
-        OV2.danger,
-        OV2.warm,
-        OV2.success,
-        Color(red: 0.48, green: 0.36, blue: 0.82),
-    ]
 
     private var words: [String] {
         TextSegmentation.animationWords(languageManager.text("onboardingV2.transform.text"), keepLastWhole: true)
@@ -442,28 +507,35 @@ struct OnboardingV2Transform: View {
     }
 
     var body: some View {
-        ZStack {
-            OV2.bg.ignoresSafeArea()
+        GeometryReader { geo in
+            let style: Font.TextStyle = OV2CoreMetrics.sentenceStyle(
+                words: words + swapWords,
+                width: geo.size.width - OV2CoreMetrics.sideInset * 2
+            )
+            ZStack {
+                VStack(spacing: 26) {
+                    OV2CoreIllustration(art: .nightBook, size: 150)
+                        .dsPopIn(delay: 0.1)
 
-            OV2FlowLayout(spacing: languageManager.current == .japanese ? 0 : 7, lineSpacing: 10) {
-                ForEach(Array(words.enumerated()), id: \.offset) { i, word in
-                    if i == words.count - 1 {
-                        swapCell(fallback: word)
-                    } else {
-                        wordCell(word, bold: i < boldCount)
+                    OV2FlowLayout(spacing: languageManager.current == .japanese ? 0 : 8, lineSpacing: 6) {
+                        ForEach(Array(words.enumerated()), id: \.offset) { i, word in
+                            if i == words.count - 1 {
+                                swapCell(fallback: word, style: style)
+                            } else {
+                                wordCell(word, bold: i < boldCount, style: style)
+                            }
+                        }
                     }
                 }
-            }
-            .padding(.horizontal, 28)
+                .padding(.horizontal, OV2CoreMetrics.sideInset)
 
-            VStack {
-                Spacer()
-                Text(languageManager.text("onboardingV2.transform.tapHint"))
-                    .font(DS.sans(.footnote, .semibold))
-                    .foregroundStyle(OV2.inkTertiary)
-                    .opacity(showHint ? 1 : 0)
-                    .padding(.bottom, 40)
+                VStack {
+                    Spacer()
+                    OV2CoreTapHint(text: languageManager.text("onboardingV2.transform.tapHint"), visible: showHint)
+                        .padding(.bottom, 28)
+                }
             }
+            .frame(width: geo.size.width, height: geo.size.height)
         }
         .ov2Background()
         .contentShape(Rectangle())
@@ -474,12 +546,12 @@ struct OnboardingV2Transform: View {
 
     // MARK: - Cellules de mots (largeur fixe = largeur « gras »)
 
-    private func wordCell(_ word: String, bold: Bool) -> some View {
+    private func wordCell(_ word: String, bold: Bool, style: Font.TextStyle) -> some View {
         ZStack {
             // Sizer invisible en gras : réserve toujours la largeur maximale du mot.
-            Text(word).font(DS.title(.title, .heavy)).opacity(0)
+            Text(word).font(DS.title(style, .heavy)).opacity(0)
             Text(word)
-                .font(DS.title(.title, bold ? .heavy : .regular))
+                .font(DS.title(style, bold ? .heavy : .regular))
                 .foregroundStyle(bold ? OV2.ink : OV2.inkTertiary)
                 .animation(.easeOut(duration: 0.3), value: bold)
         }
@@ -487,22 +559,21 @@ struct OnboardingV2Transform: View {
     }
 
     @ViewBuilder
-    private func swapCell(fallback: String) -> some View {
+    private func swapCell(fallback: String, style: Font.TextStyle) -> some View {
         let lastRevealed = boldCount >= words.count
         let text = swapping && !swapWords.isEmpty
             ? swapWords[swapIndex % swapWords.count]
             : (swapWords.first ?? fallback)
-        let color = swapping
-            ? swapColors[swapIndex % swapColors.count]
-            : (lastRevealed ? OV2.accent : OV2.inkTertiary)
+        // Le mot qui bascule est toujours en bleu d'accent, dès que le gras l'atteint.
+        let color: Color = (swapping || lastRevealed) ? OV2.accent : OV2.inkTertiary
 
         ZStack {
             // Sizer : empile tous les mots possibles (gras) pour figer la largeur du slot.
             ForEach(swapWords.isEmpty ? [fallback] : swapWords, id: \.self) { w in
-                Text(w).font(DS.title(.title, .heavy)).opacity(0)
+                Text(w).font(DS.title(style, .heavy)).opacity(0)
             }
             Text(text)
-                .font(DS.title(.title, (swapping || lastRevealed) ? .heavy : .regular))
+                .font(DS.title(style, (swapping || lastRevealed) ? .heavy : .regular))
                 .foregroundStyle(color)
                 .id(swapping ? swapIndex : -1)
                 .transition(.asymmetric(

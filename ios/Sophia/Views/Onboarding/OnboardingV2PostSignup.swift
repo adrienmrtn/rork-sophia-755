@@ -95,7 +95,7 @@ private struct OnboardingV2AboardMedallion: View {
             }
             .scaleEffect(shown || reduceMotion ? 1 : 0.6)
             .opacity(shown ? 1 : 0)
-            .offset(y: floating ? -5 : 5)
+            .offset(y: floating ? -5 : (reduceMotion ? 0 : 5))
             .accessibilityHidden(true)
             .onAppear(perform: start)
     }
