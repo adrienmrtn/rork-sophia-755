@@ -4,10 +4,9 @@ import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -48,7 +47,6 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -116,7 +114,7 @@ object SophiaShare {
 @Composable
 fun ShareSophiaSheet(language: AppLanguage, onDismiss: () -> Unit) {
     val context = LocalContext.current
-    val view = LocalView.current
+    val haptics = rememberHaptics()
     val clipboard = LocalClipboardManager.current
     val message = remember(language) { SophiaShare.message(context, language) }
     fun text(key: String) = StringStore.text(context, key, language)
@@ -124,7 +122,7 @@ fun ShareSophiaSheet(language: AppLanguage, onDismiss: () -> Unit) {
     val appeared = remember { Animatable(0f) }
     LaunchedEffect(Unit) {
         delay(100)
-        appeared.animateTo(1f, spring(dampingRatio = 0.65f, stiffness = 130f))
+        appeared.animateTo(1f, DSMotion.pop())
     }
     // A counter rather than a flag, so a second tap restarts the « Copied! » timer.
     var copiedTaps by remember { mutableIntStateOf(0) }
@@ -140,7 +138,7 @@ fun ShareSophiaSheet(language: AppLanguage, onDismiss: () -> Unit) {
         onDismissRequest = onDismiss,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
         containerColor = DS.canvas,
-        shape = RoundedCornerShape(topStart = 30.dp, topEnd = 30.dp),
+        shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
     ) {
         Column(
             modifier = Modifier
@@ -179,7 +177,7 @@ fun ShareSophiaSheet(language: AppLanguage, onDismiss: () -> Unit) {
                 Text(
                     text = text("share.title"),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
+                    fontWeight = FontWeight.SemiBold,
                     fontSize = 22.sp,
                     lineHeight = 28.sp,
                     color = DS.ink,
@@ -190,7 +188,6 @@ fun ShareSophiaSheet(language: AppLanguage, onDismiss: () -> Unit) {
                 Text(
                     text = text("share.subtitle"),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Medium,
                     fontSize = 15.sp,
                     lineHeight = 21.sp,
                     color = DS.inkSecondary,
@@ -204,14 +201,12 @@ fun ShareSophiaSheet(language: AppLanguage, onDismiss: () -> Unit) {
                     modifier = Modifier
                         .padding(horizontal = 24.dp)
                         .fillMaxWidth()
-                        .clip(DS.controlShape)
-                        .background(DS.surface)
-                        .border(1.dp, DS.hairline, DS.controlShape)
-                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                        .sophiaCard()
+                        .padding(horizontal = 16.dp, vertical = 14.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
-                    Icon(Icons.Filled.Link, contentDescription = null, tint = DS.accentSoft, modifier = Modifier.size(18.dp))
+                    Icon(Icons.Filled.Link, contentDescription = null, tint = DS.accent, modifier = Modifier.size(18.dp))
                     Text(
                         text = SophiaShare.DISPLAY_URL,
                         fontFamily = PlusJakartaSans,
@@ -222,15 +217,21 @@ fun ShareSophiaSheet(language: AppLanguage, onDismiss: () -> Unit) {
                         overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.weight(1f),
                     )
+                    val copyFill by animateColorAsState(if (copied) DS.success else DS.accentTint, DSMotion.snappy(), label = "copyFill")
                     Row(
                         modifier = Modifier
+                            .pressable(
+                                onClick = {
+                                    clipboard.setText(AnnotatedString(SophiaShare.URL))
+                                    // Copié : le verdict vibre comme une réussite.
+                                    haptics.success()
+                                    copiedTaps += 1
+                                },
+                                scaleDown = 0.94f,
+                                haptic = false,
+                            )
                             .clip(CircleShape)
-                            .background(if (copied) DS.success else DS.accentTint)
-                            .softPress(onClick = {
-                                clipboard.setText(AnnotatedString(SophiaShare.URL))
-                                view.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
-                                copiedTaps += 1
-                            })
+                            .background(copyFill)
                             .padding(horizontal = 12.dp, vertical = 8.dp),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(5.dp),
@@ -297,10 +298,11 @@ private fun ChannelButton(
 ) {
     Row(
         modifier = modifier
-            .softPress(onClick = onClick)
-            .clip(CircleShape)
+            .height(50.dp)
+            .pressable(onClick = onClick)
+            .clip(DS.controlShape)
             .background(tint)
-            .padding(vertical = 15.dp, horizontal = 10.dp),
+            .padding(horizontal = 10.dp),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -328,7 +330,7 @@ fun ShareSophiaCard(language: AppLanguage, onClick: () -> Unit, modifier: Modifi
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .softPress(onClick = onClick)
+            .pressable(onClick = onClick)
             .sophiaCard()
             .padding(14.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -354,7 +356,6 @@ fun ShareSophiaCard(language: AppLanguage, onClick: () -> Unit, modifier: Modifi
             Text(
                 text = StringStore.text(context, "share.card.subtitle", language),
                 fontFamily = PlusJakartaSans,
-                fontWeight = FontWeight.Medium,
                 fontSize = 12.sp,
                 lineHeight = 16.sp,
                 color = DS.inkSecondary,

@@ -24,6 +24,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowOutward
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Public
@@ -46,6 +47,7 @@ import app.rork.sophia.R
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.StringStore
 import app.rork.sophia.domain.AppLanguage
+import app.rork.sophia.ui.components.dsStagger
 import app.rork.sophia.ui.course.AuthorAvatar
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -71,12 +73,12 @@ fun BecomeCreatorScreen(
             modifier = Modifier
                 .weight(1f)
                 .verticalScroll(rememberScrollState())
-                .padding(horizontal = 20.dp)
+                .padding(horizontal = 24.dp)
                 .padding(top = 8.dp, bottom = 24.dp),
             verticalArrangement = Arrangement.spacedBy(22.dp),
         ) {
-            // L'illustration, avec le retour posé dessus.
-            Box {
+            // L'illustration dans un cadre de carte, avec le retour posé dessus.
+            Box(modifier = Modifier.dsStagger(0)) {
                 Image(
                     painter = painterResource(R.drawable.creator_poster),
                     contentDescription = null,
@@ -84,7 +86,7 @@ fun BecomeCreatorScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .aspectRatio(4f / 3f)
-                        .clip(RoundedCornerShape(28.dp)),
+                        .homeCard(),
                 )
                 RoundIconButton(
                     icon = Icons.AutoMirrored.Filled.ArrowBack,
@@ -94,7 +96,7 @@ fun BecomeCreatorScreen(
                 )
             }
 
-            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Column(modifier = Modifier.dsStagger(1), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 if (authors.isNotEmpty()) {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                         // Les portraits se chevauchent de 10 dp, cerclés de la couleur du fond.
@@ -124,9 +126,9 @@ fun BecomeCreatorScreen(
                 Text(
                     text = StringStore.text(context, "creator.invite.title", language),
                     fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.ExtraBold,
-                    fontSize = 30.sp,
-                    lineHeight = 36.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 28.sp,
+                    lineHeight = 35.sp,
                     color = DS.ink,
                 )
                 Text(
@@ -151,10 +153,9 @@ fun BecomeCreatorScreen(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(DS.cardShape)
-                    .background(DS.surface)
-                    .border(1.dp, DS.hairline, DS.cardShape)
-                    .padding(20.dp),
+                    .dsStagger(2)
+                    .homeCard()
+                    .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
@@ -162,13 +163,13 @@ fun BecomeCreatorScreen(
                         painter = painterResource(R.drawable.creator_writing),
                         contentDescription = null,
                         contentScale = ContentScale.Crop,
-                        modifier = Modifier.size(72.dp).clip(RoundedCornerShape(18.dp)),
+                        modifier = Modifier.size(72.dp).clip(RoundedCornerShape(DS.Radius.small)),
                     )
                     Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
                         Text(
                             text = StringStore.text(context, "profile.creator.title", language),
                             fontFamily = PlusJakartaSans,
-                            fontWeight = FontWeight.ExtraBold,
+                            fontWeight = FontWeight.SemiBold,
                             fontSize = 20.sp,
                             color = DS.ink,
                         )
@@ -193,18 +194,18 @@ fun BecomeCreatorScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(DS.canvas)
-                .padding(horizontal = 20.dp)
+                .padding(horizontal = 24.dp)
                 .padding(top = 10.dp, bottom = 8.dp),
         ) {
-            NewGenPrimaryButton(
-                text = StringStore.text(context, "creator.invite.cta", language) + "  ↗",
+            // Le CTA fournit la pression élastique et la vibration.
+            HomeCtaButton(
+                text = StringStore.text(context, "creator.invite.cta", language),
+                trailingIcon = Icons.Filled.ArrowOutward,
                 onClick = {
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(AppConfig.creatorHubUrl(language)))
                         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     runCatching { context.startActivity(intent) }
                 },
-                height = 54.dp,
-                fontSize = 17.sp,
             )
         }
     }
@@ -242,8 +243,7 @@ private fun Perk(icon: ImageVector, text: String) {
         modifier = Modifier
             .height(32.dp)
             .clip(CircleShape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, CircleShape)
+            .background(DS.accentTint)
             .padding(horizontal = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(6.dp),

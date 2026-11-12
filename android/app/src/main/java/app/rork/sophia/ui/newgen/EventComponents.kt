@@ -1,5 +1,8 @@
 package app.rork.sophia.ui.newgen
 
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -21,6 +24,9 @@ import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -41,9 +47,12 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import app.rork.sophia.domain.Campaign
 import app.rork.sophia.domain.CourseSummary
+import app.rork.sophia.ui.components.DSMotion
+import app.rork.sophia.ui.components.dsPopIn
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import coil.compose.AsyncImage
+import kotlinx.coroutines.delay
 import kotlin.math.abs
 
 // Briques communes aux événements, comme `EventComponents.swift` : la carte du fil
@@ -58,8 +67,20 @@ import kotlin.math.abs
 object EventPalette {
     val navy = Color(0xFF1A3A6B)
     val night = Color(0xFF0B1220)
-    val saffron = Color(0xFFF2B134)
-    val cream = Color(0xFFFBF7EF)
+    val saffron = Color(0xFFE6B233)
+    val cream = Color(0xFFFBF3E0)
+
+    /** Texte posé sur le safran ou la crème (pastilles, bloc du défi). */
+    val ink = Color(0xFF16263D)
+
+    /** Or sombre : le sur-titre « Badge à gagner » et le symbole du badge sans illustration. */
+    val gold = Color(0xFF6B4E00)
+
+    /** Le fond de l'en-tête de la page d'un événement, sous l'illustration. */
+    val pageHeader = Color(0xFF14246E)
+
+    /** Le bleu clair des textes secondaires posés sur un fond marine. */
+    val softText = Color(0xFFC9D6EE)
 }
 
 /**
@@ -130,7 +151,7 @@ fun EventCoverCollage(courses: List<CourseSummary>, symbol: String?, lift: Float
     }
 }
 
-/** Une barre d'avancement en capsule (objectif commun, défi long). */
+/** Une barre d'avancement en capsule (défi long), qui glisse jusqu'à sa valeur. */
 @Composable
 fun EventProgressBar(
     fraction: Float,
@@ -139,10 +160,11 @@ fun EventProgressBar(
     track: Color = DS.surfaceMuted,
     height: Dp = 8.dp,
 ) {
+    val shown by animateFloatAsState(fraction.coerceIn(0f, 1f), DSMotion.reveal(), label = "eventProgress")
     Box(modifier = modifier.fillMaxWidth().height(height).clip(CircleShape).background(track)) {
         Box(
             modifier = Modifier
-                .fillMaxWidth(fraction.coerceIn(0f, 1f))
+                .fillMaxWidth(shown.coerceIn(0f, 1f))
                 .fillMaxHeight()
                 .clip(CircleShape)
                 .background(tint),
@@ -167,12 +189,13 @@ fun EventChallengeMeter(
     if (total <= 8) {
         Row(modifier = modifier.fillMaxWidth().height(height), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
             repeat(total) { index ->
+                val color by animateColorAsState(if (index < done) tint else track, DSMotion.snappy(), label = "eventSegment")
                 Box(
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxHeight()
                         .clip(CircleShape)
-                        .background(if (index < done) tint else track),
+                        .background(color),
                 )
             }
         }
@@ -183,7 +206,8 @@ fun EventChallengeMeter(
 
 /**
  * Le badge de l'événement dans un anneau qui se remplit avec le défi : son illustration quand
- * l'équipe en a choisi une, sinon le symbole de l'événement. Une coche quand il est gagné.
+ * l'équipe en a choisi une, sinon le symbole de l'événement, nu dans son anneau. Une coche quand
+ * il est gagné. L'anneau part de zéro et rejoint la vraie valeur à l'apparition.
  */
 @Composable
 fun EventBadgeRing(
@@ -197,8 +221,13 @@ fun EventBadgeRing(
     val target = maxOf(1, campaign.challengeTarget)
     val fraction = (done.toFloat() / target).coerceIn(0f, 1f)
     val earned = done >= target
-    val line = maxOf(3.dp, size * 0.055f)
+    val line = maxOf(3.5.dp, size * 0.065f)
     val inner = size - line * 3.2f
+    val drawn = remember { Animatable(0f) }
+    LaunchedEffect(fraction) {
+        if (drawn.value == 0f) delay(150)
+        drawn.animateTo(fraction, DSMotion.reveal())
+    }
     Box(modifier = modifier.size(size), contentAlignment = Alignment.Center) {
         Canvas(modifier = Modifier.fillMaxSize().padding(line / 2)) {
             val stroke = line.toPx()
@@ -213,11 +242,12 @@ fun EventBadgeRing(
                 size = arcSize,
                 style = Stroke(width = stroke),
             )
-            if (fraction > 0f) {
+            val shown = drawn.value.coerceIn(0f, 1f)
+            if (shown > 0f) {
                 drawArc(
                     color = EventPalette.saffron,
                     startAngle = -90f,
-                    sweepAngle = 360f * fraction,
+                    sweepAngle = 360f * shown,
                     useCenter = false,
                     topLeft = Offset(inset, inset),
                     size = arcSize,
@@ -226,10 +256,10 @@ fun EventBadgeRing(
             }
         }
         Box(
-            modifier = Modifier.size(inner).clip(CircleShape).background(EventPalette.navy),
+            modifier = Modifier.size(inner).clip(CircleShape),
             contentAlignment = Alignment.Center,
         ) {
-            CampaignSymbol(symbol = campaign.symbol, size = inner * 0.42f, tint = EventPalette.saffron)
+            CampaignSymbol(symbol = campaign.symbol, size = inner * 0.46f, tint = EventPalette.gold)
             campaign.badgeImageUrl?.let { url ->
                 AsyncImage(
                     model = url,
@@ -242,7 +272,7 @@ fun EventBadgeRing(
         if (earned) {
             val seal = maxOf(14.dp, size * 0.26f)
             Box(
-                modifier = Modifier.align(Alignment.BottomEnd).size(seal),
+                modifier = Modifier.align(Alignment.BottomEnd).size(seal).dsPopIn(delayMillis = 350),
                 contentAlignment = Alignment.Center,
             ) {
                 Box(modifier = Modifier.size(seal * 0.7f).clip(CircleShape).background(Color.White))
@@ -262,7 +292,7 @@ fun EventBadgeRing(
 fun EventPill(text: String, modifier: Modifier = Modifier, dark: Boolean = false) {
     Box(
         modifier = modifier
-            .height(28.dp)
+            .height(26.dp)
             .clip(CircleShape)
             .background(if (dark) EventPalette.night.copy(alpha = 0.78f) else EventPalette.saffron)
             .padding(horizontal = 10.dp),
@@ -273,7 +303,7 @@ fun EventPill(text: String, modifier: Modifier = Modifier, dark: Boolean = false
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
-            color = if (dark) Color.White else EventPalette.navy,
+            color = if (dark) Color.White else EventPalette.ink,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )

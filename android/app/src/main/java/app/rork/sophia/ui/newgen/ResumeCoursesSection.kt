@@ -35,10 +35,8 @@ import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.LearningPathEngine
 import app.rork.sophia.domain.LearningPathSnapshot
 import app.rork.sophia.domain.UserProgress
-import app.rork.sophia.ui.components.CalmProgressBar
-import app.rork.sophia.ui.components.ScreenTitle
-import app.rork.sophia.ui.components.softPress
-import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.components.DSProgressBar
+import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.uppercaseInApp
@@ -103,18 +101,15 @@ private fun ResumeCourseCard(
 ) {
     val context = LocalContext.current
     val identity = remember(course.id) { CreatorIdentity.forCourse(context.applicationContext, course.id) }
-    val shape = RoundedCornerShape(18.dp)
     Column(
         modifier = Modifier
             .width(220.dp)
-            .softPress(onClick = onTap)
-            .clip(shape)
-            .background(DS.surface)
-            .border(1.dp, DS.hairline, shape)
+            .pressable(onClick = onTap)
+            .homeCard()
             .padding(12.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {
-        CourseCover(courseId = course.id, modifier = Modifier.fillMaxWidth().aspectRatio(16f / 9f), cornerRadius = 14.dp)
+        CourseCover(courseId = course.id, modifier = Modifier.fillMaxWidth().aspectRatio(16f / 9f), cornerRadius = 10.dp)
         Text(
             text = stripInlineMarkup(course.title),
             fontFamily = PlusJakartaSans,
@@ -134,6 +129,6 @@ private fun ResumeCourseCard(
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )
-        CalmProgressBar(fraction = sectionIndex.toFloat() / maxOf(1, sectionCount), height = 6.dp, color = DS.accentSoft)
+        DSProgressBar(value = sectionIndex.toFloat() / maxOf(1, sectionCount), height = 6.dp)
     }
 }

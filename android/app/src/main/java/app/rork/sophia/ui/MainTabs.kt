@@ -10,6 +10,8 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -68,7 +70,6 @@ import app.rork.sophia.domain.Course
 import app.rork.sophia.domain.PathLevel
 import app.rork.sophia.domain.PostCompletionRewardStep
 import app.rork.sophia.ui.components.ConfirmDialog
-import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.ConfirmDialog
 import app.rork.sophia.ui.components.PostCompletionRewardFlow
 import app.rork.sophia.ui.components.TrialEndingMiniBanner
@@ -929,9 +930,10 @@ fun MainTabs(
 }
 
 /**
- * An opaque, touch-absorbing layer drawn over whatever is underneath. The empty `softPress`
+ * An opaque, touch-absorbing layer drawn over whatever is underneath. The empty click target
  * is what stops taps reaching the screen below, which would otherwise stay interactive
- * through the overlay.
+ * through the overlay. It has no press effect of its own: a whole screen must not shrink
+ * under the finger.
  */
 @Composable
 private fun SophiaOverlayLayer(content: @Composable () -> Unit) {
@@ -939,7 +941,11 @@ private fun SophiaOverlayLayer(content: @Composable () -> Unit) {
         modifier = Modifier
             .fillMaxSize()
             .background(DS.canvas)
-            .softPress(onClick = {}),
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                onClick = {},
+            ),
     ) {
         content()
     }
