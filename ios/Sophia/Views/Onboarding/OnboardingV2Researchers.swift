@@ -132,13 +132,16 @@ struct OnboardingV2Researchers: View {
                     )
                     .scaleEffect(pillsIn || reduceMotion ? 1 : 0.8)
                     .opacity(pillsIn ? 1 : 0)
-                    .animation(
-                        reduceMotion ? .easeOut(duration: 0.2) : DS.Motion.snappy.delay(Double(index) * 0.07),
-                        value: pillsIn
-                    )
+                    .animation(pillAnimation(index), value: pillsIn)
             }
         }
         .frame(maxWidth: .infinity)
+    }
+
+    /// Les pastilles arrivent en cascade, chacune un peu après la précédente.
+    private func pillAnimation(_ index: Int) -> Animation {
+        if reduceMotion { return Animation.easeOut(duration: 0.2) }
+        return DS.Motion.snappy.delay(Double(index) * 0.07)
     }
 
     // MARK: - Données et animation

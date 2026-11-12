@@ -166,11 +166,11 @@ struct CourseAudioCardButton: View {
 
     private var icon: some View {
         Image(systemName: player.isPlayingCourse(courseId) ? "waveform" : "headphones")
-            .font(.jakarta(size: size * 0.4, weight: .semibold))
-            .foregroundStyle(player.isCurrent(courseId) ? DS.accent : DS.inkSecondary)
+            .font(.system(size: size * 0.4, weight: .semibold))
+            .foregroundStyle(player.isCurrent(courseId) ? DS.accent : DS.ink)
             .symbolEffect(.variableColor.iterative, isActive: player.isPlayingCourse(courseId))
             .frame(width: size, height: size)
-            .background(.ultraThinMaterial, in: Circle())
+            .background(DS.surface, in: Circle())
             .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1) }
     }
 }

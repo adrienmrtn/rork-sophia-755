@@ -86,9 +86,5 @@ extension AppLocalizableAdditions {
             "fr": "Dans le métro, en marchant, en cuisinant : tes cours existent aussi en audio.",
             "en": "On the subway, on a walk, while cooking: your courses come in audio too.",
         ],
-        "onboardingV2.elevate.audio.imageLabel": [
-            "fr": "Un personnage, casque sur les oreilles, écoute un cours dans le métro",
-            "en": "A character with headphones on listens to a course on the subway",
-        ],
     ]
 }

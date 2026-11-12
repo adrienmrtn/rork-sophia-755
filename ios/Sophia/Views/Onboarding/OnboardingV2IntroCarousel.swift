@@ -104,7 +104,7 @@ struct OnboardingV2IntroCarousel: View {
                     handleDrag(value.translation.width)
                 }
         )
-        .animation(reduceMotion ? .easeInOut(duration: 0.2) : DS.Motion.reveal, value: model.page)
+        .animation(reduceMotion ? Animation.easeInOut(duration: 0.2) : DS.Motion.reveal, value: model.page)
     }
 
     private func slot<Content: View>(_ index: Int, @ViewBuilder content: () -> Content) -> some View {

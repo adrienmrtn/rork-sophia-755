@@ -291,11 +291,11 @@ struct OnboardingV2IntroQuizPage: View {
     static func makeSample(languageManager: LanguageManager) -> QuizSample {
         let language: AppLanguage = languageManager.current
         if let course = ContentCatalog.course(withId: OnboardingV2IntroCatalog.blackHoleCourseId, language: language),
-           let sample = sample(from: course, languageManager: languageManager) {
-            return sample
+           let found = catalogSample(from: course, languageManager: languageManager) {
+            return found
         }
         return QuizSample(
-            eyebrow: Subject.sciences.localizedShortName(language: language),
+            eyebrow: Subject.sciences.localizedShortName(language: language).uppercasedInApp(),
             question: languageManager.text("onboardingV2.elevate.quiz.sample.question"),
             options: [
                 languageManager.text("onboardingV2.elevate.quiz.sample.correct"),
@@ -308,7 +308,7 @@ struct OnboardingV2IntroQuizPage: View {
         )
     }
 
-    private static func sample(from course: Course, languageManager: LanguageManager) -> QuizSample? {
+    private static func catalogSample(from course: Course, languageManager: LanguageManager) -> QuizSample? {
         let quiz: [QuizQuestion] = course.quiz
         // La deuxième question et les suivantes d'abord, la première en dernier recours.
         let order: [Int] = Array(quiz.indices.dropFirst()) + Array(quiz.indices.prefix(1))
@@ -335,7 +335,7 @@ struct OnboardingV2IntroQuizPage: View {
             let language: AppLanguage = languageManager.current
             let counter: String = String(format: languageManager.text("duel.game.counter"), index + 1, quiz.count)
             return QuizSample(
-                eyebrow: "\(course.subject.localizedShortName(language: language)) · \(counter)",
+                eyebrow: "\(course.subject.localizedShortName(language: language)) · \(counter)".uppercasedInApp(),
                 question: prompt,
                 options: texts,
                 correctIndex: kept.firstIndex(of: correct) ?? 0,
@@ -474,7 +474,7 @@ struct OnboardingV2IntroDuelsPage: View {
             .frame(width: 28, height: 28)
 
             VStack(alignment: .leading, spacing: 1) {
-                DSEyebrow(text: languageManager.text("duel.trophies.title"))
+                DSEyebrow(text: languageManager.text("duel.trophies.title").uppercasedInApp())
                 Text(languageManager.text("duel.friends.title"))
                     .font(DS.sans(.footnote, .bold))
                     .foregroundStyle(OV2.ink)

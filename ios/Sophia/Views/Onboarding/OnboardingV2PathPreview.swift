@@ -139,7 +139,7 @@ struct OnboardingV2PathPreview: View {
 
     /// Retard d'apparition du cours n° `index` : ils se posent l'un après l'autre.
     private func revealAnimation(_ index: Int, extra: Double = 0) -> Animation {
-        if reduceMotion { return .easeOut(duration: 0.2) }
+        if reduceMotion { return Animation.easeOut(duration: 0.2) }
         return DS.Motion.pop.delay(0.15 + Double(index) * 0.28 + extra)
     }
 
@@ -148,6 +148,9 @@ struct OnboardingV2PathPreview: View {
     private func link(from index: Int, width: CGFloat) -> some View {
         let reachesLocked: Bool = nodes[index + 1].step == .locked
         let delay: Double = 0.3 + Double(index) * 0.28
+        let drawing: Animation = reduceMotion
+            ? Animation.easeOut(duration: 0.2)
+            : Animation.easeInOut(duration: 0.4).delay(delay)
         return OnboardingV2PathLink(
             start: center(of: index, width: width),
             end: center(of: index + 1, width: width)
@@ -157,7 +160,7 @@ struct OnboardingV2PathPreview: View {
             reachesLocked ? Self.lockedLine : Self.doneGreen,
             style: StrokeStyle(lineWidth: 3, lineCap: .round, dash: [0.5, 8])
         )
-        .animation(reduceMotion ? .easeOut(duration: 0.2) : .easeInOut(duration: 0.4).delay(delay), value: shown)
+        .animation(drawing, value: shown)
     }
 
     // MARK: - Cours
