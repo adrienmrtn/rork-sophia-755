@@ -12,7 +12,7 @@ n'est qu'une photo sans dates).
 ## Transport
 
 - Table `public.course_events`, partitionnée par jour UTC dans le schéma `analytics`,
-  conservée 90 jours. Synthèse quotidienne dans `public.daily_course_stats` (pour
+  conservée 60 jours. Synthèse quotidienne dans `public.daily_course_stats` (pour
   toujours). Migration : `supabase/migrations/20261108120000_course_events_and_subscriptions.sql`.
 - L'app insère directement par PostgREST (`upsert` sur `(ts, event_id)`, doublons
   ignorés). Règle RLS : `user_id = auth.uid()`, horodatage entre maintenant − 30 jours et
@@ -74,7 +74,7 @@ UUID tiré au hasard par l'app ; `user_id` est rempli si l'appel est fait connec
 envoie ses lignes telles qu'elle les garde en file (les colonnes communes, la réponse dans
 `props`). Une ligne mal formée est écartée sans faire échouer le lot. Garde-fous : 200
 lignes par appel, horodatage entre maintenant − 30 jours et maintenant + 15 minutes, 2 000
-lignes au plus par installation. Le brut est gardé 90 jours.
+lignes au plus par installation. Le brut est gardé 60 jours.
 
 Questions (`question` → `answer`) :
 
@@ -199,12 +199,29 @@ Pages de l'espace équipe du site, chacune servie par une fonction réservée à
 | `/admin/data/usage` | `admin_usage_dashboard` | lecture, cours les plus ouverts, questions les plus ratées (à partir de 20 réponses), duels |
 | `/admin/data/social` | `admin_social_dashboard` | demandes d'amis, amitiés, invitations en duel, parrainage, créateurs suivis |
 | `/admin/data/feedback` | `admin_feedback_dashboard` | les retours de `app_feedback` |
+| `/admin/data/health` | `admin_data_health` | santé de la collecte : volume reçu, taille du journal, tâches planifiées |
 
 `admin_social_dashboard` (migration `20261113070000_admin_social_dashboard.sql`) lit
 directement `friend_requests`, `friendships`, `duel_invites`, `referrals` et `follows` : ces
 tables sont gardées sans limite mais ne portent ni plateforme ni langue, la page ne suit donc
 que la période. Les titres de cours et les énoncés de quiz sont lus dans `course_contents` et
 `quizzes`, dans la langue filtrée, à défaut en français.
+
+### Conservation et santé de la collecte
+
+Migration `20261113080000_retention_60_days_and_health.sql`.
+
+- Les deux journaux bruts (`course_events`, `onboarding_events`) sont gardés **60 jours** ;
+  toutes les tables `daily_*` sont gardées sans limite. À plein régime, ce sont les journaux
+  qui remplissent le disque : la durée se change dans `ensure_course_events_partitions` et
+  `refresh_recent_onboarding_stats`.
+- `public.daily_event_volume` : événements reçus par jour UTC, plateforme, version de l'app
+  et nom, recalculé toutes les heures avec l'usage.
+- `public.admin_data_health()` : taille de la base et du journal (lues dans le catalogue de
+  Postgres, sans comptage), volume des trente derniers jours, répartition par événement et
+  par version, dernier passage de chaque tâche planifiée. La page en tire ses alertes
+  (`web/src/lib/studio/health.ts`) : tâche en échec ou arrêtée, plateforme qui n'envoie plus
+  rien, base qui approche la taille recommandée pour sa machine.
 
 ## Abonnements côté serveur
 
