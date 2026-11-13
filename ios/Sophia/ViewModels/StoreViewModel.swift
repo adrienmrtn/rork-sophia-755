@@ -131,46 +131,48 @@ class StoreViewModel {
         }
     }
 
-    func purchase(package: Package) async -> Bool {
+    /// `analyticsProps` : propriétés ajoutées telles quelles aux événements d'achat (la variante
+    /// d'un test A/B de paywall, par exemple). Elles ne changent rien à l'achat lui-même.
+    func purchase(package: Package, analyticsProps: [String: AnalyticsValue] = [:]) async -> Bool {
         isPurchasing = true
         defer { isPurchasing = false }
         let product = package.storeProduct.productIdentifier
         let offering = package.offeringIdentifier
-        await AnalyticsService.shared.log(
-            .purchaseStarted,
-            props: ["product": .string(product), "offering": .string(offering)]
-        )
+        var startedProps: [String: AnalyticsValue] = ["product": .string(product), "offering": .string(offering)]
+        for (key, value) in analyticsProps { startedProps[key] = value }
+        await AnalyticsService.shared.log(.purchaseStarted, props: startedProps)
         do {
             let result = try await Purchases.shared.purchase(package: package)
             if !result.userCancelled {
                 applyCustomerInfo(result.customerInfo)
                 if isPremium {
-                    await AnalyticsService.shared.log(.purchaseCompleted, props: ["product": .string(product)])
+                    var completedProps: [String: AnalyticsValue] = ["product": .string(product)]
+                    for (key, value) in analyticsProps { completedProps[key] = value }
+                    await AnalyticsService.shared.log(.purchaseCompleted, props: completedProps)
                 } else {
-                    await logPurchaseFailed(product: product, reason: "not_entitled")
+                    await logPurchaseFailed(product: product, reason: "not_entitled", extra: analyticsProps)
                 }
                 return isPremium
             }
-            await logPurchaseFailed(product: product, reason: "cancelled")
+            await logPurchaseFailed(product: product, reason: "cancelled", extra: analyticsProps)
             return false
         } catch ErrorCode.purchaseCancelledError {
-            await logPurchaseFailed(product: product, reason: "cancelled")
+            await logPurchaseFailed(product: product, reason: "cancelled", extra: analyticsProps)
             return false
         } catch ErrorCode.paymentPendingError {
-            await logPurchaseFailed(product: product, reason: "pending")
+            await logPurchaseFailed(product: product, reason: "pending", extra: analyticsProps)
             return false
         } catch {
             self.error = error.localizedDescription
-            await logPurchaseFailed(product: product, reason: "error")
+            await logPurchaseFailed(product: product, reason: "error", extra: analyticsProps)
             return false
         }
     }
 
-    private func logPurchaseFailed(product: String, reason: String) async {
-        await AnalyticsService.shared.log(
-            .purchaseFailed,
-            props: ["product": .string(product), "reason": .string(reason)]
-        )
+    private func logPurchaseFailed(product: String, reason: String, extra: [String: AnalyticsValue] = [:]) async {
+        var props: [String: AnalyticsValue] = ["product": .string(product), "reason": .string(reason)]
+        for (key, value) in extra { props[key] = value }
+        await AnalyticsService.shared.log(.purchaseFailed, props: props)
     }
 
     func restore() async {
@@ -345,13 +347,19 @@ class StoreViewModel {
     /// report itself or enrolled customers are dropped from experiment results.
     ///
     /// Call once per presentation (not from a callback that can fire repeatedly).
-    func trackPaywallImpression(paywallId: String, offeringIdentifier: String? = nil) {
+    ///
+    /// `extraProps` rides along on the `paywall_view` event only (an in-app A/B variant, say).
+    func trackPaywallImpression(
+        paywallId: String,
+        offeringIdentifier: String? = nil,
+        extraProps: [String: AnalyticsValue] = [:]
+    ) {
         // The offering reported must be the one on screen, or a customer enrolled in an
         // experiment is never counted as exposed: that is the served offering, resolved the
         // same way the paywall picks its package.
         let resolved = offeringIdentifier.flatMap { displayedOffering(forContextIdentifier: $0) }
             ?? offerings?.current
-        trackPaywallImpression(paywallId: paywallId, offering: resolved, context: offeringIdentifier)
+        trackPaywallImpression(paywallId: paywallId, offering: resolved, context: offeringIdentifier, extraProps: extraProps)
     }
 
     /// Same, for a paywall that knows exactly which offering it displays (the discount
@@ -360,7 +368,12 @@ class StoreViewModel {
         trackPaywallImpression(paywallId: paywallId, offering: offering, context: nil)
     }
 
-    private func trackPaywallImpression(paywallId: String, offering: Offering?, context: String?) {
+    private func trackPaywallImpression(
+        paywallId: String,
+        offering: Offering?,
+        context: String?,
+        extraProps: [String: AnalyticsValue] = [:]
+    ) {
         guard let offering else { return }
         Purchases.shared.trackCustomPaywallImpression(
             CustomPaywallImpressionParams(paywallId: paywallId, offering: offering)
@@ -370,6 +383,7 @@ class StoreViewModel {
             "offering": .string(offering.identifier),
         ]
         if let context { props["context"] = .string(context) }
+        for (key, value) in extraProps { props[key] = value }
         Task { @MainActor in
             AnalyticsService.shared.log(.paywallView, props: props)
         }
