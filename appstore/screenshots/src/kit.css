@@ -68,3 +68,21 @@ img { display: block; }
 }
 .k-tabbar .tab.on { color: var(--accent); }
 .k-tabbar svg { width: 27px; height: 27px; display: block; }
+
+/* ---- iPad variant: add ?device=ipad to a screen. 768 x 1024 pt (3:4). The system tab bar of a
+   SwiftUI TabView sits at the top on iPadOS 18+, as a floating capsule of titles. ---- */
+html.ipad { --safe-top: 24px; --safe-bottom: 20px; --tabbar: 0px; --ipad-tabs: 54px; }
+html.ipad body { width: 768px; height: 1024px; }
+html.ipad .k-status { height: 24px; align-items: center; padding: 0 16px 0 20px; font-size: 13px; }
+html.ipad .k-status .time { font-size: 13px; font-weight: 600; }
+html.ipad .k-status .date { margin-left: 8px; font-size: 13px; font-weight: 500; }
+html.ipad .k-status .left { display: flex; align-items: center; }
+html.ipad .k-home-indicator { width: 260px; margin-left: -130px; bottom: 7px; }
+html.ipad .k-tabbar {
+  top: 32px; bottom: auto; left: 50%; right: auto; transform: translateX(-50%); height: 40px; padding: 4px;
+  border: 0; border-radius: 20px; background: rgba(118, 118, 128, 0.14); gap: 2px;
+}
+html.ipad .k-tabbar .tab { flex: none; flex-direction: row; padding: 0 18px; height: 32px; border-radius: 16px;
+  font-size: 15px; font-weight: 600; color: var(--ink); justify-content: center; align-items: center; }
+html.ipad .k-tabbar .tab.on { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+html.ipad .k-tabbar svg { display: none; }

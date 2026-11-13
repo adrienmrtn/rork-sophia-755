@@ -92,6 +92,15 @@
   .chip svg { display: block; flex: none; }
   .chip.liked { color: var(--liked); }
   .stats .grow { flex: 1; }
+
+  /* iPad (768 x 1024): the same SwiftUI at 768 pt wide. Content starts below the floating tab
+     capsule; header and segment stretch; the card is 720 pt wide and its cover, capped at
+     width - 48 = 720, takes the height the text leaves. The scroll view runs under the bottom
+     safe area (no tab bar there), so the next card peeks 34 pt plus the 20 pt inset. */
+  html.ipad .screen { top: calc(var(--safe-top) + var(--ipad-tabs)); }
+  html.ipad .feed { margin-bottom: calc(-1 * var(--safe-bottom)); }
+  html.ipad .page { height: calc(100% - 44px - var(--safe-bottom)); }
+  html.ipad .cover { max-height: 720px; }
 </style>
 </head>
 <body>

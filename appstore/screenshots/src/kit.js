@@ -6,6 +6,9 @@
 // tab:    "home" | "explore" | "duels" | "profile" | undefined (no tab bar)
 // indicator: "dark" | "light" | false (defaults to the status value)
 const Kit = (() => {
+  // ?device=ipad switches the page to the iPad variant (see kit.css). Kit.ipad tells a screen which one it is.
+  const ipad = new URLSearchParams(location.search).get("device") === "ipad";
+  if (ipad) document.documentElement.classList.add("ipad");
   const statusHTML = `
     <span class="time">9:41</span>
     <span class="right">
@@ -41,7 +44,9 @@ const Kit = (() => {
     if (status) {
       const el = document.createElement("div");
       el.className = "k-status" + (status === "light" ? " light" : "");
-      el.innerHTML = statusHTML;
+      el.innerHTML = ipad
+        ? statusHTML.replace('<span class="time">9:41</span>', `<span class="left"><span class="time">9:41</span><span class="date">${document.documentElement.lang === "fr" ? "Mar. 9 janv." : "Tue Jan 9"}</span></span>`)
+        : statusHTML;
       document.body.appendChild(el);
     }
     if (tab) {
@@ -59,5 +64,5 @@ const Kit = (() => {
       document.body.appendChild(hi);
     }
   }
-  return { chrome, icons };
+  return { chrome, icons, ipad };
 })();

@@ -114,6 +114,7 @@
       image: "cumulonimbus_thunderstorm_cloud",
       ratio: "4 / 3",
       scrollY: 0,
+      scrollYPad: 10,
       sectionTitle: "Dans le nuage, des charges se séparent",
       p1: "Les éclairs naissent surtout dans les <span class=\"term\">cumulonimbus</span>\u00a0: de très grands nuages d’orage, qui peuvent monter jusqu’à environ <b>15\u00a0km</b>. À l’intérieur, l’air monte et descend très fort.",
       caption: "Le cumulonimbus\u00a0: l’usine à orages.",
@@ -125,6 +126,7 @@
       segments: [1, 1, 1, 4 / 6, 0],
       image: "frans_hals_malle_babbe_laughing_woman_painting",
       ratio: "3 / 2",
+      scrollYPad: 0,
       scrollY: 15, // position de défilement : la coupe du bas tombe entre deux lignes
       sectionTitle: "A smile meant something else",
       p1: "The real answer is that a photograph was not a <span class=\"term\">snapshot</span>. It was a portrait, and portraiture already came with <b>three hundred years</b> of rules inherited from painting. Painters knew what a wide smile signaled, and it was not happiness.",
@@ -140,6 +142,7 @@
   });
   const frame = document.querySelector(".figure .frame");
   frame.style.aspectRatio = C.ratio;
+  if (Kit.ipad) C.scrollY = C.scrollYPad;
   if (C.scrollY) document.getElementById("thread").style.top = -C.scrollY + "px";
   frame.querySelector("img").src = `../../../../content/images/${C.image}.jpg`;
   Kit.chrome({ status: "dark" });

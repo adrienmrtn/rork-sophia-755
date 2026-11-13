@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sophia — App Store iPad set</title>
+<style>
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../../../ios/Sophia/Resources/Fonts/PlusJakartaSans.ttf") format("truetype");
+  font-weight: 200 800;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+/* iPad 13": 2064 x 2752 px = 516 x 688 units at 4x. Same content and colours as the phone set
+   (PANOS[<v>] in pano.js); the tablets show screens/<name>.html?device=ipad (768 x 1024 pt). */
+body { height: 688px; overflow: hidden; position: relative; font-family: "Plus Jakarta Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+.panel { position: absolute; top: 0; width: 516px; height: 688px; overflow: hidden; }
+.panel.cream { background: #fef5e9; color: #17181c; --sub: #3d3f47; }
+.panel.coral { background: #dc6048; color: #fff; --sub: #fff; }
+.panel.navy  { background: #1a3a6b; color: #fff; --sub: #e6ecf7; }
+.panel.pink  { background: #f4a3c4; color: #17181c; --sub: #33262d; }
+.panel.blue  { background: #2e62c4; color: #fff; --sub: #eaf0fb; }
+.panel.pale  { background: #f3f5fb; color: #17181c; --sub: #2f323a; }
+.panel.sun   { background: #f2b134; color: #17181c; --sub: #2b2a26; }
+.text { position: absolute; left: 24px; right: 24px; top: 34px; text-align: center; z-index: 5; }
+.text h1 { margin: 0; font-weight: 800; font-size: 44px; line-height: 1.08; letter-spacing: -0.035em; -webkit-text-stroke: 0.9px currentColor; }
+.text h1 b { font-size: 1.22em; line-height: 1; }
+.text p { margin: 10px 0 0; font-size: 21px; line-height: 1.22; font-weight: 500; color: var(--sub); letter-spacing: -0.01em; text-wrap: balance; }
+.tablet { position: absolute; left: 50%; top: 186px; transform: translateX(-50%); z-index: 2;
+  width: 421px; height: 549px; border: 4.5px solid var(--frame); padding: 6px; background: var(--band); border-radius: 30px; }
+.tablet .scr { width: 400px; height: 533.4px; overflow: hidden; border-radius: 19px; background: #fff; }
+.tablet iframe { width: 768px; height: 1024px; border: 0; display: block; transform: scale(0.52084); transform-origin: 0 0; }
+.logo { position: absolute; left: 50%; transform: translateX(-50%); top: 150px; height: 96px; }
+.bubble { position: absolute; left: 50%; transform: translateX(-50%); top: 276px; padding: 20px 28px 24px; border-radius: 16px; white-space: nowrap;
+  background: #2e62c4; color: #fff; font-weight: 800; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em; -webkit-text-stroke: 0.8px currentColor; }
+.bubble::after { content: ""; position: absolute; left: 70px; bottom: -32px; border: 17px solid transparent; border-top-color: #2e62c4; border-left-color: #2e62c4; }
+.floor { position: absolute; left: 0; right: 0; bottom: 0; height: 26px; background: #1e8e73; }
+img.p { position: absolute; transform: translateX(-50%); z-index: 1; }
+.tile { position: absolute; width: 150px; height: 150px; border-radius: 20px; object-fit: cover; }
+.reviews { position: absolute; left: 34px; right: 34px; top: 176px; display: flex; flex-direction: column; gap: 14px; z-index: 4; }
+.review { background: #fff; border-radius: 18px; border: 1.5px solid #dfe4ee; padding: 15px 20px 14px; text-align: center; color: #22262e; }
+.review .stars { display: flex; justify-content: center; gap: 4px; margin-bottom: 10px; }
+.review q { display: block; quotes: none; font-size: 19px; line-height: 1.32; font-weight: 500; text-wrap: balance; }
+.review .who { margin-top: 8px; font-size: 15px; color: #6b7280; font-weight: 500; }
+.profs { position: absolute; left: 34px; right: 34px; top: 204px; display: flex; flex-direction: column; gap: 14px; z-index: 4; }
+.prof { background: #fff; border-radius: 20px; border: 1.5px solid #dfe4ee; padding: 13px 18px; display: flex; align-items: center; gap: 16px; }
+.prof img { width: 82px; height: 82px; border-radius: 50%; object-fit: cover; flex: none; }
+.prof .n { font-size: 21px; font-weight: 800; letter-spacing: -0.01em; color: #17181c; display: flex; align-items: center; gap: 6px; }
+.prof .c { margin-top: 3px; font-size: 16px; line-height: 1.3; color: #5b6170; font-weight: 500; }
+svg.h { position: absolute; }
+</style>
+</head>
+<body>
+<script src="pano.js"></script>
+<script>
+  const q = new URLSearchParams(location.search);
+  const V = PANOS[q.get("v") || "showcase-bold"];
+  const T = Object.values(V.copy)[0];
+  const dark = ["blue", "navy", "coral"];
+  document.body.style.width = V.panels.length * 516 + "px";
+  const star = '<svg width="20" height="20" viewBox="0 0 24 24"><path fill="#f2a31b" d="M12 1.8l3.1 6.6 7.1.9-5.2 5 1.3 7.1L12 18l-6.3 3.4 1.3-7.1-5.2-5 7.1-.9L12 1.8Z"/></svg>';
+  const check = '<svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2e62c4"/><path d="M7 12.5l3.3 3.3L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const heart = (x, y, s, r, c) => `<svg class="h" width="${s}" height="${s}" viewBox="0 0 24 22" style="left:${x}px;top:${y}px;transform:rotate(${r}deg)"><path fill="${c}" d="M12 21C5 16 1 12 1 7.5 1 4 3.7 1.5 7 1.5c2 0 3.8 1 5 2.7 1.2-1.7 3-2.7 5-2.7 3.3 0 6 2.5 6 6 0 4.5-4 8.5-11 13.5Z"/></svg>`;
+  const screens = { home: "home", reader: "reader", quiz: "quiz", duels: "duels", blocker: "blocker" };
+  V.panels.forEach((p, i) => {
+    const el = document.createElement("div"); el.className = "panel " + p.theme; el.style.left = i * 516 + "px";
+    let html = "";
+    if (p.bubble) {
+      html += `<img class="logo" src="../../../web/public/brand/sophia-logo.png"><div class="bubble">${T[p.bubble][0]}</div>`;
+      html += `<div class="floor"></div><img class="p" src="people/boy_before.png" style="left:150px;bottom:0;height:238px"><img class="p" src="people/girl_after.png" style="left:372px;bottom:14px;height:222px">`;
+    }
+    if (p.text) { const [h, sub] = T[p.text]; html += `<div class="text"><h1>${h}</h1>${sub ? `<p>${sub}</p>` : ""}</div>`; }
+    if (screens[p.text]) {
+      const d = dark.includes(p.theme);
+      html += `<div class="tablet" style="--frame:${d ? "#cdd9f5" : "#2e62c4"};--band:${d ? "#e9effb" : "#dbe5f8"}"><div class="scr"><iframe src="screens/${p.text}.html?lang=${V.lang}&device=ipad"></iframe></div></div>`;
+    }
+    (p.grid || []).forEach((row, r) => row.forEach((f, c) => {
+      html += `<img class="tile" src="../../../ios/Sophia/CourseImages/${f}.jpg" style="left:${c * 166 - (r % 2 ? 106 : 24)}px; top:${172 + r * 166}px">`;
+    }));
+    if (p.reviews) {
+      const hc = p.theme === "pink" ? "#ffffff" : "#f4a3c4";
+      html += heart(26, 40, 40, -12, hc) + heart(450, 30, 46, 14, hc);
+      html += `<div class="reviews" style="top:168px">${T[p.reviews].map(([quote, who, n]) => `<div class="review"><div class="stars">${star.repeat(n || 5)}</div><q>${quote}</q><div class="who">${who}</div></div>`).join("")}</div>`;
+    }
+    if (p.profs) html += `<div class="profs">${T[p.profs].map(([name, cred, av]) => `<div class="prof"><img src="../../../web/public/avatars/${av}.webp"><div><div class="n">${name}${check}</div><div class="c">${cred}</div></div></div>`).join("")}</div>`;
+    el.innerHTML = html; document.body.appendChild(el);
+  });
+</script>
+</body>
+</html>

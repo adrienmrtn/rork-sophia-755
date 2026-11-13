@@ -58,3 +58,28 @@ in SCRATCH).
 ## Report (short)
 The state you chose and why, the Swift files you followed, anything approximated or that you could
 not determine from the code, and any string for which you found no French localisation key.
+
+## iPad variant (`?device=ipad`)
+
+Each screen also renders as the app would on an iPad: 768 x 1024 pt, portrait. The kit handles
+the switch: with `?device=ipad` it adds `class="ipad"` on `<html>`, sizes the body, draws the
+iPad status bar (24 pt, time and date left), a wider home indicator, and turns the tab bar into
+the floating capsule of titles that a SwiftUI `TabView` gets at the top on iPadOS 18 (the app's
+deployment target is iOS 18; it occupies y = 32 to 72). `Kit.ipad` is true in that mode. Safe
+areas: `--safe-top: 24px`, `--safe-bottom: 20px`, no bottom tab bar.
+
+The app has no iPad-specific code (no size-class or idiom checks), so the iPad screen is what the
+same SwiftUI gives at 768 pt wide: read the layout code again and apply it honestly — views with
+`maxWidth: .infinity` stretch, fixed frames and `maxWidth` caps stay, squares capped at a size
+stay that size and centre or lead as the code says, `GeometryReader` maths is redone for the new
+size, grids keep their column count unless adaptive, `fullScreenCover` stays full screen, and a
+`.sheet` is the centred iPadOS form sheet (about 704 pt wide at this size for a large detent, a
+card with 12 to 16 pt corners over the dimmed screen; medium detents are ignored on iPad, where
+the sheet is the full-height page sheet). Tab-bar screens start their content below the capsule.
+More content is visible than on the phone: fill it with more real content, not blank space.
+
+Write the iPad rules as CSS under `html.ipad` plus any `if (Kit.ipad)` content, in the same file.
+The phone renders (French and English) must stay pixel-identical. Check with
+`node shoot.cjs <name> <SCRATCH>/<name>-ipad.png 2 "lang=en&device=ipad"`, look at the PNG, and
+iterate until it would pass for the app on an iPad. Report briefly what the iPad layout shows
+and what you had to assume.
