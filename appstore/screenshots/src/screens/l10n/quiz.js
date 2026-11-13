@@ -6,7 +6,7 @@ window.L10N = {
     "S": {
       "common.close": "إغلاق",
       "subject.art.short": "الفن",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "السؤال %d من %d",
       "quiz.feedback.excellent": "ممتاز!",
       "quiz.combo": "كومبو x%d",
       "common.continue": "متابعة"
@@ -24,7 +24,7 @@ window.L10N = {
     "S": {
       "common.close": "Zavřít",
       "subject.art.short": "Umění",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Otázka %d z %d",
       "quiz.feedback.excellent": "Skvěle!",
       "quiz.combo": "Kombo x%d",
       "common.continue": "Pokračovat"
@@ -42,7 +42,7 @@ window.L10N = {
     "S": {
       "common.close": "Luk",
       "subject.art.short": "Kunst",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Spørgsmål %d af %d",
       "quiz.feedback.excellent": "Fremragende!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Fortsæt"
@@ -60,7 +60,7 @@ window.L10N = {
     "S": {
       "common.close": "Schließen",
       "subject.art.short": "Kunst",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Frage %d von %d",
       "quiz.feedback.excellent": "Stark!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Weiter"
@@ -78,7 +78,7 @@ window.L10N = {
     "S": {
       "common.close": "Κλείσιμο",
       "subject.art.short": "Τέχνη",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Ερώτηση %d από %d",
       "quiz.feedback.excellent": "Άψογα!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Συνέχεια"
@@ -96,7 +96,7 @@ window.L10N = {
     "S": {
       "common.close": "Cerrar",
       "subject.art.short": "Arte",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Pregunta %d de %d",
       "quiz.feedback.excellent": "¡Excelente!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Continuar"
@@ -114,7 +114,7 @@ window.L10N = {
     "S": {
       "common.close": "Sulje",
       "subject.art.short": "Taide",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Kysymys %d / %d",
       "quiz.feedback.excellent": "Erinomaista!",
       "quiz.combo": "Ketju x%d",
       "common.continue": "Jatka"
@@ -132,7 +132,7 @@ window.L10N = {
     "S": {
       "common.close": "סגירה",
       "subject.art.short": "אמנות",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "שאלה %d מתוך %d",
       "quiz.feedback.excellent": "מעולה!",
       "quiz.combo": "קומבו x%d",
       "common.continue": "המשך"
@@ -150,7 +150,7 @@ window.L10N = {
     "S": {
       "common.close": "Zatvori",
       "subject.art.short": "Umjetnost",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Pitanje %d od %d",
       "quiz.feedback.excellent": "Izvrsno!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Nastavi"
@@ -168,7 +168,7 @@ window.L10N = {
     "S": {
       "common.close": "Bezárás",
       "subject.art.short": "Művészet",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "%d. kérdés / %d",
       "quiz.feedback.excellent": "Szuper!",
       "quiz.combo": "Kombó x%d",
       "common.continue": "Tovább"
@@ -186,7 +186,7 @@ window.L10N = {
     "S": {
       "common.close": "Chiudi",
       "subject.art.short": "Arte",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Domanda %d di %d",
       "quiz.feedback.excellent": "Ottimo!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Continua"
@@ -204,7 +204,7 @@ window.L10N = {
     "S": {
       "common.close": "閉じる",
       "subject.art.short": "アート",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "第%d問 / 全%d問",
       "quiz.feedback.excellent": "すばらしい！",
       "quiz.combo": "コンボ×%d",
       "common.continue": "続ける"
@@ -222,7 +222,7 @@ window.L10N = {
     "S": {
       "common.close": "Lukk",
       "subject.art.short": "Kunst",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Spørsmål %d av %d",
       "quiz.feedback.excellent": "Utmerket!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Fortsett"
@@ -240,7 +240,7 @@ window.L10N = {
     "S": {
       "common.close": "Sluiten",
       "subject.art.short": "Kunst",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Vraag %d van %d",
       "quiz.feedback.excellent": "Top!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Verder"
@@ -258,7 +258,7 @@ window.L10N = {
     "S": {
       "common.close": "Zamknij",
       "subject.art.short": "Sztuka",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Pytanie %d z %d",
       "quiz.feedback.excellent": "Świetnie!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Dalej"
@@ -276,7 +276,7 @@ window.L10N = {
     "S": {
       "common.close": "Fechar",
       "subject.art.short": "Arte",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Pergunta %d de %d",
       "quiz.feedback.excellent": "Excelente!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Continuar"
@@ -294,7 +294,7 @@ window.L10N = {
     "S": {
       "common.close": "Fechar",
       "subject.art.short": "Arte",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Pergunta %d de %d",
       "quiz.feedback.excellent": "Excelente!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Continuar"
@@ -312,7 +312,7 @@ window.L10N = {
     "S": {
       "common.close": "Închide",
       "subject.art.short": "Artă",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Întrebarea %d din %d",
       "quiz.feedback.excellent": "Excelent!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Continuă"
@@ -330,7 +330,7 @@ window.L10N = {
     "S": {
       "common.close": "Закрыть",
       "subject.art.short": "Искусство",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Вопрос %d из %d",
       "quiz.feedback.excellent": "Отлично!",
       "quiz.combo": "Комбо x%d",
       "common.continue": "Дальше"
@@ -348,7 +348,7 @@ window.L10N = {
     "S": {
       "common.close": "Zavrieť",
       "subject.art.short": "Umenie",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Otázka %d z %d",
       "quiz.feedback.excellent": "Skvelé!",
       "quiz.combo": "Kombo x%d",
       "common.continue": "Pokračovať"
@@ -366,7 +366,7 @@ window.L10N = {
     "S": {
       "common.close": "Zapri",
       "subject.art.short": "Umetnost",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Vprašanje %d od %d",
       "quiz.feedback.excellent": "Odlično!",
       "quiz.combo": "Kombo x%d",
       "common.continue": "Naprej"
@@ -384,7 +384,7 @@ window.L10N = {
     "S": {
       "common.close": "Stäng",
       "subject.art.short": "Konst",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Fråga %d av %d",
       "quiz.feedback.excellent": "Grymt!",
       "quiz.combo": "Combo x%d",
       "common.continue": "Fortsätt"
@@ -402,7 +402,7 @@ window.L10N = {
     "S": {
       "common.close": "Kapat",
       "subject.art.short": "Sanat",
-      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "elevateCourse.quiz.questionOf": "Soru %d / %d",
       "quiz.feedback.excellent": "Harika!",
       "quiz.combo": "Kombo x%d",
       "common.continue": "Devam"
