@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Sophia · anti-scroll</title>
+<link rel="stylesheet" href="../kit.css">
+<style>
+  /* Screen: AntiScrollIntroSheet (.medium detent) presented by ContentView over the Profile tab
+     (ProfileV2View), scrolled to its end, where the « Anti-scroll » entry card lives. */
+  body { line-height: 1.26; }
+  svg { display: block; }
+
+  /* ---------- Presenting screen: end of ProfileV2View ---------- */
+  /* Scroll content ends 44 pt (20 + 24) above the tab bar (83 pt). */
+  .bg { position: absolute; left: 20px; right: 20px; bottom: 127px; display: flex; flex-direction: column; }
+
+  .card { background: var(--surface); border-radius: 16px; box-shadow: inset 0 0 0 1.5px var(--hairline), 0 1px 0 var(--hairline); }
+
+  /* FriendsLeaderboardSection: last row of the leaderboard card */
+  .lb-row { display: flex; align-items: center; gap: 12px; padding: 11px 16px; }
+  .lb-rank { width: 26px; height: 26px; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; color: var(--ink-secondary); font-variant-numeric: tabular-nums; }
+  .lb-avatar { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+  .lb-handle { font-size: 15px; font-weight: 700; color: var(--ink); }
+  .lb-xp { margin-left: auto; font-size: 15px; font-weight: 700; color: var(--ink-secondary); font-variant-numeric: tabular-nums; }
+  .lb-row .chev { color: var(--ink-secondary); }
+
+  /* DSPrimaryButtonStyle */
+  .primary { display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 17px 12px; border-radius: 16px; background: var(--accent); color: #fff;
+    font-size: 17px; font-weight: 600; }
+
+  /* FriendQRActionButton */
+  .qr-row { display: flex; gap: 10px; margin-top: 10px; }
+  .qr { flex: 1; height: 50px; display: flex; align-items: center; justify-content: center; gap: 8px;
+    border-radius: 16px; background: var(--surface); color: var(--ink);
+    box-shadow: inset 0 0 0 1.5px var(--hairline), 0 1.5px 0 var(--hairline);
+    font-size: 15px; font-weight: 700; }
+
+  /* ProfileSectionHeader + ProfileHeaderLink */
+  .sec-head { display: flex; align-items: baseline; }
+  .sec-head h2 { margin: 0; font-size: 20px; font-weight: 600; color: var(--ink); }
+  .sec-link { margin-left: auto; display: flex; align-items: center; gap: 3px; padding: 6px 0;
+    font-size: 15px; font-weight: 700; color: var(--accent); }
+
+  /* BadgeRow */
+  .badges { display: flex; gap: 10px; margin-top: 10px; }
+  .badge { flex: 1; padding: 12px 6px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .badge img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+  .badge span { height: 30px; font-size: 12px; font-weight: 700; color: var(--ink); text-align: center; }
+
+  /* ProfilePillTabs (fills) */
+  .pills { display: flex; gap: 6px; }
+  .pill { flex: 1; height: 40px; display: flex; align-items: center; justify-content: center;
+    border-radius: 14px; background: var(--accent-tint); color: var(--ink);
+    font-size: 15px; font-weight: 700; white-space: nowrap; }
+  .pill.on { background: var(--accent); color: #fff; }
+
+  /* CompactCourseRow */
+  .course { margin-top: 9px; display: flex; align-items: center; gap: 12px; padding: 10px 12px 10px 10px; }
+  .course img { width: 64px; height: 64px; border-radius: 10px; object-fit: cover; flex: none; }
+  .course .t { font-size: 15px; font-weight: 700; color: var(--ink); }
+  .course .m { margin-top: 3px; font-size: 13px; color: var(--ink-secondary); }
+
+  /* ---------- Sheet presentation ---------- */
+  .dim { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.2); z-index: 10; }
+  .sheet { position: absolute; left: 0; right: 0; bottom: 0; height: 478px; z-index: 20;
+    background: var(--canvas); border-radius: 24px 24px 0 0;
+    display: flex; flex-direction: column; align-items: center; padding-bottom: var(--safe-bottom); }
+  .grabber { position: absolute; top: 5px; left: 50%; width: 36px; height: 5px; margin-left: -18px;
+    border-radius: 3px; background: rgba(60, 60, 67, 0.3); }
+
+  /* DSHighlightTitle(.title2, .medium), lineSpacing 3 */
+  .title { margin: 30px 28px 0; font-size: 22px; font-weight: 500; line-height: 30.7px;
+    color: var(--ink); text-align: center; }
+  .grow { flex: 1; }
+
+  /* AntiScrollLockedApps(tileSize: 56, spacing: 12) */
+  .tiles { display: flex; gap: 12px; }
+  .tile { position: relative; width: 56px; height: 56px; border-radius: 15.7px;
+    background: linear-gradient(#d1d1d1, #a8a8a8);
+    display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.9); }
+  .tile .at { font-size: 27px; font-weight: 600; line-height: 1; margin-top: -4px; }
+  .tile .lock { position: absolute; top: -7.84px; right: -7.84px; width: 22.4px; height: 22.4px;
+    border-radius: 50%; background: var(--ink); box-shadow: inset 0 0 0 2px var(--canvas);
+    display: flex; align-items: center; justify-content: center; color: #fff; }
+
+  .cta { align-self: stretch; margin: 0 24px 22px; }
+</style>
+</head>
+<body>
+
+<!-- Presenting screen (Profile tab, scrolled to the end) -->
+<div class="bg">
+  <div class="card">
+    <div class="lb-row">
+      <span class="lb-rank" data-c="friendRank"></span>
+      <img class="lb-avatar" src="../../../../ios/Sophia/Assets.xcassets/avatar_12.imageset/avatar_12.jpg" alt="">
+      <span class="lb-handle" data-c="friendHandle"></span>
+      <span class="lb-xp" data-c="friendXp"></span>
+      <svg class="chev" width="8" height="13" viewBox="0 0 8 13" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 1.5 6.5 6.500l-5 5"/></svg>
+    </div>
+  </div>
+
+  <div class="primary" style="margin-top:10px">
+    <!-- person -->
+    <svg width="17" height="18" viewBox="0 0 17 18" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="5" r="3.6"/><path d="M1.6 16.400c.5-3.500 3.300-5.500 6.900-5.500s6.400 2 6.900 5.500c.05.35-.2.6-.55.600H2.150c-.35 0-.6-.25-.55-.6Z"/></svg>
+    <span data-s="friends.add.title"></span>
+  </div>
+
+  <div class="qr-row">
+    <div class="qr">
+      <!-- qrcode -->
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="1.5" y="1.500" width="5.6" height="5.600" rx="1.2"/><rect x="10.9" y="1.500" width="5.6" height="5.600" rx="1.2"/><rect x="1.5" y="10.900" width="5.6" height="5.600" rx="1.2"/><g fill="currentColor" stroke="none"><rect x="3.5" y="3.500" width="1.6" height="1.600"/><rect x="12.900" y="3.500" width="1.6" height="1.600"/><rect x="3.5" y="12.900" width="1.6" height="1.600"/><rect x="10.200" y="10.200" width="2.3" height="2.300"/><rect x="14.900" y="10.200" width="2.3" height="2.300"/><rect x="12.500" y="12.500" width="2.4" height="2.400"/><rect x="10.200" y="14.900" width="2.3" height="2.300"/><rect x="14.900" y="14.900" width="2.3" height="2.300"/></g></svg>
+      <span data-s="profile.qr.mine"></span>
+    </div>
+    <div class="qr">
+      <!-- qrcode.viewfinder -->
+      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.2 5.500V3.400a2.200 2.200 0 0 1 2.200-2.200h2.100M13.500 1.200h2.100a2.200 2.200 0 0 1 2.200 2.200v2.100M17.800 13.500v2.100a2.200 2.200 0 0 1-2.200 2.200h-2.100M5.500 17.800H3.400a2.200 2.200 0 0 1-2.200-2.200v-2.100"/><g fill="currentColor" stroke="none"><rect x="5.300" y="5.300" width="3.500" height="3.500" rx=".7"/><rect x="10.200" y="5.300" width="3.500" height="3.500" rx=".7"/><rect x="5.300" y="10.200" width="3.500" height="3.500" rx=".7"/><rect x="10.200" y="10.200" width="1.600" height="1.600"/><rect x="12.100" y="12.100" width="1.600" height="1.600"/></g></svg>
+      <span data-s="profile.qr.scan"></span>
+    </div>
+  </div>
+
+  <div class="sec-head" style="margin-top:24px">
+    <h2 data-s="profile.badges"></h2>
+    <span class="sec-link"><span data-s="badges.seeAll"></span>
+      <svg width="7" height="11" viewBox="0 0 7 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 1.500 5.500 5.500l-4 4"/></svg>
+    </span>
+  </div>
+  <div class="badges">
+    <div class="badge card"><img src="../../../../ios/Sophia/Assets.xcassets/badge_streak_7.imageset/badge_streak_7.jpg" alt=""><span data-s="badge.name.streak_7"></span></div>
+    <div class="badge card"><img src="../../../../ios/Sophia/Assets.xcassets/badge_courses_10.imageset/badge_courses_10.jpg" alt=""><span data-s="badge.name.courses_10"></span></div>
+    <div class="badge card"><img src="../../../../ios/Sophia/Assets.xcassets/badge_quiz_10.imageset/badge_quiz_10.jpg" alt=""><span data-s="badge.name.quiz_10"></span></div>
+  </div>
+
+  <div class="pills" style="margin-top:24px">
+    <div class="pill on"><span data-s="profile.list.toRead"></span>&nbsp;· <span data-c="countToRead"></span></div>
+    <div class="pill"><span data-s="profile.list.read"></span>&nbsp;· <span data-c="countRead"></span></div>
+    <div class="pill"><span data-s="profile.list.liked"></span>&nbsp;· <span data-c="countLiked"></span></div>
+  </div>
+  <div class="course card">
+    <img src="../../../../ios/Sophia/CourseImages/la_joconde.jpg" alt="">
+    <div><div class="t" data-c="courseTitle"></div><div class="m" data-c="courseMeta"></div></div>
+  </div>
+  <!-- Rest of the page, entirely behind the sheet: two more rows (84 + 9 each), « Voir plus »
+       (44 + 9), then the Anti-scroll poster card (10 + 81). Kept as height only. -->
+  <div style="height:330px"></div>
+</div>
+
+<div class="dim"></div>
+
+<!-- AntiScrollIntroSheet -->
+<div class="sheet">
+  <div class="grabber"></div>
+  <div class="title" data-s="antiScroll.title"></div>
+  <div class="grow"></div>
+
+  <div class="tiles">
+    <div class="tile">
+      <!-- music.note -->
+      <svg width="20" height="25" viewBox="0 0 20 25" fill="currentColor"><path d="M17.800.300 8.300 2.700c-.9.200-1.400.900-1.400 1.800v11.700a5 5 0 0 0-2.200-.300C2.200 16.200.400 18 .400 20.200s1.700 3.900 4 3.800c2.700-.100 4.900-2.200 4.900-5V8.300l8-2v7.400a5 5 0 0 0-2.200-.300c-2.500.3-4.300 2.100-4.300 4.300s1.700 3.900 4 3.800c2.700-.100 4.900-2.200 4.900-5V1.800c0-1-.9-1.800-1.900-1.500Z"/></svg>
+      <span class="lock"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor"><path fill-rule="evenodd" d="M1.500 5V3.500a3 3 0 0 1 6 0V5h.2c.7 0 1.300.600 1.300 1.300v4.400c0 .7-.600 1.300-1.300 1.300H1.300C.600 12 0 11.400 0 10.700V6.300C0 5.600.600 5 1.300 5h.2Zm1.500 0h3V3.500a1.500 1.500 0 0 0-3 0V5Z"/></svg></span>
+    </div>
+    <div class="tile">
+      <!-- camera.fill -->
+      <svg width="28" height="22" viewBox="0 0 28 22" fill="currentColor"><path fill-rule="evenodd" d="M9.700 1.300C10.100.500 10.900 0 11.800 0h4.400c.9 0 1.700.5 2.100 1.300l.9 1.800h4.300A3.500 3.500 0 0 1 27 6.600v11.900a3.500 3.500 0 0 1-3.500 3.500h-19A3.500 3.500 0 0 1 1 18.500V6.600a3.500 3.500 0 0 1 3.500-3.500h4.300l.9-1.800ZM14 17.800a5.600 5.600 0 1 0 0-11.200 5.600 5.600 0 0 0 0 11.200Zm0-2.400a3.200 3.200 0 1 0 0-6.400 3.200 3.200 0 0 0 0 6.400Z"/></svg>
+      <span class="lock"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor"><path fill-rule="evenodd" d="M1.500 5V3.500a3 3 0 0 1 6 0V5h.2c.7 0 1.300.600 1.300 1.300v4.400c0 .7-.600 1.300-1.300 1.300H1.300C.600 12 0 11.400 0 10.700V6.300C0 5.600.600 5 1.300 5h.2Zm1.500 0h3V3.500a1.500 1.500 0 0 0-3 0V5Z"/></svg></span>
+    </div>
+    <div class="tile">
+      <!-- play.rectangle.fill -->
+      <svg width="28" height="21" viewBox="0 0 28 21" fill="currentColor"><path fill-rule="evenodd" d="M4.500 0h19A4 4 0 0 1 27.500 4v13a4 4 0 0 1-4 4h-19a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4Zm6.700 5.900v9.200c0 .7.800 1.100 1.400.7l7-4.600c.5-.3.500-1.100 0-1.400l-7-4.600c-.6-.4-1.400 0-1.400.7Z"/></svg>
+      <span class="lock"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor"><path fill-rule="evenodd" d="M1.500 5V3.500a3 3 0 0 1 6 0V5h.2c.7 0 1.300.600 1.300 1.300v4.400c0 .7-.600 1.300-1.300 1.300H1.300C.600 12 0 11.400 0 10.700V6.300C0 5.600.600 5 1.300 5h.2Zm1.500 0h3V3.500a1.500 1.500 0 0 0-3 0V5Z"/></svg></span>
+    </div>
+    <div class="tile">
+      <!-- bubble.left.fill -->
+      <svg width="27" height="25" viewBox="0 0 27 25" fill="currentColor"><path d="M5 0h17a4.500 4.500 0 0 1 4.500 4.500v10A4.500 4.500 0 0 1 22 19H12.300l-5.400 4.900c-.8.700-1.900.200-1.900-.8V19A4.500 4.500 0 0 1 .500 14.500v-10A4.500 4.500 0 0 1 5 0Z"/></svg>
+      <span class="lock"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor"><path fill-rule="evenodd" d="M1.500 5V3.500a3 3 0 0 1 6 0V5h.2c.7 0 1.300.600 1.300 1.300v4.400c0 .7-.600 1.300-1.300 1.300H1.300C.600 12 0 11.400 0 10.700V6.300C0 5.600.600 5 1.300 5h.2Zm1.500 0h3V3.500a1.500 1.500 0 0 0-3 0V5Z"/></svg></span>
+    </div>
+    <div class="tile">
+      <!-- at -->
+      <span class="at">@</span>
+      <span class="lock"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor"><path fill-rule="evenodd" d="M1.500 5V3.500a3 3 0 0 1 6 0V5h.2c.7 0 1.300.600 1.300 1.300v4.400c0 .7-.600 1.300-1.300 1.300H1.300C.600 12 0 11.400 0 10.700V6.300C0 5.600.600 5 1.300 5h.2Zm1.500 0h3V3.500a1.500 1.500 0 0 0-3 0V5Z"/></svg></span>
+    </div>
+  </div>
+
+  <div class="grow"></div>
+  <div class="primary cta">
+    <!-- iphone.slash -->
+    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path stroke-width="2" d="M5.600 3.400V3.200a2 2 0 0 1 2-2h3.800a2 2 0 0 1 2 2v8M13.400 14.700v1.100a2 2 0 0 1-2 2H7.600a2 2 0 0 1-2-2V7.300"/><path stroke-width="2.100" d="M1.800 2.300 17.200 16.700"/></svg>
+    <span data-s="antiScroll.cta"></span>
+  </div>
+</div>
+
+<script src="../kit.js"></script>
+<script>
+  // UI strings (French localisation, keyed by the app's loc keys).
+  const S = {
+    "antiScroll.title": "Active l’anti-scroll : on te fait lire un cours Sophia pour débloquer tes apps",
+    "antiScroll.cta": "Activer l’anti-scroll",
+    "friends.add.title": "Ajouter un ami",
+    "profile.qr.mine": "Mon QR code",
+    "profile.qr.scan": "Scanner",
+    "profile.badges": "Badges",
+    "badges.seeAll": "Tout voir",
+    "badge.name.streak_7": "Flamme",
+    "badge.name.courses_10": "Lecteur",
+    "badge.name.quiz_10": "Bon élève",
+    "profile.list.toRead": "À lire",
+    "profile.list.read": "Lus",
+    "profile.list.liked": "Aimés",
+  };
+  // Content and user data.
+  const C = {
+    friendRank: "4",
+    friendHandle: "@theo.lambert",
+    friendXp: "1 240 XP",
+    countToRead: "5",
+    countRead: "23",
+    countLiked: "9",
+    courseTitle: "Pourquoi la Joconde est-elle aussi connue ?",
+    courseMeta: "Dusan Nikolic · 5 min",
+  };
+  document.querySelectorAll("[data-s]").forEach((el) => { el.innerHTML = S[el.dataset.s]; });
+  document.querySelectorAll("[data-c]").forEach((el) => { el.innerHTML = C[el.dataset.c]; });
+  Kit.chrome({ status: "dark" });
+</script>
+</body>
+</html>
