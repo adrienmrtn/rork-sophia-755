@@ -268,8 +268,6 @@ internal fun SwipeCoursesStep(
                 val cardWidth = (maxWidth - OV2End.side * 2).coerceAtLeast(200.dp)
                 val deckHeight = minOf(maxHeight, SWIPE_STACK_RISE + SWIPE_CARD_MAX_HEIGHT)
                 val thresholdPx = with(density) { 100.dp.toPx() }
-                // Cartes encore sous celle du dessus : une tranche visible pour chacune.
-                val behind = (courses.size - index - 1).coerceIn(0, SWIPE_STACK_MAX)
                 Box(
                     modifier = Modifier
                         .size(cardWidth, deckHeight)
@@ -282,20 +280,26 @@ internal fun SwipeCoursesStep(
                         },
                     contentAlignment = Alignment.TopCenter,
                 ) {
-                    // La pile : de la carte la plus profonde à la plus proche, chacune un peu plus
-                    // haute et plus étroite que la suivante. La plus profonde s'efface à chaque réponse.
-                    for (depth in SWIPE_STACK_MAX downTo 1) {
-                        key(depth) {
-                            val shown by animateFloatAsState(
-                                targetValue = if (depth <= behind) 1f else 0f,
+                    // La pile : une tranche par carte encore à venir, de la plus profonde à la plus
+                    // proche, chacune un peu plus haute et plus étroite que la suivante. Chaque
+                    // tranche suit SA carte : à chaque réponse, c'est la carte de devant qui s'en
+                    // va et toutes les autres avancent d'un cran. La pile se désépaissit donc par
+                    // l'avant ; aucune tranche ne disparaît au fond.
+                    for (position in minOf(courses.lastIndex, index + SWIPE_STACK_MAX + 1) downTo index) {
+                        key("plate-" + courses[position].id) {
+                            // Profondeur de cette carte dans la pile : 0, elle est devant (cachée
+                            // derrière la vraie carte) ; elle glisse d'un cran à chaque réponse.
+                            val depth by animateFloatAsState(
+                                targetValue = (position - index).toFloat(),
                                 animationSpec = OnboardingMotion.settle(280),
                                 label = "stackPlate",
                             )
                             SwipePlate(
-                                width = cardWidth - SWIPE_STACK_INSET * (2 * depth),
+                                width = cardWidth - SWIPE_STACK_INSET * (2f * depth),
                                 depth = depth,
-                                shown = { shown },
-                                modifier = Modifier.padding(top = SWIPE_STACK_RISE - SWIPE_STACK_STEP * depth),
+                                // Au-delà de la dernière tranche visible, la carte attend, invisible.
+                                shown = { (SWIPE_STACK_MAX + 1 - depth).coerceIn(0f, 1f) },
+                                modifier = Modifier.padding(top = (SWIPE_STACK_RISE - SWIPE_STACK_STEP * depth).coerceAtLeast(0.dp)),
                             )
                         }
                     }
@@ -411,22 +415,18 @@ private fun swipeTitle(context: android.content.Context, language: AppLanguage):
 }
 
 /**
- * La tranche d'une carte de la pile, à [depth] cartes sous celle du dessus : même fond et même
- * bordure qu'une carte, un peu plus soutenus en profondeur. Quand [shown] retombe à zéro la
- * tranche s'efface en descendant derrière les autres : la pile a perdu une carte.
+ * La tranche d'une carte de la pile, à [depth] cartes sous celle du dessus (une valeur
+ * intermédiaire pendant qu'elle avance d'un cran) : même fond et même bordure qu'une carte, un
+ * peu plus soutenus en profondeur. [shown] vaut 1 pour une tranche visible, 0 pour une carte
+ * encore trop loin dans la pile.
  */
 @Composable
-private fun SwipePlate(width: Dp, depth: Int, shown: () -> Float, modifier: Modifier = Modifier) {
+private fun SwipePlate(width: Dp, depth: Float, shown: () -> Float, modifier: Modifier = Modifier) {
     val fill = lerp(DS.accentTint, SwipeCardBorder, (0.14f * depth).coerceIn(0f, 1f))
-    val drop = with(LocalDensity.current) { SWIPE_STACK_STEP.toPx() }
     Box(
         modifier = modifier
             .size(width = width.coerceAtLeast(0.dp), height = 60.dp)
-            .graphicsLayer {
-                val progress = shown().coerceIn(0f, 1f)
-                alpha = progress
-                translationY = (1f - progress) * drop
-            }
+            .graphicsLayer { alpha = shown().coerceIn(0f, 1f) }
             .ov2EndCard(fill = fill, border = SwipeCardBorder)
             .clearAndSetSemantics { },
     )
@@ -636,8 +636,8 @@ private val LoadingEasing = CubicBezierEasing(0.2f, 0.6f, 0.3f, 1f)
 private val LoadingPausedTint = Color(0xFFE39A1C)
 
 /**
- * « We are preparing your knowledge journey »: one progress bar for the whole preparation, the
- * three steps ticking as it passes them, then the social proof — users' photos, the stars and
+ * « We are preparing your knowledge journey »: the overall percentage, and the three steps each
+ * filling its own bar one after the other, then the social proof — users' photos, the stars and
  * the rating, « 500,000 users read courses on Sophia every month » — and the « see my profile » CTA.
  *
  * Le chargement est **bloquant** : à quatre moments fixés d'avance ([LOADING_CHECKPOINTS]) la
@@ -744,12 +744,6 @@ internal fun LoadingProfileStep(language: AppLanguage, firstName: String, onCont
                         LoadingPauseBadge()
                     }
                 }
-                LoadingBar(
-                    progress = { overall.value },
-                    tint = { barTint },
-                    marks = LOADING_CHECKPOINTS,
-                    modifier = Modifier.padding(top = 10.dp),
-                )
             }
             // La question en attente, entre la barre arrêtée et les étapes.
             AnimatedVisibility(
@@ -780,7 +774,11 @@ internal fun LoadingProfileStep(language: AppLanguage, firstName: String, onCont
                         done = stepsDone > i,
                         active = stepsDone == i,
                         doneLabel = doneLabel,
-                        divider = i < 2,
+                        // Chaque ligne porte son tiers du chargement : elle se remplit quand
+                        // la progression globale traverse sa tranche, l'une après l'autre.
+                        progress = { (overall.value * 3f - i).coerceIn(0f, 1f) },
+                        // Seule la ligne en cours passe à l'ambre pendant une question.
+                        tint = { if (stepsDone == i) barTint else DS.accent },
                     )
                 }
             }
@@ -849,7 +847,8 @@ private fun loadingTitle(context: android.content.Context, firstName: String, la
 
 /**
  * One step: its name and, on the right, a blue check (finished), a blue ring (in progress)
- * or a grey ring (to come). The percentage lives on the global bar above.
+ * or a grey ring (to come); under it, its own progress bar. The three bars fill one after
+ * the other; the overall percentage stays above them.
  */
 @Composable
 private fun LoadingStepRow(
@@ -857,7 +856,8 @@ private fun LoadingStepRow(
     done: Boolean,
     active: Boolean,
     doneLabel: String,
-    divider: Boolean,
+    progress: () -> Float,
+    tint: () -> Color,
 ) {
     val labelColor by animateColorAsState(
         if (done || active) DS.ink else DS.inkSecondary,
@@ -892,14 +892,14 @@ private fun LoadingStepRow(
                 Box(modifier = Modifier.size(24.dp).border(if (active) 2.dp else 1.5.dp, ringColor, CircleShape))
             }
         }
-        if (divider) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(1.5.dp)
-                    .background(DS.hairline.copy(alpha = 0.75f)),
-            )
-        }
+        // La barre de cette étape, sous son nom : le chargement se lit sur les trois lignes.
+        LoadingBar(
+            progress = progress,
+            tint = tint,
+            marks = emptyList(),
+            modifier = Modifier.padding(bottom = 6.dp),
+            height = 8.dp,
+        )
     }
 }
 
@@ -913,24 +913,29 @@ private fun LoadingBar(
     tint: () -> Color,
     marks: List<Float>,
     modifier: Modifier = Modifier,
+    height: Dp = 12.dp,
 ) {
     val track = DS.accentTint
     val notch = DS.surface
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(12.dp)
+            .height(height)
             .clip(CircleShape)
             .background(track)
             .drawBehind {
                 val rtl = layoutDirection == LayoutDirection.Rtl
-                val filled = max(size.height, size.width * progress().coerceIn(0f, 1f))
-                drawRoundRect(
-                    color = tint(),
-                    topLeft = Offset(if (rtl) size.width - filled else 0f, 0f),
-                    size = Size(filled, size.height),
-                    cornerRadius = CornerRadius(size.height / 2f),
-                )
+                val fraction = progress().coerceIn(0f, 1f)
+                // Une barre pas encore entamée reste vide, sans pastille de départ.
+                if (fraction > 0f) {
+                    val filled = max(size.height, size.width * fraction)
+                    drawRoundRect(
+                        color = tint(),
+                        topLeft = Offset(if (rtl) size.width - filled else 0f, 0f),
+                        size = Size(filled, size.height),
+                        cornerRadius = CornerRadius(size.height / 2f),
+                    )
+                }
                 val notchWidth = 2.dp.toPx()
                 marks.forEach { mark ->
                     val x = size.width * mark.coerceIn(0f, 1f)

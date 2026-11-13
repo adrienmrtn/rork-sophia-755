@@ -838,7 +838,7 @@ private fun PaywallShell(
     legalFooter: @Composable () -> Unit,
     onPurchase: () -> Unit,
     notice: String? = null,
-    closeDelayMillis: Int = 0,
+    closeDelayMillis: Int = PAYWALL_CLOSE_DELAY_MILLIS,
     ctaIcon: androidx.compose.ui.graphics.vector.ImageVector? = null,
     content: @Composable () -> Unit,
 ) {

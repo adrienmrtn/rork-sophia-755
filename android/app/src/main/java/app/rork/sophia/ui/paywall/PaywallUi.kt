@@ -111,14 +111,18 @@ fun PaywallEntry(modifier: Modifier = Modifier, content: @Composable () -> Unit)
 }
 
 /**
- * Close button. [delayMillis] holds it back the way iOS does on the quiz (4s) and course
- * unlock (2s) paywalls, so the offer is read before it can be dismissed.
+ * How long every paywall holds its close button back, so the offer is read before it can be
+ * dismissed: three seconds, on all of them (onboarding, comparison, course, quiz, audio,
+ * training, discount).
  */
+const val PAYWALL_CLOSE_DELAY_MILLIS: Int = 3000
+
+/** Close button, held back for [delayMillis] ([PAYWALL_CLOSE_DELAY_MILLIS] on every paywall). */
 @Composable
 fun PaywallCloseButton(
     onClose: () -> Unit,
     modifier: Modifier = Modifier,
-    delayMillis: Int = 0,
+    delayMillis: Int = PAYWALL_CLOSE_DELAY_MILLIS,
     light: Boolean = false,
 ) {
     var visible by remember { mutableStateOf(delayMillis == 0) }

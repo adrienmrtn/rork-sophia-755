@@ -343,12 +343,6 @@ fun CourseScreen(
             sectionEnteredAt = System.currentTimeMillis()
         }
         progressManager.updateLessonIndex(course.id, pageIndex, lessonCount = pages.size)
-        InAppReviewHelper.requestIfEligible(
-            context = context,
-            progressManager = progressManager,
-            courseId = course.id,
-            lessonIndex = pageIndex,
-        )
         val page = pages.getOrNull(pageIndex) ?: return@LaunchedEffect
         val locked = FreemiumGate.isLessonContentLocked(
             pageIndex,
@@ -743,6 +737,8 @@ fun CourseScreen(
                     trailingIcon = if (finishing) null else Icons.AutoMirrored.Filled.ArrowForward,
                     onClick = {
                         if (!pagesReady) return@CoursePrimaryButton
+                        // La demande de note : au cinquième « Continuer » du premier cours ouvert.
+                        InAppReviewHelper.onReaderContinue(context, progressManager, course.id)
                         if (readingMode == CourseReadingMode.STEPS) {
                             advanceStep()
                             return@CoursePrimaryButton

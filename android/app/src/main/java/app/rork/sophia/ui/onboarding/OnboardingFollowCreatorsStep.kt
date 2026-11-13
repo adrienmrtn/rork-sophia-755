@@ -24,6 +24,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -50,8 +53,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.window.Dialog
-import androidx.compose.ui.window.DialogProperties
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.CourseAuthor
 import app.rork.sophia.data.LocalCounters
@@ -307,12 +308,13 @@ private const val POPUP_MAX_COURSES = 12
 private val POPUP_COVER_SIZE = 116.dp
 
 /**
- * La fiche d'un prof, en fenêtre au-dessus de la liste : son portrait, son nom (et le badge
+ * La fiche d'un prof, dans une feuille qui monte du bas de l'écran : son portrait, son nom (et le badge
  * vérifié), son titre, sa présentation, puis ses cours — couverture et titre — dans une rangée
  * à faire défiler. Les textes viennent du catalogue, comme sur la page du créateur
- * (`CourseAuthor.title` / `bio`, `courseIds`). On peut y suivre le prof ; la croix, un toucher
- * hors de la fenêtre ou le retour la referment.
+ * (`CourseAuthor.title` / `bio`, `courseIds`). On peut y suivre le prof ; la croix, un glissement
+ * vers le bas, un toucher hors de la feuille ou le retour la referment.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun CreatorPopup(
     author: CourseAuthor,
@@ -323,18 +325,15 @@ private fun CreatorPopup(
     onDismiss: () -> Unit,
 ) {
     val context = LocalContext.current
-    Dialog(
+    ModalBottomSheet(
         onDismissRequest = onDismiss,
-        // La largeur de la fenêtre est décidée ici, pas par le système.
-        properties = DialogProperties(usePlatformDefaultWidth = false),
+        // Ouverte en entier : la présentation et le bouton « Suivre » sont visibles d'emblée.
+        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        containerColor = DS.canvas,
+        shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
     ) {
         Column(
-            modifier = Modifier
-                .padding(horizontal = 20.dp, vertical = 28.dp)
-                .widthIn(max = 420.dp)
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(28.dp))
-                .background(DS.canvas),
+            modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             // La croix, en haut à la fin.

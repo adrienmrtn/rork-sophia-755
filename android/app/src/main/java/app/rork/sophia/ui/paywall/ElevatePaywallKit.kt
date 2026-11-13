@@ -161,13 +161,13 @@ internal enum class ElevateCloseStyle {
     Floating,
 }
 
-/** Close button; [delayMillis] holds it back the way the legacy paywalls do. */
+/** Close button, held back for [delayMillis] ([PAYWALL_CLOSE_DELAY_MILLIS] on every paywall). */
 @Composable
 internal fun ElevateCloseButton(
     language: AppLanguage,
     onClose: () -> Unit,
     modifier: Modifier = Modifier,
-    delayMillis: Int = 0,
+    delayMillis: Int = PAYWALL_CLOSE_DELAY_MILLIS,
     style: ElevateCloseStyle = ElevateCloseStyle.Plain,
 ) {
     val context = LocalContext.current

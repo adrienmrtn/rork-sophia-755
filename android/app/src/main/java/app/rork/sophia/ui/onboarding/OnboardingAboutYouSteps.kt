@@ -71,6 +71,17 @@ import app.rork.sophia.ui.newgen.AvatarCircle
 import app.rork.sophia.ui.newgen.Avatars
 import app.rork.sophia.ui.theme.DS
 import kotlinx.coroutines.delay
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.PageSize
+import androidx.compose.foundation.pager.PagerDefaults
+import androidx.compose.foundation.pager.PagerSnapDistance
+import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.snapshotFlow
+import kotlinx.coroutines.launch
+import kotlin.math.abs
 
 /**
  * The « about you » pages of the onboarding, right before the objectives: first name, age,
@@ -150,15 +161,15 @@ private fun OptionRows(topPadding: Dp, content: @Composable () -> Unit) {
 
 // MARK: - First name
 
-/** Diamètre d'un avatar du carrousel de la page du prénom (celui qui est choisi ; les autres sont réduits). */
-private val NAME_AVATAR_SIZE = 72.dp
+/** Diamètre de l'avatar choisi, au centre du carrousel de la page du prénom ; ses voisins sont réduits. */
+private val NAME_AVATAR_SIZE = 116.dp
 
 /**
  * « What's your name? »: one field, the keyboard coming up by itself, « Continue » as soon as
  * there is a name, and « Skip » for anyone who would rather not say.
  *
- * On y choisit aussi son avatar : les avatars de l'app sur une ligne qui défile, celui qui
- * est choisi entouré de bleu. Un avatar est toujours proposé d'entrée ([initialAvatarId],
+ * On y choisit aussi son avatar : un carrousel sur toute la largeur, l'avatar choisi en grand
+ * au centre, que l'on change en balayant à gauche ou à droite. Un avatar est toujours proposé d'entrée ([initialAvatarId],
  * sinon un tiré au hasard) ; il est rendu avec le prénom, que l'on continue ou que l'on
  * passe.
  */
@@ -305,9 +316,11 @@ internal fun NameStep(
 }
 
 /**
- * Les avatars de l'app (`avatar_01`…) sur une ligne qui défile : celui qui est choisi est à
- * sa taille et cerclé de bleu, les autres un peu réduits. La ligne s'ouvre sur l'avatar
- * choisi. Mêmes ronds ([AvatarCircle]) que la feuille de choix du profil.
+ * Les avatars de l'app (`avatar_01`…) en carrousel sur toute la largeur de la page : celui du
+ * centre est le choix, affiché en grand et cerclé de bleu ; ses voisins, réduits et estompés,
+ * dépassent de chaque côté. On change d'avatar en balayant la ligne à gauche ou à droite
+ * (le défilement s'aimante sur un avatar), ou en touchant un voisin. Le carrousel s'ouvre sur
+ * l'avatar déjà choisi. Mêmes ronds ([AvatarCircle]) que la feuille de choix du profil.
  */
 @Composable
 private fun NameAvatarCarousel(
@@ -316,40 +329,63 @@ private fun NameAvatarCarousel(
     onSelect: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    // L'avatar choisi à l'ouverture est amené en vue, avec deux voisins avant lui.
-    val startIndex = remember { (Avatars.all.indexOf(selected) - 2).coerceAtLeast(0) }
-    val listState = rememberLazyListState(initialFirstVisibleItemIndex = startIndex)
-    LazyRow(
-        state = listState,
-        modifier = modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(horizontal = OV2Core.sideInset, vertical = 4.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        itemsIndexed(Avatars.all, key = { _, id -> id }) { index, id ->
-            val isSelected = id == selected
-            val ring by animateColorAsState(
-                targetValue = if (isSelected) DS.accent else DS.accent.copy(alpha = 0f),
-                animationSpec = OV2Calm.quick(),
-                label = "nameAvatarRing",
-            )
-            val scale by animateFloatAsState(if (isSelected) 1f else 0.82f, OV2Calm.quick(), label = "nameAvatarScale")
+    val avatars = Avatars.all
+    val pagerState = rememberPagerState(
+        initialPage = avatars.indexOf(selected).coerceAtLeast(0),
+        pageCount = { avatars.size },
+    )
+    val scope = rememberCoroutineScope()
+    val choose by rememberUpdatedState(onSelect)
+    // Le choix suit l'avatar du centre.
+    LaunchedEffect(pagerState) {
+        snapshotFlow { pagerState.currentPage }.collect { page ->
+            avatars.getOrNull(page)?.let { choose(it) }
+        }
+    }
+    BoxWithConstraints(modifier = modifier.fillMaxWidth()) {
+        // L'avatar du centre est au milieu de la ligne : la même marge de chaque côté.
+        val side = ((maxWidth - NAME_AVATAR_SIZE) / 2).coerceAtLeast(0.dp)
+        HorizontalPager(
+            state = pagerState,
+            modifier = Modifier.fillMaxWidth(),
+            contentPadding = PaddingValues(horizontal = side, vertical = 4.dp),
+            pageSize = PageSize.Fixed(NAME_AVATAR_SIZE),
+            pageSpacing = 6.dp,
+            // Un grand geste peut faire défiler plusieurs avatars d'un coup.
+            flingBehavior = PagerDefaults.flingBehavior(
+                state = pagerState,
+                pagerSnapDistance = PagerSnapDistance.atMost(6),
+            ),
+            verticalAlignment = Alignment.CenterVertically,
+            key = { avatars[it] },
+        ) { page ->
+            val id = avatars[page]
+            val isSelected = page == pagerState.currentPage
             AvatarCircle(
                 avatarId = id,
                 initial = "",
                 size = NAME_AVATAR_SIZE,
                 modifier = Modifier
                     .graphicsLayer {
+                        // Distance au centre, en avatars : 0 au centre, 1 pour un voisin.
+                        val distance = abs((pagerState.currentPage - page) + pagerState.currentPageOffsetFraction)
+                            .coerceIn(0f, 1f)
+                        val scale = 1f - 0.4f * distance
                         scaleX = scale
                         scaleY = scale
+                        alpha = 1f - 0.45f * distance
                     }
                     // Un choix : la vibration « sélection » est donnée par la page, pas par l'appui.
-                    .pressable(onClick = { onSelect(id) }, scaleDown = 0.94f, haptic = false)
-                    .border(3.dp, ring, CircleShape)
+                    .pressable(
+                        onClick = { scope.launch { pagerState.animateScrollToPage(page) } },
+                        scaleDown = 0.94f,
+                        haptic = false,
+                    )
+                    .border(3.dp, if (isSelected) DS.accent else DS.accent.copy(alpha = 0f), CircleShape)
                     .semantics {
                         this.selected = isSelected
                         role = Role.RadioButton
-                        contentDescription = "$label ${index + 1}"
+                        contentDescription = "$label ${page + 1}"
                     },
             )
         }

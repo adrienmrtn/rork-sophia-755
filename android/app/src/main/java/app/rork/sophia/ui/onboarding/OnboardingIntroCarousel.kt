@@ -187,8 +187,23 @@ internal class OnboardingCarouselState(initialPage: Int = 0, initialHold: Boolea
     /** Does the current page advance by itself? */
     val isRunning: Boolean get() = !holdsCurrentPage && !autoAdvanceDisabled
 
+    /**
+     * Number of pages shown: [PAGE_COUNT], or one fewer when the app's language has no
+     * narration, in which case the last page (« Écoute tes cours ») is left out.
+     */
+    var pageCount by mutableIntStateOf(PAGE_COUNT)
+        private set
+
+    /** Shows or leaves out the audio page, the last one; the current page stays in range. */
+    fun showAudioPage(shown: Boolean) {
+        val count = if (shown) PAGE_COUNT else PAGE_COUNT - 1
+        if (pageCount == count) return
+        pageCount = count
+        if (page > count - 1) page = count - 1
+    }
+
     fun go(to: Int, hold: Boolean = false) {
-        page = to.coerceIn(0, PAGE_COUNT - 1)
+        page = to.coerceIn(0, pageCount - 1)
         holdsCurrentPage = hold
         restartClock()
     }
@@ -238,7 +253,7 @@ internal fun IntroCarouselStep(
     val reduceMotion = rememberOnboardingReduceMotion()
     val screenReader = rememberOnboardingScreenReader()
     val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
-    val lastPage = OnboardingCarouselState.PAGE_COUNT - 1
+    val lastPage = state.pageCount - 1
     val leave by rememberUpdatedState(onContinue)
 
     // Back in the foreground, the page takes its five whole seconds again.
@@ -329,7 +344,10 @@ internal fun IntroCarouselStep(
             CarouselSlot(0, state.page, reduceMotion, rtl) { IntroQuizPage(language, active = state.page == 0) }
             CarouselSlot(1, state.page, reduceMotion, rtl) { IntroRoutePage(language, active = state.page == 1) }
             CarouselSlot(2, state.page, reduceMotion, rtl) { IntroDuelsPage(language, active = state.page == 2) }
-            CarouselSlot(3, state.page, reduceMotion, rtl) { IntroAudioPage(language, active = state.page == 3) }
+            // The audio page only where the app's language has narrations.
+            if (state.pageCount > 3) {
+                CarouselSlot(3, state.page, reduceMotion, rtl) { IntroAudioPage(language, active = state.page == 3) }
+            }
         }
         OnboardingCta(
             text = StringStore.text(context, "common.continue", language),

@@ -6,6 +6,7 @@ import android.util.Log
 import app.rork.sophia.AppConfig
 import app.rork.sophia.BuildConfig
 import app.rork.sophia.SophiaApplication
+import app.rork.sophia.data.FeatureFlags
 import app.rork.sophia.data.GlossaryEntry
 import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.domain.Campaign
@@ -352,9 +353,14 @@ object CatalogStore {
     /** Garde le manifeste et publie ses événements éditoriaux (le même jeu quelle que soit la langue). */
     private fun adopt(code: String, manifest: CatalogManifest) {
         manifests[code] = manifest
-        _campaigns.value = manifest.events
-            .filter { it.slug.isNotBlank() && it.startDate != null && it.endDate != null }
-            .sortedBy { it.startsAt }
+        // Événements masqués tant que `FeatureFlags.eventsEnabled` est faux : rien n'est publié.
+        _campaigns.value = if (!FeatureFlags.eventsEnabled) {
+            emptyList()
+        } else {
+            manifest.events
+                .filter { it.slug.isNotBlank() && it.startDate != null && it.endDate != null }
+                .sortedBy { it.startsAt }
+        }
         _trending.value = _trending.value + (code to manifest.trending)
         // Les compteurs réels des cartes ; un manifeste sans chiffres ne vide pas ceux qu'on a.
         if (manifest.stats.isNotEmpty()) app.rork.sophia.domain.CourseStats.byCourse = manifest.stats
