@@ -1,0 +1,79 @@
+# Captures d'écran de l'app Android pour la page d'accueil du site (web/public/app/).
+# Construit l'APK de debug, le lance dans un émulateur et photographie le fil, Explorer et
+# la lecture d'un cours (scripts/site_app_screens.py). Les images sortent en artefact ;
+# avec « commit », elles sont aussi déposées sur la branche, dans design/app-captures/.
+name: Site app screens
+
+on:
+  workflow_dispatch:
+    inputs:
+      course:
+        description: "Course opened for the reader capture"
+        type: string
+        default: course_149_la_joconde
+      commit:
+        description: "Commit the captures to the branch (design/app-captures/)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: site-app-screens-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    name: Capture the app
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: true
+
+      - name: Assemble debug APK
+        working-directory: android
+        run: chmod +x gradlew && ./gradlew :app:assembleDebug --no-daemon --stacktrace
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Capture in the emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          target: google_apis
+          profile: pixel_6
+          disable-animations: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
+          script: python3 scripts/site_app_screens.py android/app/build/outputs/apk/debug/app-debug.apk design/app-captures "${{ inputs.course }}"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: site-app-screens
+          path: design/app-captures
+          retention-days: 14
+
+      - name: Commit the captures
+        if: always() && inputs.commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f design/app-captures
+          git commit -m "Captures de l'app pour le site" || exit 0
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

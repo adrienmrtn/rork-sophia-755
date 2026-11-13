@@ -61,9 +61,9 @@ export default async function HomePage() {
             <h2 className="max-w-[720px] text-[36px] font-extrabold leading-[1.1] tracking-[-0.9px]">{h.appTitle}</h2>
             <div className="grid grid-cols-1 items-end gap-6 sm:grid-cols-3">
               {[
-                ["/app/explore.png", h.appExplore, 250, 400],
-                ["/app/home.png", h.appFeed, 290, 470],
-                ["/app/reader.png", h.appReader, 250, 400],
+                ["/app/screen-explore.png", h.appExplore, 250, 400],
+                ["/app/screen-feed.png", h.appFeed, 290, 470],
+                ["/app/screen-reader.png", h.appReader, 250, 400],
               ].map(([src, caption, w, hgt]) => (
                 <figure key={String(src)} className="m-0 flex flex-col items-center gap-[18px]">
                   <figcaption className="text-center text-[15px] font-bold text-ink">{caption}</figcaption>
