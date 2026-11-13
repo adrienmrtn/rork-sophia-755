@@ -22,6 +22,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.EncodeDefault
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
@@ -97,6 +99,12 @@ object Analytics {
         timeZone = TimeZone.getTimeZone("UTC")
     }
 
+    /**
+     * `platform` porte `@EncodeDefault` : le client Supabase sérialise avec
+     * `encodeDefaults = false`, ce qui retirait la colonne de la requête. La base la veut
+     * non nulle et refusait donc chaque lot, si bien qu'aucun événement Android n'arrivait.
+     */
+    @OptIn(ExperimentalSerializationApi::class)
     @Serializable
     data class CourseEventRow(
         val event_id: String,
@@ -108,7 +116,7 @@ object Analytics {
         val course_id: String? = null,
         val lang: String,
         val country: String? = null,
-        val platform: String = "android",
+        @EncodeDefault(EncodeDefault.Mode.ALWAYS) val platform: String = "android",
         val app_version: String,
         val premium_status: String,
         val screen: String? = null,
@@ -119,6 +127,7 @@ object Analytics {
         val ts: String,
     )
 
+    @OptIn(ExperimentalSerializationApi::class)
     @Serializable
     data class SubscriberSnapshotRow(
         val user_id: String,
@@ -128,7 +137,7 @@ object Analytics {
         val store: String? = null,
         val expires_at: String? = null,
         val will_renew: Boolean? = null,
-        val platform: String = "android",
+        @EncodeDefault(EncodeDefault.Mode.ALWAYS) val platform: String = "android",
         val app_version: String,
         val reported_at: String,
     )

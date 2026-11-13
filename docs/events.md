@@ -124,6 +124,25 @@ enregistré comme `like` / `unlike`.
   du webhook.
 - `public.premium_status` : vue qui combine les deux, la source la plus récente l'emporte.
 
+## Retours envoyés depuis l'app
+
+Le formulaire des réglages (« Envoyer un retour », « Demander une fonctionnalité ») envoie
+chaque message à Formspree, qui nous prévient par e-mail et porte l'adresse de réponse. Une
+fois cet envoi réussi, l'app en dépose une copie dans `public.app_feedback` (migration
+`20261113030000_app_feedback.sql`) : `user_id`, `category` (`bug`, `idea`, `feature`,
+`content`, `translation`, `other`), `message`, `has_email` (une adresse a été laissée ; elle
+n'est pas copiée), `lang`, `platform`, `app_version`, `os_version`, `device`, `is_premium`,
+`created_at`. L'app ne peut qu'insérer ses propres lignes ; la lecture se fait côté serveur.
+Un échec de la copie est silencieux : le message est déjà parti.
+
+## Piège Android : valeurs par défaut
+
+Le client Supabase d'Android sérialise sans les valeurs par défaut (`encodeDefaults = false`).
+Un champ obligatoire en base qui n'existe dans l'app que comme valeur par défaut (`platform =
+"android"`) disparaît donc de la requête et fait refuser tout le lot : c'est ce qui a empêché
+tout événement Android d'arriver jusqu'au 13 novembre. Un tel champ porte `@EncodeDefault`
+ou n'a pas de valeur par défaut ; `AnalyticsPayloadTest` le vérifie.
+
 ## Ajouter un événement
 
 1. L'ajouter ici, avec ses propriétés.

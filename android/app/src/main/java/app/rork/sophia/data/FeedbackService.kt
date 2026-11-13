@@ -2,13 +2,58 @@ package app.rork.sophia.data
 
 import app.rork.sophia.AppConfig
 import app.rork.sophia.BuildConfig
+import io.github.jan.supabase.auth.auth
+import io.github.jan.supabase.postgrest.from
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.Serializable
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
 
 object FeedbackService {
+    /**
+     * Une ligne de `app_feedback` (docs/events.md). Aucun champ n'a de valeur par défaut : le
+     * client Supabase n'envoie pas les valeurs par défaut, et `platform` est obligatoire.
+     */
+    @Serializable
+    data class AppFeedbackRow(
+        val user_id: String,
+        val category: String,
+        val message: String,
+        val has_email: Boolean,
+        val lang: String,
+        val platform: String,
+        val app_version: String,
+        val os_version: String,
+        val device: String,
+        val is_premium: Boolean,
+    )
+
+    /**
+     * La copie du retour gardée chez Sophia, sans l'adresse e-mail (elle reste chez
+     * Formspree). Un échec ici ne se montre pas à l'utilisateur : son message est déjà parti.
+     */
+    private suspend fun storeCopy(message: String, category: String, language: String, isPremium: Boolean, hasEmail: Boolean) {
+        runCatching {
+            val userId = SupabaseManager.client.auth.currentUserOrNull()?.id ?: return
+            SupabaseManager.client.from("app_feedback").insert(
+                AppFeedbackRow(
+                    user_id = userId,
+                    category = category,
+                    message = message.trim().take(5000),
+                    has_email = hasEmail,
+                    lang = language,
+                    platform = "android",
+                    app_version = BuildConfig.VERSION_NAME.take(32),
+                    os_version = android.os.Build.VERSION.RELEASE.orEmpty().take(32),
+                    device = android.os.Build.MODEL.orEmpty().take(64),
+                    is_premium = isPremium,
+                ),
+            )
+        }
+    }
+
     /**
      * Deliberately loose: the point is to catch "jean@gmail" and "jean.gmail.com" before the
      * form provider rejects the whole submission, not to adjudicate RFC 5322.
@@ -54,7 +99,9 @@ object FeedbackService {
             body.put("email", email.trim())
             body.put("_replyto", email.trim())
         }
-        post(AppConfig.FORMSPREE_ENDPOINT, body)
+        val result = post(AppConfig.FORMSPREE_ENDPOINT, body)
+        if (result.isSuccess) storeCopy(message, category, language, isPremium, hasEmail = !email.isNullOrBlank())
+        result
     }
 
     private fun post(endpoint: String, body: JSONObject): Result<Unit> {
