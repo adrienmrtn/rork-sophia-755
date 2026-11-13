@@ -353,6 +353,7 @@
   if (L10N_LANG) {
     // minimumScaleFactor(0.8): shrink the font until the text fits its box, down to 80 %.
     const fit = (el, overflows) => {
+      el.style.fontSize = "";
       const base = parseFloat(getComputedStyle(el).fontSize);
       for (let f = base; overflows(el) && f > base * 0.8 + 0.01; ) { f = Math.max(base * 0.8, f - 0.25); el.style.fontSize = f + "px"; }
     };
@@ -368,15 +369,15 @@
         lh(el); el.style.webkitLineClamp = "unset"; fit(el, lines(2)); el.style.webkitLineClamp = "";
       });
       // Phone: the background is anchored by its end; a title on two lines would push the
-      // Badges header up into the status bar, so keep that header where fr / en have it (y = 46).
+      // Badges header up into the status bar, so keep that header where fr / en have it (y = 48.1).
       if (!Kit.ipad) {
         const bg = document.querySelector(".bg");
         bg.style.bottom = "260px";
         const dy = document.querySelector(".sec-head").getBoundingClientRect().top - REF_HEAD_TOP;
-        bg.style.bottom = (260 - dy) + "px";
+        bg.style.bottom = (260 + dy) + "px";
       }
     };
-    const REF_HEAD_TOP = 46;
+    const REF_HEAD_TOP = 48.109375;
     run();
     document.fonts.ready.then(run);
   }

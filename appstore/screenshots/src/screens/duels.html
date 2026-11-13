@@ -87,6 +87,19 @@
              background: var(--success-tint); color: var(--success); display: flex; align-items: center; gap: 10px; }
   .verdict .main { font-size: 16px; line-height: 21px; font-weight: 800; white-space: nowrap; }
   .verdict .detail { margin-left: auto; text-align: right; font-size: 13px; line-height: 17px; font-weight: 700; white-space: nowrap; }
+
+  /* Other languages (l10n/duels.js). Arabic and Hebrew: the screen mirrors as SwiftUI does, except the
+     score block, which DuelGameView pins to .leftToRight, and the status bar (unmirrored on iPhone;
+     kept as is on iPad too). Each text keeps its own base direction (natural, from its first strong
+     letter), its alignment follows the layout. Tracking is dropped on Arabic, which is cursive. */
+  html[dir="rtl"] .k-status, html[dir="rtl"] .score { direction: ltr; }
+  html[dir="rtl"] :is([data-s], [data-c], #counter, #detail, .rl) { unicode-bidi: plaintext; }
+  html[dir="rtl"] .opt span { text-align: right; }
+  html[dir="rtl"] .score .lab { text-align: left; }
+  html[dir="rtl"] .score .side.me .labels { align-items: flex-start; }
+  html[dir="rtl"] .verdict .detail { margin-left: 0; margin-right: auto; text-align: left; }
+  html[lang="ar"] :is(.eyebrow, .subject span, .rl) { letter-spacing: 0; }
+  .verdict.wraps :is(.main, .detail) { white-space: normal; }
 </style>
 </head>
 <body>
@@ -165,10 +178,14 @@
 </div>
 
 <script src="../kit.js"></script>
+<script src="l10n/duels.js"></script>
 <script>
   // UI strings: French / English localisation (AppLocalizable.swift, Localizable+ElevateDuels.swift).
   const LANG = new URLSearchParams(location.search).get("lang") || "fr";
   document.documentElement.lang = LANG;
+  if (LANG === "ar" || LANG === "he") document.documentElement.dir = "rtl";
+  // French and English are inline; the 23 other languages come from l10n/duels.js (tools/l10n_duels.py).
+  const L = { fr: 1, en: 1 }[LANG] ? null : window.L10N[LANG];
   const S = { fr: {
     "duel.round.of": "Manche %1$d sur %2$d",
     "duel.game.counter": "Question %1$d / %2$d",
@@ -187,7 +204,7 @@
     "duel.game.correct": "Correct!",
     "duel.verdict.point": "+1 point",
     "duel.verdict.leading": "you lead %1$d–%2$d",
-  } }[LANG];
+  } }[LANG] || L.S;
   // Content: duel question dq_en_2_152 (fr: content/duels/i18n/fr.json, en: content/duels/questions_en.json), opponent handle.
   const C = { fr: {
     opponent: "maelys24",
@@ -205,7 +222,7 @@
     o1: "Lady with an Ermine",
     o2: "Girl with a Pearl Earring",
     o3: "The Milkmaid",
-  } }[LANG];
+  } }[LANG] || L.C;
   const fmt = (t, a = []) => { let i = 0; return t.replace(/%(?:(\d+)\$)?[d@]/g, (_, n) => a[n ? n - 1 : i++]); };
   document.querySelectorAll("[data-s]").forEach((el) => {
     el.innerHTML = fmt(S[el.dataset.s], el.dataset.a ? JSON.parse(el.dataset.a) : []);
@@ -234,6 +251,34 @@
     '<div class="rl' + (n === 2 ? " on" : "") + '">' + fmt(S["duel.round.short"], [n]) + "</div>").join("");
 
   Kit.chrome({ status: "dark" }); // full-screen cover: no tab bar during a game
+
+  // Other languages only (French and English fit as designed): what SwiftUI's lineLimit +
+  // minimumScaleFactor do when a text is too long for its box.
+  if (L) {
+    // Shrinks el (down to `min` times its size) until ok() holds.
+    const shrink = (el, min, ok) => {
+      const size = parseFloat(getComputedStyle(el).fontSize), lh = parseFloat(getComputedStyle(el).lineHeight) / size;
+      for (let k = 1; k >= min - 0.001 && !ok(); k -= 0.025) {
+        el.style.fontSize = size * k + "px"; el.style.lineHeight = size * k * lh + "px";
+      }
+    };
+    const oneLine = (el) => () => el.scrollWidth <= el.clientWidth;
+    // Option cards: 3 lines at most, no word wider than the card, scale 0.75 (DuelOptionCard, compact).
+    document.querySelectorAll(".opt span").forEach((el) => shrink(el, 0.75, () =>
+      el.scrollWidth <= el.clientWidth && el.offsetHeight <= 3 * parseFloat(getComputedStyle(el).lineHeight) + 1));
+    // One-line texts: top bar (0.7), score board labels (0.7).
+    const mid = document.querySelector(".topbar .mid");
+    mid.style.minWidth = 0; mid.style.overflow = "hidden";
+    mid.querySelectorAll("div").forEach((el) => { el.style.maxWidth = "100%"; shrink(el, 0.7, oneLine(el)); });
+    mid.style.overflow = "";
+    document.querySelectorAll(".board .lab").forEach((el) => shrink(el, 0.7, oneLine(el)));
+    // Verdict banner: both texts may take two lines.
+    const verdict = document.querySelector(".verdict");
+    if (verdict.scrollWidth > verdict.clientWidth) verdict.classList.add("wraps");
+    // iPad status bar date in the page's language (the kit only knows French and English).
+    const date = document.querySelector(".k-status .date");
+    if (date) date.textContent = new Intl.DateTimeFormat(LANG, { weekday: "short", day: "numeric", month: "short" }).format(new Date(2024, 0, 9));
+  }
 </script>
 </body>
 </html>

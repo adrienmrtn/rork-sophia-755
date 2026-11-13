@@ -9,6 +9,14 @@ const Kit = (() => {
   // ?device=ipad switches the page to the iPad variant (see kit.css). Kit.ipad tells a screen which one it is.
   const ipad = new URLSearchParams(location.search).get("device") === "ipad";
   if (ipad) document.documentElement.classList.add("ipad");
+  // The status bar date in the page's language (French and English keep their fixed form).
+  const ipadDate = () => {
+    const lang = new URLSearchParams(location.search).get("lang") || "fr";
+    if (lang === "fr") return "Mar. 9 janv.";
+    if (lang === "en") return "Tue Jan 9";
+    try { return new Date(2024, 0, 9).toLocaleDateString(lang, { weekday: "short", month: "short", day: "numeric" }); }
+    catch (e) { return "Tue Jan 9"; }
+  };
   const statusHTML = `
     <span class="time">9:41</span>
     <span class="right">
@@ -45,7 +53,7 @@ const Kit = (() => {
       const el = document.createElement("div");
       el.className = "k-status" + (status === "light" ? " light" : "");
       el.innerHTML = ipad
-        ? statusHTML.replace('<span class="time">9:41</span>', `<span class="left"><span class="time">9:41</span><span class="date">${document.documentElement.lang === "fr" ? "Mar. 9 janv." : "Tue Jan 9"}</span></span>`)
+        ? statusHTML.replace('<span class="time">9:41</span>', `<span class="left"><span class="time">9:41</span><span class="date">${ipadDate()}</span></span>`)
         : statusHTML;
       document.body.appendChild(el);
     }
