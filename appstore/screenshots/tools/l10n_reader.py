@@ -40,6 +40,10 @@ S_KEYS = ["common.continue"]
 # so that neither the header nor the bottom bar cuts through a line of text (0 when all fits).
 SCROLL = {
     # lang: (phone, iPad)
+    "cs": (10, 0), "da": (20, 0), "de": (13, 20), "el": (10, 0), "es": (20, 0), "fi": (10, 0),
+    "hr": (20, 0), "hu": (10, 0), "it": (10, 0), "ja": (20, 20), "nb": (10, 0), "nl": (13, 20),
+    "pl": (10, 0), "pt": (20, 0), "pt-PT": (13, 0), "ro": (10, 0), "ru": (13, 0), "sk": (10, 0),
+    "sl": (10, 0), "sv": (20, 0), "tr": (13, 0),
 }
 HAND = {
     # The Greek caption carries Markdown italics (*Μάλε Μπάμπε*) that the app's caption view
