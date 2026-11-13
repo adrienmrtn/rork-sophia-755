@@ -45,7 +45,6 @@ export const en = {
     languages: "30 languages",
     heroAlt: "A reader sitting cross-legged with an open book, surrounded by a Greek helmet, a spiral, a book, a compass rose and a laurel branch",
     appTitle: "One course a day, in your pocket.",
-    appLead: "The introduction is free. Each course is read in five parts and ends with an open-book quiz.",
     appExplore: "Explore by subject",
     appFeed: "The feed: one course at a time",
     appReader: "Read, page by page",
@@ -53,7 +52,6 @@ export const en = {
     exploreAll: "Explore the whole catalogue",
     coursesLabel: "courses",
     thisWeek: "This week on Sophia",
-    thisWeekLead: "Every course has its page: read the introduction here, the rest in the app.",
     authorsTitle: "Written by people who know what they are talking about.",
     authorsLead: "Doctors, researchers, professors. Every author signs their courses, has their own page, and every text is reviewed before publication.",
     allAuthors: "All the authors",
@@ -77,12 +75,6 @@ export const en = {
     creatorEyebrow: "For video creators",
     creatorSoon: "Coming soon",
     creatorTitle: "Become a creator.",
-    creatorLead: "You do not have to be a professor to teach on Sophia. Soon, creators will turn its courses into short videos and slideshows, published under their name in the app, with the same reviewed facts behind every clip.",
-    creatorItems: [
-      ["Short videos", "60 to 90 seconds, filmed with your phone, on a course of your choice."],
-      ["Slideshows", "a card per idea, in the Sophia style, ready to swipe."],
-      ["Your name and your page", "followers, stats and a fee per validated piece, like authors."],
-    ],
     creatorAlt: "A creator filming a short video with a phone on a tripod, slideshow cards floating around",
   },
   explore: {
