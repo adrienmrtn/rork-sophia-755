@@ -79,5 +79,49 @@ const PANOS = {
       { name: "idea", x: P(9) + 318, b: 975, h: 260, flip: true },
     ],
   },
+  // Brand-colour opening (characters, big logo, speech bubble), a second blue panel with the
+  // promise, then pale panels: centred title and subtitle, upright phone in a thick blue frame
+  // running off the bottom, and a wall of real course covers to close.
+  vitrine: {
+    dir: "-vitrine", copy: { "fr-FR": Object.assign({}, COPY_FR, {
+      hero: ["Moins de scroll,<br>plus de culture"],
+      promise: ["Se cultiver en <b>10 min</b><br>par jour"],
+      home: ["Un cours par jour", "Choisi pour vous"],
+      reader: ["Des cours courts<br>et illustrés", "Qui vont à l’essentiel"],
+      quiz: ["Un quiz<br>à chaque cours", "Pour retenir ce que vous lisez"],
+      duels: ["Défiez vos amis<br>en duel", "La culture générale, en match"],
+      blocker: ["Bloquez le scroll", "Vos apps se débloquent après un cours"],
+      explore: ["Tous les savoirs", "Histoire, sciences, art, littérature…"],
+      profile: ["Suivez votre série", "Un peu plus de culture chaque jour"],
+      wall: ["Plus de 300 cours<br>illustrés"],
+    }) },
+    panels: [
+      { theme: "blue", logo: "big", bubble: "hero" },
+      { theme: "blue", text: "promise", cls: "center" },
+      ...["reader", "quiz", "duels", "blocker", "explore", "profile"].map((s) => ({ theme: "pale", text: s, cls: "center" })),
+      { theme: "pale", text: "wall", cls: "center", grid: [
+        ["eiffel_tower_1889_universal_exhibition", "la_joconde", "apollo_11_aldrin_us_flag_lunar_module_1969", "achille_le_talon_et_l_invulnerabilite"],
+        ["l_expressionnisme_munch_et_le_cri", "la_nuit_etoilee_van_gogh", "crab_nebula_supernova_remnant_hubble", "aesop_fox_kylix_vatican_470_bc"],
+        ["giza_pyramids_khufu_khafre_menkaure_wide_view", "dna_double_helix_3d_render_blue", "la_guerre_de_troie_et_le_cheval_de_bois", "hms_agamemnon_laying_atlantic_telegraph_cable_1858"],
+        ["l_odyssee_homere", "beethoven_genie_et_surdite", "comment_se_forment_les_eclairs", "la_decouverte_de_l_amerique_1492"],
+        ["la_decouverte_du_micro_ondes", "icare_et_dedale", "fresh_coriander_cilantro_bunch_leaves", "la_montee_des_eaux"],
+      ] },
+    ],
+    phones: ["home", "reader", "quiz", "duels", "blocker", "explore", "profile"].map((s, k) => ({
+      screen: s, cx: mid(k + 1), cy: 232 + (956 * 0.78 + 21) / 2, s: 0.78,
+      frame: k === 0 ? "#cdd9f5" : "#2e62c4", band: k === 0 ? "#e9effb" : "#dbe5f8" })),
+    people: [
+      { name: "thinker", x: 112, b: 332, h: 262 },
+      { name: "headphones", x: 345, b: 352, h: 292, r: 3 },
+      { name: "lying", x: 150, b: 930, h: 235, r: -2 },
+      { name: "reader_walking", x: P(1) - 22, b: 962, h: 275 },
+      { name: "phone_away", x: P(5) + 372, b: 975, h: 215, flip: true },
+      { name: "waving", x: P(7) + 398, b: 966, h: 210, flip: true },
+    ],
+    extras: [
+      { x: P(4) + 8, y: 420, html: '<img src="../../../ios/Sophia/Assets.xcassets/avatar_49.imageset/avatar_49.jpg" style="width:96px;height:96px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 4px #2e62c4">' },
+      { x: P(4) + 336, y: 560, html: '<img src="../../../ios/Sophia/Assets.xcassets/avatar_42.imageset/avatar_42.jpg" style="width:96px;height:96px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 4px #dc6048">' },
+    ],
+  },
 };
 if (typeof module !== "undefined") module.exports = { PANOS };

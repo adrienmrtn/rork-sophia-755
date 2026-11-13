@@ -31,16 +31,20 @@ buttons are hidden, so that the status bar does not sit across a button. iPad sc
 
 ## Panorama sets (tilted phones, characters across the seams)
 
-`fr-FR/iphone-6.9-penche/`, `-couleurs/` and `-duo/` are cut out of one wide canvas, so a
+`fr-FR/iphone-6.9-penche/`, `-couleurs/`, `-duo/` and `-vitrine/` are cut out of one wide canvas, so a
 phone or a character can sit across two neighbouring screenshots. They must be uploaded in
 order, with none removed, or the seams no longer match.
 
 ```
 src/pano.html, src/pano.js   the wide canvas and the three layouts (panels, phones, people)
-render-pano.cjs              node render-pano.cjs [penche|couleurs|duo]
+render-pano.cjs              node render-pano.cjs [penche|couleurs|duo|vitrine]
 src/people/*.png             full-body characters in the style of the app's avatars
 people.py                    how they were made (fal.ai, Recraft v3, then background removal)
 ```
 
 `duo` has ten panels (the App Store maximum) and adds two lines of copy the other sets do not
 have: « 30 ligues à gravir » and « Reprenez votre temps ».
+
+`vitrine` opens with a brand-blue panel (characters, logo, speech bubble), continues with upright
+phones in a thick blue frame under a centred title, and closes on a wall of real course covers.
+It has no reviews panel: quotes and star ratings must come from real App Store reviews.
