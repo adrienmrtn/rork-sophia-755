@@ -116,6 +116,35 @@
   /* Content column: .frame(maxWidth: OV2.readableWidth = 440), centred. */
   html.ipad .title { width: 384px; margin: 30px 0 0; }
   html.ipad .cta { align-self: center; width: 392px; margin: 0 0 22px; }
+
+  /* ---------- Other languages (html.l10n: every language but fr and en, which stay as they
+     were). The SwiftUI line limits and minimumScaleFactor(0.8) are applied here: the script
+     shrinks .fit elements down to 80 %, then these rules truncate what still does not fit. ---------- */
+  /* ProfilePillTabs: lineLimit(1), minimumScaleFactor(0.8), 14 pt horizontal padding */
+  html.l10n .pill { padding: 0 14px; min-width: 0; }
+  html.l10n .pill > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  /* BadgeRow: lineLimit(2, reservesSpace: true), minimumScaleFactor(0.8) */
+  html.l10n .badge { min-width: 0; }
+  html.l10n .badge span { max-width: 100%; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  /* CompactCourseRow: title lineLimit(2), meta lineLimit(1) */
+  html.l10n .course > div { min-width: 0; }
+  html.l10n .course .t { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  html.l10n .course .m { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* DSPrimaryButtonStyle: lineLimit(2), minimumScaleFactor(0.8) */
+  html.l10n .primary span { min-width: 0; text-align: center; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  html.l10n .primary svg { flex: none; }
+  html.l10n .sec-head h2 { white-space: nowrap; }
+  html.l10n .sec-link { white-space: nowrap; }
+
+  /* ---------- Right-to-left (ar, he): the flex rows mirror by themselves with dir="rtl";
+     what is written with left/right is swapped here. The status bar does not mirror. ---------- */
+  html[dir="rtl"] .k-status { direction: ltr; }
+  html[dir="rtl"] .lb-xp, html[dir="rtl"] .sec-link { margin-left: 0; margin-right: auto; }
+  html[dir="rtl"] .chev, html[dir="rtl"] .sec-link svg { transform: scaleX(-1); } /* chevron.forward */
+  html[dir="rtl"] .course { padding: 10px 10px 10px 12px; }
+  html[dir="rtl"].ipad .poster { padding: 10px 10px 10px 14px; }
+  /* .overlay(alignment: .topTrailing) + offset: the lock goes to the leading-in-LTR corner */
+  html[dir="rtl"] .tile .lock { right: auto; left: -7.84px; }
 </style>
 </head>
 <body>
@@ -236,9 +265,14 @@
 </div>
 
 <script src="../kit.js"></script>
+<script src="l10n/blocker.js"></script>
 <script>
   const LANG = new URLSearchParams(location.search).get("lang") || "fr";
   document.documentElement.lang = LANG;
+  // fr and en are inline below; the other languages come from l10n/blocker.js (window.L10N).
+  const L10N_LANG = LANG !== "fr" && LANG !== "en";
+  if (L10N_LANG) document.documentElement.classList.add("l10n");
+  if (LANG === "ar" || LANG === "he") document.documentElement.dir = "rtl";
   // UI strings (the app's localisation tables, keyed by its loc keys).
   const S = {
     fr: {
@@ -277,7 +311,7 @@
       "profile.page.antiScroll": "Anti-scroll",
       "tab.home": "Home", "tab.explore": "Explore", "tab.duels": "Duels", "tab.profile": "Profile",
     },
-  }[LANG];
+  }[LANG] || window.L10N[LANG].S;
   // Content and user data.
   const C = {
     fr: {
@@ -308,13 +342,44 @@
       course3Title: "Why did people want to tear down the Eiffel Tower?",
       course3Meta: "Dusan Nikolic · 4 min",
     },
-  }[LANG];
+  }[LANG] || window.L10N[LANG].C;
   document.querySelectorAll("[data-s]").forEach((el) => { el.innerHTML = S[el.dataset.s]; });
   document.querySelectorAll("[data-c]").forEach((el) => { el.innerHTML = C[el.dataset.c]; });
   // iPad: the Profile tab's capsule shows above the sheet; on iPhone the sheet covers the tab bar.
   Kit.chrome(Kit.ipad
     ? { status: "dark", tab: "profile", tabLabels: { home: S["tab.home"], explore: S["tab.explore"], duels: S["tab.duels"], profile: S["tab.profile"] } }
     : { status: "dark" });
+
+  if (L10N_LANG) {
+    // minimumScaleFactor(0.8): shrink the font until the text fits its box, down to 80 %.
+    const fit = (el, overflows) => {
+      const base = parseFloat(getComputedStyle(el).fontSize);
+      for (let f = base; overflows(el) && f > base * 0.8 + 0.01; ) { f = Math.max(base * 0.8, f - 0.25); el.style.fontSize = f + "px"; }
+    };
+    const wide = (el) => el.scrollWidth > el.clientWidth;
+    const lines = (n) => (el) => el.scrollHeight > Math.ceil(parseFloat(getComputedStyle(el).lineHeight) * n) + 1;
+    const lh = (el) => { el.style.lineHeight = "1.26"; }; // keep line height proportional while shrinking
+    const run = () => {
+      document.querySelectorAll(".pill > span").forEach((el) => fit(el, wide));
+      document.querySelectorAll(".badge span").forEach((el) => {
+        lh(el); el.style.webkitLineClamp = "unset"; fit(el, lines(2)); el.style.webkitLineClamp = "";
+      });
+      document.querySelectorAll(".primary span").forEach((el) => {
+        lh(el); el.style.webkitLineClamp = "unset"; fit(el, lines(2)); el.style.webkitLineClamp = "";
+      });
+      // Phone: the background is anchored by its end; a title on two lines would push the
+      // Badges header up into the status bar, so keep that header where fr / en have it (y = 46).
+      if (!Kit.ipad) {
+        const bg = document.querySelector(".bg");
+        bg.style.bottom = "260px";
+        const dy = document.querySelector(".sec-head").getBoundingClientRect().top - REF_HEAD_TOP;
+        bg.style.bottom = (260 - dy) + "px";
+      }
+    };
+    const REF_HEAD_TOP = 46;
+    run();
+    document.fonts.ready.then(run);
+  }
 </script>
 </body>
 </html>

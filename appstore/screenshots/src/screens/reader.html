@@ -45,6 +45,11 @@
   .cta { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 17px 12px;
     border-radius: 16px; background: var(--accent); color: #fff; font-size: 17px; font-weight: 600; line-height: 22px; }
   .cta svg { display: block; }
+
+  /* Arabe, hébreu : SwiftUI inverse les HStack (fermer à droite, segments remplis depuis la droite),
+     aligne le texte sur le bord de lecture et retourne arrow.forward. La barre d'état ne s'inverse pas. */
+  html[dir="rtl"] .k-status { direction: ltr; }
+  html[dir="rtl"] .cta svg { transform: scaleX(-1); }
 </style>
 </head>
 <body>
@@ -92,9 +97,13 @@
 </div>
 
 <script src="../kit.js"></script>
+<script src="l10n/reader.js"></script>
 <script>
   const LANG = new URLSearchParams(location.search).get("lang") || "fr";
   document.documentElement.lang = LANG;
+  if (LANG === "ar" || LANG === "he") document.documentElement.dir = "rtl";
+  // Les 23 autres langues : l10n/reader.js (window.L10N), produit par tools/l10n_reader.py.
+  const L = (window.L10N || {})[LANG] || {};
   // Interface (AppLocalizable.swift, tables française et anglaise).
   const S = {
     fr: {
@@ -103,7 +112,7 @@
     en: {
       "common.continue": "Continue",
     },
-  }[LANG];
+  }[LANG] || L.S;
   // Contenu.
   // fr : content/courses/fr/course_69_comment_se_forment_les_eclairs.json, section 2 sur 5 (4 passages révélés sur 5).
   // en : content/courses/en/course_269_pourquoi_personne_ne_sourit_sur_les.json, section 4 of 5 (4 of 6 steps revealed).
@@ -134,7 +143,7 @@
       credit: "Frans Hals Malle Babbe about 1640-1646 Gemäldegalerie Berlin 9387 — Frans Hals (Public domain)",
       p2: "The art historian <span class=\"term\">Angus Trumble</span>, who wrote a history of the smile, puts it bluntly: a broad grin read as a sign of madness, drunkenness or stupidity. A saint might wear a faint one. A respectable person posing for their portrait did not.",
     },
-  }[LANG];
+  }[LANG] || L.C;
   document.querySelectorAll("[data-s]").forEach((el) => { el.innerHTML = S[el.dataset.s]; });
   document.querySelectorAll("[data-c]").forEach((el) => { el.innerHTML = C[el.dataset.c]; });
   document.querySelectorAll(".seg").forEach((el, i) => {
