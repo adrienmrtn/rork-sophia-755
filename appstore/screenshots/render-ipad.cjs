@@ -12,6 +12,7 @@ const { PANOS } = require("./src/pano.js");
   page.on("requestfailed", (r) => console.error("failed:", r.url()));
   await page.goto(pathToFileURL(path.join(__dirname, "src/pano-ipad.html")).href + "?v=" + v, { waitUntil: "load" });
   for (const f of page.frames()) { await f.waitForLoadState("load"); await f.evaluate(() => document.fonts.ready); }
+  await page.evaluate(() => window.fitted);
   await page.waitForTimeout(600);
   const dir = path.join(__dirname, locale, "ipad-13" + V.dir);
   fs.rmSync(dir, { recursive: true, force: true });

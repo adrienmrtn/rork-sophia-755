@@ -13,7 +13,8 @@
 html, body { margin: 0; }
 /* iPad 13": 2064 x 2752 px = 516 x 688 units at 4x. Same content and colours as the phone set
    (PANOS[<v>] in pano.js); the tablets show screens/<name>.html?device=ipad (768 x 1024 pt). */
-body { height: 688px; overflow: hidden; position: relative; font-family: "Plus Jakarta Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+body { height: 688px; overflow: hidden; position: relative; font-family: "Plus Jakarta Sans", "Noto Sans", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans CJK JP", sans-serif; -webkit-font-smoothing: antialiased; }
+body.rtl .text, body.rtl .bubble, body.rtl .review, body.rtl .prof { direction: rtl; }
 .panel { position: absolute; top: 0; width: 516px; height: 688px; overflow: hidden; }
 .panel.cream { background: #fef5e9; color: #17181c; --sub: #3d3f47; }
 .panel.coral { background: #dc6048; color: #fff; --sub: #fff; }
@@ -51,6 +52,7 @@ svg.h { position: absolute; }
 </style>
 </head>
 <body>
+<script src="copy.js"></script>
 <script src="pano.js"></script>
 <script>
   const q = new URLSearchParams(location.search);
@@ -64,7 +66,6 @@ svg.h { position: absolute; }
   // The anti-scroll panel is left out on iPad: its sheet is a near-empty card at that size.
   const panels = V.panels.filter((p) => p.text !== "blocker");
   document.body.style.width = panels.length * 516 + "px";
-  document.documentElement.lang = V.lang;
   panels.forEach((p, i) => {
     const el = document.createElement("div"); el.className = "panel " + p.theme; el.style.left = i * 516 + "px";
     let html = "";
@@ -88,6 +89,30 @@ svg.h { position: absolute; }
     if (p.profs) html += `<div class="profs">${T[p.profs].map(([name, cred, av]) => `<div class="prof"><img src="../../../web/public/avatars/${av}.webp"><div><div class="n">${name}${check}</div><div class="c">${cred}</div></div></div>`).join("")}</div>`;
     el.innerHTML = html; document.body.appendChild(el);
   });
+  const MARGIN = 30;
+  // Big headlines must fit whatever the language: keep each <br> line on one line and shrink the
+  // type until it does; a subtitle may take two lines, then shrinks too.
+  function fitText() {
+    document.querySelectorAll(".text h1").forEach((h) => {
+      h.style.whiteSpace = "nowrap";
+      let size = parseFloat(getComputedStyle(h).fontSize);
+      while (h.scrollWidth > h.clientWidth + 0.5 && size > 22) { size -= 1; h.style.fontSize = size + "px"; }
+    });
+    document.querySelectorAll(".text p").forEach((p) => {
+      let size = parseFloat(getComputedStyle(p).fontSize);
+      const lines = () => p.getBoundingClientRect().height / parseFloat(getComputedStyle(p).lineHeight);
+      while (lines() > 2.2 && size > 14) { size -= 0.5; p.style.fontSize = size + "px"; }
+    });
+    document.querySelectorAll(".bubble").forEach((b) => {
+      b.style.whiteSpace = "nowrap";
+      const room = b.parentElement.getBoundingClientRect().width - 2 * MARGIN;
+      let size = parseFloat(getComputedStyle(b).fontSize);
+      while (b.getBoundingClientRect().width > room && size > 22) { size -= 1; b.style.fontSize = size + "px"; }
+    });
+  }
+  if (["ar", "he"].includes(V.lang)) document.body.classList.add("rtl");
+  document.documentElement.lang = V.lang || "fr";
+  window.fitted = document.fonts.ready.then(fitText);
 </script>
 </body>
 </html>

@@ -101,6 +101,15 @@
   html.ipad .feed { margin-bottom: calc(-1 * var(--safe-bottom)); }
   html.ipad .page { height: calc(100% - 44px - var(--safe-bottom)); }
   html.ipad .cover { max-height: 720px; }
+
+  /* Arabic and Hebrew: SophiaApp sets layoutDirection from the app language, so every HStack
+     mirrors (dir="rtl" reverses the flex rows) and leading becomes the right edge. The system
+     status bar keeps its own order. Texts take their base direction from their first strong
+     character, as a SwiftUI Text does (« 2.4 k » stays left to right, « 4 د » runs right to left). */
+  html[dir="rtl"] .k-status { direction: ltr; }
+  html[dir="rtl"] .pills { left: auto; right: 12px; }
+  html[dir="rtl"] .streak span, html[dir="rtl"] .chip span, html[dir="rtl"] .pill span,
+  html[dir="rtl"] .name span, html[dir="rtl"] .title, html[dir="rtl"] .hook, html[dir="rtl"] .ped { unicode-bidi: plaintext; }
 </style>
 </head>
 <body>
@@ -182,10 +191,15 @@
 </div>
 
 <script src="../kit.js"></script>
+<!-- The 23 other languages (window.L10N), built by tools/l10n_home.py. -->
+<script src="l10n/home.js"></script>
 <script>
-  // ?lang=en switches the whole page; French is the default.
+  // ?lang=<code> switches the whole page; French is the default. French and English are inline
+  // below, the other languages come from l10n/home.js.
   const LANG = new URLSearchParams(location.search).get("lang") || "fr";
   document.documentElement.lang = LANG;
+  const L10N = (window.L10N || {})[LANG] || {};
+  if (LANG === "ar" || LANG === "he") document.documentElement.dir = "rtl";
   // Interface strings (AppLocalizable.swift tables), keyed by localisation key.
   const S = {
     fr: {
@@ -212,7 +226,7 @@
       "subject.sciences.short": "Science",
       "common.minutesShort": "%d min",
     },
-  }[LANG];
+  }[LANG] || L10N.S;
   // Subject dot colours (Subject.color in Course.swift).
   const DOT = { art: "#d98cf2", sciences: "#33d499", histoire: "#f59e0a" };
   const IMG = "../../../../ios/Sophia/CourseImages/";
@@ -259,7 +273,7 @@
       "c2.title": "How did the United States win the race to the Moon?",
       "c2.hook": "For years, the Soviets led the race. On July 20, 1969, it was two Americans who walked on the Moon.",
     },
-  }[LANG];
+  }[LANG] || L10N.C;
   document.querySelectorAll("[data-s]").forEach((el) => { el.innerHTML = S[el.dataset.s]; });
   document.querySelectorAll("[data-c]").forEach((el) => { el.innerHTML = C[el.dataset.c]; });
   document.querySelectorAll("[data-img]").forEach((el) => { el.src = C[el.dataset.img]; });
@@ -268,6 +282,14 @@
     tab: "home",
     tabLabels: { home: S["tab.home"], explore: S["tab.explore"], duels: S["tab.duels"], profile: S["tab.profile"] },
   });
+  // iPad status bar date: the kit only knows French and English; the other languages get the
+  // same day as the system writes it for their locale (Latin digits, as the clock beside it).
+  const dateEl = L10N.S && document.querySelector(".k-status .date");
+  if (dateEl) {
+    const parts = new Intl.DateTimeFormat(LANG + "-u-nu-latn", { weekday: "short", day: "numeric", month: "short" })
+      .format(new Date(2024, 0, 9));
+    dateEl.textContent = parts;
+  }
 </script>
 </body>
 </html>

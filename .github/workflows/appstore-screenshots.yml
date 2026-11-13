@@ -1,21 +1,23 @@
-# The App Store screenshots, and optionally Promotional Text and What's New, from the Actions tab.
+# One click fills the visual and "what's new" part of the App Store page for a version:
+# screenshots for iPhone 6.9" and iPad 13" in every language of the page, plus Promotional Text
+# and What's New.
 #
-# Screenshots: the PNGs committed under appstore/screenshots/ (iPhone 6.9" and iPad 13", English
-# and French; scripts/appstore_screenshots.py says which folder feeds which locale and slot).
-# Each slot is REPLACED: what App Store Connect holds there is deleted, then the folder is
-# uploaded in file-name order. Locales and device sizes not listed are left alone.
+# Screenshots are rendered here, not committed: appstore/screenshots/render-store.cjs draws them
+# from the HTML sources (see appstore/screenshots/README.md), then
+# scripts/appstore_screenshots.py uploads them. Each slot is REPLACED: what App Store Connect
+# holds there is deleted, then the new set is uploaded in order. Other device sizes are left
+# alone. The rendered PNGs, and the product page headers (which go through the Asset Library by
+# hand), are attached to the run as the "store-assets" artifact.
 #
-# Texts, when the box is ticked: appstore/metadata/<locale>/promotional_text.txt and
-# whats_new.txt, written by the same command as the "App Store release notes" workflow (only
-# those two fields, only where they differ, every locale unless one is named).
+# Texts: appstore/metadata/<locale>/promotional_text.txt and whats_new.txt, written by the same
+# command as the "App Store release notes" workflow (only those two fields, only where they
+# differ).
 #
-#   check     file counts and pixel sizes. Needs no secrets.
-#   dry-run   what a push would replace or change. Writes nothing to Apple. The default.
-#   push      write it.
+#   push      render, upload, write the texts. The default.
+#   dry-run   render, attach the artifact, list what a push would replace or change. Writes
+#             nothing to Apple: use it to look at the images first.
 #
-# dry-run and push refuse to run unless the version being prepared is the one named. The
-# product page header is not uploaded here (Asset Library, by hand).
-#
+# Both refuse to touch Apple unless the version being prepared is the one named.
 # Secrets: ASC_KEY_ID, ASC_ISSUER_ID, ASC_PRIVATE_KEY, as for "App Store metadata".
 name: App Store screenshots
 
@@ -25,19 +27,18 @@ on:
       version:
         description: "Version being prepared in App Store Connect"
         type: string
-        default: ""
+        default: "2"
       action:
         description: "What to do"
         type: choice
-        default: dry-run
+        default: push
         options:
-          - check
-          - dry-run
           - push
+          - dry-run
       texts:
         description: "Also write Promotional Text and What's New"
         type: boolean
-        default: false
+        default: true
       locale:
         description: "One locale only, e.g. fr-FR (blank = all)"
         type: string
@@ -52,7 +53,7 @@ jobs:
   run:
     name: ${{ inputs.action }} ${{ inputs.version }}
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     permissions:
       contents: read
 
@@ -60,16 +61,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install the JWT signer
-        run: pip install --quiet pyjwt cryptography
-
       - name: Check the secrets are set
-        if: inputs.action != 'check'
         env:
           ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
@@ -85,7 +77,51 @@ jobs:
             exit 1
           fi
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the JWT signer
+        run: pip install --quiet pyjwt cryptography
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # The fonts the pages fall back to for Greek, Cyrillic, Arabic, Hebrew and Japanese, and
+      # Inter for the status bar clock. Without them those languages render as boxes.
+      - name: Install fonts and the browser
+        working-directory: appstore/screenshots
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-core fonts-noto-cjk fonts-inter
+          npm install --no-save --silent playwright@1.63.0
+          npx playwright install --with-deps chromium
+
       # Inputs go through the environment, never spliced into the script.
+      - name: Render
+        working-directory: appstore/screenshots
+        env:
+          LOCALE: ${{ inputs.locale }}
+        run: |
+          if [ -n "$LOCALE" ]; then
+            node render-store.cjs "$LOCALE"
+          else
+            node render-store.cjs
+          fi
+
+      - name: Attach the rendered assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: store-assets
+          path: |
+            appstore/screenshots/*/iphone-6.9-store/
+            appstore/screenshots/*/ipad-13-store/
+            appstore/screenshots/*/header-store.png
+          retention-days: 14
+
       - name: Screenshots
         env:
           ACTION: ${{ inputs.action }}
@@ -95,33 +131,32 @@ jobs:
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
         run: |
+          if [ -z "$VERSION" ]; then
+            echo "Give the version being prepared, e.g. 2." >&2
+            exit 1
+          fi
           only=()
           if [ -n "$LOCALE" ]; then
             only=(--locale "$LOCALE")
           fi
           case "$ACTION" in
-            check)   args=(check) ;;
-            dry-run) args=(push --version "$VERSION" --dry-run) ;;
-            push)    args=(push --version "$VERSION") ;;
+            dry-run) mode=(--dry-run) ;;
+            push)    mode=() ;;
             *)       echo "unknown action: $ACTION" >&2; exit 1 ;;
           esac
-          if [ "$ACTION" != check ] && [ -z "$VERSION" ]; then
-            echo "Give the version being prepared, e.g. 1.12." >&2
-            exit 1
-          fi
           {
             echo "### \`$ACTION\` $VERSION: screenshots"
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           set +e
-          python3 scripts/appstore_screenshots.py "${args[@]}" "${only[@]}" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          python3 scripts/appstore_screenshots.py push --version "$VERSION" "${mode[@]}" "${only[@]}" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
           status=${PIPESTATUS[0]}
           set -e
           echo '```' >> "$GITHUB_STEP_SUMMARY"
           exit "$status"
 
       - name: Promotional Text and What's New
-        if: inputs.texts && inputs.action != 'check'
+        if: inputs.texts
         env:
           ACTION: ${{ inputs.action }}
           VERSION: ${{ inputs.version }}

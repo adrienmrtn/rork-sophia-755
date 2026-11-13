@@ -83,3 +83,39 @@ The phone renders (French and English) must stay pixel-identical. Check with
 `node shoot.cjs <name> <SCRATCH>/<name>-ipad.png 2 "lang=en&device=ipad"`, look at the PNG, and
 iterate until it would pass for the app on an iPad. Report briefly what the iPad layout shows
 and what you had to assume.
+
+## All the app's languages (`?lang=<code>`)
+
+A screen renders in French (default), English (`lang=en`) and in the 23 other languages the store
+page has: ar cs da de el es fi he hr hu it ja nb nl pl pt pt-PT ro ru sk sl sv tr (the app's own
+codes, the names of the folders under `content/courses/`). French and English stay inline in
+the page; the others live in one data file per screen, `src/screens/l10n/<screen>.js`, which
+sets `window.L10N = { de: { S: {...}, C: {...} }, ... }` with exactly the keys of the page's
+English `S` and `C`. The page loads it with a plain `<script src="l10n/<screen>.js">` before its
+own script and picks `{ fr, en }[LANG] || window.L10N[LANG]`.
+
+Where the data comes from, never from your own translation when the app has it:
+- `S` (interface strings): the app's localisation tables for that language, by key
+  (`ios/Sophia/Utilities/AppLocalizable.swift`, `Utilities/Localizable/*.swift`, the
+  `<lang>.lproj` folders, `content/locales/<lang>/`). A key missing in a language falls back as
+  the app does (English).
+- `C` (content): the same course, quiz question, duel question, league, badge names… in that
+  language, from `content/courses/<lang>/`, `content/locales/<lang>/`, `content/glossary/`,
+  `content/duels/i18n/<lang>.json`. Same course and same passage as the English page unless a
+  language lacks it; then say so. Invented handles stay neutral.
+Build the data file with a small script that reads those sources (keep it in
+`appstore/screenshots/tools/l10n_<screen>.py` so the file can be rebuilt), then fix by hand what
+the script cannot know. Apply each language's typography as the source data has it.
+
+Layout must hold in every language: long words (de, fi, hu, ru, el), no clipped or overlapping
+text, no orphaned half line under a fixed bar (tune per-language scroll offsets as the English
+page does). Arabic and Hebrew are right-to-left: set `dir="rtl"` and mirror the layout as
+SwiftUI does (leading/trailing swap, directional icons flip, numbers and progress direction as
+iOS renders them). The kit's font stack falls back to Noto Sans for Greek, Cyrillic, Arabic,
+Hebrew and Japanese, which Plus Jakarta Sans lacks (the app falls back to the system font).
+
+Check every language in both sizes: shoot `lang=<code>` and `lang=<code>&device=ipad` for all 23,
+assemble contact sheets with PIL, look at them, and fix what is wrong. French and English
+renders, phone and iPad, must stay pixel-identical. Report: languages where content was missing
+or replaced, anything you translated yourself, and any language whose layout you are not happy
+with.

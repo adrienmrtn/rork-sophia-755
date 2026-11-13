@@ -18,6 +18,7 @@ const { PANOS } = require("./src/pano.js");
       page.on("requestfailed", (r) => console.error("failed:", r.url()));
       await page.goto(pathToFileURL(path.join(__dirname, "src/pano.html")).href + `?v=${name}&locale=${locale}`, { waitUntil: "load" });
       for (const f of page.frames()) { await f.waitForLoadState("load"); await f.evaluate(() => document.fonts.ready); }
+      await page.evaluate(() => window.fitted);
       await page.waitForTimeout(500);
       const dir = path.join(__dirname, locale, "iphone-6.9" + V.dir);
       fs.mkdirSync(dir, { recursive: true });

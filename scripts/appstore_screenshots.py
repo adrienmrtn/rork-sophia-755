@@ -5,9 +5,11 @@
     python3 scripts/appstore_screenshots.py push --version 1.12 --dry-run
     python3 scripts/appstore_screenshots.py push --version 1.12
 
-For each store locale in SETS, each device slot is REPLACED by the PNGs of one folder, in file
-name order: the screenshots already in that slot are deleted first. Locales and slots not
-listed are left alone. Like release notes, it only writes to the version being prepared, and
+The PNGs are not committed: render them first with
+`node appstore/screenshots/render-store.cjs` (the "App Store screenshots" workflow does).
+For every store locale that has rendered folders, each device slot is REPLACED by the PNGs of
+its folder, in file name order: the screenshots already in that slot are deleted first. Locales
+and slots without a folder are left alone. Like release notes, it only writes to the version being prepared, and
 only when that version is the one named.
 
 The product page header is not handled: it goes through the Asset Library in App Store
@@ -33,15 +35,11 @@ SHOTS = ROOT / "appstore" / "screenshots"
 # Display type in the App Store Connect API -> (folder prefix, accepted pixel size).
 # APP_IPHONE_67 is the 6.9" / 6.7" slot, APP_IPAD_PRO_3GEN_129 the 13" / 12.9" one.
 SLOTS = {
-    "APP_IPHONE_67": ("iphone-6.9-showcase-bold", (1320, 2868)),
-    "APP_IPAD_PRO_3GEN_129": ("ipad-13-showcase-bold", (2064, 2752)),
+    "APP_IPHONE_67": ("iphone-6.9-store", (1320, 2868)),
+    "APP_IPAD_PRO_3GEN_129": ("ipad-13-store", (2064, 2752)),
 }
-# Store locale -> folder of appstore/screenshots/ that holds its set. The English regional
-# pages take the en-US set, as their metadata does.
-SETS = {
-    "en-US": "en-US", "en-GB": "en-US", "en-AU": "en-US", "en-CA": "en-US",
-    "fr-FR": "fr-FR",
-}
+# Every store locale with a rendered iPhone folder: appstore/screenshots/<locale>/iphone-6.9-store/.
+SETS = {p.parent.name: p.parent.name for p in sorted(SHOTS.glob("*/iphone-6.9-store"))}
 MAX_PER_SLOT = 10
 
 
@@ -153,6 +151,8 @@ def main() -> int:
     args = parser.parse_args()
     if unknown := [loc for loc in args.locale or [] if loc not in SETS]:
         sys.exit(f"No screenshot set for: {', '.join(unknown)} (known: {', '.join(SETS)})")
+    if not SETS:
+        sys.exit("Nothing rendered. Run: node appstore/screenshots/render-store.cjs")
     locales = args.locale or list(SETS)
     if args.command == "check":
         return check(locales)

@@ -264,4 +264,34 @@ PANOS["showcase-bold-fr"] = Object.assign({}, PANOS["showcase-bold"], { lang: "f
   ],
 } } });
 
-if (typeof module !== "undefined") module.exports = { PANOS };
+// ---- Store sets: the retained design for every store locale ("store-<locale>") ----
+// Copy for fr and en is above; the other locales come from copy.js (STORE_COPY). A locale
+// without real reviews in its language gets no reviews panel.
+const SC = typeof STORE_COPY !== "undefined" ? STORE_COPY
+  : typeof require !== "undefined" ? (() => { try { return require("./copy.js").STORE_COPY; } catch (e) { return {}; } })() : {};
+const AVATARS = ["avatar_17", "avatar_08", "avatar_05", "avatar_02"];
+function withoutPanel(V, idx) {
+  const x0 = 440 * idx, x1 = x0 + 440;
+  const keep = (x) => x < x0 || x >= x1, shift = (x) => (x >= x1 ? x - 440 : x);
+  const move = (list, key) => list.filter((o) => keep(o[key])).map((o) => Object.assign({}, o, { [key]: shift(o[key]) }));
+  return Object.assign({}, V, { panels: V.panels.filter((_, i) => i !== idx),
+    phones: move(V.phones, "cx"), people: move(V.people, "x"), extras: move(V.extras, "x") });
+}
+const STORE_SOURCES = {
+  "en-US": { lang: "en", copy: PANOS["showcase-bold"].copy["en-US"] },
+  "fr-FR": { lang: "fr", copy: PANOS["showcase-bold-fr"].copy["fr-FR"] },
+};
+for (const v of ["en-GB", "en-AU", "en-CA"]) STORE_SOURCES[v] = STORE_SOURCES["en-US"];
+for (const [locale, c] of Object.entries(SC)) {
+  STORE_SOURCES[locale] = { lang: c.lang, copy: Object.assign({}, c, {
+    love: c.love, authors: c.authors.map(([name, cred], k) => [name, cred, AVATARS[k]]) }) };
+}
+const STORE_LOCALES = Object.keys(STORE_SOURCES);
+for (const [locale, src] of Object.entries(STORE_SOURCES)) {
+  const base = PANOS["showcase-bold"];
+  const love = base.panels.findIndex((p) => p.text === "love");
+  PANOS["store-" + locale] = Object.assign({}, src.copy.reviews ? base : withoutPanel(base, love),
+    { lang: src.lang, dir: "-store", copy: { [locale]: src.copy } });
+}
+
+if (typeof module !== "undefined") module.exports = { PANOS, STORE_LOCALES, STORE_SOURCES };

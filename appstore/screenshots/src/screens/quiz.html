@@ -96,6 +96,13 @@
     font-size: 17px; font-weight: 600; line-height: var(--lh);
   }
   svg { display: block; }
+
+  /* Arabic and Hebrew: .screen carries dir="rtl", so the stacks mirror as SwiftUI's do. The
+     kit's status bar stays left-to-right, as on iOS. arrow.forward is a directional symbol;
+     xmark, flame and the drawn checks are not. « x2 » and « +2 XP » are Latin strings and
+     keep their own order (a Text takes its direction from its first strong character). */
+  [dir="rtl"] .cta svg { transform: scaleX(-1); }
+  [dir="rtl"] .pill-gold span, [dir="rtl"] .xp { unicode-bidi: plaintext; }
 </style>
 </head>
 <body>
@@ -158,9 +165,14 @@
 </div>
 
 <script src="../kit.js"></script>
+<script src="l10n/quiz.js"></script>
 <script>
   const LANG = new URLSearchParams(location.search).get("lang") || "fr";
   document.documentElement.lang = LANG;
+  // French and English are inline below; the 23 other languages come from l10n/quiz.js
+  // (built by tools/l10n_quiz.py).
+  const L = (window.L10N || {})[LANG] || {};
+  if (LANG === "ar" || LANG === "he") document.querySelector(".screen").dir = "rtl";
   // Interface strings (French and English tables of AppLocalizable.swift /
   // Localizable+ElevateCourse.swift).
   const S = {
@@ -180,7 +192,7 @@
       "quiz.combo": "Combo x%d",
       "common.continue": "Continue",
     },
-  }[LANG];
+  }[LANG] || L.S;
   // Course content: course_126_le_cubisme_picasso_et_braque, question 3 of its 9
   // (content/locales/<lang>/quizzes_v2.json). The app shuffles the options.
   const C = {
@@ -200,7 +212,7 @@
       option4: "Liberty Leading the People",
       explanation: "Les Demoiselles d’Avignon, with its sharp-faceted nudes, stunned even people close to Picasso.",
     },
-  }[LANG];
+  }[LANG] || L.C;
   // State of the screenshot.
   const N = { index: 3, total: 9, combo: 2, points: 2 };
 
