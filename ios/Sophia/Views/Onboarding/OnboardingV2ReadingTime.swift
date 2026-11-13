@@ -62,14 +62,14 @@ struct OnboardingV2ReadingTime: View {
                 .foregroundStyle(DS.ink)
                 .monospacedDigit()
                 .contentTransition(.numericText(value: hour))
-                .animation(DS.Motion.snappy, value: hour)
+                .animation(DSCalmMotion.state, value: hour)
 
             Text(Self.moment(hour: Int(hour), languageManager: languageManager))
                 .font(DS.sans(.subheadline, .semibold))
                 .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .contentTransition(.opacity)
-                .animation(DS.Motion.snappy, value: Int(hour))
+                .animation(DSCalmMotion.state, value: Int(hour))
         }
         .frame(maxWidth: .infinity)
         .accessibilityElement(children: .combine)

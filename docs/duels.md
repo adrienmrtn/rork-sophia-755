@@ -269,3 +269,69 @@ toujours vrai, sur iOS comme sur Android).
 - **Nouvelles questions** : après `build_duels_seed.py`, traduire les nouvelles (un lot `packs` ne
   contenant qu'elles), relancer `build_duels_i18n_sql.py`. Une question sans traduction reste jouable,
   en anglais.
+
+## Fin de partie : décompte, victoire, relecture (12/11/2026)
+
+iOS et Android, duel classé comme duel entre amis.
+
+- **Ouverture de l'écran de résultat.** Les deux joueurs face à face ; leurs bonnes réponses
+  défilent ensemble de zéro à leur total (le plus petit s'arrête le premier), vite puis de plus
+  en plus lentement (de 55 ms à 330 ms entre deux points), un cran de vibration par point. Puis
+  l'issue se dévoile : pour une victoire, le titre qui se pose (ressort amorti), la couronne, le
+  vainqueur un peu agrandi et les confettis ; pour une défaite ou une égalité, le titre seul,
+  sans confettis. La carte des trophées (compteur, jauge, montée de ligue) et les boutons
+  suivent comme avant, une fois l'issue dévoilée. Avec les animations réduites (« Réduire les
+  animations » sur iOS, échelle d'animation à zéro sur Android), tout est en place d'emblée,
+  sans confettis.
+- **« Revoir les questions ».** Une ligne sous la carte des trophées ouvre la relecture : pour
+  chaque question jouée, son rang (ou « Mort subite »), son texte et sa vignette, la bonne
+  réponse, puis une ligne par joueur (avatar, ce qu'il a répondu, coche s'il a marqué, croix
+  sinon, tiret et « Pas de réponse » s'il n'a pas répondu). Au curseur, la coche va au plus
+  proche, comme le point.
+- **Données : rien de nouveau côté serveur.** L'app a déjà tout à la fin d'une partie. Duel
+  classé : les réponses de l'adversaire arrivent avec la partie (`bot` de chaque manche,
+  `tiebreak_bot`). Duel entre amis : `duel_friend_state` rend `opponent_answers`,
+  `my_points` et `opponent_points` pour toutes les questions closes. `DuelGameModel` range une
+  entrée par question close (`DuelReviewEntry`) et la passe à l'écran dans `DuelSummary.review`.
+  Une question close pendant une coupure réseau (duel entre amis) y figure sans réponse de ma
+  part, avec celle de l'ami. Aucune migration, aucun fichier SQL à exécuter. La relecture
+  n'existe que sur l'écran de résultat : une partie de l'historique ne peut pas être relue
+  (il faudrait une fonction serveur qui rende `duel_matches` question par question).
+- **Code.** iOS : `Views/Duels/DuelResultView.swift` (`playOpening`), `DuelReviewView.swift`,
+  `DuelGameModel.swift` (`DuelReviewEntry`, `review`). Android : `ui/duels/DuelResultScreen.kt`,
+  `DuelReviewScreen.kt` (`DuelReviewText`), `DuelGameModel.kt` (`DuelReviewEntry`,
+  `DuelRules.scoreCountDelayMs`) ; tests dans `DuelGameModelTest`, `DuelLiveGameTest` et
+  `DuelRulesTest`. Textes : `duel.review.open` et `duel.review.noAnswer`, dans les 30 langues.
+
+## 400 questions de plus (12/11/2026)
+
+- 400 questions anglaises (histoire 67, sciences 67, littérature 66, art 66, mythologie 66, monde 68 ;
+  264 QCM dont des comparaisons, 78 vrai/faux, 58 curseurs ; environ 50 par niveau), sans image.
+  Écrites par matière puis relues par un vérificateur indépendant (consignes et journaux :
+  `content/duels/v4/`), comparées au vivier existant pour écarter les doublons.
+  Sources : `scripts/duels_source/30_v4_*.json` ; ids `dq_en_<niveau>_<n>` à la suite des précédents.
+- `build_duels_seed.py` écrit désormais `20261114010000_duels_seed_v4.sql` (tout le contenu) ; la v3,
+  déjà exécutée, ne bouge pas.
+- Traductions des seules nouvelles questions : `duels_i18n.py packs|check|merge --new`
+  (work dir `content/duels/i18n/lots_v4`), fusionnées dans `content/duels/i18n/<langue>.json`.
+- SQL des ajouts seulement (questions + traductions) : `python3 scripts/build_duels_add_sql.py
+  --baseline content/duels/v4/baseline_ids.txt --migration supabase/migrations/20261114010100_duels_v4_add.sql
+  --paste-dir supabase/duels_v4_a_coller` ; fichiers à coller dans l'ordre dans l'éditeur SQL.
+
+## 1 500 questions de plus, dont 100 à image (12/11/2026)
+
+- 1 400 questions texte écrites par couloir (deux par matière : histoire avant/après 1500, sciences
+  physiques/vivant, littérature avant/après 1850, arts visuels/arts du spectacle, mythologie
+  européenne/reste du monde, géographie/société et idées), chaque lot relu par un vérificateur
+  indépendant, puis dédoublonnées entre lots et contre le vivier. Sources : `scripts/duels_source/40_v5_*.json`.
+- 100 questions à image (portraits, œuvres, monuments, mythologie, sciences et nature, 15 drapeaux),
+  images Wikimedia Commons du domaine public ou CC0 et flagcdn, mises au format de l'app par
+  `scripts/duels_v5_images.py` (aucun envoi), vérifiées une à une : `41_v5_images.json`. Crédits dans
+  `content/duels/images.json`. Fichiers à déposer : `content/duels/v5/upload/duels/` → bucket
+  `course-images` (fusionne avec le dossier `duels/` existant), AVANT d'exécuter le SQL.
+- Traductions natives dans les 29 langues (lots `content/duels/i18n/lots_v5`). Une question qui n'a pas de
+  sens dans une langue (nom local qui donne la réponse, terme japonais transparent…) est retirée de
+  toutes les langues : 12 retirées (`_excluded.json`, jamais insérées), remplacées par 12 autres
+  (`42_v5_replacements.json`). Total : 1 500 questions actives.
+- SQL : `supabase/migrations/20261115010100_duels_v5_add.sql` et, pour l'éditeur SQL,
+  `supabase/duels_v5_a_coller/01…10_duels_ajout.sql` (dans l'ordre). Indépendant du lot des 400.

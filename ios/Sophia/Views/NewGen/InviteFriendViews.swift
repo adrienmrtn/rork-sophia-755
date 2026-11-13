@@ -1,17 +1,37 @@
 import SwiftUI
 
-/// Quand montrer le parrainage (docs/parrainage.md) : jamais avant le premier cours terminé,
-/// jamais à un abonné Premium (les cours gratuits ne lui apportent rien).
+/// Quand montrer le parrainage (docs/parrainage.md) : jamais avant le premier cours terminé
+/// sur ce téléphone, jamais à un abonné Premium (les cours gratuits ne lui apportent rien).
+/// Toutes les entrées passent par ici : la carte du fil, la ligne des réglages, la page.
 enum InviteFriend {
-    /// La carte du fil d'accueil : tant que la récompense n'est pas gagnée.
-    static func showsFeedCard(progressManager: ProgressManager, isPremium: Bool) -> Bool {
-        !isPremium && progressManager.completedCount >= 1 && !ReferralService.shared.rewarded
+    /// Ce que la ligne des réglages ouvre.
+    enum SettingsEntry {
+        /// L'offre « Invite un ami et gagne 3 cours gratuits ».
+        case offer
+        /// Seulement « Tu as le code d'un ami ? » : un compte tout neuf, avant son premier
+        /// cours terminé (ou Premium), doit pouvoir déclarer le code de celui qui l'a invité.
+        case friendCode
     }
 
-    /// La carte du profil : comme le fil, puis tant qu'il reste des cours gratuits à utiliser.
-    static func showsProfileCard(progressManager: ProgressManager, isPremium: Bool) -> Bool {
-        guard !isPremium, progressManager.completedCount >= 1 else { return false }
-        return !ReferralService.shared.rewarded || progressManager.referralCreditsRemaining > 0
+    /// L'offre elle-même : après le premier cours terminé tant que la récompense n'est pas
+    /// gagnée, puis tant qu'il reste des cours gratuits à utiliser.
+    static func showsOffer(progressManager: ProgressManager, isPremium: Bool) -> Bool {
+        guard !isPremium else { return false }
+        if progressManager.referralCreditsRemaining > 0 { return true }
+        return progressManager.hasFinishedACourseHere && !ReferralService.shared.rewarded
+    }
+
+    /// La carte du fil d'accueil : tant que la récompense n'est pas gagnée.
+    static func showsFeedCard(progressManager: ProgressManager, isPremium: Bool) -> Bool {
+        !isPremium && progressManager.hasFinishedACourseHere && !ReferralService.shared.rewarded
+    }
+
+    /// La ligne des réglages : l'offre quand elle est ouverte, sinon la seule saisie du code
+    /// d'un ami tant que le serveur l'accepte (compte de moins de 14 jours), sinon rien.
+    static func settingsEntry(progressManager: ProgressManager, isPremium: Bool, isSignedIn: Bool) -> SettingsEntry? {
+        if showsOffer(progressManager: progressManager, isPremium: isPremium) { return .offer }
+        if isSignedIn, ReferralService.shared.canClaim { return .friendCode }
+        return nil
     }
 }
 
@@ -75,11 +95,16 @@ struct InviteFriendFeedCard: View {
 
 /// La page « Invite un ami » : l'illustration, les trois étapes, mon code à copier ou partager,
 /// où j'en suis, et, pour un compte tout neuf, le champ où saisir le code d'un ami.
+///
+/// Avant le premier cours terminé (`showsOffer` faux), la page ne montre rien de l'offre :
+/// seulement le champ « Tu as le code d'un ami ? ».
 struct InviteFriendView: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(AuthService.self) private var auth
     @Environment(\.dismiss) private var dismiss
     let progressManager: ProgressManager
+    /// `InviteFriend.showsOffer` au moment d'ouvrir la page.
+    var showsOffer: Bool = true
 
     @Bindable private var social = SocialService.shared
     @Bindable private var referral = ReferralService.shared
@@ -103,33 +128,36 @@ struct InviteFriendView: View {
                     Spacer()
                 }
 
-                Color.clear
-                    .frame(maxWidth: .infinity)
-                    .aspectRatio(4 / 3, contentMode: .fit)
-                    .overlay {
-                        Image("invite_poster")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-                    .accessibilityHidden(true)
+                if showsOffer {
+                    Color.clear
+                        .frame(maxWidth: .infinity)
+                        .aspectRatio(4 / 3, contentMode: .fit)
+                        .overlay {
+                            Image("invite_poster")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        }
+                        .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+                        .accessibilityHidden(true)
 
-                Text(languageManager.text("invite.card.title"))
-                    .font(DS.title(.title, .semibold))
-                    .foregroundStyle(DS.ink)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .dsStagger(0)
+                    Text(languageManager.text("invite.card.title"))
+                        .font(DS.title(.title, .semibold))
+                        .foregroundStyle(DS.ink)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .dsStagger(0)
 
-                stepsCard
-                    .dsStagger(1)
-                codeCard
-                    .dsStagger(2)
-                statusLine
-                    .dsStagger(3)
+                    stepsCard
+                        .dsStagger(1)
+                    codeCard
+                        .dsStagger(2)
+                    statusLine
+                        .dsStagger(3)
+                }
 
-                if auth.isSignedIn, referral.canClaim {
+                // Le code accepté, la carte reste le temps de lire la confirmation.
+                if auth.isSignedIn, referral.canClaim || claimSucceeded {
                     enterCodeCard
-                        .dsStagger(4)
+                        .dsStagger(showsOffer ? 4 : 0)
                 }
             }
             .padding(20)

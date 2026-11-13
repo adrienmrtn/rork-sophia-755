@@ -9,8 +9,6 @@ struct OnboardingV2Language: View {
 
     @State private var showScrollHint = true
     @State private var hintBounce = false
-    /// Incrémenté à chaque choix : fait rebondir le drapeau de l'en-tête.
-    @State private var flagPulse = 0
 
     /// Au-delà, les rangées sont hors écran : inutile d'allonger la cascade d'apparition.
     private static let maxStaggeredRows = 9
@@ -60,38 +58,24 @@ struct OnboardingV2Language: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
 
-            Text(languageManager.text("onboardingV2.language.subtitle"))
-                .font(DS.sans(.subheadline, .regular))
-                .foregroundStyle(OV2.inkSecondary)
-                .multilineTextAlignment(.center)
-                .lineSpacing(2)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.top, 10)
-
             flagBadge
-                .padding(.top, 14)
+                .padding(.top, 16)
         }
         .dsStagger(0)
     }
 
-    /// Le drapeau de la langue choisie, dans une pastille qui rebondit à chaque changement.
+    /// Le drapeau de la langue choisie, dans une pastille : à chaque changement, le nouveau
+    /// drapeau prend la place de l'ancien en fondu, sans rebond.
     private var flagBadge: some View {
         ZStack {
             Circle().fill(DS.accentTint)
             Text(languageManager.current.flag)
                 .font(.system(size: 36))
                 .id(languageManager.current.id)
-                .transition(.scale(scale: 0.4).combined(with: .opacity))
+                .transition(.scale(scale: 0.8).combined(with: .opacity))
         }
         .frame(width: 72, height: 72)
-        .scaleEffect(flagScale)
-        .animation(DS.Motion.pop, value: flagPulse)
         .accessibilityHidden(true)
-    }
-
-    /// Le rebond alterne deux échelles voisines : chaque choix relance le ressort.
-    private var flagScale: CGFloat {
-        flagPulse.isMultiple(of: 2) ? 1 : 1.04
     }
 
     // MARK: - Liste
@@ -147,9 +131,8 @@ struct OnboardingV2Language: View {
         let isSelected: Bool = languageManager.current == language
         return Button {
             Haptics.select()
-            withAnimation(DS.Motion.snappy) {
+            withAnimation(OV2CoreMotion.select) {
                 languageManager.setLanguage(language)
-                flagPulse += 1
             }
         } label: {
             HStack(spacing: 12) {

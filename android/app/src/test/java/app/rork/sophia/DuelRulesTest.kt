@@ -284,6 +284,17 @@ class DuelRulesTest {
     }
 
     @Test
+    fun `the final score counts up slower and slower`() {
+        val delays = (1..20).map { DuelRules.scoreCountDelayMs(it, 20) }
+        assertEquals(delays.sorted(), delays)
+        assertEquals(55L, DuelRules.scoreCountDelayMs(1, 20))
+        assertEquals(330L, DuelRules.scoreCountDelayMs(20, 20))
+        // Un score d'un seul point, ou aucun : pas de division par zéro.
+        assertEquals(330L, DuelRules.scoreCountDelayMs(1, 1))
+        assertEquals(0L, DuelRules.scoreCountDelayMs(0, 0))
+    }
+
+    @Test
     fun `leaving the app is an abandon only beyond fifteen seconds`() {
         assertFalse(DuelRules.abandonsAfterAbsence(3_000))
         assertFalse(DuelRules.abandonsAfterAbsence(15_000))

@@ -17,6 +17,30 @@ nonisolated struct DuelPlayerIdentity: Sendable, Equatable {
     var initial: String { String(handle.prefix(1)).uppercased() }
 }
 
+/// Une question jouée, pour la relecture en fin de partie : la question, ce que j'ai répondu,
+/// ce que l'adversaire a répondu et qui a marqué. Tout est déjà dans l'app à la fin d'une
+/// partie : le script de l'adversaire en duel classé (`DuelBotAnswer`), l'état de la partie
+/// (`DuelFriendState.opponentAnswers`) en duel entre amis.
+nonisolated struct DuelReviewEntry: Sendable, Equatable, Identifiable {
+    /// Le rang de la question dans la partie (à partir de 0 ; 20 : la question décisive).
+    let index: Int
+    let question: DuelQuestion
+    /// Ma réponse ; sans choix ni valeur quand le temps s'est écoulé.
+    let mine: DuelAnswer?
+    /// La réponse de l'adversaire ; nil quand l'app ne la connaît pas.
+    let theirs: DuelBotAnswer?
+    let playerPoint: Bool
+    let opponentPoint: Bool
+    let isTiebreak: Bool
+
+    var id: Int { index }
+
+    /// J'ai répondu (un choix, ou une valeur au curseur).
+    var iAnswered: Bool { mine?.c != nil || mine?.v != nil }
+    /// L'adversaire a répondu, pour ce que l'app en sait.
+    var theyAnswered: Bool { theirs?.choice != nil || theirs?.value != nil }
+}
+
 /// Ce que l'app sait d'une partie dès qu'elle se termine, avant la réponse du serveur.
 nonisolated struct DuelSummary: Sendable, Equatable {
     let match: DuelMatch
@@ -34,6 +58,8 @@ nonisolated struct DuelSummary: Sendable, Equatable {
     /// La matière que le joueur a choisie pour sa manche (duel classé : le serveur en a besoin
     /// pour recompter le score).
     var pick: String? = nil
+    /// Les questions jouées, une à une, pour « Revoir les questions ».
+    var review: [DuelReviewEntry] = []
 }
 
 /// Le lien d'une partie entre amis avec le serveur : la partie, et l'instant (sur l'horloge de
@@ -130,6 +156,8 @@ final class DuelGameModel {
     /// classé les réponses de l'adversaire à ces questions.
     @ObservationIgnored private var playedQuestions: [DuelQuestion] = []
     @ObservationIgnored private var playedBot: [DuelBotAnswer] = []
+    /// Les questions closes, dans l'ordre, pour la relecture de fin de partie.
+    @ObservationIgnored private(set) var review: [DuelReviewEntry] = []
     /// Une réponse est arrivée pendant un échange en cours : il faut en refaire un aussitôt.
     @ObservationIgnored private var refreshAgain = false
 
@@ -206,7 +234,8 @@ final class DuelGameModel {
             friendly: live != nil,
             draw: isDraw,
             forfeit: opponentForfeited,
-            pick: myPick
+            pick: myPick,
+            review: review
         )
     }
 
@@ -460,6 +489,17 @@ final class DuelGameModel {
             let scored = DuelScoring.round(question: current, answer: answer, bot: botAnswer)
             round = DuelRound(player: scored.player, opponent: scored.opponent)
         }
+        // Le script de l'adversaire n'est connu que si le serveur l'a livré pour cette question.
+        let scripted: DuelBotAnswer? = isTiebreak ? match.tiebreakBot : (i < playedBot.count ? playedBot[i] : nil)
+        review.append(DuelReviewEntry(
+            index: i,
+            question: current,
+            mine: answer,
+            theirs: scripted,
+            playerPoint: round.player,
+            opponentPoint: round.opponent,
+            isTiebreak: isTiebreak
+        ))
         withAnimation(.spring(response: 0.38, dampingFraction: 0.62)) {
             playerLocked = true
             opponentAnswered = true
@@ -706,7 +746,16 @@ final class DuelGameModel {
         guard let state = closed else { return nil }
         frozenFraction = remainingFraction(at: Date())
 
-        answers.append(currentAnswer())
+        let mine = currentAnswer()
+        answers.append(mine)
+        // Les questions closes pendant une coupure réseau n'ont pas été jouées ici : elles
+        // entrent dans la relecture sans réponse de ma part, avec celle de l'ami.
+        let missedUpTo = min(i, playedQuestions.count)
+        while review.count < missedUpTo {
+            let k = review.count
+            review.append(liveReviewEntry(k, question: playedQuestions[k], mine: nil, state: state))
+        }
+        review.append(liveReviewEntry(i, question: current, mine: mine, state: state))
         // La réponse de l'ami et les points de chacun viennent du serveur, qui fait foi.
         if i < state.opponentAnswers.count {
             let theirs = state.opponentAnswers[i]
@@ -738,6 +787,26 @@ final class DuelGameModel {
             DuelHaptics.wrong()
         }
         return state
+    }
+
+    /// Une question close d'une partie entre amis, telle que le serveur la rapporte.
+    private func liveReviewEntry(_ k: Int, question: DuelQuestion, mine: DuelAnswer?, state: DuelFriendState) -> DuelReviewEntry {
+        let myPoint = k < state.myPoints.count ? state.myPoints[k] : false
+        let theirPoint = k < state.opponentPoints.count ? state.opponentPoints[k] : false
+        var theirs: DuelBotAnswer?
+        if k < state.opponentAnswers.count {
+            let answer = state.opponentAnswers[k]
+            theirs = DuelBotAnswer(correct: theirPoint, choice: answer.c, value: answer.v, timeMs: answer.t)
+        }
+        return DuelReviewEntry(
+            index: k,
+            question: question,
+            mine: mine,
+            theirs: theirs,
+            playerPoint: myPoint,
+            opponentPoint: theirPoint,
+            isTiebreak: k >= questionCount
+        )
     }
 
     private func pause(_ seconds: Double) async -> Bool {

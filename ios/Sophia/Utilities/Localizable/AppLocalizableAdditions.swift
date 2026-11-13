@@ -13,6 +13,8 @@ enum AppLocalizableAdditions {
         elevateOnboardingIntro, elevateOnboardingCore, elevateOnboardingEnd,
         elevateHome, elevateCourse, elevatePath, elevateDuels, elevateProfile,
         elevatePaywalls,
+        // Onboarding de la page Entraînement : passages forts de ses titres.
+        trainingOnboarding,
     ]
 
     static func entry(for key: String) -> [String: String]? {

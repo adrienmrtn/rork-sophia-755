@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 // MARK: - Time formatting helper
 
@@ -17,7 +18,7 @@ enum OnboardingScreenTimeFormat {
 // MARK: - Page 1/4 — Slider temps d'écran
 
 /// « Combien de temps passes-tu par jour sur ton téléphone ? »
-/// Slider de 30 min à 10 h par blocs de 30 min ; le grand chiffre roule en slide-up.
+/// Slider de 30 min à 10 h par blocs de 30 min ; les chiffres du temps roulent sur place.
 ///
 /// Style « Elevate arrondi » : titre centré, illustration ronde quand la hauteur le permet,
 /// le temps en très grand et en bleu, le curseur et ses bornes, puis le CTA épinglé.
@@ -64,19 +65,12 @@ struct OnboardingV2PhoneTime: View {
             if art > 0 {
                 OV2CoreIllustration(art: .phone, size: art)
                     .padding(.top, 22)
-                    .dsPopIn(delay: 0.12)
+                    .ov2CoreSoftIn(delay: 0.12)
             }
 
             Spacer(minLength: 24)
 
-            Text(timeLabel)
-                .font(.jakarta(size: 84, weight: .heavy))
-                .foregroundStyle(OV2.accent)
-                .monospacedDigit()
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                .contentTransition(.numericText(value: minutes))
-                .animation(DS.Motion.snappy, value: minutes)
+            timeDisplay
                 .padding(.horizontal, OV2CoreMetrics.sideInset)
                 .dsStagger(1)
 
@@ -89,6 +83,75 @@ struct OnboardingV2PhoneTime: View {
         }
         // Le bloc chiffre + curseur se centre dans la hauteur qui reste sous l'illustration.
         .frame(minHeight: height)
+    }
+
+    // MARK: - Temps affiché
+
+    /// Le temps en très grand, immobile d'un cran à l'autre du curseur.
+    ///
+    /// Un seul texte centré (« 3h », puis « 3h30 ») changeait de largeur à chaque cran : le
+    /// « 3 » et le « h » glissaient de gauche à droite sous le doigt. Ici chaque caractère a
+    /// sa case de largeur fixe et les minutes sont toujours écrites (« 3h00 », « 3h30 ») :
+    /// seuls les chiffres changent, sur place. La plus grande taille qui tient en largeur est
+    /// choisie sur un gabarit constant, donc elle ne change pas non plus en cours de route.
+    /// Seules les deux extrémités du curseur ont une autre forme (« 30 min », « 10h00 »).
+    private var timeDisplay: some View {
+        ViewThatFits(in: .horizontal) {
+            timeRow(size: 84)
+            timeRow(size: 68)
+            timeRow(size: 54)
+        }
+        .foregroundStyle(OV2.accent)
+        .animation(OV2CoreMotion.select, value: minutes)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text(timeLabel))
+    }
+
+    private func timeRow(size: CGFloat) -> some View {
+        let total: Int = Int(minutes)
+        // Gabarit invisible : la valeur la plus large (« 10h00 ») fixe la largeur et la hauteur.
+        return clockCells(hours: Int(range.upperBound) / 60, minutes: 0, size: size)
+            .hidden()
+            .overlay {
+                if total >= 60 {
+                    clockCells(hours: total / 60, minutes: total % 60, size: size)
+                } else {
+                    Text(timeLabel)
+                        .font(.jakarta(size: size, weight: .heavy))
+                        .monospacedDigit()
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                }
+            }
+    }
+
+    /// « 3h30 » caractère par caractère, chacun dans sa case.
+    private func clockCells(hours: Int, minutes: Int, size: CGFloat) -> some View {
+        let characters: [String] = String(format: "%dh%02d", hours, minutes).map { String($0) }
+        return HStack(spacing: 0) {
+            ForEach(Array(characters.enumerated()), id: \.offset) { _, character in
+                timeCell(character, size: size)
+            }
+        }
+        .fixedSize()
+    }
+
+    /// Une case : large comme le chiffre le plus large, que la police ait ou non des chiffres
+    /// de largeur égale ; le « h » garde sa largeur propre.
+    private func timeCell(_ character: String, size: CGFloat) -> some View {
+        let isDigit: Bool = character.first?.isNumber ?? false
+        return ZStack {
+            if isDigit {
+                ForEach(["0", "4", "8"], id: \.self) { widest in
+                    Text(verbatim: widest).hidden()
+                }
+            }
+            Text(verbatim: character)
+                .contentTransition(.numericText())
+        }
+        .font(.jakarta(size: size, weight: .heavy))
+        .monospacedDigit()
+        .lineLimit(1)
     }
 
     private var sliderBlock: some View {
@@ -127,7 +190,8 @@ struct OnboardingV2PhoneTime: View {
 ///
 /// La séquence dure environ 14 secondes et rien n'annonce le nombre avant : le titre est
 /// neutre (« Voici ta vie en années »), la ligne « téléphone » de la légende compte en même
-/// temps que les carrés. Le bouton « Continuer » reste utilisable du début à la fin.
+/// temps que les carrés. Le bouton « Continuer » n'arrive qu'une fois la séquence terminée,
+/// avec la conclusion ; la flèche retour de l'en-tête reste là du début à la fin.
 struct OnboardingV2YearsGrid: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -147,7 +211,14 @@ struct OnboardingV2YearsGrid: View {
     /// `true` une fois la séquence jouée jusqu'au bout : inutile de la rejouer si la page
     /// réapparaît (rotation, retour d'arrière-plan).
     @State private var sequenceDone = false
+    /// Le bouton « Continuer » est là : la séquence est allée au bout (ou le filet de
+    /// sécurité a joué).
+    @State private var canContinue = false
     @State private var animTask: Task<Void, Never>?
+
+    /// Délai au bout duquel le bouton arrive quoi qu'il advienne de la séquence (qui dure
+    /// environ 14 s) : la sortie de la page ne dépend jamais d'une animation seule.
+    private static let continueFailsafe: TimeInterval = 20
 
     private let totalYears = 80
     private let columns = 10
@@ -185,12 +256,32 @@ struct OnboardingV2YearsGrid: View {
             pageBody(height: height)
                 .frame(minHeight: height, alignment: .top)
         } footer: {
-            // Toujours là, toujours actif : on peut passer sans attendre la fin.
+            // N'arrive qu'à la fin de la séquence ; sa place est réservée dès l'ouverture.
             OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
+                .ov2CoreAppears(canContinue)
         }
         .ov2Background()
-        .onAppear { startSequence() }
+        .onAppear {
+            startSequence()
+            armContinueFailsafe()
+        }
         .onDisappear { animTask?.cancel() }
+    }
+
+    /// Filet de sécurité : le bouton arrive au plus tard après `continueFailsafe` secondes,
+    /// même si la séquence a été annulée sans reprendre (rotation, fenêtre redimensionnée sur
+    /// iPad). Une page d'onboarding sans issue a déjà valu un refus de l'App Store
+    /// (Guideline 2.1(a)). Avec VoiceOver, le bouton est là tout de suite : rien n'annonce à
+    /// l'oreille qu'une animation est en cours.
+    private func armContinueFailsafe() {
+        guard !canContinue else { return }
+        if UIAccessibility.isVoiceOverRunning {
+            canContinue = true
+            return
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + Self.continueFailsafe) {
+            canContinue = true
+        }
     }
 
     /// Page content; the container above is what keeps the CTA on screen.
@@ -377,10 +468,11 @@ struct OnboardingV2YearsGrid: View {
     /// Démarre (ou reprend) l'enchaînement.
     ///
     /// La séquence est annulée par `onDisappear` (rotation, redimensionnement de fenêtre sur
-    /// iPad, retour depuis l'arrière-plan) : elle reprend ici là où elle s'était arrêtée. Elle
-    /// ne conditionne plus la sortie de la page — le bouton est là dès l'ouverture —, ce qui
-    /// écarte pour de bon le blocage signalé par l'App Store (Guideline 2.1(a), « indefinite
-    /// loading during onboarding », iPad Air M3 / iPadOS 26.6.2).
+    /// iPad, retour depuis l'arrière-plan) : elle reprend ici là où elle s'était arrêtée. Le
+    /// bouton « Continuer » arrive à sa fin ; pour que la sortie de la page ne dépende jamais
+    /// d'elle seule, `armContinueFailsafe` le fait arriver de toute façon (blocage signalé par
+    /// l'App Store, Guideline 2.1(a), « indefinite loading during onboarding », iPad Air M3 /
+    /// iPadOS 26.6.2).
     ///
     /// Avec « Réduire les animations », la page s'affiche directement dans son état final.
     private func startSequence() {
@@ -404,6 +496,7 @@ struct OnboardingV2YearsGrid: View {
         screenFilled = screenYears
         showConclusion = true
         sequenceDone = true
+        canContinue = true
     }
 
     /// Enchaînement lent et séquentiel, environ 14 s : (1) ouverture des 80 carrés gris,
@@ -418,7 +511,7 @@ struct OnboardingV2YearsGrid: View {
             guard await pause(0.3) else { return false }
             for i in (revealed + 1)...totalYears {
                 if Task.isCancelled { return false }
-                withAnimation(.spring(response: 0.4, dampingFraction: 0.72)) { revealed = i }
+                withAnimation(.easeOut(duration: 0.3)) { revealed = i }
                 if i % 10 == 0 { OnboardingHaptics.selection() }
                 try? await Task.sleep(nanoseconds: 11_000_000)
             }
@@ -453,7 +546,7 @@ struct OnboardingV2YearsGrid: View {
             let perSquare: Double = min(0.45, max(0.12, 3.0 / Double(target)))
             for i in (screenFilled + 1)...target {
                 if Task.isCancelled { return false }
-                withAnimation(.spring(response: 0.35, dampingFraction: 0.6)) { screenFilled = i }
+                withAnimation(.easeOut(duration: 0.28)) { screenFilled = i }
                 OnboardingHaptics.counterTick(progress: Double(i) / Double(target))
                 guard await pause(perSquare) else { return false }
             }
@@ -463,9 +556,13 @@ struct OnboardingV2YearsGrid: View {
         // Phase 6 — la conclusion, en dernier (≈ 13,6 s).
         if !showConclusion {
             guard await pause(0.6) else { return false }
-            withAnimation(DS.Motion.pop) { showConclusion = true }
+            withAnimation(OV2CoreMotion.settle) { showConclusion = true }
         }
-        return await pause(0.8)
+
+        // Le bouton « Continuer » arrive une fois la conclusion posée.
+        guard await pause(0.5) else { return false }
+        canContinue = true
+        return true
     }
 
     /// Attend `seconds` ; retourne `false` si la tâche a été annulée entre-temps.
@@ -494,7 +591,7 @@ struct OnboardingV2YearsGrid: View {
 /// progressivement (mot par mot). Chaque mot occupe un emplacement de largeur fixe (largeur
 /// « gras ») pour éviter tout décalage du texte quand le gras arrive. Une fois le gras au bout,
 /// le dernier mot bascule (par le haut) entre « culture », « art », « philosophie »… en bleu.
-/// Pas de CTA : on tape n'importe où pour continuer.
+/// Pas de CTA : on tape n'importe où pour continuer, une fois que ce mot a commencé à changer.
 ///
 /// Style « Elevate arrondi » : une illustration ronde au-dessus de la phrase, en très grand et
 /// centrée ; l'invitation à toucher l'écran en bas.
@@ -504,6 +601,8 @@ struct OnboardingV2Transform: View {
 
     @State private var boldCount = 0
     @State private var showHint = false
+    /// On peut quitter la page : le dernier mot a commencé à changer.
+    @State private var canAdvance = false
     @State private var advanced = false
     @State private var swapping = false
     @State private var swapIndex = 0
@@ -529,7 +628,7 @@ struct OnboardingV2Transform: View {
             ZStack {
                 VStack(spacing: 26) {
                     OV2CoreIllustration(art: .nightBook, size: 150)
-                        .dsPopIn(delay: 0.1)
+                        .ov2CoreSoftIn(delay: 0.1)
 
                     OV2FlowLayout(spacing: languageManager.current == .japanese ? 0 : 8, lineSpacing: 6) {
                         ForEach(Array(words.enumerated()), id: \.offset) { i, word in
@@ -601,20 +700,28 @@ struct OnboardingV2Transform: View {
 
     // MARK: - Animation
 
-    /// Cette page n'a pas de bouton : la seule indication qu'il faut taper est `showHint`,
-    /// révélée à la fin de l'animation. Annulée en cours (rotation / redimensionnement de
-    /// fenêtre sur iPad, retour d'arrière-plan), l'ancienne version laissait une phrase à
-    /// moitié en gras, sans indice et sans issue visible — et `guard animTask == nil`
-    /// interdisait tout redémarrage. L'animation reprend maintenant où elle en était, et
-    /// l'indice s'affiche quoi qu'il arrive.
+    /// Cette page n'a pas de bouton : on la quitte en touchant l'écran, et seulement une fois
+    /// que le dernier mot a commencé à changer (`canAdvance`) ; l'invitation à toucher
+    /// (`showHint`) arrive au même moment. Avant, un toucher ne fait rien.
+    ///
+    /// Annulée en cours (rotation / redimensionnement de fenêtre sur iPad, retour
+    /// d'arrière-plan), une ancienne version laissait une phrase à moitié en gras, sans indice
+    /// et sans issue visible. L'animation reprend maintenant où elle en était, et la page se
+    /// déverrouille quoi qu'il arrive : terminée ou interrompue, on peut toujours avancer.
     private func animate() {
         animTask?.cancel()
         animTask = Task { @MainActor in
             await playAnimation()
-            // Terminée ou interrompue, l'utilisateur sait toujours qu'il peut avancer.
-            withAnimation(.easeIn(duration: 0.5)) { showHint = true }
-            await playWordSwap()
+            let swapStarted: Bool = await startWordSwap()
+            unlock()
+            if swapStarted { await loopWordSwap() }
         }
+    }
+
+    /// Autorise la sortie de la page et montre l'invitation à toucher l'écran.
+    private func unlock() {
+        canAdvance = true
+        withAnimation(.easeOut(duration: 0.4)) { showHint = true }
     }
 
     private func playAnimation() async {
@@ -634,23 +741,35 @@ struct OnboardingV2Transform: View {
         }
     }
 
-    /// Bascule du dernier mot : culture → art → philosophie…
-    private func playWordSwap() async {
-        guard swapWords.count > 1 else { return }
+    /// Premier changement du dernier mot (culture → art), après un court temps de lecture.
+    /// Retourne `false` s'il n'y a qu'un mot à montrer ou si la tâche a été annulée avant.
+    private func startWordSwap() async -> Bool {
+        guard swapWords.count > 1 else { return false }
         try? await Task.sleep(nanoseconds: 750_000_000)
-        if Task.isCancelled { return }
+        if Task.isCancelled { return false }
         swapping = true
+        swapWord()
+        return true
+    }
+
+    /// Suite de la bascule, en boucle : art → philosophie → …
+    private func loopWordSwap() async {
         while !Task.isCancelled {
-            withAnimation(.spring(response: 0.32, dampingFraction: 0.74)) {
-                swapIndex += 1
-            }
-            OnboardingHaptics.selection()
             try? await Task.sleep(nanoseconds: 1_150_000_000)
+            if Task.isCancelled { return }
+            swapWord()
         }
     }
 
+    private func swapWord() {
+        withAnimation(.easeOut(duration: 0.3)) {
+            swapIndex += 1
+        }
+        OnboardingHaptics.selection()
+    }
+
     private func advance() {
-        guard !advanced else { return }
+        guard canAdvance, !advanced else { return }
         advanced = true
         animTask?.cancel()
         onNext()

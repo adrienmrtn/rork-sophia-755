@@ -1,17 +1,17 @@
 package app.rork.sophia.ui.onboarding
 
+import androidx.annotation.DrawableRes
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.CubicBezierEasing
-import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -29,6 +29,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -37,12 +38,17 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.outlined.ThumbDown
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
@@ -52,7 +58,9 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -62,17 +70,20 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathEffect
-import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
@@ -85,6 +96,7 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.coerceIn
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.R
 import app.rork.sophia.data.AuthorStore
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.DeviceCapabilities
@@ -112,13 +124,23 @@ import kotlin.math.abs
 import kotlin.math.max
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 // MARK: - Course picks
 
-/** The next two cards stick out by this much above the top one. */
-private val SWIPE_PLATE_RISE = 22.dp
+/** Au plus cinq cartes dépassent derrière celle du dessus : toute la pile d'un paquet de six. */
+private const val SWIPE_STACK_MAX = 5
+
+/** Chaque carte de la pile dépasse de cette hauteur au-dessus de celle qui la précède… */
+private val SWIPE_STACK_STEP = 8.dp
+
+/** …et est plus étroite d'autant de chaque côté. */
+private val SWIPE_STACK_INSET = 10.dp
+
+/** Place gardée au-dessus de la carte du dessus pour la pile entière. */
+private val SWIPE_STACK_RISE = SWIPE_STACK_STEP * SWIPE_STACK_MAX
 
 /** Tallest a card gets: a 196 dp cover and its block of text. */
 private val SWIPE_CARD_MAX_HEIGHT = 430.dp
@@ -132,8 +154,12 @@ private val SwipeCardBorder = Color(0xFFB1C5EB)
  * Tinder-style deck: drag a card left or right, or use the two buttons.
  *
  * « Elevate arrondi »: the title on the left (its heart in bold blue), a stack of pale blue
- * cards — cover, title, author, subject — two of which stick out at the top, and two round
- * buttons (thumb down, thumb up). The gesture, its thresholds and its vibrations are unchanged.
+ * cards — cover, title, author, subject — and two round buttons (thumb down, thumb up). The
+ * gesture, its thresholds and its vibrations are unchanged.
+ *
+ * La pile est visible en entier : une tranche par cours restant dépasse derrière la carte du
+ * dessus. Chaque réponse, oui ou non, fait partir la carte du dessus et retire une tranche ;
+ * la pile fond ainsi jusqu'à être vide.
  */
 @Composable
 internal fun SwipeCoursesStep(
@@ -178,7 +204,7 @@ internal fun SwipeCoursesStep(
     }
     val enterProgress by animateFloatAsState(
         targetValue = if (enter) 1f else 0f,
-        animationSpec = spring(dampingRatio = 0.74f, stiffness = Spring.StiffnessMediumLow),
+        animationSpec = OnboardingMotion.settle(420),
         label = "deckEnter",
     )
 
@@ -218,17 +244,11 @@ internal fun SwipeCoursesStep(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Spacer(Modifier.height(OV2End.top))
-        Column(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = OV2End.side).dsStagger(0),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            OV2EndHighlightTitle(text = swipeTitle(context, language))
-            Text(
-                text = StringStore.text(context, "onboardingV2.swipe.subtitle", language),
-                style = OV2.subheadline.copy(fontWeight = FontWeight.Normal),
-                modifier = Modifier.fillMaxWidth(),
-            )
-        }
+        // Le titre seul : le sous-titre a été retiré, la pile et les deux boutons se lisent sans lui.
+        OV2EndHighlightTitle(
+            text = swipeTitle(context, language),
+            modifier = Modifier.padding(horizontal = OV2End.side).dsStagger(0),
+        )
         Spacer(Modifier.height(12.dp))
 
         if (!ready) {
@@ -246,11 +266,10 @@ internal fun SwipeCoursesStep(
             ) {
                 // The card is as wide as the page; its cover is what shrinks on a short screen.
                 val cardWidth = (maxWidth - OV2End.side * 2).coerceAtLeast(200.dp)
-                val deckHeight = minOf(maxHeight, SWIPE_PLATE_RISE + SWIPE_CARD_MAX_HEIGHT)
+                val deckHeight = minOf(maxHeight, SWIPE_STACK_RISE + SWIPE_CARD_MAX_HEIGHT)
                 val thresholdPx = with(density) { 100.dp.toPx() }
-                val remaining = courses.size - index
-                val farPlate by animateFloatAsState(if (remaining > 2) 1f else 0f, DSMotion.snappy(), label = "farPlate")
-                val nearPlate by animateFloatAsState(if (remaining > 1) 1f else 0f, DSMotion.snappy(), label = "nearPlate")
+                // Cartes encore sous celle du dessus : une tranche visible pour chacune.
+                val behind = (courses.size - index - 1).coerceIn(0, SWIPE_STACK_MAX)
                 Box(
                     modifier = Modifier
                         .size(cardWidth, deckHeight)
@@ -263,14 +282,23 @@ internal fun SwipeCoursesStep(
                         },
                     contentAlignment = Alignment.TopCenter,
                 ) {
-                    // Two bluish plates stick out at the top while cards remain underneath.
-                    SwipePlate(width = cardWidth - 68.dp, color = DS.accent.copy(alpha = 0.08f), alpha = { farPlate })
-                    SwipePlate(
-                        width = cardWidth - 34.dp,
-                        color = DS.accent.copy(alpha = 0.2f),
-                        alpha = { nearPlate },
-                        modifier = Modifier.padding(top = 11.dp),
-                    )
+                    // La pile : de la carte la plus profonde à la plus proche, chacune un peu plus
+                    // haute et plus étroite que la suivante. La plus profonde s'efface à chaque réponse.
+                    for (depth in SWIPE_STACK_MAX downTo 1) {
+                        key(depth) {
+                            val shown by animateFloatAsState(
+                                targetValue = if (depth <= behind) 1f else 0f,
+                                animationSpec = OnboardingMotion.settle(280),
+                                label = "stackPlate",
+                            )
+                            SwipePlate(
+                                width = cardWidth - SWIPE_STACK_INSET * (2 * depth),
+                                depth = depth,
+                                shown = { shown },
+                                modifier = Modifier.padding(top = SWIPE_STACK_RISE - SWIPE_STACK_STEP * depth),
+                            )
+                        }
+                    }
                     // The next card waits right under the top one, which follows the finger.
                     for (depth in 1 downTo 0) {
                         val course = courses.getOrNull(index + depth)
@@ -280,7 +308,7 @@ internal fun SwipeCoursesStep(
                                 Box(
                                     modifier = Modifier
                                         .fillMaxSize()
-                                        .padding(top = SWIPE_PLATE_RISE)
+                                        .padding(top = SWIPE_STACK_RISE)
                                         .graphicsLayer {
                                             if (top) {
                                                 translationX = dragX.value
@@ -300,16 +328,14 @@ internal fun SwipeCoursesStep(
                                                                 commit(dragX.value * likeSign > 0)
                                                             } else {
                                                                 scope.launch {
-                                                                    dragX.animateTo(
-                                                                        0f,
-                                                                        spring(dampingRatio = 0.7f),
-                                                                    )
+                                                                    // Retour au centre sans rebond.
+                                                                    dragX.animateTo(0f, OnboardingMotion.settle(260))
                                                                 }
                                                             }
                                                         },
                                                         onDragCancel = {
                                                             crossedThreshold = false
-                                                            scope.launch { dragX.animateTo(0f, spring(dampingRatio = 0.7f)) }
+                                                            scope.launch { dragX.animateTo(0f, OnboardingMotion.settle(260)) }
                                                         },
                                                     ) { _, amount ->
                                                         scope.launch { dragX.snapTo(dragX.value + amount) }
@@ -384,13 +410,25 @@ private fun swipeTitle(context: android.content.Context, language: AppLanguage):
     }
 }
 
+/**
+ * La tranche d'une carte de la pile, à [depth] cartes sous celle du dessus : même fond et même
+ * bordure qu'une carte, un peu plus soutenus en profondeur. Quand [shown] retombe à zéro la
+ * tranche s'efface en descendant derrière les autres : la pile a perdu une carte.
+ */
 @Composable
-private fun SwipePlate(width: Dp, color: Color, alpha: () -> Float, modifier: Modifier = Modifier) {
+private fun SwipePlate(width: Dp, depth: Int, shown: () -> Float, modifier: Modifier = Modifier) {
+    val fill = lerp(DS.accentTint, SwipeCardBorder, (0.14f * depth).coerceIn(0f, 1f))
+    val drop = with(LocalDensity.current) { SWIPE_STACK_STEP.toPx() }
     Box(
         modifier = modifier
             .size(width = width.coerceAtLeast(0.dp), height = 60.dp)
-            .graphicsLayer { this.alpha = alpha().coerceIn(0f, 1f) }
-            .background(color, DS.cardShape),
+            .graphicsLayer {
+                val progress = shown().coerceIn(0f, 1f)
+                alpha = progress
+                translationY = (1f - progress) * drop
+            }
+            .ov2EndCard(fill = fill, border = SwipeCardBorder)
+            .clearAndSetSemantics { },
     )
 }
 
@@ -579,50 +617,96 @@ private fun SwipeCompletion(language: AppLanguage) {
 
 // MARK: - Preparation
 
-/** Length of each bar: three different loads, like three real steps. */
-private val LOADING_DURATIONS = listOf(1300, 2200, 1600)
+/**
+ * Les quatre arrêts du chargement, fixés d'avance (part de la progression globale) : la barre
+ * s'y immobilise et ne repart qu'une fois la question du même rang répondue.
+ */
+private val LOADING_CHECKPOINTS = listOf(0.18f, 0.41f, 0.63f, 0.86f)
 
-/** Fast at first, slower and slower towards the end, like a real load. */
-private val LoadingEasing = CubicBezierEasing(0.05f, 0.75f, 0.3f, 1f)
+/** Durée d'un chargement complet, hors attente des réponses. */
+private const val LOADING_TOTAL_MILLIS = 5200
+
+/** Le temps de voir sa réponse cochée avant que la barre reparte. */
+private const val LOADING_ANSWER_HOLD_MILLIS = 450L
+
+/** Chaque tronçon part vite et ralentit en arrivant sur son arrêt, comme un vrai chargement. */
+private val LoadingEasing = CubicBezierEasing(0.2f, 0.6f, 0.3f, 1f)
+
+/** La barre en pause : un ambre net, loin du bleu de la barre qui avance. */
+private val LoadingPausedTint = Color(0xFFE39A1C)
 
 /**
- * « We are preparing your knowledge journey »: three steps loading one after the other like
- * a real load (each at its own pace, the next starting when the previous is ticked), a card
- * asking a question while waiting, then the social proof — users' photos, the stars and the
- * rating, « 500,000 users read courses on Sophia every month » — and the « see my profile » CTA.
+ * « We are preparing your knowledge journey »: one progress bar for the whole preparation, the
+ * three steps ticking as it passes them, then the social proof — users' photos, the stars and
+ * the rating, « 500,000 users read courses on Sophia every month » — and the « see my profile » CTA.
+ *
+ * Le chargement est **bloquant** : à quatre moments fixés d'avance ([LOADING_CHECKPOINTS]) la
+ * barre s'arrête pile sur son arrêt, passe en pause (couleur, pictogramme) et une carte pose
+ * une question oui / non. Rien n'avance tant qu'elle n'a pas de réponse ; après la quatrième,
+ * la barre file jusqu'à 100 % et le bouton du bas s'allume.
  */
 @Composable
 internal fun LoadingProfileStep(language: AppLanguage, firstName: String, onContinue: () -> Unit) {
     val context = LocalContext.current
     val haptics = rememberOnboardingHaptics()
     val photos = remember { studentPhotos(context).take(5) }
-    val progress = remember { List(3) { Animatable(0f) } }
-    var completed by remember { mutableStateOf(listOf(false, false, false)) }
+    // Nombre de questions déjà répondues ; gardé à la rotation, pour ne pas les reposer.
+    var answered by rememberSaveable { mutableIntStateOf(0) }
+    // Progression globale, de 0 à 1. Elle reprend à l'arrêt de la dernière question répondue.
+    val overall = remember {
+        Animatable(if (answered > 0) LOADING_CHECKPOINTS[(answered - 1).coerceAtMost(LOADING_CHECKPOINTS.lastIndex)] else 0f)
+    }
+    // Rang de la question en attente ; null tant que la barre avance.
+    var pending by remember { mutableStateOf<Int?>(null) }
+    // Dernière question montrée : la carte la garde pendant qu'elle se referme.
+    var shownQuestion by remember { mutableIntStateOf(answered.coerceAtMost(LOADING_CHECKPOINTS.lastIndex)) }
+    // Réponse choisie à la question en cours ; null tant que rien n'est choisi.
+    var picked by remember { mutableStateOf<Boolean?>(null) }
     var allDone by remember { mutableStateOf(false) }
-    // Answer to the « do you like learning by listening? » card; null while nothing is picked.
-    // It neither stops nor speeds up the load.
-    var listens by remember { mutableStateOf<Boolean?>(null) }
 
     LaunchedEffect(Unit) {
-        // Staged, with no network behind it: the CTA must always end up enabled.
-        try {
-            repeat(3) { i ->
-                progress[i].animateTo(1f, tween(LOADING_DURATIONS[i], easing = LoadingEasing))
-                delay(80)
-                completed = completed.toMutableList().also { it[i] = true }
-                haptics.selection()
-                delay(180)
-            }
+        // Mise en scène, sans réseau derrière : seules les réponses peuvent la retenir.
+        for (index in answered.coerceAtMost(LOADING_CHECKPOINTS.size) until LOADING_CHECKPOINTS.size) {
+            val stop = LOADING_CHECKPOINTS[index]
+            overall.animateTo(stop, tween(loadingMillis(stop - overall.value), easing = LoadingEasing))
+            // Arrêt : la question s'affiche, la barre ne bouge plus.
+            picked = null
+            shownQuestion = index
+            pending = index
             haptics.commit()
-        } finally {
-            allDone = true
+            snapshotFlow { answered }.first { it > index }
+            delay(LOADING_ANSWER_HOLD_MILLIS)
+            pending = null
+        }
+        overall.animateTo(1f, tween(loadingMillis(1f - overall.value), easing = LoadingEasing))
+        haptics.commit()
+        allDone = true
+    }
+
+    // Étapes terminées : la barre globale les coche en passant au tiers, aux deux tiers, au bout.
+    val stepsDone by remember {
+        derivedStateOf {
+            val value = overall.value
+            when {
+                value >= 0.999f -> 3
+                value >= 2f / 3f -> 2
+                value >= 1f / 3f -> 1
+                else -> 0
+            }
         }
     }
+    LaunchedEffect(stepsDone) {
+        if (stepsDone > 0) haptics.selection()
+    }
+
+    val blocked = pending != null
     val proofAlpha by animateFloatAsState(if (allDone) 1f else 0.45f, tween(500), label = "loadingProof")
-    // The step in progress: the first one that is not ticked.
-    val activeStep = completed.indexOf(false)
+    val barTint by animateColorAsState(
+        if (blocked) LoadingPausedTint else DS.accent,
+        OnboardingMotion.quick(),
+        label = "loadingBarTint",
+    )
     val doneLabel = ov2EndText(context, "onboardingV2.loading.stepDone", language) { "" }
-    val questionTitle = ov2EndText(context, "onboardingV2.loading.question.title", language) { "" }
 
     OnboardingPage(
         contentArrangement = Arrangement.Top,
@@ -643,48 +727,64 @@ internal fun LoadingProfileStep(language: AppLanguage, firstName: String, onCont
                 text = loadingTitle(context, firstName, language),
                 modifier = Modifier.dsStagger(0),
             )
-            Spacer(Modifier.height(10.dp))
+            Spacer(Modifier.height(18.dp))
+            // La progression globale : le pourcentage en grand, le signe de pause, la barre.
             Column(modifier = Modifier.fillMaxWidth().dsStagger(1)) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    LoadingPercent(progress = { overall.value }, language = language)
+                    AnimatedVisibility(
+                        visible = blocked,
+                        enter = fadeIn(tween(180)),
+                        exit = fadeOut(tween(180)),
+                    ) {
+                        LoadingPauseBadge()
+                    }
+                }
+                LoadingBar(
+                    progress = { overall.value },
+                    tint = { barTint },
+                    marks = LOADING_CHECKPOINTS,
+                    modifier = Modifier.padding(top = 10.dp),
+                )
+            }
+            // La question en attente, entre la barre arrêtée et les étapes.
+            AnimatedVisibility(
+                visible = blocked,
+                enter = fadeIn(tween(220)) + expandVertically(OnboardingMotion.settle(320)),
+                exit = fadeOut(tween(180)) + shrinkVertically(OnboardingMotion.settle(280)),
+            ) {
+                LoadingQuestionCard(
+                    language = language,
+                    index = shownQuestion,
+                    count = LOADING_CHECKPOINTS.size,
+                    picked = picked,
+                    onAnswer = { yes ->
+                        // Une seule réponse par question : la suivante attend son propre arrêt.
+                        if (picked == null && pending == shownQuestion) {
+                            picked = yes
+                            answered = shownQuestion + 1
+                        }
+                    },
+                    modifier = Modifier.padding(top = 16.dp),
+                )
+            }
+            Spacer(Modifier.height(8.dp))
+            Column(modifier = Modifier.fillMaxWidth().dsStagger(2)) {
                 repeat(3) { i ->
                     LoadingStepRow(
                         label = StringStore.text(context, "onboardingV2.loading.step${i + 1}", language),
-                        progress = { progress[i].value },
-                        done = completed[i],
-                        active = activeStep == i,
+                        done = stepsDone > i,
+                        active = stepsDone == i,
                         doneLabel = doneLabel,
-                        language = language,
                         divider = i < 2,
                     )
                 }
             }
-            if (questionTitle.isNotEmpty()) {
-                // A dotted thread from the steps to the question.
-                val dotColor = DS.inkTertiary.copy(alpha = 0.7f)
-                Box(
-                    modifier = Modifier
-                        .padding(vertical = 10.dp)
-                        .size(width = 2.dp, height = 30.dp)
-                        .dsStagger(2)
-                        .drawBehind {
-                            drawLine(
-                                color = dotColor,
-                                start = Offset(size.width / 2f, 0f),
-                                end = Offset(size.width / 2f, size.height),
-                                strokeWidth = 2.dp.toPx(),
-                                cap = StrokeCap.Round,
-                                pathEffect = PathEffect.dashPathEffect(floatArrayOf(0.5.dp.toPx(), 6.dp.toPx())),
-                            )
-                        },
-                )
-                LoadingQuestionCard(
-                    language = language,
-                    title = questionTitle,
-                    listens = listens,
-                    onAnswer = { listens = it },
-                    modifier = Modifier.dsStagger(3),
-                )
-            }
-            Spacer(Modifier.height(26.dp))
+            Spacer(Modifier.height(22.dp))
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(6.dp),
@@ -727,6 +827,10 @@ internal fun LoadingProfileStep(language: AppLanguage, firstName: String, onCont
     }
 }
 
+/** Durée d'un tronçon de la barre, proportionnelle à ce qu'il parcourt. */
+private fun loadingMillis(span: Float): Int =
+    (span.coerceIn(0f, 1f) * LOADING_TOTAL_MILLIS).toInt().coerceAtLeast(450)
+
 /**
  * The title, with « learning path » in bold blue once the tables carry the marked version;
  * the existing title, first name included, until then.
@@ -744,23 +848,26 @@ private fun loadingTitle(context: android.content.Context, firstName: String, la
 }
 
 /**
- * One step: its name and, on the right, a blue check (finished), the percentage (in
- * progress, with the bar underneath) or an empty ring (to come).
+ * One step: its name and, on the right, a blue check (finished), a blue ring (in progress)
+ * or a grey ring (to come). The percentage lives on the global bar above.
  */
 @Composable
 private fun LoadingStepRow(
     label: String,
-    progress: () -> Float,
     done: Boolean,
     active: Boolean,
     doneLabel: String,
-    language: AppLanguage,
     divider: Boolean,
 ) {
     val labelColor by animateColorAsState(
         if (done || active) DS.ink else DS.inkSecondary,
-        DSMotion.snappy(),
+        OnboardingMotion.quick(),
         label = "stepLabel",
+    )
+    val ringColor by animateColorAsState(
+        if (active) DS.accent else DS.hairline,
+        OnboardingMotion.quick(),
+        label = "stepRing",
     )
     Column(
         modifier = Modifier
@@ -769,29 +876,20 @@ private fun LoadingStepRow(
                 if (done && doneLabel.isNotEmpty()) stateDescription = doneLabel
             },
     ) {
-        Column(modifier = Modifier.fillMaxWidth().padding(vertical = 16.dp)) {
-            Row(
-                modifier = Modifier.fillMaxWidth().heightIn(min = 24.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                Text(
-                    text = label,
-                    style = OV2.body.copy(color = labelColor, fontWeight = FontWeight.SemiBold, lineHeight = 22.sp),
-                    modifier = Modifier.weight(1f),
-                )
-                when {
-                    done -> DSCheckBadge(size = 24.dp, fill = DS.accent)
-                    active -> LoadingPercent(progress = progress, language = language)
-                    else -> Box(modifier = Modifier.size(24.dp).border(1.5.dp, DS.hairline, CircleShape))
-                }
-            }
-            AnimatedVisibility(
-                visible = active,
-                enter = fadeIn() + expandVertically(),
-                exit = fadeOut() + shrinkVertically(),
-            ) {
-                LoadingBar(progress = progress, modifier = Modifier.padding(top = 10.dp))
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(vertical = 14.dp).heightIn(min = 24.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = label,
+                style = OV2.body.copy(color = labelColor, fontWeight = FontWeight.SemiBold, lineHeight = 22.sp),
+                modifier = Modifier.weight(1f),
+            )
+            if (done) {
+                DSCheckBadge(size = 24.dp, fill = DS.accent)
+            } else {
+                Box(modifier = Modifier.size(24.dp).border(if (active) 2.dp else 1.5.dp, ringColor, CircleShape))
             }
         }
         if (divider) {
@@ -806,54 +904,91 @@ private fun LoadingStepRow(
 }
 
 /**
- * Bar of the step in progress. It carries no animation of its own: the curve of the load
- * fills it, and the value is read while drawing.
+ * La barre du chargement. Elle ne porte aucune animation propre : la valeur et la couleur sont
+ * lues au moment du dessin. Les [marks] sont les arrêts, de petites encoches sur la piste.
  */
 @Composable
-private fun LoadingBar(progress: () -> Float, modifier: Modifier = Modifier) {
-    val tint = DS.accent
+private fun LoadingBar(
+    progress: () -> Float,
+    tint: () -> Color,
+    marks: List<Float>,
+    modifier: Modifier = Modifier,
+) {
+    val track = DS.accentTint
+    val notch = DS.surface
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .height(8.dp)
+            .height(12.dp)
             .clip(CircleShape)
-            .background(DS.accentTint)
+            .background(track)
             .drawBehind {
-                val filled = max(8.dp.toPx(), size.width * progress().coerceIn(0f, 1f))
-                val left = if (layoutDirection == LayoutDirection.Rtl) size.width - filled else 0f
+                val rtl = layoutDirection == LayoutDirection.Rtl
+                val filled = max(size.height, size.width * progress().coerceIn(0f, 1f))
                 drawRoundRect(
-                    color = tint,
-                    topLeft = Offset(left, 0f),
+                    color = tint(),
+                    topLeft = Offset(if (rtl) size.width - filled else 0f, 0f),
                     size = Size(filled, size.height),
                     cornerRadius = CornerRadius(size.height / 2f),
                 )
+                val notchWidth = 2.dp.toPx()
+                marks.forEach { mark ->
+                    val x = size.width * mark.coerceIn(0f, 1f)
+                    drawRect(
+                        color = notch,
+                        topLeft = Offset((if (rtl) size.width - x else x) - notchWidth / 2f, 0f),
+                        size = Size(notchWidth, size.height),
+                        alpha = 0.85f,
+                    )
+                }
             }
             .clearAndSetSemantics { },
     )
 }
 
-/** Percentage of the step in progress: it rolls with the bar instead of jumping from 0 to 100. */
+/** Pourcentage de la progression globale : il roule avec la barre et se fige avec elle. */
 @Composable
 private fun LoadingPercent(progress: () -> Float, language: AppLanguage) {
     val format = remember(language) { NumberFormat.getPercentInstance(language.locale) }
     val percent by remember { derivedStateOf { (progress().coerceIn(0f, 1f) * 100f).toInt() } }
     Text(
         text = format.format(percent / 100.0),
-        style = OV2.caption.copy(fontWeight = FontWeight.Medium, fontFeatureSettings = "tnum"),
+        style = OV2.title.copy(fontSize = 30.sp, lineHeight = 36.sp, fontWeight = FontWeight.ExtraBold, fontFeatureSettings = "tnum"),
         maxLines = 1,
         modifier = Modifier.clearAndSetSemantics { },
     )
 }
 
+/** Le signe « pause » à côté du pourcentage, tant qu'une question attend sa réponse. */
+@Composable
+private fun LoadingPauseBadge() {
+    Box(
+        modifier = Modifier
+            .size(28.dp)
+            .background(LoadingPausedTint, CircleShape)
+            .clearAndSetSemantics { },
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(
+            imageVector = Icons.Filled.Pause,
+            contentDescription = null,
+            tint = Color.White,
+            modifier = Modifier.size(18.dp),
+        )
+    }
+}
+
 /**
- * A question asked during the load. Answering is optional: the steps go on either way and
- * the button at the bottom turns on at the end.
+ * La question qui retient le chargement : une carte bleutée bien visible, son rang (« 2/4 »),
+ * la question et les deux réponses. Y répondre est le seul moyen de faire repartir la barre.
+ * TalkBack l'annonce quand elle apparaît (région vivante) ; les deux réponses sont des boutons.
  */
 @Composable
 private fun LoadingQuestionCard(
     language: AppLanguage,
-    title: String,
-    listens: Boolean?,
+    index: Int,
+    count: Int,
+    picked: Boolean?,
     onAnswer: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -861,32 +996,54 @@ private fun LoadingQuestionCard(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .ov2EndCard()
-            .padding(start = 16.dp, top = 18.dp, end = 16.dp, bottom = 16.dp),
+            .ov2EndCard(fill = DS.accentTint, border = DS.accent)
+            .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(
-            text = StringStore.text(context, "onboardingV2.loading.question.eyebrow", language),
-            style = OV2.caption.copy(fontWeight = FontWeight.Normal),
-            textAlign = TextAlign.Center,
-        )
-        Spacer(Modifier.height(6.dp))
-        Text(
-            text = title,
-            style = OV2.headline.copy(lineHeight = 22.sp),
-            textAlign = TextAlign.Center,
-        )
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                // Lue d'un bloc, et dès qu'elle arrive.
+                .semantics(mergeDescendants = true) { liveRegion = LiveRegionMode.Polite },
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    text = "${(index + 1).formatted(language)}/${count.formatted(language)}",
+                    style = OV2.caption.copy(color = Color.White, fontWeight = FontWeight.Bold, fontFeatureSettings = "tnum"),
+                    maxLines = 1,
+                    modifier = Modifier
+                        .background(DS.accent, CircleShape)
+                        .padding(horizontal = 9.dp, vertical = 3.dp),
+                )
+                Text(
+                    text = StringStore.text(context, "onboardingV2.loading.question.eyebrow", language),
+                    style = OV2.caption.copy(color = DS.accent, fontWeight = FontWeight.SemiBold),
+                )
+            }
+            Spacer(Modifier.height(10.dp))
+            Text(
+                text = StringStore.text(context, "onboardingV2.loading.question${index + 1}.title", language),
+                style = OV2.headline.copy(fontSize = 19.sp, lineHeight = 25.sp),
+                textAlign = TextAlign.Center,
+            )
+        }
         Spacer(Modifier.height(16.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             LoadingAnswerButton(
                 text = StringStore.text(context, "onboardingV2.loading.question.no", language),
-                selected = listens == false,
+                selected = picked == false,
+                enabled = picked == null,
                 onSelect = { onAnswer(false) },
                 modifier = Modifier.weight(1f),
             )
             LoadingAnswerButton(
                 text = StringStore.text(context, "onboardingV2.loading.question.yes", language),
-                selected = listens == true,
+                selected = picked == true,
+                enabled = picked == null,
                 onSelect = { onAnswer(true) },
                 modifier = Modifier.weight(1f),
             )
@@ -898,32 +1055,32 @@ private fun LoadingQuestionCard(
 private fun LoadingAnswerButton(
     text: String,
     selected: Boolean,
+    enabled: Boolean,
     onSelect: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val feedback = rememberHaptics()
-    val color by animateColorAsState(if (selected) DS.accent else DS.ink, DSMotion.snappy(), label = "answerText")
+    val color by animateColorAsState(if (selected) DS.accent else DS.ink, OnboardingMotion.quick(), label = "answerText")
     Box(
         modifier = modifier
-            .height(50.dp)
+            .heightIn(min = 52.dp)
             .pressable(
                 onClick = {
-                    if (!selected) {
-                        feedback.select()
-                        onSelect()
-                    }
+                    feedback.select()
+                    onSelect()
                 },
+                enabled = enabled,
                 haptic = false,
             )
             .semantics {
-                role = Role.RadioButton
+                role = Role.Button
                 this.selected = selected
             }
             .dsOptionCard(
                 state = if (selected) DSOptionState.Selected else DSOptionState.Idle,
                 shape = RoundedCornerShape(14.dp),
             )
-            .padding(horizontal = 8.dp),
+            .padding(horizontal = 8.dp, vertical = 6.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
@@ -941,6 +1098,8 @@ private fun LoadingAnswerButton(
  * « Here's your profile »: the reward just before the account. A nickname drawn from the
  * answers, the goal the user picked (the pale blue « Your goal » card) and the courses
  * waiting for them, numbered along a thread.
+ *
+ * Le badge rond porte l'illustration du profil ([profileIllustration]), plus un emoji.
  */
 @Composable
 internal fun ProfileRewardStep(
@@ -983,7 +1142,8 @@ internal fun ProfileRewardStep(
         delay(100)
         ctaVisible = true
     }
-    val badgeScale by animateFloatAsState(if (badgeIn) 1f else 0.4f, DSMotion.pop(), label = "badge")
+    // Le badge grandit et se pose, sans rebond.
+    val badgeScale by animateFloatAsState(if (badgeIn) 1f else 0.7f, OnboardingMotion.settle(420), label = "badge")
     val nameProgress by animateFloatAsState(if (nameRevealed) 1f else 0f, DSMotion.reveal(), label = "name")
     val objectiveProgress by animateFloatAsState(if (reveal >= 1) 1f else 0f, DSMotion.reveal(), label = "obj")
     val coursesProgress by animateFloatAsState(if (reveal >= 2) 1f else 0f, DSMotion.reveal(), label = "courses")
@@ -1009,20 +1169,22 @@ internal fun ProfileRewardStep(
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                Box(
+                Image(
+                    painter = painterResource(profileIllustration(archetype)),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
                     modifier = Modifier
-                        .size(56.dp)
+                        .size(PROFILE_BADGE_SIZE)
                         .graphicsLayer {
                             scaleX = badgeScale
                             scaleY = badgeScale
-                            alpha = ((badgeScale - 0.4f) / 0.6f).coerceIn(0f, 1f)
+                            alpha = ((badgeScale - 0.7f) / 0.3f).coerceIn(0f, 1f)
                         }
-                        .background(DS.accentTint, CircleShape)
+                        .clip(CircleShape)
+                        .background(DS.accentTint)
+                        .border(1.5.dp, OV2End.tintBorder, CircleShape)
                         .clearAndSetSemantics { },
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Text(OBJECTIVE_EMOJI[archetype] ?: "📚", fontSize = 28.sp)
-                }
+                )
                 Column(
                     modifier = Modifier
                         .weight(1f)
@@ -1074,7 +1236,13 @@ internal fun ProfileRewardStep(
                             horizontalArrangement = Arrangement.spacedBy(8.dp),
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
-                            Text(OBJECTIVE_EMOJI[key] ?: "📚", fontSize = 14.sp)
+                            // Une coche bleue à la place de l'emoji : la page n'en porte plus.
+                            Icon(
+                                imageVector = Icons.Filled.Check,
+                                contentDescription = null,
+                                tint = DS.accent,
+                                modifier = Modifier.size(15.dp),
+                            )
                             Text(
                                 text = StringStore.text(context, "onboardingV2.objective.$key", language),
                                 style = OV2.caption.copy(color = DS.ink, lineHeight = 18.sp),
@@ -1131,6 +1299,23 @@ internal fun ProfileRewardStep(
             Spacer(Modifier.height(20.dp))
         }
     }
+}
+
+/** Diamètre du badge rond du profil. */
+private val PROFILE_BADGE_SIZE = 72.dp
+
+/**
+ * L'illustration d'un profil (`res/drawable-nodpi`, carrée, fond crème, dans le style papier
+ * découpé des avatars), d'après la clé de l'objectif principal. Une clé inconnue retombe sur
+ * « se cultiver », comme le surnom et la phrase du profil.
+ */
+@DrawableRes
+private fun profileIllustration(archetype: String): Int = when (archetype) {
+    "reduceScreen" -> R.drawable.onboarding_profile_reduce_screen
+    "exams" -> R.drawable.onboarding_profile_exams
+    "impress" -> R.drawable.onboarding_profile_impress
+    "curiosity" -> R.drawable.onboarding_profile_curiosity
+    else -> R.drawable.onboarding_profile_cultivate
 }
 
 @Composable
@@ -1210,6 +1395,12 @@ private fun ProfileTimelineRow(
 
 // MARK: - Account
 
+/**
+ * « Crée ton compte » : la page ne porte qu'un bouton, « Me connecter ». Il ouvre une languette
+ * (feuille du bas, [LoginSheet]) qui porte les boutons de connexion — sur Android, Google seul.
+ * La connexion elle-même, ses erreurs et la mention légale sont celles d'avant ; « Continuer
+ * sans compte » reste sur la page, seule issue quand Google manque ou échoue.
+ */
 @Composable
 internal fun LoginStep(
     language: AppLanguage,
@@ -1222,11 +1413,18 @@ internal fun LoginStep(
 ) {
     val context = LocalContext.current
     var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
+    // La languette des boutons de connexion, ouverte par « Me connecter ».
+    var showSheet by rememberSaveable { mutableStateOf(false) }
+    // Sans Google il n'y a plus rien à y proposer : la page reprend la main, avec son erreur.
+    LaunchedEffect(googleAvailable) {
+        if (!googleAvailable) showSheet = false
+    }
     val doc = legalDoc
     if (doc != null) {
         LegalDocumentScreen(kind = doc, language = language, onBack = { legalDoc = null })
         return
     }
+    val sheetOpen = showSheet && googleAvailable
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -1240,7 +1438,9 @@ internal fun LoginStep(
                 if (googleAvailable) "onboardingV2.login.subtitle" else "auth.withoutAccount.note",
                 language,
             ),
-            errorMessage = errorMessage,
+            // Tant que la languette est ouverte, c'est elle qui montre l'erreur (une seule
+            // note à l'écran, une seule vibration).
+            errorMessage = if (sheetOpen) null else errorMessage,
             topSpacing = OV2End.topWithoutHeader,
             staggered = true,
         )
@@ -1250,16 +1450,9 @@ internal fun LoginStep(
         ) {
             if (googleAvailable) {
                 OnboardingCta(
-                    // Was hardcoded English on every language. The translation already exists.
-                    text = StringStore.text(
-                        context,
-                        if (errorMessage == null) "auth.continueWithGoogle" else "paywall.error.retry",
-                        language,
-                    ),
-                    // A second tap while the account picker is opening starts a second
-                    // Credential Manager request, which cancels the first one.
+                    text = StringStore.text(context, "onboardingV2.login.signIn", language),
                     enabled = !signingIn,
-                    onClick = onGoogle,
+                    onClick = { showSheet = true },
                     bottomInset = 8.dp,
                 )
             }
@@ -1285,6 +1478,71 @@ internal fun LoginStep(
             Spacer(Modifier.height(8.dp))
             OV2EndLegalNote(language = language, onOpen = { legalDoc = it })
             Spacer(Modifier.height(20.dp))
+        }
+    }
+    if (sheetOpen) {
+        LoginSheet(
+            language = language,
+            signingIn = signingIn,
+            errorMessage = errorMessage,
+            onGoogle = onGoogle,
+            onDismiss = { showSheet = false },
+        )
+    }
+}
+
+/**
+ * La languette de connexion : son titre, l'erreur s'il y en a une, puis les boutons — Google
+ * seul sur Android. Elle a exactement la hauteur de son contenu (pas d'état à moitié ouvert,
+ * rien de vide dessous) et laisse la barre de navigation du système dégagée.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun LoginSheet(
+    language: AppLanguage,
+    signingIn: Boolean,
+    errorMessage: String?,
+    onGoogle: () -> Unit,
+    onDismiss: () -> Unit,
+) {
+    val context = LocalContext.current
+    ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
+        containerColor = DS.canvas,
+        shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .navigationBarsPadding()
+                .padding(start = OV2End.side, end = OV2End.side, bottom = 20.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Text(
+                text = StringStore.text(context, "onboardingV2.login.signIn", language),
+                style = OV2.headline.copy(fontSize = 19.sp, lineHeight = 25.sp),
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().semantics { heading() },
+            )
+            Spacer(Modifier.height(16.dp))
+            if (errorMessage != null) {
+                LoginErrorNote(errorMessage, horizontalInset = 0.dp)
+                Spacer(Modifier.height(14.dp))
+            }
+            OV2EndGoogleButton(
+                // Après un échec, le même bouton propose de réessayer.
+                text = StringStore.text(
+                    context,
+                    if (errorMessage == null) "auth.continueWithGoogle" else "paywall.error.retry",
+                    language,
+                ),
+                // A second tap while the account picker is opening starts a second
+                // Credential Manager request, which cancels the first one.
+                enabled = !signingIn,
+                busy = signingIn,
+                onClick = onGoogle,
+            )
         }
     }
 }
@@ -1406,7 +1664,7 @@ private fun ColumnScope.AccountPageBody(
 
 /** Sign-in failures used to be a Toast thrown from the service; they belong on the page. */
 @Composable
-private fun LoginErrorNote(message: String) {
+private fun LoginErrorNote(message: String, horizontalInset: Dp = 28.dp) {
     val feedback = rememberHaptics()
     var shakes by remember { mutableIntStateOf(0) }
     LaunchedEffect(message) {
@@ -1418,7 +1676,7 @@ private fun LoginErrorNote(message: String) {
         style = OV2.caption.copy(fontSize = 13.sp, color = DS.danger, lineHeight = 18.sp),
         textAlign = TextAlign.Center,
         modifier = Modifier
-            .padding(horizontal = 28.dp)
+            .padding(horizontal = horizontalInset)
             .fillMaxWidth()
             .dsShake(shakes)
             .background(DS.dangerTint, RoundedCornerShape(DS.Radius.small))

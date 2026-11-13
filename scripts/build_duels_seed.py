@@ -7,7 +7,7 @@
   content/duels/leagues.json        les 30 ligues (nom, seuil de trophées, images)
   content/duels/questions_en.json   les questions, options mélangées
   content/duels/bots.json           les adversaires simulés (@, pays, avatar)
-  supabase/migrations/20261111010100_duels_seed_v3.sql   le tout en INSERT … ON CONFLICT DO UPDATE
+  supabase/migrations/20261115010000_duels_seed_v5.sql   le tout en INSERT … ON CONFLICT DO UPDATE
 
 Les questions viennent, dans cet ordre (l'identifiant d'une question est son rang dans son
 niveau : on ajoute à la fin, on ne réordonne jamais) :
@@ -36,7 +36,7 @@ import duels_geo_source  # noqa: E402
 OUT = ROOT / "content" / "duels"
 # Le contenu est republié en entier à chaque évolution, dans une nouvelle migration (la
 # précédente, déjà exécutée, ne bouge pas) : chaque ligne est insérée ou mise à jour.
-SEED = ROOT / "supabase" / "migrations" / "20261111010100_duels_seed_v3.sql"
+SEED = ROOT / "supabase" / "migrations" / "20261115010000_duels_seed_v5.sql"
 STORAGE = "https://afnmcoovdvbtkgohtdij.supabase.co/storage/v1/object/public/course-images/duels"
 
 # ------------------------------------------------------------------ ligues

@@ -5,9 +5,10 @@ import SwiftUI
 /// À la fin : « c'est noté » puis avance automatique.
 ///
 /// Style « Elevate arrondi » : titre à gauche (son cœur en gras bleu), une pile de cartes bleu
-/// pâle — vignette du cours, titre, auteur, matière — dont deux dépassent en haut, et deux
-/// boutons ronds (pouce vers le bas, pouce vers le haut). Le geste, ses seuils et ses
-/// vibrations sont inchangés.
+/// pâle — vignette du cours, titre, auteur, matière — et deux boutons ronds (pouce vers le
+/// bas, pouce vers le haut). La pile se vide à vue d'œil : chaque cours restant dépasse en
+/// haut de la carte du dessus, et un bord disparaît à chaque oui ou non, jusqu'à la dernière
+/// carte. Le geste, ses seuils et ses vibrations sont inchangés.
 struct OnboardingV2SwipeCourses: View {
     @Environment(LanguageManager.self) private var languageManager
     let vm: OnboardingV2ViewModel
@@ -55,10 +56,9 @@ struct OnboardingV2SwipeCourses: View {
                     completionView(height: height)
                 } else {
                     deck(width: cardWidth, height: height)
-                        .scaleEffect(enter ? 1 : 0.86)
+                        .scaleEffect(enter ? 1 : 0.94)
                         .opacity(enter ? 1 : 0)
-                        .offset(y: enter ? 0 : 64)
-                        .rotationEffect(.degrees(enter ? 0 : -4))
+                        .offset(y: enter ? 0 : 36)
                 }
 
                 Spacer(minLength: 12)
@@ -84,8 +84,8 @@ struct OnboardingV2SwipeCourses: View {
             // Nothing to swipe is also "no cards left", and has to move on rather than
             // present an empty deck.
             if courses.isEmpty { finishDeck() }
-            // Entrée dédiée à cette page : les cartes montent et se posent en douceur.
-            withAnimation(.spring(response: 0.62, dampingFraction: 0.74).delay(0.15)) {
+            // Entrée dédiée à cette page : la pile monte et se pose en douceur, sans rebond.
+            withAnimation(.spring(response: 0.55, dampingFraction: 1).delay(0.15)) {
                 enter = true
             }
         }
@@ -93,31 +93,30 @@ struct OnboardingV2SwipeCourses: View {
 
     // MARK: - En-tête
 
-    /// « Choisis les **premiers cours** que tu vas lire » et sa consigne, alignés à gauche.
+    /// « Choisis les **premiers cours** que tu vas lire », aligné à gauche. La consigne qui
+    /// suivait a été retirée : la pile et les deux boutons disent déjà quoi faire.
     private var header: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            OV2CoreHighlightTitle(
-                text: OV2CoreText.marked(
-                    "onboardingV2.swipe.title",
-                    highlightKey: "elevateOnboardingCore.swipe.titleHighlight",
-                    language: languageManager.current
-                ),
-                size: 26
-            )
-            Text(languageManager.text("onboardingV2.swipe.subtitle"))
-                .font(DS.sans(.subheadline, .regular))
-                .foregroundStyle(OV2.inkSecondary)
-                .multilineTextAlignment(.leading)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
+        OV2CoreHighlightTitle(
+            text: OV2CoreText.marked(
+                "onboardingV2.swipe.title",
+                highlightKey: "elevateOnboardingCore.swipe.titleHighlight",
+                language: languageManager.current
+            ),
+            size: 26
+        )
     }
 
     // MARK: - Card stack
 
     private static let buttonSize: CGFloat = 64
-    /// Les deux cartes suivantes dépassent de ce qu'il faut au-dessus de la carte du dessus.
-    private static let plateRise: CGFloat = 22
+    /// Nombre de cartes de dessous montrées au plus (le paquet en compte huit).
+    private static let maxPlates: Int = 7
+    /// De combien chaque carte de dessous dépasse au-dessus de celle qui la précède.
+    private static let plateStep: CGFloat = 6
+    /// De combien chaque carte de dessous est plus étroite que celle qui la précède.
+    private static let plateInset: CGFloat = 16
+    /// Hauteur réservée au-dessus de la carte du dessus pour les bords de la pile.
+    private static let plateRise: CGFloat = 42
     /// Hauteur d'une carte hors vignette : marges, titre, auteur, filet, matière.
     private static let cardChrome: CGFloat = 210
     private static let maxThumbnail: CGFloat = 196
@@ -128,29 +127,31 @@ struct OnboardingV2SwipeCourses: View {
     /// The card is as wide as the page; its height is the thumbnail plus a fixed block of
     /// text, so the thumbnail is what shrinks on a short screen.
     private func deckHeight(in geo: GeometryProxy) -> CGFloat {
-        let chrome: CGFloat = geo.size.height < 620 ? 214 : 244
+        let chrome: CGFloat = geo.size.height < 620 ? 190 : 218
         let byHeight: CGFloat = geo.size.height - chrome
         let tallest: CGFloat = Self.plateRise + Self.cardChrome + Self.maxThumbnail
         let shortest: CGFloat = Self.plateRise + Self.cardChrome + Self.minThumbnail
         return max(min(byHeight, tallest), shortest)
     }
 
-    /// La pile : deux plaques bleutées qui dépassent en haut tant qu'il reste des cartes
-    /// dessous, la carte suivante juste sous celle du dessus, et la carte du dessus, qui suit
-    /// le doigt.
+    /// La pile : le bord d'une carte par cours qui attend dessous (il dépasse en haut, de plus
+    /// en plus étroit et pâle), la carte suivante juste sous celle du dessus, et la carte du
+    /// dessus, qui suit le doigt. À chaque réponse, le bord le plus lointain rentre sous la
+    /// pile : elle rétrécit à vue d'œil, jusqu'à la dernière carte, seule.
     private func deck(width: CGFloat, height: CGFloat) -> some View {
         let cardHeight: CGFloat = height - Self.plateRise
         let thumbnail: CGFloat = min(Self.maxThumbnail, max(Self.minThumbnail, cardHeight - Self.cardChrome))
-        let remaining: Int = courses.count - index
+        let remaining: Int = max(courses.count - index, 0)
+        // Cartes qui attendent sous celle du dessus.
+        let waiting: Int = min(max(remaining - 1, 0), Self.maxPlates)
         return ZStack(alignment: .top) {
-            if remaining > 2 {
-                plate(width: width - 68, color: DS.accent.opacity(0.08))
-                    .transition(.opacity)
-            }
-            if remaining > 1 {
-                plate(width: width - 34, color: DS.accent.opacity(0.2))
-                    .offset(y: 11)
-                    .transition(.opacity)
+            // De la plus lointaine à la plus proche, pour que chacune recouvre la précédente.
+            ForEach(0..<Self.maxPlates, id: \.self) { slot in
+                let depth: Int = Self.maxPlates - slot
+                let present: Bool = depth <= waiting
+                plate(width: width - CGFloat(depth) * Self.plateInset, depth: depth)
+                    .offset(y: present ? Self.plateRise - CGFloat(depth) * Self.plateStep : Self.plateRise)
+                    .opacity(present ? 1 : 0)
             }
             ForEach(Array(courses.enumerated()), id: \.element.id) { i, course in
                 if i >= index, i < index + 2 {
@@ -162,17 +163,26 @@ struct OnboardingV2SwipeCourses: View {
                         .zIndex(Double(courses.count - i))
                         .allowsHitTesting(depth == 0)
                         .highPriorityGesture(dragGesture, including: depth == 0 ? .all : .subviews)
-                        .animation(.spring(response: 0.35, dampingFraction: 0.8), value: index)
+                        // VoiceOver annonce où l'on en est dans la pile (« 3 / 8 »).
+                        .accessibilityValue(Text(verbatim: "\(i + 1) / \(courses.count)"))
+                        .animation(DSCalmMotion.state, value: index)
                 }
             }
         }
         .frame(width: width, height: height, alignment: .top)
-        .animation(DS.Motion.snappy, value: remaining)
+        .animation(DSCalmMotion.reveal, value: remaining)
     }
 
-    private func plate(width: CGFloat, color: Color) -> some View {
-        RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
-            .fill(color)
+    /// Le bord d'une carte qui attend sous la pile ; `depth` vaut 1 pour la plus proche.
+    private func plate(width: CGFloat, depth: Int) -> some View {
+        let shape = RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+        // Plus la carte est loin, plus elle est pâle. Le fond opaque évite que les bleus
+        // des cartes empilées ne s'additionnent.
+        let strength: Double = max(0.06, 0.24 - Double(depth - 1) * 0.028)
+        return shape
+            .fill(DS.canvas)
+            .overlay(shape.fill(DS.accent.opacity(strength)))
+            .overlay(shape.strokeBorder(Self.cardBorder, lineWidth: 1))
             .frame(width: max(width, 0), height: 60)
             .accessibilityHidden(true)
     }
@@ -344,7 +354,8 @@ struct OnboardingV2SwipeCourses: View {
                     let like = crossedByDistance ? width > 0 : predictedWidth > 0
                     swipeTop(like: like)
                 } else {
-                    withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) { drag = .zero }
+                    // La carte revient à sa place sans la dépasser.
+                    withAnimation(.spring(response: 0.35, dampingFraction: 1)) { drag = .zero }
                 }
             }
     }
@@ -377,10 +388,10 @@ struct OnboardingV2SwipeCourses: View {
         guard !hasAdvanced else { return }
         isFinishing = true
         if !done {
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) { done = true }
+            withAnimation(DSCalmMotion.reveal) { done = true }
             OnboardingHaptics.counterComplete()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.6)) { checkIn = true }
+                withAnimation(DSCalmMotion.settle) { checkIn = true }
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {

@@ -21,6 +21,8 @@ struct SettingsView: View {
     /// Page ambassadeur du site, ouverte dans Safari intégré depuis la bannière.
     @State private var creatorsPage: CreatorsPage? = nil
     @State private var showAudioDownloads: Bool = false
+    /// La page « Invite un ami » (parrainage), poussée depuis la ligne de la section Compte.
+    @State private var showInvite: Bool = false
     @State private var hapticTrigger: Int = 0
     @State private var reminderHour: Int = DailyCourseReminder.storedHour
     /// Écran de test des notifications, ouvert depuis la section développeur (Debug).
@@ -76,6 +78,16 @@ struct SettingsView: View {
             }
             .navigationBarHidden(true)
             .sensoryFeedback(.impact(weight: .light), trigger: hapticTrigger)
+            .navigationDestination(isPresented: $showInvite) {
+                // L'offre, ou la seule saisie du code d'un ami tant qu'elle n'est pas ouverte.
+                InviteFriendView(
+                    progressManager: progressManager,
+                    showsOffer: InviteFriend.showsOffer(progressManager: progressManager, isPremium: store.isPremium)
+                )
+                .toolbar(.hidden, for: .navigationBar)
+            }
+            // Où en est le parrainage (récompense, code d'un ami encore accepté) pour la ligne.
+            .task(id: auth.isSignedIn) { await ReferralService.shared.sync() }
             .fullScreenCover(item: $debugPaywall) { context in
                 #if DEBUG
                 // Presented from here rather than routed through ContentView: the real
@@ -304,6 +316,43 @@ struct SettingsView: View {
                         hapticTrigger += 1
                         showAccount = true
                     }
+                }
+                inviteRow
+            }
+        }
+    }
+
+    /// Le parrainage (docs/parrainage.md), qui a quitté le profil : « Inviter un ami » une fois
+    /// le premier cours terminé ; avant cela, un compte tout neuf n'a que « Tu as le code d'un
+    /// ami ? » ; sinon aucune ligne.
+    @ViewBuilder
+    private var inviteRow: some View {
+        let entry: InviteFriend.SettingsEntry? = InviteFriend.settingsEntry(
+            progressManager: progressManager,
+            isPremium: store.isPremium,
+            isSignedIn: auth.isSignedIn
+        )
+        if let entry {
+            rowDivider
+            switch entry {
+            case .offer:
+                actionRow(
+                    icon: "gift",
+                    title: languageManager.text("invite.cta"),
+                    subtitle: ReferralService.shared.rewarded
+                        ? String(format: languageManager.text("invite.status.earned"), progressManager.referralCreditsRemaining)
+                        : languageManager.text("invite.card.subtitle")
+                ) {
+                    hapticTrigger += 1
+                    showInvite = true
+                }
+            case .friendCode:
+                actionRow(
+                    icon: "gift",
+                    title: languageManager.text("invite.enter.title")
+                ) {
+                    hapticTrigger += 1
+                    showInvite = true
                 }
             }
         }

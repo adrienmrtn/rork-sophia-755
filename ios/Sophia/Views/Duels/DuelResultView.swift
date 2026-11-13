@@ -1,11 +1,15 @@
 import SwiftUI
 
-/// La fin d'une partie (maquette AEr25) : victoire ou défaite, le score, puis les trophées qui
-/// défilent jusqu'à leur nouveau total, la jauge de ligue qui avance, et la montée de ligue quand
-/// un seuil tombe. Le titre et le score sont connus tout de suite ; les trophées arrivent avec la
-/// réponse du serveur (`result`), qui fait foi.
+/// La fin d'une partie (maquette AEr25). L'écran s'ouvre sur les deux joueurs face à face : leurs
+/// bonnes réponses défilent de zéro à leur total, de plus en plus lentement, puis l'issue se
+/// dévoile (titre, couronne, confettis pour une victoire ; plus calme pour une défaite ou une
+/// égalité). Viennent ensuite les trophées qui défilent jusqu'à leur nouveau total, la jauge de
+/// ligue qui avance, et la montée de ligue quand un seuil tombe. Le score est connu tout de
+/// suite ; les trophées arrivent avec la réponse du serveur (`result`), qui fait foi.
+/// « Revoir les questions » ouvre la relecture de la partie (`DuelReviewView`).
 struct DuelResultView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     let summary: DuelSummary
     let player: DuelPlayerIdentity
     let home: DuelHome?
@@ -16,6 +20,12 @@ struct DuelResultView: View {
     let onDone: () -> Void
 
     @State private var appeared = false
+    /// Les bonnes réponses affichées pendant le décompte d'ouverture.
+    @State private var shownPlayerScore = 0
+    @State private var shownOpponentScore = 0
+    /// Le décompte est fini : le titre, la couronne et les confettis se montrent.
+    @State private var revealed = false
+    @State private var showReview = false
     @State private var shownTrophies = 0
     @State private var barProgress: Double = 0
     @State private var shownLeaguePosition: Int?
@@ -41,6 +51,7 @@ struct DuelResultView: View {
                     headline
                     faces
                     trophyCard
+                    reviewButton
                 }
                 .padding(.horizontal, 24)
                 .padding(.top, 44)
@@ -49,7 +60,7 @@ struct DuelResultView: View {
             .scrollBounceBehavior(.basedOnSize)
             .safeAreaInset(edge: .bottom, spacing: 0) { actions }
 
-            if won {
+            if won && revealed && !reduceMotion {
                 PathConfettiBurst(colors: DuelTheme.confetti, pieceCount: 120, duration: 3.0, origin: CGPoint(x: 0.5, y: 0.22))
                     .ignoresSafeArea()
                     .allowsHitTesting(false)
@@ -62,21 +73,90 @@ struct DuelResultView: View {
                 .transition(.opacity)
                 .zIndex(2)
             }
+
+            if showReview {
+                DuelReviewView(
+                    entries: summary.review,
+                    questionCount: summary.match.questionCount,
+                    player: player,
+                    opponent: opponent,
+                    onClose: {
+                        withAnimation(.easeInOut(duration: 0.3)) { showReview = false }
+                    }
+                )
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+                .zIndex(3)
+            }
         }
         .onAppear {
-            withAnimation(DS.Motion.pop) { appeared = true }
             // Les exploits de la partie (score, écart, question décisive) comptent pour les badges.
             BadgeCounters.record(summary)
-            if won {
-                Haptics.celebrate()
-            } else if !summary.draw {
-                DuelHaptics.defeat()
+        }
+        .task { await playOpening() }
+        // Les trophées défilent une fois l'issue dévoilée, dès que le serveur a répondu.
+        .task(id: trophiesKey) {
+            guard let result else { return }
+            if revealed {
+                await playTrophies(result)
+            } else {
+                // La carte, encore cachée, part de l'ancien total : elle n'a pas à défiler depuis zéro.
+                shownTrophies = result.trophiesBefore
+                shownLeaguePosition = result.leagueBefore
+                barProgress = home?.leagueProgress(forTrophies: result.trophiesBefore) ?? 0
             }
         }
-        .task(id: result?.matchId) {
-            if let result {
-                await playTrophies(result)
+    }
+
+    private var trophiesKey: String {
+        "\(result?.matchId.uuidString ?? "-")|\(revealed)"
+    }
+
+    // MARK: - Ouverture
+
+    /// Les deux scores défilent ensemble de zéro à leur total (le plus petit s'arrête le premier),
+    /// vite puis de plus en plus lentement, avec un cran de vibration par point ; l'issue se
+    /// dévoile ensuite. Avec « Réduire les animations », tout est en place d'emblée.
+    private func playOpening() async {
+        let playerTotal = max(summary.playerScore, 0)
+        let opponentTotal = max(summary.opponentScore, 0)
+        guard !reduceMotion else {
+            shownPlayerScore = playerTotal
+            shownOpponentScore = opponentTotal
+            appeared = true
+            revealed = true
+            outcomeHaptic()
+            return
+        }
+        withAnimation(.easeOut(duration: 0.35)) { appeared = true }
+        try? await Task.sleep(for: .seconds(0.55))
+        guard !Task.isCancelled else { return }
+
+        let steps = max(playerTotal, opponentTotal)
+        if steps > 0 {
+            for step in 1...steps {
+                let progress = Double(step) / Double(steps)
+                withAnimation(.snappy(duration: 0.16)) {
+                    shownPlayerScore = min(step, playerTotal)
+                    shownOpponentScore = min(step, opponentTotal)
+                }
+                DuelHaptics.trophyTick(progress: progress)
+                // De 55 ms au départ à 330 ms sur les derniers points.
+                try? await Task.sleep(for: .milliseconds(55 + Int(275 * progress * progress)))
+                guard !Task.isCancelled else { return }
             }
+        }
+        try? await Task.sleep(for: .seconds(0.25))
+        guard !Task.isCancelled else { return }
+        // Un ressort amorti : le titre se pose sans rebondir à l'excès.
+        withAnimation(.spring(response: 0.5, dampingFraction: 0.74)) { revealed = true }
+        outcomeHaptic()
+    }
+
+    private func outcomeHaptic() {
+        if won {
+            Haptics.celebrate()
+        } else if !summary.draw {
+            DuelHaptics.defeat()
         }
     }
 
@@ -94,20 +174,25 @@ struct DuelResultView: View {
                 .font(DS.title(.largeTitle, .heavy))
                 .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
-                .scaleEffect(appeared ? 1 : 0.4)
-                .opacity(appeared ? 1 : 0)
+                // Une victoire arrive de plus loin qu'une défaite ou une égalité.
+                .scaleEffect(revealed ? 1 : (won ? 0.55 : 0.9))
+                .opacity(revealed ? 1 : 0)
             if summary.forfeit {
                 Text(String(format: languageManager.text("duel.friend.left"), opponent.handle))
                     .font(DS.sans(.subheadline, .medium))
                     .foregroundStyle(DS.inkSecondary)
                     .multilineTextAlignment(.center)
+                    .opacity(revealed ? 1 : 0)
             } else if summary.tiebreak && !summary.abandoned {
                 Text(languageManager.text("duel.result.suddenDeath"))
                     .font(DS.sans(.subheadline, .medium))
                     .foregroundStyle(DS.inkSecondary)
+                    .opacity(revealed ? 1 : 0)
             }
         }
         .frame(maxWidth: .infinity)
+        // Tant que l'issue n'est pas dévoilée, le titre n'est pas lu non plus.
+        .accessibilityHidden(!revealed)
     }
 
     private var faces: some View {
@@ -116,22 +201,24 @@ struct DuelResultView: View {
                 avatarId: player.avatarId,
                 initial: player.initial,
                 name: "@\(player.handle)",
-                crowned: won && !summary.draw,
-                faded: !won && !summary.draw
+                crowned: revealed && won && !summary.draw,
+                faded: revealed && !won && !summary.draw
             )
-            Text("\(summary.playerScore) – \(summary.opponentScore)")
+            Text("\(shownPlayerScore) – \(shownOpponentScore)")
                 .font(DS.title(.largeTitle, .heavy))
                 .monospacedDigit()
                 .foregroundStyle(DS.ink)
                 .lineLimit(1)
                 .minimumScaleFactor(0.6)
+                .contentTransition(.numericText())
                 .environment(\.layoutDirection, .leftToRight)
+                .accessibilityLabel(Text("\(summary.playerScore) – \(summary.opponentScore)"))
             face(
                 avatarId: opponent.avatarId,
                 initial: opponent.initial,
                 name: "@\(opponent.handle) \(opponent.flag)",
-                crowned: !won && !summary.draw,
-                faded: won && !summary.draw
+                crowned: revealed && !won && !summary.draw,
+                faded: revealed && won && !summary.draw
             )
         }
         .opacity(appeared ? 1 : 0)
@@ -147,13 +234,15 @@ struct DuelResultView: View {
                 )
                 .saturation(faded ? 0 : 1)
                 .opacity(faded ? 0.7 : 1)
+                // Le vainqueur grandit un peu quand l'issue tombe.
+                .scaleEffect(crowned ? 1.06 : 1)
                 .overlay(alignment: .top) {
                     if crowned {
                         Image(systemName: "crown.fill")
                             .font(.system(size: 22, weight: .bold))
                             .foregroundStyle(DuelPalette.saffron)
                             .offset(y: -20)
-                            .scaleEffect(appeared ? 1 : 0.1)
+                            .transition(.scale(scale: 0.2, anchor: .bottom).combined(with: .opacity))
                     }
                 }
             Text(name)
@@ -184,8 +273,39 @@ struct DuelResultView: View {
             }
         }
         .dsCard(padding: 16)
-        .opacity(appeared ? 1 : 0)
-        .offset(y: appeared ? 0 : 40)
+        .opacity(revealed ? 1 : 0)
+        .offset(y: revealed ? 0 : 40)
+    }
+
+    /// « Revoir les questions » : la relecture de la partie, question par question.
+    @ViewBuilder
+    private var reviewButton: some View {
+        if !summary.review.isEmpty {
+            Button {
+                DuelHaptics.tap()
+                withAnimation(.easeInOut(duration: 0.3)) { showReview = true }
+            } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: "list.bullet.rectangle")
+                        .font(.system(size: 16, weight: .bold))
+                        .foregroundStyle(DS.accent)
+                    Text(languageManager.text("duel.review.open"))
+                        .font(DS.sans(.subheadline, .bold))
+                        .foregroundStyle(DS.ink)
+                        .multilineTextAlignment(.leading)
+                    Spacer(minLength: 0)
+                    Image(systemName: "chevron.forward")
+                        .font(.system(size: 13, weight: .bold))
+                        .foregroundStyle(DS.inkTertiary)
+                }
+                .dsCard(padding: 16, shadow: false)
+                .contentShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+            }
+            .buttonStyle(PressableStyle(scale: 0.97, haptic: false))
+            .opacity(revealed ? 1 : 0)
+            .offset(y: revealed ? 0 : 40)
+            .disabled(!revealed)
+        }
     }
 
     private var friendlyNote: some View {
@@ -343,7 +463,7 @@ struct DuelResultView: View {
         shownTrophies = result.trophiesBefore
         shownLeaguePosition = result.leagueBefore
         barProgress = home?.leagueProgress(forTrophies: result.trophiesBefore) ?? 0
-        try? await Task.sleep(for: .seconds(0.9))
+        try? await Task.sleep(for: .seconds(0.6))
         guard !Task.isCancelled else { return }
 
         withAnimation(.spring(response: 0.4, dampingFraction: 0.55)) { showDelta = true }

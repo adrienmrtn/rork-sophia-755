@@ -1,11 +1,13 @@
 import SwiftUI
 
 /// Mini-onboarding « Entraînement », déclenché par le bouton « Découvrir » de l'onglet
-/// Révision. Trois écrans soignés (même direction artistique que l'OB principal), puis, sans
-/// rupture, le paywall de fin d'onboarding (identique à celui de l'OB classique).
+/// Révision. Trois écrans au style « Elevate arrondi » de l'onboarding principal (mêmes
+/// briques : en-tête à flèche retour et barre de progression, titres à passage fort, cartes
+/// bordées, bouton plein), puis, sans rupture, le paywall de fin d'onboarding (identique à
+/// celui de l'OB classique).
 ///
-/// - Écran 1 : bienvenue, texte lent avec gras qui suit la lecture. Pas de CTA : on tape pour
-///   passer à la suite.
+/// - Écran 1 : bienvenue, l'illustration ronde et la phrase qui passe en gras mot après mot.
+///   Pas de CTA : on tape pour passer à la suite.
 /// - Écran 2 : l'active recall, illustré par un graphe de rétention (Sophia tient, la relecture
 ///   décroche) et une statistique. CTA « Comment ça marche ».
 /// - Écran 3 : l'algorithme de révision continue. CTA « Continuer ».
@@ -16,6 +18,8 @@ import SwiftUI
 /// démarrer ce flux directement sur le paywall (le bouton « Découvrir » devient « Débloquer »).
 struct TrainingOnboardingView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.layoutDirection) private var layoutDirection
 
     let store: StoreViewModel
     /// Si vrai, on saute les 3 écrans d'onboarding et on ouvre directement le paywall.
@@ -31,6 +35,8 @@ struct TrainingOnboardingView: View {
     private let steps: [Step] = [.welcome, .recall, .algorithm, .paywallAnnual, .paywallComparison]
 
     @State private var stepIndex: Int = 0
+    /// Sens de la dernière navigation : la transition glisse dans l'autre sens au retour.
+    @State private var slidesForward = true
 
     private var current: Step {
         steps.indices.contains(stepIndex) ? steps[stepIndex] : .paywallAnnual
@@ -38,7 +44,13 @@ struct TrainingOnboardingView: View {
 
     private var isPaywall: Bool { current == .paywallAnnual || current == .paywallComparison }
 
-    private var dotTotal: Int { steps.filter { $0 == .welcome || $0 == .recall || $0 == .algorithm }.count }
+    /// Nombre d'écrans de présentation, ceux que la barre de progression compte.
+    private var introCount: Int { steps.filter { $0 == .welcome || $0 == .recall || $0 == .algorithm }.count }
+
+    private var progressValue: Double {
+        guard introCount > 0 else { return 1 }
+        return Double(min(stepIndex + 1, introCount)) / Double(introCount)
+    }
 
     var body: some View {
         ZStack {
@@ -46,17 +58,27 @@ struct TrainingOnboardingView: View {
 
             page(for: current)
                 .id(current)
-                .transition(.ov2)
+                .transition(.ov2Slide(
+                    forward: slidesForward,
+                    mirrored: layoutDirection == .rightToLeft,
+                    distance: reduceMotion ? 0 : 64
+                ))
         }
-        .overlay(alignment: .top) {
+        // L'en-tête de l'onboarding principal ; les paywalls gardent leur propre haut d'écran.
+        .safeAreaInset(edge: .top, spacing: 0) {
             if !isPaywall {
-                OnboardingV2ProgressDots(current: stepIndex, total: dotTotal)
-                    .padding(.top, 14)
-                    .allowsHitTesting(false)
+                OnboardingV2Header(
+                    backLabel: languageManager.text("training.backToTraining"),
+                    onBack: goBack
+                ) {
+                    DSProgressBar(value: progressValue)
+                }
+                .transition(.opacity)
             }
         }
         .preferredColorScheme(.light)
-        .animation(.spring(response: 0.6, dampingFraction: 0.9), value: stepIndex)
+        // Glissement posé, sans rebond.
+        .animation(.easeOut(duration: 0.38), value: stepIndex)
         .onAppear {
             if startAtPaywall, let idx = steps.firstIndex(of: .paywallAnnual) {
                 stepIndex = idx
@@ -94,97 +116,208 @@ struct TrainingOnboardingView: View {
         if steps[next] == .paywallAnnual {
             onCompletedOnboarding()
         }
+        // Le bouton a déjà vibré : pas de seconde vibration au changement d'écran.
+        if !OV2HapticGate.justConfirmed {
+            OnboardingHaptics.selection()
+        }
+        move(to: next, forward: true)
+    }
+
+    /// La flèche de l'en-tête : l'écran précédent, ou la sortie depuis le premier.
+    private func goBack() {
+        guard stepIndex > 0 else { onClose(); return }
         OnboardingHaptics.selection()
-        stepIndex = next
+        move(to: stepIndex - 1, forward: false)
     }
 
     private func goToStep(_ step: Step) -> () -> Void {
-        { if let idx = steps.firstIndex(of: step) { stepIndex = idx } }
+        { if let idx = steps.firstIndex(of: step) { move(to: idx, forward: true) } }
+    }
+
+    /// Change d'écran. La transition d'un écran qui sort est celle qu'il portait à son dernier
+    /// rendu : quand le sens change, il est posé d'abord, et l'index au tour de boucle suivant
+    /// (comme dans `OnboardingV2View`).
+    private func move(to index: Int, forward: Bool) {
+        if slidesForward == forward {
+            stepIndex = index
+        } else {
+            slidesForward = forward
+            DispatchQueue.main.async {
+                stepIndex = index
+            }
+        }
     }
 }
 
-// MARK: - Écran 1 — Bienvenue (lecture lente, gras qui suit la lecture)
+// MARK: - Briques de la page
 
-/// Un seul énoncé, révélé mot après mot : chaque mot passe d'un gris estompé à l'encre pleine,
-/// au rythme d'une lecture calme. Pas de CTA : un appui n'importe où passe à la suite.
+/// Le titre `titleKey` avec son passage fort entouré de `**` (rendu en gras bleu par
+/// `OV2CoreHighlightTitle`). Le passage vient de la table `trainingOnboarding`, langue par
+/// langue ; s'il manque ou ne figure plus dans le titre, le titre revient tel quel.
+private enum TrainingOnboardingText {
+    static func marked(_ titleKey: String, highlightKey: String, language: AppLanguage) -> String {
+        let title: String = AppLocalizable.string(titleKey, language: language)
+        guard !title.contains("**"),
+              let passage = AppLocalizableAdditions.trainingOnboarding[highlightKey]?[language.rawValue],
+              !passage.isEmpty,
+              let range = title.range(of: passage)
+        else { return title }
+        return title.replacingCharacters(in: range, with: "**" + passage + "**")
+    }
+}
+
+/// Apparition d'un bloc une fois l'écran arrivé : fondu et légère montée, en ease-out, sans
+/// rebond. `index` décale les blocs l'un après l'autre.
+private struct TrainingReveal: ViewModifier {
+    let index: Int
+    @State private var shown = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    func body(content: Content) -> some View {
+        content
+            .opacity(shown ? 1 : 0)
+            .offset(y: shown || reduceMotion ? 0 : 12)
+            .onAppear {
+                guard !shown else { return }
+                withAnimation(.easeOut(duration: 0.45).delay(0.12 + Double(index) * 0.09)) {
+                    shown = true
+                }
+            }
+    }
+}
+
+private extension View {
+    func trainingReveal(_ index: Int) -> some View {
+        modifier(TrainingReveal(index: index))
+    }
+}
+
+/// Illustration ronde d'une page, sur le bleu pâle du style : l'affiche de l'Entraînement ou
+/// un pictogramme.
+private struct TrainingRoundArt: View {
+    var imageName: String? = nil
+    var systemImage: String? = nil
+    var size: CGFloat = 160
+
+    var body: some View {
+        ZStack {
+            Circle().fill(DS.accentTint)
+            if let imageName {
+                Image(imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: size, height: size)
+                    .clipShape(Circle())
+            } else if let systemImage {
+                Image(systemName: systemImage)
+                    .font(.system(size: size * 0.4, weight: .semibold))
+                    .foregroundStyle(DS.accent)
+            }
+        }
+        .frame(width: size, height: size)
+        .accessibilityHidden(true)
+    }
+}
+
+// MARK: - Écran 1 — Bienvenue (la phrase passe en gras mot après mot)
+
+/// Un seul énoncé, en très grand sous l'illustration ronde : chaque mot passe du gris léger au
+/// gras, au rythme d'une lecture calme, comme l'écran « Personnalisons ton contenu » de
+/// l'onboarding. Pas de CTA : un appui n'importe où passe à la suite.
 private struct WelcomeReadingPage: View {
     @Environment(LanguageManager.self) private var languageManager
     let onContinue: () -> Void
 
-    @State private var appeared = false
-    @State private var readIndex = -1
+    @State private var boldCount = 0
     @State private var showHint = false
     @State private var leaving = false
-    @State private var timer: Timer?
+    @State private var animTask: Task<Void, Never>?
 
     private var words: [String] {
-        languageManager.text("training.ob.welcome.line")
-            .split(separator: " ")
-            .map(String.init)
+        TextSegmentation.animationWords(languageManager.text("training.ob.welcome.line"))
     }
 
     var body: some View {
-        ZStack {
-            OV2.bg.ignoresSafeArea()
+        GeometryReader { geo in
+            let style: Font.TextStyle = OV2CoreMetrics.sentenceStyle(
+                words: words,
+                width: geo.size.width - OV2CoreMetrics.sideInset * 2
+            )
+            // L'illustration rétrécit, puis s'efface, quand la phrase a besoin de la hauteur.
+            let artSize: CGFloat = OV2CoreMetrics.artSize(base: 160, available: geo.size.height, reserved: 330)
+            ZStack {
+                VStack(spacing: 26) {
+                    if artSize > 0 {
+                        TrainingRoundArt(imageName: "training_poster", size: artSize)
+                            .trainingReveal(0)
+                    }
 
-            readingText
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 40)
-                .opacity(appeared ? 1 : 0)
-                .scaleEffect(appeared ? 1 : 0.96)
+                    OV2FlowLayout(spacing: languageManager.current == .japanese ? 0 : 8, lineSpacing: 6) {
+                        ForEach(Array(words.enumerated()), id: \.offset) { index, word in
+                            wordCell(word, bold: index < boldCount, style: style)
+                        }
+                    }
+                }
+                .padding(.horizontal, OV2CoreMetrics.sideInset)
+                .padding(.bottom, 36)
 
-            VStack {
-                Spacer()
-                Text(languageManager.text("explain.tapToClose"))
-                    .font(DS.sans(.footnote, .semibold))
-                    .foregroundStyle(OV2.inkTertiary)
-                    .opacity(showHint ? 1 : 0)
-                    .padding(.bottom, 46)
+                VStack {
+                    Spacer()
+                    OV2CoreTapHint(text: languageManager.text("explain.tapToClose"), visible: showHint)
+                        .padding(.bottom, 28)
+                }
             }
+            .frame(width: geo.size.width, height: geo.size.height)
         }
+        .ov2Background()
         .contentShape(Rectangle())
         .onTapGesture { finish() }
-        .onAppear { runReveal() }
-        .onDisappear { timer?.invalidate() }
+        .onAppear { animate() }
+        .onDisappear { animTask?.cancel() }
     }
 
-    private var readingText: Text {
-        let list = words
-        return list.enumerated().reduce(Text("")) { acc, pair in
-            let (i, word) = pair
-            let isRead = i <= readIndex
-            let suffix = i < list.count - 1 ? " " : ""
-            let run = Text(word + suffix)
-                .font(DS.title(.largeTitle, .semibold))
-                .foregroundColor(isRead ? OV2.ink : OV2.inkTertiary.opacity(0.26))
-            return acc + run
+    /// Chaque mot occupe sa largeur « gras » : la phrase ne bouge pas quand le gras arrive.
+    private func wordCell(_ word: String, bold: Bool, style: Font.TextStyle) -> some View {
+        ZStack {
+            Text(word).font(DS.title(style, .heavy)).opacity(0)
+            Text(word)
+                .font(DS.title(style, bold ? .heavy : .regular))
+                .foregroundStyle(bold ? OV2.ink : OV2.inkTertiary)
+                .animation(.easeOut(duration: 0.3), value: bold)
+        }
+        .fixedSize()
+    }
+
+    /// Sans bouton, la seule indication qu'il faut toucher l'écran est `showHint` : elle
+    /// s'affiche que l'animation soit allée au bout ou qu'elle ait été interrompue.
+    private func animate() {
+        guard !showHint else { return }
+        animTask?.cancel()
+        animTask = Task { @MainActor in
+            await playAnimation()
+            withAnimation(.easeOut(duration: 0.5)) { showHint = true }
         }
     }
 
-    private func runReveal() {
-        withAnimation(.easeOut(duration: 0.7)) { appeared = true }
-        // Révélation mot à mot, à un rythme de lecture posé.
-        let count = words.count
-        timer?.invalidate()
-        var i = 0
-        timer = Timer.scheduledTimer(withTimeInterval: 0.42, repeats: true) { t in
-            guard i < count else {
-                t.invalidate()
-                withAnimation(.easeIn(duration: 0.7)) { showHint = true }
-                return
-            }
-            withAnimation(.easeOut(duration: 0.45)) { readIndex = i }
-            UIImpactFeedbackGenerator(style: .soft).impactOccurred(intensity: 0.5)
-            i += 1
+    /// Gras progressif, mot par mot, repris à l'état courant.
+    private func playAnimation() async {
+        let count: Int = words.count
+        guard count > 0, boldCount < count else { return }
+        if boldCount == 0 {
+            try? await Task.sleep(nanoseconds: 550_000_000)
         }
-        // Léger délai avant le premier mot pour laisser respirer l'entrée.
-        timer?.fireDate = Date().addingTimeInterval(0.55)
+        for index in (boldCount + 1)...count {
+            if Task.isCancelled { return }
+            withAnimation(.easeOut(duration: 0.3)) { boldCount = index }
+            OnboardingHaptics.selection()
+            try? await Task.sleep(nanoseconds: 340_000_000)
+        }
     }
 
     private func finish() {
         guard !leaving else { return }
         leaving = true
-        timer?.invalidate()
+        animTask?.cancel()
         onContinue()
     }
 }
@@ -196,64 +329,69 @@ private struct ActiveRecallPage: View {
     let onNext: () -> Void
 
     var body: some View {
-        VStack(spacing: 0) {
-            Spacer().frame(height: 92)
+        OV2ScrollableContent {
+            VStack(spacing: 0) {
+                OV2CoreHighlightTitle(
+                    text: TrainingOnboardingText.marked(
+                        "training.ob.recall.title",
+                        highlightKey: "training.ob.recall.titleHighlight",
+                        language: languageManager.current
+                    )
+                )
+                .padding(.top, OV2End.top)
+                .trainingReveal(0)
 
-            Text(languageManager.text("training.ob.recall.title"))
-                .font(DS.title(.title2, .medium))
-                .lineSpacing(3)
-                .foregroundStyle(OV2.ink)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 28)
-                .ov2Reveal(delay: 0.1)
+                RetentionGraph()
+                    .padding(.top, 24)
+                    .trainingReveal(1)
 
-            Spacer(minLength: 24)
-
-            RetentionGraph()
-                .frame(height: 200)
-                .padding(.horizontal, 24)
-                .ov2Reveal(delay: 0.25)
-
-            Spacer(minLength: 20)
-
-            statLine
-                .padding(.horizontal, 30)
-                .ov2Reveal(delay: 0.4)
-
-            Spacer(minLength: 24)
-
+                statCard
+                    .padding(.top, 14)
+                    .trainingReveal(2)
+            }
+            .padding(.horizontal, OV2End.side)
+            .padding(.bottom, 16)
+        } footer: {
             OnboardingV2Button(title: languageManager.text("training.ob.recall.cta"), action: onNext)
         }
         .ov2Background()
     }
 
-    private var statLine: some View {
+    /// La statistique, dans une carte du style : le chiffre en gras bleu au fil de la phrase.
+    private var statCard: some View {
         let prefix = Text(languageManager.text("training.ob.recall.stat.prefix") + " ")
-            .font(DS.sans(.subheadline, .medium))
-            .foregroundColor(OV2.inkSecondary)
         let highlight = Text(languageManager.text("training.ob.recall.stat.highlight"))
             .font(DS.sans(.subheadline, .bold))
-            .foregroundColor(OV2.accent)
+            .foregroundColor(DS.accent)
         let suffix = Text(" " + languageManager.text("training.ob.recall.stat.suffix"))
-            .font(DS.sans(.subheadline, .medium))
-            .foregroundColor(OV2.inkSecondary)
         return (prefix + highlight + suffix)
-            .multilineTextAlignment(.center)
+            .font(DS.sans(.subheadline, .medium))
+            .foregroundStyle(DS.inkSecondary)
+            .lineSpacing(3)
+            .multilineTextAlignment(.leading)
             .fixedSize(horizontal: false, vertical: true)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(16)
+            .ov2EndCard()
     }
 }
 
-/// Graphe de rétention animé : deux courbes partent ensemble au sommet, puis la grise
-/// (relecture) décroche vite tandis que la dorée (Sophia) tient dans le temps.
+/// Graphe de rétention animé, dans les couleurs de la courbe « 90 jours » de l'onboarding :
+/// deux courbes partent ensemble au sommet, puis la sombre (relecture) décroche vite tandis
+/// que la bleue (Sophia) tient dans le temps.
 private struct RetentionGraph: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     @State private var progress: CGFloat = 0
     @State private var showLegend = false
 
-    private let gold = OV2.warm
-    private var grey: Color { OV2.inkTertiary.opacity(0.55) }
+    /// Fond très légèrement bleuté de la carte du graphique (celui de `OnboardingV2Curve90`).
+    private static let cardFill = Color(red: 0.969, green: 0.976, blue: 0.992)
+    private static let axisColor = Color(red: 0.765, green: 0.796, blue: 0.847)
+
+    private var sophiaColor: Color { DS.accent }
+    private var rereadColor: Color { DS.ink }
 
     // Rétention (0 en bas, 1 en haut) en fonction du temps normalisé x ∈ [0, 1].
     private func sophia(_ x: CGFloat) -> CGFloat { 0.70 + 0.30 * exp(-0.45 * x * 3.0) }
@@ -262,52 +400,60 @@ private struct RetentionGraph: View {
     var body: some View {
         VStack(spacing: 14) {
             GeometryReader { geo in
-                let w = geo.size.width
-                let h = geo.size.height
+                let w: CGFloat = geo.size.width
+                let h: CGFloat = geo.size.height
                 ZStack {
                     // Grille horizontale discrète.
                     ForEach(0..<4, id: \.self) { i in
-                        let y = h * CGFloat(i) / 3.0
+                        let y: CGFloat = h * CGFloat(i) / 3.0
                         Path { p in
                             p.move(to: CGPoint(x: 0, y: y))
                             p.addLine(to: CGPoint(x: w, y: y))
                         }
-                        .stroke(OV2.hairline.opacity(0.6), lineWidth: 1)
+                        .stroke(Self.axisColor.opacity(i == 3 ? 1 : 0.45), lineWidth: i == 3 ? 1.5 : 1)
                     }
 
-                    // Aire sous la courbe dorée.
+                    // Aire sous la courbe bleue.
                     curvePath(in: geo.size, curve: sophia, closed: true)
                         .fill(
                             LinearGradient(
-                                colors: [gold.opacity(0.22), gold.opacity(0.0)],
+                                colors: [sophiaColor.opacity(0.16), sophiaColor.opacity(0.0)],
                                 startPoint: .top, endPoint: .bottom
                             )
                         )
                         .mask(revealMask(width: w, height: h))
 
-                    // Courbe grise (relecture) qui décroche.
+                    // Courbe sombre (relecture) qui décroche.
                     curvePath(in: geo.size, curve: reread, closed: false)
-                        .stroke(grey, style: StrokeStyle(lineWidth: 3, lineCap: .round, dash: [2, 6]))
+                        .stroke(rereadColor, style: StrokeStyle(lineWidth: 3.5, lineCap: .round, lineJoin: .round))
                         .mask(revealMask(width: w, height: h))
 
-                    // Courbe dorée (Sophia) qui tient.
+                    // Courbe bleue (Sophia) qui tient.
                     curvePath(in: geo.size, curve: sophia, closed: false)
-                        .stroke(gold, style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
+                        .stroke(sophiaColor, style: StrokeStyle(lineWidth: 4.5, lineCap: .round, lineJoin: .round))
                         .mask(revealMask(width: w, height: h))
 
                     // Points en tête de courbe.
-                    endpointDot(in: geo.size, curve: sophia, color: gold)
-                    endpointDot(in: geo.size, curve: reread, color: grey)
+                    endpointDot(in: geo.size, curve: reread, color: rereadColor)
+                    endpointDot(in: geo.size, curve: sophia, color: sophiaColor)
                 }
             }
+            .frame(height: 170)
 
             legend
                 .opacity(showLegend ? 1 : 0)
         }
-        .dsCard(padding: 16)
+        .padding(EdgeInsets(top: 18, leading: 16, bottom: 14, trailing: 16))
+        .ov2EndCard(fill: Self.cardFill)
         .onAppear {
-            withAnimation(.easeInOut(duration: 1.8).delay(0.35)) { progress = 1 }
-            withAnimation(.easeIn(duration: 0.6).delay(1.9)) { showLegend = true }
+            guard progress == 0 else { return }
+            if reduceMotion {
+                progress = 1
+                showLegend = true
+                return
+            }
+            withAnimation(.easeInOut(duration: 1.6).delay(0.4)) { progress = 1 }
+            withAnimation(.easeOut(duration: 0.5).delay(1.9)) { showLegend = true }
         }
     }
 
@@ -347,7 +493,7 @@ private struct RetentionGraph: View {
         let pt = point(in: size, curve: curve, x: progress)
         return Circle()
             .fill(color)
-            .frame(width: 9, height: 9)
+            .frame(width: 11, height: 11)
             .overlay(Circle().strokeBorder(.white, lineWidth: 2))
             .position(pt)
             .opacity(progress > 0.02 ? 1 : 0)
@@ -355,9 +501,10 @@ private struct RetentionGraph: View {
 
     private var legend: some View {
         HStack(spacing: 18) {
-            legendItem(color: gold, label: languageManager.text("training.ob.recall.legend.sophia"))
-            legendItem(color: grey, label: languageManager.text("training.ob.recall.legend.reread"))
+            legendItem(color: sophiaColor, label: languageManager.text("training.ob.recall.legend.sophia"))
+            legendItem(color: rereadColor, label: languageManager.text("training.ob.recall.legend.reread"))
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private func legendItem(color: Color, label: String) -> some View {
@@ -365,7 +512,9 @@ private struct RetentionGraph: View {
             Circle().fill(color).frame(width: 9, height: 9)
             Text(label)
                 .font(DS.sans(.caption, .semibold))
-                .foregroundStyle(OV2.inkSecondary)
+                .foregroundStyle(DS.inkSecondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
         }
     }
 }
@@ -376,76 +525,61 @@ private struct AlgorithmPage: View {
     @Environment(LanguageManager.self) private var languageManager
     let onNext: () -> Void
 
-    @State private var pulse = false
-
     var body: some View {
-        VStack(spacing: 0) {
-            Spacer().frame(height: 96)
+        OV2ScrollableContent {
+            VStack(spacing: 0) {
+                OV2CoreHighlightTitle(
+                    text: TrainingOnboardingText.marked(
+                        "training.ob.algo.title",
+                        highlightKey: "training.ob.algo.titleHighlight",
+                        language: languageManager.current
+                    )
+                )
+                .padding(.top, OV2End.top)
+                .trainingReveal(0)
 
-            ZStack {
-                Circle()
-                    .fill(DS.accentTint)
-                    .frame(width: 132, height: 132)
-                    .scaleEffect(pulse ? 1.04 : 0.96)
-                Image(systemName: "brain.head.profile")
-                    .font(.system(size: 46, weight: .semibold))
-                    .foregroundStyle(OV2.accent)
+                Text(languageManager.text("training.ob.algo.body"))
+                    .font(DS.sans(.callout))
+                    .lineSpacing(4)
+                    .foregroundStyle(DS.inkSecondary)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 12)
+                    .trainingReveal(1)
+
+                TrainingRoundArt(systemImage: "brain.head.profile", size: 128)
+                    .padding(.top, 30)
+                    .trainingReveal(2)
+
+                highlightCard
+                    .padding(.top, 30)
+                    .trainingReveal(3)
             }
-            .ov2Reveal(delay: 0.05)
-
-            Spacer().frame(height: 30)
-
-            Text(languageManager.text("training.ob.algo.title"))
-                .font(DS.title(.title2, .medium))
-                .lineSpacing(3)
-                .foregroundStyle(OV2.ink)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 30)
-                .ov2Reveal(delay: 0.15)
-
-            Spacer().frame(height: 14)
-
-            Text(languageManager.text("training.ob.algo.body"))
-                .font(DS.sans(.callout))
-                .lineSpacing(4)
-                .foregroundStyle(OV2.inkSecondary)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.horizontal, 34)
-                .ov2Reveal(delay: 0.3)
-
-            Spacer()
-
-            highlightCard
-                .padding(.horizontal, 28)
-                .ov2Reveal(delay: 0.45)
-
-            Spacer()
-
+            .padding(.horizontal, OV2End.side)
+            .padding(.bottom, 16)
+        } footer: {
             OnboardingV2Button(title: languageManager.text("training.ob.cta.last"), action: onNext)
         }
         .ov2Background()
-        .onAppear {
-            withAnimation(.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) { pulse = true }
-        }
     }
 
+    /// « 5 min/jour » : la carte teintée du style, le chiffre en bleu.
     private var highlightCard: some View {
         HStack(spacing: 16) {
             Text(languageManager.text("training.ob.algo.highlight.value"))
                 .font(CourseType.font(26, .heavy, relativeTo: .title2))
-                .foregroundStyle(OV2.accent)
+                .foregroundStyle(DS.accent)
                 .fixedSize()
             Text(languageManager.text("training.ob.algo.highlight.label"))
                 .font(DS.sans(.subheadline, .semibold))
-                .foregroundStyle(OV2.ink)
+                .foregroundStyle(DS.ink)
+                .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(DS.accentTint, in: RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).strokeBorder(OV2.accent, lineWidth: 1.5))
+        .ov2EndCard(fill: DS.accentTint, border: DS.accent)
     }
 }

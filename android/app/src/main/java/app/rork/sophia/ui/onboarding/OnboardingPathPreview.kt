@@ -68,7 +68,6 @@ import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.ui.components.DSCheckBadge
 import app.rork.sophia.ui.components.DSEyebrow
-import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
@@ -171,7 +170,8 @@ internal fun OnboardingPathPreview(
                 launch {
                     delay(150L + index * PREVIEW_STAGGER)
                     haptics.tick()
-                    tile.animateTo(1f, DSMotion.pop())
+                    // Une tuile se pose sans rebond.
+                    tile.animateTo(1f, OV2Calm.settle())
                 }
             }
             links.forEachIndexed { index, link ->

@@ -14,6 +14,11 @@ final class OnboardingV2ViewModel {
     var firstName: String = "" {
         didSet { OnboardingResumeStore.firstName = firstName }
     }
+    /// Avatar choisi sur la page du prénom (`Avatars.all`), nil tant qu'elle n'a pas été vue.
+    /// La page « Ton profil », après la création du compte, repart de lui.
+    var avatarId: String? = nil {
+        didSet { OnboardingResumeStore.avatarId = avatarId }
+    }
     /// Tranche d'âge (`ageRangeKeys`), nil tant que la page n'a pas été répondue.
     var ageRangeKey: String? = nil {
         didSet { OnboardingResumeStore.ageRangeKey = ageRangeKey }
@@ -59,6 +64,7 @@ final class OnboardingV2ViewModel {
     /// pas effacer ce que la personne a rempli avant.
     init() {
         firstName = OnboardingResumeStore.firstName
+        if let stored = OnboardingResumeStore.avatarId, Avatars.isValid(stored) { avatarId = stored }
         ageRangeKey = OnboardingResumeStore.ageRangeKey
         if let level = OnboardingResumeStore.knowledgeLevel { knowledgeLevel = level }
         motivationKey = OnboardingResumeStore.motivationKey
@@ -315,6 +321,14 @@ final class OnboardingV2ViewModel {
         defaults.set(ageRangeKey, forKey: Self.ageRangeDefaultsKey)
         defaults.set(knowledgeLevel, forKey: Self.knowledgeLevelDefaultsKey)
         defaults.set(motivationKey, forKey: Self.motivationDefaultsKey)
+
+        // L'avatar choisi sur la page du prénom devient celui du profil. La page « Ton
+        // profil » l'a déjà enregistré quand elle a été montrée ; elle est sautée pour un
+        // compte existant ou sans session, d'où ce filet. Un avatar déjà en place (compte
+        // existant, choix fait sur « Ton profil ») n'est jamais remplacé.
+        if let avatarId, Avatars.isValid(avatarId), !Avatars.isValid(progressManager.avatarId) {
+            progressManager.setAvatar(avatarId)
+        }
 
         DailyCourseReminder.storedHour = reminderHour
         DailyCourseReminder.scheduleIfAllowed()

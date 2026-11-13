@@ -48,7 +48,7 @@ struct OnboardingV2TrialSteps: View {
         .onAppear {
             for i in 0..<steps.count {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2 + Double(i) * 0.18) {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 0.82)) { revealed = i + 1 }
+                    withAnimation(DSCalmMotion.reveal) { revealed = i + 1 }
                     OnboardingHaptics.selection()
                 }
             }

@@ -344,7 +344,7 @@ struct OnboardingV2Notifications: View {
 
         for i in 0..<notificationBullets.count {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.45 + Double(i) * 0.12) {
-                withAnimation(DS.Motion.reveal) { revealed = i + 1 }
+                withAnimation(DSCalmMotion.reveal) { revealed = i + 1 }
             }
         }
 

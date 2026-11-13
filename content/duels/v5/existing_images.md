@@ -1,0 +1,147 @@
+# Images already used (do NOT reuse the same subject)
+
+## Flags (country codes)
+us United States, jp Japan, ca Canada, gb United Kingdom, fr France, it Italy, de Germany, br Brazil, cn China, ch Switzerland, es Spain, in India, mx Mexico, au Australia, gr Greece, se Sweden, ar Argentina, kr South Korea, tr Turkey, za South Africa, pt Portugal, no Norway, il Israel, eg Egypt, nl Netherlands, pl Poland, vn Vietnam, jm Jamaica, sa Saudi Arabia, ie Ireland, ke Kenya, cl Chile, fi Finland, th Thailand, np Nepal, bt Bhutan, kz Kazakhstan, uy Uruguay, mz Mozambique, ee Estonia
+
+## Images (paintings, monuments, myth art)
+- painting_mona_lisa: Mona Lisa, Leonardo da Vinci, c. 1503-1519
+- painting_starry_night: The Starry Night, Vincent van Gogh, 1889
+- painting_great_wave: The Great Wave off Kanagawa, Katsushika Hokusai, c. 1831
+- painting_the_scream: The Scream, Edvard Munch, 1893
+- painting_creation_of_adam: The Creation of Adam, Michelangelo, c. 1512
+- painting_last_supper: The Last Supper, Leonardo da Vinci, c. 1495-1498
+- painting_girl_pearl_earring: Girl with a Pearl Earring, Johannes Vermeer, c. 1665
+- painting_birth_of_venus: The Birth of Venus, Sandro Botticelli, c. 1485
+- painting_the_kiss: The Kiss, Gustav Klimt, 1907-1908
+- painting_night_watch: The Night Watch, Rembrandt, 1642
+- painting_liberty_leading: Liberty Leading the People, Eugène Delacroix, 1830
+- painting_whistlers_mother: Whistler's Mother (Arrangement in Grey and Black No. 1), James McNeill Whistler, 1871
+- painting_impression_sunrise: Impression, Sunrise, Claude Monet, 1872
+- painting_las_meninas: Las Meninas, Diego Velázquez, 1656
+- painting_third_of_may: The Third of May 1808, Francisco Goya, 1814
+- painting_grande_jatte: A Sunday on La Grande Jatte, Georges Seurat, 1884-1886
+- painting_school_of_athens: The School of Athens, Raphael, 1509-1511
+- painting_arnolfini: The Arnolfini Portrait, Jan van Eyck, 1434
+- painting_garden_delights: The Garden of Earthly Delights, Hieronymus Bosch, c. 1490-1510
+- painting_raft_of_medusa: The Raft of the Medusa, Théodore Géricault, 1818-1819
+- painting_fighting_temeraire: The Fighting Temeraire, J. M. W. Turner, 1839
+- painting_wanderer_fog: Wanderer above the Sea of Fog, Caspar David Friedrich, c. 1818
+- painting_hunters_snow: The Hunters in the Snow, Pieter Bruegel the Elder, 1565
+- painting_ophelia: Ophelia, John Everett Millais, 1851-1852
+- painting_bar_folies_bergere: A Bar at the Folies-Bergère, Édouard Manet, 1882
+- painting_card_players: The Card Players, Paul Cézanne, 1890s
+- painting_the_swing: The Swing, Jean-Honoré Fragonard, c. 1767
+- painting_ambassadors: The Ambassadors, Hans Holbein the Younger, 1533
+- painting_barge_haulers: Barge Haulers on the Volga, Ilya Repin, 1870-1873
+- painting_sudden_shower: Sudden Shower over Shin-Ohashi Bridge and Atake, Utagawa Hiroshige, 1857
+- painting_oath_horatii: Oath of the Horatii, Jacques-Louis David, 1784
+- painting_ninth_wave: The Ninth Wave, Ivan Aivazovsky, 1850
+- painting_tortoise_trainer: The Tortoise Trainer, Osman Hamdi Bey, 1906
+- painting_shakuntala: Shakuntala (Looking for Dushyanta), Raja Ravi Varma, 1898
+- painting_early_spring: Early Spring, Guo Xi, 1072
+- painting_washington_delaware: Washington Crossing the Delaware, Emanuel Leutze, 1851
+- mark_twain: Mark Twain
+- mahatma_gandhi: Mahatma Gandhi
+- george_washington: George Washington
+- vincent_van_gogh: Vincent van Gogh
+- charles_dickens: Charles Dickens
+- nikola_tesla: Nikola Tesla
+- sigmund_freud: Sigmund Freud
+- henry_viii: Henry VIII
+- leonardo_da_vinci: Leonardo da Vinci
+- leo_tolstoy: Leo Tolstoy
+- edgar_allan_poe: Edgar Allan Poe
+- thomas_edison: Thomas Edison
+- elizabeth_i: Elizabeth I
+- johann_sebastian_bach: Johann Sebastian Bach
+- jane_austen: Jane Austen
+- oscar_wilde: Oscar Wilde
+- louis_pasteur: Louis Pasteur
+- florence_nightingale: Florence Nightingale
+- louis_xiv: Louis XIV
+- victor_hugo: Victor Hugo
+- fyodor_dostoevsky: Fyodor Dostoevsky
+- franz_kafka: Franz Kafka
+- catherine_the_great: Catherine the Great
+- rembrandt: Rembrandt
+- rabindranath_tagore: Rabindranath Tagore
+- emily_dickinson: Emily Dickinson
+- dmitri_mendeleev: Dmitri Mendeleev
+- genghis_khan: Genghis Khan
+- frederic_chopin: Frédéric Chopin
+- johann_wolfgang_von_goethe: Johann Wolfgang von Goethe
+- alexander_pushkin: Alexander Pushkin
+- niels_bohr: Niels Bohr
+- michael_faraday: Michael Faraday
+- simon_bolivar: Simón Bolívar
+- charlotte_bronte: Charlotte Brontë
+- srinivasa_ramanujan: Srinivasa Ramanujan
+- lise_meitner: Lise Meitner
+- emperor_meiji: Emperor Meiji
+- elisabeth_vigee_le_brun: Élisabeth Vigée Le Brun
+- myth_birth_of_venus: The Birth of Venus, Botticelli
+- myth_medusa: Medusa, Caravaggio
+- myth_capitoline_wolf: Capitoline Wolf, Capitoline Museums, Rome
+- myth_ulysses_sirens: Ulysses and the Sirens, John William Waterhouse
+- myth_lament_icarus: The Lament for Icarus, Herbert Draper
+- myth_thor_giants: Thor's Fight with the Giants, Mårten Eskil Winge
+- myth_anubis_weighing: Weighing of the Heart, Papyrus of Hunefer
+- myth_perseus_cellini: Perseus with the Head of Medusa, Benvenuto Cellini
+- myth_saturn_goya: Saturn Devouring His Son, Francisco Goya
+- myth_echo_narcissus: Echo and Narcissus, John William Waterhouse
+- myth_nike_samothrace: Winged Victory of Samothrace, Louvre
+- myth_prometheus_bound: Prometheus Bound, Peter Paul Rubens
+- myth_laocoon: Laocoön and His Sons, Vatican Museums
+- myth_apollo_daphne: Apollo and Daphne, Gian Lorenzo Bernini
+- myth_saraswati: Goddess Saraswati, Raja Ravi Varma
+- myth_quetzalcoatl: Quetzalcoatl, Codex Telleriano-Remensis
+- myth_spinners: The Spinners (The Fable of Arachne), Diego Velázquez
+- myth_susanoo: Susanoo Slaying the Yamata no Orochi, Tsukioka Yoshitoshi
+- monument_eiffel_tower: Eiffel Tower, Paris, France
+- monument_statue_of_liberty: Statue of Liberty, New York, United States
+- monument_taj_mahal: Taj Mahal, Agra, India
+- monument_giza_pyramids: Great Pyramid of Giza, Egypt
+- monument_big_ben: Big Ben (Elizabeth Tower), London, United Kingdom
+- monument_pisa_tower: Leaning Tower of Pisa, Italy
+- monument_colosseum: Colosseum, Rome, Italy
+- monument_great_wall: Great Wall of China (Mutianyu section)
+- monument_christ_redeemer: Christ the Redeemer, Rio de Janeiro, Brazil
+- monument_golden_gate: Golden Gate Bridge, San Francisco, United States
+- monument_sydney_opera: Sydney Opera House, Australia
+- monument_stonehenge: Stonehenge, Wiltshire, England
+- monument_st_basil: Saint Basil's Cathedral, Moscow, Russia
+- monument_alt_sagrada: Sagrada Família, Barcelona, Spain
+- monument_parthenon: Parthenon, Athens, Greece
+- monument_alt_machu: Machu Picchu, Peru
+- monument_empire_state: Empire State Building, New York, United States
+- monument_mont_saint_michel: Mont-Saint-Michel, Normandy, France
+- monument_neuschwanstein: Neuschwanstein Castle, Bavaria, Germany
+- monument_alt_brand1: Brandenburg Gate, Berlin, Germany
+- monument_angkor_wat: Angkor Wat, Cambodia
+- monument_petra_treasury: Al-Khazneh (the Treasury), Petra, Jordan
+- monument_abu_simbel: Great Temple of Abu Simbel, Egypt
+- monument_alhambra: Alhambra, Granada, Spain
+- monument_alt_potala1: Potala Palace, Lhasa, Tibet
+- monument_himeji_castle: Himeji Castle, Japan
+- monument_borobudur: Borobudur, Java, Indonesia
+- monument_djenne_mosque: Great Mosque of Djenné, Mali
+- monument_lalibela: Church of Saint George, Lalibela, Ethiopia
+- monument_registan: Registan, Samarkand, Uzbekistan
+
+## Portraits
+- abraham_lincoln
+- ada_lovelace
+- albert_einstein
+- charles_darwin
+- erasmus
+- galileo_galilei
+- isaac_newton
+- ludwig_van_beethoven
+- marie_curie
+- napoleon
+- queen_victoria
+- rene_descartes
+- virginia_woolf
+- voltaire
+- william_shakespeare
+- wolfgang_amadeus_mozart

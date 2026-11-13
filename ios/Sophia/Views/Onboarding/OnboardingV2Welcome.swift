@@ -36,6 +36,12 @@ struct OnboardingV2Welcome: View {
         "course_11_la_prise_de_la_bastille_1789",
     ]
 
+    /// Tous les textes de la page (accroche, sous-titre, boutons) se lisent dans la langue de
+    /// l'app, celle du téléphone au premier lancement.
+    private func pageText(_ key: String) -> String {
+        languageManager.text(key)
+    }
+
     var body: some View {
         GeometryReader { geo in
             let wallHeight: CGFloat = Self.wallHeight(for: geo.size.height)
@@ -80,7 +86,7 @@ struct OnboardingV2Welcome: View {
         VStack(alignment: .leading, spacing: 14) {
             logo
 
-            OV2Markup.elevate(languageManager.text("onboardingV2.elevate.welcome.tagline"), highlightFont: DS.title(.title, .bold))
+            OV2Markup.elevate(pageText("onboardingV2.elevate.welcome.tagline"), highlightFont: DS.title(.title, .bold))
                 .font(DS.title(.title, .regular))
                 .foregroundStyle(OV2.ink)
                 .multilineTextAlignment(.leading)
@@ -89,7 +95,7 @@ struct OnboardingV2Welcome: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
 
-            Text(languageManager.text("onboardingV2.welcome.subtitle"))
+            Text(pageText("onboardingV2.welcome.subtitle"))
                 .font(DS.sans(.subheadline, .regular))
                 .foregroundStyle(OV2.inkSecondary)
                 .multilineTextAlignment(.leading)
@@ -124,7 +130,7 @@ struct OnboardingV2Welcome: View {
     private var actions: some View {
         VStack(spacing: 0) {
             OnboardingV2Button(
-                title: languageManager.text("onboardingV2.welcome.cta"),
+                title: pageText("onboardingV2.welcome.cta"),
                 bottomPadding: onExistingAccount == nil ? 20 : 6,
                 action: onNext
             )
@@ -133,7 +139,7 @@ struct OnboardingV2Welcome: View {
             // app, and it must not compete with "Get started" for a new one.
             if let onExistingAccount {
                 Button(action: onExistingAccount) {
-                    Text(languageManager.text("onboardingV2.welcome.existingAccount"))
+                    Text(pageText("onboardingV2.welcome.existingAccount"))
                         .font(DS.sans(.subheadline, .semibold))
                         .tracking(0.3)
                         .foregroundStyle(OV2.accent)

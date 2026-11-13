@@ -379,8 +379,8 @@ struct OnboardingV2PaywallComparison: View {
         let isSelected = selected == plan
         let isYearly = plan == .yearly
         return Button {
-            Haptics.select()
-            withAnimation(DS.Motion.snappy) { selected = plan }
+            OnboardingHaptics.planSelected()
+            withAnimation(DSCalmMotion.state) { selected = plan }
         } label: {
             HStack(spacing: 12) {
                 VStack(alignment: .leading, spacing: 3) {
