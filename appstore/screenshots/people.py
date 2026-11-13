@@ -30,6 +30,23 @@ PEOPLE = {
     "thinker": "A young East Asian man with glasses standing with one hand on his chin, thinking, a question mark shaped curl of hair, cream shirt, navy overalls.",
 }
 
+# Objects for the opening collage: same style, brighter palette so they read on brand blue.
+# Avoid objects that are mostly cream or white: the background removal eats them.
+PROP_STYLE = ("A single isolated object, centred with empty space around. Flat poster illustration, paper-cut "
+              "shapes, limited palette of saffron yellow, coral red and cream with small deep navy details, bold "
+              "simple forms, subtle paper grain, plain pure white background, no shadow, no text, no outlines, no scenery.")
+PROPS = {
+    "prop_bust": "An ancient Greek marble bust of a bearded philosopher wearing a laurel wreath, seen in three-quarter view.",
+    "prop_saturn": "The planet Saturn with its rings, with two small stars.",
+    "prop_amphora": "An ancient Greek amphora vase decorated with a running figure.",
+    "prop_telescope": "A brass telescope on a tripod pointing up to the left.",
+    "prop_rocket": "A retro space rocket flying upward to the right with a flame.",
+    "prop_portrait": "A framed painted portrait of a renaissance lady with a mysterious smile, in an ornate golden frame.",
+    "prop_globe": "A desk globe of the Earth on a stand.",
+    "prop_mask": "A pair of theatre masks, comedy and tragedy.",
+}
+PROMPTS = {**{k: v + " " + STYLE for k, v in PEOPLE.items()}, **{k: v + " " + PROP_STYLE for k, v in PROPS.items()}}
+
 def call(method, url, body=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None, method=method,
         headers={"Authorization": f"Key {KEY}", "Content-Type": "application/json", "Accept": "application/json", "User-Agent": "appstore-art/1.0"})
@@ -50,22 +67,22 @@ def run(model, payload, budget=420):
     raise TimeoutError(model)
 
 def make(name):
-    res = run("fal-ai/recraft-v3", {"prompt": PEOPLE[name] + " " + STYLE, "image_size": "portrait_4_3",
+    res = run("fal-ai/recraft-v3", {"prompt": PROMPTS[name], "image_size": "square_hd" if name in PROPS else "portrait_4_3",
         "style": "digital_illustration/2d_art_poster", "colors": [{"r": c[0], "g": c[1], "b": c[2]} for c in COLORS]})
     url = res["images"][0]["url"]
     cut = run("fal-ai/birefnet", {"image_url": url, "output_format": "png"})
     with urllib.request.urlopen(urllib.request.Request(cut["image"]["url"], headers={"User-Agent": "appstore-art/1.0"}), timeout=120) as r:
         im = Image.open(io.BytesIO(r.read())).convert("RGBA")
     im = im.crop(im.getbbox())
-    if max(im.size) > 1400:
-        k = 1400 / max(im.size); im = im.resize((round(im.width * k), round(im.height * k)), Image.LANCZOS)
+    if max(im.size) > 900:
+        k = 900 / max(im.size); im = im.resize((round(im.width * k), round(im.height * k)), Image.LANCZOS)
     OUT.mkdir(parents=True, exist_ok=True)
     im.save(OUT / f"{name}.png", optimize=True)
     print(name, im.size, flush=True)
 
 if __name__ == "__main__":
     if not KEY: sys.exit("FAL_KEY manquant")
-    names = sys.argv[1].split(",") if len(sys.argv) > 1 else list(PEOPLE)
+    names = sys.argv[1].split(",") if len(sys.argv) > 1 else list(PROMPTS)
     from concurrent.futures import ThreadPoolExecutor
     def safe(n):
         try: make(n)
