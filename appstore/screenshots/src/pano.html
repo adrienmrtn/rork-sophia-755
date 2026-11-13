@@ -112,7 +112,7 @@ body.loud .profs { top: 206px; }
     el.innerHTML = html; document.body.appendChild(el);
   });
   (V.extras || []).forEach((x) => {
-    const el = document.createElement("div"); el.className = "extra"; el.style.left = x.x + "px"; el.style.top = x.y + "px"; el.innerHTML = x.html; document.body.appendChild(el);
+    const el = document.createElement("div"); el.className = "extra"; el.style.left = x.x + "px"; el.style.top = x.y + "px"; if (x.z !== undefined) el.style.zIndex = x.z; el.innerHTML = x.html; document.body.appendChild(el);
   });
   // phones: cx, cy = centre on the wide canvas; s = scale; r = rotation in degrees
   V.phones.forEach((p) => {

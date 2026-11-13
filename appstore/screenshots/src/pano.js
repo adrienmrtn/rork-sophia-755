@@ -201,9 +201,10 @@ const PANOS = {
       screen: s, cx: mid(i), cy: 232 + (956 * 0.78 + 21) / 2, s: 0.78,
       frame: i === 1 ? "#cdd9f5" : "#2e62c4", band: i === 1 ? "#e9effb" : "#dbe5f8" })),
     people: [
-      // opening panel: logo, bubble, and the before / after boy sitting on the bottom edge
+      // opening panel: logo, bubble, and the before / after boy sitting on the bottom edge, both on
+      // the same green floor (the band in `extras`, the colour of the "before" drawing's own floor)
       { name: "boy_before", x: 112, b: 956, h: 232, z: 1 },
-      { name: "boy_after", x: 324, b: 956, h: 230, z: 1 },
+      { name: "boy_after", x: 322, b: 938, h: 200, z: 1 },
       { name: "trophy", x: P(4) + 220, b: 1000, h: 185 },
       { name: "phone_away", x: P(7) + 372, b: 975, h: 215, flip: true },
       { name: "idea", x: P(8) + 330, b: 990, h: 240, flip: true },
@@ -211,6 +212,7 @@ const PANOS = {
       { name: "waving", x: P(9) + 388, b: 966, h: 205, flip: true },
     ],
     extras: [
+      { x: 0, y: 931.5, z: 0, html: '<div style="width:440px;height:24.5px;background:#1e8e73"></div>' },
       { x: P(4) + 22, y: 96, html: '<svg width="40" height="40" viewBox="0 0 24 22" style="transform:rotate(-12deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
       { x: P(4) + 372, y: 62, html: '<svg width="54" height="54" viewBox="0 0 24 22" style="transform:rotate(14deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
       { x: P(4) + 384, y: 880, html: '<svg width="44" height="44" viewBox="0 0 24 22" style="transform:rotate(10deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },

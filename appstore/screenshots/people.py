@@ -57,7 +57,7 @@ SCENE_STYLE = ("Whole figure visible, centred. Flat poster illustration, paper-c
                "background, a thin flat green floor strip along the bottom edge, no text, no outlines, no furniture.")
 SCENES = {
     "boy_before": f"Full-body drawing of {BOY}, sitting slumped on the floor with knees up, back hunched, head down, staring at a smartphone held in both hands, tired half-closed eyes, sad bored expression. " + SCENE_STYLE,
-    "boy_after": f"Full-body drawing of {BOY}, sitting upright cross-legged on the floor, holding a big open saffron book, head up above the book, wide awake, big delighted smile. " + SCENE_STYLE,
+    "boy_after": f"Full-body drawing of {BOY}, sitting upright cross-legged on the floor, reading an open saffron book that rests in his lap, both hands on the book at chest height, arms down, eyes looking down at the pages, absorbed, happy smile. " + SCENE_STYLE,
 }
 SCENE_COLORS = COLORS[:4] + [[92, 58, 38], [38, 150, 140]]
 
