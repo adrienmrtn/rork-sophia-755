@@ -99,8 +99,8 @@ for command in (
     "enter",
     "clock -e hhmm 0941",
     "battery -e level 100 -e plugged false",
-    "network -e wifi show -e level 4",
-    "network -e mobile show -e datatype none -e level 4",
+    "network -e wifi show -e level 4 -e fully true",
+    "network -e mobile show -e datatype none -e level 4 -e fully true",
     "notifications -e visible false",
 ):
     shell(f"am broadcast -a com.android.systemui.demo -e command {command}", check=False)
@@ -121,12 +121,18 @@ if tap_text("Explore", tree=tree):
 shell(f"am start -W -a android.intent.action.VIEW -d sophia://course/{COURSE} {PACKAGE}")
 time.sleep(12)
 tree = snap("05_course")
-if tap_text("Read the course", "Read again", "Start", "Continue", tree=tree):
+# Selon l'état du cours, le lien ouvre sa fiche ou directement la lecture.
+if tap_text("Read the course", "Read again", tree=tree):
     time.sleep(8)
-    tree = snap("06_reader")
-    shell("input swipe 540 1700 540 1000 400")
-    time.sleep(3)
-    snap("07_reader_scrolled")
+    tree = dump()
+# Le conseil « Touche les mots » de la première lecture recouvre la page.
+if tap_text("OK", tree=tree):
+    time.sleep(2)
+time.sleep(6)
+snap("06_reader")
+shell("input swipe 540 1700 540 1000 400")
+time.sleep(3)
+snap("07_reader_scrolled")
 
 shell("am broadcast -a com.android.systemui.demo -e command exit", check=False)
 print("terminé", flush=True)
