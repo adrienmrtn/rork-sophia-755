@@ -419,6 +419,9 @@ struct OnboardingV2View: View {
         let question: String
         let answer: String?
         switch screen {
+        case .swipe:
+            logSwipeAnswers()
+            return
         case .age:
             question = "age"
             answer = vm.ageRangeKey
@@ -452,6 +455,37 @@ struct OnboardingV2View: View {
                 "answer": .string(answer),
             ]
         )
+    }
+
+    /// Les cours du swipe : ceux gardés (`swipe_liked`) et ceux écartés (`swipe_passed`), par
+    /// leur numéro (`course_42_…` → `42`), triés et séparés par des virgules. Deux lignes
+    /// `onboarding_answer` ; une liste vide n'est pas envoyée.
+    private func logSwipeAnswers() {
+        let liked: Set<String> = Set(vm.likedCourseIds)
+        let shown: [String] = vm.swipedCourseIds
+        let lists: [(String, [String])] = [
+            ("swipe_liked", shown.filter { liked.contains($0) }),
+            ("swipe_passed", shown.filter { !liked.contains($0) }),
+        ]
+        for (question, ids) in lists {
+            let numbers: [Int] = ids.compactMap { Self.courseNumber($0) }.sorted()
+            guard !numbers.isEmpty else { continue }
+            AnalyticsService.shared.log(
+                .onboardingAnswer,
+                props: [
+                    "step": .string(Screen.swipe.analyticsName),
+                    "question": .string(question),
+                    "answer": .string(numbers.map(String.init).joined(separator: ",")),
+                ]
+            )
+        }
+    }
+
+    /// `course_42_pourquoi_reve_t_on` → 42.
+    private static func courseNumber(_ courseId: String) -> Int? {
+        let parts: [Substring] = courseId.split(separator: "_")
+        guard parts.count >= 2, parts[0] == "course" else { return nil }
+        return Int(parts[1])
     }
 
     /// Le compte connecté a été créé dans le dernier quart d'heure : c'est une inscription.

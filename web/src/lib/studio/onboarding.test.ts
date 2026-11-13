@@ -45,4 +45,9 @@ describe("questionViews", () => {
     expect(views[0].options.map((o) => o.share)).toEqual([1, 0.5]);
     expect(views[1].options.map((o) => o.label)).toEqual(["Yes", "No"]);
   });
+
+  it("names the courses of the swipe by their number", () => {
+    const [liked] = questionViews([{ question: "swipe_liked", answered: 3, options: [{ value: "42", installs: 3 }, { value: "150", installs: 1 }] }]);
+    expect(liked.options.map((o) => o.label)).toEqual(["Course 42", "Course 150"]);
+  });
 });

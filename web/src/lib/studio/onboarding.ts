@@ -110,7 +110,7 @@ export function funnel(rows: OnboardingStepRow[]): FunnelStep[] {
   }));
 }
 
-const QUESTION_ORDER = ["age", "knowledge", "motivation", "objectives", "topics", "phone_time", "reading_time", "reads_monthly", "forgets_reading", "too_much_phone", "likes_learning_daily"];
+const QUESTION_ORDER = ["age", "knowledge", "motivation", "objectives", "topics", "phone_time", "swipe_liked", "swipe_passed", "reading_time", "reads_monthly", "forgets_reading", "too_much_phone", "likes_learning_daily"];
 
 const QUESTION_LABEL: Record<string, string> = {
   age: "Age",
@@ -119,6 +119,8 @@ const QUESTION_LABEL: Record<string, string> = {
   objectives: "Objectives (several possible)",
   topics: "Subjects (several possible)",
   phone_time: "Daily phone time",
+  swipe_liked: "Courses kept in the swipe (several possible)",
+  swipe_passed: "Courses set aside in the swipe (several possible)",
   reading_time: "Preferred reading hour (iOS)",
   reads_monthly: "“I read at least once a month” (iOS)",
   forgets_reading: "“I forget what I read” (iOS)",
@@ -148,6 +150,8 @@ function optionLabel(question: string, value: string): string {
     return hours ? `${hours} h${rest ? ` ${rest}` : ""}` : `${rest} min`;
   }
   if (question === "reading_time" && /^\d+$/.test(value)) return `${value.padStart(2, "0")}:00`;
+  // Les cours du swipe sont envoyés par leur numéro (`course_42_…` → `42`).
+  if ((question === "swipe_liked" || question === "swipe_passed") && /^\d+$/.test(value)) return `Course ${value}`;
   return BOOLEAN_LABEL[value] ?? value;
 }
 

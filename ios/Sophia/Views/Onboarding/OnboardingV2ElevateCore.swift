@@ -358,18 +358,32 @@ struct OV2CoreAvatarCarousel: View {
     var body: some View {
         GeometryReader { geo in
             let margin: CGFloat = max(0, (geo.size.width - slot) / 2)
-            ScrollView(.horizontal) {
-                HStack(spacing: Self.spacing) {
-                    ForEach(Array(Avatars.all.enumerated()), id: \.element) { index, id in
-                        item(id, number: index + 1)
+            ScrollViewReader { proxy in
+                ScrollView(.horizontal) {
+                    HStack(spacing: Self.spacing) {
+                        ForEach(Array(Avatars.all.enumerated()), id: \.element) { index, id in
+                            item(id, number: index + 1)
+                                .id(id)
+                        }
+                    }
+                    .scrollTargetLayout()
+                }
+                .scrollIndicators(.hidden)
+                .scrollTargetBehavior(.viewAligned)
+                .scrollPosition(id: centered, anchor: .center)
+                .contentMargins(.horizontal, margin, for: .scrollContent)
+                .onAppear {
+                    // `scrollPosition(id:)` ne place pas toujours la liste sur sa valeur de départ :
+                    // elle s'ouvrait alors sur le premier avatar, non choisi, l'avatar choisi étant
+                    // hors de l'écran. On l'y amène nous-mêmes, sans animation, une fois la mise en
+                    // page faite.
+                    let chosen: String = avatarId
+                    proxy.scrollTo(chosen, anchor: .center)
+                    DispatchQueue.main.async {
+                        proxy.scrollTo(chosen, anchor: .center)
                     }
                 }
-                .scrollTargetLayout()
             }
-            .scrollIndicators(.hidden)
-            .scrollTargetBehavior(.viewAligned)
-            .scrollPosition(id: centered, anchor: .center)
-            .contentMargins(.horizontal, margin, for: .scrollContent)
         }
         .frame(height: avatarSize)
         .sensoryFeedback(.selection, trigger: avatarId)

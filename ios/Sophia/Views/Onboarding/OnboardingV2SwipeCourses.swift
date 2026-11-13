@@ -171,6 +171,12 @@ struct OnboardingV2SwipeCourses: View {
                         // VoiceOver annonce où l'on en est dans la pile (« 3 / 8 »).
                         .accessibilityValue(Text(verbatim: "\(i + 1) / \(courses.count)"))
                         .animation(DSCalmMotion.state, value: index)
+                        // Une carte répondue sort de la pile d'un coup, là où son envol l'a
+                        // menée (hors de l'écran). Sans cela elle était retirée en fondu, et
+                        // pendant ce fondu elle n'était plus « la carte du dessus » : elle
+                        // revenait au centre et s'y effaçait par-dessus la suivante, si bien
+                        // que c'est la carte suivante qui semblait disparaître.
+                        .transition(.identity)
                 }
             }
         }
@@ -377,7 +383,8 @@ struct OnboardingV2SwipeCourses: View {
         withAnimation(.easeOut(duration: 0.28)) {
             drag = CGSize(width: like ? 600 : -600, height: 0)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) {
+        // Après l'envol complet (0,28 s) : la carte est sortie de l'écran quand elle est retirée.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             drag = .zero
             index += 1
             isCommitting = false
