@@ -336,6 +336,7 @@ internal fun DiscountPaywall(
                                 haptics.confirm()
                                 onPurchased()
                             },
+                            paywallId = variant.paywallId,
                             analyticsProps = props,
                         )
                     },

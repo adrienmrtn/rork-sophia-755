@@ -131,11 +131,16 @@ class StoreViewModel {
         }
     }
 
+    /// `paywallId` : le paywall depuis lequel l'achat est lancé, le même identifiant que son
+    /// `paywall_view`. Il part sur les trois événements d'achat (`paywall_id`), pour rattacher
+    /// chaque achat à son paywall sans avoir à le deviner côté serveur.
     /// `analyticsProps` : propriétés ajoutées telles quelles aux événements d'achat (la variante
     /// d'un test A/B de paywall, par exemple). Elles ne changent rien à l'achat lui-même.
-    func purchase(package: Package, analyticsProps: [String: AnalyticsValue] = [:]) async -> Bool {
+    func purchase(package: Package, paywallId: String, analyticsProps: [String: AnalyticsValue] = [:]) async -> Bool {
         isPurchasing = true
         defer { isPurchasing = false }
+        var analyticsProps = analyticsProps
+        analyticsProps["paywall_id"] = .string(paywallId)
         let product = package.storeProduct.productIdentifier
         let offering = package.offeringIdentifier
         var startedProps: [String: AnalyticsValue] = ["product": .string(product), "offering": .string(offering)]

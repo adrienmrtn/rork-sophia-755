@@ -324,11 +324,33 @@ fun OnboardingV2Screen(
     // launch, or a resume that stayed there). A resume further along does not replay it.
     var showSplash by rememberSaveable { mutableStateOf(step == OnboardingStep.Welcome) }
 
+    // The answer given on the page being left going forward (`onboarding_answer`,
+    // docs/events.md), under the same names as iOS. A multiple choice goes as one line, its
+    // keys sorted and comma-separated; going back and changing one's mind sends a new line,
+    // and the last one counts. The age is a range, never an exact age; the first name is not sent.
+    fun logAnswer(leaving: OnboardingStep) {
+        val (question, answer) = when (leaving) {
+            OnboardingStep.Age -> "age" to answers.ageRange
+            OnboardingStep.Knowledge -> "knowledge" to answers.knowledgeLevel.toString()
+            OnboardingStep.Motivation -> "motivation" to answers.motivation
+            OnboardingStep.Objectives -> "objectives" to selectedObjectives.sorted().joinToString(",").ifEmpty { null }
+            OnboardingStep.Topics -> "topics" to answers.topics.sorted().joinToString(",").ifEmpty { null }
+            OnboardingStep.PhoneTime -> "phone_time" to phoneMinutes.toString()
+            else -> return
+        }
+        if (answer == null) return
+        Analytics.log(
+            "onboarding_answer",
+            props = mapOf("step" to leaving.analyticsName, "question" to question, "answer" to answer),
+        )
+    }
+
     // A racing timer (last swipe card, word animation) must not skip a whole screen.
     fun goTo(next: OnboardingStep) {
         val now = System.currentTimeMillis()
         if (now - lastAdvanceAt < 400L) return
         lastAdvanceAt = now
+        if (next.ordinal > step.ordinal) logAnswer(step)
         // The button just vibrated: no doubling. Advances without a button (carousel, end of
         // the swipe) keep their light tick.
         if (!OnboardingHapticGate.justConfirmed) haptics.selection()

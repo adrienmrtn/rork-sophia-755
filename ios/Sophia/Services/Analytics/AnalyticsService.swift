@@ -9,6 +9,9 @@ import UIKit
 nonisolated enum AnalyticsEventName: String, Sendable {
     case appOpen = "app_open"
     case onboardingStep = "onboarding_step"
+    /// Une réponse donnée pendant l'onboarding (`question`, `answer`). Comme `onboarding_step`,
+    /// elle part sans attendre la connexion, par `log_onboarding_events`.
+    case onboardingAnswer = "onboarding_answer"
     case cardImpression = "card_impression"
     case cardSkip = "card_skip"
     case cardOpen = "card_open"
@@ -108,6 +111,11 @@ nonisolated struct AnalyticsEventRow: Codable, Sendable {
     var ts: String
 }
 
+/// Le corps de l'appel à `log_onboarding_events`.
+nonisolated struct OnboardingEventsParams: Encodable, Sendable {
+    var p_events: [AnalyticsEventRow]
+}
+
 /// Une ligne de `public.subscriber_snapshots`.
 nonisolated struct SubscriberSnapshotRow: Codable, Sendable {
     var user_id: UUID
@@ -166,6 +174,13 @@ final class AnalyticsService {
     private var queueDirty = false
     private var isFlushing = false
     private var headFailures = 0
+    private var onboardingFailures = 0
+    /// Les événements qui partent par `log_onboarding_events`, avec ou sans compte.
+    private static let onboardingNames: Set<String> = [
+        AnalyticsEventName.onboardingStep.rawValue, AnalyticsEventName.onboardingAnswer.rawValue,
+    ]
+    /// La fonction refuse plus de 200 lignes par appel.
+    private static let onboardingBatchSize = 100
     private var timerTask: Task<Void, Never>?
     private var lastSnapshotKey: String?
 
@@ -320,12 +335,16 @@ final class AnalyticsService {
 
     func flush() async {
         guard !isFlushing else { return }
+        isFlushing = true
+        defer { isFlushing = false }
+
+        // L'onboarding d'abord : il part avec ou sans compte.
+        await flushOnboarding()
+
         guard let userId = AuthService.shared.currentUser?.id else {
             persistIfNeeded()
             return
         }
-        isFlushing = true
-        defer { isFlushing = false }
 
         let now = Date()
         for index in queue.indices where queue[index].user_id == nil {
@@ -333,19 +352,22 @@ final class AnalyticsService {
         }
         // Un autre compte, ou un événement trop vieux pour la règle RLS : abandonné.
         queue.removeAll { row in
-            guard row.user_id == userId, let date = Self.iso.date(from: row.ts) else { return true }
-            return now.timeIntervalSince(date) > Self.maxEventAge
+            guard let date = Self.iso.date(from: row.ts) else { return true }
+            if now.timeIntervalSince(date) > Self.maxEventAge { return true }
+            return row.user_id != userId && !Self.onboardingNames.contains(row.name)
         }
 
-        while !queue.isEmpty {
-            let batch = Array(queue.prefix(Self.batchSize))
+        while true {
+            // Les événements d'onboarding restés en file (réseau coupé) attendent leur propre
+            // envoi : `course_events` ne les connaît pas.
+            let batch = Array(queue.lazy.filter { !Self.onboardingNames.contains($0.name) }.prefix(Self.batchSize))
+            guard !batch.isEmpty else { break }
             do {
                 try await client
                     .from("course_events")
                     .upsert(batch, onConflict: "ts,event_id", returning: .minimal, ignoreDuplicates: true)
                     .execute()
-                queue.removeFirst(min(batch.count, queue.count))
-                queueDirty = true
+                removeFromQueue(batch)
                 headFailures = 0
             } catch let error as PostgrestError {
                 // Refus du serveur (ligne invalide) : au bout de trois fois, le lot est
@@ -355,8 +377,7 @@ final class AnalyticsService {
                 print("[Analytics] batch rejected: \(error)")
                 #endif
                 if headFailures >= 3 {
-                    queue.removeFirst(min(batch.count, queue.count))
-                    queueDirty = true
+                    removeFromQueue(batch)
                     headFailures = 0
                     continue
                 }
@@ -367,6 +388,41 @@ final class AnalyticsService {
             }
         }
         persistIfNeeded()
+    }
+
+    /// Les événements d'onboarding, envoyés par `log_onboarding_events` : la fonction est
+    /// ouverte sans compte, pour que quelqu'un qui abandonne avant la connexion (le
+    /// vingt-sixième écran) soit compté lui aussi. La ligne n'est rattachée qu'à
+    /// l'identifiant d'installation.
+    private func flushOnboarding() async {
+        while true {
+            let batch = Array(queue.lazy.filter { Self.onboardingNames.contains($0.name) }.prefix(Self.onboardingBatchSize))
+            guard !batch.isEmpty else { return }
+            do {
+                try await client
+                    .rpc("log_onboarding_events", params: OnboardingEventsParams(p_events: batch))
+                    .execute()
+                onboardingFailures = 0
+            } catch let error as PostgrestError {
+                // Refus du serveur : au bout de trois fois, le lot est abandonné.
+                onboardingFailures += 1
+                #if DEBUG
+                print("[Analytics] onboarding batch rejected: \(error)")
+                #endif
+                guard onboardingFailures >= 3 else { return }
+                onboardingFailures = 0
+            } catch {
+                // Réseau : on garde tout et on réessaie plus tard.
+                return
+            }
+            removeFromQueue(batch)
+        }
+    }
+
+    private func removeFromQueue(_ rows: [AnalyticsEventRow]) {
+        let ids = Set(rows.map(\.event_id))
+        queue.removeAll { ids.contains($0.event_id) }
+        queueDirty = true
     }
 
     // MARK: Persistance

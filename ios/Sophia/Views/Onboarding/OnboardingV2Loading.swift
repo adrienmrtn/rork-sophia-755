@@ -475,11 +475,11 @@ struct OnboardingV2Loading: View {
         Haptics.select()
         withAnimation(DSCalmMotion.state) { answers[question] = value }
         AnalyticsService.shared.log(
-            .onboardingStep,
+            .onboardingAnswer,
             props: [
-                "step": .string("loading_question"),
+                "step": .string("loading"),
                 "question": .string(Self.questionAnalyticsNames[question]),
-                "answer": .bool(value),
+                "answer": .string(value ? "true" : "false"),
             ]
         )
         Task { @MainActor in

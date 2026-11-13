@@ -285,6 +285,152 @@ const mockCampaign = {
   updated_at: "2026-11-08T17:30:00Z",
 };
 
+/** Des amis et des invitations plausibles, pour regarder /admin/data/social hors ligne. */
+function socialDashboard(days: number) {
+  const today = Date.UTC(2026, 10, 13);
+  const day = (i: number) => new Date(today - (days - 1 - i) * 86_400_000).toISOString().slice(0, 10);
+  const series = Array.from({ length: days }, (_, i) => ({ day: day(i), requests: Math.round(620 * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9)))), friendships: Math.round(410 * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9)))) }));
+  const requests = series.reduce((t, p) => t + p.requests, 0);
+  const invites = Math.round(requests * 0.9);
+  return {
+    days,
+    from: day(0),
+    friends: { requests, senders: Math.round(requests * 0.62), accepted: Math.round(requests * 0.66), declined: Math.round(requests * 0.03), pending: Math.round(requests * 0.31), new_friendships: Math.round(requests * 0.66), total_friendships: 48200, users_with_friends: 61400, users_with_3_friends: 9300, series },
+    duel_invites: { sent: invites, by_status: [["accepted", 0.58], ["expired", 0.17], ["cancelled", 0.12], ["busy", 0.08], ["declined", 0.05]].map(([status, share]) => ({ status, count: Math.round(invites * Number(share)) })) },
+    referrals: { new: Math.round(requests * 0.11), inviters: Math.round(requests * 0.08), total: 5400 },
+    follows: { new: Math.round(requests * 1.4), followers: Math.round(requests * 0.5), total: 88000, top_creators: [["marie-dupont", "Marie Dupont", 0.21], ["simon-lea", "Simon Lea", 0.17], ["rana-abdalla", "Rana Abdalla", 0.14], ["kate-waddams", "Kate Waddams", 0.11]].map(([creator, name, share]) => ({ creator, name, new: Math.round(requests * 1.4 * Number(share)) })) },
+  };
+}
+
+/** Un usage plausible, pour regarder /admin/data/usage hors ligne. */
+function usageDashboard(days: number) {
+  const today = Date.UTC(2026, 10, 13);
+  const day = (i: number) => new Date(today - (days - 1 - i) * 86_400_000).toISOString().slice(0, 10);
+  const wave = (i: number, base: number) => Math.round(base * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9))));
+  const series = Array.from({ length: days }, (_, i) => ({ day: day(i), active_users: wave(i, 18500), course_opens: wave(i, 31000), pages_read: wave(i, 96000), duels: wave(i, 7400) }));
+  const sum = (key: "active_users" | "course_opens" | "pages_read" | "duels") => series.reduce((t, p) => t + p[key], 0);
+  const counts = (share: number, correct: number) => ({ user_days: Math.round(sum("active_users") * share), course_opens: Math.round(sum("course_opens") * share), pages_read: Math.round(sum("pages_read") * share), completes: Math.round(sum("course_opens") * share * 0.41), likes: Math.round(sum("course_opens") * share * 0.07), quiz_answers: Math.round(sum("course_opens") * share * 1.8), quiz_correct: Math.round(sum("course_opens") * share * 1.8 * correct) });
+  const all = counts(1, 0.68);
+  const courses: [string, string, number, number][] = [
+    ["course_42_pourquoi_reve_t_on", "Pourquoi rêve-t-on ?", 0.031, 0.52], ["course_1_la_naissance_de_l_islam_622", "Comment l'islam est-il né en 622 ?", 0.027, 0.44],
+    ["course_150_la_nuit_etoilee_van_gogh", "Pourquoi le ciel de « La Nuit étoilée » tourbillonne-t-il ?", 0.024, 0.49], ["course_121_la_renaissance_italienne", "Pourquoi la Renaissance est-elle née en Italie ?", 0.021, 0.38],
+    ["course_77_qu_est_ce_qu_un_trou_noir", "Qu'est-ce qu'un trou noir ?", 0.019, 0.46], ["course_12_la_peste_noire_en_europe", "Comment la peste noire a-t-elle changé l'Europe ?", 0.017, 0.41],
+    ["course_203_le_mythe_de_sisyphe_camus", "Pourquoi faut-il imaginer Sisyphe heureux ?", 0.014, 0.33], ["course_88_la_joconde", "Pourquoi la Joconde est-elle si célèbre ?", 0.013, 0.47],
+  ];
+  const questions: [string, string, string, number, number][] = [
+    ["course_122_la_naissance_de_l_impressionnisme_q2", "Comment l'impressionnisme est-il né contre le Salon ?", "Quel tableau de Manet scandalise le Salon des Refusés en 1863 ?", 1840, 0.21],
+    ["course_12_la_peste_noire_en_europe_q4", "Comment la peste noire a-t-elle changé l'Europe ?", "Quelle part de la population européenne meurt entre 1347 et 1352 ?", 2610, 0.27],
+    ["course_77_qu_est_ce_qu_un_trou_noir_q3", "Qu'est-ce qu'un trou noir ?", "Comment appelle-t-on la limite au-delà de laquelle rien ne s'échappe ?", 3120, 0.31],
+    ["course_203_le_mythe_de_sisyphe_camus_q1", "Pourquoi faut-il imaginer Sisyphe heureux ?", "Vrai ou faux : pour Camus, l'absurde conduit au renoncement.", 1490, 0.34],
+    ["course_1_la_naissance_de_l_islam_622_q5", "Comment l'islam est-il né en 622 ?", "Dans quelle ville Muhammad s'installe-t-il après l'Hégire ?", 4050, 0.38],
+  ];
+  return {
+    days,
+    from: day(0),
+    min_answers: 20,
+    updated_at: "2026-11-13T09:45:00Z",
+    languages: ["de", "en", "es", "fr", "it", "pt"],
+    totals: { ...all, sessions: Math.round(all.user_days * 1.7), saves: Math.round(all.likes * 0.6), shares: Math.round(all.likes * 0.2) },
+    series,
+    by_language: [["fr", 0.54, 0.7], ["en", 0.21, 0.66], ["es", 0.12, 0.65], ["de", 0.07, 0.69], ["it", 0.04, 0.64], ["pt", 0.02, 0.62]].map(([lang, share, correct]) => ({ lang, ...counts(Number(share), Number(correct)) })),
+    by_platform: [{ platform: "android", ...counts(0.24, 0.66) }, { platform: "ios", ...counts(0.76, 0.69) }],
+    top_courses: courses.map(([course_id, title, share, finished]) => { const opens = Math.round(all.course_opens * share); return { course_id, title, opens, readers: Math.round(opens * 0.86), pages_read: Math.round(opens * 3.4), completes: Math.round(opens * finished), likes: Math.round(opens * 0.08) }; }),
+    quiz: { questions_seen: 2140, questions_ranked: 1675, hardest: questions.map(([question_id, title, question, answers, rate]) => ({ question_id, course_id: question_id.replace(/_q\d+$/, ""), answers: Math.round(answers * (days / 28)), correct: Math.round(answers * (days / 28) * rate), rate, title, question })) },
+    duels: { by_kind: [{ kind: "friend", started: Math.round(sum("duels") * 0.18), finished: Math.round(sum("duels") * 0.15), abandoned: Math.round(sum("duels") * 0.03), player_days: Math.round(sum("duels") * 0.09) }, { kind: "match", started: Math.round(sum("duels") * 0.82), finished: Math.round(sum("duels") * 0.61), abandoned: Math.round(sum("duels") * 0.21), player_days: Math.round(sum("duels") * 0.3) }], unknown_platform: 0 },
+  };
+}
+
+/** Des retours plausibles, pour regarder /admin/data/feedback hors ligne. */
+function feedbackDashboard(days: number) {
+  const item = (id: number, created_at: string, category: string, message: string, platform: string, lang: string, extra: Partial<{ has_email: boolean; is_premium: boolean }> = {}) => ({ id: `f${id}`, created_at, category, message, has_email: false, lang, platform, app_version: platform === "ios" ? "2" : "1.0.7", os_version: platform === "ios" ? "27.2" : "15", device: platform === "ios" ? "iPhone" : "Pixel 8", is_premium: false, ...extra });
+  const items = [
+    item(1, "2026-11-13T08:12:00Z", "bug", "Le son de la narration se coupe quand je verrouille l'écran, il faut relancer le cours.", "ios", "fr", { has_email: true, is_premium: true }),
+    item(2, "2026-11-13T07:40:00Z", "feature", "Would love a dark mode for reading at night.", "android", "en"),
+    item(3, "2026-11-12T21:05:00Z", "translation", "En el curso sobre Van Gogh, «remolino» aparece dos veces mal escrito.", "ios", "es"),
+    item(4, "2026-11-12T18:30:00Z", "content", "Un cours sur l'histoire du Japon serait génial !\nMerci pour l'app, je l'utilise tous les matins.", "ios", "fr", { is_premium: true }),
+    item(5, "2026-11-12T09:02:00Z", "idea", "Pouvoir défier un ami sur un cours précis.", "android", "fr", { has_email: true }),
+  ];
+  return { days, total: 128, languages: ["en", "es", "fr"], by_category: [{ category: "bug", count: 41 }, { category: "feature", count: 33 }, { category: "content", count: 24 }, { category: "idea", count: 16 }, { category: "translation", count: 9 }, { category: "other", count: 5 }], items };
+}
+
+/** Un onboarding plausible, pour regarder /admin/data/onboarding hors ligne. */
+function onboardingDashboard(days: number) {
+  const today = Date.UTC(2026, 10, 13);
+  const day = (i: number) => new Date(today - (days - 1 - i) * 86_400_000).toISOString().slice(0, 10);
+  const scale = days / 28;
+  const start = Math.round(42000 * scale);
+  // Part des installations encore là à chaque écran ; iOS seul pour quelques-uns.
+  const keep: [string, number, "all" | "ios" | "android"][] = [
+    ["welcome", 1, "all"], ["language", 0.93, "all"], ["lessons", 0.9, "all"], ["researchers", 0.88, "all"], ["intro", 0.86, "all"], ["social_proof", 0.81, "all"],
+    ["name", 0.79, "all"], ["age", 0.74, "all"], ["knowledge", 0.72, "all"], ["motivation", 0.71, "all"], ["objective", 0.7, "all"], ["topics", 0.68, "all"],
+    ["objective_intro", 0.67, "all"], ["phone_time", 0.66, "all"], ["years_grid", 0.65, "all"], ["transform", 0.64, "all"], ["questions", 0.63, "all"],
+    ["mission", 0.62, "all"], ["personalize", 0.61, "all"], ["swipe_courses", 0.6, "all"], ["reading_time", 0.57, "ios"], ["curve_90", 0.56, "all"],
+    ["notifications", 0.44, "all"], ["review", 0.54, "all"], ["loading", 0.53, "all"], ["profile", 0.52, "all"], ["login", 0.51, "all"], ["account", 0.3, "ios"],
+    ["follow_creators", 0.37, "all"], ["welcome_aboard", 0.36, "all"], ["features", 0.35, "all"], ["trial_steps", 0.34, "all"], ["reminder", 0.33, "all"],
+    ["paywall_annual", 0.32, "ios"], ["paywall_comparison", 0.2, "ios"], ["paywall", 0.31, "android"],
+  ];
+  const iosShare = 0.78;
+  const steps = keep.map(([name, rate, where]) => {
+    const ios = where === "android" ? 0 : Math.round(start * iosShare * rate);
+    const android = where === "ios" ? 0 : Math.round(start * (1 - iosShare) * rate);
+    return { step: name, installs: ios + android, ios, android };
+  });
+  const question = (name: string, answered: number, options: [string, number][]) => ({ question: name, answered: Math.round(answered * scale), options: options.map(([value, share]) => ({ value, installs: Math.round(answered * scale * share) })) });
+  return {
+    days,
+    from: day(0),
+    updated_at: "2026-11-13T09:35:00Z",
+    languages: ["de", "en", "es", "fr", "it", "pt"],
+    steps,
+    series: Array.from({ length: days }, (_, i) => ({ day: day(i), installs: Math.round(1500 * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9)))) })),
+    questions: [
+      question("age", 30200, [["under18", 0.11], ["18to24", 0.34], ["25to34", 0.27], ["35to44", 0.14], ["45to54", 0.08], ["55plus", 0.06]]),
+      question("knowledge", 29800, [["0", 0.18], ["1", 0.47], ["2", 0.28], ["3", 0.07]]),
+      question("motivation", 29400, [["grow", 0.31], ["conversations", 0.24], ["world", 0.21], ["career", 0.14], ["sharp", 0.1]]),
+      question("objectives", 29000, [["cultivate", 0.72], ["curiosity", 0.48], ["reduceScreen", 0.39], ["impress", 0.22], ["exams", 0.17]]),
+      question("topics", 28400, [["histoire", 0.61], ["sciences", 0.52], ["philosophie", 0.38], ["art", 0.33], ["geopolitique", 0.31], ["economie", 0.24]]),
+      question("phone_time", 27600, [["60", 0.04], ["120", 0.12], ["180", 0.31], ["240", 0.26], ["300", 0.17], ["360", 0.1]]),
+      question("reads_monthly", 17200, [["true", 0.58], ["false", 0.42]]),
+      question("too_much_phone", 17100, [["true", 0.81], ["false", 0.19]]),
+    ],
+  };
+}
+
+/** Un tableau de bord des paywalls plausible, pour regarder /admin/data hors ligne. */
+function paywallDashboard(days: number) {
+  const today = Date.UTC(2026, 10, 13);
+  const day = (i: number) => new Date(today - (days - 1 - i) * 86_400_000).toISOString().slice(0, 10);
+  const wave = (i: number, base: number) => Math.round(base * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9))));
+  const counts = (views: number, rate: number) => ({ views, viewers: Math.round(views * 0.72), purchases_started: Math.round(views * rate * 1.9), purchases_completed: Math.round(views * rate), purchases_cancelled: Math.round(views * rate * 0.8), purchases_failed: Math.round(views * rate * 0.1) });
+  const scale = days / 28;
+  const paywalls: [string, number, number][] = [["onboarding_annual", 41200, 0.052], ["onboarding_comparison", 30900, 0.021], ["native_course_unlock_bonhomme", 6400, 0.018], ["native_course_unlock_reviews", 6350, 0.024], ["native_discount_percent", 5100, 0.031], ["native_discount_graduate", 5040, 0.027], ["native_quiz", 2300, 0.012], ["native_audio", 1250, 0.009]];
+  const by_paywall = paywalls.map(([paywall_id, views, rate]) => ({ paywall_id, ...counts(Math.round(views * scale), rate) }));
+  const sum = (key: keyof ReturnType<typeof counts>) => by_paywall.reduce((total, row) => total + row[key], 0);
+  const revenueDays = Array.from({ length: days }, (_, i) => ({ day: day(i), revenue: wave(i, 6400), trials: wave(i, 460) }));
+  const offering = (name: string, trials: number, converted: number, direct: number, revenue: number) => ({ offering: name, trials: Math.round(trials * scale), trial_conversions: Math.round(converted * scale), direct_purchases: Math.round(direct * scale), renewals: Math.round(converted * 0.05 * scale), refunds: Math.round(converted * 0.08 * scale), revenue: Math.round(revenue * scale), proceeds: Math.round(revenue * 0.74 * scale) });
+  const by_offering = [offering("fin_onboarding", 10400, 3400, 0, 121000), offering("offre_discount_2999", 0, 90, 650, 15400), offering("offre_discount", 0, 60, 630, 14500), offering("debloquer_cours", 120, 20, 0, 700), offering("quizz", 50, 5, 0, 210)];
+  const total = (key: "trials" | "trial_conversions" | "direct_purchases" | "renewals" | "refunds" | "revenue" | "proceeds") => by_offering.reduce((t, row) => t + row[key], 0);
+  return {
+    days,
+    from: day(0),
+    updated_at: "2026-11-13T09:25:00Z",
+    languages: ["de", "en", "es", "fr", "it", "pt"],
+    totals: { views: sum("views"), viewers: sum("viewers"), purchases_started: sum("purchases_started"), purchases_completed: sum("purchases_completed"), purchases_cancelled: sum("purchases_cancelled"), purchases_failed: sum("purchases_failed") },
+    series: Array.from({ length: days }, (_, i) => ({ day: day(i), views: wave(i, 3500), purchases: wave(i, 120) })),
+    by_paywall,
+    by_experiment: [
+      { experiment: "course_paywall_ab", variant: "bonhomme", ...counts(Math.round(6400 * scale), 0.018) },
+      { experiment: "course_paywall_ab", variant: "reviews", ...counts(Math.round(6350 * scale), 0.024) },
+      { experiment: "discount_paywall_ab", variant: "graduate", ...counts(Math.round(110 * scale), 0.027) },
+      { experiment: "discount_paywall_ab", variant: "percent", ...counts(Math.round(120 * scale), 0.031) },
+    ],
+    by_offering: [{ offering: "fin_onboarding", ...counts(Math.round(88000 * scale), 0.037) }, { offering: "offre_discount", ...counts(Math.round(5200 * scale), 0.03) }, { offering: "offre_discount_2999", ...counts(Math.round(4940 * scale), 0.028) }],
+    by_language: [["fr", 52000, 0.041], ["en", 21000, 0.033], ["es", 11800, 0.027], ["de", 6900, 0.036], ["it", 4100, 0.03], ["pt", 2740, 0.022]].map(([lang, views, rate]) => ({ lang, ...counts(Math.round(Number(views) * scale), Number(rate)) })),
+    by_platform: [{ platform: "android", ...counts(Math.round(21500 * scale), 0.026) }, { platform: "ios", ...counts(Math.round(77040 * scale), 0.039) }],
+    revenue: { totals: { trials: total("trials"), trial_conversions: total("trial_conversions"), direct_purchases: total("direct_purchases"), renewals: total("renewals"), refunds: total("refunds"), revenue: total("revenue"), proceeds: total("proceeds") }, series: revenueDays, by_offering, first_day: "2026-11-08" },
+  };
+}
+
 function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[]): { data: unknown; error: null } {
   const single = has(ops, "maybeSingle") || has(ops, "single");
   const list = (rows: unknown[]) => ({ data: single ? (rows[0] ?? null) : rows, error: null });
@@ -309,6 +455,16 @@ function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[])
           },
           error: null,
         };
+      case "admin_social_dashboard":
+        return { data: socialDashboard(Number(p.p_days ?? 28)), error: null };
+      case "admin_usage_dashboard":
+        return { data: usageDashboard(Number(p.p_days ?? 28)), error: null };
+      case "admin_feedback_dashboard":
+        return { data: feedbackDashboard(Number(p.p_days ?? 28)), error: null };
+      case "admin_onboarding_dashboard":
+        return { data: onboardingDashboard(Number(p.p_days ?? 28)), error: null };
+      case "admin_paywall_dashboard":
+        return { data: paywallDashboard(Number(p.p_days ?? 28)), error: null };
       default:
         return { data: null, error: null };
     }

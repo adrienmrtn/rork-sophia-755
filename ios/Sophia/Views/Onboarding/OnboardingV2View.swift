@@ -400,12 +400,57 @@ struct OnboardingV2View: View {
         if list[next] == .intro {
             carousel.go(to: 0)
         }
+        logAnswer(leaving: list[stepIndex])
         move(to: next, forward: true)
         // Remembered on every step, so the app being killed here resumes here.
         OnboardingResumeStore.step = list[next].analyticsName
         AnalyticsService.shared.log(
             .onboardingStep,
             props: ["step": .string(list[next].analyticsName), "index": .int(next)]
+        )
+    }
+
+    /// La réponse donnée sur l'écran qu'on quitte en avançant (`onboarding_answer`,
+    /// docs/events.md). Une réponse à choix multiples part en une ligne, ses clés triées et
+    /// séparées par des virgules ; revenir en arrière et changer d'avis en envoie une
+    /// nouvelle, et la dernière compte. L'âge est une tranche, jamais un âge exact ; le
+    /// prénom n'est pas envoyé.
+    private func logAnswer(leaving screen: Screen) {
+        let question: String
+        let answer: String?
+        switch screen {
+        case .age:
+            question = "age"
+            answer = vm.ageRangeKey
+        case .knowledge:
+            question = "knowledge"
+            answer = String(vm.knowledgeLevel)
+        case .motivation:
+            question = "motivation"
+            answer = vm.motivationKey
+        case .objectives:
+            question = "objectives"
+            answer = vm.objectiveKeys.isEmpty ? nil : vm.objectiveKeys.sorted().joined(separator: ",")
+        case .topics:
+            question = "topics"
+            answer = vm.topicKeys.isEmpty ? nil : vm.topicKeys.sorted().joined(separator: ",")
+        case .phoneTime:
+            question = "phone_time"
+            answer = String(vm.phoneDailyMinutes)
+        case .readingTime:
+            question = "reading_time"
+            answer = String(vm.reminderHour)
+        default:
+            return
+        }
+        guard let answer else { return }
+        AnalyticsService.shared.log(
+            .onboardingAnswer,
+            props: [
+                "step": .string(screen.analyticsName),
+                "question": .string(question),
+                "answer": .string(answer),
+            ]
         )
     }
 

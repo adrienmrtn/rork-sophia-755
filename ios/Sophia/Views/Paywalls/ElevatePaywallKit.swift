@@ -512,7 +512,7 @@ struct ElevatePaywallScreen<Content: View>: View {
         Haptics.confirm()
         purchasing = true
         Task {
-            let ok: Bool = await store.purchase(package: package, analyticsProps: analyticsProps)
+            let ok: Bool = await store.purchase(package: package, paywallId: paywallId, analyticsProps: analyticsProps)
             purchasing = false
             if ok {
                 onPurchased()
