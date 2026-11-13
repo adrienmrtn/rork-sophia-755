@@ -79,6 +79,9 @@ object Analytics {
     private var scope: CoroutineScope? = null
     private var queueFile: File? = null
     private var installId: String = ""
+
+    /** The install's identifier, read-only (empty before [init]): what `PaywallExperiment` draws from. */
+    val installIdentifier: String get() = installId
     private var sessionId: String = UUID.randomUUID().toString()
     private var lastActiveAt = System.currentTimeMillis()
     private var headFailures = 0

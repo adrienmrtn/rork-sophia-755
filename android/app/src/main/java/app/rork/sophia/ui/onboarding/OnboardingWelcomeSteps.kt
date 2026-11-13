@@ -1,6 +1,5 @@
 package app.rork.sophia.ui.onboarding
 
-import app.rork.sophia.ui.theme.DSLegacy
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
@@ -375,33 +374,33 @@ internal fun FeaturesStep(language: AppLanguage, firstName: String, onContinue: 
     OnboardingPage(
         contentArrangement = Arrangement.Top,
         footer = {
-            OnboardingLegacyCta(StringStore.text(context, "common.continue", language), onContinue)
+            OnboardingCta(StringStore.text(context, "common.continue", language), onContinue)
         },
     ) {
         Spacer(Modifier.height(64.dp))
         Text(
             text = personalizedText(context, "onboardingV2.features.title", firstName, language),
-            style = OV2Legacy.title,
+            style = OV2.title,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp).ov2Reveal(50),
         )
         Spacer(Modifier.height(28.dp))
         FeatureRail(features = features, revealed = revealed)
         Spacer(Modifier.height(28.dp))
-        LaurelBadge(size = 50.dp, tint = OV2Legacy.inkSecondary, modifier = Modifier.ov2Reveal(1100)) {
+        LaurelBadge(size = 50.dp, tint = OV2.inkSecondary, modifier = Modifier.ov2Reveal(1100)) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(3.dp),
             ) {
-                Icon(Icons.Filled.Shop, contentDescription = null, tint = OV2Legacy.ink, modifier = Modifier.size(18.dp))
+                Icon(Icons.Filled.Shop, contentDescription = null, tint = OV2.ink, modifier = Modifier.size(18.dp))
                 Text(
                     text = 4.8.formatted(language, 1) + " / 5",
                     // « 4.8 / 5 » reads left to right in every language; bidi would print « 5 / 4.8 ».
-                    style = OV2Legacy.headline.copy(fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, textDirection = TextDirection.Ltr),
+                    style = OV2.headline.copy(fontSize = 20.sp, fontWeight = FontWeight.Bold, textDirection = TextDirection.Ltr),
                 )
                 Text(
                     text = StringStore.text(context, "onboardingV2.review.appStore", language).uppercaseInApp(),
-                    style = OV2Legacy.caption.copy(fontSize = 11.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.2.sp),
+                    style = OV2.caption.copy(fontSize = 11.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.2.sp),
                     maxLines = 1,
                 )
             }
@@ -411,7 +410,7 @@ internal fun FeaturesStep(language: AppLanguage, firstName: String, onContinue: 
         Spacer(Modifier.height(22.dp))
         Text(
             text = StringStore.text(context, "onboardingV2.features.noCommitment", language),
-            style = OV2Legacy.headline.copy(fontSize = 20.sp),
+            style = OV2.headline.copy(fontSize = 20.sp),
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(horizontal = 28.dp).ov2Reveal(1400),
         )
@@ -434,7 +433,7 @@ private fun FeatureRail(features: List<Feature>, revealed: Int) {
             modifier = Modifier
                 .width(48.dp)
                 .height(rowHeight * features.size)
-                .background(DSLegacy.accentTint, RoundedCornerShape(24.dp)),
+                .background(DS.accentTint, RoundedCornerShape(24.dp)),
         ) {
             Column {
                 features.forEachIndexed { i, feature ->
@@ -484,7 +483,7 @@ private fun FeatureRail(features: List<Feature>, revealed: Int) {
                 ) {
                     Text(
                         text = feature.text,
-                        style = OV2Legacy.body.copy(color = OV2Legacy.ink, lineHeight = 20.sp),
+                        style = OV2.body.copy(color = OV2.ink, lineHeight = 20.sp),
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis,
                     )
