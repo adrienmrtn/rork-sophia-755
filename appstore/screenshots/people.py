@@ -45,7 +45,38 @@ PROPS = {
     "prop_globe": "A desk globe of the Earth on a stand.",
     "prop_mask": "A pair of theatre masks, comedy and tragedy.",
 }
-PROMPTS = {**{k: v + " " + STYLE for k, v in PEOPLE.items()}, **{k: v + " " + PROP_STYLE for k, v in PROPS.items()}}
+# Before / after for the opening panel: the same teenager slumped over a phone, then reading.
+# The model draws a floor whatever the prompt says, so the prompt asks for a cream wall and a
+# green floor strip: the wall is cut out by colour (chroma key on the top corners, which keeps
+# the cream and white parts of the figure) and the two floors line up along the panel's bottom
+# edge. Recraft caps prompts at 1000 characters. Several takes were made and one pair kept.
+BOY = ("a teenage boy with pale cream skin, messy straight dark brown hair with spiky tufts, coral red sweater, "
+       "navy blue trousers, cream sneakers with saffron stripes")
+SCENE_STYLE = ("Whole figure visible, centred. Flat poster illustration, paper-cut shapes, palette of navy blue, "
+               "saffron yellow, coral red, cream and brown, bold simple forms, subtle paper grain, plain empty cream "
+               "background, a thin flat green floor strip along the bottom edge, no text, no outlines, no furniture.")
+SCENES = {
+    "boy_before": f"Full-body drawing of {BOY}, sitting slumped on the floor with knees up, back hunched, head down, staring at a smartphone held in both hands, tired half-closed eyes, sad bored expression. " + SCENE_STYLE,
+    "boy_after": f"Full-body drawing of {BOY}, sitting upright cross-legged on the floor, holding a big open saffron book, head up above the book, wide awake, big delighted smile. " + SCENE_STYLE,
+}
+SCENE_COLORS = COLORS[:4] + [[92, 58, 38], [38, 150, 140]]
+
+def chroma_key(im):
+    """Transparent wherever the pixel is close to the wall colour sampled in the top corners."""
+    import numpy as np
+    a = np.asarray(im.convert("RGB")).astype(float)
+    corners = np.concatenate([a[:24, :24].reshape(-1, 3), a[:24, -24:].reshape(-1, 3)])
+    d = np.sqrt(((a - np.median(corners, axis=0)) ** 2).sum(axis=2))
+    alpha = np.clip((d - 38) / 22, 0, 1)
+    out = Image.fromarray(np.dstack([a, alpha * 255]).astype("uint8"), "RGBA")
+    # drop the paper-grain specks the key leaves on the wall: keep alpha only near solid areas
+    from PIL import ImageChops, ImageFilter
+    al = out.getchannel("A")
+    solid = al.point(lambda v: 255 if v > 128 else 0).filter(ImageFilter.MinFilter(7)).filter(ImageFilter.MaxFilter(13))
+    out.putalpha(ImageChops.multiply(al, solid))
+    return out
+
+PROMPTS = {**SCENES, **{k: v + " " + STYLE for k, v in PEOPLE.items()}, **{k: v + " " + PROP_STYLE for k, v in PROPS.items()}}
 
 def call(method, url, body=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None, method=method,
@@ -67,18 +98,25 @@ def run(model, payload, budget=420):
     raise TimeoutError(model)
 
 def make(name):
-    res = run("fal-ai/recraft-v3", {"prompt": PROMPTS[name], "image_size": "square_hd" if name in PROPS else "portrait_4_3",
-        "style": "digital_illustration/2d_art_poster", "colors": [{"r": c[0], "g": c[1], "b": c[2]} for c in COLORS]})
+    res = run("fal-ai/recraft-v3", {"prompt": PROMPTS[name], "image_size": "square_hd" if name in PROPS or name in SCENES else "portrait_4_3",
+        "style": "digital_illustration/2d_art_poster", "colors": [{"r": c[0], "g": c[1], "b": c[2]} for c in (SCENE_COLORS if name in SCENES else COLORS)]})
     url = res["images"][0]["url"]
-    cut = run("fal-ai/birefnet", {"image_url": url, "output_format": "png"})
-    with urllib.request.urlopen(urllib.request.Request(cut["image"]["url"], headers={"User-Agent": "appstore-art/1.0"}), timeout=120) as r:
-        im = Image.open(io.BytesIO(r.read())).convert("RGBA")
-    im = im.crop(im.getbbox())
+    if name in SCENES:
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "appstore-art/1.0"}), timeout=120) as r:
+            im = chroma_key(Image.open(io.BytesIO(r.read())))
+    else:
+        cut = run("fal-ai/birefnet", {"image_url": url, "output_format": "png"})
+        with urllib.request.urlopen(urllib.request.Request(cut["image"]["url"], headers={"User-Agent": "appstore-art/1.0"}), timeout=120) as r:
+            im = Image.open(io.BytesIO(r.read())).convert("RGBA")
+    if name not in SCENES:
+        im = im.crop(im.getbbox())
     if max(im.size) > 900:
         k = 900 / max(im.size); im = im.resize((round(im.width * k), round(im.height * k)), Image.LANCZOS)
     OUT.mkdir(parents=True, exist_ok=True)
-    im.save(OUT / f"{name}.png", optimize=True)
+    im.save(OUT / f"{name}{SUFFIX}.png", optimize=True)
     print(name, im.size, flush=True)
+
+SUFFIX = os.environ.get("SUFFIX", "")   # to keep several takes of one prompt
 
 if __name__ == "__main__":
     if not KEY: sys.exit("FAL_KEY manquant")
@@ -86,5 +124,5 @@ if __name__ == "__main__":
     from concurrent.futures import ThreadPoolExecutor
     def safe(n):
         try: make(n)
-        except Exception as e: print("ECHEC", n, repr(e)[:300], flush=True)
+        except Exception as e: print("ECHEC", n, repr(e)[:200], getattr(e, "read", lambda: b"")()[:300], flush=True)
     with ThreadPoolExecutor(5) as ex: list(ex.map(safe, names))
