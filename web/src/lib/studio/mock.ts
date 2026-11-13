@@ -285,6 +285,25 @@ const mockCampaign = {
   updated_at: "2026-11-08T17:30:00Z",
 };
 
+/** Une santé de collecte plausible, pour regarder /admin/data/health hors ligne. */
+function dataHealth() {
+  const today = Date.UTC(2026, 10, 13);
+  const day = (i: number) => new Date(today - (29 - i) * 86_400_000).toISOString().slice(0, 10);
+  const series = Array.from({ length: 30 }, (_, i) => { const events = i < 9 ? 0 : Math.round(640_000 * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9)))); return { day: day(i), events, ios: Math.round(events * 0.76), android: Math.round(events * 0.24) }; });
+  const week = series.slice(22, 29).reduce((t, p) => t + p.events, 0);
+  const names: [string, number][] = [["card_impression", 0.31], ["section_view", 0.22], ["card_skip", 0.17], ["quiz_answer", 0.09], ["app_open", 0.07], ["course_open", 0.05], ["onboarding_step", 0.04], ["card_open", 0.02], ["paywall_view", 0.015], ["like", 0.005]];
+  return {
+    checked_at: "2026-11-13T10:48:00Z",
+    retention_days: 60,
+    database_bytes: 11_400_000_000,
+    journal: { bytes: 8_900_000_000, rows: 13_700_000, days_kept: 21, oldest_day: day(9), onboarding_bytes: 310_000_000, summaries_bytes: 46_000_000 },
+    series,
+    last_7_days: { events: week, by_name: names.map(([name, share]) => ({ name, events: Math.round(week * share) })), by_version: [{ platform: "android", app_version: "1.0.7", events: Math.round(week * 0.24), last_day: day(29) }, { platform: "ios", app_version: "2", events: Math.round(week * 0.71), last_day: day(29) }, { platform: "ios", app_version: "2.0.1", events: Math.round(week * 0.05), last_day: day(29) }] },
+    platforms: [{ platform: "android", last_day: day(29), events_yesterday: series[28].android }, { platform: "ios", last_day: day(29), events_yesterday: series[28].ios }],
+    jobs: [["course_events_partitions", "5 0 * * *", "2026-11-13T00:05:00Z", 0.3], ["daily_course_stats", "20 2 * * *", "2026-11-13T02:20:00Z", 4.1], ["daily_onboarding_stats", "35 * * * *", "2026-11-13T10:35:00Z", 1.2], ["daily_paywall_stats", "25 * * * *", "2026-11-13T10:25:00Z", 2.6], ["daily_usage_stats", "45 * * * *", "2026-11-13T10:45:00Z", 9.8]].map(([name, schedule, started_at, seconds]) => ({ name, schedule, active: true, status: "succeeded", started_at, seconds, message: null })),
+  };
+}
+
 /** Des amis et des invitations plausibles, pour regarder /admin/data/social hors ligne. */
 function socialDashboard(days: number) {
   const today = Date.UTC(2026, 10, 13);
@@ -455,6 +474,8 @@ function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[])
           },
           error: null,
         };
+      case "admin_data_health":
+        return { data: dataHealth(), error: null };
       case "admin_social_dashboard":
         return { data: socialDashboard(Number(p.p_days ?? 28)), error: null };
       case "admin_usage_dashboard":
