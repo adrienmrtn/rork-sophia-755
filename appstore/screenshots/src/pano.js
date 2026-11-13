@@ -234,7 +234,7 @@ function recolour(dir, themes, hearts) {
   });
 }
 // Bold: a different strong colour on almost every panel.
-PANOS["showcase-bold"] = recolour("-showcase-bold", ["cream", "blue", "sun", "navy", "pink", "blue", "coral", "navy", "cream"], "#ffffff");
+PANOS["showcase-bold"] = recolour("-showcase-bold", ["cream", "blue", "coral", "navy", "pink", "coral", "blue", "coral", "cream"], "#ffffff");
 // Trio: cream, blue and pink in rotation.
 PANOS["showcase-trio"] = recolour("-showcase-trio", ["cream", "blue", "pink", "cream", "blue", "pink", "cream", "blue", "pink"], "#f4a3c4");
 
