@@ -12,7 +12,9 @@
 
   /* ---------- Presenting screen: end of ProfileV2View ---------- */
   /* Scroll content ends 44 pt (20 + 24) above the tab bar (83 pt). */
-  .bg { position: absolute; left: 20px; right: 20px; bottom: 127px; display: flex; flex-direction: column; }
+  /* Nudged 133 pt further up than the true end of the scroll so the status bar falls in the gap
+     between the QR buttons and the Badges title instead of across a button. */
+  .bg { position: absolute; left: 20px; right: 20px; bottom: 260px; display: flex; flex-direction: column; }
 
   .card { background: var(--surface); border-radius: 16px; box-shadow: inset 0 0 0 1.5px var(--hairline), 0 1px 0 var(--hairline); }
 
@@ -31,7 +33,7 @@
     font-size: 17px; font-weight: 600; }
 
   /* FriendQRActionButton */
-  .qr-row { display: flex; gap: 10px; margin-top: 10px; }
+  .qr-row { display: flex; gap: 10px; margin-top: 10px; visibility: hidden; }
   .qr { flex: 1; height: 50px; display: flex; align-items: center; justify-content: center; gap: 8px;
     border-radius: 16px; background: var(--surface); color: var(--ink);
     box-shadow: inset 0 0 0 1.5px var(--hairline), 0 1.5px 0 var(--hairline);
@@ -134,9 +136,9 @@
   </div>
 
   <div class="pills" style="margin-top:24px">
-    <div class="pill on"><span data-s="profile.list.toRead"></span>&nbsp;· <span data-c="countToRead"></span></div>
-    <div class="pill"><span data-s="profile.list.read"></span>&nbsp;· <span data-c="countRead"></span></div>
-    <div class="pill"><span data-s="profile.list.liked"></span>&nbsp;· <span data-c="countLiked"></span></div>
+    <div class="pill on"><span><span data-s="profile.list.toRead"></span> · <span data-c="countToRead"></span></span></div>
+    <div class="pill"><span><span data-s="profile.list.read"></span> · <span data-c="countRead"></span></span></div>
+    <div class="pill"><span><span data-s="profile.list.liked"></span> · <span data-c="countLiked"></span></span></div>
   </div>
   <div class="course card">
     <img src="../../../../ios/Sophia/CourseImages/la_joconde.jpg" alt="">
@@ -144,7 +146,11 @@
   </div>
   <!-- Rest of the page, entirely behind the sheet: two more rows (84 + 9 each), « Voir plus »
        (44 + 9), then the Anti-scroll poster card (10 + 81). Kept as height only. -->
-  <div style="height:330px"></div>
+  <div class="course card">
+    <img src="../../../../ios/Sophia/CourseImages/fresh_coriander_cilantro_bunch_leaves.jpg" alt="">
+    <div><div class="t" data-c="course2Title"></div><div class="m" data-c="course2Meta"></div></div>
+  </div>
+  <div style="height:237px"></div>
 </div>
 
 <div class="dim"></div>
@@ -158,7 +164,7 @@
   <div class="tiles">
     <div class="tile">
       <!-- music.note -->
-      <svg width="20" height="25" viewBox="0 0 20 25" fill="currentColor"><path d="M17.800.300 8.300 2.700c-.9.200-1.400.900-1.400 1.800v11.700a5 5 0 0 0-2.200-.300C2.200 16.200.400 18 .400 20.200s1.700 3.900 4 3.800c2.700-.100 4.900-2.200 4.900-5V8.300l8-2v7.400a5 5 0 0 0-2.200-.300c-2.500.3-4.300 2.100-4.300 4.300s1.700 3.900 4 3.800c2.700-.100 4.900-2.200 4.900-5V1.800c0-1-.9-1.800-1.900-1.500Z"/></svg>
+      <svg width="20" height="25" viewBox="0 0 20 25" fill="currentColor"><ellipse cx="6.800" cy="19.800" rx="5.600" ry="4.300" transform="rotate(-18 6.800 19.800)"/><path d="M9.900 1.700c0-.9.900-1.500 1.700-1.200l6.300 2.200c.8.300 1.300 1 1.300 1.800v2.900c0 .9-.9 1.500-1.700 1.200l-5-1.800v12.400H9.900V1.700Z"/></svg>
       <span class="lock"><svg width="9" height="12" viewBox="0 0 9 12" fill="currentColor"><path fill-rule="evenodd" d="M1.500 5V3.500a3 3 0 0 1 6 0V5h.2c.7 0 1.300.600 1.300 1.300v4.400c0 .7-.600 1.300-1.300 1.300H1.300C.600 12 0 11.400 0 10.700V6.300C0 5.600.600 5 1.300 5h.2Zm1.500 0h3V3.500a1.500 1.500 0 0 0-3 0V5Z"/></svg></span>
     </div>
     <div class="tile">
@@ -219,6 +225,8 @@
     countLiked: "9",
     courseTitle: "Pourquoi la Joconde est-elle aussi connue ?",
     courseMeta: "Dusan Nikolic · 5 min",
+    course2Title: "Pourquoi certains détestent-ils la coriandre ?",
+    course2Meta: "Stacy Jankowski · 4 min",
   };
   document.querySelectorAll("[data-s]").forEach((el) => { el.innerHTML = S[el.dataset.s]; });
   document.querySelectorAll("[data-c]").forEach((el) => { el.innerHTML = C[el.dataset.c]; });

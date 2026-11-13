@@ -6,8 +6,8 @@ const DEVICES = {
   "iphone-6.9": {
     width: 440, height: 956, scale: 3,
     layout: {
-      "head-top": "54px", "head-h": "168px", "head-pad": "26px", "head-size": "41px",
-      "phone-top": "232px", "s": "0.732", "bezel": "9px",
+      "head-top": "56px", "head-h": "152px", "head-pad": "26px", "head-size": "41px",
+      "phone-top": "226px", "s": "0.72", "bezel": "9px",
     },
   },
 };
@@ -18,7 +18,7 @@ const SHOTS = [
   { screen: "quiz", theme: "cream" },
   { screen: "blocker", theme: "pink" },
   { screen: "duels", theme: "navy" },
-  { screen: "explore", theme: "cream" },
+  { screen: "explore", theme: "cream", layout: { "head-size": "36px" } },
   { screen: "profile", theme: "sun" },
 ];
 
