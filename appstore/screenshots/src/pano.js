@@ -284,7 +284,7 @@ const STORE_SOURCES = {
 for (const v of ["en-GB", "en-AU", "en-CA"]) STORE_SOURCES[v] = STORE_SOURCES["en-US"];
 for (const [locale, c] of Object.entries(SC)) {
   STORE_SOURCES[locale] = { lang: c.lang, copy: Object.assign({}, c, {
-    love: c.love, authors: c.authors.map(([name, cred], k) => [name, cred, AVATARS[k]]) }) };
+    hero: [c.hero.join("<br>")], authors: c.authors.map(([name, cred], k) => [name, cred, AVATARS[k]]) }) };
 }
 const STORE_LOCALES = Object.keys(STORE_SOURCES);
 for (const [locale, src] of Object.entries(STORE_SOURCES)) {
