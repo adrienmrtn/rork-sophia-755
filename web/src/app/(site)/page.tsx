@@ -58,10 +58,7 @@ export default async function HomePage() {
         {/* L’app en trois écrans */}
         <section className="border-y border-line bg-paper">
           <div className={`${container} flex flex-col gap-10 pt-16`}>
-            <div className="flex max-w-[720px] flex-col gap-2.5">
-              <h2 className="text-[36px] font-extrabold leading-[1.1] tracking-[-0.9px]">{h.appTitle}</h2>
-              <p className="text-[17px] leading-[1.5] text-ink-3">{h.appLead}</p>
-            </div>
+            <h2 className="max-w-[720px] text-[36px] font-extrabold leading-[1.1] tracking-[-0.9px]">{h.appTitle}</h2>
             <div className="grid grid-cols-1 items-end gap-6 sm:grid-cols-3">
               {[
                 ["/app/explore.png", h.appExplore, 250, 400],
@@ -107,10 +104,7 @@ export default async function HomePage() {
 
         {/* Cette semaine */}
         <section className={`${container} flex flex-col gap-7 pt-16 pb-6`}>
-          <div className="flex flex-col gap-2">
-            <h2 className="text-[30px] font-extrabold tracking-[-0.7px]">{h.thisWeek}</h2>
-            <p className="text-[16px] text-ink-3">{h.thisWeekLead}</p>
-          </div>
+          <h2 className="text-[30px] font-extrabold tracking-[-0.7px]">{h.thisWeek}</h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {featured.map((c, i) => (
               <CourseCard key={c.id} course={c} creator={c.creatorSlug ? byCreator.get(c.creatorSlug) : null} index={i} />
@@ -201,19 +195,6 @@ export default async function HomePage() {
                 <Pill tone="amber">{h.creatorSoon}</Pill>
               </div>
               <h2 className="text-[36px] font-extrabold leading-[1.1] tracking-[-0.9px]">{h.creatorTitle}</h2>
-              <p className="text-[16px] leading-[1.55] text-[#DDE3EC]">{h.creatorLead}</p>
-              <ul className="flex flex-col gap-3">
-                {h.creatorItems.map(([title, detail]) => (
-                  <li key={title} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/15 text-white">
-                      <CheckIcon className="h-3.5 w-3.5" />
-                    </span>
-                    <span className="text-[14px] leading-[1.45] text-[#DDE3EC]">
-                      <strong className="text-white">{title}</strong>: {detail}
-                    </span>
-                  </li>
-                ))}
-              </ul>
             </div>
             <div className="flex min-w-0 flex-[1_1_400px] justify-center">
               <Image src="/art/poster_createur.webp" alt={h.creatorAlt} width={1365} height={1024} className="aspect-[4/3] w-full max-w-[520px] rounded-[24px] object-cover" />
