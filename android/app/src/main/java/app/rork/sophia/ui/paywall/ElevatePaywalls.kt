@@ -255,6 +255,7 @@ private fun ElevatePaywallFrame(
                         onError = { error = it; notice = null; purchasing = false },
                         onPending = { notice = it; error = null; purchasing = false },
                         onPurchased = onPurchased,
+                        paywallId = paywallId,
                         analyticsProps = analyticsProps,
                     )
                 },

@@ -110,9 +110,29 @@ enregistré comme `like` / `unlike`.
 | Nom | Quand | `props` |
 | --- | --- | --- |
 | `paywall_view` | un paywall s'affiche (une fois par présentation) | `paywall_id` (`native_quiz`, `onboarding_annual`…), `offering`, `context` quand il est connu (iOS) |
-| `purchase_started` | l'achat est lancé | `product`, `offering` |
-| `purchase_completed` | l'achat aboutit et le droit Premium est actif | `product` |
-| `purchase_failed` | l'achat n'aboutit pas | `product`, `reason` : `cancelled`, `pending`, `error` |
+| `purchase_started` | l'achat est lancé | `product`, `offering`, `paywall_id` |
+| `purchase_completed` | l'achat aboutit et le droit Premium est actif | `product`, `paywall_id` |
+| `purchase_failed` | l'achat n'aboutit pas | `product`, `paywall_id`, `reason` : `cancelled`, `pending`, `error` |
+
+`paywall_id` sur les trois événements d'achat est celui du paywall depuis lequel l'achat est
+lancé, identique à celui de son `paywall_view`. Un paywall soumis à un test A/B fait dans
+l'app ajoute `experiment` et `variant` à son `paywall_view` et à ses événements d'achat
+(`course_paywall_ab` : `bonhomme` / `reviews` ; `discount_paywall_ab` : `percent` /
+`graduate`). Le test de prix du paywall de réduction et les expériences RevenueCat se lisent
+dans `offering`.
+
+### Synthèse et tableau de bord des paywalls
+
+- `public.daily_paywall_stats` (migration `20261113040000_daily_paywall_stats.sql`) : par
+  jour UTC, plateforme, langue, paywall, offre, test et variante, les affichages, les
+  personnes distinctes, les achats lancés, réussis, annulés et en échec. Conservée sans
+  limite ; recalculée toutes les heures pour le jour en cours et les deux précédents.
+- Un achat sans `paywall_id` (versions antérieures) est rattaché au dernier paywall affiché
+  au même utilisateur dans l'heure qui précède, sinon à `unknown`.
+- `public.admin_paywall_dashboard(p_days, p_platform, p_lang)` : tout ce qu'affiche la page
+  `/admin/data` du site, réservé à l'équipe (`is_studio_admin`). Les revenus viennent de
+  `subscription_events` (RevenueCat, production seulement, en dollars) : ils suivent la
+  période et la plateforme, pas la langue, que RevenueCat ne connaît pas.
 
 ## Abonnements côté serveur
 

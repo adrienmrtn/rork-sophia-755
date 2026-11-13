@@ -478,6 +478,7 @@ private fun OnboardingAnnualPaywall(
                         onError = { error = it; notice = null; purchasing = false },
                         onPending = { notice = it; error = null; purchasing = false },
                         onPurchased = onPurchased,
+                        paywallId = "onboarding_annual",
                     )
                 },
             )
@@ -705,6 +706,7 @@ private fun ComparisonPaywall(
                         onError = { error = it; notice = null; purchasing = false },
                         onPending = { notice = it; error = null; purchasing = false },
                         onPurchased = { onPurchased(pkg) },
+                        paywallId = "paywall_comparison",
                         analyticsProps = analyticsProps,
                     )
                 },
@@ -765,6 +767,7 @@ private fun TrainingPaywall(
                 onPurchased = {
                     onPurchased()
                 },
+                paywallId = "native_training",
             )
         },
     ) {
@@ -955,9 +958,16 @@ internal fun purchasePackage(
     onError: (String) -> Unit,
     onPurchased: () -> Unit,
     onPending: (String) -> Unit = {},
+    /**
+     * The paywall the purchase starts from, the same identifier as its `paywall_view`. It rides
+     * on the three purchase events (`paywall_id`), so each purchase is tied to its paywall.
+     */
+    paywallId: String,
     /** Extra properties of the purchase events (the A/B variant of the course paywall). */
     analyticsProps: Map<String, Any?> = emptyMap(),
 ) {
+    @Suppress("NAME_SHADOWING")
+    val analyticsProps = analyticsProps + ("paywall_id" to paywallId)
     if (pkg == null) {
         if (!Purchases.isConfigured) {
             // No store keys in this build: unblock the flow locally instead of dead-ending.

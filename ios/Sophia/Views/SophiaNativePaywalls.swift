@@ -337,7 +337,7 @@ struct SophiaStandardPaywall: View {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         purchasing = true
         Task {
-            let ok = await store.purchase(package: package)
+            let ok = await store.purchase(package: package, paywallId: "native_standard")
             purchasing = false
             if ok {
                 onPurchased()
@@ -620,7 +620,7 @@ struct SophiaTrainingPaywall: View {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         purchasing = true
         Task {
-            let ok = await store.purchase(package: package)
+            let ok = await store.purchase(package: package, paywallId: "native_training")
             purchasing = false
             if ok {
                 onPurchased()
@@ -1229,8 +1229,9 @@ struct SophiaDiscountPaywall: View {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         purchasing = true
         let props: [String: AnalyticsValue] = analyticsProps
+        let paywallId: String = variant.paywallId
         Task {
-            let ok = await store.purchase(package: package, analyticsProps: props)
+            let ok = await store.purchase(package: package, paywallId: paywallId, analyticsProps: props)
             purchasing = false
             if ok {
                 UINotificationFeedbackGenerator().notificationOccurred(.success)

@@ -179,7 +179,7 @@ struct OnboardingV2PaywallAnnual: View {
         guard let package = store.annualPackage else { reloadOfferingsThenPurchase(); return }
         purchasing = true
         Task {
-            let ok = await store.purchase(package: package)
+            let ok = await store.purchase(package: package, paywallId: "onboarding_annual")
             purchasing = false
             if ok {
                 onSubscribed()
@@ -465,7 +465,7 @@ struct OnboardingV2PaywallComparison: View {
         guard let package = selectedPackage else { reloadOfferingsThenPurchase(); return }
         purchasing = true
         Task {
-            let ok = await store.purchase(package: package)
+            let ok = await store.purchase(package: package, paywallId: "onboarding_comparison")
             purchasing = false
             if ok {
                 onSubscribed()

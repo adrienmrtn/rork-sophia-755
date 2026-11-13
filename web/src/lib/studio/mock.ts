@@ -285,6 +285,41 @@ const mockCampaign = {
   updated_at: "2026-11-08T17:30:00Z",
 };
 
+/** Un tableau de bord des paywalls plausible, pour regarder /admin/data hors ligne. */
+function paywallDashboard(days: number) {
+  const today = Date.UTC(2026, 10, 13);
+  const day = (i: number) => new Date(today - (days - 1 - i) * 86_400_000).toISOString().slice(0, 10);
+  const wave = (i: number, base: number) => Math.round(base * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9))));
+  const counts = (views: number, rate: number) => ({ views, viewers: Math.round(views * 0.72), purchases_started: Math.round(views * rate * 1.9), purchases_completed: Math.round(views * rate), purchases_cancelled: Math.round(views * rate * 0.8), purchases_failed: Math.round(views * rate * 0.1) });
+  const scale = days / 28;
+  const paywalls: [string, number, number][] = [["onboarding_annual", 41200, 0.052], ["onboarding_comparison", 30900, 0.021], ["native_course_unlock_bonhomme", 6400, 0.018], ["native_course_unlock_reviews", 6350, 0.024], ["native_discount_percent", 5100, 0.031], ["native_discount_graduate", 5040, 0.027], ["native_quiz", 2300, 0.012], ["native_audio", 1250, 0.009]];
+  const by_paywall = paywalls.map(([paywall_id, views, rate]) => ({ paywall_id, ...counts(Math.round(views * scale), rate) }));
+  const sum = (key: keyof ReturnType<typeof counts>) => by_paywall.reduce((total, row) => total + row[key], 0);
+  const revenueDays = Array.from({ length: days }, (_, i) => ({ day: day(i), revenue: wave(i, 6400), trials: wave(i, 460) }));
+  const offering = (name: string, trials: number, converted: number, direct: number, revenue: number) => ({ offering: name, trials: Math.round(trials * scale), trial_conversions: Math.round(converted * scale), direct_purchases: Math.round(direct * scale), renewals: Math.round(converted * 0.05 * scale), refunds: Math.round(converted * 0.08 * scale), revenue: Math.round(revenue * scale), proceeds: Math.round(revenue * 0.74 * scale) });
+  const by_offering = [offering("fin_onboarding", 10400, 3400, 0, 121000), offering("offre_discount_2999", 0, 90, 650, 15400), offering("offre_discount", 0, 60, 630, 14500), offering("debloquer_cours", 120, 20, 0, 700), offering("quizz", 50, 5, 0, 210)];
+  const total = (key: "trials" | "trial_conversions" | "direct_purchases" | "renewals" | "refunds" | "revenue" | "proceeds") => by_offering.reduce((t, row) => t + row[key], 0);
+  return {
+    days,
+    from: day(0),
+    updated_at: "2026-11-13T09:25:00Z",
+    languages: ["de", "en", "es", "fr", "it", "pt"],
+    totals: { views: sum("views"), viewers: sum("viewers"), purchases_started: sum("purchases_started"), purchases_completed: sum("purchases_completed"), purchases_cancelled: sum("purchases_cancelled"), purchases_failed: sum("purchases_failed") },
+    series: Array.from({ length: days }, (_, i) => ({ day: day(i), views: wave(i, 3500), purchases: wave(i, 120) })),
+    by_paywall,
+    by_experiment: [
+      { experiment: "course_paywall_ab", variant: "bonhomme", ...counts(Math.round(6400 * scale), 0.018) },
+      { experiment: "course_paywall_ab", variant: "reviews", ...counts(Math.round(6350 * scale), 0.024) },
+      { experiment: "discount_paywall_ab", variant: "graduate", ...counts(Math.round(110 * scale), 0.027) },
+      { experiment: "discount_paywall_ab", variant: "percent", ...counts(Math.round(120 * scale), 0.031) },
+    ],
+    by_offering: [{ offering: "fin_onboarding", ...counts(Math.round(88000 * scale), 0.037) }, { offering: "offre_discount", ...counts(Math.round(5200 * scale), 0.03) }, { offering: "offre_discount_2999", ...counts(Math.round(4940 * scale), 0.028) }],
+    by_language: [["fr", 52000, 0.041], ["en", 21000, 0.033], ["es", 11800, 0.027], ["de", 6900, 0.036], ["it", 4100, 0.03], ["pt", 2740, 0.022]].map(([lang, views, rate]) => ({ lang, ...counts(Math.round(Number(views) * scale), Number(rate)) })),
+    by_platform: [{ platform: "android", ...counts(Math.round(21500 * scale), 0.026) }, { platform: "ios", ...counts(Math.round(77040 * scale), 0.039) }],
+    revenue: { totals: { trials: total("trials"), trial_conversions: total("trial_conversions"), direct_purchases: total("direct_purchases"), renewals: total("renewals"), refunds: total("refunds"), revenue: total("revenue"), proceeds: total("proceeds") }, series: revenueDays, by_offering, first_day: "2026-11-08" },
+  };
+}
+
 function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[]): { data: unknown; error: null } {
   const single = has(ops, "maybeSingle") || has(ops, "single");
   const list = (rows: unknown[]) => ({ data: single ? (rows[0] ?? null) : rows, error: null });
@@ -309,6 +344,8 @@ function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[])
           },
           error: null,
         };
+      case "admin_paywall_dashboard":
+        return { data: paywallDashboard(Number(p.p_days ?? 28)), error: null };
       default:
         return { data: null, error: null };
     }
