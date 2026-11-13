@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Sophia — App Store frame</title>
+<style>
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../../../ios/Sophia/Resources/Fonts/PlusJakartaSans.ttf") format("truetype");
+  font-weight: 200 800;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+/* The canvas is laid out in points; render.cjs sets the viewport and a 3x scale factor. */
+body {
+  width: 100vw; height: 100vh; overflow: hidden; position: relative;
+  font-family: "Plus Jakarta Sans", sans-serif; -webkit-font-smoothing: antialiased;
+  background: var(--bg); color: var(--fg);
+}
+body.cream { --bg: #fef5e9; --fg: #17181c; --mark: #f08fb8; --mark-fg: #17181c; }
+body.blue  { --bg: #2e62c4; --fg: #ffffff; --mark: #ffd166; --mark-fg: #17181c; }
+body.pink  { --bg: #f4a3c4; --fg: #17181c; --mark: #17181c; --mark-fg: #fef5e9; }
+body.navy  { --bg: #16233f; --fg: #ffffff; --mark: #f08fb8; --mark-fg: #17181c; }
+body.sun   { --bg: #ffd166; --fg: #17181c; --mark: #2e62c4; --mark-fg: #ffffff; }
+
+.headline {
+  position: absolute; left: 0; right: 0; top: var(--head-top); height: var(--head-h);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  padding: 0 var(--head-pad);
+}
+.headline h1 {
+  margin: 0; font-weight: 800; font-size: var(--head-size); line-height: 1.24;
+  letter-spacing: -0.035em; text-wrap: balance;
+}
+.headline em {
+  font-style: normal; color: var(--mark-fg); background: var(--mark);
+  padding: 0 0.2em 0.04em; border-radius: 0.22em; white-space: nowrap;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+
+/* Device: a generic dark bezel around the 440 x 956 pt screen, scaled by --s. */
+.phone {
+  position: absolute; left: 50%; top: var(--phone-top);
+  width: calc(440px * var(--s) + 2 * var(--bezel)); height: calc(956px * var(--s) + 2 * var(--bezel));
+  transform: translateX(-50%);
+  border-radius: calc(62px * var(--s) + var(--bezel));
+  background: #0c0c0e;
+  box-shadow:
+    0 0 0 1.2px #45464b,
+    0 0 0 2.4px #1b1b1e,
+    0 calc(30px * var(--s)) calc(60px * var(--s)) calc(-12px * var(--s)) rgba(10, 16, 34, 0.45),
+    0 calc(8px * var(--s)) calc(18px * var(--s)) rgba(10, 16, 34, 0.18);
+}
+.phone .screen {
+  position: absolute; left: var(--bezel); top: var(--bezel);
+  width: calc(440px * var(--s)); height: calc(956px * var(--s));
+  border-radius: calc(62px * var(--s)); overflow: hidden; background: #fff;
+}
+.phone iframe {
+  width: 440px; height: 956px; border: 0; display: block;
+  transform: scale(var(--s)); transform-origin: 0 0;
+}
+.phone .island {
+  position: absolute; left: 50%; top: calc(var(--bezel) + 11px * var(--s));
+  width: calc(126px * var(--s)); height: calc(37px * var(--s)); margin-left: calc(-63px * var(--s));
+  border-radius: calc(19px * var(--s)); background: #000; z-index: 2;
+}
+/* side buttons */
+.phone::before, .phone::after {
+  content: ""; position: absolute; width: 3px; background: #2a2a2e; border-radius: 2px; z-index: -1;
+}
+.phone::before { left: -4px; top: 24%; height: 9%; box-shadow: 0 calc(92px * var(--s)) 0 #2a2a2e, 0 calc(-58px * var(--s)) 0 -1px #2a2a2e; }
+.phone::after { right: -4px; top: 31%; height: 13%; }
+</style>
+</head>
+<body>
+<div class="headline"><h1 id="h"></h1></div>
+<div class="phone"><div class="screen"><iframe id="f"></iframe></div><div class="island"></div></div>
+<script src="shots.js"></script>
+<script>
+  const q = new URLSearchParams(location.search);
+  const locale = q.get("locale") || "fr-FR";
+  const device = DEVICES[q.get("device") || "iphone-6.9"];
+  const shot = SHOTS[Number(q.get("i") || 0)];
+  const copy = (COPY[locale] || COPY["fr-FR"])[shot.screen];
+  document.documentElement.lang = locale.slice(0, 2);
+  document.body.className = shot.theme;
+  const layout = Object.assign({}, device.layout, shot.layout || {});
+  for (const [k, v] of Object.entries(layout)) document.body.style.setProperty("--" + k, v);
+  document.getElementById("h").innerHTML = copy;
+  document.getElementById("f").src = "screens/" + (q.get("screen") || shot.screen) + ".html";
+</script>
+</body>
+</html>

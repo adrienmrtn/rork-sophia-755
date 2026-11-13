@@ -1,0 +1,16 @@
+// Screenshot one screen recreation: node shoot.cjs <screen-name> [out.png] [scale]
+const { chromium } = require("playwright");
+const path = require("node:path");
+const { pathToFileURL } = require("node:url");
+(async () => {
+  const [name, out, scale] = process.argv.slice(2);
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 440, height: 956 }, deviceScaleFactor: Number(scale || 2) });
+  page.on("console", (m) => { if (m.type() === "error") console.error("console:", m.text()); });
+  page.on("requestfailed", (r) => console.error("failed:", r.url()));
+  await page.goto(pathToFileURL(path.join(__dirname, "src/screens", name + ".html")).href);
+  await page.evaluate(() => document.fonts.ready);
+  await page.waitForTimeout(150);
+  await page.screenshot({ path: out || path.join(__dirname, "preview-" + name + ".png") });
+  await browser.close();
+})();

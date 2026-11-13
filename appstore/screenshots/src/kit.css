@@ -1,0 +1,70 @@
+/* Shared kit for the App Store screen recreations.
+   One screen = one HTML page of exactly 440 x 956 CSS px (iPhone 6.9", 3x = 1320 x 2868).
+   Tokens mirror ios/Sophia/Utilities/DesignSystem.swift (light values). */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../../../ios/Sophia/Resources/Fonts/PlusJakartaSans.ttf") format("truetype");
+  font-weight: 200 800;
+  font-style: normal;
+}
+:root {
+  --canvas: #ffffff;
+  --surface: #ffffff;
+  --surface-muted: #e4ecfa;
+  --ink: #22262e;
+  --ink-secondary: #6b7280;
+  --ink-tertiary: #8a93a3;
+  --accent: #2e62c4;
+  --accent-tint: #e4ecfa;
+  --hairline: #daddE2;
+  --success: #387d5a;
+  --success-tint: #e0ede5;
+  --danger: #b14f42;
+  --danger-tint: #f6e7e4;
+  --warm: #e6b333;
+  --safe-top: 62px;      /* status bar / Dynamic Island */
+  --safe-bottom: 34px;   /* home indicator */
+  --tabbar: 49px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  width: 440px; height: 956px; overflow: hidden; position: relative;
+  background: var(--canvas); color: var(--ink);
+  font-family: "Plus Jakarta Sans", sans-serif; font-size: 17px; line-height: 1.3;
+  -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision;
+}
+img { display: block; }
+
+/* Status bar: injected by kit.js into <body>, always on top. */
+.k-status {
+  position: absolute; top: 0; left: 0; right: 0; height: var(--safe-top); z-index: 900;
+  display: flex; align-items: flex-end; justify-content: space-between;
+  padding: 0 34px 14px 52px; pointer-events: none; color: #000;
+  font-family: "Inter", -apple-system, sans-serif;
+}
+.k-status.light { color: #fff; }
+.k-status .time { font-size: 17px; font-weight: 600; letter-spacing: -0.2px; }
+.k-status .right { display: flex; gap: 7px; align-items: center; }
+.k-status svg { display: block; fill: currentColor; }
+
+.k-home-indicator {
+  position: absolute; left: 50%; bottom: 8px; width: 144px; height: 5px; margin-left: -72px;
+  border-radius: 3px; background: #000; z-index: 900;
+}
+.k-home-indicator.light { background: #fff; }
+
+/* System tab bar (UITabBar: opaque canvas, hairline shadow, accent / inkSecondary). */
+.k-tabbar {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 800;
+  height: calc(var(--tabbar) + var(--safe-bottom));
+  background: var(--canvas); border-top: 0.5px solid var(--hairline);
+  display: flex; padding: 0 4px var(--safe-bottom);
+}
+.k-tabbar .tab {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  padding-top: 6px; gap: 2px; color: var(--ink-secondary);
+  font-size: 10px; font-weight: 500; letter-spacing: 0;
+}
+.k-tabbar .tab.on { color: var(--accent); }
+.k-tabbar svg { width: 27px; height: 27px; display: block; }
