@@ -74,4 +74,35 @@ class PaywallExperimentTest {
         assertNull(PaywallExperiment.parseValue("not json"))
         assertNull(PaywallExperiment.parseValue("[1, 2]"))
     }
+
+    @Test
+    fun discountDrawIsIndependentAndStable() {
+        // SHA-256("discount_paywall_ab:" + the all-zero install id), first four bytes / 2^32.
+        assertEquals(0.4291066746227443, PaywallExperiment.unitInterval(zero, PaywallExperiment.DISCOUNT_EXPERIMENT), 1e-12)
+        val half = PaywallExperiment.DiscountConfig()
+        assertEquals(PaywallExperiment.DiscountVariant.GRADUATE, PaywallExperiment.discountVariant(zero, half))
+        assertEquals(
+            PaywallExperiment.DiscountVariant.GRADUATE,
+            PaywallExperiment.discountVariant(zero, PaywallExperiment.DiscountConfig(shareGraduate = 1.0)),
+        )
+        assertEquals(
+            PaywallExperiment.DiscountVariant.PERCENT,
+            PaywallExperiment.discountVariant(zero, PaywallExperiment.DiscountConfig(shareGraduate = 0.0)),
+        )
+    }
+
+    @Test
+    fun discountSettingIsReadLenientlyAndStopsOnItsDefault() {
+        assertEquals(PaywallExperiment.DiscountConfig(), PaywallExperiment.parseDiscountValue("{}"))
+        val stopped = PaywallExperiment.parseDiscountValue(
+            """{"enabled": false, "share_graduate": 0.2, "default_variant": "graduate"}""",
+        )!!
+        assertEquals(0.2, stopped.shareGraduate, 0.0)
+        assertEquals(PaywallExperiment.DiscountVariant.GRADUATE, PaywallExperiment.discountVariant(zero, stopped))
+        assertEquals(
+            PaywallExperiment.DiscountVariant.PERCENT,
+            PaywallExperiment.discountVariant(zero, PaywallExperiment.DiscountConfig(enabled = false)),
+        )
+        assertNull(PaywallExperiment.parseDiscountValue("not json"))
+    }
 }

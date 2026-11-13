@@ -50,6 +50,65 @@ nonisolated struct CoursePaywallABConfig: Codable, Sendable, Equatable {
     }
 }
 
+/// Une ligne de `app_config` dont `value` est un objet JSON.
+private nonisolated struct PaywallConfigObjectRow<Value: Decodable>: Decodable {
+    let value: Value
+}
+
+/// Une ligne de `app_config` dont `value` est du JSON écrit dans une chaîne.
+private nonisolated struct PaywallConfigStringRow: Decodable {
+    let value: String
+}
+
+/// Les deux habillages du paywall de réduction (« offre unique »).
+nonisolated enum DiscountPaywallVariant: String, Sendable, CaseIterable {
+    /// Le pourcentage en très grand, au-dessus de l'illustration.
+    case percent
+    /// Le personnage diplômé, avec l'étiquette de réduction posée dessus.
+    case graduate
+
+    /// Identifiant de paywall envoyé à RevenueCat et au journal d'événements.
+    var paywallId: String { "native_discount_\(rawValue)" }
+}
+
+/// Réglage du test du paywall de réduction, lu dans `app_config` (clé `discount_paywall_ab`) :
+/// `{"enabled": true, "share_graduate": 0.5, "default_variant": "percent"}`.
+nonisolated struct DiscountPaywallABConfig: Codable, Sendable, Equatable {
+    /// Test en cours. À `false`, tout le monde reçoit `defaultVariant` (ou `percent`).
+    var enabled: Bool
+    /// Part des installations (0 à 1) qui reçoivent la variante `graduate`.
+    var shareGraduate: Double
+    /// Variante servie quand le test est arrêté : `"percent"` ou `"graduate"`.
+    var defaultVariant: String?
+
+    /// Ligne absente, réseau coupé ou valeur illisible : test actif, moitié / moitié.
+    static let fallback = DiscountPaywallABConfig(enabled: true, shareGraduate: 0.5, defaultVariant: nil)
+
+    init(enabled: Bool, shareGraduate: Double, defaultVariant: String?) {
+        self.enabled = enabled
+        self.shareGraduate = shareGraduate
+        self.defaultVariant = defaultVariant
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case enabled
+        case shareGraduate = "share_graduate"
+        case defaultVariant = "default_variant"
+    }
+
+    /// Lecture tolérante : un champ manquant ou mal typé prend sa valeur par défaut.
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let decodedEnabled: Bool? = try? container.decode(Bool.self, forKey: .enabled)
+        let decodedShare: Double? = try? container.decode(Double.self, forKey: .shareGraduate)
+        let decodedDefault: String? = try? container.decode(String.self, forKey: .defaultVariant)
+        enabled = decodedEnabled ?? true
+        let share: Double = decodedShare ?? 0.5
+        shareGraduate = share.isFinite ? min(max(share, 0), 1) : 0.5
+        defaultVariant = decodedDefault
+    }
+}
+
 /// Test A/B du paywall cours, piloté depuis Supabase en **lecture seule**.
 ///
 /// Même mécanique que la clé `catalog` de `CatalogStore` : une requête REST sur `app_config`
@@ -66,14 +125,44 @@ enum PaywallExperiment {
     static let courseExperimentName = "course_paywall_ab"
     private static let storageKey = "sophia_course_paywall_ab_config"
 
+    /// Nom du test du paywall de réduction : clé de `app_config` et propriété `experiment`.
+    static let discountExperimentName = "discount_paywall_ab"
+    private static let discountStorageKey = "sophia_discount_paywall_ab_config"
+
     private(set) static var courseConfig: CoursePaywallABConfig = loadSaved()
+    private(set) static var discountConfig: DiscountPaywallABConfig = loadSavedDiscount()
     private static var didStart = false
 
     /// Lance la lecture du réglage, une fois par lancement. Sans effet sur l'affichage en cours.
     static func start() {
         guard !didStart else { return }
         didStart = true
-        Task { await refresh() }
+        Task {
+            await refresh()
+            await refreshDiscount()
+        }
+    }
+
+    /// La variante du paywall de réduction de cette installation. Le tirage est indépendant
+    /// de celui du paywall cours : le nom du test entre dans l'empreinte.
+    static var discountVariant: DiscountPaywallVariant {
+        drawDiscountVariant(config: discountConfig, installId: installIdString)
+    }
+
+    /// Propriétés ajoutées aux événements du paywall de réduction (impression, achat).
+    static func discountAnalyticsProps(_ variant: DiscountPaywallVariant) -> [String: AnalyticsValue] {
+        [
+            "variant": .string(variant.rawValue),
+            "experiment": .string(discountExperimentName),
+        ]
+    }
+
+    static func drawDiscountVariant(config: DiscountPaywallABConfig, installId: String) -> DiscountPaywallVariant {
+        guard config.enabled else {
+            return config.defaultVariant.flatMap { DiscountPaywallVariant(rawValue: $0) } ?? .percent
+        }
+        let draw: Double = unitInterval(installId: installId, experiment: discountExperimentName)
+        return draw < config.shareGraduate ? .graduate : .percent
     }
 
     /// La variante de cette installation, d'après le dernier réglage connu.
@@ -103,8 +192,8 @@ enum PaywallExperiment {
     }
 
     /// Nombre dans [0, 1) dérivé de l'installation, identique sur iOS et Android.
-    static func unitInterval(installId: String) -> Double {
-        let input: String = courseExperimentName + ":" + installId
+    static func unitInterval(installId: String, experiment: String = courseExperimentName) -> Double {
+        let input: String = experiment + ":" + installId
         let digest = SHA256.hash(data: Data(input.utf8))
         var value: UInt32 = 0
         for byte in digest.prefix(4) {
@@ -118,38 +207,54 @@ enum PaywallExperiment {
     /// `app_config` → `course_paywall_ab`. Une erreur réseau garde la dernière valeur connue ;
     /// une ligne absente ou une valeur illisible ramène au comportement par défaut.
     static func refresh() async {
-        guard let base = URL(string: AppConfig.SUPABASE_URL) else { return }
-        var components = URLComponents(url: base.appendingPathComponent("rest/v1/app_config"), resolvingAgainstBaseURL: false)
-        components?.queryItems = [
-            URLQueryItem(name: "key", value: "eq.\(courseExperimentName)"),
-            URLQueryItem(name: "select", value: "value"),
-        ]
-        guard let url = components?.url else { return }
-        var request = URLRequest(url: url)
-        request.timeoutInterval = 15
-        request.setValue(AppConfig.SUPABASE_ANON_KEY, forHTTPHeaderField: "apikey")
-        request.setValue("Bearer \(AppConfig.SUPABASE_ANON_KEY)", forHTTPHeaderField: "Authorization")
-        guard let result = try? await URLSession.shared.data(for: request),
-              (result.1 as? HTTPURLResponse)?.statusCode == 200 else { return }
-        let parsed: CoursePaywallABConfig = parse(result.0) ?? .fallback
+        guard let data = await fetchRow(key: courseExperimentName) else { return }
+        let decoded: CoursePaywallABConfig? = parse(data)
+        let parsed: CoursePaywallABConfig = decoded ?? .fallback
         courseConfig = parsed
         if let encoded = try? JSONEncoder().encode(parsed) {
             UserDefaults.standard.set(encoded, forKey: storageKey)
         }
     }
 
+    /// `app_config` → `discount_paywall_ab`, mêmes règles que le test du paywall cours.
+    static func refreshDiscount() async {
+        guard let data = await fetchRow(key: discountExperimentName) else { return }
+        let decoded: DiscountPaywallABConfig? = parse(data)
+        let parsed: DiscountPaywallABConfig = decoded ?? .fallback
+        discountConfig = parsed
+        if let encoded = try? JSONEncoder().encode(parsed) {
+            UserDefaults.standard.set(encoded, forKey: discountStorageKey)
+        }
+    }
+
+    /// Lecture publique d'une ligne de `app_config` ; `nil` quand le réseau ne répond pas.
+    private static func fetchRow(key: String) async -> Data? {
+        guard let base = URL(string: AppConfig.SUPABASE_URL) else { return nil }
+        var components = URLComponents(url: base.appendingPathComponent("rest/v1/app_config"), resolvingAgainstBaseURL: false)
+        components?.queryItems = [
+            URLQueryItem(name: "key", value: "eq.\(key)"),
+            URLQueryItem(name: "select", value: "value"),
+        ]
+        guard let url = components?.url else { return nil }
+        var request = URLRequest(url: url)
+        request.timeoutInterval = 15
+        request.setValue(AppConfig.SUPABASE_ANON_KEY, forHTTPHeaderField: "apikey")
+        request.setValue("Bearer \(AppConfig.SUPABASE_ANON_KEY)", forHTTPHeaderField: "Authorization")
+        guard let result = try? await URLSession.shared.data(for: request),
+              (result.1 as? HTTPURLResponse)?.statusCode == 200 else { return nil }
+        return result.0
+    }
+
     /// La réponse REST est `[{"value": {...}}]` ; `value` peut aussi être du JSON écrit dans
     /// une chaîne. Tout le reste (liste vide, autre forme) est « illisible ».
-    private static func parse(_ data: Data) -> CoursePaywallABConfig? {
-        struct ObjectRow: Decodable { let value: CoursePaywallABConfig }
-        struct StringRow: Decodable { let value: String }
+    private static func parse<Config: Decodable>(_ data: Data) -> Config? {
         let decoder = JSONDecoder()
-        if let rows = try? decoder.decode([ObjectRow].self, from: data) {
+        if let rows = try? decoder.decode([PaywallConfigObjectRow<Config>].self, from: data) {
             return rows.first?.value
         }
-        if let rows = try? decoder.decode([StringRow].self, from: data),
+        if let rows = try? decoder.decode([PaywallConfigStringRow].self, from: data),
            let text = rows.first?.value,
-           let config = try? decoder.decode(CoursePaywallABConfig.self, from: Data(text.utf8)) {
+           let config = try? decoder.decode(Config.self, from: Data(text.utf8)) {
             return config
         }
         return nil
@@ -158,6 +263,14 @@ enum PaywallExperiment {
     private static func loadSaved() -> CoursePaywallABConfig {
         guard let data = UserDefaults.standard.data(forKey: storageKey),
               let saved = try? JSONDecoder().decode(CoursePaywallABConfig.self, from: data) else {
+            return .fallback
+        }
+        return saved
+    }
+
+    private static func loadSavedDiscount() -> DiscountPaywallABConfig {
+        guard let data = UserDefaults.standard.data(forKey: discountStorageKey),
+              let saved = try? JSONDecoder().decode(DiscountPaywallABConfig.self, from: data) else {
             return .fallback
         }
         return saved

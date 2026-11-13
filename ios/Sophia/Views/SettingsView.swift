@@ -32,6 +32,8 @@ struct SettingsView: View {
     /// Variante du paywall cours que le raccourci développeur montre ; elle alterne à chaque
     /// ouverture (la première est `bonhomme`).
     @State private var debugCourseVariant: CoursePaywallVariant = .reviews
+    /// Idem pour le paywall de réduction (la première ouverture montre `percent`).
+    @State private var debugDiscountVariant: DiscountPaywallVariant = .graduate
     /// Le @ du lecteur, pour la carte d'identité en tête.
     @Bindable private var social = SocialService.shared
 
@@ -665,6 +667,8 @@ struct SettingsView: View {
                     title: languageManager.text("settings.debug.discountPaywall")
                 ) {
                     hapticTrigger += 1
+                    // Une ouverture sur deux pour chaque variante du test A/B, pour voir les deux.
+                    debugDiscountVariant = debugDiscountVariant == .percent ? .graduate : .percent
                     debugPaywall = .offreDiscount
                 }
                 rowDivider
@@ -743,7 +747,8 @@ struct SettingsView: View {
                 tracksAnalytics: false,
                 onPurchased: { debugPaywall = nil },
                 onRestored: { debugPaywall = nil },
-                onDismissed: { debugPaywall = nil }
+                onDismissed: { debugPaywall = nil },
+                forcedVariant: debugDiscountVariant
             )
         }
     }
