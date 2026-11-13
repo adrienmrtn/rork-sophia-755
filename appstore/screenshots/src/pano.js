@@ -157,10 +157,10 @@ const PANOS = {
   // English set, same look as "vitrine" with a calmer opening on cream (colour logo) and the
   // order asked for: promise, open course, catalogue wall and reviews early, then the features.
   showcase: {
-    dir: "-showcase", lang: "en", copy: { "en-US": {
+    dir: "-showcase", lang: "en", titles: "loud", copy: { "en-US": {
       hero: ["Scroll less.<br>Know more."],
       home: ["Get smarter<br>every day", "One course a day, picked for you"],
-      reader: ["Learn in <b>10\u00a0minutes</b>", "Short courses, straight to the point"],
+      reader: ["Learn in<br><b>10\u00a0minutes</b>", "Short courses, straight to the point"],
       wall: ["300+ courses.<br>Zero boredom."],
       love: ["People love<br>Sophia"],
       // Real App Store reviews of Sophia written in English (public customer-reviews feeds of the
