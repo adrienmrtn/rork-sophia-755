@@ -156,6 +156,9 @@ final class AnalyticsService {
 
     private let client = SupabaseManager.shared
     private let installId: UUID
+    /// L'identifiant d'installation, en lecture seule : sert aussi au tirage stable des tests
+    /// A/B faits dans l'app (`PaywallExperiment`).
+    var installIdentifier: UUID { installId }
     private let appVersion: String
     private var sessionId = UUID()
     private var lastActiveAt = Date()

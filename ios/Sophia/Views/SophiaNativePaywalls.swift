@@ -60,88 +60,6 @@ private enum PaywallCountdown {
     }
 }
 
-// MARK: - Price footnote (quizz + debloquer_cours + blocker)
-
-/// The price above the CTA of the quiz, course-unlock and blocker paywalls: one small grey
-/// line, "Essai gratuit de 3 jours, puis 39,99 € / an". The button underneath says what
-/// today costs; this says what the store charges once the trial is over.
-struct PaywallPriceFootnote: View {
-    let text: String
-
-    var body: some View {
-        Text(text)
-            .font(DSLegacy.sans(.footnote, .medium))
-            .foregroundStyle(DSLegacy.inkTertiary)
-            .multilineTextAlignment(.center)
-            .fixedSize(horizontal: false, vertical: true)
-            .frame(maxWidth: .infinity)
-            .padding(.horizontal, 24)
-    }
-}
-
-// MARK: - « Tu débloques aussi » (quizz, debloquer_cours, blocker)
-
-/// Un atout PRO : un emoji et un libellé.
-struct PaywallUnlockItem: Identifiable {
-    let emoji: String
-    let key: String
-    var id: String { key }
-
-    static let audio = PaywallUnlockItem(emoji: "🎧", key: "paywall.unlock.audio")
-    static let unlimited = PaywallUnlockItem(emoji: "📚", key: "paywall.unlock.unlimited")
-    static let quiz = PaywallUnlockItem(emoji: "🧠", key: "paywall.unlock.quiz")
-    static let antiScroll = PaywallUnlockItem(emoji: "📵", key: "paywall.unlock.antiScroll")
-}
-
-/// La carte « Tu débloques aussi » des paywalls de fonctionnalité : un titre, puis une ligne
-/// par atout avec son emoji et une coche, sur un fond teinté. Le même bloc partout, pour que
-/// chaque paywall rappelle que PRO, c'est tout Sophia et pas une seule option.
-struct PaywallUnlockList: View {
-    @Environment(LanguageManager.self) private var languageManager
-    let titleKey: String
-    let items: [PaywallUnlockItem]
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text(languageManager.text(titleKey).uppercasedInApp())
-                .font(DSLegacy.sans(.caption, .heavy))
-                .tracking(0.8)
-                .foregroundStyle(DSLegacy.accentSoft)
-
-            VStack(spacing: 0) {
-                ForEach(Array(items.enumerated()), id: \.element.id) { index, item in
-                    if index > 0 {
-                        Divider().overlay(DSLegacy.accentSoft.opacity(0.14)).padding(.leading, 44)
-                    }
-                    HStack(spacing: 12) {
-                        Text(item.emoji)
-                            .font(.system(size: 19))
-                            .frame(width: 32, height: 32)
-                            .background(DSLegacy.surface, in: RoundedRectangle(cornerRadius: 9, style: .continuous))
-                        Text(languageManager.text(item.key))
-                            .font(DSLegacy.sans(.subheadline, .semibold))
-                            .foregroundStyle(DSLegacy.ink)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        Image(systemName: "checkmark.circle.fill")
-                            .font(.system(size: 20))
-                            .foregroundStyle(.white, DSLegacy.accent)
-                    }
-                    .padding(.vertical, 9)
-                }
-            }
-        }
-        .padding(16)
-        .background(
-            LinearGradient(colors: [DSLegacy.accentTint, DSLegacy.accentTint.opacity(0.55)], startPoint: .topLeading, endPoint: .bottomTrailing),
-            in: RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
-        )
-        .overlay {
-            RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
-                .strokeBorder(DSLegacy.accentSoft.opacity(0.18), lineWidth: 1)
-        }
-    }
-}
-
 // MARK: - Standard paywall (quizz + debloquer_cours)
 
 /// Minimalist, single-offer native paywall used for the `quizz` and `debloquer_cours`
@@ -183,7 +101,7 @@ struct SophiaStandardPaywall: View {
 
     var body: some View {
         ZStack {
-            DSLegacy.canvas.ignoresSafeArea()
+            DS.canvas.ignoresSafeArea()
 
             VStack(spacing: 0) {
                 HStack {
@@ -216,7 +134,7 @@ struct SophiaStandardPaywall: View {
             // landscape it stops looking like the design and pushes the CTA below the
             // fold — and Apple reviews on iPad. The background layer above stays
             // full-bleed, so gradient paywalls still reach the edges.
-            .frame(maxWidth: OV2Legacy.readableWidth)
+            .frame(maxWidth: OV2.readableWidth)
         }
         .onAppear {
             presentedAt = Date()
@@ -240,27 +158,26 @@ struct SophiaStandardPaywall: View {
                 .resizable()
                 .scaledToFill()
                 .frame(width: 96, height: 96)
-                .clipShape(.rect(cornerRadius: DSLegacy.Radius.control))
+                .clipShape(.rect(cornerRadius: DS.Radius.control))
                 .overlay {
-                    RoundedRectangle(cornerRadius: DSLegacy.Radius.control, style: .continuous)
-                        .strokeBorder(DSLegacy.hairline, lineWidth: 1)
+                    RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous)
+                        .strokeBorder(DS.hairline, lineWidth: 1.5)
                 }
                 .overlay(alignment: .bottomTrailing) {
                     Image(systemName: "lock.fill")
                         .font(.jakarta(size: 15, weight: .bold))
                         .foregroundStyle(.white)
                         .frame(width: 32, height: 32)
-                        .background(DSLegacy.accent, in: Circle())
+                        .background(DS.accent, in: Circle())
                         .overlay { Circle().strokeBorder(.white, lineWidth: 2) }
                         .offset(x: 8, y: 8)
                 }
-                .dsLegacySoftShadow()
         } else {
             Image(systemName: isCourseUnlock ? "book.closed.fill" : "checklist")
                 .font(.system(size: 44, weight: .semibold))
-                .foregroundStyle(DSLegacy.accent)
+                .foregroundStyle(DS.accent)
                 .frame(width: 92, height: 92)
-                .background(DSLegacy.accentTint, in: Circle())
+                .background(DS.accentTint, in: Circle())
         }
     }
 
@@ -269,14 +186,14 @@ struct SophiaStandardPaywall: View {
     private var headline: some View {
         VStack(spacing: 10) {
             Text(titleText)
-                .font(DSLegacy.title(.title, .heavy))
-                .foregroundStyle(DSLegacy.ink)
+                .font(DS.title(.title, .medium))
+                .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(subtitleText)
-                .font(DSLegacy.sans(.subheadline))
-                .foregroundStyle(DSLegacy.inkSecondary)
+                .font(DS.sans(.subheadline))
+                .foregroundStyle(DS.inkSecondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -312,19 +229,19 @@ struct SophiaStandardPaywall: View {
                     .font(.jakarta(size: 13, weight: .bold))
                 VStack(alignment: .leading, spacing: 1) {
                     Text(languageManager.text("paywall.course.comeBack"))
-                        .font(DSLegacy.sans(.caption2, .semibold))
-                        .foregroundStyle(DSLegacy.inkSecondary)
+                        .font(DS.sans(.caption2, .semibold))
+                        .foregroundStyle(DS.inkSecondary)
                     Text(PaywallCountdown.format(remaining))
-                        .font(DSLegacy.sans(.headline, .bold))
+                        .font(DS.sans(.headline, .bold))
                         .monospacedDigit()
-                        .foregroundStyle(DSLegacy.ink)
+                        .foregroundStyle(DS.ink)
                         .contentTransition(.numericText(countsDown: true))
                 }
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
-            .background(DSLegacy.surface, in: Capsule())
-            .overlay { Capsule().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
+            .background(DS.surface, in: Capsule())
+            .overlay { Capsule().strokeBorder(DS.hairline, lineWidth: 1.5) }
         }
     }
 
@@ -336,10 +253,10 @@ struct SophiaStandardPaywall: View {
                 HStack(spacing: 10) {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.jakarta(size: 16, weight: .semibold))
-                        .foregroundStyle(DSLegacy.success)
+                        .foregroundStyle(DS.success)
                     Text(languageManager.text(key))
-                        .font(DSLegacy.sans(.subheadline, .medium))
-                        .foregroundStyle(DSLegacy.ink)
+                        .font(DS.sans(.subheadline, .regular))
+                        .foregroundStyle(DS.ink)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
@@ -359,8 +276,8 @@ struct SophiaStandardPaywall: View {
     private var bottomBar: some View {
         VStack(spacing: 10) {
             Text(priceLine)
-                .font(DSLegacy.sans(.footnote, .medium))
-                .foregroundStyle(DSLegacy.inkTertiary)
+                .font(DS.sans(.footnote, .medium))
+                .foregroundStyle(DS.inkTertiary)
                 .multilineTextAlignment(.center)
 
             Button(action: purchase) {
@@ -374,11 +291,11 @@ struct SophiaStandardPaywall: View {
                     }
                 }
             }
-            .buttonStyle(DSLegacyPrimaryButtonStyle())
+            .buttonStyle(DSPrimaryButtonStyle())
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
-            PaywallLegalRow(onRestore: restore)
+            OnboardingV2LegalRow(onRestore: restore)
                 .padding(.bottom, 14)
         }
     }
@@ -402,10 +319,10 @@ struct SophiaStandardPaywall: View {
         } label: {
             Image(systemName: "xmark")
                 .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DSLegacy.inkSecondary)
+                .foregroundStyle(DS.inkSecondary)
                 .frame(width: 40, height: 40)
-                .background(DSLegacy.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
+                .background(DS.surface, in: Circle())
+                .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1.5) }
         }
     }
 
@@ -723,10 +640,10 @@ struct SophiaTrainingPaywall: View {
 // MARK: - Quiz paywall (quizz offering)
 
 /// Native paywall for the `quizz` context, opened when a free reader taps the quiz at the end
-/// of a course. « N'oublie pas ce que tu viens d'apprendre » : the forgetting curve drawn
-/// twice (with the quizzes it stays high and climbs back at every reminder; without them it
-/// drops and never recovers), then what else PRO unlocks, the rating, and the CTA. It sells
-/// the annual plan of the offering RevenueCat currently serves, with `quizz` as fallback.
+/// of a course. Design « Elevate arrondi » : sans quiz / avec les quiz en en-tête, une question
+/// d'exemple déjà répondue, « Ta mémoire, ça s'entraîne », puis le choix de formule. Prix,
+/// essai et achat viennent de l'offre que RevenueCat sert (voir `ElevatePaywallScreen`), avec
+/// `quizz` en repli.
 struct SophiaQuizPaywall: View {
     @Environment(LanguageManager.self) private var languageManager
 
@@ -738,377 +655,95 @@ struct SophiaQuizPaywall: View {
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
 
-    @State private var purchasing = false
-    @State private var appeared = false
-    @State private var showClose = false
-
     private let context = SophiaPaywallContext.quizz
 
-    private var prices: StoreViewModel.PaywallPriceDisplay {
-        store.paywallPriceDisplay(language: languageManager.current)
-    }
-
-    /// The offering served here may come from a RevenueCat experiment without an intro offer.
-    private var hasTrial: Bool {
-        store.annualHasFreeTrial(forOfferingIdentifier: context.rawValue)
-    }
-
     var body: some View {
-        ZStack {
-            DSLegacy.canvas.ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                HStack {
-                    closeButton
-                        .opacity(showClose ? 1 : 0)
-                        .allowsHitTesting(showClose)
-                    Spacer()
-                }
-                .padding(.horizontal, 20)
-                .padding(.top, 12)
-
-                ScrollView {
-                    VStack(spacing: 22) {
-                        headline.padding(.horizontal, 28)
-                        QuizRetentionChart().padding(.horizontal, 22)
-                        PaywallUnlockList(titleKey: "paywall.unlock.also", items: [.audio, .antiScroll, .unlimited])
-                            .padding(.horizontal, 22)
-                        ratingFootnote
-                    }
-                    .padding(.top, 6)
-                    .padding(.bottom, 24)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 16)
-                }
-                .scrollIndicators(.hidden)
-
-                bottomBar
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 20)
-            }
-            // One column of copy, drawn for an iPhone. Stretched across an iPad in
-            // landscape it stops looking like the design and pushes the CTA below the
-            // fold — and Apple reviews on iPad. The background layer above stays
-            // full-bleed, so gradient paywalls still reach the edges.
-            .frame(maxWidth: OV2Legacy.readableWidth)
-        }
-        .onAppear {
-            if tracksAnalytics {
-                store.trackPaywallImpression(paywallId: "native_quiz", offeringIdentifier: context.rawValue)
-            }
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
-                appeared = true
-            }
+        ElevatePaywallScreen(
+            store: store,
+            offeringIdentifier: context.rawValue,
+            paywallId: "native_quiz",
+            tracksAnalytics: tracksAnalytics,
             // La croix n'apparaît qu'au bout de 4 s, le temps de voir la valeur.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
-                withAnimation(.easeOut(duration: 0.4)) { showClose = true }
-            }
-        }
-        .task {
-            if store.offerings == nil { await store.loadOfferingsWithRetry() }
-        }
-    }
-
-    // MARK: Rating (discreet, at the bottom)
-
-    private var ratingFootnote: some View {
-        HStack(spacing: 5) {
-            HStack(spacing: 2) {
-                ForEach(0..<5, id: \.self) { _ in
-                    Image(systemName: "star.fill")
-                        .font(.system(size: 9))
-                        .foregroundStyle(DSLegacy.warm)
-                }
-            }
-            Text("\((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale))) · \(languageManager.text("paywall.quiz.rating"))")
-                .font(DSLegacy.sans(.caption2, .medium))
-                .foregroundStyle(DSLegacy.inkTertiary)
+            closeDelay: 4,
+            layout: .bonhomme,
+            onPurchased: onPurchased,
+            onRestored: onRestored,
+            onClose: { onDismissed?() }
+        ) {
+            ElevateBeforeAfterHero(
+                beforeImage: "pw_quiz_before",
+                afterImage: "pw_quiz_after",
+                beforeLabel: languageManager.text("paywall.quiz.chart.without"),
+                afterLabel: languageManager.text("paywall.quiz.chart.with")
+            )
+            ElevatePaywallTitle(text: languageManager.text("paywall.elevate.quiz.title"))
+                .dsStagger(0)
+            ElevatePaywallSubtitle(text: languageManager.text("paywall.elevate.quiz.subtitle"))
+                .dsStagger(1)
+            ElevateSampleQuizCard()
+                .dsStagger(2)
+            training
+                .dsStagger(3)
         }
     }
 
-    // MARK: Headline
+    /// L'illustration, « Ta mémoire, ça s'entraîne », puis les trois raisons.
+    private var training: some View {
+        VStack(spacing: 16) {
+            Image("pw_quiz_training")
+                .resizable()
+                .aspectRatio(800.0 / 600.0, contentMode: .fit)
+                .frame(maxWidth: .infinity)
+                .clipShape(RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous))
+                .accessibilityHidden(true)
 
-    private var headline: some View {
-        VStack(spacing: 10) {
-            Text(languageManager.text("paywall.quiz.title"))
-                .font(DSLegacy.title(.title, .heavy))
-                .foregroundStyle(DSLegacy.ink)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
+            ElevateSectionTitle(text: languageManager.text("paywall.elevate.quiz.benefits.title"))
+                .padding(.top, 4)
+                .padding(.horizontal, 4)
 
-            Text(languageManager.text("paywall.quiz.subtitle"))
-                .font(DSLegacy.sans(.subheadline, .medium))
-                .foregroundStyle(DSLegacy.inkSecondary)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-    }
-
-    // MARK: Bottom bar
-
-    private var bottomBar: some View {
-        VStack(spacing: 10) {
-            PaywallPriceFootnote(text: priceLine)
-
-            Button(action: purchase) {
-                HStack(spacing: 8) {
-                    if purchasing {
-                        ProgressView().tint(.white)
-                    } else {
-                        Image(systemName: "sparkles")
-                            .font(.jakarta(size: 15, weight: .bold))
-                        Text(ctaTitle)
-                    }
-                }
-            }
-            .buttonStyle(DSLegacyPrimaryButtonStyle())
-            .disabled(purchasing)
-            .padding(.horizontal, 24)
-
-            PaywallLegalRow(onRestore: restore)
-                .padding(.bottom, 14)
-        }
-    }
-
-    private var priceLine: String {
-        String(
-            format: hasTrial
-                ? languageManager.trialText("paywall.price.trialThenYearly", days: store.annualTrialDays)
-                : languageManager.text("paywall.price.yearlyNoTrial"),
-            prices.yearlyPrice
-        )
-    }
-
-    /// « Continuer pour 0,00 € » while the trial is served: what today costs, in the
-    /// store's currency. Without a trial the button says what it does.
-    private var ctaTitle: String {
-        hasTrial
-            ? String(format: languageManager.text("paywall.cta.continueFor"), store.zeroPriceString(language: languageManager.current))
-            : languageManager.text("paywall.cta.subscribe")
-    }
-
-    private var closeButton: some View {
-        Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            onDismissed?()
-        } label: {
-            Image(systemName: "xmark")
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DSLegacy.inkSecondary)
-                .frame(width: 40, height: 40)
-                .background(DSLegacy.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
-        }
-    }
-
-    // MARK: Actions
-
-    private func purchase() {
-        guard !purchasing else { return }
-        guard let package = store.annualPackage(forOfferingIdentifier: context.rawValue) else {
-            Task { await store.loadOfferingsWithRetry() }
-            return
-        }
-        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        purchasing = true
-        Task {
-            let ok = await store.purchase(package: package)
-            purchasing = false
-            if ok {
-                onPurchased()
-            }
-        }
-    }
-
-    private func restore() {
-        Task {
-            await store.restore()
-            if store.isPremium { onRestored() }
-        }
-    }
-
-}
-
-// MARK: - Courbe de rétention (paywall quiz)
-
-/// Deux courbes dessinées à la main : en bleu, ce qu'on retient avec les quiz et
-/// l'entraînement (haut, qui redescend un peu puis remonte à J3, J7, J15, J30) ; en gris,
-/// sans quiz (qui chute et ne remonte jamais). Un dessin, pas une mesure : il illustre la
-/// courbe de l'oubli et ce que les rappels en font.
-private struct QuizRetentionChart: View {
-    @Environment(LanguageManager.self) private var languageManager
-    @State private var drawn: CGFloat = 0
-
-    /// Points (x 0…1, y 0…1 où 1 = tout retenu) de la courbe « avec quiz » : des rappels à
-    /// J3, J7, J15 et J30 qui remontent à chaque fois.
-    private static let withQuiz: [CGPoint] = [
-        CGPoint(x: 0.00, y: 1.00), CGPoint(x: 0.07, y: 0.78), CGPoint(x: 0.13, y: 0.96),
-        CGPoint(x: 0.24, y: 0.76), CGPoint(x: 0.30, y: 0.97), CGPoint(x: 0.47, y: 0.80),
-        CGPoint(x: 0.55, y: 0.98), CGPoint(x: 0.78, y: 0.86), CGPoint(x: 0.86, y: 1.00),
-        CGPoint(x: 1.00, y: 0.97),
-    ]
-    /// Sans quiz : la chute, puis presque rien.
-    private static let withoutQuiz: [CGPoint] = [
-        CGPoint(x: 0.00, y: 1.00), CGPoint(x: 0.07, y: 0.50), CGPoint(x: 0.18, y: 0.28),
-        CGPoint(x: 0.38, y: 0.16), CGPoint(x: 0.65, y: 0.10), CGPoint(x: 1.00, y: 0.06),
-    ]
-    /// Les repères de l'axe (J1, J3, J7, J15, J30) ; pour les quatre rappels, c'est aussi le
-    /// sommet où la courbe bleue remonte.
-    private static let dayMarks: [(day: Int, x: CGFloat)] = [(1, 0.0), (3, 0.13), (7, 0.30), (15, 0.55), (30, 0.86)]
-
-    private static let plotHeight: CGFloat = 150
-    private static let inset: CGFloat = 8
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack(spacing: 14) {
-                legend(color: DSLegacy.accentSoft, key: "paywall.quiz.chart.with", strong: true)
-                legend(color: DSLegacy.inkTertiary, key: "paywall.quiz.chart.without", strong: false)
-                Spacer(minLength: 0)
-            }
-
-            HStack(alignment: .top, spacing: 6) {
-                // Le libellé de l'axe vertical, couché le long du tracé.
-                Text(languageManager.text("paywall.quiz.chart.axis"))
-                    .font(DSLegacy.sans(.caption2, .semibold))
-                    .foregroundStyle(DSLegacy.inkTertiary)
-                    .lineLimit(1)
-                    .fixedSize()
-                    .rotationEffect(.degrees(-90))
-                    .frame(width: 14, height: Self.plotHeight)
-
-                VStack(spacing: 6) {
-                    GeometryReader { geo in
-                        plot(in: geo.size)
-                    }
-                    .frame(height: Self.plotHeight)
-
-                    GeometryReader { geo in
-                        ForEach(Array(Self.dayMarks.enumerated()), id: \.offset) { _, mark in
-                            Text(String(format: languageManager.text("paywall.quiz.chart.day"), mark.day))
-                                .font(DSLegacy.sans(.caption2, .bold))
-                                .foregroundStyle(mark.day == 1 ? DSLegacy.inkTertiary : DSLegacy.accentSoft)
-                                .fixedSize()
-                                .position(x: Self.inset + (geo.size.width - 2 * Self.inset) * mark.x, y: 8)
-                        }
-                    }
-                    .frame(height: 16)
-                }
-            }
-        }
-        .padding(18)
-        .background(DSLegacy.surface, in: RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
-                .strokeBorder(DSLegacy.hairline, lineWidth: 1)
-        }
-        .dsLegacySoftShadow()
-        .accessibilityElement(children: .combine)
-        .onAppear {
-            withAnimation(.easeOut(duration: 1.8).delay(0.35)) { drawn = 1 }
-        }
-    }
-
-    private func legend(color: Color, key: String, strong: Bool) -> some View {
-        HStack(spacing: 6) {
-            Capsule().fill(color).frame(width: 16, height: 4)
-            Text(languageManager.text(key))
-                .font(DSLegacy.sans(.caption, strong ? .bold : .medium))
-                .foregroundStyle(strong ? DSLegacy.ink : DSLegacy.inkSecondary)
-                .lineLimit(1)
-                .minimumScaleFactor(0.8)
-        }
-    }
-
-    private func plot(in size: CGSize) -> some View {
-        ZStack {
-            // Trois lignes de grille, très légères.
-            ForEach(1..<4, id: \.self) { i in
-                Rectangle()
-                    .fill(DSLegacy.hairline.opacity(0.8))
-                    .frame(height: 1)
-                    .position(x: size.width / 2, y: size.height * CGFloat(i) / 4)
-            }
-
-            // Sans quiz : la chute, en gris.
-            Self.curve(Self.withoutQuiz, in: size)
-                .trim(from: 0, to: drawn)
-                .stroke(DSLegacy.inkTertiary.opacity(0.75), style: StrokeStyle(lineWidth: 3, lineCap: .round, lineJoin: .round))
-
-            // Avec les quiz : l'aire teintée, puis la ligne bleue.
-            Self.area(Self.withQuiz, in: size)
-                .fill(
-                    LinearGradient(colors: [DSLegacy.accentSoft.opacity(0.22), DSLegacy.accentSoft.opacity(0.0)], startPoint: .top, endPoint: .bottom)
+            VStack(spacing: 16) {
+                ElevateInfoRow(
+                    systemImage: "list.bullet.rectangle",
+                    title: languageManager.text("paywall.elevate.quiz.benefit1.title"),
+                    detail: languageManager.text("paywall.elevate.quiz.benefit1.body")
                 )
-                .opacity(Double(drawn))
-            Self.curve(Self.withQuiz, in: size)
-                .trim(from: 0, to: drawn)
-                .stroke(DSLegacy.accentSoft, style: StrokeStyle(lineWidth: 3.5, lineCap: .round, lineJoin: .round))
-
-            // Un point à chaque rappel : la courbe remonte.
-            ForEach(Array(Self.dayMarks.dropFirst().enumerated()), id: \.offset) { _, mark in
-                let peak = Self.withQuiz.first { abs($0.x - mark.x) < 0.001 } ?? CGPoint(x: mark.x, y: 1)
-                Circle()
-                    .fill(DSLegacy.surface)
-                    .overlay(Circle().strokeBorder(DSLegacy.accentSoft, lineWidth: 2.5))
-                    .frame(width: 11, height: 11)
-                    .position(Self.point(peak, in: size))
-                    .opacity(drawn >= mark.x ? 1 : 0)
-                    .animation(.spring(response: 0.35, dampingFraction: 0.6), value: drawn >= mark.x)
+                ElevateInfoRow(
+                    systemImage: "clock.arrow.circlepath",
+                    title: languageManager.text("paywall.elevate.quiz.benefit2.title"),
+                    detail: languageManager.text("paywall.elevate.quiz.benefit2.body")
+                )
+                ElevateInfoRow(
+                    systemImage: "lightbulb",
+                    title: languageManager.text("paywall.elevate.quiz.benefit3.title"),
+                    detail: languageManager.text("paywall.elevate.quiz.benefit3.body")
+                )
             }
+            .padding(.horizontal, 6)
+            .padding(.top, 4)
         }
-    }
-
-    // MARK: Géométrie
-
-    private static func point(_ p: CGPoint, in size: CGSize) -> CGPoint {
-        CGPoint(
-            x: inset + p.x * (size.width - 2 * inset),
-            y: inset + (1 - p.y) * (size.height - 2 * inset)
-        )
-    }
-
-    /// Une courbe lisse (Catmull-Rom → Bézier) par les points donnés.
-    private static func curve(_ points: [CGPoint], in size: CGSize) -> Path {
-        var path = Path()
-        let pts = points.map { point($0, in: size) }
-        guard let first = pts.first else { return path }
-        path.move(to: first)
-        for i in 0..<(pts.count - 1) {
-            let p0 = i > 0 ? pts[i - 1] : pts[i]
-            let p1 = pts[i]
-            let p2 = pts[i + 1]
-            let p3 = i + 2 < pts.count ? pts[i + 2] : p2
-            let c1 = CGPoint(x: p1.x + (p2.x - p0.x) / 6, y: p1.y + (p2.y - p0.y) / 6)
-            let c2 = CGPoint(x: p2.x - (p3.x - p1.x) / 6, y: p2.y - (p3.y - p1.y) / 6)
-            path.addCurve(to: p2, control1: c1, control2: c2)
-        }
-        return path
-    }
-
-    /// La courbe fermée sur le bas du tracé, pour l'aire teintée.
-    private static func area(_ points: [CGPoint], in size: CGSize) -> Path {
-        var path = curve(points, in: size)
-        guard let last = points.last, let first = points.first else { return path }
-        path.addLine(to: CGPoint(x: point(last, in: size).x, y: size.height))
-        path.addLine(to: CGPoint(x: point(first, in: size).x, y: size.height))
-        path.closeSubpath()
-        return path
+        .padding(.horizontal, 20)
+        .padding(.top, 32)
     }
 }
 
 // MARK: - Course unlock paywall (debloquer_cours offering)
 
-/// Native paywall for the `debloquer_cours` context ("Tu as déjà lu ton cours gratuit du
-/// jour"). The course they were reading, locked; the live countdown to the next free course;
-/// then « OU » and the other way out: Sophia PRO, built to maximise what you remember, with
-/// what it unlocks. The close button appears only after 2s and this view never dismisses
-/// itself — the presenter stacks the second-chance comparison paywall on top (see `CourseView`).
+/// Native paywall for the `debloquer_cours` context (le cours gratuit du jour est déjà lu).
+/// Deux habillages « Elevate arrondi », départagés par un test A/B piloté depuis Supabase
+/// (`PaywallExperiment`, clé `course_paywall_ab`) :
+/// - `bonhomme` : avant / avec Sophia, les avantages, « Écrits par des experts », les avis ;
+/// - `reviews` : « Toute la bibliothèque », des cours en éventail, les avantages, les experts,
+///   les avis, des cartes de formule compactes.
+/// La variante part avec l'impression et les événements d'achat (`variant`, `experiment`), et
+/// l'identifiant de paywall devient `native_course_unlock_<variante>`. Cette vue ne se ferme
+/// jamais d'elle-même : le présentateur empile le paywall comparatif (voir `CourseView`).
 struct SophiaCourseUnlockPaywall: View {
     @Environment(LanguageManager.self) private var languageManager
 
     let store: StoreViewModel
+    /// Le cours qu'on voulait lire : il prend le centre de l'éventail de la variante `reviews`.
     var course: Course? = nil
+    /// Gardé pour les appelants ; le compte à rebours n'est plus affiché par ce design.
     var secondsUntilReset: Int? = nil
     /// Off for the developer shortcut in Settings, as on the discount paywall: the RevenueCat
     /// impression would otherwise count a paywall opened only to look at it.
@@ -1116,270 +751,71 @@ struct SophiaCourseUnlockPaywall: View {
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
+    /// Impose une variante au lieu du tirage de l'installation (raccourci développeur).
+    var forcedVariant: CoursePaywallVariant? = nil
 
-    @State private var purchasing = false
-    @State private var appeared = false
-    @State private var showClose = false
-    @State private var presentedAt: Date?
-    @State private var courseThumb: UIImage?
+    /// La variante de l'installation, figée à l'ouverture : un réglage qui arrive du réseau
+    /// pendant que le paywall est à l'écran ne le change pas sous les yeux du lecteur.
+    @State private var drawnVariant: CoursePaywallVariant = PaywallExperiment.courseVariant
 
     private let context = SophiaPaywallContext.debloquerCours
 
-    private var prices: StoreViewModel.PaywallPriceDisplay {
-        store.paywallPriceDisplay(language: languageManager.current)
-    }
-
-    /// The offering served here may come from a RevenueCat experiment without an intro offer.
-    private var hasTrial: Bool {
-        store.annualHasFreeTrial(forOfferingIdentifier: context.rawValue)
-    }
+    private var variant: CoursePaywallVariant { forcedVariant ?? drawnVariant }
 
     var body: some View {
-        ZStack {
-            DSLegacy.canvas.ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                HStack {
-                    closeButton
-                        .opacity(showClose ? 1 : 0)
-                        .allowsHitTesting(showClose)
-                    Spacer()
-                }
-                .padding(.horizontal, 20)
-                .padding(.top, 12)
-
-                ScrollView {
-                    VStack(spacing: 20) {
-                        hero
-                        title.padding(.horizontal, 28)
-                        if let secondsUntilReset {
-                            resetCountdown(seconds: secondsUntilReset)
-                        }
-                        orDivider.padding(.horizontal, 40)
-                        proPitch.padding(.horizontal, 28)
-                        PaywallUnlockList(titleKey: "paywall.unlock.you", items: [.audio, .unlimited, .quiz, .antiScroll])
-                            .padding(.horizontal, 22)
-                    }
-                    .padding(.top, 4)
-                    .padding(.bottom, 24)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 16)
-                }
-                .scrollIndicators(.hidden)
-
-                bottomBar
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 20)
-            }
-            // One column of copy, drawn for an iPhone. Stretched across an iPad in
-            // landscape it stops looking like the design and pushes the CTA below the
-            // fold — and Apple reviews on iPad. The background layer above stays
-            // full-bleed, so gradient paywalls still reach the edges.
-            .frame(maxWidth: OV2Legacy.readableWidth)
-        }
-        .onAppear {
-            presentedAt = Date()
-            if tracksAnalytics {
-                store.trackPaywallImpression(paywallId: "native_course_unlock", offeringIdentifier: context.rawValue)
-            }
-            if let course { courseThumb = CourseImageMap.loadImage(for: course.id) }
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
-                appeared = true
-            }
+        let shown: CoursePaywallVariant = variant
+        let layout: ElevatePaywallLayout = shown == .reviews ? .reviews : .bonhomme
+        return ElevatePaywallScreen(
+            store: store,
+            offeringIdentifier: context.rawValue,
+            paywallId: shown.paywallId,
+            analyticsProps: PaywallExperiment.courseAnalyticsProps(shown),
+            tracksAnalytics: tracksAnalytics,
             // La croix n'apparaît qu'au bout de 2 s, le temps de voir la valeur.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                withAnimation(.easeOut(duration: 0.4)) { showClose = true }
-            }
-        }
-        .task {
-            if store.offerings == nil { await store.loadOfferingsWithRetry() }
+            closeDelay: 2,
+            layout: layout,
+            onPurchased: onPurchased,
+            onRestored: onRestored,
+            onClose: { onDismissed?() }
+        ) {
+            variantContent(shown)
         }
     }
-
-    // MARK: Hero
 
     @ViewBuilder
-    private var hero: some View {
-        if let courseThumb {
-            Image(uiImage: courseThumb)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 92, height: 92)
-                .clipShape(.rect(cornerRadius: DSLegacy.Radius.control))
-                .overlay {
-                    RoundedRectangle(cornerRadius: DSLegacy.Radius.control, style: .continuous)
-                        .strokeBorder(DSLegacy.hairline, lineWidth: 1)
-                }
-                .overlay(alignment: .bottomTrailing) {
-                    Image(systemName: "lock.fill")
-                        .font(.jakarta(size: 14, weight: .bold))
-                        .foregroundStyle(.white)
-                        .frame(width: 30, height: 30)
-                        .background(DSLegacy.accent, in: Circle())
-                        .overlay { Circle().strokeBorder(.white, lineWidth: 2) }
-                        .offset(x: 8, y: 8)
-                }
-                .dsLegacySoftShadow()
-        } else {
-            Image(systemName: "book.closed.fill")
-                .font(.system(size: 40, weight: .semibold))
-                .foregroundStyle(DSLegacy.accent)
-                .frame(width: 88, height: 88)
-                .background(DSLegacy.accentTint, in: Circle())
+    private func variantContent(_ shown: CoursePaywallVariant) -> some View {
+        switch shown {
+        case .bonhomme:
+            ElevateBeforeAfterHero(
+                beforeImage: "pw_course_before",
+                afterImage: "pw_course_after",
+                beforeLabel: languageManager.text("paywall.elevate.common.before"),
+                afterLabel: languageManager.text("paywall.elevate.common.with"),
+                afterLabelHasLogo: true
+            )
+            ElevatePaywallTitle(text: languageManager.text("paywall.elevate.course.title"))
+                .dsStagger(0)
+            ElevateFeatureList()
+                .dsStagger(1)
+            ElevateExpertsCard()
+                .padding(.top, 26)
+                .dsStagger(2)
+            ElevateReviewsBlock()
+                .dsStagger(3)
+        case .reviews:
+            ElevateLibraryTitle()
+                .dsStagger(0)
+            ElevateCourseFan(course: course)
+                .dsStagger(1)
+            ElevateFeatureList()
+                .dsStagger(2)
+            ElevateExpertsCard()
+                .padding(.top, 32)
+                .dsStagger(3)
+            ElevateReviewsBlock()
+                .dsStagger(4)
         }
     }
-
-    // MARK: Title (subtitle removed per design)
-
-    private var title: some View {
-        Text(languageManager.text("paywall.course.title"))
-            .font(DSLegacy.title(.title, .heavy))
-            .foregroundStyle(DSLegacy.ink)
-            .multilineTextAlignment(.center)
-            .fixedSize(horizontal: false, vertical: true)
-            .frame(maxWidth: .infinity)
-    }
-
-    // MARK: Reset countdown ("reviens demain") — centered and aligned in its block
-
-    private func resetCountdown(seconds: Int) -> some View {
-        TimelineView(.periodic(from: .now, by: 1)) { timeline in
-            let elapsed = Int(timeline.date.timeIntervalSince(presentedAt ?? timeline.date))
-            let remaining = max(0, seconds - elapsed)
-            VStack(spacing: 6) {
-                HStack(spacing: 6) {
-                    Image(systemName: "clock.fill")
-                        .font(.jakarta(size: 12, weight: .bold))
-                    Text(languageManager.text("paywall.course.comeBack"))
-                        .font(DSLegacy.sans(.caption, .semibold))
-                }
-                .foregroundStyle(DSLegacy.inkSecondary)
-
-                Text(PaywallCountdown.format(remaining))
-                    .font(DSLegacy.sans(.title2, .bold))
-                    .monospacedDigit()
-                    .foregroundStyle(DSLegacy.ink)
-                    .contentTransition(.numericText(countsDown: true))
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 14)
-            .padding(.horizontal, 20)
-            .background(DSLegacy.surface, in: RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous))
-            .overlay {
-                RoundedRectangle(cornerRadius: DSLegacy.Radius.card, style: .continuous)
-                    .strokeBorder(DSLegacy.hairline, lineWidth: 1)
-            }
-            .padding(.horizontal, 22)
-        }
-    }
-
-    // MARK: « OU » puis Sophia PRO
-
-    /// Le trait d'union entre les deux issues : attendre demain, ou débloquer maintenant.
-    private var orDivider: some View {
-        HStack(spacing: 12) {
-            Rectangle().fill(DSLegacy.hairline).frame(height: 1)
-            Text(languageManager.text("paywall.course.or"))
-                .font(DSLegacy.sans(.caption, .heavy))
-                .tracking(1.2)
-                .foregroundStyle(DSLegacy.inkTertiary)
-            Rectangle().fill(DSLegacy.hairline).frame(height: 1)
-        }
-    }
-
-    /// « Débloque Sophia PRO, étudié pour maximiser ce que tu retiens. »
-    private var proPitch: some View {
-        Text(languageManager.text("paywall.course.proPitch"))
-            .font(DSLegacy.title(.title3, .heavy))
-            .foregroundStyle(DSLegacy.accent)
-            .multilineTextAlignment(.center)
-            .fixedSize(horizontal: false, vertical: true)
-            .frame(maxWidth: .infinity)
-    }
-
-    // MARK: Bottom bar
-
-    private var bottomBar: some View {
-        VStack(spacing: 10) {
-            PaywallPriceFootnote(text: priceLine)
-
-            Button(action: purchase) {
-                HStack(spacing: 8) {
-                    if purchasing {
-                        ProgressView().tint(.white)
-                    } else {
-                        Image(systemName: hasTrial ? "lock.open.fill" : "sparkles")
-                            .font(.jakarta(size: 15, weight: .bold))
-                        Text(ctaTitle)
-                    }
-                }
-            }
-            .buttonStyle(DSLegacyPrimaryButtonStyle())
-            .disabled(purchasing)
-            .padding(.horizontal, 24)
-
-            PaywallLegalRow(onRestore: restore)
-                .padding(.bottom, 14)
-        }
-    }
-
-    private var priceLine: String {
-        String(
-            format: hasTrial
-                ? languageManager.trialText("paywall.price.trialThenYearly", days: store.annualTrialDays)
-                : languageManager.text("paywall.price.yearlyNoTrial"),
-            prices.yearlyPrice
-        )
-    }
-
-    /// « Continuer pour 0,00 € » while the trial is served: what today costs, in the
-    /// store's currency. Without a trial the button says what it does.
-    private var ctaTitle: String {
-        hasTrial
-            ? String(format: languageManager.text("paywall.cta.continueFor"), store.zeroPriceString(language: languageManager.current))
-            : languageManager.text("paywall.cta.subscribe")
-    }
-
-    private var closeButton: some View {
-        Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            onDismissed?()
-        } label: {
-            Image(systemName: "xmark")
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DSLegacy.inkSecondary)
-                .frame(width: 40, height: 40)
-                .background(DSLegacy.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
-        }
-    }
-
-    // MARK: Actions
-
-    private func purchase() {
-        guard !purchasing else { return }
-        guard let package = store.annualPackage(forOfferingIdentifier: context.rawValue) else {
-            Task { await store.loadOfferingsWithRetry() }
-            return
-        }
-        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        purchasing = true
-        Task {
-            let ok = await store.purchase(package: package)
-            purchasing = false
-            if ok {
-                onPurchased()
-            }
-        }
-    }
-
-    private func restore() {
-        Task {
-            await store.restore()
-            if store.isPremium { onRestored() }
-        }
-    }
-
 }
 
 // MARK: - Discount paywall (offre_discount)

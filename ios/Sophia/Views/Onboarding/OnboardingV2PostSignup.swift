@@ -169,8 +169,8 @@ struct OnboardingV2Features: View {
                 Spacer().frame(height: 64)
 
                 Text(vm.personalizedText("onboardingV2.features.title", language: languageManager.current))
-                    .font(DSLegacy.title(.title, .heavy))
-                    .foregroundStyle(OV2Legacy.ink)
+                    .font(DS.title(.title, .medium))
+                    .foregroundStyle(OV2.ink)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 28)
                     .ov2Reveal(delay: 0.05)
@@ -182,7 +182,7 @@ struct OnboardingV2Features: View {
 
                 Spacer().frame(height: 28)
 
-                OnboardingV2LaurelBadge(size: 50, tint: OV2Legacy.inkSecondary) {
+                OnboardingV2LaurelBadge(size: 50, tint: OV2.inkSecondary) {
                     appStoreStack
                 }
                 .ov2Reveal(delay: 1.1)
@@ -195,8 +195,8 @@ struct OnboardingV2Features: View {
                 Spacer().frame(height: 22)
 
                 Text(languageManager.text("onboardingV2.features.noCommitment"))
-                    .font(DSLegacy.title(.title3, .bold))
-                    .foregroundStyle(OV2Legacy.ink)
+                    .font(DS.title(.title3, .semibold))
+                    .foregroundStyle(OV2.ink)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 28)
                     .ov2Reveal(delay: 1.4)
@@ -204,9 +204,9 @@ struct OnboardingV2Features: View {
                 Spacer(minLength: 24)
             }
         } footer: {
-            OnboardingV2LegacyButton(title: languageManager.text("common.continue"), action: onNext)
+            OnboardingV2Button(title: languageManager.text("common.continue"), action: onNext)
         }
-        .ov2LegacyBackground()
+        .ov2Background()
         .onAppear {
             if features.isEmpty {
                 features = Self.makeFeatures(languageManager: languageManager)
@@ -249,7 +249,7 @@ struct OnboardingV2Features: View {
         return HStack(alignment: .top, spacing: 16) {
             ZStack {
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
-                    .fill(DSLegacy.accentTint)
+                    .fill(DS.accentTint)
                     .frame(width: 48, height: trackHeight)
                 VStack(spacing: 0) {
                     ForEach(features) { feature in
@@ -265,8 +265,8 @@ struct OnboardingV2Features: View {
             VStack(spacing: 0) {
                 ForEach(features) { feature in
                     Text(feature.text)
-                        .font(DSLegacy.sans(.body, .medium))
-                        .foregroundStyle(OV2Legacy.ink)
+                        .font(DS.sans(.body, .regular))
+                        .foregroundStyle(OV2.ink)
                         .lineLimit(2)
                         .minimumScaleFactor(0.85)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -294,14 +294,14 @@ struct OnboardingV2Features: View {
         VStack(spacing: 3) {
             Image(systemName: "apple.logo")
                 .font(.system(size: 16, weight: .semibold))
-                .foregroundStyle(OV2Legacy.ink)
+                .foregroundStyle(OV2.ink)
             Text((4.8).formatted(.number.precision(.fractionLength(1)).locale(languageManager.locale)) + " / 5")
-                .font(DSLegacy.title(.title3, .heavy))
-                .foregroundStyle(OV2Legacy.ink)
+                .font(DS.title(.title3, .bold))
+                .foregroundStyle(OV2.ink)
             Text(languageManager.text("onboardingV2.review.appStore").uppercasedInApp())
-                .font(DSLegacy.sans(.caption2, .bold))
+                .font(DS.sans(.caption2, .semibold))
                 .tracking(1.2)
-                .foregroundStyle(OV2Legacy.inkSecondary)
+                .foregroundStyle(OV2.inkSecondary)
                 .lineLimit(1)
         }
     }
@@ -312,13 +312,13 @@ struct OnboardingV2Features: View {
                 ForEach(0..<5, id: \.self) { _ in
                     Image(systemName: "star.fill")
                         .font(.system(size: 22))
-                        .foregroundStyle(OV2Legacy.warm)
+                        .foregroundStyle(OV2.warm)
                 }
             }
             Text(languageManager.text("onboardingV2.loading.reviews").uppercasedInApp())
-                .font(DSLegacy.sans(.subheadline, .heavy))
+                .font(DS.sans(.subheadline, .bold))
                 .tracking(1.0)
-                .foregroundStyle(OV2Legacy.ink)
+                .foregroundStyle(OV2.ink)
         }
         .accessibilityElement(children: .combine)
     }

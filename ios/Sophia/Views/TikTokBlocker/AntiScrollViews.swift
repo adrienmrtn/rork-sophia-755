@@ -109,9 +109,9 @@ struct AntiScrollIntroSheet: View {
 // MARK: - Paywall du blocker (contexte `blocker`)
 
 /// Native paywall for the `blocker` context: a free reader asked to turn the anti-scroll on.
-/// « Prends enfin le contrôle de ton temps avec le blocker », the trial days in green, the
-/// locked apps, then what else PRO unlocks, and the usual price line and CTA. It sells the
-/// annual plan of the offering RevenueCat currently serves (price experiments included).
+/// Design « Elevate arrondi » : sans / avec l'anti-scroll en en-tête, « Comment ça marche » en
+/// trois étapes (avec les apps verrouillées de l'app), puis le choix de formule. It sells the
+/// offering RevenueCat currently serves (price experiments included), see `ElevatePaywallScreen`.
 struct SophiaBlockerPaywall: View {
     @Environment(LanguageManager.self) private var languageManager
 
@@ -123,192 +123,33 @@ struct SophiaBlockerPaywall: View {
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
 
-    @State private var purchasing = false
-    @State private var appeared = false
-    @State private var showClose = false
-
     private let context = SophiaPaywallContext.blocker
 
-    private var prices: StoreViewModel.PaywallPriceDisplay {
-        store.paywallPriceDisplay(language: languageManager.current)
-    }
-
-    /// The offering served here may come from a RevenueCat experiment without an intro offer.
-    private var hasTrial: Bool {
-        store.annualHasFreeTrial(forOfferingIdentifier: context.offeringIdentifier)
-    }
-
-    /// The trial length of the product actually sold here, so « 3 jours » follows the store.
-    private var trialDays: Int {
-        store.trialDays(for: store.annualPackage(forOfferingIdentifier: context.offeringIdentifier)) ?? store.annualTrialDays
-    }
-
     var body: some View {
-        ZStack {
-            DSLegacy.canvas.ignoresSafeArea()
-
-            VStack(spacing: 0) {
-                HStack {
-                    closeButton
-                        .opacity(showClose ? 1 : 0)
-                        .allowsHitTesting(showClose)
-                    Spacer()
-                }
-                .padding(.horizontal, 20)
-                .padding(.top, 12)
-
-                ScrollView {
-                    VStack(spacing: 22) {
-                        hero
-                        headline.padding(.horizontal, 28)
-                        PaywallUnlockList(titleKey: "paywall.unlock.plus", items: [.audio, .unlimited, .quiz])
-                            .padding(.horizontal, 22)
-                    }
-                    .padding(.top, 6)
-                    .padding(.bottom, 24)
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 16)
-                }
-                .scrollIndicators(.hidden)
-
-                bottomBar
-                    .opacity(appeared ? 1 : 0)
-                    .offset(y: appeared ? 0 : 20)
-            }
-            // One column of copy, drawn for an iPhone (see the other native paywalls).
-            .frame(maxWidth: OV2Legacy.readableWidth)
-        }
-        .onAppear {
-            if tracksAnalytics {
-                store.trackPaywallImpression(paywallId: "native_blocker", offeringIdentifier: context.offeringIdentifier)
-            }
-            withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
-                appeared = true
-            }
+        ElevatePaywallScreen(
+            store: store,
+            offeringIdentifier: context.offeringIdentifier,
+            paywallId: "native_blocker",
+            tracksAnalytics: tracksAnalytics,
             // La croix n'apparaît qu'au bout de 2 s, le temps de voir la valeur.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                withAnimation(.easeOut(duration: 0.4)) { showClose = true }
-            }
-        }
-        .task {
-            if store.offerings == nil { await store.loadOfferingsWithRetry() }
-        }
-    }
-
-    // MARK: Hero
-
-    /// Le téléphone barré, puis les apps grisées : la même image que la feuille d'avant.
-    private var hero: some View {
-        VStack(spacing: 18) {
-            Image(systemName: "iphone.slash")
-                .font(.system(size: 34, weight: .semibold))
-                .foregroundStyle(DSLegacy.accent)
-                .frame(width: 84, height: 84)
-                .background(DSLegacy.accentTint, in: Circle())
-            AntiScrollLockedApps(tileSize: 46, spacing: 10)
-        }
-    }
-
-    // MARK: Headline
-
-    private var headline: some View {
-        VStack(spacing: 10) {
-            Text(languageManager.text("paywall.blocker.title"))
-                .font(DSLegacy.title(.title, .heavy))
-                .foregroundStyle(DSLegacy.ink)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-
-            Text(hasTrial
-                 ? languageManager.trialText("paywall.blocker.subtitle", days: trialDays)
-                 : languageManager.text("paywall.blocker.subtitle.noTrial"))
-                .font(DSLegacy.sans(.subheadline, .bold))
-                .foregroundStyle(hasTrial ? DSLegacy.success : DSLegacy.inkSecondary)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-    }
-
-    // MARK: Bottom bar
-
-    private var bottomBar: some View {
-        VStack(spacing: 10) {
-            PaywallPriceFootnote(text: priceLine)
-
-            Button(action: purchase) {
-                HStack(spacing: 8) {
-                    if purchasing {
-                        ProgressView().tint(.white)
-                    } else {
-                        Image(systemName: hasTrial ? "lock.open.fill" : "sparkles")
-                            .font(.jakarta(size: 15, weight: .bold))
-                        Text(ctaTitle)
-                    }
-                }
-            }
-            .buttonStyle(DSLegacyPrimaryButtonStyle())
-            .disabled(purchasing)
-            .padding(.horizontal, 24)
-
-            PaywallLegalRow(onRestore: restore)
-                .padding(.bottom, 14)
-        }
-    }
-
-    private var priceLine: String {
-        String(
-            format: hasTrial
-                ? languageManager.trialText("paywall.price.trialThenYearly", days: trialDays)
-                : languageManager.text("paywall.price.yearlyNoTrial"),
-            prices.yearlyPrice
-        )
-    }
-
-    /// « Continuer pour 0,00 € » while the trial is served: what today costs, in the store's
-    /// currency. Without a trial the button says what it does.
-    private var ctaTitle: String {
-        hasTrial
-            ? String(format: languageManager.text("paywall.cta.continueFor"), store.zeroPriceString(language: languageManager.current))
-            : languageManager.text("paywall.cta.subscribe")
-    }
-
-    private var closeButton: some View {
-        Button {
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-            onDismissed?()
-        } label: {
-            Image(systemName: "xmark")
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(DSLegacy.inkSecondary)
-                .frame(width: 40, height: 40)
-                .background(DSLegacy.surface, in: Circle())
-                .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
-        }
-    }
-
-    // MARK: Actions
-
-    private func purchase() {
-        guard !purchasing else { return }
-        guard let package = store.annualPackage(forOfferingIdentifier: context.offeringIdentifier) else {
-            Task { await store.loadOfferingsWithRetry() }
-            return
-        }
-        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        purchasing = true
-        Task {
-            let ok = await store.purchase(package: package)
-            purchasing = false
-            if ok {
-                onPurchased()
-            }
-        }
-    }
-
-    private func restore() {
-        Task {
-            await store.restore()
-            if store.isPremium { onRestored() }
+            closeDelay: 2,
+            layout: .bonhomme,
+            onPurchased: onPurchased,
+            onRestored: onRestored,
+            onClose: { onDismissed?() }
+        ) {
+            ElevateBeforeAfterHero(
+                beforeImage: "pw_blocker_before",
+                afterImage: "pw_blocker_after",
+                beforeLabel: languageManager.text("paywall.elevate.blocker.without"),
+                afterLabel: languageManager.text("paywall.elevate.blocker.with")
+            )
+            ElevatePaywallTitle(text: languageManager.text("paywall.elevate.blocker.title"))
+                .dsStagger(0)
+            ElevatePaywallSubtitle(text: languageManager.text("paywall.elevate.blocker.subtitle"))
+                .dsStagger(1)
+            ElevateBlockerStepsCard()
+                .dsStagger(2)
         }
     }
 }
