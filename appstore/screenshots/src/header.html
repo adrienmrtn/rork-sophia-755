@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sophia — App Store product page header</title>
+<style>
+/* Product page header, 21:9. Laid out at 1920 x 823 and rendered at 2x = 3840 x 1646.
+   The phone shows roughly the middle 3:2 of it, under the status bar and the back / share
+   buttons, so everything that matters sits in the centre and in the lower two thirds; the far
+   left and right only carry decoration. */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../../../ios/Sophia/Resources/Fonts/PlusJakartaSans.ttf") format("truetype");
+  font-weight: 200 800;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { width: 1920px; height: 823px; overflow: hidden; position: relative; background: var(--bg); }
+body.cream { --bg: #fef5e9; --star1: #f2b134; --star2: #f4a3c4; }
+body.blue { --bg: #2e62c4; --star1: #fef5e9; --star2: #f2b134; }
+body.cards, body.cards-cream { --bg: #2e62c4; font-family: "Plus Jakarta Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+body.cards-cream { --bg: #fef5e9; }
+/* Course cards: the app's card (cover, subject pill, title), tilted and scattered around the logo */
+.card { position: absolute; width: 250px; background: #fff; border-radius: 22px; overflow: hidden; z-index: 2;
+  box-shadow: 0 22px 44px -18px rgba(8, 18, 48, 0.55), 0 0 0 1.5px rgba(20, 30, 60, 0.08); }
+.card .cov { width: 250px; height: 250px; object-fit: cover; display: block; }
+.card .pill { position: absolute; left: 12px; top: 12px; background: #fff; border-radius: 99px; padding: 5px 11px 5px 9px;
+  font-size: 13px; font-weight: 700; color: #22262e; display: flex; align-items: center; gap: 6px; }
+.card .pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--dot); }
+.card .t { padding: 13px 15px 16px; font-size: 18.5px; line-height: 1.22; font-weight: 700; color: #22262e; letter-spacing: -0.012em; }
+.safe { position: absolute; left: 343px; width: 1234px; top: 0; bottom: 0; outline: 2px dashed rgba(255, 0, 80, 0.7); display: none; z-index: 9; }
+body.guide .safe { display: block; }
+.logo { position: absolute; left: 50%; top: 318px; height: 176px; transform: translateX(-50%); z-index: 3; }
+.floor { position: absolute; left: 0; right: 0; bottom: 0; height: 46px; background: #1e8e73; }
+img.p { position: absolute; z-index: 2; transform-origin: 50% 100%; }
+svg.s { position: absolute; z-index: 1; }
+</style>
+</head>
+<body>
+<div class="safe"></div>
+<script>
+  const v = new URLSearchParams(location.search).get("v") || "cream";
+  document.body.className = v + (location.hash === "#guide" ? " guide" : "");
+  const add = (html) => document.body.insertAdjacentHTML("beforeend", html);
+  const person = (name, x, bottom, h, r = 0, flip = false) =>
+    add(`<img class="p" src="people/${name}.png" style="height:${h}px;left:${x}px;bottom:${bottom}px;transform:translateX(-50%) rotate(${r}deg) scaleX(${flip ? -1 : 1})">`);
+  const star = (x, y, size, c) =>
+    add(`<svg class="s" width="${size}" height="${size}" viewBox="0 0 24 24" style="left:${x}px;top:${y}px"><path fill="var(--star${c})" d="M12 0c1 7 4 10 12 12-8 2-11 5-12 12-1-7-4-10-12-12 8-2 11-5 12-12Z"/></svg>`);
+  if (v.startsWith("cards")) {
+    // Real English course titles, covers and subjects from content/courses/en.
+    const DOT = { Art: "#b06ad6", History: "#e2892b", Science: "#2fae7a", Mythology: "#d2546b", Literature: "#3f7fd8" };
+    const card = (x, y, r, img, subject, title, names) => add(`<div class="card" style="left:${x}px;top:${y}px;transform:rotate(${r}deg)">
+      <img class="cov" src="../../../ios/Sophia/CourseImages/${img}.jpg"><span class="pill" style="--dot:${DOT[subject]}"><i></i>${names ? names[subject] : subject}</span>
+      <div class="t">${title}</div></div>`);
+    const white = v === "cards";
+    add(`<img class="logo" src="${white ? "../../../ios/Sophia/Assets.xcassets/logo_white.imageset/logo_white.png" : "../../../web/public/brand/sophia-logo.png"}" style="top:${white ? 336 : 322}px;height:${white ? 150 : 172}px">`);
+    const fr = new URLSearchParams(location.search).get("lang") === "fr";
+    document.documentElement.lang = fr ? "fr" : "en";
+    const SUBJ = fr ? { Art: "Art", History: "Histoire", Science: "Sciences", Mythology: "Mythologie" } : null;
+    // [x, y, rotation, cover, subject, English title, French title]
+    [[352, 96, -7, "la_joconde", "Art", "Why is the Mona Lisa so famous?", "Pourquoi la Joconde est-elle aussi connue\u00a0?"],
+     [420, 470, 5, "giza_pyramids_khufu_khafre_menkaure_wide_view", "History", "Who really built the pyramids?", "Qui a vraiment construit les pyramides\u00a0?"],
+     [1322, 70, 6, "crab_nebula_supernova_remnant_hubble", "Science", "How does a star die?", "Comment meurt une étoile\u00a0?"],
+     [1262, 455, -5, "la_guerre_de_troie_et_le_cheval_de_bois", "Mythology", "How did a wooden horse bring down Troy?", "Comment un cheval de bois a-t-il fait tomber Troie\u00a0?"],
+     [64, 250, 4, "eiffel_tower_1889_universal_exhibition", "Art", "Why did people want to tear down the Eiffel Tower?", "Pourquoi voulait-on démolir la tour Eiffel\u00a0?"],
+     [1616, 250, -4, "apollo_11_aldrin_us_flag_lunar_module_1969", "History", "How did the United States win the race to the Moon?", "Comment les États-Unis ont-ils gagné la course à la Lune\u00a0?"],
+     [-110, -70, -9, "comment_se_forment_les_eclairs", "Science", "How does lightning form?", "Comment se forment les éclairs\u00a0?"],
+     [1790, -90, 8, "la_nuit_etoilee_van_gogh", "Art", "Why does the sky in “The Starry Night” swirl?", "Pourquoi le ciel de «\u00a0La Nuit étoilée\u00a0» tourbillonne-t-il\u00a0?"],
+     [-130, 600, 7, "dna_double_helix_3d_render_blue", "Science", "What can you actually learn from your DNA?", "Que peut-on vraiment lire dans son ADN\u00a0?"],
+     [1810, 610, -7, "beethoven_genie_et_surdite", "Art", "How could Beethoven compose as he went deaf?", "Comment Beethoven a-t-il pu composer en devenant sourd\u00a0?"],
+    ].forEach(([x, y, r, img, subj, en, f]) => card(x, y, r, img, subj, fr ? f : en, SUBJ));
+  } else if (v === "cream") {
+    add(`<img class="logo" src="../../../web/public/brand/sophia-logo.png">`);
+    add(`<div class="floor"></div>`);
+    person("boy_before", 520, 0, 330);
+    person("girl_after", 1400, 22, 300);
+    person("prop_portrait", 150, 330, 330, -8);
+    person("prop_globe", 250, 40, 230, 6);
+    person("prop_rocket", 1760, 380, 330, 14);
+    person("prop_saturn", 1700, 90, 170, -10);
+    [[700, 250, 38, 1], [1210, 232, 30, 2], [930, 640, 30, 2], [1130, 610, 24, 1], [430, 250, 26, 2], [1500, 250, 30, 1], [60, 120, 30, 1], [1870, 300, 26, 2]].forEach((a) => star(...a));
+  } else {
+    add(`<img class="logo" src="../../../ios/Sophia/Assets.xcassets/logo_white.imageset/logo_white.png" style="top:330px;height:150px">`);
+    person("prop_portrait", 470, 150, 300, -9);
+    person("prop_mask", 640, 60, 110, -6);
+    person("prop_rocket", 1450, 250, 290, 14);
+    person("prop_globe", 1320, 20, 210, 8);
+    person("prop_bust", 150, 250, 340, 6);
+    person("prop_telescope", 240, 20, 220, -4);
+    person("prop_saturn", 1760, 480, 200, -12);
+    person("prop_amphora", 1720, 40, 300, -7);
+    [[760, 240, 40, 1], [1150, 250, 30, 2], [900, 620, 30, 2], [1080, 600, 26, 1], [1250, 160, 24, 1], [690, 560, 22, 1], [1560, 620, 26, 2]].forEach((a) => star(...a));
+  }
+</script>
+</body>
+</html>

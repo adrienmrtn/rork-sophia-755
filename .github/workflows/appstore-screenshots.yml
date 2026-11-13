@@ -1,0 +1,188 @@
+# One click fills the visual and "what's new" part of the App Store page for a version:
+# screenshots for iPhone 6.9" and iPad 13" in every language of the page, plus Promotional Text
+# and What's New.
+#
+# Screenshots are rendered here, not committed: appstore/screenshots/render-store.cjs draws them
+# from the HTML sources (see appstore/screenshots/README.md), then
+# scripts/appstore_screenshots.py uploads them. Each slot is REPLACED: what App Store Connect
+# holds there is deleted, then the new set is uploaded in order. Other device sizes are left
+# alone. The rendered PNGs, and the product page headers (which go through the Asset Library by
+# hand), are attached to the run as the "store-assets" artifact.
+#
+# Texts: appstore/metadata/<locale>/promotional_text.txt and whats_new.txt, written by the same
+# command as the "App Store release notes" workflow (only those two fields, only where they
+# differ).
+#
+#   push      render, upload, write the texts. The default.
+#   dry-run   render, attach the artifact, list what a push would replace or change. Writes
+#             nothing to Apple: use it to look at the images first.
+#
+# Both refuse to touch Apple unless the version being prepared is the one named.
+# Secrets: ASC_KEY_ID, ASC_ISSUER_ID, ASC_PRIVATE_KEY, as for "App Store metadata".
+name: App Store screenshots
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version being prepared in App Store Connect"
+        type: string
+        default: "2"
+      action:
+        description: "What to do"
+        type: choice
+        default: push
+        options:
+          - push
+          - dry-run
+      texts:
+        description: "Also write Promotional Text and What's New"
+        type: boolean
+        default: true
+      locale:
+        description: "One locale only, e.g. fr-FR (blank = all)"
+        type: string
+        default: ""
+
+# Same group as the other App Store workflows: two runs never write to the account at once.
+concurrency:
+  group: appstore-metadata
+  cancel-in-progress: false
+
+jobs:
+  run:
+    name: ${{ inputs.action }} ${{ inputs.version }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check the secrets are set
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          missing=""
+          for name in ASC_KEY_ID ASC_ISSUER_ID ASC_PRIVATE_KEY; do
+            [ -n "${!name}" ] || missing="$missing $name"
+          done
+          if [ -n "$missing" ]; then
+            echo "Missing repository secret(s):$missing" >&2
+            echo "Settings -> Secrets and variables -> Actions -> New repository secret" >&2
+            exit 1
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the JWT signer
+        run: pip install --quiet pyjwt cryptography
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # The fonts the pages fall back to for Greek, Cyrillic, Arabic, Hebrew and Japanese, and
+      # Inter for the status bar clock. Without them those languages render as boxes.
+      - name: Install fonts and the browser
+        working-directory: appstore/screenshots
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-core fonts-noto-cjk fonts-inter
+          npm install --no-save --silent playwright@1.63.0
+          npx playwright install --with-deps chromium
+
+      # Inputs go through the environment, never spliced into the script.
+      - name: Render
+        working-directory: appstore/screenshots
+        env:
+          LOCALE: ${{ inputs.locale }}
+        run: |
+          if [ -n "$LOCALE" ]; then
+            node render-store.cjs "$LOCALE"
+          else
+            node render-store.cjs
+          fi
+
+      - name: Attach the rendered assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: store-assets
+          path: |
+            appstore/screenshots/*/iphone-6.9-store/
+            appstore/screenshots/*/ipad-13-store/
+            appstore/screenshots/*/header-store.png
+          retention-days: 14
+
+      - name: Screenshots
+        env:
+          ACTION: ${{ inputs.action }}
+          VERSION: ${{ inputs.version }}
+          LOCALE: ${{ inputs.locale }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          if [ -z "$VERSION" ]; then
+            echo "Give the version being prepared, e.g. 2." >&2
+            exit 1
+          fi
+          only=()
+          if [ -n "$LOCALE" ]; then
+            only=(--locale "$LOCALE")
+          fi
+          case "$ACTION" in
+            dry-run) mode=(--dry-run) ;;
+            push)    mode=() ;;
+            *)       echo "unknown action: $ACTION" >&2; exit 1 ;;
+          esac
+          {
+            echo "### \`$ACTION\` $VERSION: screenshots"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          set +e
+          python3 scripts/appstore_screenshots.py push --version "$VERSION" "${mode[@]}" "${only[@]}" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          status=${PIPESTATUS[0]}
+          set -e
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
+
+      - name: Promotional Text and What's New
+        if: inputs.texts
+        env:
+          ACTION: ${{ inputs.action }}
+          VERSION: ${{ inputs.version }}
+          LOCALE: ${{ inputs.locale }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          only=()
+          if [ -n "$LOCALE" ]; then
+            only=(--locale "$LOCALE")
+          fi
+          mode=()
+          if [ "$ACTION" = dry-run ]; then
+            mode=(--dry-run)
+          fi
+          {
+            echo "### \`$ACTION\` $VERSION: Promotional Text and What's New"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          set +e
+          python3 scripts/appstore_metadata.py push \
+            --fields promotional_text,whats_new \
+            --version "$VERSION" \
+            "${mode[@]}" "${only[@]}" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          status=${PIPESTATUS[0]}
+          set -e
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
