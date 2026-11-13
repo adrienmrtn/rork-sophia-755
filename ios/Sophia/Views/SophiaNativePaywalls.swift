@@ -324,6 +324,7 @@ struct SophiaStandardPaywall: View {
                 .background(DS.surface, in: Circle())
                 .overlay { Circle().strokeBorder(DS.hairline, lineWidth: 1.5) }
         }
+        .paywallCloseDelayed()
     }
 
     // MARK: Actions
@@ -607,6 +608,7 @@ struct SophiaTrainingPaywall: View {
                 .background(DSLegacy.surface, in: Circle())
                 .overlay { Circle().strokeBorder(DSLegacy.hairline, lineWidth: 1) }
         }
+        .paywallCloseDelayed()
     }
 
     // MARK: Actions
@@ -663,8 +665,8 @@ struct SophiaQuizPaywall: View {
             offeringIdentifier: context.rawValue,
             paywallId: "native_quiz",
             tracksAnalytics: tracksAnalytics,
-            // La croix n'apparaît qu'au bout de 4 s, le temps de voir la valeur.
-            closeDelay: 4,
+            // La croix n'apparaît qu'au bout de 3 s, le temps de voir la valeur.
+            closeDelay: PaywallClose.delay,
             layout: .bonhomme,
             onPurchased: onPurchased,
             onRestored: onRestored,
@@ -771,8 +773,8 @@ struct SophiaCourseUnlockPaywall: View {
             paywallId: shown.paywallId,
             analyticsProps: PaywallExperiment.courseAnalyticsProps(shown),
             tracksAnalytics: tracksAnalytics,
-            // La croix n'apparaît qu'au bout de 2 s, le temps de voir la valeur.
-            closeDelay: 2,
+            // La croix n'apparaît qu'au bout de 3 s, le temps de voir la valeur.
+            closeDelay: PaywallClose.delay,
             layout: layout,
             onPurchased: onPurchased,
             onRestored: onRestored,
@@ -1213,6 +1215,7 @@ struct SophiaDiscountPaywall: View {
                 .background(.white.opacity(0.14), in: Circle())
                 .overlay { Circle().strokeBorder(.white.opacity(0.45), lineWidth: 1.5) }
         }
+        .paywallCloseDelayed()
     }
 
     // MARK: Actions

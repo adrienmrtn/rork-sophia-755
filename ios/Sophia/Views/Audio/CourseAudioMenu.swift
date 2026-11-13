@@ -50,7 +50,8 @@ struct CourseAudioMenuItems: View {
             } label: {
                 Label(
                     languageManager.text(player.isPlayingCourse(courseId) ? "audio.nowPlaying" : "audio.listen"),
-                    systemImage: player.isPremium ? "headphones" : "lock.fill"
+                    // Jamais de cadenas : le paywall audio s'ouvre au clic pour un non-abonné.
+                    systemImage: "headphones"
                 )
             }
 
@@ -82,7 +83,7 @@ struct CourseAudioMenuItems: View {
                 } label: {
                     Label(
                         "\(languageManager.text("audio.download")) · \(language.shortCode)",
-                        systemImage: player.isPremium ? "arrow.down.circle" : "lock.fill"
+                        systemImage: "arrow.down.circle"
                     )
                 }
             case .downloading:

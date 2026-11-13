@@ -5,26 +5,45 @@ import android.content.Context
 import android.content.ContextWrapper
 import com.google.android.play.core.review.ReviewManagerFactory
 
+/**
+ * La demande de note Google Play. Deux occasions, chacune une seule fois dans la vie de
+ * l'installation : la page Mission de l'onboarding (« L'équipe Sophia »), et le cinquième
+ * « Continuer » dans le premier cours que l'utilisateur ouvre. Play plafonne de son côté la
+ * fréquence à laquelle la fenêtre apparaît vraiment.
+ */
 object InAppReviewHelper {
-    fun requestIfEligible(
-        context: Context,
-        progressManager: ProgressManager,
-        courseId: String,
-        lessonIndex: Int,
-    ) {
-        if (lessonIndex != 2) return
-        if (progressManager.firstCourseOpenedId != courseId) return
-        requestOnce(context, progressManager)
+    private const val PREFS = "sophia_prefs"
+    private const val ONBOARDING_ASKED_KEY = "sophia_review_onboarding_asked"
+    private const val FIRST_COURSE_TAPS_KEY = "sophia_review_first_course_continue_taps"
+
+    /** Le « Continuer » du premier cours qui déclenche la demande. */
+    const val FIRST_COURSE_CONTINUE_TAP = 5
+
+    /** La demande de l'onboarding, sur la page Mission : une fois par installation. */
+    fun requestInOnboarding(context: Context) {
+        val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+        if (prefs.getBoolean(ONBOARDING_ASKED_KEY, false)) return
+        prefs.edit().putBoolean(ONBOARDING_ASKED_KEY, true).apply()
+        launch(context)
     }
 
     /**
-     * Play caps how often the dialog can actually appear, so the one shot per install is
-     * spent on whichever trigger fires first — the onboarding testimonials page or the
-     * third lesson of the first course.
+     * Un clic sur « Continuer » dans le lecteur. Seul le premier cours ouvert compte ; au
+     * cinquième clic, la demande part, une seule fois (`hasRequestedAppStoreReview`, qui
+     * couvre aussi les installations déjà sollicitées par l'ancienne règle).
      */
-    fun requestOnce(context: Context, progressManager: ProgressManager) {
+    fun onReaderContinue(context: Context, progressManager: ProgressManager, courseId: String) {
         if (progressManager.hasRequestedAppStoreReview) return
+        if (progressManager.firstCourseOpenedId != courseId) return
+        val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+        val taps = prefs.getInt(FIRST_COURSE_TAPS_KEY, 0) + 1
+        prefs.edit().putInt(FIRST_COURSE_TAPS_KEY, taps).apply()
+        if (taps < FIRST_COURSE_CONTINUE_TAP) return
         progressManager.markAppStoreReviewRequested()
+        launch(context)
+    }
+
+    private fun launch(context: Context) {
         val activity = context.findActivity() ?: return
         val manager = ReviewManagerFactory.create(context)
         manager.requestReviewFlow().addOnCompleteListener { task ->

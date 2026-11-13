@@ -54,20 +54,21 @@ struct OnboardingV2FollowCreators: View {
             .background(alignment: .top) { OV2EndBottomFade() }
         }
         .ov2Background()
-        // La page derrière la fenêtre n'est plus lue par VoiceOver.
-        .accessibilityHidden(presented != nil)
-        .overlay {
-            if let author = presented {
-                OnboardingV2CreatorPopup(
-                    author: author,
-                    isFollowing: progressManager.isFollowing(author.slug),
-                    onToggleFollow: { toggleFollow(author) },
-                    onClose: { presented = nil }
-                )
-                .transition(.opacity)
-            }
+        // La présentation du prof monte du bas, en feuille : on la tire vers le haut pour tout
+        // lire, vers le bas pour revenir à la liste.
+        .sheet(item: $presented) { author in
+            OnboardingV2CreatorPopup(
+                author: author,
+                isFollowing: progressManager.isFollowing(author.slug),
+                onToggleFollow: { toggleFollow(author) },
+                onClose: { presented = nil },
+                asSheet: true
+            )
+            .presentationDetents([.medium, .large])
+            .presentationDragIndicator(.visible)
+            .presentationCornerRadius(28)
+            .preferredColorScheme(.light)
         }
-        .animation(DSCalmMotion.state, value: presented)
         .onAppear { if authors.isEmpty { authors = Self.suggestedAuthors(subjects: vm.selectedSubjects) } }
     }
 
@@ -184,7 +185,7 @@ struct OnboardingV2FollowCreators: View {
 
 // MARK: - Présentation d'un prof
 
-/// Fenêtre qui présente un prof par-dessus la liste : portrait, nom, parcours, « Suivre »,
+/// Présentation d'un prof par-dessus la liste (en feuille montant du bas dans l'onboarding) : portrait, nom, parcours, « Suivre »,
 /// bio, puis ses cours (couverture, titre, matière). Les données sont celles de la page d'un
 /// créateur dans l'app (`CourseAuthor` et le catalogue).
 ///
@@ -196,6 +197,9 @@ struct OnboardingV2CreatorPopup: View {
     let isFollowing: Bool
     let onToggleFollow: () -> Void
     let onClose: () -> Void
+    /// Présentée dans une feuille qui monte du bas (l'onboarding) : pas de fond assombri ni de
+    /// croix, la feuille a sa poignée et se ferme en la tirant vers le bas.
+    var asSheet: Bool = false
 
     @State private var courses: [Course] = []
     @AccessibilityFocusState private var nameFocused: Bool
@@ -204,16 +208,22 @@ struct OnboardingV2CreatorPopup: View {
     private static let maxCourses = 8
 
     var body: some View {
-        ZStack {
-            Color.black.opacity(0.45)
-                .ignoresSafeArea()
-                .contentShape(Rectangle())
-                .onTapGesture(perform: onClose)
-                .accessibilityHidden(true)
+        Group {
+            if asSheet {
+                sheetContent
+            } else {
+                ZStack {
+                    Color.black.opacity(0.45)
+                        .ignoresSafeArea()
+                        .contentShape(Rectangle())
+                        .onTapGesture(perform: onClose)
+                        .accessibilityHidden(true)
 
-            card
-                .padding(.horizontal, 20)
-                .padding(.vertical, 20)
+                    card
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 20)
+                }
+            }
         }
         .accessibilityAddTraits(.isModal)
         .accessibilityAction(.escape, onClose)
@@ -231,6 +241,18 @@ struct OnboardingV2CreatorPopup: View {
         let all: [Course] = author.courseIds.compactMap { ContentCatalog.course(withId: $0) }
         let sorted: [Course] = all.sorted { $0.readsCount > $1.readsCount }
         return Array(sorted.prefix(maxCourses))
+    }
+
+    /// Le contenu de la feuille : les mêmes éléments que la fenêtre, qui défilent sous la poignée.
+    private var sheetContent: some View {
+        ScrollView(.vertical) {
+            details
+                .padding(.top, 30)
+                .frame(maxWidth: 520)
+                .frame(maxWidth: .infinity)
+        }
+        .scrollIndicators(.hidden)
+        .background(DS.surface.ignoresSafeArea())
     }
 
     private var card: some View {

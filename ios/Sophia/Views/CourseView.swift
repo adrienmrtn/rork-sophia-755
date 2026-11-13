@@ -47,6 +47,8 @@ struct CourseView: View {
     /// paywall) fait disparaître puis réapparaître le lecteur : ce n'est pas une nouvelle
     /// visite, les tâches d'ouverture ne doivent pas repartir.
     @State private var isVisitActive = false
+    /// Clics sur « Continuer » pendant cette visite du cours, pour la demande de note.
+    @State private var continueTaps: Int = 0
     /// Quand la section affichée a commencé, pour le temps passé de `section_view`.
     @State private var sectionEnteredAt = Date()
     @State private var coachmarkTerm: String? = nil
@@ -205,7 +207,6 @@ struct CourseView: View {
             // finds them on disk rather than in flight.
             CourseImageLoader.prefetch(courseId: course.id)
             progressManager.registerFirstCourseOpenedIfNeeded(course.id)
-            requestAppStoreReviewIfEligible(lessonIndex: currentIndex)
             maybeShowTermCoachmark(lessonIndex: currentIndex)
         }
         .onDisappear {
@@ -219,7 +220,6 @@ struct CourseView: View {
         }
         .onChange(of: currentIndex) { oldIndex, newIndex in
             logSectionView(index: oldIndex, reachedEnd: newIndex > oldIndex)
-            requestAppStoreReviewIfEligible(lessonIndex: newIndex)
             maybeShowTermCoachmark(lessonIndex: newIndex)
         }
         .fullScreenCover(item: $presentedAuthor) { author in
@@ -465,12 +465,14 @@ struct CourseView: View {
 
     // MARK: Audio
 
-    /// Headphones: listen to this course. Animated while its narration plays.
+    /// Headphones: listen to this course. Animated while its narration plays. Same symbol for
+    /// a free reader: the audio paywall opens on tap (`openAudio`).
     private var audioButton: some View {
         let player = CourseAudioPlayer.shared
         let playing = player.isPlayingCourse(course.id)
         return Button(action: openAudio) {
-            Image(systemName: playing ? "waveform" : (isPremium ? "headphones" : "lock.fill"))
+            // Jamais de cadenas : toujours le symbole audio ; le paywall s'ouvre au clic.
+            Image(systemName: playing ? "waveform" : "headphones")
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundStyle(player.isCurrent(course.id) ? DS.accent : DS.ink)
                 .symbolEffect(.variableColor.iterative, isActive: playing)
@@ -787,6 +789,8 @@ struct CourseView: View {
         // `CourseCTAStyle` ne vibre pas : chaque geste choisit sa vibration (pas à pas dans
         // `advanceStep` ; par pages, le changement de section vibre dans `onChange(of: currentIndex)`).
         return Button {
+            // Les deux modes de lecture passent par ce bouton : c'est lui qu'on compte.
+            countContinueTapForReview()
             if readingMode == .steps {
                 advanceStep()
                 return
@@ -912,8 +916,8 @@ struct CourseView: View {
         }
         scrollRequest = CourseStepReaderView.ScrollRequest(stepID: step.id, token: (scrollRequest?.token ?? 0) + 1)
         if step.sectionIndex != currentIndex {
-            // Nouvelle section : `section_view`, progression, coachmark et demande d'avis
-            // suivent `currentIndex`, comme par pages.
+            // Nouvelle section : `section_view`, progression et coachmark suivent
+            // `currentIndex`, comme par pages.
             currentIndex = step.sectionIndex
             progressManager.updateLessonProgress(
                 courseId: course.id,
@@ -980,9 +984,12 @@ struct CourseView: View {
         }
     }
 
-    /// Third lesson (index 2) of the first course ever opened — once per install.
-    private func requestAppStoreReviewIfEligible(lessonIndex: Int) {
-        guard lessonIndex == 2 else { return }
+    /// La demande de note de l'App Store : au cinquième clic sur « Continuer » du premier cours
+    /// jamais ouvert, une seule fois par installation. (Elle partait auparavant à la troisième
+    /// leçon de ce même cours ; il n'y a toujours qu'une demande.)
+    private func countContinueTapForReview() {
+        continueTaps += 1
+        guard continueTaps == Self.reviewRequestContinueTap else { return }
         guard progressManager.firstCourseOpenedId == course.id else { return }
         guard !progressManager.hasRequestedAppStoreReview else { return }
         progressManager.markAppStoreReviewRequested()
@@ -992,6 +999,8 @@ struct CourseView: View {
             SKStoreReviewController.requestReview(in: scene)
         }
     }
+
+    private static let reviewRequestContinueTap: Int = 5
 
     /// Coachmark « appuie sur ce mot » affiché quand l'utilisateur voit son premier mot
     /// surligné : déclenché sur la première page (visible) qui contient un terme du glossaire,

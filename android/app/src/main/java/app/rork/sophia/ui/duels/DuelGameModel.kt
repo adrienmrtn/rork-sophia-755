@@ -179,6 +179,12 @@ object DuelRules {
     /** Celui qui choisit sa matière a jusqu'à ce délai avant le départ de la manche. */
     const val LIVE_PICK_MARGIN_MS = 1_500L
 
+    /**
+     * Écart minimal pour suivre un départ de manche avancé par le serveur après un choix de
+     * matière : en dessous, c'est le bruit entre deux lectures de l'état, pas un changement.
+     */
+    const val LIVE_EARLY_START_MIN_MS = 300L
+
     /** La dernière révélation reste à l'écran avant le résultat. */
     const val LIVE_FINAL_REVEAL_MS = 2_200L
     const val LIVE_FINAL_REVEAL_SLIDER_MS = 3_000L
@@ -821,7 +827,7 @@ class DuelGameModel(
             while (true) {
                 // Une nouvelle manche commence : son annonce occupe le temps qui la précède.
                 if (i in 1 until questionCount && i % DuelMatch.QUESTIONS_PER_ROUND == 0 && i >= playedQuestions.size) {
-                    announceLive(match.rounds[i / DuelMatch.QUESTIONS_PER_ROUND], startsAt)
+                    startsAt = announceLive(match.rounds[i / DuelMatch.QUESTIONS_PER_ROUND], startsAt, i)
                 }
                 // La question démarre au même instant pour les deux joueurs.
                 while (clock() < startsAt) pause(DuelRules.TICK_MS)
@@ -863,11 +869,15 @@ class DuelGameModel(
      * L'annonce d'une manche en direct, jusqu'à l'instant où sa première question démarre. Au
      * choix : celui qui choisit a jusqu'à 1,5 s avant le départ ; l'autre voit la matière dès
      * que le serveur la connaît.
+     *
+     * Rend l'instant de départ de la manche. C'est [startsAt], sauf si le serveur l'avance une
+     * fois la matière choisie : la partie reprend alors dès ce nouvel instant, sans attendre
+     * la fin du délai de choix. [firstIndex] est la première question de la manche.
      */
-    private suspend fun announceLive(plan: DuelRoundPlan, startsAt: Long) {
-        if (plan.kind == DuelRoundKind.MIXED) return
+    private suspend fun announceLive(plan: DuelRoundPlan, startsAt: Long, firstIndex: Int): Long {
+        if (plan.kind == DuelRoundKind.MIXED) return startsAt
         // En retard sur le serveur (coupure réseau) : pas d'annonce, on rattrape la partie.
-        if (startsAt - clock() <= DuelRules.LIVE_ANNOUNCE_MIN_MS) return
+        if (startsAt - clock() <= DuelRules.LIVE_ANNOUNCE_MIN_MS) return startsAt
         // La révélation de la question précédente reste un instant à l'écran.
         pause(DuelRules.LIVE_BEFORE_ANNOUNCE_MS)
         val mine = plan.isMyPick
@@ -881,11 +891,13 @@ class DuelGameModel(
                 deadlineMs = if (mine) startsAt - DuelRules.LIVE_PICK_MARGIN_MS else null,
             ),
         )
-        while (clock() < startsAt) {
+        var start = startsAt
+        while (clock() < start) {
             pause(DuelRules.TICK_MS)
             if (plan.kind != DuelRoundKind.PICK) continue
             val intro = roundIntro ?: continue
-            val chosen = liveState?.picks?.get(plan.number.toString())
+            val state = liveState
+            val chosen = state?.picks?.get(plan.number.toString())
             if (chosen != null && intro.chosen != chosen) {
                 roundIntro = intro.copy(chosen = chosen)
                 if (!mine) haptic(DuelHaptic.OpponentAnswered)
@@ -893,7 +905,13 @@ class DuelGameModel(
                 // Pas de choix à temps : la première matière proposée, celle que le serveur retient.
                 plan.options?.firstOrNull()?.subject?.let { roundIntro = intro.copy(chosen = it) }
             }
+            // La matière est connue du serveur et il a avancé le départ : on le suit.
+            if (chosen != null && state != null && state.index == firstIndex) {
+                val serverStart = liveStateAtMs + state.questionStartsInMs
+                if (serverStart < start - DuelRules.LIVE_EARLY_START_MIN_MS) start = serverStart
+            }
         }
+        return start
     }
 
     /**

@@ -573,6 +573,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.bullet3": "Désactivable en un geste",
         "onboardingV2.notifications.cta": "Activer les notifications",
         "onboardingV2.notifications.skip": "Plus tard",
+        "onboardingV2.notifications.alert.title.ios": "« Sophia » souhaite vous envoyer des notifications",
+        "onboardingV2.notifications.alert.body.ios": "Les notifications peuvent inclure des alertes, des sons et des pastilles d'icônes. Vous pouvez les configurer dans Réglages.",
+        "onboardingV2.notifications.alert.deny.ios": "Refuser",
+        "onboardingV2.notifications.alert.allow": "Autoriser",
         "notification.courseNudge.title": "À découvrir aujourd'hui",
         "notification.courseNudge.body": "Viens découvrir « %@ » — 5 minutes suffisent.",
         "notification.courseNudge.bodyFallback": "Un nouveau cours t'attend — 5 minutes suffisent.",
@@ -2894,6 +2898,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Disciple",
         "badge.name.likes_10": "Crush",
         "badge.name.friends_3": "Circle of Friends",
+        "onboardingV2.notifications.alert.title.ios": "“Sophia” Would Like to Send You Notifications",
+        "onboardingV2.notifications.alert.body.ios": "Notifications may include alerts, sounds, and icon badges. These can be configured in Settings.",
+        "onboardingV2.notifications.alert.deny.ios": "Don’t Allow",
+        "onboardingV2.notifications.alert.allow": "Allow",
     ]
     // MARK: - Spanish
 
@@ -4277,6 +4285,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Discípulo",
         "badge.name.likes_10": "Flechazo",
         "badge.name.friends_3": "Pandilla",
+        "onboardingV2.notifications.alert.title.ios": "«Sophia» quiere enviarte notificaciones",
+        "onboardingV2.notifications.alert.body.ios": "Las notificaciones pueden incluir alertas, sonidos y globos en los iconos. Puedes configurarlas en Ajustes.",
+        "onboardingV2.notifications.alert.deny.ios": "No permitir",
+        "onboardingV2.notifications.alert.allow": "Permitir",
     ]
     // MARK: - German
 
@@ -5660,6 +5672,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Wissensdurst",
         "badge.name.likes_10": "Herzenssache",
         "badge.name.friends_3": "Freundeskreis",
+        "onboardingV2.notifications.alert.title.ios": "„Sophia“ möchte dir Mitteilungen senden",
+        "onboardingV2.notifications.alert.body.ios": "Mitteilungen können Hinweise, Töne und Kennzeichen sein. Du kannst sie in den Einstellungen konfigurieren.",
+        "onboardingV2.notifications.alert.deny.ios": "Nicht erlauben",
+        "onboardingV2.notifications.alert.allow": "Erlauben",
     ]
     // MARK: - Portuguese (Brazil)
 
@@ -7043,6 +7059,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Discípulo",
         "badge.name.likes_10": "Xodó",
         "badge.name.friends_3": "Galera",
+        "onboardingV2.notifications.alert.title.ios": "“Sophia” Deseja Enviar Notificações",
+        "onboardingV2.notifications.alert.body.ios": "As notificações podem incluir alertas, sons e avisos nos ícones. Você pode configurá-las em Ajustes.",
+        "onboardingV2.notifications.alert.deny.ios": "Não Permitir",
+        "onboardingV2.notifications.alert.allow": "Permitir",
     ]
 
     // MARK: - Portuguese (Portugal)
@@ -8427,6 +8447,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Discípulo",
         "badge.name.likes_10": "Paixão",
         "badge.name.friends_3": "Grupo de amigos",
+        "onboardingV2.notifications.alert.title.ios": "“Sophia” gostaria de lhe enviar notificações",
+        "onboardingV2.notifications.alert.body.ios": "As notificações podem incluir alertas, sons e avisos nos ícones. Pode configurá-las nas Definições.",
+        "onboardingV2.notifications.alert.deny.ios": "Não permitir",
+        "onboardingV2.notifications.alert.allow": "Permitir",
     ]
     // MARK: - Italian
 
@@ -9810,6 +9834,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Discepolo",
         "badge.name.likes_10": "Colpo di fulmine",
         "badge.name.friends_3": "Combriccola",
+        "onboardingV2.notifications.alert.title.ios": "“Sophia” vorrebbe inviarti delle notifiche",
+        "onboardingV2.notifications.alert.body.ios": "Le notifiche possono includere avvisi, suoni e badge icona. Puoi configurarle in Impostazioni.",
+        "onboardingV2.notifications.alert.deny.ios": "Non consentire",
+        "onboardingV2.notifications.alert.allow": "Consenti",
     ]
     // MARK: - Turkish
 
@@ -11193,6 +11221,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Talebe",
         "badge.name.likes_10": "Gözde",
         "badge.name.friends_3": "Kafadarlar",
+        "onboardingV2.notifications.alert.title.ios": "“Sophia” Size Bildirim Göndermek İstiyor",
+        "onboardingV2.notifications.alert.body.ios": "Bildirimler uyarıları, sesleri ve simge işaretlerini içerebilir. Bunları Ayarlar’dan düzenleyebilirsiniz.",
+        "onboardingV2.notifications.alert.deny.ios": "İzin Verme",
+        "onboardingV2.notifications.alert.allow": "İzin Ver",
     ]
     // MARK: - Polish
 
@@ -12577,6 +12609,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Adept",
         "badge.name.likes_10": "Zauroczenie",
         "badge.name.friends_3": "Paczka znajomych",
+        "onboardingV2.notifications.alert.title.ios": "Aplikacja „Sophia” chce wysyłać Ci powiadomienia",
+        "onboardingV2.notifications.alert.body.ios": "Powiadomienia mogą zawierać alerty, dźwięki i plakietki ikon. Możesz je skonfigurować w Ustawieniach.",
+        "onboardingV2.notifications.alert.deny.ios": "Nie pozwalaj",
+        "onboardingV2.notifications.alert.allow": "Pozwól",
     ]
     // MARK: - Romanian
 
@@ -13961,6 +13997,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Discipol",
         "badge.name.likes_10": "Favorit",
         "badge.name.friends_3": "Gașcă de prieteni",
+        "onboardingV2.notifications.alert.title.ios": "„Sophia” ar dori să vă trimită notificări",
+        "onboardingV2.notifications.alert.body.ios": "Notificările pot include alerte, sunete și insigne pe pictograme. Le puteți configura în Configurări.",
+        "onboardingV2.notifications.alert.deny.ios": "Nu permite",
+        "onboardingV2.notifications.alert.allow": "Permite",
     ]
     // MARK: - Dutch
 
@@ -15344,6 +15384,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Volgeling",
         "badge.name.likes_10": "Favoriet",
         "badge.name.friends_3": "Vriendengroep",
+        "onboardingV2.notifications.alert.title.ios": "‘Sophia’ wil je berichten sturen",
+        "onboardingV2.notifications.alert.body.ios": "Meldingen kunnen bestaan uit waarschuwingen, geluiden en badges. Je kunt ze configureren in Instellingen.",
+        "onboardingV2.notifications.alert.deny.ios": "Sta niet toe",
+        "onboardingV2.notifications.alert.allow": "Sta toe",
     ]
     // MARK: - Greek
 
@@ -16727,6 +16771,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Μαθητής",
         "badge.name.likes_10": "Αδυναμία",
         "badge.name.friends_3": "Παρέα",
+        "onboardingV2.notifications.alert.title.ios": "Η εφαρμογή «Sophia» θέλει να σας στέλνει γνωστοποιήσεις",
+        "onboardingV2.notifications.alert.body.ios": "Οι γνωστοποιήσεις μπορεί να περιλαμβάνουν ειδοποιήσεις, ήχους και ταμπέλες εικονιδίων. Μπορείτε να τις διαμορφώσετε στις Ρυθμίσεις.",
+        "onboardingV2.notifications.alert.deny.ios": "Να μην επιτρέπεται",
+        "onboardingV2.notifications.alert.allow": "Να επιτρέπεται",
     ]
     // MARK: - Swedish
 
@@ -18110,6 +18158,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Lärjunge",
         "badge.name.likes_10": "Favorit",
         "badge.name.friends_3": "Vänkrets",
+        "onboardingV2.notifications.alert.title.ios": "”Sophia” vill skicka notiser till dig",
+        "onboardingV2.notifications.alert.body.ios": "Notiser kan inkludera påminnelser, ljud och symbolbrickor. Du kan ställa in dem i Inställningar.",
+        "onboardingV2.notifications.alert.deny.ios": "Tillåt inte",
+        "onboardingV2.notifications.alert.allow": "Tillåt",
     ]
     // MARK: - Hungarian
 
@@ -19493,6 +19545,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Tanítvány",
         "badge.name.likes_10": "Kedvenc",
         "badge.name.friends_3": "Baráti kör",
+        "onboardingV2.notifications.alert.title.ios": "A(z) „Sophia” értesítéseket szeretne küldeni Önnek",
+        "onboardingV2.notifications.alert.body.ios": "Az értesítések figyelmeztetéseket, hangokat és ikonjelvényeket tartalmazhatnak. Ezeket a Beállításokban konfigurálhatja.",
+        "onboardingV2.notifications.alert.deny.ios": "Tiltás",
+        "onboardingV2.notifications.alert.allow": "Engedélyezés",
     ]
     // MARK: - Bulgarian
 
@@ -20876,6 +20932,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Последовател",
         "badge.name.likes_10": "Фаворит",
         "badge.name.friends_3": "Приятелски кръг",
+        "onboardingV2.notifications.alert.title.ios": "„Sophia“ иска да ви изпраща известия",
+        "onboardingV2.notifications.alert.body.ios": "Известията могат да включват предупреждения, звуци и значки върху иконите. Можете да ги настроите в Настройки.",
+        "onboardingV2.notifications.alert.deny.ios": "Не разрешавам",
+        "onboardingV2.notifications.alert.allow": "Разрешавам",
     ]
     // MARK: - Czech
 
@@ -22260,6 +22320,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Učedník",
         "badge.name.likes_10": "Srdcovka",
         "badge.name.friends_3": "Parta přátel",
+        "onboardingV2.notifications.alert.title.ios": "Aplikace „Sophia“ vám chce posílat oznámení",
+        "onboardingV2.notifications.alert.body.ios": "Oznámení mohou obsahovat upozornění, zvuky a odznaky na ikonách. Můžete je nastavit v Nastavení.",
+        "onboardingV2.notifications.alert.deny.ios": "Nepovolit",
+        "onboardingV2.notifications.alert.allow": "Povolit",
     ]
 
     // MARK: - Danish
@@ -23644,6 +23708,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Discipel",
         "badge.name.likes_10": "Favorit",
         "badge.name.friends_3": "Vennekreds",
+        "onboardingV2.notifications.alert.title.ios": "“Sophia” vil gerne sende dig notifikationer",
+        "onboardingV2.notifications.alert.body.ios": "Notifikationer kan omfatte advarsler, lyde og symbolmærker. Du kan indstille dem i Indstillinger.",
+        "onboardingV2.notifications.alert.deny.ios": "Tillad ikke",
+        "onboardingV2.notifications.alert.allow": "Tillad",
     ]
 
     // MARK: - Norwegian
@@ -25028,6 +25096,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Disippel",
         "badge.name.likes_10": "Favoritt",
         "badge.name.friends_3": "Vennegjeng",
+        "onboardingV2.notifications.alert.title.ios": "«Sophia» vil sende deg varslinger",
+        "onboardingV2.notifications.alert.body.ios": "Varslinger kan inneholde varsler, lyder og merker på symboler. Du kan konfigurere dem i Innstillinger.",
+        "onboardingV2.notifications.alert.deny.ios": "Ikke tillat",
+        "onboardingV2.notifications.alert.allow": "Tillat",
     ]
 
     // MARK: - Russian
@@ -26413,6 +26485,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Последователь",
         "badge.name.likes_10": "Симпатия",
         "badge.name.friends_3": "Дружная компания",
+        "onboardingV2.notifications.alert.title.ios": "Приложение «Sophia» запрашивает разрешение на отправку уведомлений",
+        "onboardingV2.notifications.alert.body.ios": "Уведомления могут содержать напоминания, звуки и наклейки на значках. Их можно настроить в Настройках.",
+        "onboardingV2.notifications.alert.deny.ios": "Запретить",
+        "onboardingV2.notifications.alert.allow": "Разрешить",
     ]
 
     // MARK: - Croatian
@@ -27798,6 +27874,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Sljedbenik",
         "badge.name.likes_10": "Simpatija",
         "badge.name.friends_3": "Ekipa",
+        "onboardingV2.notifications.alert.title.ios": "„Sophia” vam želi slati obavijesti",
+        "onboardingV2.notifications.alert.body.ios": "Obavijesti mogu uključivati upozorenja, zvukove i bedževe ikona. Možete ih podesiti u Postavkama.",
+        "onboardingV2.notifications.alert.deny.ios": "Nemoj dopustiti",
+        "onboardingV2.notifications.alert.allow": "Dopusti",
     ]
 
     // MARK: - Slovenian
@@ -29184,6 +29264,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Učenec",
         "badge.name.likes_10": "Simpatija",
         "badge.name.friends_3": "Druščina",
+        "onboardingV2.notifications.alert.title.ios": "Aplikacija »Sophia« vam želi pošiljati obvestila",
+        "onboardingV2.notifications.alert.body.ios": "Obvestila lahko vključujejo opozorila, zvoke in značke na ikonah. Nastavite jih lahko v Nastavitvah.",
+        "onboardingV2.notifications.alert.deny.ios": "Ne dovoli",
+        "onboardingV2.notifications.alert.allow": "Dovoli",
     ]
 
     // MARK: - Slovak
@@ -30569,6 +30653,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Nasledovník",
         "badge.name.likes_10": "Srdcovka",
         "badge.name.friends_3": "Partia priateľov",
+        "onboardingV2.notifications.alert.title.ios": "Aplikácia „Sophia“ vám chce posielať hlásenia",
+        "onboardingV2.notifications.alert.body.ios": "Hlásenia môžu obsahovať upozornenia, zvuky a odznaky na ikonách. Môžete ich nastaviť v Nastaveniach.",
+        "onboardingV2.notifications.alert.deny.ios": "Nepovoliť",
+        "onboardingV2.notifications.alert.allow": "Povoliť",
     ]
 
     // MARK: - Serbian
@@ -31954,6 +32042,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Sledbenik",
         "badge.name.likes_10": "Simpatija",
         "badge.name.friends_3": "Ekipa",
+        "onboardingV2.notifications.alert.title.ios": "„Sophia“ жели да вам шаље обавештења",
+        "onboardingV2.notifications.alert.body.ios": "Обавештења могу да садрже упозорења, звукове и беџеве на иконама. Можете их подесити у Подешавањима.",
+        "onboardingV2.notifications.alert.deny.ios": "Не дозволи",
+        "onboardingV2.notifications.alert.allow": "Дозволи",
     ]
 
     // MARK: - Arabic
@@ -33340,6 +33432,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "مُريد",
         "badge.name.likes_10": "خفقة قلب",
         "badge.name.friends_3": "دائرة الأصدقاء",
+        "onboardingV2.notifications.alert.title.ios": "يرغب «Sophia» في إرسال إشعارات إليك",
+        "onboardingV2.notifications.alert.body.ios": "قد تتضمن الإشعارات تنبيهات وأصواتًا وشارات على الأيقونات. يمكنك ضبطها من الإعدادات.",
+        "onboardingV2.notifications.alert.deny.ios": "عدم السماح",
+        "onboardingV2.notifications.alert.allow": "السماح",
     ]
 
     // MARK: - Hebrew
@@ -34725,6 +34821,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "תלמיד נאמן",
         "badge.name.likes_10": "אהבה ממבט ראשון",
         "badge.name.friends_3": "חבורה",
+        "onboardingV2.notifications.alert.title.ios": "”Sophia“ מעוניין לשלוח לך עדכונים",
+        "onboardingV2.notifications.alert.body.ios": "העדכונים עשויים לכלול התראות, צלילים ותגי אייקונים. ניתן להגדיר אותם ב״הגדרות״.",
+        "onboardingV2.notifications.alert.deny.ios": "אל תאפשר",
+        "onboardingV2.notifications.alert.allow": "אפשר",
     ]
 
     // MARK: - Finnish
@@ -36109,6 +36209,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Opetuslapsi",
         "badge.name.likes_10": "Ihastus",
         "badge.name.friends_3": "Kaveriporukka",
+        "onboardingV2.notifications.alert.title.ios": "”Sophia” haluaa lähettää sinulle ilmoituksia",
+        "onboardingV2.notifications.alert.body.ios": "Ilmoitukset voivat sisältää hälytyksiä, ääniä ja kuvakkeiden merkkejä. Voit määrittää ne Asetuksissa.",
+        "onboardingV2.notifications.alert.deny.ios": "Älä salli",
+        "onboardingV2.notifications.alert.allow": "Salli",
     ]
 
     // MARK: - Estonian
@@ -37493,6 +37597,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Jünger",
         "badge.name.likes_10": "Lemmik",
         "badge.name.friends_3": "Sõpruskond",
+        "onboardingV2.notifications.alert.title.ios": "„Sophia” soovib saata teile märguandeid",
+        "onboardingV2.notifications.alert.body.ios": "Märguanded võivad sisaldada hoiatusi, helisid ja ikoonimärke. Neid saab seadistada menüüs Seaded.",
+        "onboardingV2.notifications.alert.deny.ios": "Ära luba",
+        "onboardingV2.notifications.alert.allow": "Luba",
     ]
 
     // MARK: - lithuanian (copie du français, à post-éditer)
@@ -38877,6 +38985,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Sekėjas",
         "badge.name.likes_10": "Simpatija",
         "badge.name.friends_3": "Draugų būrys",
+        "onboardingV2.notifications.alert.title.ios": "„Sophia“ norėtų siųsti jums pranešimus",
+        "onboardingV2.notifications.alert.body.ios": "Pranešimai gali apimti įspėjimus, garsus ir piktogramų ženklelius. Juos galite sukonfigūruoti nustatymuose.",
+        "onboardingV2.notifications.alert.deny.ios": "Neleisti",
+        "onboardingV2.notifications.alert.allow": "Leisti",
     ]
 
     // MARK: - latvian (copie du français, à post-éditer)
@@ -40262,6 +40374,10 @@ enum AppLocalizable {
         "badge.name.follows_3": "Māceklis",
         "badge.name.likes_10": "Simpātija",
         "badge.name.friends_3": "Draugu bariņš",
+        "onboardingV2.notifications.alert.title.ios": "“Sophia” vēlas jums sūtīt paziņojumus",
+        "onboardingV2.notifications.alert.body.ios": "Paziņojumos var būt brīdinājumi, skaņas un ikonu emblēmas. Tos var konfigurēt iestatījumos.",
+        "onboardingV2.notifications.alert.deny.ios": "Neatļaut",
+        "onboardingV2.notifications.alert.allow": "Atļaut",
     ]
 
     // MARK: - japanese (copie du français, à post-éditer)
@@ -41645,5 +41761,9 @@ enum AppLocalizable {
         "badge.name.follows_3": "弟子",
         "badge.name.likes_10": "ひとめぼれ",
         "badge.name.friends_3": "友だちの輪",
+        "onboardingV2.notifications.alert.title.ios": "“Sophia”は通知を送信します。よろしいですか？",
+        "onboardingV2.notifications.alert.body.ios": "通知方法は、テキスト、サウンド、アイコンバッジが利用できる可能性があります。通知方法は“設定”で設定できます。",
+        "onboardingV2.notifications.alert.deny.ios": "許可しない",
+        "onboardingV2.notifications.alert.allow": "許可",
     ]
 }

@@ -166,6 +166,7 @@ struct OnboardingV2PaywallAnnual: View {
                 .foregroundStyle(OV2.inkTertiary)
                 .frame(width: 40, height: 40)
         }
+        .paywallCloseDelayed()
     }
 
     private var legalRow: some View {
@@ -455,6 +456,7 @@ struct OnboardingV2PaywallComparison: View {
                 .foregroundStyle(OV2.inkTertiary)
                 .frame(width: 40, height: 40)
         }
+        .paywallCloseDelayed()
     }
 
     private func purchase() {

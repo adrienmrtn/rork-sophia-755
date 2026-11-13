@@ -8,7 +8,14 @@ import UIKit
 @Observable
 @MainActor
 final class OnboardingV2CarouselModel {
-    static let pageCount = 4
+    /// La page audio n'est montrée que si la langue de l'app (choisie deux écrans plus tôt) a
+    /// des cours narrés (`AudioLanguage`) : ailleurs, on ne promet pas une écoute qui n'existe pas.
+    static var showsAudioPage: Bool {
+        AudioLanguage(appLanguageCode: AppLanguage.currentPersisted().rawValue) != nil
+    }
+
+    /// Quiz, parcours, duels, et l'audio quand la langue en a.
+    static var pageCount: Int { showsAudioPage ? 4 : 3 }
     /// Temps d'affichage d'une page avant de passer seule à la suivante.
     static let pageDuration: TimeInterval = 5
 
@@ -41,9 +48,10 @@ final class OnboardingV2CarouselModel {
 
 // MARK: - Carrousel
 
-/// Écrans 5 à 8 — quatre pages de présentation (quiz, parcours, duels, audio) qui défilent
+/// Écrans 5 à 8 — quatre pages de présentation (quiz, parcours, duels, et audio si la langue
+/// de l'app a des cours narrés) qui défilent
 /// seules toutes les cinq secondes. Toucher ou glisser avance aussi ; « Continuer » passe à
-/// la page suivante, puis à l'écran suivant ; la fin de la quatrième page avance d'elle-même.
+/// la page suivante, puis à l'écran suivant ; la fin de la dernière page avance d'elle-même.
 ///
 /// Même mise en page sur les quatre : illustration (flexible), titre de hauteur fixe, bouton ;
 /// seule la page audio garde un sous-titre. Les segments et la flèche retour vivent dans l'en-tête du
@@ -92,7 +100,9 @@ struct OnboardingV2IntroCarousel: View {
             slot(0) { OnboardingV2IntroQuizPage(isActive: model.page == 0) }
             slot(1) { OnboardingV2IntroRoutePage(isActive: model.page == 1) }
             slot(2) { OnboardingV2IntroDuelsPage(isActive: model.page == 2) }
-            slot(3) { OnboardingV2IntroAudioPage(isActive: model.page == 3) }
+            if OnboardingV2CarouselModel.showsAudioPage {
+                slot(3) { OnboardingV2IntroAudioPage(isActive: model.page == 3) }
+            }
         }
         .contentShape(Rectangle())
         .onTapGesture {

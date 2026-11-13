@@ -131,8 +131,8 @@ struct SophiaBlockerPaywall: View {
             offeringIdentifier: context.offeringIdentifier,
             paywallId: "native_blocker",
             tracksAnalytics: tracksAnalytics,
-            // La croix n'apparaît qu'au bout de 2 s, le temps de voir la valeur.
-            closeDelay: 2,
+            // La croix n'apparaît qu'au bout de 3 s, le temps de voir la valeur.
+            closeDelay: PaywallClose.delay,
             layout: .bonhomme,
             onPurchased: onPurchased,
             onRestored: onRestored,

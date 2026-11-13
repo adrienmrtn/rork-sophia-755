@@ -28,6 +28,15 @@ object FeatureFlags {
      * joueurs de langues différentes jouent la même partie. Le paramètre reste pour les
      * appelants ; comme sur iOS, la valeur est lue une fois au lancement.
      */
+    /**
+     * Les événements éditoriaux (carte de l'accueil, rangée d'Explorer, page d'un événement,
+     * étiquettes sur les cartes, badges d'événement) : masqués pour l'instant. À `false`,
+     * `CatalogStore` ne publie aucun événement du manifeste, donc `CampaignStore` et
+     * `BadgeCatalog.events` sont vides et rien ne s'affiche ; le code des écrans reste en place.
+     * Pour les réactiver : repasser à `true`, rien d'autre.
+     */
+    const val eventsEnabled: Boolean = false
+
     @Suppress("UNUSED_PARAMETER")
     fun duelsVisible(language: app.rork.sophia.domain.AppLanguage): Boolean = true
 }

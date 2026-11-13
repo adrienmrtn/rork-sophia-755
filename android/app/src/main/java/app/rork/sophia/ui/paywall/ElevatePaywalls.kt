@@ -172,7 +172,7 @@ private fun ElevatePaywallFrame(
     onPurchased: () -> Unit,
     legal: ElevateLegalActions,
     analyticsProps: Map<String, Any?> = emptyMap(),
-    closeDelayMillis: Int = 0,
+    closeDelayMillis: Int = PAYWALL_CLOSE_DELAY_MILLIS,
     /** The translucent cross over the header picture; false when the pitch draws its own close button. */
     floatingClose: Boolean = true,
     pinnedLegal: Boolean = true,
@@ -461,7 +461,7 @@ internal fun CourseUnlockPaywall(
         onPurchased = onPurchased,
         legal = legal,
         analyticsProps = PaywallExperiment.analyticsProps(variant),
-        closeDelayMillis = 2000,
+        closeDelayMillis = PAYWALL_CLOSE_DELAY_MILLIS,
         floatingClose = !reviews,
         pinnedLegal = !reviews,
     ) { choice ->
@@ -471,7 +471,7 @@ internal fun CourseUnlockPaywall(
                 ElevateCloseButton(
                     language = language,
                     onClose = onDismiss,
-                    delayMillis = 2000,
+                    delayMillis = PAYWALL_CLOSE_DELAY_MILLIS,
                     style = ElevateCloseStyle.Bordered,
                 )
             }
@@ -648,7 +648,7 @@ internal fun QuizPaywall(
         onDismiss = onDismiss,
         onPurchased = onPurchased,
         legal = legal,
-        closeDelayMillis = 4000,
+        closeDelayMillis = PAYWALL_CLOSE_DELAY_MILLIS,
     ) { choice ->
         ElevateBeforeAfterHeader(
             before = R.drawable.pw_quiz_before,

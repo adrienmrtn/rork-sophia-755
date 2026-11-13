@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -42,6 +43,7 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
+import app.rork.sophia.audio.AudioLanguage
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.analytics.Analytics
 import app.rork.sophia.data.CourseAffinityStore
@@ -320,6 +322,10 @@ fun OnboardingV2Screen(
     val reduceMotion = rememberOnboardingReduceMotion()
     // Page and clock of the presentation carousel, shared with the segments of the header.
     val carousel = rememberSaveable(saver = OnboardingCarouselState.StateSaver) { OnboardingCarouselState() }
+    // The audio page of the carousel is shown only when the app's language has narrations
+    // (the language page comes before the carousel, so this is settled before it is reached).
+    val audioInLanguage = AudioLanguage.fromCode(language.code) != null
+    SideEffect { carousel.showAudioPage(audioInLanguage) }
     // The animated logo, played once when the onboarding opens on the welcome page (first
     // launch, or a resume that stayed there). A resume further along does not replay it.
     var showSplash by rememberSaveable { mutableStateOf(step == OnboardingStep.Welcome) }
@@ -528,7 +534,7 @@ fun OnboardingV2Screen(
         // Back from the social proof, the carousel shows its last page, at rest: it must not
         // send the user by itself to the screen they just left.
         if (previous == OnboardingStep.Intro) {
-            carousel.go(OnboardingCarouselState.PAGE_COUNT - 1, hold = true)
+            carousel.go(carousel.pageCount - 1, hold = true)
         }
         lastAdvanceAt = System.currentTimeMillis()
         haptics.selection()
@@ -667,7 +673,15 @@ fun OnboardingV2Screen(
                 OnboardingStep.Questions -> QuestionsStep(language, richMotion) {
                     goTo(OnboardingStep.Mission)
                 }
-                OnboardingStep.Mission -> MissionStep(language) { goTo(OnboardingStep.Personalize) }
+                OnboardingStep.Mission -> {
+                    // The Play rating is asked on the page signed by the team, once its
+                    // entrance has settled; once per install.
+                    LaunchedEffect(Unit) {
+                        delay(1000)
+                        InAppReviewHelper.requestInOnboarding(context)
+                    }
+                    MissionStep(language) { goTo(OnboardingStep.Personalize) }
+                }
                 OnboardingStep.Personalize -> PersonalizeStep(language) { goTo(OnboardingStep.Swipe) }
                 OnboardingStep.Swipe -> SwipeCoursesStep(
                     language = language,
@@ -683,12 +697,6 @@ fun OnboardingV2Screen(
                     goTo(OnboardingStep.Review)
                 }
                 OnboardingStep.Review -> {
-                    // Ask for the Play rating on the page that already talks about ratings,
-                    // once the entrance animation has settled.
-                    LaunchedEffect(Unit) {
-                        delay(900)
-                        InAppReviewHelper.requestOnce(context, app.progressManager)
-                    }
                     ReviewStep(language, richMotion) {
                         goTo(OnboardingStep.Loading)
                     }
@@ -770,7 +778,7 @@ fun OnboardingV2Screen(
                 ) { shown ->
                     when (shown) {
                         HeaderKind.Segments -> OnboardingStorySegments(
-                            count = OnboardingCarouselState.PAGE_COUNT,
+                            count = carousel.pageCount,
                             current = carousel.page,
                             // A page that does not advance by itself shows its segment full.
                             progress = { if (carousel.isRunning) carousel.progress else 1f },

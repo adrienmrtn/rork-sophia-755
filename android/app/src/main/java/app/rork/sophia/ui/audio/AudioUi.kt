@@ -28,7 +28,6 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.GraphicEq
 import androidx.compose.material.icons.filled.Headphones
-import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.RemoveCircleOutline
@@ -136,8 +135,8 @@ internal fun AudioCover(courseId: String, modifier: Modifier = Modifier, corner:
 
 /**
  * The audio actions of a course: listen, play next, add to the queue, download. Every one
- * goes through the player's premium gate, so a free user sees the same menu with a lock and
- * lands on the audio paywall.
+ * goes through the player's premium gate, so a free user sees the same menu, with the same
+ * audio symbols and no lock, and lands on the audio paywall on tap.
  */
 @Composable
 internal fun AudioMenuItems(courseId: String, language: AppLanguage, onDone: () -> Unit) {
@@ -145,12 +144,12 @@ internal fun AudioMenuItems(courseId: String, language: AppLanguage, onDone: () 
     val player by CourseAudioPlayer.state.collectAsState()
     CourseAudioDownloads.inFlight.collectAsState().value
     val downloadLanguage = CourseAudioCatalog.defaultLanguage(context, courseId, language) ?: return
-    val premium = CourseAudioPlayer.isPremium
     fun t(key: String) = StringStore.text(context, key, language)
 
     DropdownMenuItem(
         text = { Text(t(if (CourseAudioPlayer.isPlayingCourse(courseId)) "audio.nowPlaying" else "audio.listen")) },
-        leadingIcon = { Icon(if (premium) Icons.Filled.Headphones else Icons.Filled.Lock, null) },
+        // Jamais de cadenas sur l'audio : le symbole audio, et le paywall s'ouvre au clic.
+        leadingIcon = { Icon(Icons.Filled.Headphones, null) },
         onClick = {
             onDone()
             CourseAudioPlayer.requestPlay(courseId)
@@ -188,7 +187,7 @@ internal fun AudioMenuItems(courseId: String, language: AppLanguage, onDone: () 
     when (CourseAudioDownloads.state(courseId, downloadLanguage)) {
         CourseAudioDownloads.State.None -> DropdownMenuItem(
             text = { Text("${t("audio.download")} · ${downloadLanguage.shortCode}") },
-            leadingIcon = { Icon(if (premium) Icons.Filled.Download else Icons.Filled.Lock, null) },
+            leadingIcon = { Icon(Icons.Filled.Download, null) },
             onClick = {
                 onDone()
                 CourseAudioPlayer.requestDownload(courseId, downloadLanguage)
@@ -490,8 +489,8 @@ fun CourseReaderAudioButton(
     CourseRoundIconButton(
         icon = when {
             playing -> Icons.Filled.GraphicEq
-            isPremium -> Icons.Filled.Headphones
-            else -> Icons.Filled.Lock
+            // Never a lock on audio: the headphones for everyone, the paywall comes on tap.
+            else -> Icons.Filled.Headphones
         },
         contentDescription = StringStore.text(context, "audio.listen", language),
         size = 42.dp,
