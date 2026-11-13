@@ -30,6 +30,8 @@ struct SophiaApp: App {
         // — the whole design system (`DS.title`/`DS.sans`) now renders in it, not just the
         // paywall this was originally added for.
         PaywallFonts.registerIfNeeded()
+        // Réglage du test A/B du paywall cours (lecture seule, `app_config`).
+        PaywallExperiment.start()
     }
 
     var body: some Scene {

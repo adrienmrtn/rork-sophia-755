@@ -85,6 +85,8 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         authService.start()
         // Journal d'événements produit (docs/events.md) : mis en file ici, envoyé par lots.
         Analytics.init(this, authService, languageManager, appScope)
+        // A/B test of the course paywall: last known setting now, fresh one in the background.
+        app.rork.sophia.data.PaywallExperiment.start(this)
         setUpAudio()
 
         // Construit le snapshot du catalogue (disque, sinon pack de départ) hors du fil principal,

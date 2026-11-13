@@ -29,6 +29,9 @@ struct SettingsView: View {
     @State private var showDebugNotifications: Bool = false
     /// Set only by the developer section, which is itself behind `#if DEBUG`.
     @State private var debugPaywall: SophiaPaywallContext? = nil
+    /// Variante du paywall cours que le raccourci développeur montre ; elle alterne à chaque
+    /// ouverture (la première est `bonhomme`).
+    @State private var debugCourseVariant: CoursePaywallVariant = .reviews
     /// Le @ du lecteur, pour la carte d'identité en tête.
     @Bindable private var social = SocialService.shared
 
@@ -678,6 +681,8 @@ struct SettingsView: View {
                     title: languageManager.text("settings.debug.courseUnlockPaywall")
                 ) {
                     hapticTrigger += 1
+                    // Une ouverture sur deux pour chaque variante du test A/B, pour voir les deux.
+                    debugCourseVariant = debugCourseVariant == .bonhomme ? .reviews : .bonhomme
                     debugPaywall = .debloquerCours
                 }
                 rowDivider
@@ -718,7 +723,8 @@ struct SettingsView: View {
                 tracksAnalytics: false,
                 onPurchased: { debugPaywall = nil },
                 onRestored: { debugPaywall = nil },
-                onDismissed: { debugPaywall = nil }
+                onDismissed: { debugPaywall = nil },
+                forcedVariant: debugCourseVariant
             )
         case .audio:
             SophiaAudioPaywall(

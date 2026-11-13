@@ -393,17 +393,26 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     /**
      * Marks the customer as exposed to their experiment variant. Call once per presentation.
      */
-    fun trackPaywallImpression(paywallId: String, offeringIdentifier: String? = null) {
+    fun trackPaywallImpression(
+        paywallId: String,
+        offeringIdentifier: String? = null,
+        /** Extra `paywall_view` properties (the A/B variant of the course paywall). */
+        extraProps: Map<String, Any?> = emptyMap(),
+    ) {
         // The offering reported must be the one on screen, or a customer enrolled in an
         // experiment is never counted as exposed: resolved the same way the paywall picks
         // its package.
-        trackPaywallImpressionForOffering(paywallId, displayedOffering(offeringIdentifier)?.identifier)
+        trackPaywallImpressionForOffering(paywallId, displayedOffering(offeringIdentifier)?.identifier, extraProps)
     }
 
     /** Same, for a paywall that knows exactly which offering it displays (the discount one). */
-    fun trackPaywallImpressionForOffering(paywallId: String, offeringId: String?) {
+    fun trackPaywallImpressionForOffering(
+        paywallId: String,
+        offeringId: String?,
+        extraProps: Map<String, Any?> = emptyMap(),
+    ) {
         val resolvedId = offeringId ?: runCatching { offering(null)?.identifier }.getOrNull()
-        Analytics.log("paywall_view", props = mapOf("paywall_id" to paywallId, "offering" to resolvedId))
+        Analytics.log("paywall_view", props = mapOf("paywall_id" to paywallId, "offering" to resolvedId) + extraProps)
         if (!Purchases.isConfigured) return
         try {
             Purchases.sharedInstance.trackCustomPaywallImpression(
@@ -442,6 +451,12 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     /** Fifty-second of the annual price, for the comparison card next to a weekly plan. */
     fun formattedYearlyPerWeek(pkg: Package?, fallbackYearly: String): String =
         formattedYearlyPerPeriod(pkg, 52, fallbackYearly)
+
+    /** A monthly plan's price brought to the week (12 months over 52 weeks), for display only. */
+    fun formattedMonthlyPerWeek(pkg: Package?, fallback: String): String {
+        val price = pkg?.product?.price ?: return fallback
+        return formatAmount(price.amountMicros * 12.0 / 52.0 / 1_000_000.0, price.currencyCode) ?: fallback
+    }
 
     private fun formattedYearlyPerPeriod(pkg: Package?, periodsPerYear: Int, fallbackYearly: String): String {
         val price = pkg?.product?.price ?: return fallbackYearly

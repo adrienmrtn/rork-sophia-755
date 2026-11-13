@@ -12,6 +12,7 @@ enum AppLocalizableAdditions {
         // Design « Elevate arrondi » : textes ajoutés par zone lors du passage au nouveau style.
         elevateOnboardingIntro, elevateOnboardingCore, elevateOnboardingEnd,
         elevateHome, elevateCourse, elevatePath, elevateDuels, elevateProfile,
+        elevatePaywalls,
         // Onboarding de la page Entraînement : passages forts de ses titres.
         trainingOnboarding,
     ]
