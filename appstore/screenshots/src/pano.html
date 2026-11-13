@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Sophia — App Store panorama</title>
+<style>
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../../../ios/Sophia/Resources/Fonts/PlusJakartaSans.ttf") format("truetype");
+  font-weight: 200 800;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+/* One wide canvas, 440 pt per App Store panel; render-pano.cjs cuts it into panels. */
+body { height: 956px; overflow: hidden; position: relative; font-family: "Plus Jakarta Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+.panel { position: absolute; top: 0; width: 440px; height: 956px; }
+.panel.cream { background: #fef5e9; color: #17181c; --sub: #3d3f47; }
+.panel.coral { background: #dc6048; color: #fff; --sub: #fff; }
+.panel.navy  { background: #1a3a6b; color: #fff; --sub: #e6ecf7; }
+.panel.sun   { background: #f2b134; color: #17181c; --sub: #2b2a26; }
+.panel.pink  { background: #f4a3c4; color: #17181c; --sub: #33262d; }
+.panel.blue  { background: #2e62c4; color: #fff; --sub: #eaf0fb; }
+.text { position: absolute; left: 30px; right: 26px; top: 58px; z-index: 5; }
+.text.right { text-align: right; left: 26px; right: 30px; }
+.text h1 { margin: 0; font-weight: 800; font-size: 34px; line-height: 1.14; letter-spacing: -0.03em; }
+.text p { margin: 11px 0 0; font-size: 18.5px; line-height: 1.3; font-weight: 500; color: var(--sub); letter-spacing: -0.01em; }
+.text.big h1 { font-size: 48px; line-height: 1.08; letter-spacing: -0.035em; }
+.text.big p { font-size: 21px; margin-top: 16px; }
+.text.big { top: 140px; }
+.logo { position: absolute; left: 30px; top: 58px; height: 34px; z-index: 5; }
+.phone {
+  position: absolute; --line: 3.5px; z-index: 2;
+  width: calc(440px * var(--s) + 2 * var(--line)); height: calc(956px * var(--s) + 2 * var(--line));
+  border: var(--line) solid #111216; border-radius: calc(44px * var(--s) + var(--line));
+  background: #fff; overflow: hidden;
+  box-shadow: 0 18px 40px -18px rgba(20, 20, 30, 0.35);
+}
+.phone iframe { width: 440px; height: 956px; border: 0; display: block; transform: scale(var(--s)); transform-origin: 0 0; }
+.person { position: absolute; z-index: 3; transform-origin: 50% 100%; }
+</style>
+</head>
+<body>
+<script src="pano.js"></script>
+<script>
+  const q = new URLSearchParams(location.search);
+  const V = PANOS[q.get("v") || "penche"];
+  const locale = q.get("locale") || "fr-FR";
+  const T = V.copy[locale] || V.copy["fr-FR"];
+  document.body.style.width = V.panels.length * 440 + "px";
+  V.panels.forEach((p, i) => {
+    const el = document.createElement("div");
+    el.className = "panel " + p.theme; el.style.left = i * 440 + "px";
+    let html = p.logo ? `<img class="logo" src="../../../ios/Sophia/Assets.xcassets/logo_white.imageset/logo_white.png">` : "";
+    if (p.text) { const [h, sub] = T[p.text]; html += `<div class="text ${p.cls || ""}"><h1>${h}</h1>${sub ? `<p>${sub}</p>` : ""}</div>`; }
+    el.innerHTML = html; document.body.appendChild(el);
+  });
+  // phones: cx, cy = centre on the wide canvas; s = scale; r = rotation in degrees
+  V.phones.forEach((p) => {
+    const el = document.createElement("div"); el.className = "phone"; el.style.setProperty("--s", p.s);
+    const w = 440 * p.s + 7, h = 956 * p.s + 7;
+    el.style.left = p.cx - w / 2 + "px"; el.style.top = p.cy - h / 2 + "px"; el.style.transform = `rotate(${p.r || 0}deg)`;
+    el.innerHTML = `<iframe src="screens/${p.screen}.html"></iframe>`; document.body.appendChild(el);
+  });
+  // people: x = centre, b = y of the feet, h = height; r = rotation; flip; z
+  V.people.forEach((p) => {
+    const el = document.createElement("img"); el.className = "person"; el.src = `people/${p.name}.png`;
+    el.style.height = p.h + "px"; el.style.zIndex = p.z || 3;
+    el.onload = () => { const w = el.naturalWidth * p.h / el.naturalHeight; el.style.left = p.x - w / 2 + "px"; };
+    el.style.top = p.b - p.h + "px"; el.style.transform = `rotate(${p.r || 0}deg) scaleX(${p.flip ? -1 : 1})`;
+    document.body.appendChild(el);
+  });
+</script>
+</body>
+</html>

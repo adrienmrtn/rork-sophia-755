@@ -28,3 +28,19 @@ Known liberties: read and like counters, friends' handles and XP are sample data
 anti-scroll shot the profile behind the sheet is scrolled a little past its real end and the QR
 buttons are hidden, so that the status bar does not sit across a button. iPad screenshots
 (13", 2064 x 2752) are not produced here.
+
+## Panorama sets (tilted phones, characters across the seams)
+
+`fr-FR/iphone-6.9-penche/`, `-couleurs/` and `-duo/` are cut out of one wide canvas, so a
+phone or a character can sit across two neighbouring screenshots. They must be uploaded in
+order, with none removed, or the seams no longer match.
+
+```
+src/pano.html, src/pano.js   the wide canvas and the three layouts (panels, phones, people)
+render-pano.cjs              node render-pano.cjs [penche|couleurs|duo]
+src/people/*.png             full-body characters in the style of the app's avatars
+people.py                    how they were made (fal.ai, Recraft v3, then background removal)
+```
+
+`duo` has ten panels (the App Store maximum) and adds two lines of copy the other sets do not
+have: « 30 ligues à gravir » and « Reprenez votre temps ».
