@@ -1,13 +1,13 @@
 // Render the App Store screenshots.
 //   node render.cjs                 every locale in COPY, every shot
 //   node render.cjs fr-FR           one locale
-//   node render.cjs fr-FR 2         one shot (1-based)
-// Output: appstore/screenshots/<locale>/<device>/NN-<screen>.png, opaque RGB, exact store size.
+//   node render.cjs fr-FR 2         one shot (1-based) of each set
+// Output: appstore/screenshots/<locale>/<device>[-editorial]/NN-<screen>.png, opaque RGB, exact store size.
 const { chromium } = require("playwright");
 const path = require("node:path");
 const fs = require("node:fs");
 const { pathToFileURL } = require("node:url");
-const { DEVICES, SHOTS, COPY } = require("./src/shots.js");
+const { DEVICES, SETS } = require("./src/shots.js");
 
 (async () => {
   const [onlyLocale, onlyShot] = process.argv.slice(2);
@@ -21,12 +21,13 @@ const { DEVICES, SHOTS, COPY } = require("./src/shots.js");
     const page = await context.newPage();
     page.on("console", (m) => { if (m.type() === "error") console.error("console:", m.text()); });
     page.on("requestfailed", (r) => console.error("failed:", r.url()));
-    for (const locale of locales) {
-      const dir = path.join(__dirname, locale, deviceName);
+    for (const set of Object.values(SETS)) for (const locale of (onlyLocale ? [onlyLocale] : Object.keys(set.copy))) {
+      const SHOTS = set.shots;
+      const dir = path.join(__dirname, locale, deviceName + set.dir);
       fs.mkdirSync(dir, { recursive: true });
       for (let i = 0; i < SHOTS.length; i++) {
         if (onlyShot && Number(onlyShot) !== i + 1) continue;
-        const url = pathToFileURL(path.join(__dirname, "src/frame.html")).href +
+        const url = pathToFileURL(path.join(__dirname, "src", set.frame)).href +
           `?locale=${locale}&device=${deviceName}&i=${i}`;
         await page.goto(url, { waitUntil: "load" });
         const frame = page.frames().find((f) => f !== page.mainFrame());

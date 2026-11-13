@@ -33,4 +33,31 @@ const COPY = {
     profile: "Une série qui grandit<br><em>jour après jour</em>",
   },
 };
-if (typeof module !== "undefined") module.exports = { DEVICES, SHOTS, COPY };
+
+// Two sets are rendered. "classic": centred headline, framed phone, coloured backgrounds
+// (frame.html). "editorial": a full-colour opening panel, then cream panels with a title and a
+// subtitle on the left and a flat outlined phone running off the bottom (frame-b.html).
+// Editorial copy is [title, subtitle].
+const SETS = {
+  classic: { frame: "frame.html", dir: "", shots: SHOTS, copy: COPY },
+  editorial: {
+    frame: "frame-b.html", dir: "-editorial",
+    shots: [
+      { screen: "hero" }, { screen: "home" }, { screen: "reader" }, { screen: "quiz" },
+      { screen: "blocker" }, { screen: "duels" }, { screen: "explore" }, { screen: "profile" },
+    ],
+    copy: {
+      "fr-FR": {
+        hero: ["Moins de scroll, plus de culture", "La culture générale en 10\u00a0minutes par jour"],
+        home: ["Un cours par jour", "Choisi pour vous, lu en 5\u00a0minutes"],
+        reader: ["Courts, clairs, illustrés", "Des cours qui vont à l’essentiel"],
+        quiz: ["Un quiz à chaque cours", "Pour retenir ce que vous venez de lire"],
+        blocker: ["Anti-scroll", "Vos apps se débloquent après un cours"],
+        duels: ["Duels", "Défiez vos amis en culture générale"],
+        explore: ["Plus de 300 cours", "Histoire, sciences, art, littérature…"],
+        profile: ["Votre série", "Un peu plus de culture chaque jour"],
+      },
+    },
+  },
+};
+if (typeof module !== "undefined") module.exports = { DEVICES, SHOTS, COPY, SETS };
