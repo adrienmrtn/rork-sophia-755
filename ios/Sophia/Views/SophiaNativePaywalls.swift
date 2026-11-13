@@ -820,13 +820,18 @@ struct SophiaCourseUnlockPaywall: View {
 
 // MARK: - Discount paywall (offre_discount)
 
-/// Ultra-aggressive native flash-sale paywall for the `offre_discount` context.
-/// Single annual plan from the `offre_discount` offering (19,99 €/an, **no free trial**),
-/// a big struck-through regular price, a savings badge, and a prominent 1-hour countdown
-/// driven by `DiscountOfferManager` for urgency.
+/// Paywall « offre unique » du contexte `offre_discount`, sur fond bleu.
+/// Un seul plan annuel de l'offering `offre_discount` (**sans essai gratuit**), le pourcentage
+/// réellement économisé, le prix par mois avec le montant prélevé par an juste à côté, et le
+/// compte à rebours de `DiscountOfferManager`.
+///
+/// Deux habillages se partagent les lecteurs (test `discount_paywall_ab`, voir
+/// `PaywallExperiment`) : `percent` (le pourcentage en très grand) et `graduate` (le
+/// personnage diplômé). Prix, offre, achat et suivi sont les mêmes des deux côtés.
 struct SophiaDiscountPaywall: View {
     @Environment(LanguageManager.self) private var languageManager
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     let store: StoreViewModel
     /// Drives the live 60-minute countdown. Optional so previews / fallbacks still render.
@@ -837,43 +842,70 @@ struct SophiaDiscountPaywall: View {
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
     var onDismissed: (() -> Void)? = nil
+    /// Impose une variante au lieu du tirage de l'installation (raccourci développeur).
+    var forcedVariant: DiscountPaywallVariant? = nil
 
+    /// La variante de l'installation, figée à l'ouverture.
+    @State private var drawnVariant: DiscountPaywallVariant = PaywallExperiment.discountVariant
     @State private var purchasing = false
     @State private var appeared = false
-    @State private var pulse = false
+    @State private var popped = false
+    @State private var floating = false
     @State private var presentedAt: Date?
 
     private let context = SophiaPaywallContext.offreDiscount
+
+    private static let blue = Color(red: 0.180, green: 0.384, blue: 0.769)
+    private static let coral = Color(red: 0.878, green: 0.353, blue: 0.227)
+    private static let saffron = Color(red: 0.949, green: 0.788, blue: 0.298)
+    private static let soft = Color(red: 0.863, green: 0.902, blue: 0.973)
+    private static let ink = Color(red: 0.133, green: 0.149, blue: 0.180)
+
+    private var variant: DiscountPaywallVariant { forcedVariant ?? drawnVariant }
 
     private var prices: StoreViewModel.DiscountPriceDisplay {
         store.discountPriceDisplay(language: languageManager.current)
     }
 
+    /// « 50 » tiré du badge « -50% » ; `nil` tant que la boutique n'a pas répondu.
+    private var percentNumber: String? {
+        guard let badge = prices.discountBadge else { return nil }
+        let digits: String = badge.filter { $0.isNumber }
+        return digits.isEmpty ? nil : digits
+    }
+
+    private var analyticsProps: [String: AnalyticsValue] {
+        PaywallExperiment.discountAnalyticsProps(variant)
+    }
+
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: [DSLegacy.accent, DSLegacy.accentSoft],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+            Self.blue.ignoresSafeArea()
+
+            if variant == .graduate {
+                confetti
+                    .opacity(appeared ? 1 : 0)
+                    .allowsHitTesting(false)
+            }
 
             VStack(spacing: 0) {
                 HStack {
+                    if variant == .graduate { Spacer() }
                     closeButton
-                    Spacer()
+                    if variant == .percent { Spacer() }
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 12)
 
                 Spacer(minLength: 8)
 
-                VStack(spacing: 18) {
-                    countdownChip
-                    discountBadge
-                    headline.padding(.horizontal, 28)
-                    priceBlock
+                Group {
+                    switch variant {
+                    case .percent: percentContent
+                    case .graduate: graduateContent
+                    }
                 }
+                .padding(.horizontal, 24)
                 .opacity(appeared ? 1 : 0)
                 .offset(y: appeared ? 0 : 18)
 
@@ -886,19 +918,28 @@ struct SophiaDiscountPaywall: View {
             // One column of copy, drawn for an iPhone. Stretched across an iPad in
             // landscape it stops looking like the design and pushes the CTA below the
             // fold — and Apple reviews on iPad. The background layer above stays
-            // full-bleed, so gradient paywalls still reach the edges.
+            // full-bleed, so the blue still reaches the edges.
             .frame(maxWidth: OV2Legacy.readableWidth)
         }
         .onAppear {
             presentedAt = Date()
             if tracksAnalytics {
-                store.trackPaywallImpression(paywallId: "native_discount", offering: store.promoOffering)
+                store.trackPaywallImpression(
+                    paywallId: variant.paywallId,
+                    offering: store.promoOffering,
+                    extraProps: analyticsProps
+                )
             }
             withAnimation(.spring(response: 0.55, dampingFraction: 0.85).delay(0.05)) {
                 appeared = true
             }
-            withAnimation(.easeInOut(duration: 0.9).repeatForever(autoreverses: true)) {
-                pulse = true
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.55).delay(0.2)) {
+                popped = true
+            }
+            if !reduceMotion {
+                withAnimation(.easeInOut(duration: 2.5).repeatForever(autoreverses: true)) {
+                    floating = true
+                }
             }
         }
         .task {
@@ -906,133 +947,246 @@ struct SophiaDiscountPaywall: View {
         }
     }
 
-    // MARK: Countdown chip
+    // MARK: Variante « percent »
 
-    private var countdownChip: some View {
+    private var percentContent: some View {
+        VStack(spacing: 14) {
+            Text(languageManager.text("paywall.offer.title"))
+                .font(.jakarta(size: 13, weight: .heavy))
+                .textCase(.uppercase)
+                .tracking(1)
+                .foregroundStyle(.white)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 7)
+                .background(Self.coral, in: Capsule())
+
+            if let percentNumber {
+                percentMark(
+                    number: percentNumber,
+                    numberSize: 132,
+                    signSize: 58,
+                    labelSize: 16,
+                    numberColor: Self.saffron,
+                    textColor: Self.saffron
+                )
+                .scaleEffect(popped ? 1 : 0.7)
+                .opacity(popped ? 1 : 0)
+            }
+
+            VStack(spacing: 4) {
+                Text(prices.promoPerMonth + " " + languageManager.text("paywall.plan.perMonth"))
+                    .font(.jakarta(size: 19, weight: .heavy))
+                    .foregroundStyle(.white)
+                billedNote
+            }
+
+            countdownLine
+
+            illustration("pw_offer_brain", maxSide: 220)
+                .padding(.top, 6)
+        }
+    }
+
+    // MARK: Variante « graduate »
+
+    private var graduateContent: some View {
+        VStack(spacing: 12) {
+            Text(languageManager.text("paywall.offer.title"))
+                .font(.jakarta(size: 32, weight: .bold))
+                .foregroundStyle(.white)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+
+            countdownLine
+
+            illustration("pw_offer_graduate", maxSide: 230)
+                .padding(.top, percentNumber == nil ? 8 : 44)
+                .overlay(alignment: .top) {
+                    if let percentNumber {
+                        percentMark(
+                            number: percentNumber,
+                            numberSize: 52,
+                            signSize: 25,
+                            labelSize: 10,
+                            numberColor: Self.blue,
+                            textColor: Self.ink
+                        )
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 9)
+                        .background(.white, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .scaleEffect(popped ? 1 : 0.7)
+                        .opacity(popped ? 1 : 0)
+                    }
+                }
+
+            VStack(spacing: 4) {
+                Text(String(format: languageManager.text("paywall.offer.only"), prices.promoPerMonth))
+                    .font(.jakarta(size: 22, weight: .heavy))
+                    .foregroundStyle(.white)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+                billedNote
+            }
+            .padding(.top, 8)
+        }
+    }
+
+    // MARK: Pièces communes
+
+    /// « 50 % DE RÉDUCTION » : le nombre en grand, le signe et le mot empilés à sa droite.
+    private func percentMark(
+        number: String,
+        numberSize: CGFloat,
+        signSize: CGFloat,
+        labelSize: CGFloat,
+        numberColor: Color,
+        textColor: Color
+    ) -> some View {
+        HStack(alignment: .center, spacing: 6) {
+            Text(number)
+                .font(.jakarta(size: numberSize, weight: .heavy))
+                .foregroundStyle(numberColor)
+                .monospacedDigit()
+            VStack(alignment: .leading, spacing: 2) {
+                Text("%")
+                    .font(.jakarta(size: signSize, weight: .heavy))
+                Text(languageManager.text("paywall.offer.off"))
+                    .font(.jakarta(size: labelSize, weight: .heavy))
+                    .tracking(0.5)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .foregroundStyle(textColor)
+        }
+        .lineLimit(2)
+        .minimumScaleFactor(0.6)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(number) % \(languageManager.text("paywall.offer.off"))")
+    }
+
+    /// Le montant réellement prélevé une fois par an, à côté du prix par mois (App Store 3.1.2).
+    private var billedNote: some View {
+        Text(prices.billedYearlyNote)
+            .font(.jakarta(size: 14, weight: .semibold))
+            .foregroundStyle(Self.soft)
+            .multilineTextAlignment(.center)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    private func illustration(_ name: String, maxSide: CGFloat) -> some View {
+        Image(name)
+            .resizable()
+            .scaledToFit()
+            .clipShape(RoundedRectangle(cornerRadius: 21, style: .continuous))
+            .padding(3)
+            .background(.white, in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+            .frame(maxWidth: maxSide, maxHeight: maxSide)
+            .rotationEffect(.degrees(-2))
+            .offset(y: floating ? -6 : 0)
+            .accessibilityHidden(true)
+    }
+
+    // MARK: Compte à rebours
+
+    private var countdownLine: some View {
         if let discountManager {
             _ = discountManager.tick
-            return AnyView(chip(text: discountManager.formattedRemaining))
+            return AnyView(countdownText(discountManager.formattedRemaining))
         } else {
             return AnyView(
                 TimelineView(.periodic(from: .now, by: 1)) { timeline in
                     let elapsed = Int(timeline.date.timeIntervalSince(presentedAt ?? timeline.date))
-                    chip(text: PaywallCountdown.format(max(0, 3600 - elapsed)))
+                    countdownText(PaywallCountdown.format(max(0, 3600 - elapsed)))
                 }
             )
         }
     }
 
-    private func chip(text: String) -> some View {
-        HStack(spacing: 8) {
-            Image(systemName: "flame.fill")
-                .font(.jakarta(size: 14, weight: .black))
+    private func countdownText(_ time: String) -> some View {
+        HStack(spacing: 6) {
+            Image(systemName: "clock.fill")
+                .font(.system(size: 12, weight: .bold))
             Text(languageManager.text("paywall.discount.endsIn"))
-                .font(DSLegacy.sans(.caption, .bold))
-                .textCase(.uppercase)
-                .tracking(0.5)
-            Text(text)
-                .font(DSLegacy.sans(.headline, .heavy))
+                .font(.jakarta(size: 14, weight: .semibold))
+            Text(time)
+                .font(.jakarta(size: 15, weight: .heavy))
                 .monospacedDigit()
                 .contentTransition(.numericText(countsDown: true))
         }
         .foregroundStyle(.white)
-        .padding(.horizontal, 16)
-        .padding(.vertical, 10)
-        .background(DSLegacy.danger, in: Capsule())
+        .padding(.horizontal, 14)
+        .padding(.vertical, 7)
+        .background(.white.opacity(0.14), in: Capsule())
         .overlay { Capsule().strokeBorder(.white.opacity(0.35), lineWidth: 1) }
-        .scaleEffect(pulse ? 1.04 : 1.0)
-        .shadow(color: DSLegacy.danger.opacity(0.5), radius: pulse ? 16 : 8, y: 4)
     }
 
-    // MARK: Discount badge
+    // MARK: Confettis (variante « graduate »)
 
-    @ViewBuilder
-    private var discountBadge: some View {
-        if let badge = prices.discountBadge {
-            Text(badge)
-                .font(DSLegacy.title(.largeTitle, .heavy))
-                .foregroundStyle(.white)
-                .padding(.horizontal, 22)
-                .padding(.vertical, 8)
-                .background(.white.opacity(0.16), in: Capsule())
-                .overlay { Capsule().strokeBorder(.white.opacity(0.4), lineWidth: 1.5) }
-        }
-    }
-
-    // MARK: Headline
-
-    private var headline: some View {
-        VStack(spacing: 10) {
-            Text(languageManager.text("paywall.discount.title"))
-                .font(DSLegacy.title(.title, .heavy))
-                .foregroundStyle(.white)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-
-            Text(languageManager.text("paywall.discount.subtitle"))
-                .font(DSLegacy.sans(.subheadline, .medium))
-                .foregroundStyle(.white.opacity(0.85))
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-    }
-
-    // MARK: Price block
-
-    /// Prix mensuels, comme sur les paywalls de l'onboarding : l'offre se compare au plan
-    /// annuel normal dans la même unité. Le montant réellement prélevé une fois par an
-    /// reste juste en dessous, en petit (App Store 3.1.2).
-    private var priceBlock: some View {
-        VStack(spacing: 4) {
-            HStack(alignment: .firstTextBaseline, spacing: 10) {
-                if let regular = prices.regularPerMonth {
-                    Text(regular)
-                        .font(DSLegacy.sans(.title3, .semibold))
-                        .foregroundStyle(.white.opacity(0.7))
-                        .strikethrough()
-                }
-                Text(prices.promoPerMonth)
-                    .font(DSLegacy.title(.largeTitle, .heavy))
-                    .foregroundStyle(.white)
+    /// Petits rectangles posés en bas de l'écran, toujours aux mêmes endroits.
+    private var confetti: some View {
+        Canvas { canvasContext, size in
+            let palette: [Color] = [Self.saffron, Self.coral, .white, Self.soft, Self.saffron]
+            var seed: UInt64 = 7
+            func next() -> CGFloat {
+                seed = seed &* 6364136223846793005 &+ 1442695040888963407
+                return CGFloat((seed >> 33) % 10_000) / 10_000
             }
-            .lineLimit(1)
-            .minimumScaleFactor(0.7)
-
-            Text(languageManager.text("paywall.discount.perMonth"))
-                .font(DSLegacy.sans(.footnote, .semibold))
-                .foregroundStyle(.white.opacity(0.85))
-                .multilineTextAlignment(.center)
-
-            Text(prices.billedYearlyNote)
-                .font(DSLegacy.sans(.caption, .medium))
-                .foregroundStyle(.white.opacity(0.75))
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
+            for index in 0..<34 {
+                let x: CGFloat = next() * size.width
+                let y: CGFloat = size.height - 12 - next() * 150
+                let width: CGFloat = 8 + next() * 4
+                let height: CGFloat = 5 + next() * 3
+                let angle: CGFloat = next() * .pi
+                var piece = canvasContext
+                piece.translateBy(x: x, y: y)
+                piece.rotate(by: Angle(radians: Double(angle)))
+                let rect = CGRect(x: -width / 2, y: -height / 2, width: width, height: height)
+                piece.fill(
+                    Path(roundedRect: rect, cornerRadius: 2),
+                    with: .color(palette[index % palette.count].opacity(0.9))
+                )
+            }
         }
+        .ignoresSafeArea()
     }
 
     // MARK: Bottom bar
 
+    private var ctaTitle: String {
+        switch variant {
+        case .percent:
+            return String(format: languageManager.text("paywall.offer.cta"), prices.promoPerMonth)
+        case .graduate:
+            return languageManager.text("paywall.discount.cta")
+        }
+    }
+
     private var bottomBar: some View {
         VStack(spacing: 10) {
             Button(action: purchase) {
-                HStack(spacing: 8) {
+                Group {
                     if purchasing {
-                        ProgressView().tint(DSLegacy.accent)
+                        ProgressView().tint(Self.blue)
                     } else {
-                        Image(systemName: "bolt.fill")
-                            .font(.jakarta(size: 15, weight: .bold))
-                        Text(languageManager.text("paywall.discount.cta"))
+                        Text(ctaTitle)
+                            .font(.jakarta(size: 17, weight: .bold))
+                            .lineLimit(2)
+                            .minimumScaleFactor(0.8)
+                            .multilineTextAlignment(.center)
                     }
                 }
+                .foregroundStyle(Self.blue)
+                .frame(maxWidth: .infinity, minHeight: 58)
+                .padding(.horizontal, 12)
+                .background(.white, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
             }
-            .buttonStyle(DSLegacyPrimaryButtonStyle(fill: .white, foreground: DSLegacy.accent))
+            .buttonStyle(PressableStyle(haptic: false))
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
             Text(languageManager.text("paywall.discount.noTrial"))
-                .font(DSLegacy.sans(.caption2, .medium))
-                .foregroundStyle(.white.opacity(0.7))
+                .font(.jakarta(size: 12, weight: .medium))
+                .foregroundStyle(Self.soft)
+                .multilineTextAlignment(.center)
 
             legalRow.padding(.bottom, 14)
         }
@@ -1042,8 +1196,8 @@ struct SophiaDiscountPaywall: View {
         HStack(spacing: 6) {
             Button(languageManager.text("paywall.restore"), action: restore)
         }
-        .font(DSLegacy.sans(.caption2, .medium))
-        .foregroundStyle(.white.opacity(0.7))
+        .font(.jakarta(size: 11, weight: .medium))
+        .foregroundStyle(Self.soft)
     }
 
     private var closeButton: some View {
@@ -1055,8 +1209,9 @@ struct SophiaDiscountPaywall: View {
             Image(systemName: "xmark")
                 .font(.system(size: 15, weight: .semibold))
                 .foregroundStyle(.white)
-                .frame(width: 40, height: 40)
-                .background(.white.opacity(0.15), in: Circle())
+                .frame(width: 44, height: 44)
+                .background(.white.opacity(0.14), in: Circle())
+                .overlay { Circle().strokeBorder(.white.opacity(0.45), lineWidth: 1.5) }
         }
     }
 
@@ -1066,17 +1221,19 @@ struct SophiaDiscountPaywall: View {
         guard !purchasing else { return }
         // Le paquet promo `offre_discount` est prioritaire ; si l'offering promo n'est pas
         // configurée (paquet nil), on retombe sur le plan annuel standard pour que le bouton
-        // « J'en profite maintenant » déclenche toujours l'achat au lieu de ne rien faire.
+        // déclenche toujours l'achat au lieu de ne rien faire.
         guard let package = store.promoPackage ?? store.annualPackage else {
             Task { await store.loadOfferingsWithRetry() }
             return
         }
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         purchasing = true
+        let props: [String: AnalyticsValue] = analyticsProps
         Task {
-            let ok = await store.purchase(package: package)
+            let ok = await store.purchase(package: package, analyticsProps: props)
             purchasing = false
             if ok {
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
                 onPurchased()
             }
         }

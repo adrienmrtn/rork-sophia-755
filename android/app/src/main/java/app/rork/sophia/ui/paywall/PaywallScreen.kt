@@ -180,6 +180,8 @@ fun PaywallScreen(
     courseId: String? = null,
     /** Forces a variant of the course paywall (developer previews); null draws it from the A/B test. */
     forcedCourseVariant: PaywallExperiment.Variant? = null,
+    /** Same for the discount paywall. */
+    forcedDiscountVariant: PaywallExperiment.DiscountVariant? = null,
 ) {
     // Designed light-only, as on iOS: the night palette stays off while it is shown.
     ForceLightAppearance()
@@ -203,6 +205,7 @@ fun PaywallScreen(
     )
     // Drawn once per presentation: a setting that arrives meanwhile must not swap the screen.
     val courseVariant = remember { forcedCourseVariant ?: PaywallExperiment.courseVariant() }
+    val discountVariant = remember { forcedDiscountVariant ?: PaywallExperiment.discountVariant() }
     // The course paywall's variant follows the reader to the second-chance screen and its purchase.
     val experimentProps = if (context == PaywallContext.DEBLOQUER_COURS) {
         PaywallExperiment.analyticsProps(courseVariant)
@@ -246,6 +249,7 @@ fun PaywallScreen(
                 onPurchased = { onPurchased() },
             )
             PaywallContext.OFFRE_DISCOUNT -> DiscountPaywall(
+                variant = discountVariant,
                 language = language,
                 storeViewModel = storeViewModel,
                 onDismiss = onDismiss,
@@ -812,188 +816,6 @@ private fun TrainingPaywall(
                 text = StringStore.text(context, "paywall.training.footnote", language),
                 style = SophiaLegacyTypography.labelMedium.copy(fontSize = 12.sp),
             )
-        }
-    }
-}
-
-@Composable
-private fun DiscountPaywall(
-    language: AppLanguage,
-    storeViewModel: StoreViewModel,
-    onDismiss: () -> Unit,
-    onPurchased: () -> Unit,
-    onRestore: () -> Unit,
-    onOpenTerms: () -> Unit,
-    onOpenPrivacy: () -> Unit,
-) {
-    val context = LocalContext.current
-    val app = context.applicationContext as SophiaApplication
-    val discount by app.discountManager.state.collectAsState()
-    LaunchedEffect(Unit) {
-        storeViewModel.fetchOfferings()
-        // Reported on the bucket's own offering, never on the experiment-served current one.
-        storeViewModel.trackPaywallImpressionForOffering(
-            "native_discount",
-            storeViewModel.promoOffering()?.identifier
-                ?: DiscountBucket.offeringIdentifier(DiscountBucket.get(context)),
-        )
-    }
-    val offerings by storeViewModel.offerings.collectAsState()
-    // Picked by the install's discount bucket (A: offre_discount, B: offre_discount_2999).
-    val annual = remember(offerings) { storeViewModel.promoPackage() }
-    // The struck-through price is the regular annual plan, so the saving shown is the real one.
-    val regularAnnual = remember(offerings) { storeViewModel.annualPackage(null) }
-    var purchasing by remember { mutableStateOf(false) }
-    var error by remember { mutableStateOf<String?>(null) }
-    var notice by remember { mutableStateOf<String?>(null) }
-    val promo = storeViewModel.formattedPrice(annual, StoreViewModel.UNKNOWN_PRICE)
-    val regular = storeViewModel.formattedPrice(regularAnnual, StoreViewModel.UNKNOWN_PRICE)
-    // Affiché au mois, comme les plans de l'écran comparatif : deux montants annuels côte à
-    // côte ne disent pas au lecteur ce que ça lui coûte par mois. Le prélèvement annuel réel
-    // reste en dessous.
-    val promoPerMonth = storeViewModel.formattedYearlyPerMonth(annual, promo)
-    val regularPerMonth = regularAnnual?.let { storeViewModel.formattedYearlyPerMonth(it, regular) }
-    // No badge at all rather than a remembered « -58 % » when either price is unknown.
-    val badge = storeViewModel.percentOff(annual, regularAnnual)
-
-    // Insets are consumed at the root, so painting the gradient here alone left the strips
-    // behind the status and navigation bars on the pale canvas. Handing the brush up paints it
-    // edge to edge instead, and the bar icons are flipped to light for the dark gradient.
-    val setFullBleed = LocalFullBleedBackground.current
-    val gradient = remember { Brush.verticalGradient(listOf(DSLegacy.accent, DSLegacy.accentSoft)) }
-    DisposableEffect(Unit) {
-        setFullBleed(gradient)
-        SophiaAppearance.darkBackdropBehindBars = true
-        onDispose {
-            setFullBleed(null)
-            SophiaAppearance.darkBackdropBehindBars = false
-        }
-    }
-
-    // Painted here as well: from the tabs the paywall sits in an opaque layer (SophiaOverlayLayer)
-    // that hid the root gradient, leaving white text on the pale canvas.
-    Box(modifier = Modifier.fillMaxSize().background(gradient)) {
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .readableWidth()
-                    .padding(horizontal = DSLegacy.Space.l, vertical = 8.dp),
-            ) {
-                PaywallCloseButton(onClose = onDismiss, light = true)
-            }
-            PaywallEntry(modifier = Modifier.weight(1f)) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .readableWidth()
-                        .verticalScroll(rememberScrollState())
-                        .padding(horizontal = 28.dp),
-                    verticalArrangement = Arrangement.Center,
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    DiscountCountdownChip(
-                        label = StringStore.text(context, "paywall.discount.endsIn", language),
-                        time = discount.formattedRemaining,
-                    )
-                    Spacer(Modifier.height(18.dp))
-                    if (badge != null) Text(
-                        text = badge,
-                        color = Color.White,
-                        fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.ExtraBold,
-                        fontSize = 40.sp,
-                        modifier = Modifier
-                            .clip(CircleShape)
-                            .background(Color.White.copy(alpha = 0.16f))
-                            .border(1.5.dp, Color.White.copy(alpha = 0.4f), CircleShape)
-                            .padding(horizontal = 22.dp, vertical = 8.dp),
-                    )
-                    Spacer(Modifier.height(18.dp))
-                    Text(
-                        text = StringStore.text(context, "paywall.discount.title", language),
-                        color = Color.White,
-                        style = SophiaLegacyTypography.titleLarge.copy(fontSize = 24.sp, color = Color.White),
-                        textAlign = TextAlign.Center,
-                    )
-                    Spacer(Modifier.height(8.dp))
-                    Text(
-                        text = StringStore.text(context, "paywall.discount.subtitle", language),
-                        color = Color.White.copy(alpha = 0.85f),
-                        style = SophiaLegacyTypography.bodyMedium.copy(color = Color.White.copy(alpha = 0.85f)),
-                        textAlign = TextAlign.Center,
-                    )
-                    Spacer(Modifier.height(18.dp))
-                    DiscountPriceBlock(
-                        regular = regularPerMonth,
-                        promo = promoPerMonth,
-                        perMonth = StringStore.text(context, "paywall.discount.perMonth", language),
-                        billedYearly = StringStore.text(
-                            context, "paywall.plan.billedYearly", language, promo,
-                        ),
-                    )
-                    if (error != null) {
-                        Spacer(Modifier.height(16.dp))
-                        PaywallErrorNote(error!!, light = true)
-                    }
-                    if (notice != null) {
-                        Spacer(Modifier.height(16.dp))
-                        PaywallNotice(notice!!, light = true)
-                    }
-                }
-            }
-            Column(
-                modifier = Modifier
-                    .readableWidth()
-                    .padding(horizontal = 24.dp)
-                    .padding(bottom = 12.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                PurchaseButton(
-                    text = StringStore.text(context, "paywall.discount.cta", language),
-                    purchasing = purchasing,
-                    leadingIcon = Icons.Filled.Bolt,
-                    fill = Color.White,
-                    contentColor = DSLegacy.accent,
-                    onClick = {
-                        purchasePackage(
-                            context = context,
-                            language = language,
-                            pkg = annual,
-                            storeViewModel = storeViewModel,
-                            onStart = { purchasing = true },
-                            onDone = { purchasing = false },
-                            onError = { error = it; notice = null; purchasing = false },
-                            onPending = { notice = it; error = null; purchasing = false },
-                            onPurchased = {
-                                onPurchased()
-                            },
-                        )
-                    },
-                )
-                Text(
-                    text = StringStore.text(context, "paywall.discount.noTrial", language),
-                    color = Color.White.copy(alpha = 0.75f),
-                    style = SophiaLegacyTypography.labelMedium.copy(
-                        fontSize = 11.sp,
-                        color = Color.White.copy(alpha = 0.75f),
-                    ),
-                    textAlign = TextAlign.Center,
-                )
-                // This paywall sells a subscription like every other one, so it owes the
-                // same links: Restore alone was missing Terms and Privacy.
-                PaywallLegalRow(
-                    language = language,
-                    onRestore = onRestore,
-                    onTerms = onOpenTerms,
-                    onPrivacy = onOpenPrivacy,
-                    light = true,
-                )
-            }
         }
     }
 }

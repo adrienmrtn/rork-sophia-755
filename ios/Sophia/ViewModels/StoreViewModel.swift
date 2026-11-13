@@ -364,8 +364,12 @@ class StoreViewModel {
 
     /// Same, for a paywall that knows exactly which offering it displays (the discount
     /// paywall, whose offering is never the current one).
-    func trackPaywallImpression(paywallId: String, offering: Offering?) {
-        trackPaywallImpression(paywallId: paywallId, offering: offering, context: nil)
+    func trackPaywallImpression(
+        paywallId: String,
+        offering: Offering?,
+        extraProps: [String: AnalyticsValue] = [:]
+    ) {
+        trackPaywallImpression(paywallId: paywallId, offering: offering, context: nil, extraProps: extraProps)
     }
 
     private func trackPaywallImpression(

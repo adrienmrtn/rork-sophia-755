@@ -61,6 +61,68 @@ object PaywallExperiment {
         val defaultVariant: Variant? = null,
     )
 
+    /** The two looks of the discount ("one-time offer") paywall, test `discount_paywall_ab`. */
+    enum class DiscountVariant(val id: String) {
+        /** The percentage in very large type above the illustration. */
+        PERCENT("percent"),
+
+        /** The graduate character with the discount tag on top. */
+        GRADUATE("graduate"),
+        ;
+
+        val paywallId: String get() = "native_discount_$id"
+
+        companion object {
+            fun fromId(id: String?): DiscountVariant? = entries.firstOrNull { it.id == id }
+        }
+    }
+
+    /** `{"enabled": true, "share_graduate": 0.5, "default_variant": "percent"}`. */
+    data class DiscountConfig(
+        val enabled: Boolean = true,
+        /** Share of the installs (0 to 1) that get [DiscountVariant.GRADUATE]. */
+        val shareGraduate: Double = 0.5,
+        val defaultVariant: DiscountVariant? = null,
+    )
+
+    const val DISCOUNT_EXPERIMENT = "discount_paywall_ab"
+
+    @Volatile
+    var discountConfig: DiscountConfig = DiscountConfig()
+        private set
+
+    /** The discount paywall variant of this install; drawn independently of the course test. */
+    fun discountVariant(): DiscountVariant = discountVariant(Analytics.installIdentifier, discountConfig)
+
+    fun discountAnalyticsProps(variant: DiscountVariant): Map<String, Any?> =
+        mapOf("experiment" to DISCOUNT_EXPERIMENT, "variant" to variant.id)
+
+    fun discountVariant(installId: String, config: DiscountConfig): DiscountVariant {
+        if (!config.enabled) return config.defaultVariant ?: DiscountVariant.PERCENT
+        return if (unitInterval(installId, DISCOUNT_EXPERIMENT) < config.shareGraduate) {
+            DiscountVariant.GRADUATE
+        } else {
+            DiscountVariant.PERCENT
+        }
+    }
+
+    fun parseDiscountValue(text: String): DiscountConfig? = try {
+        parseDiscountConfig(json.parseToJsonElement(text))
+    } catch (_: Exception) {
+        null
+    }
+
+    private fun parseDiscountConfig(element: JsonElement): DiscountConfig? {
+        if (element is JsonPrimitive && element.isString) return parseDiscountValue(element.content)
+        val value = element as? JsonObject ?: return null
+        val share = (value["share_graduate"] as? JsonPrimitive)?.doubleOrNull
+        return DiscountConfig(
+            enabled = (value["enabled"] as? JsonPrimitive)?.booleanOrNull ?: true,
+            shareGraduate = (share?.takeIf { !it.isNaN() } ?: 0.5).coerceIn(0.0, 1.0),
+            defaultVariant = DiscountVariant.fromId((value["default_variant"] as? JsonPrimitive)?.content),
+        )
+    }
+
     private val json = Json { ignoreUnknownKeys = true; isLenient = true }
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
@@ -73,8 +135,18 @@ object PaywallExperiment {
         val appContext = context.applicationContext
         val prefs = appContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
         prefs.getString(KEY_VALUE, null)?.let { saved -> parseValue(saved)?.let { config = it } }
+        prefs.getString(DISCOUNT_EXPERIMENT, null)?.let { saved ->
+            parseDiscountValue(saved)?.let { discountConfig = it }
+        }
         scope.launch {
-            val body = fetch() ?: return@launch
+            val body = fetch(DISCOUNT_EXPERIMENT) ?: return@launch
+            val value = firstValue(body) ?: return@launch
+            val parsed = parseDiscountConfig(value) ?: return@launch
+            discountConfig = parsed
+            prefs.edit().putString(DISCOUNT_EXPERIMENT, value.toString()).apply()
+        }
+        scope.launch {
+            val body = fetch(KEY_VALUE) ?: return@launch
             // No row yet: the default stands, and so does whatever was read before.
             val value = firstValue(body) ?: return@launch
             val parsed = parseConfig(value) ?: return@launch
@@ -98,9 +170,9 @@ object PaywallExperiment {
     }
 
     /** A number in [0, 1), always the same for the same install. */
-    fun unitInterval(installId: String): Double {
+    fun unitInterval(installId: String, experiment: String = EXPERIMENT): Double {
         // Lower-cased: iOS writes its UUIDs in capitals, and both platforms must hash the same text.
-        val text = "$EXPERIMENT:${installId.lowercase(java.util.Locale.ROOT)}"
+        val text = "$experiment:${installId.lowercase(java.util.Locale.ROOT)}"
         val digest = MessageDigest.getInstance("SHA-256").digest(text.toByteArray(Charsets.UTF_8))
         var value = 0L
         for (i in 0 until 4) value = (value shl 8) or (digest[i].toLong() and 0xFF)
@@ -135,10 +207,10 @@ object PaywallExperiment {
     }
 
     /** `rest/v1/app_config?key=eq.course_paywall_ab&select=value`, a plain public read. */
-    private fun fetch(): String? {
+    private fun fetch(key: String): String? {
         var connection: HttpURLConnection? = null
         return try {
-            val url = "${AppConfig.SUPABASE_URL.trimEnd('/')}/rest/v1/app_config?key=eq.$KEY_VALUE&select=value"
+            val url = "${AppConfig.SUPABASE_URL.trimEnd('/')}/rest/v1/app_config?key=eq.$key&select=value"
             val conn = URL(url).openConnection() as HttpURLConnection
             connection = conn
             conn.connectTimeout = 15_000
