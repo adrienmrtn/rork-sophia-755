@@ -15,11 +15,6 @@ on:
         description: "Commit the captures to the branch (design/app-captures/)"
         type: boolean
         default: false
-  push:
-    branches: ["claude/busy-hopper-84qqrs"]
-    paths:
-      - "scripts/site_app_screens.py"
-      - ".github/workflows/site-app-screens.yml"
 
 concurrency:
   group: site-app-screens-${{ github.ref }}
@@ -64,7 +59,7 @@ jobs:
           profile: pixel_6
           disable-animations: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
-          script: python3 scripts/site_app_screens.py android/app/build/outputs/apk/debug/app-debug.apk design/app-captures "${{ inputs.course || 'course_149_la_joconde' }}"
+          script: python3 scripts/site_app_screens.py android/app/build/outputs/apk/debug/app-debug.apk design/app-captures "${{ inputs.course }}"
 
       - uses: actions/upload-artifact@v4
         if: always()
@@ -74,7 +69,7 @@ jobs:
           retention-days: 14
 
       - name: Commit the captures
-        if: always() && (github.event_name == 'push' || inputs.commit)
+        if: always() && inputs.commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
