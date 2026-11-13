@@ -27,13 +27,18 @@ body { height: 956px; overflow: hidden; position: relative; font-family: "Plus J
 .text.center p { margin-top: 8px; font-weight: 400; }
 /* Sets with `titles: "loud"`: bigger, heavier headlines (800 is the font's heaviest cut, so a
    hairline stroke in the text colour thickens it further). */
-body.loud .text.center { top: 46px; left: 18px; right: 18px; }
-body.loud .text.center h1 { font-size: 40px; line-height: 1.08; letter-spacing: -0.035em; -webkit-text-stroke: 0.9px currentColor; }
+body.loud .text.center { top: 42px; left: 14px; right: 14px; }
+body.loud .text.center h1 { font-size: 46px; line-height: 1.08; letter-spacing: -0.035em; -webkit-text-stroke: 0.9px currentColor; }
 body.loud .text.center h1 b { font-size: 1.28em; line-height: 1; }
-body.loud .text.center p { margin-top: 10px; font-size: 19px; font-weight: 500; }
-body.loud .bubble { font-size: 37px; line-height: 1.1; -webkit-text-stroke: 0.8px currentColor; padding: 20px 26px 24px; }
-body.loud .reviews { top: 188px; }
-body.loud .profs { top: 206px; }
+body.loud .text.center p { margin-top: 10px; font-size: 22px; line-height: 1.22; font-weight: 500; text-wrap: balance; }
+body.loud .bubble { font-size: 43px; line-height: 1.1; -webkit-text-stroke: 0.8px currentColor; padding: 20px 26px 24px; }
+body.loud .reviews { top: 196px; gap: 14px; }
+body.loud .review { padding: 18px 16px 16px; }
+body.loud .review q { font-size: 20px; line-height: 1.32; }
+body.loud .review .who { font-size: 15px; }
+body.loud .profs { top: 228px; }
+body.loud .prof .n { font-size: 20.5px; }
+body.loud .prof .c { font-size: 16px; }
 .text.center h1 b { font-size: 1.55em; line-height: 0.9; letter-spacing: -0.04em; }
 /* Hero of the "vitrine" set: big logo and a speech bubble */
 .logo.big { left: 36px; top: 392px; height: 66px; }
@@ -99,7 +104,7 @@ body.loud .profs { top: 206px; }
     if (p.text) { const [h, sub] = T[p.text]; html += `<div class="text ${p.cls || ""}"><h1>${h}</h1>${sub ? `<p>${sub}</p>` : ""}</div>`; }
     if (p.bubble) html += `<div class="bubble">${T[p.bubble][0]}</div>`;
     (p.grid || []).forEach((row, r) => row.forEach((f, c) => {
-      html += `<img class="tile" src="../../../ios/Sophia/CourseImages/${f}.jpg" style="left:${c * 166 - (r % 2 ? 98 : 22)}px; top:${(V.titles ? 196 : 178) + r * 166}px">`;
+      html += `<img class="tile" src="../../../ios/Sophia/CourseImages/${f}.jpg" style="left:${c * 166 - (r % 2 ? 98 : 22)}px; top:${(V.titles ? 212 : 178) + r * 166}px">`;
     }));
     if (p.profs) {
       const check = '<svg width="17" height="17" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2e62c4"/><path d="M7 12.500l3.300 3.300L17 9" fill="none" stroke="#fff" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg>';

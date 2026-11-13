@@ -69,3 +69,11 @@ Two colour variants of the English set render with `node render-pano.cjs showcas
 colour on almost every panel) and `node render-pano.cjs showcase-trio` (cream, blue and pink in
 rotation); the content is the same. Their panel colours are the two lists at the end of
 `src/pano.js`.
+
+## Product page header (`header/`)
+
+`node render-header.cjs` renders two proposals at 3840 x 1646 (21:9) from `src/header.html`:
+`header-cream.png` (colour logo, the before / after pair) and `header-blue.png` (white logo,
+illustrated objects). The logo and the main figures stay in the middle 3:2, which is roughly
+what a phone shows; check the exact size and crop against Apple's current specifications and
+the App Store Connect preview before uploading.
