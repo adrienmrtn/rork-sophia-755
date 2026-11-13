@@ -64,3 +64,8 @@ The reviews are the only English-language ones the public feeds returned on 13 N
 two five-star and one four-star, shown with its four stars. The professors panel lists real
 authors and credentials from `content/authors.json`; the portraits are the site's illustrated
 avatars, on purpose, not their faces.
+
+Two colour variants of the English set render with `node render-pano.cjs showcase-bold` (a strong
+colour on almost every panel) and `node render-pano.cjs showcase-trio` (cream, blue and pink in
+rotation); the content is the same. Their panel colours are the two lists at the end of
+`src/pano.js`.

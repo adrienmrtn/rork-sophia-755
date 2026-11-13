@@ -218,4 +218,24 @@ const PANOS = {
     ],
   },
 };
+// Colour variants of the English set: same panels, phones and copy, another background per
+// panel. Phone frames turn pale on dark grounds, and the hearts of the reviews panel change
+// colour where pink would vanish.
+function recolour(dir, themes, hearts) {
+  const base = PANOS.showcase, dark = ["blue", "navy", "coral"];
+  return Object.assign({}, base, {
+    dir,
+    panels: base.panels.map((p, i) => Object.assign({}, p, { theme: themes[i] })),
+    phones: base.phones.map((ph) => {
+      const d = dark.includes(themes[Math.floor(ph.cx / 440)]);
+      return Object.assign({}, ph, { frame: d ? "#cdd9f5" : "#2e62c4", band: d ? "#e9effb" : "#dbe5f8" });
+    }),
+    extras: base.extras.map((x) => Object.assign({}, x, { html: x.html.replace('fill="#f4a3c4"', `fill="${hearts}"`) })),
+  });
+}
+// Bold: a different strong colour on almost every panel.
+PANOS["showcase-bold"] = recolour("-showcase-bold", ["cream", "blue", "sun", "navy", "pink", "blue", "coral", "navy", "cream"], "#ffffff");
+// Trio: cream, blue and pink in rotation.
+PANOS["showcase-trio"] = recolour("-showcase-trio", ["cream", "blue", "pink", "cream", "blue", "pink", "cream", "blue", "pink"], "#f4a3c4");
+
 if (typeof module !== "undefined") module.exports = { PANOS };
