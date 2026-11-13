@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Sophia — Accueil</title>
+<link rel="stylesheet" href="../kit.css">
+<style>
+  /* HomeFeedView: VStack(spacing 0) { header, HomeFeedTabs, paged feed } */
+  :root { --liked: #d6336c; --lh: 1.26; }
+  .screen {
+    position: absolute; left: 0; right: 0; top: var(--safe-top);
+    bottom: calc(var(--safe-bottom) + var(--tabbar));
+    display: flex; flex-direction: column; background: var(--canvas);
+  }
+
+  /* Header: logo (30 pt high) + streak pill (36 pt), side margin 24, top 8 */
+  .header { display: flex; align-items: center; padding: 8px 24px 0; height: 44px; flex: none; }
+  .header .logo { height: 30px; width: auto; }
+  .header .grow { flex: 1; }
+  .streak {
+    display: flex; align-items: center; gap: 5px; height: 36px; padding: 0 12px;
+    border-radius: 18px; background: var(--accent-tint);
+    font-size: 15px; font-weight: 800; color: var(--ink); font-variant-numeric: tabular-nums;
+  }
+  .streak svg { width: 15px; height: 18px; display: block; }
+
+  /* HomeFeedTabs: two equal halves, 46 pt, hairline below, 56 x 3 accent capsule */
+  .tabs { display: flex; height: 46px; margin-top: 10px; position: relative; flex: none; }
+  .tabs::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--hairline); }
+  .tabs .t {
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; position: relative;
+    font-size: 15px; font-weight: 600; color: var(--ink-tertiary);
+  }
+  .tabs .t.on { font-weight: 700; color: var(--ink); }
+  .tabs .t.on::after {
+    content: ""; position: absolute; bottom: 0; left: 50%; margin-left: -28px; z-index: 1;
+    width: 56px; height: 3px; border-radius: 1.5px; background: var(--accent);
+  }
+  .tabs .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+
+  /* Paged feed: page = area height - 44 (peek); each page padded 24 / top 10 */
+  .feed { flex: 1; min-height: 0; overflow: hidden; }
+  .page { height: calc(100% - 44px); padding: 10px 24px 0; }
+
+  /* homeCard(): surface, radius 16, 1.5 pt hairline stroke, 1 pt lip below */
+  .card {
+    height: 100%; position: relative; display: flex; flex-direction: column;
+    background: var(--surface); border-radius: 16px; overflow: hidden;
+    box-shadow: 0 1px 0 var(--hairline);
+  }
+  .card::after {
+    content: ""; position: absolute; inset: 0; border-radius: 16px;
+    border: 1.5px solid var(--hairline); pointer-events: none;
+  }
+  .cover {
+    flex: 1000 1 0; min-height: 110px; max-height: 392px; position: relative; overflow: hidden;
+    background: var(--surface-muted);
+  }
+  .cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .pills { position: absolute; left: 12px; top: 12px; display: flex; gap: 6px; }
+  .pill {
+    display: flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border-radius: 13px;
+    background: var(--surface); box-shadow: inset 0 0 0 1px var(--hairline);
+    font-size: 12px; font-weight: 700; color: var(--ink); white-space: nowrap;
+  }
+  .pill i { width: 8px; height: 8px; border-radius: 50%; }
+
+  .body { flex: 1 0 auto; display: flex; flex-direction: column; gap: 9px; padding: 14px 16px 10px; }
+  .title { font-size: 20px; font-weight: 600; line-height: var(--lh); color: var(--ink); }
+  .hook {
+    font-size: 15px; font-weight: 400; line-height: calc(15px * var(--lh) + 3px); color: var(--ink-secondary);
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .creator { display: flex; align-items: center; gap: 10px; margin-top: 1px; }
+  .avatar {
+    width: 34px; height: 34px; border-radius: 50%; flex: none; position: relative; overflow: hidden;
+    background: var(--accent-tint);
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .avatar::after { content: ""; position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 0 0 1px var(--hairline); }
+  .who { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  .who .name { display: flex; align-items: center; gap: 4px; font-size: 15px; font-weight: 700; line-height: var(--lh); color: var(--ink); }
+  .who .name svg { width: 14px; height: 14px; flex: none; }
+  .who .ped { font-size: 12px; line-height: var(--lh); color: var(--ink-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .spacer { flex: 1; min-height: 0; margin: -4.5px 0; }
+  .rule { height: 1px; background: var(--hairline); flex: none; }
+  .stats { display: flex; align-items: center; gap: 18px; height: 33px; flex: none; }
+  .chip {
+    display: flex; align-items: center; gap: 5px; color: var(--ink-secondary);
+    font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+  .chip svg { display: block; flex: none; }
+  .chip.liked { color: var(--liked); }
+  .stats .grow { flex: 1; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="header">
+    <img class="logo" src="../../../../ios/Sophia/Assets.xcassets/sophia_mark.imageset/sophia_mark.png" alt="Sophia">
+    <div class="grow"></div>
+    <div class="streak">
+      <!-- flame.fill -->
+      <svg viewBox="0 0 15 18"><path fill="#e6b333" d="M8.2.4c.5 2.5-.5 4-1.900 5.500C5 7.300 3.800 8.600 3.300 10.200c-.5-.6-.8-1.400-.8-2.400C1.200 9.200.5 10.800.5 12.400c0 3 2.900 5.200 7 5.200s7-2.300 7-5.800c0-2.300-1.100-4-2.400-5.600-.3 1-.8 1.700-1.500 2.200.3-3.200-.4-6.100-2.400-8Zm-.6 9.200c1.500 1.400 2.500 2.600 2.500 4.100 0 1.400-1.100 2.300-2.600 2.300S4.900 15.100 4.900 13.800c0-1.200.6-2 1.300-2.700.6-.5 1.100-.9 1.400-1.500Z"/></svg>
+      <span data-c="streak"></span>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="t on"><span data-s="home.segment.forYou"></span></div>
+    <div class="t"><span data-s="home.segment.following"></span><span class="dot"></span></div>
+  </div>
+
+  <div class="feed">
+    <!-- Page 1: CourseFeedCard(fillsPage: true, coverMaxHeight: width - 48) -->
+    <div class="page">
+      <div class="card">
+        <div class="cover">
+          <img src="../../../../ios/Sophia/CourseImages/eiffel_tower_1889_universal_exhibition.jpg" alt="">
+          <div class="pills"><div class="pill"><i style="background:#d98cf2"></i><span data-s="subject.art.short"></span></div></div>
+        </div>
+        <div class="body">
+          <div class="title" data-c="c1.title"></div>
+          <div class="hook" data-c="c1.hook"></div>
+          <div class="creator">
+            <div class="avatar"><img src="../../../../ios/Sophia/Resources/AuthorPhotos/author_dusan_nikolic.jpg" alt=""></div>
+            <div class="who">
+              <div class="name"><span data-c="c1.author"></span>
+                <!-- checkmark.circle.fill, palette white / accent -->
+                <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="6.6" fill="#2e62c4"/><path d="M4.1 7.300 6.1 9.300 9.900 4.900" fill="none" stroke="#fff" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="ped" data-c="c1.pedigree"></div>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <div class="rule"></div>
+          <div class="stats">
+            <div class="chip">
+              <!-- eye -->
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M1.2 7C3 3.700 6.200 1.500 10 1.500S17 3.700 18.800 7C17 10.300 13.800 12.500 10 12.500S3 10.300 1.200 7Z"/><circle cx="10" cy="7" r="2.9"/></svg>
+              <span data-c="c1.reads"></span>
+            </div>
+            <div class="chip liked">
+              <!-- heart.fill -->
+              <svg width="17" height="15" viewBox="0 0 17 15"><path fill="currentColor" d="M8.5 14.600c-.3 0-.6-.1-.9-.3C4.200 12 .6 8.900.6 5.200.6 2.600 2.500.700 4.900.700c1.500 0 2.800.7 3.600 1.900C9.300 1.400 10.600.700 12.100.700c2.400 0 4.300 1.900 4.300 4.500 0 3.700-3.600 6.800-7 9.100-.3.2-.6.3-.9.300Z"/></svg>
+              <span data-c="c1.likes"></span>
+            </div>
+            <div class="grow"></div>
+            <div class="chip">
+              <!-- clock -->
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.700"/><path d="M8 4.200V8l2.600 1.700"/></svg>
+              <span data-c="c1.minutes"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 2: only its top 34 pt shows above the tab bar (peekHeight 44 - top padding 10) -->
+    <div class="page">
+      <div class="card">
+        <div class="cover">
+          <img src="../../../../ios/Sophia/CourseImages/crab_nebula_supernova_remnant_hubble.jpg" alt="">
+          <div class="pills"><div class="pill"><i style="background:#33d499"></i><span data-s="subject.sciences.short"></span></div></div>
+        </div>
+        <div class="body">
+          <div class="title" data-c="c2.title"></div>
+          <div class="hook" data-c="c2.hook"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../kit.js"></script>
+<script>
+  // Interface strings (French table of AppLocalizable.swift), keyed by localisation key.
+  const S = {
+    "tab.home": "Accueil",
+    "tab.explore": "Explorer",
+    "tab.duels": "Duels",
+    "tab.profile": "Profil",
+    "home.segment.forYou": "Pour toi",
+    "home.segment.following": "Abonnements",
+    "subject.art.short": "Art",
+    "subject.sciences.short": "Sciences",
+    "common.minutesShort": "%d min",
+  };
+  // Course content (French catalogue) and user state.
+  const C = {
+    "streak": "12",
+    "c1.title": "Pourquoi voulait-on démolir la tour Eiffel ?",
+    "c1.hook": "Avant d’être le symbole de Paris, elle a été une « odieuse colonne de tôle boulonnée » que l’on rêvait d’abattre.",
+    "c1.author": "Dusan Nikolic",
+    "c1.pedigree": "Historien de l’art, master de l’université de Belgrade",
+    "c1.reads": "2,4 k",
+    "c1.likes": "187",
+    "c1.minutes": S["common.minutesShort"].replace("%d", "4"),
+    "c2.title": "Comment meurt une étoile ?",
+    "c2.hook": "Une étoile peut s’éteindre en douceur ou exploser avec une violence inimaginable : tout se joue sur sa masse.",
+  };
+  document.querySelectorAll("[data-s]").forEach((el) => { el.innerHTML = S[el.dataset.s]; });
+  document.querySelectorAll("[data-c]").forEach((el) => { el.innerHTML = C[el.dataset.c]; });
+  Kit.chrome({
+    tab: "home",
+    tabLabels: { home: S["tab.home"], explore: S["tab.explore"], duels: S["tab.duels"], profile: S["tab.profile"] },
+  });
+</script>
+</body>
+</html>
