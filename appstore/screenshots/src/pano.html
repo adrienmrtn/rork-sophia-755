@@ -38,6 +38,15 @@ body { height: 956px; overflow: hidden; position: relative; font-family: "Plus J
 .phone.thick::before, .phone.thick::after { content: ""; position: absolute; width: 5px; background: var(--frame); border-radius: 3px; }
 .phone.thick::before { left: -8px; top: 92px; height: 26px; box-shadow: 0 46px 0 var(--frame), 0 82px 0 var(--frame); }
 .phone.thick::after { right: -8px; top: 150px; height: 70px; }
+/* Opening on cream with the colour logo (pink mark, black wordmark) */
+.logo.brand { left: 34px; top: 396px; height: 74px; }
+.panel.cream .bubble { background: #2e62c4; }
+.panel.cream .bubble::after { border-top-color: #2e62c4; border-left-color: #2e62c4; }
+.profs { position: absolute; left: 24px; right: 24px; top: 196px; display: flex; flex-direction: column; gap: 14px; z-index: 4; }
+.prof { background: #fff; border-radius: 20px; border: 1.5px solid #dfe4ee; padding: 14px 16px; display: flex; align-items: center; gap: 14px; }
+.prof img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; flex: none; }
+.prof .n { font-size: 18px; font-weight: 800; letter-spacing: -0.01em; color: #17181c; display: flex; align-items: center; gap: 6px; }
+.prof .c { margin-top: 4px; font-size: 14px; line-height: 1.32; color: #5b6170; font-weight: 500; }
 .tile { position: absolute; width: 150px; height: 150px; border-radius: 20px; object-fit: cover; z-index: 1; }
 .extra { position: absolute; z-index: 6; }
 .reviews { position: absolute; left: 26px; right: 26px; top: 176px; display: flex; flex-direction: column; gap: 16px; z-index: 4; }
@@ -69,20 +78,26 @@ body { height: 956px; overflow: hidden; position: relative; font-family: "Plus J
   const q = new URLSearchParams(location.search);
   const V = PANOS[q.get("v") || "penche"];
   const locale = q.get("locale") || "fr-FR";
-  const T = V.copy[locale] || V.copy["fr-FR"];
+  const T = V.copy[locale] || Object.values(V.copy)[0];
+  const Q = V.lang ? "?lang=" + V.lang : "";   // language of the app screens inside the phones
   document.body.style.width = V.panels.length * 440 + "px";
   V.panels.forEach((p, i) => {
     const el = document.createElement("div");
     el.className = "panel " + p.theme; el.style.left = i * 440 + "px";
-    let html = p.logo ? `<img class="logo ${p.logo === "big" ? "big" : ""}" src="../../../ios/Sophia/Assets.xcassets/logo_white.imageset/logo_white.png">` : "";
+    let html = p.logo === "brand" ? `<img class="logo brand" src="../../../web/public/brand/sophia-logo.png">`
+      : p.logo ? `<img class="logo ${p.logo === "big" ? "big" : ""}" src="../../../ios/Sophia/Assets.xcassets/logo_white.imageset/logo_white.png">` : "";
     if (p.text) { const [h, sub] = T[p.text]; html += `<div class="text ${p.cls || ""}"><h1>${h}</h1>${sub ? `<p>${sub}</p>` : ""}</div>`; }
     if (p.bubble) html += `<div class="bubble">${T[p.bubble][0]}</div>`;
     (p.grid || []).forEach((row, r) => row.forEach((f, c) => {
       html += `<img class="tile" src="../../../ios/Sophia/CourseImages/${f}.jpg" style="left:${c * 166 - (r % 2 ? 98 : 22)}px; top:${178 + r * 166}px">`;
     }));
+    if (p.profs) {
+      const check = '<svg width="17" height="17" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#2e62c4"/><path d="M7 12.500l3.300 3.300L17 9" fill="none" stroke="#fff" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      html += `<div class="profs">${T[p.profs].map(([name, cred, av]) => `<div class="prof"><img src="../../../web/public/avatars/${av}.webp"><div><div class="n">${name}${check}</div><div class="c">${cred}</div></div></div>`).join("")}</div>`;
+    }
     if (p.reviews) {
       const star = '<svg width="19" height="19" viewBox="0 0 24 24"><path fill="#f2a31b" d="M12 1.800l3.100 6.600 7.100.900-5.200 5 1.300 7.100L12 18l-6.300 3.400 1.300-7.100-5.200-5 7.100-.900L12 1.800Z"/></svg>';
-      html += `<div class="reviews">${T[p.reviews].map(([quote, who]) => `<div class="review"><div class="stars">${star.repeat(5)}</div><q>${quote}</q><div class="who">${who}</div></div>`).join("")}</div>`;
+      html += `<div class="reviews">${T[p.reviews].map(([quote, who, n]) => `<div class="review"><div class="stars">${star.repeat(n || 5)}</div><q>${quote}</q><div class="who">${who}</div></div>`).join("")}</div>`;
     }
     el.innerHTML = html; document.body.appendChild(el);
   });
@@ -95,7 +110,7 @@ body { height: 956px; overflow: hidden; position: relative; font-family: "Plus J
     const thick = !!p.frame, w = 440 * p.s + (thick ? 21 : 7), h = 956 * p.s + (thick ? 21 : 7);
     if (thick) { el.classList.add("thick"); el.style.setProperty("--frame", p.frame); el.style.setProperty("--band", p.band); }
     el.style.left = p.cx - w / 2 + "px"; el.style.top = p.cy - h / 2 + "px"; el.style.transform = `rotate(${p.r || 0}deg)`;
-    el.innerHTML = thick ? `<div class="scr"><iframe src="screens/${p.screen}.html"></iframe></div>` : `<iframe src="screens/${p.screen}.html"></iframe>`; document.body.appendChild(el);
+    el.innerHTML = thick ? `<div class="scr"><iframe src="screens/${p.screen}.html${Q}"></iframe></div>` : `<iframe src="screens/${p.screen}.html${Q}"></iframe>`; document.body.appendChild(el);
   });
   // people: x = centre, b = y of the feet, h = height; r = rotation; flip; z
   V.people.forEach((p) => {

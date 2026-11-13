@@ -18,6 +18,15 @@ const COPY_FR = {
 
 const order = ["home", "reader", "quiz", "blocker", "duels", "explore", "profile"];
 
+// Real course covers for the catalogue wall (ios/Sophia/CourseImages), five rows of four.
+const WALL = [
+        ["eiffel_tower_1889_universal_exhibition", "la_joconde", "apollo_11_aldrin_us_flag_lunar_module_1969", "achille_le_talon_et_l_invulnerabilite"],
+        ["l_expressionnisme_munch_et_le_cri", "la_nuit_etoilee_van_gogh", "crab_nebula_supernova_remnant_hubble", "aesop_fox_kylix_vatican_470_bc"],
+        ["giza_pyramids_khufu_khafre_menkaure_wide_view", "dna_double_helix_3d_render_blue", "la_guerre_de_troie_et_le_cheval_de_bois", "hms_agamemnon_laying_atlantic_telegraph_cable_1858"],
+        ["l_odyssee_homere", "beethoven_genie_et_surdite", "comment_se_forment_les_eclairs", "la_decouverte_de_l_amerique_1492"],
+        ["la_decouverte_du_micro_ondes", "icare_et_dedale", "fresh_coriander_cilantro_bunch_leaves", "la_montee_des_eaux"],
+      ];
+
 const PANOS = {
   // Cream panels, phones leaning one way then the other at uneven heights, a character
   // standing on every seam between two screenshots.
@@ -106,13 +115,7 @@ const PANOS = {
       { theme: "blue", logo: "big", bubble: "hero" },
       { theme: "blue", text: "promise", cls: "center" },
       ...["reader", "quiz", "duels", "blocker", "explore", "profile"].map((s) => ({ theme: "pale", text: s, cls: "center" })),
-      { theme: "pale", text: "wall", cls: "center", grid: [
-        ["eiffel_tower_1889_universal_exhibition", "la_joconde", "apollo_11_aldrin_us_flag_lunar_module_1969", "achille_le_talon_et_l_invulnerabilite"],
-        ["l_expressionnisme_munch_et_le_cri", "la_nuit_etoilee_van_gogh", "crab_nebula_supernova_remnant_hubble", "aesop_fox_kylix_vatican_470_bc"],
-        ["giza_pyramids_khufu_khafre_menkaure_wide_view", "dna_double_helix_3d_render_blue", "la_guerre_de_troie_et_le_cheval_de_bois", "hms_agamemnon_laying_atlantic_telegraph_cable_1858"],
-        ["l_odyssee_homere", "beethoven_genie_et_surdite", "comment_se_forment_les_eclairs", "la_decouverte_de_l_amerique_1492"],
-        ["la_decouverte_du_micro_ondes", "icare_et_dedale", "fresh_coriander_cilantro_bunch_leaves", "la_montee_des_eaux"],
-      ] },
+      { theme: "pale", text: "wall", cls: "center", grid: WALL },
       { theme: "pale", text: "love", cls: "center", reviews: "reviews" },
     ],
     phones: ["home", "reader", "quiz", "duels", "blocker", "explore", "profile"].map((s, k) => ({
@@ -149,6 +152,79 @@ const PANOS = {
       { x: 470, y: 150, html: '<svg width="16" height="16" viewBox="0 0 24 24"><path fill="#fef5e9" d="M12 0c1 7 4 10 12 12-8 2-11 5-12 12-1-7-4-10-12-12 8-2 11-5 12-12Z"/></svg>' },
       { x: P(4) + 8, y: 420, html: '<img src="../../../ios/Sophia/Assets.xcassets/avatar_49.imageset/avatar_49.jpg" style="width:96px;height:96px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 4px #2e62c4">' },
       { x: P(4) + 336, y: 560, html: '<img src="../../../ios/Sophia/Assets.xcassets/avatar_42.imageset/avatar_42.jpg" style="width:96px;height:96px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 4px #dc6048">' },
+    ],
+  },
+  // English set, same look as "vitrine" with a calmer opening on cream (colour logo) and the
+  // order asked for: promise, open course, catalogue wall and reviews early, then the features.
+  showcase: {
+    dir: "-showcase", lang: "en", copy: { "en-US": {
+      hero: ["Scroll less.<br>Know more."],
+      home: ["Get smarter<br>every day", "One course a day, picked for you"],
+      reader: ["Learn in <b>10\u00a0minutes</b>", "Short courses, straight to the point"],
+      wall: ["300+ courses.<br>Zero boredom."],
+      love: ["People love<br>Sophia"],
+      // Real App Store reviews of Sophia written in English (public customer-reviews feeds of the
+      // French and UK stores, read on 13 Nov 2026), quoted as written, with their real star
+      // rating; “[…]” marks a cut. Do not edit the wording or add invented ones.
+      reviews: [
+        ["“Exactly what I’ve been looking for to expand my knowledge. Great app, simple & easy to use, no hassle. Amazing work.”", "Alex K. · App Store", 5],
+        ["“This app is very intuitive and enables me to learn interesting facts, have a broader vision of what’s happening in today’s world. […]”", "Merlin.G · App Store", 5],
+        ["“I think this is great. I like that the courses are short and written by people who are trained in their fields rather than using AI. […]”", "Hsbyznsjsj · App Store", 4],
+      ],
+      quiz: ["Read it.<br>Remember it.", "A quiz at the end of every course"],
+      duels: ["Beat your friends", "General-knowledge duels, head to head"],
+      blocker: ["No course,<br>no scrolling", "Your apps stay locked until today’s course"],
+      profs: ["Written by<br>professors", "Real scholars, real credentials"],
+      // Real authors and their credentials from content/authors.json; the portraits are the
+      // site's illustrated avatars, deliberately not their real faces.
+      authors: [
+        ["Angela Bouma", "History professor, Barton Community College", "avatar_17"],
+        ["Mark N. Hoffman", "PhD in Political Science, professor at Saint Xavier University", "avatar_08"],
+        ["Stacy Jankowski", "PhD in Biomedical Science, Boston University", "avatar_05"],
+        ["Simon Lea", "PhD in Philosophy, independent scholar", "avatar_02"],
+      ],
+      profile: ["24 days in a row.<br>You?", "Keep your streak alive"],
+    } },
+    panels: [
+      { theme: "cream", logo: "brand", bubble: "hero" },
+      { theme: "blue", text: "home", cls: "center" },
+      { theme: "pale", text: "reader", cls: "center" },
+      { theme: "pale", text: "wall", cls: "center", grid: WALL },
+      { theme: "pale", text: "love", cls: "center", reviews: "reviews" },
+      { theme: "pale", text: "quiz", cls: "center" },
+      { theme: "pale", text: "duels", cls: "center" },
+      { theme: "pale", text: "blocker", cls: "center" },
+      { theme: "pale", text: "profs", cls: "center", profs: "authors" },
+      { theme: "pale", text: "profile", cls: "center" },
+    ],
+    phones: [["home", 1], ["reader", 2], ["quiz", 5], ["duels", 6], ["blocker", 7], ["profile", 9]].map(([s, i]) => ({
+      screen: s, cx: mid(i), cy: 232 + (956 * 0.78 + 21) / 2, s: 0.78,
+      frame: i === 1 ? "#cdd9f5" : "#2e62c4", band: i === 1 ? "#e9effb" : "#dbe5f8" })),
+    people: [
+      // opening: fewer pieces, more air
+      { name: "prop_portrait", x: 104, b: 300, h: 250, r: -8 },
+      { name: "prop_rocket", x: 336, b: 318, h: 230, r: 12 },
+      { name: "prop_saturn", x: 232, b: 120, h: 92, r: -12 },
+      { name: "prop_globe", x: 322, b: 840, h: 158, r: 8 },
+      { name: "lying", x: 150, b: 950, h: 215, r: -2 },
+      { name: "reader_walking", x: P(1) - 4, b: 962, h: 265, z: 4 },
+      { name: "trophy", x: P(4) + 220, b: 1000, h: 185 },
+      { name: "phone_away", x: P(7) + 372, b: 975, h: 215, flip: true },
+      { name: "idea", x: P(8) + 330, b: 990, h: 240, flip: true },
+      { name: "books", x: P(8) + 96, b: 975, h: 235 },
+      { name: "waving", x: P(9) + 388, b: 966, h: 205, flip: true },
+    ],
+    extras: [
+      { x: 196, y: 196, html: '<svg width="24" height="24" viewBox="0 0 24 24"><path fill="#f2b134" d="M12 0c1 7 4 10 12 12-8 2-11 5-12 12-1-7-4-10-12-12 8-2 11-5 12-12Z"/></svg>' },
+      { x: 388, y: 372, html: '<svg width="20" height="20" viewBox="0 0 24 24"><path fill="#f4a3c4" d="M12 0c1 7 4 10 12 12-8 2-11 5-12 12-1-7-4-10-12-12 8-2 11-5 12-12Z"/></svg>' },
+      { x: 40, y: 356, html: '<svg width="18" height="18" viewBox="0 0 24 24"><path fill="#f2b134" d="M12 0c1 7 4 10 12 12-8 2-11 5-12 12-1-7-4-10-12-12 8-2 11-5 12-12Z"/></svg>' },
+      { x: 210, y: 668, html: '<svg width="20" height="20" viewBox="0 0 24 24"><path fill="#f4a3c4" d="M12 0c1 7 4 10 12 12-8 2-11 5-12 12-1-7-4-10-12-12 8-2 11-5 12-12Z"/></svg>' },
+      { x: 398, y: 668, html: '<svg width="16" height="16" viewBox="0 0 24 24"><path fill="#f2b134" d="M12 0c1 7 4 10 12 12-8 2-11 5-12 12-1-7-4-10-12-12 8-2 11-5 12-12Z"/></svg>' },
+      { x: P(4) + 22, y: 96, html: '<svg width="40" height="40" viewBox="0 0 24 22" style="transform:rotate(-12deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
+      { x: P(4) + 372, y: 62, html: '<svg width="54" height="54" viewBox="0 0 24 22" style="transform:rotate(14deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
+      { x: P(4) + 384, y: 880, html: '<svg width="44" height="44" viewBox="0 0 24 22" style="transform:rotate(10deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
+      { x: P(6) + 8, y: 420, html: '<img src="../../../ios/Sophia/Assets.xcassets/avatar_49.imageset/avatar_49.jpg" style="width:96px;height:96px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 4px #2e62c4">' },
+      { x: P(6) + 336, y: 560, html: '<img src="../../../ios/Sophia/Assets.xcassets/avatar_42.imageset/avatar_42.jpg" style="width:96px;height:96px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 4px #dc6048">' },
     ],
   },
 };

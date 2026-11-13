@@ -50,3 +50,16 @@ phones in a thick blue frame under a centred title, and closes on a wall of real
 Its last panel quotes three real five-star reviews from the French App Store (app id 6760919622,
 public customer-reviews feed, read on 13 November 2026), word for word. Replace them only with
 other real reviews; a translated set needs reviews from that country's store.
+
+## English set (`en-US/iphone-6.9-showcase/`)
+
+`node render-pano.cjs showcase`. Same look as `vitrine`, with the app screens in English
+(`screens/<name>.html?lang=en`: every screen except `explore` carries a French and an English
+`S` / `C`). Ten panels: opening on cream with the colour logo, « Get smarter every day » (For you
+feed, « Why does nobody smile in old photographs? »), « Learn in 10 minutes » (that course open),
+catalogue wall, reviews, quiz, duels, anti-scroll, « Written by professors », streak.
+
+The reviews are the only English-language ones the public feeds returned on 13 November 2026:
+two five-star and one four-star, shown with its four stars. The professors panel lists real
+authors and credentials from `content/authors.json`; the portraits are the site's illustrated
+avatars, on purpose, not their faces.

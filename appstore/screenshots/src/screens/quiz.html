@@ -159,25 +159,48 @@
 
 <script src="../kit.js"></script>
 <script>
-  // Interface strings (French tables of AppLocalizable.swift / Localizable+ElevateCourse.swift).
+  const LANG = new URLSearchParams(location.search).get("lang") || "fr";
+  document.documentElement.lang = LANG;
+  // Interface strings (French and English tables of AppLocalizable.swift /
+  // Localizable+ElevateCourse.swift).
   const S = {
-    "common.close": "Fermer",
-    "subject.art.short": "Art",
-    "elevateCourse.quiz.questionOf": "Question %d sur %d",
-    "quiz.feedback.excellent": "Excellent !",
-    "quiz.combo": "Combo x%d",
-    "common.continue": "Continuer",
-  };
+    fr: {
+      "common.close": "Fermer",
+      "subject.art.short": "Art",
+      "elevateCourse.quiz.questionOf": "Question %d sur %d",
+      "quiz.feedback.excellent": "Excellent\u00a0!",
+      "quiz.combo": "Combo x%d",
+      "common.continue": "Continuer",
+    },
+    en: {
+      "common.close": "Close",
+      "subject.art.short": "Art",
+      "elevateCourse.quiz.questionOf": "Question %d of %d",
+      "quiz.feedback.excellent": "Excellent!",
+      "quiz.combo": "Combo x%d",
+      "common.continue": "Continue",
+    },
+  }[LANG];
   // Course content: course_126_le_cubisme_picasso_et_braque, question 3 of its 9
-  // (content/locales/fr/quizzes_v2.json). The app shuffles the options.
+  // (content/locales/<lang>/quizzes_v2.json). The app shuffles the options.
   const C = {
-    question: "Quel tableau de 1907 marque le point de départ du cubisme ?",
-    option1: "Guernica",
-    option2: "Les Demoiselles d’Avignon",
-    option3: "Le Déjeuner sur l’herbe",
-    option4: "La Liberté guidant le peuple",
-    explanation: "Les Demoiselles d’Avignon, avec ses nus aux facettes tranchantes, sidère jusqu’aux proches de Picasso.",
-  };
+    fr: {
+      question: "Quel tableau de 1907 marque le point de départ du cubisme\u00a0?",
+      option1: "Guernica",
+      option2: "Les Demoiselles d’Avignon",
+      option3: "Le Déjeuner sur l’herbe",
+      option4: "La Liberté guidant le peuple",
+      explanation: "Les Demoiselles d’Avignon, avec ses nus aux facettes tranchantes, sidère jusqu’aux proches de Picasso.",
+    },
+    en: {
+      question: "Which painting from 1907 marks the starting point of Cubism?",
+      option1: "Guernica",
+      option2: "Les Demoiselles d’Avignon",
+      option3: "Luncheon on the Grass",
+      option4: "Liberty Leading the People",
+      explanation: "Les Demoiselles d’Avignon, with its sharp-faceted nudes, stunned even people close to Picasso.",
+    },
+  }[LANG];
   // State of the screenshot.
   const N = { index: 3, total: 9, combo: 2, points: 2 };
 

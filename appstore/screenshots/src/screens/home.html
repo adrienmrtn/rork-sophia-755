@@ -116,14 +116,14 @@
     <div class="page">
       <div class="card">
         <div class="cover">
-          <img src="../../../../ios/Sophia/CourseImages/eiffel_tower_1889_universal_exhibition.jpg" alt="">
-          <div class="pills"><div class="pill"><i style="background:#d98cf2"></i><span data-s="subject.art.short"></span></div></div>
+          <img data-img="c1.cover" alt="">
+          <div class="pills"><div class="pill"><i data-bg="c1.dot"></i><span data-c="c1.subject"></span></div></div>
         </div>
         <div class="body">
           <div class="title" data-c="c1.title"></div>
           <div class="hook" data-c="c1.hook"></div>
           <div class="creator">
-            <div class="avatar"><img src="../../../../ios/Sophia/Resources/AuthorPhotos/author_dusan_nikolic.jpg" alt=""></div>
+            <div class="avatar"><img data-img="c1.photo" alt=""></div>
             <div class="who">
               <div class="name"><span data-c="c1.author"></span>
                 <!-- checkmark.circle.fill, palette white / accent -->
@@ -160,8 +160,8 @@
     <div class="page">
       <div class="card">
         <div class="cover">
-          <img src="../../../../ios/Sophia/CourseImages/crab_nebula_supernova_remnant_hubble.jpg" alt="">
-          <div class="pills"><div class="pill"><i style="background:#33d499"></i><span data-s="subject.sciences.short"></span></div></div>
+          <img data-img="c2.cover" alt="">
+          <div class="pills"><div class="pill"><i data-bg="c2.dot"></i><span data-c="c2.subject"></span></div></div>
         </div>
         <div class="body">
           <div class="title" data-c="c2.title"></div>
@@ -174,33 +174,85 @@
 
 <script src="../kit.js"></script>
 <script>
-  // Interface strings (French table of AppLocalizable.swift), keyed by localisation key.
+  // ?lang=en switches the whole page; French is the default.
+  const LANG = new URLSearchParams(location.search).get("lang") || "fr";
+  document.documentElement.lang = LANG;
+  // Interface strings (AppLocalizable.swift tables), keyed by localisation key.
   const S = {
-    "tab.home": "Accueil",
-    "tab.explore": "Explorer",
-    "tab.duels": "Duels",
-    "tab.profile": "Profil",
-    "home.segment.forYou": "Pour toi",
-    "home.segment.following": "Abonnements",
-    "subject.art.short": "Art",
-    "subject.sciences.short": "Sciences",
-    "common.minutesShort": "%d min",
-  };
-  // Course content (French catalogue) and user state.
+    fr: {
+      "tab.home": "Accueil",
+      "tab.explore": "Explorer",
+      "tab.duels": "Duels",
+      "tab.profile": "Profil",
+      "home.segment.forYou": "Pour toi",
+      "home.segment.following": "Abonnements",
+      "subject.histoire.short": "Histoire",
+      "subject.art.short": "Art",
+      "subject.sciences.short": "Sciences",
+      "common.minutesShort": "%d min",
+    },
+    en: {
+      "tab.home": "Home",
+      "tab.explore": "Explore",
+      "tab.duels": "Duels",
+      "tab.profile": "Profile",
+      "home.segment.forYou": "For you",
+      "home.segment.following": "Following",
+      "subject.histoire.short": "History",
+      "subject.art.short": "Art",
+      "subject.sciences.short": "Science",
+      "common.minutesShort": "%d min",
+    },
+  }[LANG];
+  // Subject dot colours (Subject.color in Course.swift).
+  const DOT = { art: "#d98cf2", sciences: "#33d499", histoire: "#f59e0a" };
+  const IMG = "../../../../ios/Sophia/CourseImages/";
+  const PHOTO = "../../../../ios/Sophia/Resources/AuthorPhotos/";
+  // Course content (catalogue of the language) and user state.
   const C = {
-    "streak": "12",
-    "c1.title": "Pourquoi voulait-on démolir la tour Eiffel ?",
-    "c1.hook": "Avant d’être le symbole de Paris, elle a été une « odieuse colonne de tôle boulonnée » que l’on rêvait d’abattre.",
-    "c1.author": "Dusan Nikolic",
-    "c1.pedigree": "Historien de l’art, master de l’université de Belgrade",
-    "c1.reads": "2,4 k",
-    "c1.likes": "187",
-    "c1.minutes": S["common.minutesShort"].replace("%d", "4"),
-    "c2.title": "Comment meurt une étoile ?",
-    "c2.hook": "Une étoile peut s’éteindre en douceur ou exploser avec une violence inimaginable : tout se joue sur sa masse.",
-  };
+    fr: {
+      "streak": "12",
+      "c1.cover": IMG + "eiffel_tower_1889_universal_exhibition.jpg",
+      "c1.subject": S["subject.art.short"],
+      "c1.dot": DOT.art,
+      "c1.title": "Pourquoi voulait-on démolir la tour Eiffel\u00a0?",
+      "c1.hook": "Avant d’être le symbole de Paris, elle a été une «\u00a0odieuse colonne de tôle boulonnée\u00a0» que l’on rêvait d’abattre.",
+      "c1.photo": PHOTO + "author_dusan_nikolic.jpg",
+      "c1.author": "Dusan Nikolic",
+      "c1.pedigree": "Historien de l’art, master de l’université de Belgrade",
+      "c1.reads": "2,4\u00a0k",
+      "c1.likes": "187",
+      "c1.minutes": S["common.minutesShort"].replace("%d", "4"),
+      "c2.cover": IMG + "crab_nebula_supernova_remnant_hubble.jpg",
+      "c2.subject": S["subject.sciences.short"],
+      "c2.dot": DOT.sciences,
+      "c2.title": "Comment meurt une étoile\u00a0?",
+      "c2.hook": "Une étoile peut s’éteindre en douceur ou exploser avec une violence inimaginable\u00a0: tout se joue sur sa masse.",
+    },
+    en: {
+      "streak": "12",
+      "c1.cover": IMG + "victorian_family_daguerreotype_unsmiling_portrait.jpg",
+      "c1.subject": S["subject.sciences.short"],
+      "c1.dot": DOT.sciences,
+      "c1.title": "Why does nobody smile in old photographs?",
+      "c1.hook": "They are not unhappy, and the camera is not too slow: they are sitting for a portrait.",
+      "c1.photo": PHOTO + "author_guido_manuel_de_la_torre_olvera.jpg",
+      "c1.author": "Guido Manuel De La Torre Olvera",
+      "c1.pedigree": "PhD in Inorganic Chemistry, materials chemist, Slovak Academy of Sciences",
+      "c1.reads": "2.4\u00a0k",
+      "c1.likes": "187",
+      "c1.minutes": S["common.minutesShort"].replace("%d", "5"),
+      "c2.cover": IMG + "apollo_11_aldrin_us_flag_lunar_module_1969.jpg",
+      "c2.subject": S["subject.histoire.short"],
+      "c2.dot": DOT.histoire,
+      "c2.title": "How did the United States win the race to the Moon?",
+      "c2.hook": "For years, the Soviets led the race. On July 20, 1969, it was two Americans who walked on the Moon.",
+    },
+  }[LANG];
   document.querySelectorAll("[data-s]").forEach((el) => { el.innerHTML = S[el.dataset.s]; });
   document.querySelectorAll("[data-c]").forEach((el) => { el.innerHTML = C[el.dataset.c]; });
+  document.querySelectorAll("[data-img]").forEach((el) => { el.src = C[el.dataset.img]; });
+  document.querySelectorAll("[data-bg]").forEach((el) => { el.style.background = C[el.dataset.bg]; });
   Kit.chrome({
     tab: "home",
     tabLabels: { home: S["tab.home"], explore: S["tab.explore"], duels: S["tab.duels"], profile: S["tab.profile"] },

@@ -199,35 +199,68 @@
 
 <script src="../kit.js"></script>
 <script>
-  // UI strings (French localisation, keyed by the app's loc keys).
+  const LANG = new URLSearchParams(location.search).get("lang") || "fr";
+  document.documentElement.lang = LANG;
+  // UI strings (the app's localisation tables, keyed by its loc keys).
   const S = {
-    "antiScroll.title": "Active l’anti-scroll : on te fait lire un cours Sophia pour débloquer tes apps",
-    "antiScroll.cta": "Activer l’anti-scroll",
-    "friends.add.title": "Ajouter un ami",
-    "profile.qr.mine": "Mon QR code",
-    "profile.qr.scan": "Scanner",
-    "profile.badges": "Badges",
-    "badges.seeAll": "Tout voir",
-    "badge.name.streak_7": "Flamme",
-    "badge.name.courses_10": "Lecteur",
-    "badge.name.quiz_10": "Bon élève",
-    "profile.list.toRead": "À lire",
-    "profile.list.read": "Lus",
-    "profile.list.liked": "Aimés",
-  };
+    fr: {
+      "antiScroll.title": "Active l’anti-scroll : on te fait lire un cours Sophia pour débloquer tes apps",
+      "antiScroll.cta": "Activer l’anti-scroll",
+      "friends.add.title": "Ajouter un ami",
+      "profile.qr.mine": "Mon QR code",
+      "profile.qr.scan": "Scanner",
+      "profile.badges": "Badges",
+      "badges.seeAll": "Tout voir",
+      "badge.name.streak_7": "Flamme",
+      "badge.name.courses_10": "Lecteur",
+      "badge.name.quiz_10": "Bon élève",
+      "profile.list.toRead": "À lire",
+      "profile.list.read": "Lus",
+      "profile.list.liked": "Aimés",
+  },
+    en: {
+      "antiScroll.title": "Turn on anti-scroll: read a Sophia course to unlock your apps",
+      "antiScroll.cta": "Turn on anti-scroll",
+      "friends.add.title": "Add a friend",
+      "profile.qr.mine": "My QR code",
+      "profile.qr.scan": "Scan",
+      "profile.badges": "Badges",
+      "badges.seeAll": "See all",
+      "badge.name.streak_7": "Flame",
+      "badge.name.courses_10": "Reader",
+      "badge.name.quiz_10": "Good Student",
+      "profile.list.toRead": "To read",
+      "profile.list.read": "Read",
+      "profile.list.liked": "Liked",
+    },
+  }[LANG];
   // Content and user data.
   const C = {
-    friendRank: "4",
-    friendHandle: "@theo.lambert",
-    friendXp: "1 240 XP",
-    countToRead: "5",
-    countRead: "23",
-    countLiked: "9",
-    courseTitle: "Pourquoi la Joconde est-elle aussi connue ?",
-    courseMeta: "Dusan Nikolic · 5 min",
-    course2Title: "Pourquoi certains détestent-ils la coriandre ?",
-    course2Meta: "Stacy Jankowski · 4 min",
-  };
+    fr: {
+      friendRank: "4",
+      friendHandle: "@theo.lambert",
+      friendXp: "1 240 XP",
+      countToRead: "5",
+      countRead: "23",
+      countLiked: "9",
+      courseTitle: "Pourquoi la Joconde est-elle aussi connue ?",
+      courseMeta: "Dusan Nikolic · 5 min",
+      course2Title: "Pourquoi certains détestent-ils la coriandre ?",
+      course2Meta: "Stacy Jankowski · 4 min",
+  },
+    en: {
+      friendRank: "4",
+      friendHandle: "@theo.lambert",
+      friendXp: "1,240 XP",
+      countToRead: "5",
+      countRead: "23",
+      countLiked: "9",
+      courseTitle: "Why is the Mona Lisa so famous?",
+      courseMeta: "Dusan Nikolic · 5 min",
+      course2Title: "Why do some people hate coriander?",
+      course2Meta: "Stacy Jankowski · 3 min",
+    },
+  }[LANG];
   document.querySelectorAll("[data-s]").forEach((el) => { el.innerHTML = S[el.dataset.s]; });
   document.querySelectorAll("[data-c]").forEach((el) => { el.innerHTML = C[el.dataset.c]; });
   Kit.chrome({ status: "dark" });

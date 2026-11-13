@@ -166,8 +166,10 @@
 
 <script src="../kit.js"></script>
 <script>
-  // UI strings: French localisation (AppLocalizable.swift, Localizable+ElevateDuels.swift).
-  const S = {
+  // UI strings: French / English localisation (AppLocalizable.swift, Localizable+ElevateDuels.swift).
+  const LANG = new URLSearchParams(location.search).get("lang") || "fr";
+  document.documentElement.lang = LANG;
+  const S = { fr: {
     "duel.round.of": "Manche %1$d sur %2$d",
     "duel.game.counter": "Question %1$d / %2$d",
     "duel.you": "Toi",
@@ -176,9 +178,18 @@
     "duel.game.correct": "Bonne réponse !",
     "duel.verdict.point": "+1 point",
     "duel.verdict.leading": "tu mènes %1$d à %2$d",
-  };
-  // Content: duel question dq_en_2_152 (content/duels/i18n/fr.json), opponent handle.
-  const C = {
+  }, en: {
+    "duel.round.of": "Round %1$d of %2$d",
+    "duel.game.counter": "Question %1$d / %2$d",
+    "duel.you": "You",
+    "duel.round.short": "R%d",
+    "subject.art": "Art",
+    "duel.game.correct": "Correct!",
+    "duel.verdict.point": "+1 point",
+    "duel.verdict.leading": "you lead %1$d–%2$d",
+  } }[LANG];
+  // Content: duel question dq_en_2_152 (fr: content/duels/i18n/fr.json, en: content/duels/questions_en.json), opponent handle.
+  const C = { fr: {
     opponent: "maelys24",
     opponentAt: "@maelys24",
     question: "Comment s’appelle ce tableau ?",
@@ -186,7 +197,15 @@
     o1: "La Dame à l’hermine",
     o2: "La Jeune Fille à la perle",
     o3: "La Laitière",
-  };
+  }, en: {
+    opponent: "hollyb24",
+    opponentAt: "@hollyb24",
+    question: "What is this painting called?",
+    o0: "Mona Lisa",
+    o1: "Lady with an Ermine",
+    o2: "Girl with a Pearl Earring",
+    o3: "The Milkmaid",
+  } }[LANG];
   const fmt = (t, a = []) => { let i = 0; return t.replace(/%(?:(\d+)\$)?[d@]/g, (_, n) => a[n ? n - 1 : i++]); };
   document.querySelectorAll("[data-s]").forEach((el) => {
     el.innerHTML = fmt(S[el.dataset.s], el.dataset.a ? JSON.parse(el.dataset.a) : []);

@@ -296,8 +296,11 @@
 // and badges. Can also be set from the URL: profile.html#y=560
 const SCROLL_Y = 0;
 
-// UI strings (French localisation keys of the app).
-const S = {
+const LANG = new URLSearchParams(location.search).get("lang") || "fr";
+document.documentElement.lang = LANG;
+
+// UI strings (localisation keys of the app), per language.
+const S = { fr: {
   "profile.title": "Profil",
   "profile.member.since": "membre depuis %@",
   "common.daysShort": "%d j",
@@ -328,10 +331,43 @@ const S = {
   "common.minutesShort": "%d min",
   "profile.page.antiScroll": "Anti-scroll",
   "tiktokBlocker.card.off.subtitle": "Bloque TikTok jusqu’à ton cours du jour",
-};
+  "tab.home": "Accueil", "tab.explore": "Explorer", "tab.duels": "Duels", "tab.profile": "Profil",
+}, en: {
+  "profile.title": "Profile",
+  "profile.member.since": "member since %@",
+  "common.daysShort": "%d d",
+  "friends.stats.streak": "Streak",
+  "profile.stat.read": "courses read",
+  "duel.trophies.title": "Trophies",
+  "duel.league.name": "%@ League",
+  "training.title": "Practice",
+  "training.locked.tagline": "Remember what you learn, for good.",
+  "profile.progress.title": "My progress",
+  "profile.progress.subtitle": "Your rank, subjects and quizzes.",
+  "profile.following": "Following",
+  "training.discover": "Discover",
+  "profile.friends.title": "Friends leaderboard",
+  "friends.period.week": "7 days",
+  "friends.period.all": "All time",
+  "friends.add.title": "Add a friend",
+  "profile.qr.mine": "My QR code",
+  "profile.qr.scan": "Scan",
+  "profile.badges": "Badges",
+  "badges.seeAll": "See all",
+  "badge.name.streak_7": "Flame",
+  "badge.name.courses_10": "Reader",
+  "badge.name.subject_art": "Aesthete",
+  "profile.list.toRead": "To read",
+  "profile.list.read": "Read",
+  "profile.list.liked": "Liked",
+  "common.minutesShort": "%d min",
+  "profile.page.antiScroll": "Anti-scroll",
+  "tiktokBlocker.card.off.subtitle": "Block TikTok until your daily course is done",
+  "tab.home": "Home", "tab.explore": "Explore", "tab.duels": "Duels", "tab.profile": "Profile",
+} }[LANG];
 
-// Content and user data (names, numbers, course titles).
-const C = {
+// Content and user data (names, numbers, course titles), per language.
+const C = { fr: {
   "handle": "@camille",
   "memberSince": "septembre 2026",
   "streak": "24",
@@ -358,15 +394,42 @@ const C = {
   "course2.title": "Pourquoi certains détestent-ils la coriandre ?",
   "course2.author": "Stacy Jankowski",
   "course2.minutes": "4",
-};
+}, en: {
+  "handle": "@alex",
+  "memberSince": "September 2026",
+  "streak": "24",
+  "coursesRead": "38",
+  "league": "Hypatia",
+  "trophies": "712",
+  "followingCount": "· 4",
+  "creator1": "Dusan",
+  "creator2": "Stacy",
+  "creator3": "Simon",
+  "creator4": "Ivana",
+  "friend1": "@emma.clarke",
+  "friend3": "@oliver_b",
+  "friend4": "@ruby.hall",
+  "xp1": "860 XP",
+  "xp2": "720 XP",
+  "xp3": "540 XP",
+  "xp4": "410 XP",
+  "toReadCount": "2",
+  "likedCount": "12",
+  "course1.title": "Why is the Mona Lisa so famous?",
+  "course1.author": "Dusan Nikolic",
+  "course1.minutes": "5",
+  "course2.title": "Why do some people hate coriander?",
+  "course2.author": "Stacy Jankowski",
+  "course2.minutes": "3",
+} }[LANG];
 
-// French typography: no-break space before ? ! : ;
-const typo = (t) => t.replace(/ ([?!:;])/g, " $1");
+// French typography: no-break space before ? ! : ; (English strings are used as is)
+const typo = (t) => (LANG === "fr" ? t.replace(/ ([?!:;])/g, "\u00a0$1") : t);
 document.querySelectorAll("[data-c]").forEach((el) => { el.innerHTML = typo(C[el.dataset.c]); });
 document.querySelectorAll("[data-s]").forEach((el) => {
   let t = S[el.dataset.s];
   if (el.dataset.a) t = t.replace(/%@|%d/, C[el.dataset.a]);          // String(format:)
-  if (el.hasAttribute("data-lower")) t = t.toLocaleLowerCase("fr");   // .lowercased()
+  if (el.hasAttribute("data-lower")) t = t.toLocaleLowerCase(LANG);   // .lowercased()
   if (el.dataset.suffix) t += " · " + C[el.dataset.suffix];           // "À lire · 2"
   el.innerHTML = typo(t);
 });
@@ -380,7 +443,7 @@ const page = document.getElementById("page");
 const maxY = Math.max(0, page.offsetHeight - page.parentElement.clientHeight);   // a ScrollView cannot rest past its end
 page.style.transform = "translateY(-" + Math.min(m ? Number(m[1]) : SCROLL_Y, maxY) + "px)";
 
-Kit.chrome({ tab: "profile" });
+Kit.chrome({ tab: "profile", tabLabels: { home: S["tab.home"], explore: S["tab.explore"], duels: S["tab.duels"], profile: S["tab.profile"] } });
 </script>
 </body>
 </html>

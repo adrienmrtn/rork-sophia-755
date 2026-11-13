@@ -74,7 +74,7 @@
       <h1 class="section-title" data-c="sectionTitle"></h1>
       <p class="prose" data-c="p1"></p>
       <figure class="figure">
-        <div class="frame"><img src="../../../../content/images/cumulonimbus_thunderstorm_cloud.jpg" alt=""></div>
+        <div class="frame"><img alt=""></div>
         <div class="caption" data-c="caption"></div>
         <div class="credit" data-c="credit"></div>
       </figure>
@@ -93,21 +93,55 @@
 
 <script src="../kit.js"></script>
 <script>
-  // Interface (AppLocalizable.swift, table française).
+  const LANG = new URLSearchParams(location.search).get("lang") || "fr";
+  document.documentElement.lang = LANG;
+  // Interface (AppLocalizable.swift, tables française et anglaise).
   const S = {
-    "common.continue": "Continuer",
-  };
-  // Contenu : content/courses/fr/course_69_comment_se_forment_les_eclairs.json, section 2 sur 5.
+    fr: {
+      "common.continue": "Continuer",
+    },
+    en: {
+      "common.continue": "Continue",
+    },
+  }[LANG];
+  // Contenu.
+  // fr : content/courses/fr/course_69_comment_se_forment_les_eclairs.json, section 2 sur 5 (4 passages révélés sur 5).
+  // en : content/courses/en/course_269_pourquoi_personne_ne_sourit_sur_les.json, section 4 of 5 (4 of 6 steps revealed).
   const C = {
-    counter: "2 / 5",
-    sectionTitle: "Dans le nuage, des charges se séparent",
-    p1: "Les éclairs naissent surtout dans les <span class=\"term\">cumulonimbus</span> : de très grands nuages d’orage, qui peuvent monter jusqu’à environ <b>15 km</b>. À l’intérieur, l’air monte et descend très fort.",
-    caption: "Le cumulonimbus : l’usine à orages.",
-    credit: "Cumulonimbus stormcloud — Loncoin (CC BY-SA 4.0)",
-    p2: "Dans ce chaos, de petits <b>cristaux de glace</b> montent, et des grains de glace plus lourds (du <span class=\"term\">grésil</span>) descendent. Quand ils se percutent, des charges électriques s’échangent. Peu à peu, le haut du nuage devient plutôt positif, la base plutôt négative.",
-  };
+    fr: {
+      counter: "2 / 5",
+      segments: [1, 0.8, 0, 0, 0],
+      image: "cumulonimbus_thunderstorm_cloud",
+      ratio: "4 / 3",
+      scrollY: 0,
+      sectionTitle: "Dans le nuage, des charges se séparent",
+      p1: "Les éclairs naissent surtout dans les <span class=\"term\">cumulonimbus</span>\u00a0: de très grands nuages d’orage, qui peuvent monter jusqu’à environ <b>15\u00a0km</b>. À l’intérieur, l’air monte et descend très fort.",
+      caption: "Le cumulonimbus\u00a0: l’usine à orages.",
+      credit: "Cumulonimbus stormcloud — Loncoin (CC BY-SA 4.0)",
+      p2: "Dans ce chaos, de petits <b>cristaux de glace</b> montent, et des grains de glace plus lourds (du <span class=\"term\">grésil</span>) descendent. Quand ils se percutent, des charges électriques s’échangent. Peu à peu, le haut du nuage devient plutôt positif, la base plutôt négative.",
+    },
+    en: {
+      counter: "4 / 5",
+      segments: [1, 1, 1, 4 / 6, 0],
+      image: "frans_hals_malle_babbe_laughing_woman_painting",
+      ratio: "3 / 2",
+      scrollY: 15, // position de défilement : la coupe du bas tombe entre deux lignes
+      sectionTitle: "A smile meant something else",
+      p1: "The real answer is that a photograph was not a <span class=\"term\">snapshot</span>. It was a portrait, and portraiture already came with <b>three hundred years</b> of rules inherited from painting. Painters knew what a wide smile signaled, and it was not happiness.",
+      caption: "Malle Babbe, by Frans Hals (Gemäldegalerie, Berlin), detail: a wide-open laugh, the mark of madness or drunkenness in painting.",
+      credit: "Frans Hals Malle Babbe about 1640-1646 Gemäldegalerie Berlin 9387 — Frans Hals (Public domain)",
+      p2: "The art historian <span class=\"term\">Angus Trumble</span>, who wrote a history of the smile, puts it bluntly: a broad grin read as a sign of madness, drunkenness or stupidity. A saint might wear a faint one. A respectable person posing for their portrait did not.",
+    },
+  }[LANG];
   document.querySelectorAll("[data-s]").forEach((el) => { el.innerHTML = S[el.dataset.s]; });
   document.querySelectorAll("[data-c]").forEach((el) => { el.innerHTML = C[el.dataset.c]; });
+  document.querySelectorAll(".seg").forEach((el, i) => {
+    el.innerHTML = C.segments[i] > 0 ? `<i style="width:${C.segments[i] * 100}%"></i>` : "";
+  });
+  const frame = document.querySelector(".figure .frame");
+  frame.style.aspectRatio = C.ratio;
+  if (C.scrollY) document.getElementById("thread").style.top = -C.scrollY + "px";
+  frame.querySelector("img").src = `../../../../content/images/${C.image}.jpg`;
   Kit.chrome({ status: "dark" });
 </script>
 </body>
