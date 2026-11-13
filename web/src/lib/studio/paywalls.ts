@@ -71,14 +71,29 @@ export function groupExperiments<T extends { experiment: string }>(rows: T[]): {
   return groups;
 }
 
-/** L'adresse de la page pour un jeu de filtres ; les valeurs par défaut restent hors de l'URL. */
-export function dataHref(filters: { days: number; platform: string | null; lang: string | null }): string {
+export interface DataFilters {
+  days: number;
+  platform: string | null;
+  lang: string | null;
+}
+
+/** L'adresse d'une page de /admin/data pour un jeu de filtres ; les valeurs par défaut
+ *  restent hors de l'URL. */
+export function dataHref(filters: DataFilters, base = "/admin/data"): string {
   const params = new URLSearchParams();
   if (filters.days !== 28) params.set("days", String(filters.days));
   if (filters.platform) params.set("platform", filters.platform);
   if (filters.lang) params.set("lang", filters.lang);
   const query = params.toString();
-  return query ? `/admin/data?${query}` : "/admin/data";
+  return query ? `${base}?${query}` : base;
+}
+
+/** Les filtres lus dans l'adresse, ramenés aux valeurs admises. */
+export function readDataFilters(sp: Record<string, string | string[] | undefined>): DataFilters {
+  const days = PAYWALL_PERIODS.includes(Number(sp.days)) ? Number(sp.days) : 28;
+  const platform = PAYWALL_PLATFORMS.includes(sp.platform as PaywallPlatform) ? (sp.platform as PaywallPlatform) : null;
+  const lang = typeof sp.lang === "string" && /^[A-Za-z-]{2,7}$/.test(sp.lang) ? sp.lang : null;
+  return { days, platform, lang };
 }
 
 export function dollars(value: number): string {

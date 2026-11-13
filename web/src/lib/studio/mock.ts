@@ -285,6 +285,49 @@ const mockCampaign = {
   updated_at: "2026-11-08T17:30:00Z",
 };
 
+/** Un onboarding plausible, pour regarder /admin/data/onboarding hors ligne. */
+function onboardingDashboard(days: number) {
+  const today = Date.UTC(2026, 10, 13);
+  const day = (i: number) => new Date(today - (days - 1 - i) * 86_400_000).toISOString().slice(0, 10);
+  const scale = days / 28;
+  const start = Math.round(42000 * scale);
+  // Part des installations encore là à chaque écran ; iOS seul pour quelques-uns.
+  const keep: [string, number, "all" | "ios" | "android"][] = [
+    ["welcome", 1, "all"], ["language", 0.93, "all"], ["lessons", 0.9, "all"], ["researchers", 0.88, "all"], ["intro", 0.86, "all"], ["social_proof", 0.81, "all"],
+    ["name", 0.79, "all"], ["age", 0.74, "all"], ["knowledge", 0.72, "all"], ["motivation", 0.71, "all"], ["objective", 0.7, "all"], ["topics", 0.68, "all"],
+    ["objective_intro", 0.67, "all"], ["phone_time", 0.66, "all"], ["years_grid", 0.65, "all"], ["transform", 0.64, "all"], ["questions", 0.63, "all"],
+    ["mission", 0.62, "all"], ["personalize", 0.61, "all"], ["swipe_courses", 0.6, "all"], ["reading_time", 0.57, "ios"], ["curve_90", 0.56, "all"],
+    ["notifications", 0.44, "all"], ["review", 0.54, "all"], ["loading", 0.53, "all"], ["profile", 0.52, "all"], ["login", 0.51, "all"], ["account", 0.3, "ios"],
+    ["follow_creators", 0.37, "all"], ["welcome_aboard", 0.36, "all"], ["features", 0.35, "all"], ["trial_steps", 0.34, "all"], ["reminder", 0.33, "all"],
+    ["paywall_annual", 0.32, "ios"], ["paywall_comparison", 0.2, "ios"], ["paywall", 0.31, "android"],
+  ];
+  const iosShare = 0.78;
+  const steps = keep.map(([name, rate, where]) => {
+    const ios = where === "android" ? 0 : Math.round(start * iosShare * rate);
+    const android = where === "ios" ? 0 : Math.round(start * (1 - iosShare) * rate);
+    return { step: name, installs: ios + android, ios, android };
+  });
+  const question = (name: string, answered: number, options: [string, number][]) => ({ question: name, answered: Math.round(answered * scale), options: options.map(([value, share]) => ({ value, installs: Math.round(answered * scale * share) })) });
+  return {
+    days,
+    from: day(0),
+    updated_at: "2026-11-13T09:35:00Z",
+    languages: ["de", "en", "es", "fr", "it", "pt"],
+    steps,
+    series: Array.from({ length: days }, (_, i) => ({ day: day(i), installs: Math.round(1500 * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9)))) })),
+    questions: [
+      question("age", 30200, [["under18", 0.11], ["18to24", 0.34], ["25to34", 0.27], ["35to44", 0.14], ["45to54", 0.08], ["55plus", 0.06]]),
+      question("knowledge", 29800, [["0", 0.18], ["1", 0.47], ["2", 0.28], ["3", 0.07]]),
+      question("motivation", 29400, [["grow", 0.31], ["conversations", 0.24], ["world", 0.21], ["career", 0.14], ["sharp", 0.1]]),
+      question("objectives", 29000, [["cultivate", 0.72], ["curiosity", 0.48], ["reduceScreen", 0.39], ["impress", 0.22], ["exams", 0.17]]),
+      question("topics", 28400, [["histoire", 0.61], ["sciences", 0.52], ["philosophie", 0.38], ["art", 0.33], ["geopolitique", 0.31], ["economie", 0.24]]),
+      question("phone_time", 27600, [["60", 0.04], ["120", 0.12], ["180", 0.31], ["240", 0.26], ["300", 0.17], ["360", 0.1]]),
+      question("reads_monthly", 17200, [["true", 0.58], ["false", 0.42]]),
+      question("too_much_phone", 17100, [["true", 0.81], ["false", 0.19]]),
+    ],
+  };
+}
+
 /** Un tableau de bord des paywalls plausible, pour regarder /admin/data hors ligne. */
 function paywallDashboard(days: number) {
   const today = Date.UTC(2026, 10, 13);
@@ -344,6 +387,8 @@ function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[])
           },
           error: null,
         };
+      case "admin_onboarding_dashboard":
+        return { data: onboardingDashboard(Number(p.p_days ?? 28)), error: null };
       case "admin_paywall_dashboard":
         return { data: paywallDashboard(Number(p.p_days ?? 28)), error: null };
       default:

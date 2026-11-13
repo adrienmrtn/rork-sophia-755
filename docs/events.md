@@ -24,10 +24,11 @@ n'est qu'une photo sans dates).
   envoi par lots de 200 au plus, toutes les 30 secondes, quand la file atteint 50
   événements, et au passage en arrière-plan. Rejeu après une coupure réseau ; la file
   est plafonnée à 5 000 événements (les plus anciens sont perdus au-delà).
-- Un événement produit avant la connexion (premiers écrans de l'onboarding) porte
-  `install_id` et attend dans la file ; son `user_id` est rempli au premier envoi après la
-  connexion. La connexion Apple ou Google est obligatoire : il n'y a pas d'utilisateur
-  anonyme durable.
+- Un événement produit avant la connexion porte `install_id` et attend dans la file ; son
+  `user_id` est rempli au premier envoi après la connexion. La connexion Apple ou Google est
+  obligatoire : il n'y a pas d'utilisateur anonyme durable. **Exception : l'onboarding**
+  (`onboarding_step`, `onboarding_answer`) ne va pas dans `course_events` et n'attend pas la
+  connexion, voir « Onboarding » plus bas.
 - Contrôle de la collecte : vue `public.events_health` (événements par jour,
   plateforme et version, 30 jours), requête `supabase/queries/events_health.sql`.
 
@@ -59,7 +60,44 @@ n'est qu'une photo sans dates).
 | Nom | Quand | `props` |
 | --- | --- | --- |
 | `app_open` | passage au premier plan (une fois par session) | `source` : `direct`, `notification`, `widget`, `link` ; `nav` : `classic` ou `newgen`, la variante de navigation tirée au sort (A/B du prompt 2) |
-| `onboarding_step` | un écran d'onboarding s'affiche | `step` (nom analytique de l'écran, identique sur les deux plateformes ; Android émet `paywall` là où iOS distingue `paywall_annual` et `paywall_comparison`), `index`. Sur iOS, chaque réponse à une des quatre questions de l'écran de chargement émet aussi cet événement avec `step` = `loading_question` (ce n'est pas un écran : à écarter d'un entonnoir), `question` (`reads_monthly`, `forgets_reading`, `too_much_phone`, `likes_learning_daily`) et `answer` (booléen), sans `index` |
+| `onboarding_step` | un écran d'onboarding s'affiche | `step` (nom analytique de l'écran, identique sur les deux plateformes ; Android émet `paywall` là où iOS distingue `paywall_annual` et `paywall_comparison`), `index` |
+| `onboarding_answer` | on quitte, en avançant, un écran d'onboarding où une réponse a été donnée | `step`, `question`, `answer` (texte) |
+
+#### Onboarding : collecte sans compte
+
+La connexion est le vingt-sixième écran de l'onboarding : avec la règle de `course_events`,
+quelqu'un qui abandonne avant ne laisserait aucune trace. Les deux événements d'onboarding
+partent donc, dès qu'ils sont en file et avec ou sans compte, par la fonction
+`public.log_onboarding_events(p_events)` (migration `20261113050000_onboarding_events.sql`),
+qui écrit dans `public.onboarding_events`. La ligne n'est rattachée qu'à `install_id`, un
+UUID tiré au hasard par l'app ; `user_id` est rempli si l'appel est fait connecté. L'app
+envoie ses lignes telles qu'elle les garde en file (les colonnes communes, la réponse dans
+`props`). Une ligne mal formée est écartée sans faire échouer le lot. Garde-fous : 200
+lignes par appel, horodatage entre maintenant − 30 jours et maintenant + 15 minutes, 2 000
+lignes au plus par installation. Le brut est gardé 90 jours.
+
+Questions (`question` → `answer`) :
+
+| `question` | Écran | `answer` |
+| --- | --- | --- |
+| `age` | `age` | une tranche : `under18`, `18to24`, `25to34`, `35to44`, `45to54`, `55plus`. Jamais un âge exact |
+| `knowledge` | `knowledge` | `0` à `3` |
+| `motivation` | `motivation` | `grow`, `conversations`, `career`, `sharp`, `world` |
+| `objectives` | `objective` | choix multiples : les clés triées, séparées par des virgules (`cultivate,exams`) |
+| `topics` | `topics` | choix multiples, même forme (clés de matière) |
+| `phone_time` | `phone_time` | minutes par jour (`180`) |
+| `reading_time` | `reading_time` (iOS) | heure locale choisie (`21`) |
+| `reads_monthly`, `forgets_reading`, `too_much_phone`, `likes_learning_daily` | `loading` (iOS) | `true` ou `false` |
+
+Le prénom n'est pas envoyé. Revenir en arrière et changer de réponse envoie une nouvelle
+ligne : la dernière de la journée compte.
+
+Synthèse `public.daily_onboarding_stats` (sans limite, recalculée toutes les heures) : par
+jour UTC, plateforme et langue, le nombre d'installations par écran (`kind = 'step'`), par
+question (`'answered'`) et par réponse (`'answer'`, une réponse à choix multiples comptant
+dans chacune de ses options). `public.admin_onboarding_dashboard(p_days, p_platform, p_lang)`
+alimente la page `/admin/data/onboarding` du site ; l'ordre des écrans et les libellés sont
+dans `web/src/lib/studio/onboarding.ts`, à compléter quand un écran ou une question s'ajoute.
 
 ### Fil (cartes)
 

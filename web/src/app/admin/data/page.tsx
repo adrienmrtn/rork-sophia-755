@@ -1,27 +1,22 @@
-import Link from "next/link";
 import { redirect } from "next/navigation";
 import { AdminHeader, AdminTitle } from "@/components/admin/AdminChrome";
+import { DataNav, PLATFORM_LABEL, SectionTitle, Tile } from "@/components/admin/DataChrome";
 import { DayBars } from "@/components/admin/DayBars";
 import { Card, container } from "@/components/ui";
 import { getStudioSession } from "@/lib/studio/account";
 import { shortDateTime } from "@/lib/studio/data";
 import {
   MIN_VARIANT_VIEWERS,
-  PAYWALL_PERIODS,
-  PAYWALL_PLATFORMS,
   conversion,
-  dataHref,
   dollars,
   groupExperiments,
   percent,
+  readDataFilters,
   type PaywallCounts,
   type PaywallDashboard,
-  type PaywallPlatform,
 } from "@/lib/studio/paywalls";
 
 export const dynamic = "force-dynamic";
-
-const PLATFORM_LABEL: Record<string, string> = { ios: "iOS", android: "Android" };
 
 /** Les données de l'app : les paywalls d'abord (affichages, achats, tests A/B, revenus).
  *  Tout vient d'un appel à admin_paywall_dashboard, réservé à l'équipe. */
@@ -29,13 +24,10 @@ export default async function DataPage({ searchParams }: PageProps<"/admin/data"
   const session = await getStudioSession();
   if (!session?.isAdmin) redirect("/studio");
   const sp = await searchParams;
-  const days = PAYWALL_PERIODS.includes(Number(sp.days)) ? Number(sp.days) : 28;
-  const platform = PAYWALL_PLATFORMS.includes(sp.platform as PaywallPlatform) ? (sp.platform as PaywallPlatform) : null;
-  const langParam = typeof sp.lang === "string" && /^[A-Za-z-]{2,7}$/.test(sp.lang) ? sp.lang : null;
+  const filters = readDataFilters(sp);
 
-  const { data, error } = await session.supabase.rpc("admin_paywall_dashboard", { p_days: days, p_platform: platform, p_lang: langParam });
+  const { data, error } = await session.supabase.rpc("admin_paywall_dashboard", { p_days: filters.days, p_platform: filters.platform, p_lang: filters.lang });
   const d = (data ?? null) as PaywallDashboard | null;
-  const filters = { days, platform, lang: langParam };
   const languages = d?.languages ?? [];
   const experiments = groupExperiments(d?.by_experiment ?? []);
   const revenue = d?.revenue;
@@ -44,39 +36,9 @@ export default async function DataPage({ searchParams }: PageProps<"/admin/data"
     <>
       <AdminHeader session={session} active="data" />
       <main className={`${container} flex flex-1 flex-col gap-6 pt-8 pb-20`}>
-        <AdminTitle title="Data" lead="Paywalls: who sees them, who buys, which variant wins, and what it brings in." />
+        <AdminTitle title="Data" lead="What people do in the app: paywalls and onboarding." />
 
-        <div className="flex flex-wrap items-center gap-3">
-          <Segmented label="Period">
-            {PAYWALL_PERIODS.map((p) => (
-              <Choice key={p} href={dataHref({ ...filters, days: p })} active={p === days}>
-                {p === 90 ? "3 months" : `${p} days`}
-              </Choice>
-            ))}
-          </Segmented>
-          <Segmented label="Platform">
-            <Choice href={dataHref({ ...filters, platform: null })} active={platform === null}>
-              All
-            </Choice>
-            {PAYWALL_PLATFORMS.map((p) => (
-              <Choice key={p} href={dataHref({ ...filters, platform: p })} active={platform === p}>
-                {PLATFORM_LABEL[p]}
-              </Choice>
-            ))}
-          </Segmented>
-          {(languages.length > 1 || langParam) && (
-            <Segmented label="Language">
-              <Choice href={dataHref({ ...filters, lang: null })} active={langParam === null}>
-                All
-              </Choice>
-              {[...new Set([...languages, ...(langParam ? [langParam] : [])])].sort().map((l) => (
-                <Choice key={l} href={dataHref({ ...filters, lang: l })} active={langParam === l}>
-                  {l}
-                </Choice>
-              ))}
-            </Segmented>
-          )}
-        </div>
+        <DataNav active="paywalls" filters={filters} languages={languages} />
 
         {error && (
           <p role="alert" className="rounded-xl bg-red-bg px-4 py-3 text-[14px] font-semibold text-red">
@@ -150,7 +112,7 @@ export default async function DataPage({ searchParams }: PageProps<"/admin/data"
               )}
             </section>
 
-            <section className="flex flex-col gap-4">
+            <section className="flex flex-col gap-4 border-t border-line pt-6">
               <SectionTitle
                 title="Revenue"
                 note={`From RevenueCat, every app version, in US dollars${revenue.first_day ? `, since ${shortDay(revenue.first_day)}` : ""}. Follows the period and the platform, not the language.`}
@@ -219,41 +181,6 @@ export default async function DataPage({ searchParams }: PageProps<"/admin/data"
 
 function shortDay(day: string): string {
   return new Date(`${day}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
-}
-
-function SectionTitle({ title, note }: { title: string; note: string }) {
-  return (
-    <div className="flex flex-col gap-1 border-t border-line pt-6">
-      <h2 className="text-[22px] font-extrabold tracking-[-0.5px] text-ink">{title}</h2>
-      <p className="text-[13px] text-ink-3">{note}</p>
-    </div>
-  );
-}
-
-function Segmented({ label, children }: { label: string; children: React.ReactNode }) {
-  return (
-    <div className="flex items-center gap-2">
-      <span className="text-[12px] font-bold uppercase tracking-[0.6px] text-ink-3">{label}</span>
-      <div className="flex flex-wrap items-center gap-1 rounded-xl border border-line bg-white p-1">{children}</div>
-    </div>
-  );
-}
-
-function Choice({ href, active, children }: { href: string; active: boolean; children: React.ReactNode }) {
-  return (
-    <Link href={href} aria-current={active ? "true" : undefined} className={`rounded-lg px-3 py-1.5 text-[13px] font-bold ${active ? "bg-navy text-white" : "text-ink-3 hover:bg-paper"}`}>
-      {children}
-    </Link>
-  );
-}
-
-function Tile({ label, value }: { label: string; value: string }) {
-  return (
-    <Card className="flex h-full flex-col gap-1 p-5">
-      <span className="text-[13px] font-bold text-ink-3">{label}</span>
-      <strong className="text-[28px] font-extrabold tracking-[-0.7px] text-ink tabular-nums">{value}</strong>
-    </Card>
-  );
 }
 
 function Th({ children }: { children: React.ReactNode }) {

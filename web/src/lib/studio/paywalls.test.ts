@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { conversion, dataHref, groupExperiments, percent } from "./paywalls";
+import { conversion, dataHref, groupExperiments, percent, readDataFilters } from "./paywalls";
 
 describe("conversion", () => {
   it("divides purchases by viewers", () => {
@@ -37,5 +37,13 @@ describe("dataHref", () => {
   it("leaves defaults out of the address", () => {
     expect(dataHref({ days: 28, platform: null, lang: null })).toBe("/admin/data");
     expect(dataHref({ days: 7, platform: "ios", lang: "fr" })).toBe("/admin/data?days=7&platform=ios&lang=fr");
+    expect(dataHref({ days: 7, platform: null, lang: null }, "/admin/data/onboarding")).toBe("/admin/data/onboarding?days=7");
+  });
+});
+
+describe("readDataFilters", () => {
+  it("falls back to the defaults on anything unexpected", () => {
+    expect(readDataFilters({ days: "12", platform: "windows", lang: "fr;drop" })).toEqual({ days: 28, platform: null, lang: null });
+    expect(readDataFilters({ days: "90", platform: "android", lang: "pt-PT" })).toEqual({ days: 90, platform: "android", lang: "pt-PT" });
   });
 });

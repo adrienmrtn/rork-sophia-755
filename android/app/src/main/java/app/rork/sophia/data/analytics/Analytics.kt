@@ -8,6 +8,7 @@ import app.rork.sophia.data.LanguageManager
 import app.rork.sophia.data.SupabaseManager
 import io.github.jan.supabase.exceptions.RestException
 import io.github.jan.supabase.postgrest.from
+import io.github.jan.supabase.postgrest.postgrest
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -29,6 +30,7 @@ import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
+import kotlinx.serialization.json.buildJsonObject
 
 /**
  * Journal d'événements produit (docs/events.md). Mêmes noms et mêmes propriétés qu'iOS.
@@ -50,6 +52,14 @@ object Analytics {
      * inconnu ferait refuser tout le lot par le serveur : il est écarté avant d'entrer dans
      * la file (et fait planter une version de debug, pour qu'on le voie).
      */
+    /**
+     * Les événements d'onboarding. Ils ne vont pas dans `course_events` : ils partent par la
+     * fonction `log_onboarding_events`, ouverte sans compte, pour que quelqu'un qui abandonne
+     * avant la connexion soit compté lui aussi. La ligne n'est rattachée qu'à l'identifiant
+     * d'installation.
+     */
+    val ONBOARDING_NAMES: Set<String> = setOf("onboarding_step", "onboarding_answer")
+
     val KNOWN_NAMES: Set<String> = setOf(
         "app_open", "onboarding_step",
         "card_impression", "card_skip", "card_open",
@@ -57,11 +67,13 @@ object Analytics {
         "quiz_start", "quiz_answer", "quiz_complete",
         "like", "unlike", "save", "unsave", "share", "follow", "unfollow", "not_interested", "report",
         "paywall_view", "purchase_started", "purchase_completed", "purchase_failed",
-    )
+    ) + ONBOARDING_NAMES
 
     private const val FLUSH_INTERVAL_MS = 30_000L
     private const val FLUSH_THRESHOLD = 50
     private const val BATCH_SIZE = 200
+    /** `log_onboarding_events` refuse plus de 200 lignes par appel. */
+    private const val ONBOARDING_BATCH_SIZE = 100
     private const val QUEUE_CAP = 5_000
     private const val SESSION_TIMEOUT_MS = 30 * 60 * 1_000L
     /** La règle RLS refuse un événement de plus de 30 jours : on n'essaie même pas. */
@@ -87,6 +99,7 @@ object Analytics {
     private var sessionId: String = UUID.randomUUID().toString()
     private var lastActiveAt = System.currentTimeMillis()
     private var headFailures = 0
+    private var onboardingFailures = 0
     private var lastSnapshotKey: String? = null
 
     private val mutex = Mutex()
@@ -289,23 +302,27 @@ object Analytics {
 
     suspend fun flush() {
         if (flushing) return
-        val userId = auth?.userId?.value
-        if (userId == null) {
-            persistIfNeeded()
-            return
-        }
         flushing = true
         try {
+            // L'onboarding d'abord : il part avec ou sans compte.
+            flushOnboarding()
+            val userId = auth?.userId?.value
+            if (userId == null) {
+                persistIfNeeded()
+                return
+            }
             val now = System.currentTimeMillis()
             mutex.withLock {
                 queue.forEach { if (it.user_id == null) it.user_id = userId }
                 // Un autre compte, ou un événement trop vieux pour la règle RLS : abandonné.
+                // L'onboarding resté en file garde sa place : il n'appartient à aucun compte.
                 queue.removeAll { row ->
-                    row.user_id != userId || runCatching { now - iso.parse(row.ts)!!.time > MAX_EVENT_AGE_MS }.getOrDefault(true)
+                    runCatching { now - iso.parse(row.ts)!!.time > MAX_EVENT_AGE_MS }.getOrDefault(true) ||
+                        (row.user_id != userId && row.name !in ONBOARDING_NAMES)
                 }
             }
             while (true) {
-                val batch = mutex.withLock { queue.take(BATCH_SIZE) }
+                val batch = mutex.withLock { queue.filter { it.name !in ONBOARDING_NAMES }.take(BATCH_SIZE) }
                 if (batch.isEmpty()) break
                 val sent = try {
                     SupabaseManager.client.from("course_events").upsert(batch) {
@@ -319,7 +336,7 @@ object Analytics {
                     headFailures += 1
                     if (headFailures >= 3) {
                         headFailures = 0
-                        mutex.withLock { repeat(minOf(batch.size, queue.size)) { queue.removeAt(0) }; queueDirty = true }
+                        removeFromQueue(batch)
                         continue
                     }
                     false
@@ -329,14 +346,47 @@ object Analytics {
                 }
                 if (!sent) break
                 headFailures = 0
-                mutex.withLock {
-                    repeat(minOf(batch.size, queue.size)) { queue.removeAt(0) }
-                    queueDirty = true
-                }
+                removeFromQueue(batch)
             }
             persistIfNeeded()
         } finally {
             flushing = false
+        }
+    }
+
+    /** Les événements d'onboarding, par `log_onboarding_events` (voir [ONBOARDING_NAMES]). */
+    private suspend fun flushOnboarding() {
+        while (true) {
+            val batch = mutex.withLock { queue.filter { it.name in ONBOARDING_NAMES }.take(ONBOARDING_BATCH_SIZE) }
+            if (batch.isEmpty()) return
+            try {
+                SupabaseManager.client.postgrest.rpc("log_onboarding_events", onboardingPayload(batch))
+                onboardingFailures = 0
+            } catch (e: RestException) {
+                // Refus du serveur : au bout de trois fois, le lot est abandonné.
+                onboardingFailures += 1
+                if (onboardingFailures < 3) return
+                onboardingFailures = 0
+            } catch (_: Exception) {
+                // Réseau : on garde tout et on réessaie plus tard.
+                return
+            }
+            removeFromQueue(batch)
+        }
+    }
+
+    /**
+     * Le corps de l'appel, construit avec les réglages d'[Analytics] (`encodeDefaults`) et non
+     * ceux du client Supabase, qui retireraient `platform`.
+     */
+    internal fun onboardingPayload(rows: List<CourseEventRow>): JsonObject =
+        buildJsonObject { put("p_events", json.encodeToJsonElement(ListSerializer(CourseEventRow.serializer()), rows)) }
+
+    private suspend fun removeFromQueue(rows: List<CourseEventRow>) {
+        val ids = rows.mapTo(HashSet()) { it.event_id }
+        mutex.withLock {
+            queue.removeAll { it.event_id in ids }
+            queueDirty = true
         }
     }
 
