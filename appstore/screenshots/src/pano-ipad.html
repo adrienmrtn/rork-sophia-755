@@ -103,6 +103,14 @@ svg.h { position: absolute; }
       const lines = () => p.getBoundingClientRect().height / parseFloat(getComputedStyle(p).lineHeight);
       while (lines() > 2.2 && size > 14) { size -= 0.5; p.style.fontSize = size + "px"; }
     });
+    // Review cards must end above the bottom edge (or the character under them): shrink the quotes.
+    document.querySelectorAll(".reviews").forEach((r) => {
+      const top = r.parentElement.getBoundingClientRect().top;
+      let size = parseFloat(getComputedStyle(r.querySelector("q")).fontSize);
+      while (r.getBoundingClientRect().bottom - top > 672 && size > 13) {
+        size -= 0.5; r.querySelectorAll("q").forEach((q) => { q.style.fontSize = size + "px"; });
+      }
+    });
     document.querySelectorAll(".bubble").forEach((b) => {
       b.style.whiteSpace = "nowrap";
       const room = b.parentElement.getBoundingClientRect().width - 2 * MARGIN;
