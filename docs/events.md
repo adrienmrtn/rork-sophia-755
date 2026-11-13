@@ -81,11 +81,12 @@ Questions (`question` → `answer`) :
 | `question` | Écran | `answer` |
 | --- | --- | --- |
 | `age` | `age` | une tranche : `under18`, `18to24`, `25to34`, `35to44`, `45to54`, `55plus`. Jamais un âge exact |
-| `knowledge` | `knowledge` | `0` à `3` |
+| `knowledge` | `knowledge` | `0` à `3`. Aucun niveau n'est présélectionné : la réponse est toujours un choix |
 | `motivation` | `motivation` | `grow`, `conversations`, `career`, `sharp`, `world` |
 | `objectives` | `objective` | choix multiples : les clés triées, séparées par des virgules (`cultivate,exams`) |
 | `topics` | `topics` | choix multiples, même forme (clés de matière) |
 | `phone_time` | `phone_time` | minutes par jour (`180`) |
+| `swipe_liked`, `swipe_passed` | `swipe_courses` | les cours gardés et ceux écartés dans le swipe, par leur numéro (`course_42_…` → `42`), triés, séparés par des virgules (`42,150`). Une liste vide n'est pas envoyée |
 | `reading_time` | `reading_time` (iOS) | heure locale choisie (`21`) |
 | `reads_monthly`, `forgets_reading`, `too_much_phone`, `likes_learning_daily` | `loading` (iOS) | `true` ou `false` |
 

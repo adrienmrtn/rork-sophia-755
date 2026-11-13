@@ -493,15 +493,21 @@ internal fun MotivationStep(
 @Composable
 internal fun KnowledgeStep(
     language: AppLanguage,
-    initialLevel: Int,
+    /** The level already given (back on the page, resume), or null: nothing is selected. */
+    initialLevel: Int?,
     onContinue: (Int) -> Unit,
 ) {
     val context = LocalContext.current
-    var step by rememberSaveable { mutableIntStateOf(initialLevel.coerceIn(0, KNOWLEDGE_LEVEL_COUNT - 1)) }
+    // -1 : rien de choisi. Aucune ligne n'est sélectionnée d'avance, et « Continuer » attend un choix.
+    var step by rememberSaveable { mutableIntStateOf(initialLevel?.coerceIn(0, KNOWLEDGE_LEVEL_COUNT - 1) ?: -1) }
 
     OV2CorePage(
         footer = {
-            OnboardingCta(StringStore.text(context, "common.continue", language), { onContinue(step) })
+            OnboardingCta(
+                text = StringStore.text(context, "common.continue", language),
+                onClick = { if (step >= 0) onContinue(step) },
+                enabled = step >= 0,
+            )
         },
     ) { available ->
         val art = OV2Core.artSize(base = 124.dp, available = available, reserved = 430.dp)

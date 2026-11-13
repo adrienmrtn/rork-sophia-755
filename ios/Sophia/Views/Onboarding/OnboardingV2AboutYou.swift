@@ -247,7 +247,9 @@ struct OnboardingV2Knowledge: View {
     let vm: OnboardingV2ViewModel
     let onNext: () -> Void
 
-    @State private var step: Int = 1
+    /// Le niveau choisi, nil tant que la personne n'a rien touché : aucune ligne n'est
+    /// sélectionnée d'avance, et « Continuer » attend un choix.
+    @State private var step: Int? = nil
 
     private static let levelCount = OnboardingV2ViewModel.knowledgeLevelCount
 
@@ -255,14 +257,21 @@ struct OnboardingV2Knowledge: View {
         OV2CorePage { height in
             pageBody(height: height)
         } footer: {
-            OnboardingV2Button(title: languageManager.text("common.continue")) {
-                vm.knowledgeLevel = step
-                onNext()
-            }
+            OnboardingV2Button(
+                title: languageManager.text("common.continue"),
+                enabled: step != nil,
+                action: {
+                    guard let step else { return }
+                    vm.knowledgeLevel = step
+                    onNext()
+                }
+            )
         }
         .ov2Background()
         .onAppear {
-            step = vm.knowledgeLevel
+            // Un niveau déjà donné (retour sur la page, reprise après fermeture) est repris ;
+            // `vm.knowledgeLevel` seul ne le dit pas, il vaut 1 par défaut.
+            step = OnboardingResumeStore.knowledgeLevel
         }
     }
 

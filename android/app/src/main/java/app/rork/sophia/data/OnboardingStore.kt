@@ -11,6 +11,11 @@ data class OnboardingAnswers(
     val firstName: String = "",
     val ageRange: String? = null,
     val knowledgeLevel: Int = 1,
+    /**
+     * Whether [knowledgeLevel] was actually chosen. The page opens with nothing selected: 1 is
+     * only the value the rest of the app falls back on until an answer is given.
+     */
+    val knowledgeAnswered: Boolean = false,
     val motivation: String? = null,
     val topics: List<String> = emptyList(),
     /**
@@ -77,6 +82,7 @@ class OnboardingStore(context: Context) {
         firstName = prefs.getString(KEY_FIRST_NAME, null).orEmpty(),
         ageRange = prefs.getString(KEY_AGE_RANGE, null),
         knowledgeLevel = prefs.getInt(KEY_KNOWLEDGE, 1),
+        knowledgeAnswered = prefs.contains(KEY_KNOWLEDGE),
         motivation = prefs.getString(KEY_MOTIVATION, null),
         topics = prefs.getString(KEY_TOPICS, null)
             ?.split(',')
@@ -89,7 +95,7 @@ class OnboardingStore(context: Context) {
         prefs.edit()
             .putString(KEY_FIRST_NAME, answers.firstName.ifBlank { null })
             .putString(KEY_AGE_RANGE, answers.ageRange)
-            .putInt(KEY_KNOWLEDGE, answers.knowledgeLevel)
+            .apply { if (answers.knowledgeAnswered) putInt(KEY_KNOWLEDGE, answers.knowledgeLevel) else remove(KEY_KNOWLEDGE) }
             .putString(KEY_MOTIVATION, answers.motivation)
             .putString(KEY_TOPICS, answers.topics.joinToString(","))
             .putString(KEY_AVATAR, answers.avatarId)

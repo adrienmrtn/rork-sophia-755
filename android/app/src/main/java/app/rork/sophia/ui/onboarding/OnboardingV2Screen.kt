@@ -159,6 +159,23 @@ private enum class OnboardingStep {
         }
 }
 
+/**
+ * The courses of the onboarding swipe as `onboarding_answer` lines (docs/events.md), under the
+ * same names as iOS: `swipe_liked` for those kept, `swipe_passed` for those set aside, each a
+ * sorted, comma-separated list of course numbers (`course_42_…` → `42`). An empty list is not sent.
+ */
+internal fun swipeAnswers(shown: List<String>, liked: List<String>): List<Pair<String, String>> {
+    val kept = liked.toSet()
+    fun numbers(ids: List<String>): String = ids
+        .mapNotNull { id -> id.split('_').takeIf { it.size >= 2 && it[0] == "course" }?.get(1)?.toIntOrNull() }
+        .sorted()
+        .joinToString(",")
+    return listOf(
+        "swipe_liked" to numbers(shown.filter { it in kept }),
+        "swipe_passed" to numbers(shown.filter { it !in kept }),
+    ).filter { it.second.isNotEmpty() }
+}
+
 /** What the header shows above a step. */
 private enum class HeaderKind {
     /** No header: the welcome page, then the login and everything after it. */
@@ -621,9 +638,9 @@ fun OnboardingV2Screen(
                 )
                 OnboardingStep.Knowledge -> KnowledgeStep(
                     language = language,
-                    initialLevel = answers.knowledgeLevel,
+                    initialLevel = answers.knowledgeLevel.takeIf { answers.knowledgeAnswered },
                     onContinue = { level ->
-                        updateAnswers { it.copy(knowledgeLevel = level) }
+                        updateAnswers { it.copy(knowledgeLevel = level, knowledgeAnswered = true) }
                         goTo(OnboardingStep.Motivation)
                     },
                 )
@@ -689,6 +706,13 @@ fun OnboardingV2Screen(
                     ready = swipeReady,
                     onFinished = { liked ->
                         likedCourseIds = liked
+                        // Les cours gardés et écartés, par leur numéro : deux lignes `onboarding_answer`.
+                        swipeAnswers(shown = swipeCourses.map { it.id }, liked = liked).forEach { (question, answer) ->
+                            Analytics.log(
+                                "onboarding_answer",
+                                props = mapOf("step" to OnboardingStep.Swipe.analyticsName, "question" to question, "answer" to answer),
+                            )
+                        }
                         goTo(OnboardingStep.Curve90)
                     },
                 )
