@@ -201,10 +201,11 @@ const PANOS = {
       screen: s, cx: mid(i), cy: 232 + (956 * 0.78 + 21) / 2, s: 0.78,
       frame: i === 1 ? "#cdd9f5" : "#2e62c4", band: i === 1 ? "#e9effb" : "#dbe5f8" })),
     people: [
-      // opening panel: logo, bubble, and the before / after boy sitting on the bottom edge, both on
+      // opening panel: logo, bubble, and the before / after pair (a boy slumped over his phone, a girl reading)
+      // sitting on the bottom edge, both on
       // the same green floor (the band in `extras`, the colour of the "before" drawing's own floor)
       { name: "boy_before", x: 112, b: 956, h: 232, z: 1 },
-      { name: "boy_after", x: 322, b: 938, h: 200, z: 1 },
+      { name: "girl_after", x: 322, b: 943, h: 216, z: 1 },
       { name: "trophy", x: P(4) + 220, b: 1000, h: 185 },
       { name: "phone_away", x: P(7) + 372, b: 975, h: 215, flip: true },
       { name: "idea", x: P(8) + 330, b: 990, h: 240, flip: true },

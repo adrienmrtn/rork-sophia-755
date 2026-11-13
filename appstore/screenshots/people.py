@@ -45,11 +45,12 @@ PROPS = {
     "prop_globe": "A desk globe of the Earth on a stand.",
     "prop_mask": "A pair of theatre masks, comedy and tragedy.",
 }
-# Before / after for the opening panel: the same teenager slumped over a phone, then reading.
+# Before / after for the opening panel: a boy slumped over a phone, a girl reading.
 # The model draws a floor whatever the prompt says, so the prompt asks for a cream wall and a
 # green floor strip: the wall is cut out by colour (chroma key on the top corners, which keeps
 # the cream and white parts of the figure) and the two floors line up along the panel's bottom
-# edge. Recraft caps prompts at 1000 characters. Several takes were made and one pair kept.
+# edge. Recraft caps prompts at 1000 characters. Several takes were made and one pair kept; the
+# girl's own floor was then removed by hand so both sit on the band drawn in src/pano.js.
 BOY = ("a teenage boy with pale cream skin, messy straight dark brown hair with spiky tufts, coral red sweater, "
        "navy blue trousers, cream sneakers with saffron stripes")
 SCENE_STYLE = ("Whole figure visible, centred. Flat poster illustration, paper-cut shapes, palette of navy blue, "
@@ -57,7 +58,7 @@ SCENE_STYLE = ("Whole figure visible, centred. Flat poster illustration, paper-c
                "background, a thin flat green floor strip along the bottom edge, no text, no outlines, no furniture.")
 SCENES = {
     "boy_before": f"Full-body drawing of {BOY}, sitting slumped on the floor with knees up, back hunched, head down, staring at a smartphone held in both hands, tired half-closed eyes, sad bored expression. " + SCENE_STYLE,
-    "boy_after": f"Full-body drawing of {BOY}, sitting upright cross-legged on the floor, reading an open saffron book that rests in his lap, both hands on the book at chest height, arms down, eyes looking down at the pages, absorbed, happy smile. " + SCENE_STYLE,
+    "girl_after": "Full-body drawing of a teenage girl with warm brown skin, dark curly hair in two puffs, saffron yellow sweater, navy blue trousers, cream sneakers, sitting upright cross-legged on the floor, reading an open coral red book that rests in her lap, both hands on the book, arms down, eyes looking down at the pages, absorbed, happy smile. " + SCENE_STYLE,
 }
 SCENE_COLORS = COLORS[:4] + [[92, 58, 38], [38, 150, 140]]
 
