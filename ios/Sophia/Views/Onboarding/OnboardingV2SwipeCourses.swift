@@ -136,19 +136,24 @@ struct OnboardingV2SwipeCourses: View {
 
     /// La pile : le bord d'une carte par cours qui attend dessous (il dépasse en haut, de plus
     /// en plus étroit et pâle), la carte suivante juste sous celle du dessus, et la carte du
-    /// dessus, qui suit le doigt. À chaque réponse, le bord le plus lointain rentre sous la
-    /// pile : elle rétrécit à vue d'œil, jusqu'à la dernière carte, seule.
+    /// dessus, qui suit le doigt. À chaque réponse, c'est le bord le plus proche qui rentre sous
+    /// la carte du dessus (il devient la carte suivante) ; les bords plus lointains gardent leur
+    /// place et leur taille. La pile s'amincit donc par l'avant, jusqu'à la dernière carte, seule.
     private func deck(width: CGFloat, height: CGFloat) -> some View {
         let cardHeight: CGFloat = height - Self.plateRise
         let thumbnail: CGFloat = min(Self.maxThumbnail, max(Self.minThumbnail, cardHeight - Self.cardChrome))
         let remaining: Int = max(courses.count - index, 0)
         // Cartes qui attendent sous celle du dessus.
         let waiting: Int = min(max(remaining - 1, 0), Self.maxPlates)
+        // Le bord le plus lointain de la pile entière, fixe pendant tout l'écran.
+        let deepest: Int = min(max(courses.count - 1, 0), Self.maxPlates)
         return ZStack(alignment: .top) {
             // De la plus lointaine à la plus proche, pour que chacune recouvre la précédente.
             ForEach(0..<Self.maxPlates, id: \.self) { slot in
                 let depth: Int = Self.maxPlates - slot
-                let present: Bool = depth <= waiting
+                // Les bords restants sont les plus lointains : `deepest` est le fond de la
+                // pile au départ, et chaque réponse retire le bord le plus proche.
+                let present: Bool = depth <= deepest && depth > deepest - waiting
                 plate(width: width - CGFloat(depth) * Self.plateInset, depth: depth)
                     .offset(y: present ? Self.plateRise - CGFloat(depth) * Self.plateStep : Self.plateRise)
                     .opacity(present ? 1 : 0)

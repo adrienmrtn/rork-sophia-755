@@ -19,6 +19,14 @@ enum FeatureFlags {
 
     static var newNavigation: Bool { navigationVariant == .newGen }
 
+    // MARK: - Événements
+
+    /// Les événements éditoriaux (campagnes) sont masqués pour l'instant : `CampaignStore.all`
+    /// ne rend plus rien, donc ni carte dans le fil, ni rangée dans Explorer, ni page
+    /// d'événement, ni badge d'événement, ni étiquette sur les cours. Tout le code reste en
+    /// place : passer à `true` les fait réapparaître tels quels.
+    static let eventsEnabled: Bool = false
+
     // MARK: - Duels
 
     /// Valeur de sélection de l'onglet Duels, à la suite des cinq onglets existants (0 à 4)

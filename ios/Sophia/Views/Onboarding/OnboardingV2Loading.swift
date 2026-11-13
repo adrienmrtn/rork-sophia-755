@@ -4,7 +4,8 @@ import UIKit
 /// « On prépare ton parcours de connaissances » : un chargement qui **s'arrête quatre fois**
 /// pour poser une question.
 ///
-/// La barre avance, s'arrête net à un point fixé d'avance (18 %, 41 %, 63 % puis 86 %), une
+/// Les trois lignes d'étapes ont chacune leur barre, qui se remplissent l'une après l'autre.
+/// L'avancement s'arrête net à un point fixé d'avance (18 %, 41 %, 63 % puis 86 %), une
 /// carte pose une question à laquelle on répond par oui ou par non, et la barre ne repart
 /// qu'une fois la réponse donnée. Après la quatrième réponse elle va au bout, les trois étapes
 /// sont cochées, la preuve sociale s'allume (photos, étoiles, « 500 000 utilisateurs ») et le
@@ -75,6 +76,15 @@ struct OnboardingV2Loading: View {
 
     private func isStepDone(_ i: Int) -> Bool {
         overall >= Self.stepEnds[i] - 0.0001
+    }
+
+    /// Avancement de l'étape `i` seule, de 0 à 1 : la part de l'avancement global qui tombe
+    /// entre la fin de l'étape précédente et la sienne.
+    private func stepProgress(_ i: Int) -> Double {
+        let start: Double = i == 0 ? 0 : Self.stepEnds[i - 1]
+        let end: Double = Self.stepEnds[i]
+        guard end > start else { return 1 }
+        return min(max((overall - start) / (end - start), 0.0), 1.0)
     }
 
     /// L'étape en cours : la première qui n'est pas terminée.
@@ -185,8 +195,10 @@ struct OnboardingV2Loading: View {
 
     // MARK: - Avancement global
 
-    /// Le pourcentage et la barre du chargement entier. À l'arrêt, la barre passe à l'ambre
-    /// et la pastille « En pause » apparaît : on voit que c'est la question qui retient tout.
+    /// Le pourcentage du chargement entier. La progression elle-même se lit sur les trois
+    /// lignes d'étapes, chacune avec sa barre (`stepRow`). À l'arrêt, la pastille « En pause »
+    /// apparaît et la barre de l'étape en cours passe à l'ambre : on voit que c'est la
+    /// question qui retient tout.
     private var overallProgress: some View {
         let pausedText: String = languageManager.text("onboardingV2.loading.paused")
         return VStack(spacing: 8) {
@@ -212,8 +224,6 @@ struct OnboardingV2Loading: View {
                 }
             }
             .frame(minHeight: 28)
-
-            LoadingBar(value: overall, paused: isPaused)
         }
         .animation(DSCalmMotion.state, value: isPaused)
         .accessibilityElement(children: .ignore)
@@ -223,21 +233,27 @@ struct OnboardingV2Loading: View {
 
     // MARK: - Étapes
 
-    /// Une étape : son nom, et à droite une coche bleue (terminée), un indicateur (en cours :
-    /// il tourne, ou marque la pause quand une question attend) ou un rond vide (à venir).
+    /// Une étape : son nom, à droite une coche bleue (terminée), un indicateur (en cours : il
+    /// tourne, ou marque la pause quand une question attend) ou un rond vide (à venir), et
+    /// dessous la barre de cette étape.
     private func stepRow(_ i: Int) -> some View {
         let isDone: Bool = isStepDone(i)
         let isActive: Bool = activeStep == i
-        return HStack(spacing: 12) {
-            Text(languageManager.text(stepKeys[i]))
-                .font(DS.sans(.callout, .semibold))
-                .foregroundStyle(isDone || isActive ? DS.ink : DS.inkSecondary)
-                .multilineTextAlignment(.leading)
-                .fixedSize(horizontal: false, vertical: true)
-            Spacer(minLength: 8)
-            stepStatus(isDone: isDone, isActive: isActive)
+        return VStack(spacing: 10) {
+            HStack(spacing: 12) {
+                Text(languageManager.text(stepKeys[i]))
+                    .font(DS.sans(.callout, .semibold))
+                    .foregroundStyle(isDone || isActive ? DS.ink : DS.inkSecondary)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer(minLength: 8)
+                stepStatus(isDone: isDone, isActive: isActive)
+            }
+            .frame(minHeight: 24)
+
+            // Chaque ligne a sa propre barre : elles se remplissent l'une après l'autre.
+            LoadingBar(value: stepProgress(i), paused: isActive && isPaused, height: 6, minimumFill: 0)
         }
-        .frame(minHeight: 24)
         .padding(.vertical, 14)
         .overlay(alignment: .bottom) {
             if i < 2 {
@@ -498,11 +514,14 @@ struct OnboardingV2Loading: View {
 private struct LoadingBar: View {
     let value: Double
     var paused: Bool = false
+    var height: CGFloat = 10
+    /// Largeur minimale du remplissage ; 0 pour une barre qui reste vide tant que rien n'a avancé.
+    var minimumFill: CGFloat = 10
 
     var body: some View {
         GeometryReader { geo in
             let clamped: Double = min(max(value, 0.0), 1.0)
-            let width: CGFloat = max(10, geo.size.width * CGFloat(clamped))
+            let width: CGFloat = max(minimumFill, geo.size.width * CGFloat(clamped))
             ZStack(alignment: .leading) {
                 Capsule().fill(DS.accentTint)
                 Capsule()
@@ -510,7 +529,7 @@ private struct LoadingBar: View {
                     .frame(width: width)
             }
         }
-        .frame(height: 10)
+        .frame(height: height)
         .accessibilityHidden(true)
     }
 }

@@ -74,7 +74,8 @@ struct OnboardingV2Name: View {
     private func pageBody(height: CGFloat) -> some View {
         // Pleine taille quand tout tient ; réduits, jamais retirés, quand le clavier ou un
         // petit écran laissent peu de hauteur (titre, champ et marges en prennent environ 210).
-        let avatarSize: CGFloat = min(104, max(72, height - 210))
+        // L'avatar choisi est montré en grand (jusqu'à 124 pt) au centre du carrousel.
+        let avatarSize: CGFloat = min(124, max(72, height - 210))
         return VStack(spacing: 0) {
             OV2CoreQuestionTitle(title: languageManager.text("onboardingV2.name.title"))
                 .padding(.top, OV2CoreMetrics.topInset)

@@ -8,6 +8,9 @@ import Foundation
 enum CampaignStore {
     /// Les événements publiés pour la région du téléphone, du plus ancien au plus récent.
     static var all: [Campaign] {
+        // Événements masqués (`FeatureFlags.eventsEnabled`) : tout ce qui lit le magasin
+        // (fil, Explorer, profil, badges, liens) ne voit alors aucun événement.
+        guard FeatureFlags.eventsEnabled else { return [] }
         let region = Locale.current.region?.identifier
         return CatalogStore.shared.campaigns.filter { $0.isShown(inRegion: region) }
     }

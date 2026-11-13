@@ -600,7 +600,10 @@ final class DuelGameModel {
         while true {
             // Une nouvelle manche commence : son annonce occupe le temps qui la précède.
             if i > 0, i < questionCount, i % DuelMatch.questionsPerRound == 0, i >= playedQuestions.count {
-                guard await announceLive(match.rounds[i / DuelMatch.questionsPerRound], startsAt: startsAt) else { return }
+                guard let announced: Date = await announceLive(
+                    match.rounds[i / DuelMatch.questionsPerRound], firstIndex: i, startsAt: startsAt
+                ) else { return }
+                startsAt = announced
             }
             // La question démarre au même instant pour les deux joueurs.
             while Date() < startsAt {
@@ -635,12 +638,18 @@ final class DuelGameModel {
     /// L'annonce d'une manche en direct, jusqu'à l'instant où sa première question démarre. Au
     /// choix : celui qui choisit a jusqu'à 1,5 s avant le départ ; l'autre voit la matière dès
     /// que le serveur la connaît.
-    private func announceLive(_ plan: DuelRoundPlan, startsAt: Date) async -> Bool {
-        guard plan.kind != .mixed else { return true }
+    ///
+    /// Rend l'instant de départ de la manche, ou nil si la tâche est annulée. Cet instant peut
+    /// être plus tôt que prévu : dès que la matière est choisie, le serveur peut avancer le
+    /// départ (`question_starts_in_ms` raccourci), et la partie reprend sans attendre la fin du
+    /// délai de choix.
+    private func announceLive(_ plan: DuelRoundPlan, firstIndex: Int, startsAt initialStart: Date) async -> Date? {
+        guard plan.kind != .mixed else { return initialStart }
         // En retard sur le serveur (coupure réseau) : pas d'annonce, on rattrape la partie.
-        guard startsAt.timeIntervalSinceNow > 2.5 else { return true }
+        guard initialStart.timeIntervalSinceNow > 2.5 else { return initialStart }
         // La révélation de la question précédente reste un instant à l'écran.
-        guard await pause(2.0) else { return false }
+        guard await pause(2.0) else { return nil }
+        var startsAt: Date = initialStart
         let mine = plan.isMyPick
         show(RoundIntro(
             number: plan.number,
@@ -650,7 +659,7 @@ final class DuelGameModel {
             deadline: mine ? startsAt.addingTimeInterval(-1.5) : nil
         ))
         while Date() < startsAt {
-            guard await pause(0.05) else { return false }
+            guard await pause(0.05) else { return nil }
             guard plan.kind == .pick else { continue }
             if let chosen = liveState?.picks?[String(plan.number)], roundIntro?.chosen != chosen {
                 withAnimation(.spring(response: 0.4, dampingFraction: 0.65)) { roundIntro?.chosen = chosen }
@@ -660,8 +669,16 @@ final class DuelGameModel {
                 // Pas de choix à temps : la première matière proposée, celle que le serveur retient.
                 withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) { roundIntro?.chosen = fallback }
             }
+            // La matière est connue du serveur et il a avancé le départ : on le suit.
+            if let state = liveState, state.index == firstIndex, state.picks?[String(plan.number)] != nil {
+                let serverStart: Date = liveStateAt.addingTimeInterval(Double(state.questionStartsInMs) / 1000)
+                // Une seconde de marge : l'écart entre deux mesures du réseau n'est pas une avance.
+                if serverStart < startsAt.addingTimeInterval(-1.0) {
+                    startsAt = serverStart
+                }
+            }
         }
-        return true
+        return startsAt
     }
 
     /// Fixe les questions des manches jusqu'à la question `i` (plusieurs d'un coup après une

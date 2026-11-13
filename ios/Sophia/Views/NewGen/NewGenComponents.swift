@@ -307,18 +307,22 @@ struct CourseCover: View {
     @State private var image: UIImage?
 
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: cornerRadius, style: .continuous).fill(DS.surfaceMuted)
-            if let image {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFill()
-            } else {
-                Image(systemName: course.subject.icon)
-                    .font(.system(size: 22, weight: .medium))
-                    .foregroundStyle(course.subject.color)
+        // L'image est posée en surimpression du fond, qui seul prend la place offerte : dans
+        // un `ZStack`, une image `scaledToFill` impose sa propre taille, et une couverture très
+        // large (un panorama) élargissait toute la vignette au lieu d'être rognée.
+        RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+            .fill(DS.surfaceMuted)
+            .overlay {
+                if let image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFill()
+                } else {
+                    Image(systemName: course.subject.icon)
+                        .font(.system(size: 22, weight: .medium))
+                        .foregroundStyle(course.subject.color)
+                }
             }
-        }
         .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
         .onAppear {
             if image == nil { image = CourseImageMap.loadImage(for: course.id) }

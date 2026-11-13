@@ -1,3 +1,4 @@
+import StoreKit
 import SwiftUI
 import UIKit
 
@@ -26,6 +27,26 @@ struct OnboardingV2Mission: View {
                 portraits = Array(AuthorStore.all.compactMap { AuthorStore.photo(for: $0) }.prefix(5))
             }
         }
+        .task {
+            await requestReviewOnce()
+        }
+    }
+
+    // MARK: - Demande de note
+
+    private static let reviewRequestedKey = "sophia_onboarding_review_requested"
+
+    /// La demande de note de l'App Store, une seconde après l'apparition de la page et une
+    /// seule fois par installation (revenir en arrière ne la rejoue pas). iOS décide seul de
+    /// montrer ou non sa fenêtre.
+    private func requestReviewOnce() async {
+        guard !UserDefaults.standard.bool(forKey: Self.reviewRequestedKey) else { return }
+        try? await Task.sleep(for: .seconds(1))
+        guard !Task.isCancelled else { return }
+        guard let scene = UIApplication.shared.connectedScenes
+            .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene else { return }
+        UserDefaults.standard.set(true, forKey: Self.reviewRequestedKey)
+        SKStoreReviewController.requestReview(in: scene)
     }
 
     private var pageBody: some View {

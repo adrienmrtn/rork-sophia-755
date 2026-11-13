@@ -174,8 +174,8 @@ struct ElevatePaywallScreen<Content: View>: View {
     /// Propriétés ajoutées à l'impression et aux événements d'achat (variante d'un test A/B).
     var analyticsProps: [String: AnalyticsValue] = [:]
     var tracksAnalytics: Bool = true
-    /// Secondes avant que la croix n'apparaisse (0 : tout de suite).
-    var closeDelay: Double = 0
+    /// Secondes avant que la croix n'apparaisse : trois sur tous les paywalls (0 : tout de suite).
+    var closeDelay: Double = PaywallClose.delay
     var layout: ElevatePaywallLayout = .bonhomme
     var onPurchased: () -> Void = {}
     var onRestored: () -> Void = {}
@@ -801,5 +801,38 @@ struct ElevatePaywallLegalLinks: View {
                 .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+    }
+}
+
+// MARK: - Croix de fermeture
+
+/// La croix d'un paywall n'apparaît qu'au bout de trois secondes, sur tous les paywalls : le
+/// temps de voir l'offre avant de pouvoir la fermer.
+enum PaywallClose {
+    static let delay: Double = 3
+}
+
+/// Cache la croix (invisible et inerte) pendant `PaywallClose.delay`, puis la fait apparaître.
+/// Pour les paywalls qui dessinent leur propre croix ; `ElevatePaywallScreen` a son `closeDelay`.
+private struct PaywallCloseDelayModifier: ViewModifier {
+    @State private var shown: Bool = false
+
+    func body(content: Content) -> some View {
+        content
+            .opacity(shown ? 1 : 0)
+            .allowsHitTesting(shown)
+            .accessibilityHidden(!shown)
+            .task {
+                guard !shown else { return }
+                try? await Task.sleep(for: .seconds(PaywallClose.delay))
+                guard !Task.isCancelled else { return }
+                withAnimation(.easeOut(duration: 0.4)) { shown = true }
+            }
+    }
+}
+
+extension View {
+    func paywallCloseDelayed() -> some View {
+        modifier(PaywallCloseDelayModifier())
     }
 }
