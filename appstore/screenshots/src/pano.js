@@ -183,7 +183,6 @@ const PANOS = {
         ["Stacy Jankowski", "PhD in Biomedical Science, Boston University", "avatar_05"],
         ["Simon Lea", "PhD in Philosophy, independent scholar", "avatar_02"],
       ],
-      profile: ["24 days in a row.<br>You?", "Keep your streak alive"],
     } },
     panels: [
       { theme: "cream", logo: "brand", bubble: "hero" },
@@ -195,9 +194,8 @@ const PANOS = {
       { theme: "pale", text: "duels", cls: "center" },
       { theme: "pale", text: "blocker", cls: "center" },
       { theme: "pale", text: "profs", cls: "center", profs: "authors" },
-      { theme: "pale", text: "profile", cls: "center" },
     ],
-    phones: [["home", 1], ["reader", 2], ["quiz", 5], ["duels", 6], ["blocker", 7], ["profile", 9]].map(([s, i]) => ({
+    phones: [["home", 1], ["reader", 2], ["quiz", 5], ["duels", 6], ["blocker", 7]].map(([s, i]) => ({
       screen: s, cx: mid(i), cy: 232 + (956 * 0.78 + 21) / 2, s: 0.78,
       frame: i === 1 ? "#cdd9f5" : "#2e62c4", band: i === 1 ? "#e9effb" : "#dbe5f8" })),
     people: [
@@ -207,10 +205,8 @@ const PANOS = {
       { name: "boy_before", x: 112, b: 956, h: 232, z: 1 },
       { name: "girl_after", x: 322, b: 943, h: 216, z: 1 },
       { name: "trophy", x: P(4) + 220, b: 1000, h: 185 },
-      { name: "phone_away", x: P(7) + 372, b: 975, h: 215, flip: true },
       { name: "idea", x: P(8) + 330, b: 990, h: 240, flip: true },
       { name: "books", x: P(8) + 96, b: 975, h: 235 },
-      { name: "waving", x: P(9) + 388, b: 966, h: 205, flip: true },
     ],
     extras: [
       { x: 0, y: 931.5, z: 0, html: '<div style="width:440px;height:24.5px;background:#1e8e73"></div>' },

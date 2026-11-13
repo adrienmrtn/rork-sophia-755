@@ -55,9 +55,10 @@ other real reviews; a translated set needs reviews from that country's store.
 
 `node render-pano.cjs showcase`. Same look as `vitrine`, with the app screens in English
 (`screens/<name>.html?lang=en`: every screen except `explore` carries a French and an English
-`S` / `C`). Ten panels: opening on cream with the colour logo, « Get smarter every day » (For you
-feed, « Why does nobody smile in old photographs? »), « Learn in 10 minutes » (that course open),
-catalogue wall, reviews, quiz, duels, anti-scroll, « Written by professors », streak.
+`S` / `C`). Nine panels: opening on cream with the colour logo and a before / after pair, « Get
+smarter every day » (For you feed, « Why does nobody smile in old photographs? »), « Learn in
+10 minutes » (that course open), catalogue wall, reviews, quiz, duels, anti-scroll, « Written by
+professors ».
 
 The reviews are the only English-language ones the public feeds returned on 13 November 2026:
 two five-star and one four-star, shown with its four stars. The professors panel lists real
