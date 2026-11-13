@@ -47,4 +47,6 @@ have: « 30 ligues à gravir » and « Reprenez votre temps ».
 
 `vitrine` opens with a brand-blue panel (characters, logo, speech bubble), continues with upright
 phones in a thick blue frame under a centred title, and closes on a wall of real course covers.
-It has no reviews panel: quotes and star ratings must come from real App Store reviews.
+Its last panel quotes three real five-star reviews from the French App Store (app id 6760919622,
+public customer-reviews feed, read on 13 November 2026), word for word. Replace them only with
+other real reviews; a translated set needs reviews from that country's store.

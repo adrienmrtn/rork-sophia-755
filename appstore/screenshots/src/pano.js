@@ -93,6 +93,14 @@ const PANOS = {
       explore: ["De Kafka<br>aux trous noirs", "Histoire, sciences, art, mythologie…"],
       profile: ["24 jours d’affilée.<br>Et vous\u00a0?", "Gardez votre série en vie"],
       wall: ["Plus de 300 cours.<br>Zéro ennui."],
+      love: ["Les gens adorent<br>Sophia"],
+      // Real five-star reviews from the French App Store (public RSS feed, read on 13 Nov 2026),
+      // quoted as written; « […] » marks a cut. Do not edit the wording or add invented ones.
+      reviews: [
+        ["«\u00a0Une appli simple d’utilisation et hyper pratique pour se cultiver au quotidien\u00a0!\u00a0»", "gab24738 · App Store"],
+        ["«\u00a0Meilleur appli pour devenir plus cultivé et en apprendre plus sur tout mais de manière drôle et pas «\u00a0scolaire\u00a0». […] Bref, j’adore\u00a0»", "Leo•go · App Store"],
+        ["«\u00a0Difficile de se lasser face à la pléthore de cours et d’informations nouvelles à retenir et à apprécier.\u00a0»", "Simon B. · App Store"],
+      ],
     }) },
     panels: [
       { theme: "blue", logo: "big", bubble: "hero" },
@@ -105,6 +113,7 @@ const PANOS = {
         ["l_odyssee_homere", "beethoven_genie_et_surdite", "comment_se_forment_les_eclairs", "la_decouverte_de_l_amerique_1492"],
         ["la_decouverte_du_micro_ondes", "icare_et_dedale", "fresh_coriander_cilantro_bunch_leaves", "la_montee_des_eaux"],
       ] },
+      { theme: "pale", text: "love", cls: "center", reviews: "reviews" },
     ],
     phones: ["home", "reader", "quiz", "duels", "blocker", "explore", "profile"].map((s, k) => ({
       screen: s, cx: mid(k + 1), cy: 232 + (956 * 0.78 + 21) / 2, s: 0.78,
@@ -123,8 +132,13 @@ const PANOS = {
       { name: "reader_walking", x: P(1) - 8, b: 962, h: 265, z: 4 },
       { name: "phone_away", x: P(5) + 372, b: 975, h: 215, flip: true },
       { name: "waving", x: P(7) + 398, b: 966, h: 210, flip: true },
+      { name: "headphones", x: P(9) + 88, b: 975, h: 235, r: -3 },
+      { name: "trophy", x: P(9) + 250, b: 985, h: 200 },
     ],
     extras: [
+      { x: P(9) + 22, y: 96, html: '<svg width="40" height="40" viewBox="0 0 24 22" style="transform:rotate(-12deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
+      { x: P(9) + 372, y: 62, html: '<svg width="54" height="54" viewBox="0 0 24 22" style="transform:rotate(14deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
+      { x: P(9) + 384, y: 880, html: '<svg width="44" height="44" viewBox="0 0 24 22" style="transform:rotate(10deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
       { x: 150, y: 150, html: '<svg width="26" height="26" viewBox="0 0 24 24"><path fill="#fef5e9" d="M12 0c1 7 4 10 12 12-8 2-11 5-12 12-1-7-4-10-12-12 8-2 11-5 12-12Z"/></svg>' },
       { x: 300, y: 60, html: '<svg width="18" height="18" viewBox="0 0 24 24"><path fill="#f2b134" d="M12 0c1 7 4 10 12 12-8 2-11 5-12 12-1-7-4-10-12-12 8-2 11-5 12-12Z"/></svg>' },
       { x: 330, y: 470, html: '<svg width="20" height="20" viewBox="0 0 24 24"><path fill="#f2b134" d="M12 0c1 7 4 10 12 12-8 2-11 5-12 12-1-7-4-10-12-12 8-2 11-5 12-12Z"/></svg>' },
