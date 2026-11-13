@@ -1,0 +1,153 @@
+# The App Store screenshots, and optionally Promotional Text and What's New, from the Actions tab.
+#
+# Screenshots: the PNGs committed under appstore/screenshots/ (iPhone 6.9" and iPad 13", English
+# and French; scripts/appstore_screenshots.py says which folder feeds which locale and slot).
+# Each slot is REPLACED: what App Store Connect holds there is deleted, then the folder is
+# uploaded in file-name order. Locales and device sizes not listed are left alone.
+#
+# Texts, when the box is ticked: appstore/metadata/<locale>/promotional_text.txt and
+# whats_new.txt, written by the same command as the "App Store release notes" workflow (only
+# those two fields, only where they differ, every locale unless one is named).
+#
+#   check     file counts and pixel sizes. Needs no secrets.
+#   dry-run   what a push would replace or change. Writes nothing to Apple. The default.
+#   push      write it.
+#
+# dry-run and push refuse to run unless the version being prepared is the one named. The
+# product page header is not uploaded here (Asset Library, by hand).
+#
+# Secrets: ASC_KEY_ID, ASC_ISSUER_ID, ASC_PRIVATE_KEY, as for "App Store metadata".
+name: App Store screenshots
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version being prepared in App Store Connect"
+        type: string
+        default: ""
+      action:
+        description: "What to do"
+        type: choice
+        default: dry-run
+        options:
+          - check
+          - dry-run
+          - push
+      texts:
+        description: "Also write Promotional Text and What's New"
+        type: boolean
+        default: false
+      locale:
+        description: "One locale only, e.g. fr-FR (blank = all)"
+        type: string
+        default: ""
+
+# Same group as the other App Store workflows: two runs never write to the account at once.
+concurrency:
+  group: appstore-metadata
+  cancel-in-progress: false
+
+jobs:
+  run:
+    name: ${{ inputs.action }} ${{ inputs.version }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the JWT signer
+        run: pip install --quiet pyjwt cryptography
+
+      - name: Check the secrets are set
+        if: inputs.action != 'check'
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          missing=""
+          for name in ASC_KEY_ID ASC_ISSUER_ID ASC_PRIVATE_KEY; do
+            [ -n "${!name}" ] || missing="$missing $name"
+          done
+          if [ -n "$missing" ]; then
+            echo "Missing repository secret(s):$missing" >&2
+            echo "Settings -> Secrets and variables -> Actions -> New repository secret" >&2
+            exit 1
+          fi
+
+      # Inputs go through the environment, never spliced into the script.
+      - name: Screenshots
+        env:
+          ACTION: ${{ inputs.action }}
+          VERSION: ${{ inputs.version }}
+          LOCALE: ${{ inputs.locale }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          only=()
+          if [ -n "$LOCALE" ]; then
+            only=(--locale "$LOCALE")
+          fi
+          case "$ACTION" in
+            check)   args=(check) ;;
+            dry-run) args=(push --version "$VERSION" --dry-run) ;;
+            push)    args=(push --version "$VERSION") ;;
+            *)       echo "unknown action: $ACTION" >&2; exit 1 ;;
+          esac
+          if [ "$ACTION" != check ] && [ -z "$VERSION" ]; then
+            echo "Give the version being prepared, e.g. 1.12." >&2
+            exit 1
+          fi
+          {
+            echo "### \`$ACTION\` $VERSION: screenshots"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          set +e
+          python3 scripts/appstore_screenshots.py "${args[@]}" "${only[@]}" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          status=${PIPESTATUS[0]}
+          set -e
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
+
+      - name: Promotional Text and What's New
+        if: inputs.texts && inputs.action != 'check'
+        env:
+          ACTION: ${{ inputs.action }}
+          VERSION: ${{ inputs.version }}
+          LOCALE: ${{ inputs.locale }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_PRIVATE_KEY: ${{ secrets.ASC_PRIVATE_KEY }}
+        run: |
+          only=()
+          if [ -n "$LOCALE" ]; then
+            only=(--locale "$LOCALE")
+          fi
+          mode=()
+          if [ "$ACTION" = dry-run ]; then
+            mode=(--dry-run)
+          fi
+          {
+            echo "### \`$ACTION\` $VERSION: Promotional Text and What's New"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          set +e
+          python3 scripts/appstore_metadata.py push \
+            --fields promotional_text,whats_new \
+            --version "$VERSION" \
+            "${mode[@]}" "${only[@]}" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          status=${PIPESTATUS[0]}
+          set -e
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"

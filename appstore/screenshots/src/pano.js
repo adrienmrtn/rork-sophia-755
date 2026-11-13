@@ -240,7 +240,7 @@ PANOS["showcase-trio"] = recolour("-showcase-trio", ["cream", "blue", "pink", "c
 
 // French edition of the retained set: same panels and colours, French copy, French app screens.
 PANOS["showcase-bold-fr"] = Object.assign({}, PANOS["showcase-bold"], { lang: "fr", copy: { "fr-FR": {
-  hero: ["Scrollez moins.<br>Sachez plus."],
+  hero: ["Scrollez moins.<br>Apprenez plus."],
   home: ["Plus malin<br>chaque jour", "Un cours par jour, choisi pour vous"],
   reader: ["Apprenez en<br><b>10\u00a0minutes</b>", "Des cours courts, qui vont à l’essentiel"],
   wall: ["300+ cours.<br>Zéro ennui."],
