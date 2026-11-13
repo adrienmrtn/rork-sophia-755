@@ -87,3 +87,10 @@ the App Store Connect preview before uploading.
 see BRIEF.md). The app has no iPad-specific code, so these are the phone layouts as SwiftUI
 would stretch them; the top tab capsule and the size of the anti-scroll sheet are assumptions.
 Check them on a real iPad or simulator before submitting.
+
+## French edition of the retained set
+
+`node render-pano.cjs showcase-bold-fr` -> `fr-FR/iphone-6.9-showcase-bold/`,
+`node render-ipad.cjs showcase-bold-fr` -> `fr-FR/ipad-13-showcase-bold/`, and
+`header/header-cards-cream-fr.png`. The iPad sets have eight panels: the anti-scroll panel is
+left out there.

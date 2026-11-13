@@ -49,21 +49,26 @@ svg.s { position: absolute; z-index: 1; }
   if (v.startsWith("cards")) {
     // Real English course titles, covers and subjects from content/courses/en.
     const DOT = { Art: "#b06ad6", History: "#e2892b", Science: "#2fae7a", Mythology: "#d2546b", Literature: "#3f7fd8" };
-    const card = (x, y, r, img, subject, title) => add(`<div class="card" style="left:${x}px;top:${y}px;transform:rotate(${r}deg)">
-      <img class="cov" src="../../../ios/Sophia/CourseImages/${img}.jpg"><span class="pill" style="--dot:${DOT[subject]}"><i></i>${subject}</span>
+    const card = (x, y, r, img, subject, title, names) => add(`<div class="card" style="left:${x}px;top:${y}px;transform:rotate(${r}deg)">
+      <img class="cov" src="../../../ios/Sophia/CourseImages/${img}.jpg"><span class="pill" style="--dot:${DOT[subject]}"><i></i>${names ? names[subject] : subject}</span>
       <div class="t">${title}</div></div>`);
     const white = v === "cards";
     add(`<img class="logo" src="${white ? "../../../ios/Sophia/Assets.xcassets/logo_white.imageset/logo_white.png" : "../../../web/public/brand/sophia-logo.png"}" style="top:${white ? 336 : 322}px;height:${white ? 150 : 172}px">`);
-    card(352, 96, -7, "la_joconde", "Art", "Why is the Mona Lisa so famous?");
-    card(420, 470, 5, "giza_pyramids_khufu_khafre_menkaure_wide_view", "History", "Who really built the pyramids?");
-    card(1322, 70, 6, "crab_nebula_supernova_remnant_hubble", "Science", "How does a star die?");
-    card(1262, 455, -5, "la_guerre_de_troie_et_le_cheval_de_bois", "Mythology", "How did a wooden horse bring down Troy?");
-    card(64, 250, 4, "eiffel_tower_1889_universal_exhibition", "Art", "Why did people want to tear down the Eiffel Tower?");
-    card(1616, 250, -4, "apollo_11_aldrin_us_flag_lunar_module_1969", "History", "How did the United States win the race to the Moon?");
-    card(-110, -70, -9, "comment_se_forment_les_eclairs", "Science", "How does lightning form?");
-    card(1790, -90, 8, "la_nuit_etoilee_van_gogh", "Art", "Why does the sky in “The Starry Night” swirl?");
-    card(-130, 600, 7, "dna_double_helix_3d_render_blue", "Science", "What can you actually learn from your DNA?");
-    card(1810, 610, -7, "beethoven_genie_et_surdite", "Art", "How could Beethoven compose as he went deaf?");
+    const fr = new URLSearchParams(location.search).get("lang") === "fr";
+    document.documentElement.lang = fr ? "fr" : "en";
+    const SUBJ = fr ? { Art: "Art", History: "Histoire", Science: "Sciences", Mythology: "Mythologie" } : null;
+    // [x, y, rotation, cover, subject, English title, French title]
+    [[352, 96, -7, "la_joconde", "Art", "Why is the Mona Lisa so famous?", "Pourquoi la Joconde est-elle aussi connue\u00a0?"],
+     [420, 470, 5, "giza_pyramids_khufu_khafre_menkaure_wide_view", "History", "Who really built the pyramids?", "Qui a vraiment construit les pyramides\u00a0?"],
+     [1322, 70, 6, "crab_nebula_supernova_remnant_hubble", "Science", "How does a star die?", "Comment meurt une étoile\u00a0?"],
+     [1262, 455, -5, "la_guerre_de_troie_et_le_cheval_de_bois", "Mythology", "How did a wooden horse bring down Troy?", "Comment un cheval de bois a-t-il fait tomber Troie\u00a0?"],
+     [64, 250, 4, "eiffel_tower_1889_universal_exhibition", "Art", "Why did people want to tear down the Eiffel Tower?", "Pourquoi voulait-on démolir la tour Eiffel\u00a0?"],
+     [1616, 250, -4, "apollo_11_aldrin_us_flag_lunar_module_1969", "History", "How did the United States win the race to the Moon?", "Comment les États-Unis ont-ils gagné la course à la Lune\u00a0?"],
+     [-110, -70, -9, "comment_se_forment_les_eclairs", "Science", "How does lightning form?", "Comment se forment les éclairs\u00a0?"],
+     [1790, -90, 8, "la_nuit_etoilee_van_gogh", "Art", "Why does the sky in “The Starry Night” swirl?", "Pourquoi le ciel de «\u00a0La Nuit étoilée\u00a0» tourbillonne-t-il\u00a0?"],
+     [-130, 600, 7, "dna_double_helix_3d_render_blue", "Science", "What can you actually learn from your DNA?", "Que peut-on vraiment lire dans son ADN\u00a0?"],
+     [1810, 610, -7, "beethoven_genie_et_surdite", "Art", "How could Beethoven compose as he went deaf?", "Comment Beethoven a-t-il pu composer en devenant sourd\u00a0?"],
+    ].forEach(([x, y, r, img, subj, en, f]) => card(x, y, r, img, subj, fr ? f : en, SUBJ));
   } else if (v === "cream") {
     add(`<img class="logo" src="../../../web/public/brand/sophia-logo.png">`);
     add(`<div class="floor"></div>`);

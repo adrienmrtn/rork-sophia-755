@@ -210,8 +210,8 @@ const PANOS = {
     ],
     extras: [
       { x: 0, y: 931.5, z: 0, html: '<div style="width:440px;height:24.5px;background:#1e8e73"></div>' },
-      { x: P(4) + 22, y: 96, html: '<svg width="40" height="40" viewBox="0 0 24 22" style="transform:rotate(-12deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
-      { x: P(4) + 372, y: 62, html: '<svg width="54" height="54" viewBox="0 0 24 22" style="transform:rotate(14deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
+      { x: P(4) + 14, y: 150, html: '<svg width="34" height="34" viewBox="0 0 24 22" style="transform:rotate(-12deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
+      { x: P(4) + 388, y: 146, html: '<svg width="40" height="40" viewBox="0 0 24 22" style="transform:rotate(14deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
       { x: P(4) + 384, y: 880, html: '<svg width="44" height="44" viewBox="0 0 24 22" style="transform:rotate(10deg)"><path fill="#f4a3c4" d="M12 21C5 16 1 12 1 7.500 1 4 3.700 1.500 7 1.500c2 0 3.800 1 5 2.700 1.200-1.700 3-2.700 5-2.700 3.300 0 6 2.500 6 6 0 4.500-4 8.500-11 13.500Z"/></svg>' },
       { x: P(6) + 8, y: 420, html: '<img src="../../../ios/Sophia/Assets.xcassets/avatar_49.imageset/avatar_49.jpg" style="width:96px;height:96px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 4px #2e62c4">' },
       { x: P(6) + 336, y: 560, html: '<img src="../../../ios/Sophia/Assets.xcassets/avatar_42.imageset/avatar_42.jpg" style="width:96px;height:96px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 4px #dc6048">' },
@@ -237,5 +237,31 @@ function recolour(dir, themes, hearts) {
 PANOS["showcase-bold"] = recolour("-showcase-bold", ["cream", "blue", "cream", "navy", "pink", "cream", "coral", "cream", "blue"], "#ffffff");
 // Trio: cream, blue and pink in rotation.
 PANOS["showcase-trio"] = recolour("-showcase-trio", ["cream", "blue", "pink", "cream", "blue", "pink", "cream", "blue", "pink"], "#f4a3c4");
+
+// French edition of the retained set: same panels and colours, French copy, French app screens.
+PANOS["showcase-bold-fr"] = Object.assign({}, PANOS["showcase-bold"], { lang: "fr", copy: { "fr-FR": {
+  hero: ["Scrollez moins.<br>Sachez plus."],
+  home: ["Plus malin<br>chaque jour", "Un cours par jour, choisi pour vous"],
+  reader: ["Apprenez en<br><b>10\u00a0minutes</b>", "Des cours courts, qui vont à l’essentiel"],
+  wall: ["300+ cours.<br>Zéro ennui."],
+  love: ["Les gens adorent<br>Sophia"],
+  // Real five-star reviews from the French App Store (see the note on the "vitrine" set).
+  reviews: [
+    ["«\u00a0Une appli simple d’utilisation et hyper pratique pour se cultiver au quotidien\u00a0!\u00a0»", "gab24738 · App Store", 5],
+    ["«\u00a0Meilleur appli pour devenir plus cultivé et en apprendre plus sur tout mais de manière drôle et pas «\u00a0scolaire\u00a0». […]\u00a0»", "Leo•go · App Store", 5],
+    ["«\u00a0Difficile de se lasser face à la pléthore de cours et d’informations nouvelles à retenir et à apprécier.\u00a0»", "Simon B. · App Store", 5],
+  ],
+  quiz: ["Lisez.<br>Retenez.", "Un quiz à la fin de chaque cours"],
+  duels: ["Battez vos amis", "Des duels de culture générale"],
+  blocker: ["Pas de cours,<br>pas de scroll", "Vos apps restent bloquées jusqu’au cours du jour"],
+  profs: ["Écrit par des<br>professeurs", "De vrais spécialistes, de vrais diplômes"],
+  // French credentials from content/authors.json (shortened for Mark N. Hoffman); illustrated avatars.
+  authors: [
+    ["Angela Bouma", "Professeure d’histoire, Barton Community College", "avatar_17"],
+    ["Mark N. Hoffman", "Docteur en science politique, professeur à l’université Saint Xavier", "avatar_08"],
+    ["Stacy Jankowski", "Docteure en sciences biomédicales, Boston University", "avatar_05"],
+    ["Simon Lea", "Docteur en philosophie, chercheur indépendant", "avatar_02"],
+  ],
+} } });
 
 if (typeof module !== "undefined") module.exports = { PANOS };
