@@ -31,7 +31,7 @@ export default async function OnboardingDataPage({ searchParams }: PageProps<"/a
     <>
       <AdminHeader session={session} active="data" />
       <main className={`${container} flex flex-1 flex-col gap-6 pt-8 pb-20`}>
-        <AdminTitle title="Data" lead="What people do in the app: paywalls and onboarding." />
+        <AdminTitle title="Data" lead="What people do in the app: paywalls, onboarding, usage, friends and feedback." />
         <DataNav active="onboarding" filters={filters} languages={d?.languages ?? []} />
 
         {error && (

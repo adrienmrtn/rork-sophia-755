@@ -285,6 +285,74 @@ const mockCampaign = {
   updated_at: "2026-11-08T17:30:00Z",
 };
 
+/** Des amis et des invitations plausibles, pour regarder /admin/data/social hors ligne. */
+function socialDashboard(days: number) {
+  const today = Date.UTC(2026, 10, 13);
+  const day = (i: number) => new Date(today - (days - 1 - i) * 86_400_000).toISOString().slice(0, 10);
+  const series = Array.from({ length: days }, (_, i) => ({ day: day(i), requests: Math.round(620 * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9)))), friendships: Math.round(410 * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9)))) }));
+  const requests = series.reduce((t, p) => t + p.requests, 0);
+  const invites = Math.round(requests * 0.9);
+  return {
+    days,
+    from: day(0),
+    friends: { requests, senders: Math.round(requests * 0.62), accepted: Math.round(requests * 0.66), declined: Math.round(requests * 0.03), pending: Math.round(requests * 0.31), new_friendships: Math.round(requests * 0.66), total_friendships: 48200, users_with_friends: 61400, users_with_3_friends: 9300, series },
+    duel_invites: { sent: invites, by_status: [["accepted", 0.58], ["expired", 0.17], ["cancelled", 0.12], ["busy", 0.08], ["declined", 0.05]].map(([status, share]) => ({ status, count: Math.round(invites * Number(share)) })) },
+    referrals: { new: Math.round(requests * 0.11), inviters: Math.round(requests * 0.08), total: 5400 },
+    follows: { new: Math.round(requests * 1.4), followers: Math.round(requests * 0.5), total: 88000, top_creators: [["marie-dupont", "Marie Dupont", 0.21], ["simon-lea", "Simon Lea", 0.17], ["rana-abdalla", "Rana Abdalla", 0.14], ["kate-waddams", "Kate Waddams", 0.11]].map(([creator, name, share]) => ({ creator, name, new: Math.round(requests * 1.4 * Number(share)) })) },
+  };
+}
+
+/** Un usage plausible, pour regarder /admin/data/usage hors ligne. */
+function usageDashboard(days: number) {
+  const today = Date.UTC(2026, 10, 13);
+  const day = (i: number) => new Date(today - (days - 1 - i) * 86_400_000).toISOString().slice(0, 10);
+  const wave = (i: number, base: number) => Math.round(base * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9))));
+  const series = Array.from({ length: days }, (_, i) => ({ day: day(i), active_users: wave(i, 18500), course_opens: wave(i, 31000), pages_read: wave(i, 96000), duels: wave(i, 7400) }));
+  const sum = (key: "active_users" | "course_opens" | "pages_read" | "duels") => series.reduce((t, p) => t + p[key], 0);
+  const counts = (share: number, correct: number) => ({ user_days: Math.round(sum("active_users") * share), course_opens: Math.round(sum("course_opens") * share), pages_read: Math.round(sum("pages_read") * share), completes: Math.round(sum("course_opens") * share * 0.41), likes: Math.round(sum("course_opens") * share * 0.07), quiz_answers: Math.round(sum("course_opens") * share * 1.8), quiz_correct: Math.round(sum("course_opens") * share * 1.8 * correct) });
+  const all = counts(1, 0.68);
+  const courses: [string, string, number, number][] = [
+    ["course_42_pourquoi_reve_t_on", "Pourquoi rêve-t-on ?", 0.031, 0.52], ["course_1_la_naissance_de_l_islam_622", "Comment l'islam est-il né en 622 ?", 0.027, 0.44],
+    ["course_150_la_nuit_etoilee_van_gogh", "Pourquoi le ciel de « La Nuit étoilée » tourbillonne-t-il ?", 0.024, 0.49], ["course_121_la_renaissance_italienne", "Pourquoi la Renaissance est-elle née en Italie ?", 0.021, 0.38],
+    ["course_77_qu_est_ce_qu_un_trou_noir", "Qu'est-ce qu'un trou noir ?", 0.019, 0.46], ["course_12_la_peste_noire_en_europe", "Comment la peste noire a-t-elle changé l'Europe ?", 0.017, 0.41],
+    ["course_203_le_mythe_de_sisyphe_camus", "Pourquoi faut-il imaginer Sisyphe heureux ?", 0.014, 0.33], ["course_88_la_joconde", "Pourquoi la Joconde est-elle si célèbre ?", 0.013, 0.47],
+  ];
+  const questions: [string, string, string, number, number][] = [
+    ["course_122_la_naissance_de_l_impressionnisme_q2", "Comment l'impressionnisme est-il né contre le Salon ?", "Quel tableau de Manet scandalise le Salon des Refusés en 1863 ?", 1840, 0.21],
+    ["course_12_la_peste_noire_en_europe_q4", "Comment la peste noire a-t-elle changé l'Europe ?", "Quelle part de la population européenne meurt entre 1347 et 1352 ?", 2610, 0.27],
+    ["course_77_qu_est_ce_qu_un_trou_noir_q3", "Qu'est-ce qu'un trou noir ?", "Comment appelle-t-on la limite au-delà de laquelle rien ne s'échappe ?", 3120, 0.31],
+    ["course_203_le_mythe_de_sisyphe_camus_q1", "Pourquoi faut-il imaginer Sisyphe heureux ?", "Vrai ou faux : pour Camus, l'absurde conduit au renoncement.", 1490, 0.34],
+    ["course_1_la_naissance_de_l_islam_622_q5", "Comment l'islam est-il né en 622 ?", "Dans quelle ville Muhammad s'installe-t-il après l'Hégire ?", 4050, 0.38],
+  ];
+  return {
+    days,
+    from: day(0),
+    min_answers: 20,
+    updated_at: "2026-11-13T09:45:00Z",
+    languages: ["de", "en", "es", "fr", "it", "pt"],
+    totals: { ...all, sessions: Math.round(all.user_days * 1.7), saves: Math.round(all.likes * 0.6), shares: Math.round(all.likes * 0.2) },
+    series,
+    by_language: [["fr", 0.54, 0.7], ["en", 0.21, 0.66], ["es", 0.12, 0.65], ["de", 0.07, 0.69], ["it", 0.04, 0.64], ["pt", 0.02, 0.62]].map(([lang, share, correct]) => ({ lang, ...counts(Number(share), Number(correct)) })),
+    by_platform: [{ platform: "android", ...counts(0.24, 0.66) }, { platform: "ios", ...counts(0.76, 0.69) }],
+    top_courses: courses.map(([course_id, title, share, finished]) => { const opens = Math.round(all.course_opens * share); return { course_id, title, opens, readers: Math.round(opens * 0.86), pages_read: Math.round(opens * 3.4), completes: Math.round(opens * finished), likes: Math.round(opens * 0.08) }; }),
+    quiz: { questions_seen: 2140, questions_ranked: 1675, hardest: questions.map(([question_id, title, question, answers, rate]) => ({ question_id, course_id: question_id.replace(/_q\d+$/, ""), answers: Math.round(answers * (days / 28)), correct: Math.round(answers * (days / 28) * rate), rate, title, question })) },
+    duels: { by_kind: [{ kind: "friend", started: Math.round(sum("duels") * 0.18), finished: Math.round(sum("duels") * 0.15), abandoned: Math.round(sum("duels") * 0.03), player_days: Math.round(sum("duels") * 0.09) }, { kind: "match", started: Math.round(sum("duels") * 0.82), finished: Math.round(sum("duels") * 0.61), abandoned: Math.round(sum("duels") * 0.21), player_days: Math.round(sum("duels") * 0.3) }], unknown_platform: 0 },
+  };
+}
+
+/** Des retours plausibles, pour regarder /admin/data/feedback hors ligne. */
+function feedbackDashboard(days: number) {
+  const item = (id: number, created_at: string, category: string, message: string, platform: string, lang: string, extra: Partial<{ has_email: boolean; is_premium: boolean }> = {}) => ({ id: `f${id}`, created_at, category, message, has_email: false, lang, platform, app_version: platform === "ios" ? "2" : "1.0.7", os_version: platform === "ios" ? "27.2" : "15", device: platform === "ios" ? "iPhone" : "Pixel 8", is_premium: false, ...extra });
+  const items = [
+    item(1, "2026-11-13T08:12:00Z", "bug", "Le son de la narration se coupe quand je verrouille l'écran, il faut relancer le cours.", "ios", "fr", { has_email: true, is_premium: true }),
+    item(2, "2026-11-13T07:40:00Z", "feature", "Would love a dark mode for reading at night.", "android", "en"),
+    item(3, "2026-11-12T21:05:00Z", "translation", "En el curso sobre Van Gogh, «remolino» aparece dos veces mal escrito.", "ios", "es"),
+    item(4, "2026-11-12T18:30:00Z", "content", "Un cours sur l'histoire du Japon serait génial !\nMerci pour l'app, je l'utilise tous les matins.", "ios", "fr", { is_premium: true }),
+    item(5, "2026-11-12T09:02:00Z", "idea", "Pouvoir défier un ami sur un cours précis.", "android", "fr", { has_email: true }),
+  ];
+  return { days, total: 128, languages: ["en", "es", "fr"], by_category: [{ category: "bug", count: 41 }, { category: "feature", count: 33 }, { category: "content", count: 24 }, { category: "idea", count: 16 }, { category: "translation", count: 9 }, { category: "other", count: 5 }], items };
+}
+
 /** Un onboarding plausible, pour regarder /admin/data/onboarding hors ligne. */
 function onboardingDashboard(days: number) {
   const today = Date.UTC(2026, 10, 13);
@@ -387,6 +455,12 @@ function resolve(kind: "from" | "rpc", name: string, args: unknown[], ops: Op[])
           },
           error: null,
         };
+      case "admin_social_dashboard":
+        return { data: socialDashboard(Number(p.p_days ?? 28)), error: null };
+      case "admin_usage_dashboard":
+        return { data: usageDashboard(Number(p.p_days ?? 28)), error: null };
+      case "admin_feedback_dashboard":
+        return { data: feedbackDashboard(Number(p.p_days ?? 28)), error: null };
       case "admin_onboarding_dashboard":
         return { data: onboardingDashboard(Number(p.p_days ?? 28)), error: null };
       case "admin_paywall_dashboard":

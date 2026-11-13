@@ -172,6 +172,40 @@ dans `offering`.
   `subscription_events` (RevenueCat, production seulement, en dollars) : ils suivent la
   période et la plateforme, pas la langue, que RevenueCat ne connaît pas.
 
+### Synthèses d'usage et tableaux de bord
+
+Migration `20261113060000_daily_usage_stats.sql`. Quatre tables gardées sans limite,
+recalculées toutes les heures pour le jour en cours et les deux précédents :
+
+- `public.daily_usage_stats` : par jour UTC, plateforme et langue, les utilisateurs actifs,
+  les sessions, les cours ouverts, les pages lues (`section_view`), les cours terminés, les
+  likes, enregistrements, partages, et les réponses de quiz (dont les bonnes).
+- `public.daily_course_usage` : la même chose par cours (`daily_course_stats`, qui nourrit le
+  tableau de bord des créateurs, ne connaît pas la plateforme).
+- `public.daily_quiz_question_stats` : réponses et bonnes réponses par question
+  (`quiz_answer`, tous contextes).
+- `public.daily_duel_stats` : duels lancés, terminés et abandonnés, par type (`match` :
+  adversaire tiré par le jeu ; `friend` : entre amis, compté pour celui qui lance). Les duels
+  ne viennent pas d'événements de l'app mais des tables du jeu (`duel_matches`,
+  `duel_friend_matches`) : le serveur connaît chaque partie. La plateforme est celle des
+  événements de l'utilisateur ce jour-là, `unknown` quand son app n'en envoie pas.
+
+Pages de l'espace équipe du site, chacune servie par une fonction réservée à l'équipe :
+
+| Page | Fonction | Contenu |
+| --- | --- | --- |
+| `/admin/data` | `admin_paywall_dashboard` | paywalls, tests A/B, revenus |
+| `/admin/data/onboarding` | `admin_onboarding_dashboard` | entonnoir, réponses |
+| `/admin/data/usage` | `admin_usage_dashboard` | lecture, cours les plus ouverts, questions les plus ratées (à partir de 20 réponses), duels |
+| `/admin/data/social` | `admin_social_dashboard` | demandes d'amis, amitiés, invitations en duel, parrainage, créateurs suivis |
+| `/admin/data/feedback` | `admin_feedback_dashboard` | les retours de `app_feedback` |
+
+`admin_social_dashboard` (migration `20261113070000_admin_social_dashboard.sql`) lit
+directement `friend_requests`, `friendships`, `duel_invites`, `referrals` et `follows` : ces
+tables sont gardées sans limite mais ne portent ni plateforme ni langue, la page ne suit donc
+que la période. Les titres de cours et les énoncés de quiz sont lus dans `course_contents` et
+`quizzes`, dans la langue filtrée, à défaut en français.
+
 ## Abonnements côté serveur
 
 - `public.subscription_events` : les webhooks RevenueCat (fonction `revenuecat-webhook`,

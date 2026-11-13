@@ -36,7 +36,7 @@ export default async function DataPage({ searchParams }: PageProps<"/admin/data"
     <>
       <AdminHeader session={session} active="data" />
       <main className={`${container} flex flex-1 flex-col gap-6 pt-8 pb-20`}>
-        <AdminTitle title="Data" lead="What people do in the app: paywalls and onboarding." />
+        <AdminTitle title="Data" lead="What people do in the app: paywalls, onboarding, usage, friends and feedback." />
 
         <DataNav active="paywalls" filters={filters} languages={languages} />
 
