@@ -79,3 +79,11 @@ English course titles and covers, on blue or on cream),
 illustrated objects). The logo and the main figures stay in the middle 3:2, which is roughly
 what a phone shows; check the exact size and crop against Apple's current specifications and
 the App Store Connect preview before uploading.
+
+## iPad set (`en-US/ipad-13-showcase-bold/`)
+
+`node render-ipad.cjs [variant]` renders the same nine panels at 2064 x 2752 (iPad 13") from
+`src/pano-ipad.html`, with the app screens in their iPad variant (`?device=ipad`, 768 x 1024 pt,
+see BRIEF.md). The app has no iPad-specific code, so these are the phone layouts as SwiftUI
+would stretch them; the top tab capsule and the size of the anti-scroll sheet are assumptions.
+Check them on a real iPad or simulator before submitting.
