@@ -72,7 +72,9 @@ rotation); the content is the same. Their panel colours are the two lists at the
 
 ## Product page header (`header/`)
 
-`node render-header.cjs` renders two proposals at 3840 x 1646 (21:9) from `src/header.html`:
+`node render-header.cjs` renders four proposals at 3840 x 1646 (21:9) from `src/header.html`:
+`header-cards.png` and `header-cards-cream.png` (the logo among tilted course cards with real
+English course titles and covers, on blue or on cream),
 `header-cream.png` (colour logo, the before / after pair) and `header-blue.png` (white logo,
 illustrated objects). The logo and the main figures stay in the middle 3:2, which is roughly
 what a phone shows; check the exact size and crop against Apple's current specifications and
