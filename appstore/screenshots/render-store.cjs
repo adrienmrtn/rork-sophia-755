@@ -38,6 +38,7 @@ async function panels(browser, file, v, w, h, scale, n, dir) {
     const nPad = V.panels.filter((p) => p.text !== "blocker").length;
     await panels(browser, "pano-ipad.html", v, 516, 688, 4, nPad, path.join(root, "ipad-13-store"));
     const page = await browser.newPage({ viewport: { width: 1920, height: 823 }, deviceScaleFactor: 2 });
+    page.on("pageerror", (e) => { console.error("page error:", e.message); process.exitCode = 1; });
     await page.goto(url("header.html", "v=cards-cream&lang=" + STORE_SOURCES[locale].lang), { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);
     await page.waitForTimeout(300);
