@@ -69,6 +69,11 @@ img { display: block; }
 .k-tabbar .tab.on { color: var(--accent); }
 .k-tabbar svg { width: 27px; height: 27px; display: block; }
 
+/* ---- Android variant: add ?os=android. Only the status bar changes (clock at the left edge,
+   no Dynamic Island gap); the screens themselves are the iOS ones. ---- */
+html.android .k-status { padding-left: 26px; padding-right: 22px; }
+html.android .k-status .time { font-weight: 500; }
+
 /* ---- iPad variant: add ?device=ipad to a screen. 768 x 1024 pt (3:4). The system tab bar of a
    SwiftUI TabView sits at the top on iPadOS 18+, as a floating capsule of titles. ---- */
 html.ipad { --safe-top: 24px; --safe-bottom: 20px; --tabbar: 0px; --ipad-tabs: 54px; }

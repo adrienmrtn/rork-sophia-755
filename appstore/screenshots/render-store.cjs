@@ -1,5 +1,6 @@
 // Render the store assets of every locale (or the ones named): iPhone 6.9", iPad 13", header.
 //   node render-store.cjs [locale ...]
+//   node render-store.cjs --android [locale ...]   -> <locale>/play-phone/, <locale>/play-tablet/ (Google Play)
 //   -> <locale>/iphone-6.9-store/NN.png, <locale>/ipad-13-store/NN.png, <locale>/header-store.png
 // These folders are not committed: the "App Store screenshots" workflow renders them itself.
 const { chromium } = require("playwright");
@@ -28,14 +29,24 @@ async function panels(browser, file, v, w, h, scale, n, dir) {
   await page.close();
 }
 (async () => {
-  const locales = process.argv.slice(2).length ? process.argv.slice(2) : STORE_LOCALES;
+  const args = process.argv.slice(2);
+  const android = args.includes("--android");
+  const named = args.filter((a) => a !== "--android");
+  const locales = named.length ? named : STORE_LOCALES;
   const browser = await chromium.launch();
   for (const locale of locales) {
     const v = "store-" + locale, V = PANOS[v];
     if (!V) { console.error("no store set for", locale); process.exitCode = 1; continue; }
     const root = path.join(__dirname, locale);
-    await panels(browser, "pano.html", v, 440, 956, 3, V.panels.length, path.join(root, "iphone-6.9-store"));
     const nPad = V.panels.filter((p) => p.text !== "blocker").length;
+    if (android) {
+      // Google Play: phone 1320 x 2346 (9:16), tablets 2064 x 2752, both without the anti-scroll panel.
+      await panels(browser, "pano.html", v + "&os=android", 440, 782, 3, nPad, path.join(root, "play-phone"));
+      await panels(browser, "pano-ipad.html", v + "&os=android", 516, 688, 4, nPad, path.join(root, "play-tablet"));
+      console.log(locale, nPad, "phone,", nPad, "tablet (Google Play)");
+      continue;
+    }
+    await panels(browser, "pano.html", v, 440, 956, 3, V.panels.length, path.join(root, "iphone-6.9-store"));
     await panels(browser, "pano-ipad.html", v, 516, 688, 4, nPad, path.join(root, "ipad-13-store"));
     const page = await browser.newPage({ viewport: { width: 1920, height: 823 }, deviceScaleFactor: 2 });
     page.on("pageerror", (e) => { console.error("page error:", e.message); process.exitCode = 1; });

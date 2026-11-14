@@ -92,15 +92,25 @@ body.loud .prof .c { font-size: 16px; }
 <script src="pano.js"></script>
 <script>
   const q = new URLSearchParams(location.search);
-  const V = PANOS[q.get("v") || "penche"];
+  // ?os=android: the Google Play phone set. 9:16 instead of 19.5:9 (panels 782 pt high), no
+  // anti-scroll panel (the Android app does not block apps), characters only on the opening
+  // panel, and reviews signed without a store name (they were written on the App Store).
+  const ANDROID = q.get("os") === "android";
+  const H = ANDROID ? 782 : 956, DROP = H - 956;
+  let V = PANOS[q.get("v") || "penche"];
+  if (ANDROID) {
+    V = withoutPanel(V, V.panels.findIndex((p) => p.text === "blocker"));
+    V = Object.assign({}, V, { people: V.people.filter((p) => p.x < 440), extras: V.extras.filter((x) => x.x < 440 || x.y < 700) });
+    document.body.style.height = H + "px";
+  }
   const locale = q.get("locale") || "fr-FR";
   const T = V.copy[locale] || Object.values(V.copy)[0];
-  const Q = V.lang ? "?lang=" + V.lang : "";   // language of the app screens inside the phones
+  const Q = (V.lang ? "?lang=" + V.lang : "?") + (ANDROID ? "&os=android" : "");   // language of the app screens inside the phones
   document.body.style.width = V.panels.length * 440 + "px";
   if (V.titles) document.body.classList.add(V.titles);
   V.panels.forEach((p, i) => {
     const el = document.createElement("div");
-    el.className = "panel " + p.theme; el.style.left = i * 440 + "px";
+    el.className = "panel " + p.theme; el.style.left = i * 440 + "px"; el.style.height = H + "px";
     let html = p.logo === "brand" ? `<img class="logo brand" src="../../../web/public/brand/sophia-logo.png">`
       : p.logo ? `<img class="logo ${p.logo === "big" ? "big" : ""}" src="../../../ios/Sophia/Assets.xcassets/logo_white.imageset/logo_white.png">` : "";
     if (p.text) { const [h, sub] = T[p.text]; html += `<div class="text ${p.cls || ""}"><h1>${h}</h1>${sub ? `<p>${sub}</p>` : ""}</div>`; }
@@ -114,12 +124,12 @@ body.loud .prof .c { font-size: 16px; }
     }
     if (p.reviews) {
       const star = '<svg width="19" height="19" viewBox="0 0 24 24"><path fill="#f2a31b" d="M12 1.800l3.100 6.600 7.100.900-5.200 5 1.300 7.100L12 18l-6.300 3.400 1.300-7.100-5.200-5 7.100-.900L12 1.800Z"/></svg>';
-      html += `<div class="reviews">${T[p.reviews].map(([quote, who, n]) => `<div class="review"><div class="stars">${star.repeat(n || 5)}</div><q>${quote}</q><div class="who">${who}</div></div>`).join("")}</div>`;
+      html += `<div class="reviews">${T[p.reviews].map(([quote, who, n]) => `<div class="review"><div class="stars">${star.repeat(n || 5)}</div><q>${quote}</q><div class="who">${ANDROID ? who.replace(" · App Store", "") : who}</div></div>`).join("")}</div>`;
     }
     el.innerHTML = html; document.body.appendChild(el);
   });
   (V.extras || []).forEach((x) => {
-    const el = document.createElement("div"); el.className = "extra"; el.style.left = x.x + "px"; el.style.top = x.y + "px"; if (x.z !== undefined) el.style.zIndex = x.z; el.innerHTML = x.html; document.body.appendChild(el);
+    const el = document.createElement("div"); el.className = "extra"; el.style.left = x.x + "px"; el.style.top = x.y + (x.y > 700 ? DROP : 0) + "px"; if (x.z !== undefined) el.style.zIndex = x.z; el.innerHTML = x.html; document.body.appendChild(el);
   });
   // phones: cx, cy = centre on the wide canvas; s = scale; r = rotation in degrees
   V.phones.forEach((p) => {
@@ -134,7 +144,7 @@ body.loud .prof .c { font-size: 16px; }
     const el = document.createElement("img"); el.className = "person"; el.src = `people/${p.name}.png`;
     el.style.height = p.h + "px"; el.style.zIndex = p.z || 3;
     el.onload = () => { const w = el.naturalWidth * p.h / el.naturalHeight; el.style.left = p.x - w / 2 + "px"; };
-    el.style.top = p.b - p.h + "px"; el.style.transform = `rotate(${p.r || 0}deg) scaleX(${p.flip ? -1 : 1})`;
+    el.style.top = p.b - p.h + DROP + "px"; el.style.transform = `rotate(${p.r || 0}deg) scaleX(${p.flip ? -1 : 1})`;
     document.body.appendChild(el);
   });
   const MARGIN = 25;
@@ -155,7 +165,7 @@ body.loud .prof .c { font-size: 16px; }
     document.querySelectorAll(".reviews").forEach((r) => {
       const top = r.parentElement.getBoundingClientRect().top;
       let size = parseFloat(getComputedStyle(r.querySelector("q")).fontSize);
-      while (r.getBoundingClientRect().bottom - top > 800 && size > 13) {
+      while (r.getBoundingClientRect().bottom - top > (ANDROID ? H - 26 : 800) && size > 13) {
         size -= 0.5; r.querySelectorAll("q").forEach((q) => { q.style.fontSize = size + "px"; });
       }
     });

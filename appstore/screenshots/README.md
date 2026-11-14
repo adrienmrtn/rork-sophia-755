@@ -112,3 +112,13 @@ to the run).
   locales have eight iPhone and seven iPad panels.
 - Needs the Noto Sans fonts (`fonts-noto-core`, `fonts-noto-cjk`) for Greek, Cyrillic, Arabic,
   Hebrew and Japanese, and Inter for the status bar.
+
+## Google Play
+
+`node render-store.cjs --android [locale ...]` renders the Play variant of the same set:
+`<locale>/play-phone/` (1320 x 2346, 9:16) and `<locale>/play-tablet/` (2064 x 2752), eight
+panels each. It differs from the App Store set in four ways: shorter phone panels, no anti-scroll
+panel (the Android app does not block apps), characters only on the opening panel, and reviews
+signed with the reviewer's name alone (they were written on the App Store, so they are not
+labelled "Google Play"). The app screens inside are the iOS ones with an Android-style status
+bar. `scripts/play_screenshots.py` and the "Google Play screenshots" workflow upload them.
