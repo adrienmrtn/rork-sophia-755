@@ -60,6 +60,7 @@ import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.components.streakWeekFirstDay
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.ui.theme.SophiaAppearance
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 
@@ -115,7 +116,10 @@ fun ProgressScreen(
         // L'illustration papier du site, en bandeau bord à bord ; le retour posé dessus.
         Box(modifier = Modifier.fillMaxWidth().height(220.dp)) {
             Image(
-                painter = painterResource(R.drawable.progress_hero),
+                // La même illustration sur fond nuit quand l'app est en mode nuit.
+                painter = painterResource(
+                    if (SophiaAppearance.isDark) R.drawable.progress_hero_night else R.drawable.progress_hero,
+                ),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize(),
