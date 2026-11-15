@@ -3,6 +3,7 @@ package app.rork.sophia.ui.profile
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -28,6 +29,9 @@ import androidx.compose.material.icons.filled.ArrowOutward
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.outlined.CloudDownload
+import androidx.compose.material.icons.outlined.BrightnessMedium
+import androidx.compose.material.icons.outlined.DarkMode
+import androidx.compose.material.icons.outlined.LightMode
 import androidx.compose.material.icons.outlined.CreditCard
 import androidx.compose.material.icons.outlined.DeleteForever
 import androidx.compose.material.icons.outlined.Download
@@ -91,7 +95,9 @@ import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.newgen.AvatarCircle
+import app.rork.sophia.ui.theme.AppearancePreference
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -315,6 +321,21 @@ fun SettingsScreen(
                     )
                     ProfileRowChevron()
                 }
+            }
+        }
+
+        // L'apparence : clair, nuit ou automatique (le mode du téléphone), comme sur iOS.
+        SettingsSection(StringStore.text(context, "settings.section.appearance", language), nextOrder()) {
+            AppearancePicker(language = language, onPick = { haptics.select() })
+            if (SophiaAppearance.preference == AppearancePreference.SYSTEM) {
+                Text(
+                    text = StringStore.text(context, "settings.appearance.hint", language),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 12.sp,
+                    lineHeight = 16.sp,
+                    color = DS.inkSecondary,
+                )
             }
         }
 
@@ -628,6 +649,62 @@ private fun openPlaySubscriptions(context: android.content.Context, productId: S
     }
     val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
     runCatching { context.startActivity(intent) }
+}
+
+/** Clair / Nuit / Automatique : trois cases dans une pastille, la case choisie en relief. */
+@Composable
+private fun AppearancePicker(language: AppLanguage, onPick: () -> Unit) {
+    val context = LocalContext.current
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(16.dp))
+            .background(DS.surfaceMuted)
+            .padding(4.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        AppearancePreference.entries.forEach { option ->
+            val isSelected = SophiaAppearance.preference == option
+            val shape = RoundedCornerShape(14.dp)
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(shape)
+                    .background(if (isSelected) DS.surface else Color.Transparent)
+                    .border(1.dp, if (isSelected) DS.hairline else Color.Transparent, shape)
+                    .pressable(onClick = {
+                        onPick()
+                        SophiaAppearance.setPreference(context, option)
+                    })
+                    .padding(vertical = 12.dp, horizontal = 4.dp)
+                    .semantics {
+                        role = Role.RadioButton
+                        selected = isSelected
+                    },
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                Icon(
+                    imageVector = when (option) {
+                        AppearancePreference.LIGHT -> Icons.Outlined.LightMode
+                        AppearancePreference.DARK -> Icons.Outlined.DarkMode
+                        AppearancePreference.SYSTEM -> Icons.Outlined.BrightnessMedium
+                    },
+                    contentDescription = null,
+                    tint = if (isSelected) DS.ink else DS.inkSecondary,
+                    modifier = Modifier.size(20.dp),
+                )
+                Text(
+                    text = StringStore.text(context, option.labelKey, language),
+                    fontFamily = PlusJakartaSans,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 12.sp,
+                    color = if (isSelected) DS.ink else DS.inkSecondary,
+                    maxLines = 1,
+                )
+            }
+        }
+    }
 }
 
 /** Un groupe des réglages : son sur-titre en petites capitales, puis son contenu, révélés ensemble. */

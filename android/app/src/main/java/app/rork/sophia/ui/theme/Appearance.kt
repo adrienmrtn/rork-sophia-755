@@ -45,15 +45,10 @@ object SophiaAppearance {
     /** Screens on screen that are designed light-only (onboarding, paywalls), as on iOS. */
     private var forcedLightScreens by mutableIntStateOf(0)
 
-    /**
-     * « Elevate arrondi » is light-only for now (there is no night mock-up), as on iOS: the
-     * stored preference is kept, it is simply not read. Restoring the expression below is all
-     * it takes to bring the night palette back.
-     *
-     * `forcedLightScreens == 0 && (preference == DARK || (preference == SYSTEM && systemDark))`
-     */
+    /** Night when the reader asked for it (or the phone, on Automatic), unless a light-only screen is up. */
     val isDark: Boolean
-        get() = false
+        get() = forcedLightScreens == 0 &&
+            (preference == AppearancePreference.DARK || (preference == AppearancePreference.SYSTEM && systemDark))
 
     /** Read once at launch, before the first frame, so a dark reader never sees a light flash. */
     fun load(context: Context) {
