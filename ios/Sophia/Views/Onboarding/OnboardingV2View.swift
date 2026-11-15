@@ -200,6 +200,9 @@ struct OnboardingV2View: View {
         }
         // Clair uniquement : les jetons `DS` se résolvent en clair même si l'app est en mode nuit.
         .environment(\.colorScheme, .light)
+        // Les paywalls de l'onboarding et les feuilles qu'ils ouvrent (conditions,
+        // confidentialité) restent clairs eux aussi : voir `sophiaPaywallScheme()`.
+        .environment(\.sophiaLightOnlyContext, true)
         .preferredColorScheme(.light)
         // Ressort à amortissement critique : l'écran arrive à sa place sans la dépasser.
         .animation(.spring(response: 0.5, dampingFraction: 1), value: stepIndex)

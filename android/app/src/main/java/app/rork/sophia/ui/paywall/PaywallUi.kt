@@ -66,6 +66,7 @@ import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.uppercaseInApp
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.SophiaTypography
 import kotlinx.coroutines.delay
 
@@ -185,7 +186,7 @@ fun PaywallCourseHero(courseId: String, modifier: Modifier = Modifier) {
                 .align(Alignment.BottomEnd)
                 .size(32.dp)
                 .clip(CircleShape)
-                .background(Color.White)
+                .background(if (SophiaAppearance.isDark) DSLegacy.canvas else Color.White)
                 .padding(2.dp)
                 .clip(CircleShape)
                 .background(DSLegacy.accent),

@@ -30,8 +30,8 @@ struct PaywallLegalRow: View {
         .multilineTextAlignment(.center)
         .minimumScaleFactor(0.85)
         .frame(maxWidth: .infinity)
-        .sheet(isPresented: $showTerms) { TermsView().sophiaLightOnly() }
-        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaLightOnly() }
+        .sheet(isPresented: $showTerms) { TermsView().sophiaPaywallScheme() }
+        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaPaywallScheme() }
     }
 
     @ViewBuilder
@@ -169,7 +169,8 @@ struct SophiaStandardPaywall: View {
                         .foregroundStyle(.white)
                         .frame(width: 32, height: 32)
                         .background(DS.accent, in: Circle())
-                        .overlay { Circle().strokeBorder(.white, lineWidth: 2) }
+                        // Le liseré est de la couleur de la page (blanc le jour).
+                        .overlay { Circle().strokeBorder(DS.canvas, lineWidth: 2) }
                         .offset(x: 8, y: 8)
                 }
         } else {

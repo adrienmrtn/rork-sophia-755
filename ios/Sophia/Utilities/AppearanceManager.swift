@@ -106,7 +106,8 @@ final class AppearanceManager {
 /// the window's `preferredColorScheme`. Apply this on every post-onboarding modal
 /// so Night / Automatic actually reach Settings, Course, Account, legal, etc.
 ///
-/// Paywalls and onboarding stay forced light — do not attach this there.
+/// The onboarding and the discount paywall stay forced light — do not attach this there.
+/// The other paywalls go through `sophiaPaywallScheme()`, which picks between the two.
 struct SophiaColorSchemeModifier: ViewModifier {
     @Environment(AppearanceManager.self) private var appearance
 
@@ -131,7 +132,7 @@ struct SophiaColorSchemeModifier: ViewModifier {
 /// is what actually flips `DS.*` adaptive tokens on Settings and other covers.
 private struct SophiaInterfaceStyleBridge: UIViewRepresentable {
     var style: UIUserInterfaceStyle
-    /// `true` for a light-only presentation (paywall, onboarding sheet): the bridge then
+    /// `true` for a light-only presentation (discount paywall, onboarding sheet): the bridge then
     /// only ever touches a controller that is itself presented, and registers it in
     /// `SophiaLightPin` so the presenter's own bridge leaves it alone.
     var pinsLightPresentation: Bool = false
@@ -164,7 +165,8 @@ private struct SophiaInterfaceStyleBridge: UIViewRepresentable {
                 if controller.overrideUserInterfaceStyle != style {
                     controller.overrideUserInterfaceStyle = style
                 }
-                // A paywall presented from a Night screen pins itself light: do not flip it.
+                // A light-only cover (the discount paywall) presented from a Night screen
+                // pins itself light: do not flip it.
                 if let presented = controller.presentedViewController,
                    !SophiaLightPin.contains(presented),
                    presented.overrideUserInterfaceStyle != style {
@@ -209,7 +211,8 @@ private enum SophiaLightPin {
     }
 }
 
-/// Light-only screens: the paywalls and the onboarding, which have no Night drawing.
+/// Light-only screens: the onboarding, the training mini-onboarding and the discount paywall,
+/// which have no Night drawing.
 ///
 /// - `environment(\.colorScheme, .light)` makes every `DS` / `DSLegacy` token inside resolve
 ///   to its light value at once, whatever the hosting controller's traits are.
@@ -217,12 +220,16 @@ private enum SophiaLightPin {
 ///   sheet chrome, UIKit-backed controls), which does not inherit the window scheme and is
 ///   otherwise flipped to Night by the presenter's `sophiaColorScheme()`.
 ///
+/// - `sophiaLightOnlyContext` tells what is drawn or presented from inside (a paywall step,
+///   the Terms sheet of a legal row) that it must stay light too: see `sophiaPaywallScheme()`.
+///
 /// Apply it to the content of the `sheet` / `fullScreenCover`, never to a tab or to a screen
 /// that uses `sophiaColorScheme()`.
 struct SophiaLightOnlyModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .environment(\.colorScheme, .light)
+            .environment(\.sophiaLightOnlyContext, true)
             .preferredColorScheme(.light)
             .background {
                 SophiaInterfaceStyleBridge(style: .light, pinsLightPresentation: true)
@@ -233,14 +240,52 @@ struct SophiaLightOnlyModifier: ViewModifier {
     }
 }
 
+private struct SophiaLightOnlyContextKey: EnvironmentKey {
+    static let defaultValue: Bool = false
+}
+
+extension EnvironmentValues {
+    /// `true` inside a light-only flow: the onboarding (set on its root) and anything under
+    /// `sophiaLightOnly()`. Custom environment values, unlike the colour scheme, are handed
+    /// down to the sheets and covers presented from that flow, so a paywall or a legal sheet
+    /// opened from there knows it must stay light. `false` everywhere in the app.
+    var sophiaLightOnlyContext: Bool {
+        get { self[SophiaLightOnlyContextKey.self] }
+        set { self[SophiaLightOnlyContextKey.self] = newValue }
+    }
+}
+
+/// Appearance of a paywall, and of what a paywall presents (comparison cover, Terms and
+/// Privacy sheets): the app's appearance (Light / Night / Automatic, live) when it is shown
+/// from the app, light when it is shown inside a light-only flow (onboarding, training
+/// mini-onboarding) or when `lightOnly` is set (the discount paywall).
+struct SophiaPaywallSchemeModifier: ViewModifier {
+    @Environment(\.sophiaLightOnlyContext) private var insideLightOnlyFlow
+    var lightOnly: Bool = false
+
+    func body(content: Content) -> some View {
+        if lightOnly || insideLightOnlyFlow {
+            content.modifier(SophiaLightOnlyModifier())
+        } else {
+            content.modifier(SophiaColorSchemeModifier())
+        }
+    }
+}
+
 extension View {
     func sophiaColorScheme() -> some View {
         modifier(SophiaColorSchemeModifier())
     }
 
-    /// Pins a paywall / onboarding presentation to light (see `SophiaLightOnlyModifier`).
+    /// Pins an onboarding / discount-paywall presentation to light (see `SophiaLightOnlyModifier`).
     func sophiaLightOnly() -> some View {
         modifier(SophiaLightOnlyModifier())
+    }
+
+    /// Paywalls and the sheets they open: app appearance from the app, light inside a
+    /// light-only flow or with `lightOnly` (see `SophiaPaywallSchemeModifier`).
+    func sophiaPaywallScheme(lightOnly: Bool = false) -> some View {
+        modifier(SophiaPaywallSchemeModifier(lightOnly: lightOnly))
     }
 
     /// Sheet chrome (grabber, unused area) follows the design-system canvas.

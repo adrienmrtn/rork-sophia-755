@@ -73,8 +73,10 @@ import app.rork.sophia.ui.audio.AudioFormat
 import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.dsStagger
 import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.components.sophiaMarkColorFilter
 import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.uppercaseInApp
 import com.revenuecat.purchases.Package
 import kotlinx.coroutines.Dispatchers
@@ -87,13 +89,22 @@ import kotlinx.coroutines.withContext
  * the offering of the context, the plans the store really serves, a trial only when there is one.
  */
 
-/** Sample colours of the quiz illustration (the amber of a subject chip, the dark green of a right answer). */
-private val SampleAmberInk = Color(0xFF7A5310)
-private val SampleAmberTint = Color(0xFFFBF1D6)
-private val SampleRightInk = Color(0xFF24563C)
-private val SampleBodyInk = Color(0xFF4B5563)
-private val SampleRing = Color(0xFFC3CBD8)
-private val SampleTrack = Color(0xFFE1E5EB)
+/**
+ * Sample colours of the quiz illustration (the amber of a subject chip, the dark green of a
+ * right answer). Read at use, so they follow the appearance: the day values, or their night pair.
+ */
+private val SampleAmberInk: Color
+    get() = if (SophiaAppearance.isDark) Color(0xFFF2C252) else Color(0xFF7A5310)
+private val SampleAmberTint: Color
+    get() = if (SophiaAppearance.isDark) Color(0xFF3A2F14) else Color(0xFFFBF1D6)
+private val SampleRightInk: Color
+    get() = if (SophiaAppearance.isDark) Color(0xFFA9DDBF) else Color(0xFF24563C)
+private val SampleBodyInk: Color
+    get() = if (SophiaAppearance.isDark) Color(0xFFA7B2C1) else Color(0xFF4B5563)
+private val SampleRing: Color
+    get() = if (SophiaAppearance.isDark) Color(0xFF4A5568) else Color(0xFFC3CBD8)
+private val SampleTrack: Color
+    get() = if (SophiaAppearance.isDark) Color(0xFF363F4F) else Color(0xFFE1E5EB)
 
 private const val SAMPLE_AUDIO_COURSE = "course_281_comment_meurt_une_etoile"
 
@@ -492,6 +503,8 @@ internal fun CourseUnlockPaywall(
                     painter = painterResource(R.drawable.sophia_mark),
                     contentDescription = "Sophia",
                     contentScale = ContentScale.FillHeight,
+                    // Black wordmark: turned to the night ink at night, untouched by day.
+                    colorFilter = sophiaMarkColorFilter(),
                     modifier = Modifier.height(38.dp),
                 )
             }
@@ -592,6 +605,7 @@ private fun FanCard(course: Course, language: AppLanguage, large: Boolean, modif
                 painter = painterResource(R.drawable.sophia_mark),
                 contentDescription = null,
                 contentScale = ContentScale.FillHeight,
+                colorFilter = sophiaMarkColorFilter(),
                 modifier = Modifier.height(if (large) 12.dp else 10.dp),
             )
             PwText(
