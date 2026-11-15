@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 // Briques des écrans « Sophia nouvelle génération » (maquette prompt 2) : identité d'un
 // créateur, pastilles, compteurs, lignes de cours compactes, segments. Les prompts 6, 7 et

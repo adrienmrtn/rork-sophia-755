@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Briques propres aux duels dans le design « Elevate arrondi » : les quelques teintes que les
 /// maquettes ajoutent aux jetons `DS`, et les animations d'attente (recherche d'un adversaire,

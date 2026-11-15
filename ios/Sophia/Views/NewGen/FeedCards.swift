@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Un élément du fil d'accueil. Les cartes vidéo n'existent pas encore (prompt 10) : le cas
 /// est là pour que la mise en page les accueille sans changer le fil.

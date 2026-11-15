@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Walks up from an invisible probe view to the enclosing `UIScrollView` and disables
 /// `delaysContentTouches`, so buttons inside the feed (the "Commencer" CTA) fire on the first

@@ -145,11 +145,11 @@ private struct SophiaInterfaceStyleBridge: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UIView, context: Context) {
-        let style = style
-        let pinsLightPresentation = pinsLightPresentation
-        Self.apply(style, pinsLightPresentation: pinsLightPresentation, from: uiView)
+        let wanted: UIUserInterfaceStyle = style
+        let pins: Bool = pinsLightPresentation
+        Self.apply(wanted, pinsLightPresentation: pins, from: uiView)
         DispatchQueue.main.async {
-            Self.apply(style, pinsLightPresentation: pinsLightPresentation, from: uiView)
+            Self.apply(wanted, pinsLightPresentation: pins, from: uiView)
         }
     }
 

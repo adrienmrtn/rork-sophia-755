@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 // The collections pages (list, featured and row cards, detail with its course list) lived
 // here until the "Parcours" tab replaced them for good on 28/09/2026. What remains is what

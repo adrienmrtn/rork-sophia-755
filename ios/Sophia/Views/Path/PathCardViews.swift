@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 // The "zigzag of cards" trail of the Parcours tab: every course of a level is a card with
 // its cover, alternately on the left and on the right, joined to the next one by a dotted
