@@ -99,10 +99,15 @@ class Supabase:
         self.key = key
 
     def _headers(self, extra: dict | None = None) -> dict:
-        headers = {
-            "Authorization": f"Bearer {self.key}",
-            "apikey": PUBLISHABLE_KEY if self.key == "proxy-injected" else self.key,
-        }
+        if self.key.startswith("sb_secret_") or os.environ.get("SUPABASE_PROXY_KEY_HEADER") == "apikey":
+            # Clé secrète au nouveau format : Supabase la veut dans « apikey », sans Bearer.
+            # Avec SUPABASE_PROXY_KEY_HEADER=apikey, le proxy de la session l'injecte dans cet en-tête.
+            headers = {"apikey": self.key}
+        else:
+            headers = {
+                "Authorization": f"Bearer {self.key}",
+                "apikey": PUBLISHABLE_KEY if self.key == "proxy-injected" else self.key,
+            }
         if extra:
             headers.update(extra)
         return headers
