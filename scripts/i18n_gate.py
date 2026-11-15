@@ -12,7 +12,7 @@ request qui touche un texte affiché, et à lancer à la main avant de pousser :
 Vérifications :
 
   cles          chaque clé d'interface française existe dans chaque langue (tables
-                iOS d'AppLocalizable.swift, chaînes Android), avec les mêmes
+                iOS d'AppLocalizable.swift et d'Utilities/Localizable/, chaînes Android), avec les mêmes
                 placeholders (%@, %d, {n}…) que le français, dans un ordre que
                 String(format:) accepte ; pas de clé en double ; ui_strings.json
                 identique à la table publiée.
@@ -64,6 +64,8 @@ from i18n_languages import NON_FR_LANGS, SWIFT_CASE_BY_CODE  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "scripts"
 LOCALIZABLE = ROOT / "ios" / "Sophia" / "Utilities" / "AppLocalizable.swift"
+# Texts added after the big table, one file per area: key -> language code -> text.
+ADDITIONS = ROOT / "ios" / "Sophia" / "Utilities" / "Localizable"
 IOS = ROOT / "ios" / "Sophia" / "Resources"
 AND = ROOT / "android" / "app" / "src" / "main" / "assets"
 COURSES = ROOT / "content" / "courses"
@@ -102,6 +104,16 @@ def swift_entries(case: str, source: str) -> list[tuple[str, str]]:
 
 def swift_table(case: str, source: str) -> dict[str, str]:
     return dict(swift_entries(case, source))
+
+
+def swift_additions() -> list[tuple[str, str, list[tuple[str, str]]]]:
+    """(file, key, [(language code, text)]) for every key of the per-area iOS tables."""
+    out = []
+    for path in sorted(ADDITIONS.glob("Localizable+*.swift")):
+        for key, body in re.findall(r'^ {8}"((?:\\.|[^"\\])*)":\s*\[\n(.*?)^ {8}\]', path.read_text(encoding="utf-8"), re.M | re.S):
+            out.append((path.name, _unescape(key), [(lang, _unescape(v)) for lang, v in
+                        re.findall(r'^\s*"([A-Za-z-]+)":\s*"((?:\\.|[^"\\])*)",?\s*$', body, re.M)]))
+    return out
 
 
 def android_table(lang: str) -> dict[str, str]:
@@ -161,7 +173,17 @@ def _plural_reference(key: str, fr: dict[str, str]) -> str | None:
 def check_cles(langs: list[str]) -> list[str]:
     source = LOCALIZABLE.read_text(encoding="utf-8")
     fr_ios, fr_and = swift_table("french", source), android_table("fr")
+    additions = swift_additions()
     out = []
+    for key, n in Counter(key for _, key, _ in additions).items():
+        if n > 1:
+            out.append(f"cles|fr|ios|{key}|clé en double dans Utilities/Localizable ({n} fois)")
+    for name, key, entries in additions:
+        for code, n in Counter(code for code, _ in entries).items():
+            if n > 1:
+                out.append(f"cles|{code}|ios|{key}|langue en double dans {name} ({n} fois)")
+        if "fr" not in dict(entries):
+            out.append(f"cles|fr|ios|{key}|clé absente de {name}")
     for lang in ["fr", *langs]:
         # A dictionary literal with a key twice stops the app at launch.
         for key, n in Counter(k for k, _ in swift_entries(SWIFT_CASE_BY_CODE[lang], source)).items():
@@ -183,6 +205,16 @@ def check_cles(langs: list[str]) -> list[str]:
                 ref = _plural_reference(key, fr)
                 if ref and not same_placeholders(key, cur[key], fr[ref]):
                     out.append(f"cles|{lang}|{platform}|{key}|placeholders {placeholders(cur[key])} ≠ français {placeholders(fr[ref])} ({ref})")
+        # A per-area table falls back to English without a word when a language is missing:
+        # the whole onboarding once shipped in English for 28 languages that way.
+        for name, key, entries in additions:
+            if key.startswith(UNTRANSLATED_PREFIXES):
+                continue
+            by_lang = dict(entries)
+            if lang not in by_lang:
+                out.append(f"cles|{lang}|ios|{key}|clé absente de {name}")
+            elif "fr" in by_lang and not same_placeholders(key, by_lang[lang], by_lang["fr"]):
+                out.append(f"cles|{lang}|ios|{key}|placeholders {placeholders(by_lang[lang])} ≠ français {placeholders(by_lang['fr'])} ({name})")
         # content/locales/<lang>/ui_strings.json feeds translate_ui_strings.py: a stale copy
         # would put old machine text back over the shipped table.
         pack = ROOT / "content" / "locales" / lang / "ui_strings.json"
