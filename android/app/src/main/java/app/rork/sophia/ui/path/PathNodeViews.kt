@@ -280,7 +280,7 @@ internal fun PathLevelBanner(
             Row(
                 modifier = Modifier
                     .clip(RoundedCornerShape(10.dp))
-                    .background(Color.White)
+                    .background(DS.surface)
                     .padding(horizontal = 10.dp, vertical = 5.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(5.dp),

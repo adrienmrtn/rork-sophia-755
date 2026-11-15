@@ -4,6 +4,7 @@ import Supabase
 
 struct SettingsView: View {
     @Environment(LanguageManager.self) private var languageManager
+    @Environment(AppearanceManager.self) private var appearance
     @Environment(AuthService.self) private var auth
     let progressManager: ProgressManager
     let store: StoreViewModel
@@ -96,7 +97,7 @@ struct SettingsView: View {
                 // paywalls come with their own triggers, counters and analytics, and a
                 // shortcut for looking at a screen has no business spending any of that.
                 debugPaywallScreen(context)
-                    .preferredColorScheme(.light)
+                    .sophiaLightOnly()
                 #endif
             }
             .alert(languageManager.text("settings.reset.alert.title"), isPresented: $showResetAlert) {
@@ -129,6 +130,7 @@ struct SettingsView: View {
             .sheet(isPresented: $showDebugNotifications) {
                 #if DEBUG
                 DebugNotificationsView()
+                    .sophiaSheetChrome()
                 #endif
             }
         }
@@ -153,16 +155,19 @@ struct SettingsView: View {
         }
         .dsStagger(2, step: 0.04)
 
-        readingSection
+        appearanceSection
             .dsStagger(3, step: 0.04)
 
-        progressionSection
+        readingSection
             .dsStagger(4, step: 0.04)
+
+        progressionSection
+            .dsStagger(5, step: 0.04)
 
         // Pendant l'essai gratuit, aucune notification : pas de réglage non plus.
         if !store.isInFreeTrial {
             reminderSection
-                .dsStagger(5, step: 0.04)
+                .dsStagger(6, step: 0.04)
         }
     }
 
@@ -288,6 +293,22 @@ struct SettingsView: View {
     }
 
     // MARK: - Sections
+
+    /// Clair, nuit ou automatique (le mode du téléphone).
+    private var appearanceSection: some View {
+        section(languageManager.text("settings.section.appearance")) {
+            VStack(alignment: .leading, spacing: 10) {
+                AppearancePickerControl()
+                if appearance.preference == .system {
+                    Text(languageManager.text("settings.appearance.hint"))
+                        .font(DS.sans(.caption, .medium))
+                        .foregroundStyle(DS.inkSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+            .padding(.horizontal, 20)
+        }
+    }
 
     /// Pas à pas ou par pages : le même choix que dans l'en-tête du lecteur.
     private var readingSection: some View {

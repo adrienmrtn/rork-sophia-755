@@ -91,7 +91,8 @@ object Avatars {
 fun AvatarCircle(avatarId: String?, initial: String, size: Dp, modifier: Modifier = Modifier) {
     val drawable = Avatars.drawable(avatarId)
     Box(
-        modifier = modifier.size(size).clip(CircleShape).background(DS.accentSoft),
+        // Le bleu plein (et non le bleu doux, trop clair de nuit) : l'initiale blanche doit rester lisible.
+        modifier = modifier.size(size).clip(CircleShape).background(DS.accent),
         contentAlignment = Alignment.Center,
     ) {
         if (drawable != null) {

@@ -773,8 +773,8 @@ struct ElevatePaywallLegalLinks: View {
         }
         .padding(.horizontal, spread ? 12 : 0)
         .frame(maxWidth: .infinity)
-        .sheet(isPresented: $showTerms) { TermsView() }
-        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+        .sheet(isPresented: $showTerms) { TermsView().sophiaLightOnly() }
+        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaLightOnly() }
     }
 
     private var termsLink: some View {

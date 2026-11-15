@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.sp
 import app.rork.sophia.R
 import app.rork.sophia.domain.Subject
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.uppercaseInApp
 
@@ -69,17 +70,20 @@ object CoursePalette {
     /** Saffron of the XP bars and of the flame (#E6B233). */
     val gold: Color get() = DS.warm
 
-    /** Deep gold of the pictograms (#B17F10). */
-    val goldDeep = Color(0xFFB17F10)
+    // The four tones below are drawn for a white page; each has a night twin, read on every
+    // use like the [DS] tokens, so they follow the appearance.
 
-    /** Pale background of the XP and combo pills (#FBEFC9). */
-    val goldTint = Color(0xFFFBEFC9)
+    /** Deep gold of the pictograms (#B17F10); the saffron itself at night. */
+    val goldDeep: Color get() = if (SophiaAppearance.isDark) Color(0xFFE6B233) else Color(0xFFB17F10)
 
-    /** Text of the XP and combo pills (#6B4E00). */
-    val goldInk = Color(0xFF6B4E00)
+    /** Pale background of the XP and combo pills (#FBEFC9); a dark amber at night. */
+    val goldTint: Color get() = if (SophiaAppearance.isDark) Color(0xFF3D3318) else Color(0xFFFBEFC9)
 
-    /** Text of a right answer and title of a passed verdict (#1F4D36). */
-    val successInk = Color(0xFF1F4D36)
+    /** Text of the XP and combo pills (#6B4E00); a pale gold at night. */
+    val goldInk: Color get() = if (SophiaAppearance.isDark) Color(0xFFF4DC9A) else Color(0xFF6B4E00)
+
+    /** Text of a right answer and title of a passed verdict (#1F4D36); a pale green at night. */
+    val successInk: Color get() = if (SophiaAppearance.isDark) Color(0xFF9BD8B3) else Color(0xFF1F4D36)
 
     /** Neutral track of the progress bars. */
     val track: Color get() = DS.ink.copy(alpha = 0.12f)

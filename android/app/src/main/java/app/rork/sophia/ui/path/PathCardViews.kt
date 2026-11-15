@@ -85,6 +85,7 @@ import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.ui.theme.SophiaAppearance
 import kotlinx.coroutines.delay
 
 // The « zigzag of cards » trail of the Parcours tab: every course of a level is a card with
@@ -137,25 +138,29 @@ internal object PathCardLayout {
 
 // MARK: - Palette
 
-/** Colours of the trail that carry a meaning of their own (done, not reached yet, reward). */
+/**
+ * Colours of the trail that carry a meaning of their own (done, not reached yet, reward).
+ * Those that sit on the canvas have a night value, read on each access so they follow
+ * [SophiaAppearance].
+ */
 internal object PathCardPalette {
     /** Bright green of what is behind the reader: check badge, travelled dots. */
     val done = Color(0xFF3FBF8F)
 
     /** Dots not travelled yet, dashed outline of the quiz to come. */
-    val trailIdle = Color(0xFFC3CBD8)
+    val trailIdle: Color get() = if (SophiaAppearance.isDark) Color(0xFF4A5465) else Color(0xFFC3CBD8)
 
     /** Cover of a course still locked. */
-    val lockedCover = Color(0xFFEEF0F3)
+    val lockedCover: Color get() = if (SophiaAppearance.isDark) Color(0xFF252F3F) else Color(0xFFEEF0F3)
 
     /** Night-blue veil over a level's cover, so its title reads on any artwork. */
     val bannerVeil = Color(0xFF0D182D)
 
     /** Pale gold behind a trophy or a reward chip. */
-    val goldTint = Color(0xFFFBEFC9)
+    val goldTint: Color get() = if (SophiaAppearance.isDark) Color(0xFF3E3214) else Color(0xFFFBEFC9)
 
     /** Text on pale gold. */
-    val goldInk = Color(0xFF6B4E00)
+    val goldInk: Color get() = if (SophiaAppearance.isDark) Color(0xFFF3D074) else Color(0xFF6B4E00)
 }
 
 // MARK: - Surfaces

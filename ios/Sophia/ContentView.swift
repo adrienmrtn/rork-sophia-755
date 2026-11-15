@@ -312,6 +312,7 @@ struct ContentView: View {
                 )
                 .toolbar(.hidden, for: .navigationBar)
             }
+            .sophiaSheetChrome()
         }
         // The blocker's two foreground duties: keep the shield in line with the stored
         // state (an unlock window may have ended while we were away), and answer a tap

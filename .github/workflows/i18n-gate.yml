@@ -14,6 +14,7 @@ on:
     paths:
       - "content/**"
       - "ios/Sophia/Utilities/AppLocalizable.swift"
+      - "ios/Sophia/Utilities/Localizable/**"
       - "ios/Sophia/Utilities/AppLanguage.swift"
       - "ios/Sophia/Utilities/LegalDocumentContent.swift"
       - "ios/Sophia/Services/GlossaryData.swift"
@@ -34,6 +35,7 @@ on:
     paths:
       - "content/**"
       - "ios/Sophia/Utilities/AppLocalizable.swift"
+      - "ios/Sophia/Utilities/Localizable/**"
       - "ios/Sophia/Utilities/AppLanguage.swift"
       - "ios/Sophia/Utilities/LegalDocumentContent.swift"
       - "ios/Sophia/Services/GlossaryData.swift"

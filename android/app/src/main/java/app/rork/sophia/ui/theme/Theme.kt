@@ -30,6 +30,17 @@ private fun sophiaColorScheme(dark: Boolean): ColorScheme {
             onBackground = p.ink,
             onSurface = p.ink,
             outline = p.hairline,
+            // Material components that are given no container (menus, pull-to-refresh,
+            // dialogs) read these; left unset they fall back to Material's own purplish greys.
+            surfaceVariant = p.surfaceMuted,
+            onSurfaceVariant = p.inkSecondary,
+            surfaceContainerLowest = p.canvas,
+            surfaceContainerLow = p.surface,
+            surfaceContainer = p.surface,
+            surfaceContainerHigh = p.surfaceMuted,
+            surfaceContainerHighest = p.surfaceMuted,
+            surfaceTint = Color.Transparent,
+            outlineVariant = p.hairline,
         )
     } else {
         lightColorScheme(

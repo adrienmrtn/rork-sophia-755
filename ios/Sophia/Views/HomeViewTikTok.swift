@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Walks up from an invisible probe view to the enclosing `UIScrollView` and disables
 /// `delaysContentTouches`, so buttons inside the feed (the "Commencer" CTA) fire on the first
@@ -184,10 +185,7 @@ struct HomeViewTikTok: View {
 
     private var headerSection: some View {
         HStack(alignment: .center, spacing: 8) {
-            Image("sophia_mark")
-                .resizable()
-                .scaledToFit()
-                .frame(height: 28)
+            SophiaWordmark(height: 28)
 
             Spacer(minLength: 8)
 

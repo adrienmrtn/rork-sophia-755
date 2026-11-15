@@ -67,7 +67,7 @@ struct OnboardingV2FollowCreators: View {
             .presentationDetents([.medium, .large])
             .presentationDragIndicator(.visible)
             .presentationCornerRadius(28)
-            .preferredColorScheme(.light)
+            .sophiaLightOnly()
         }
         .onAppear { if authors.isEmpty { authors = Self.suggestedAuthors(subjects: vm.selectedSubjects) } }
     }

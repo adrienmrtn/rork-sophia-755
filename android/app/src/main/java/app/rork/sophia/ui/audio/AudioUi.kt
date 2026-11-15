@@ -72,6 +72,7 @@ import app.rork.sophia.ui.components.CourseImage
 import app.rork.sophia.ui.components.CourseRoundIconButton
 import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.components.sophiaMenuContainerColor
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -267,7 +268,7 @@ fun CourseAudioButton(
                 modifier = Modifier.size(size * 0.46f),
             )
         }
-        DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+        DropdownMenu(expanded = menu, onDismissRequest = { menu = false }, containerColor = sophiaMenuContainerColor()) {
             AudioMenuItems(courseId, language) { menu = false }
         }
     }

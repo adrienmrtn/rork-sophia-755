@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 // Briques des écrans « Sophia nouvelle génération » (maquette prompt 2) : identité d'un
 // créateur, pastilles, compteurs, lignes de cours compactes, segments. Les prompts 6, 7 et
@@ -81,6 +82,47 @@ struct CreatorAvatar: View {
     }
 }
 
+/// Le logo complet (`sophia_mark` : symbole rose + mot « Sophia » en noir) posé sur le fond
+/// de l'app. Le jour, l'image telle quelle. En mode Nuit, le mot noir disparaîtrait sur le
+/// fond sombre : le symbole garde ses couleurs et le mot est redessiné dans l'encre claire.
+struct SophiaWordmark: View {
+    @Environment(\.colorScheme) private var colorScheme
+    var height: CGFloat = 30
+
+    /// Proportions de l'image (1192 × 334).
+    private static let aspect: CGFloat = 1192.0 / 334.0
+    /// Part de la largeur occupée par le symbole ; la coupe tombe dans le blanc qui le sépare du mot.
+    private static let symbolFraction: CGFloat = 0.25
+
+    var body: some View {
+        if colorScheme == .dark {
+            let width: CGFloat = height * Self.aspect
+            let split: CGFloat = width * Self.symbolFraction
+            ZStack(alignment: .leading) {
+                Image("sophia_mark")
+                    .resizable()
+                    .frame(width: width, height: height)
+                    .frame(width: split, height: height, alignment: .leading)
+                    .clipped()
+                Image("sophia_mark")
+                    .renderingMode(.template)
+                    .resizable()
+                    .frame(width: width, height: height)
+                    .foregroundStyle(DS.ink)
+                    .mask(alignment: .trailing) {
+                        Rectangle().frame(width: width - split, height: height)
+                    }
+            }
+            .frame(width: width, height: height, alignment: .leading)
+        } else {
+            Image("sophia_mark")
+                .resizable()
+                .scaledToFit()
+                .frame(height: height)
+        }
+    }
+}
+
 /// Coche bleue des experts vérifiés, à côté du nom.
 struct VerifiedCheck: View {
     var size: CGFloat = 14
@@ -107,13 +149,17 @@ struct CreatorBadge: View {
             Text(AppLocalizable.string(verified ? "creator.badge.verified" : "creator.badge.creator", language: language))
                 .font(DS.sans(.footnote, .bold))
         }
-        .foregroundStyle(verified ? DS.accent : Color(red: 0.30, green: 0.11, blue: 0.58))
+        .foregroundStyle(verified ? DS.accent : Self.creatorInk)
         .padding(.horizontal, 12)
         .frame(height: 28)
         .background(
-            Capsule().fill(verified ? DS.accentTint : Color(red: 0.95, green: 0.93, blue: 0.98))
+            Capsule().fill(verified ? DS.accentTint : Self.creatorTint)
         )
     }
+
+    /// Le violet « Créateur » : texte foncé sur capsule pâle le jour, l'inverse en mode Nuit.
+    private static let creatorInk = Color(uiColor: DSAdaptive.color(light: (0.30, 0.11, 0.58), dark: (0.780, 0.690, 0.980)))
+    private static let creatorTint = Color(uiColor: DSAdaptive.color(light: (0.95, 0.93, 0.98), dark: (0.208, 0.157, 0.318)))
 }
 
 /// Avatar, nom avec coche, pedigree : la ligne « qui a écrit ça » des cartes et des fiches.
@@ -238,7 +284,9 @@ struct TagPill: View {
     var body: some View {
         Text(text)
             .font(DS.sans(.caption, .bold))
-            .foregroundStyle(style == .accent ? .white : DS.ink)
+            // Sur l'or, une encre sombre fixe (la valeur claire de `DS.ink`) : en mode Nuit,
+            // `DS.ink` devient clair et ne se lirait plus sur la capsule dorée.
+            .foregroundStyle(style == .accent ? Color.white : Color(red: 0.133, green: 0.149, blue: 0.180))
             .padding(.horizontal, 10)
             .frame(height: 26)
             .background(Capsule().fill(style == .accent ? DS.accent : DS.warm))

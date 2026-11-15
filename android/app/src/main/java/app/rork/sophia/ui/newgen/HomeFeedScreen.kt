@@ -74,6 +74,7 @@ import app.rork.sophia.domain.UserProgress
 import app.rork.sophia.ui.components.AnimatedFlameBadge
 import app.rork.sophia.ui.components.DSMotion
 import app.rork.sophia.ui.components.rememberHaptics
+import app.rork.sophia.ui.components.sophiaMarkColorFilter
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import kotlinx.coroutines.Dispatchers
@@ -418,6 +419,7 @@ private fun FeedHeader(language: AppLanguage, streak: Int, modifier: Modifier = 
             contentDescription = "Sophia",
             contentScale = ContentScale.Fit,
             modifier = Modifier.height(30.dp),
+            colorFilter = sophiaMarkColorFilter(),
         )
         Spacer(Modifier.weight(1f))
         // La flamme rebondit quand la série change.

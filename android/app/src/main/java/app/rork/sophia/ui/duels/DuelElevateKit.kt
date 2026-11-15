@@ -54,6 +54,7 @@ import app.rork.sophia.domain.AppLanguage
 import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.uppercaseInApp
 import kotlin.math.PI
 import kotlin.math.cos
@@ -68,20 +69,21 @@ import kotlin.math.sin
 
 /**
  * Les teintes de l'écran de duel qui n'existent pas dans `DS` (maquette AEr24). Les couleurs
- * des ligues et des trophées restent dans [DuelPalette].
+ * des ligues et des trophées restent dans [DuelPalette]. Les fonds et filets ont leur valeur de
+ * nuit, lue à chaque accès pour suivre [SophiaAppearance].
  */
 internal object DuelTheme {
     /** Fond gris très clair du bloc de score. */
-    val scoreBlock = Color(0xFFF4F6FA)
+    val scoreBlock: Color get() = if (SophiaAppearance.isDark) Color(0xFF1E2531) else Color(0xFFF4F6FA)
 
     /** Filet à l'intérieur du bloc de score. */
-    val scoreRule = Color(0xFFE1E5EB)
+    val scoreRule: Color get() = if (SophiaAppearance.isDark) Color(0xFF363F4F) else Color(0xFFE1E5EB)
 
     /** Piste de l'anneau du minuteur. */
-    val timerTrack = Color(0xFFD5DCE8)
+    val timerTrack: Color get() = if (SophiaAppearance.isDark) Color(0xFF363F4F) else Color(0xFFD5DCE8)
 
     /** Case d'une question à venir. */
-    val stripIdle = Color(0xFFDDE2EA)
+    val stripIdle: Color get() = if (SophiaAppearance.isDark) Color(0xFF363F4F) else Color(0xFFDDE2EA)
 
     /** Case d'une question réussie. */
     val stripRight = Color(0xFF3FBF8F)
@@ -90,7 +92,7 @@ internal object DuelTheme {
     val stripWrong = Color(0xFFE0564A)
 
     /** Étiquette d'une manche qui n'est pas en cours. */
-    val faint = Color(0xFFA3ABB8)
+    val faint: Color get() = if (SophiaAppearance.isDark) Color(0xFF798596) else Color(0xFFA3ABB8)
 
     /** Voile posé sur l'illustration d'une ligue pour y lire du texte blanc. */
     val scrim = Color(0xFF0D182D)
@@ -98,9 +100,15 @@ internal object DuelTheme {
     /** Texte secondaire sur l'illustration d'une ligue. */
     val onArtSecondary = Color(0xFFD5DCF5)
 
-    /** Confettis lisibles sur fond blanc. */
+    /** Confettis lisibles sur le fond de l'écran : blanc le jour, sombre la nuit (le marine y disparaîtrait). */
     val confetti: List<Color>
-        get() = listOf(DuelPalette.saffron, DuelPalette.coral, DS.accent, stripRight, DuelPalette.navy)
+        get() = listOf(
+            DuelPalette.saffron,
+            DuelPalette.coral,
+            DS.accent,
+            stripRight,
+            if (SophiaAppearance.isDark) DuelPalette.cream else DuelPalette.navy,
+        )
 }
 
 /**

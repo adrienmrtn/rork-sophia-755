@@ -1009,6 +1009,7 @@ internal fun ReminderStep(language: AppLanguage, onContinue: () -> Unit) {
     }
     var boldCount by remember { mutableIntStateOf(0) }
     var bellIn by remember { mutableStateOf(false) }
+    var ctaVisible by remember { mutableStateOf(false) }
     LaunchedEffect(words) {
         bellIn = true
         delay(300)
@@ -1017,7 +1018,15 @@ internal fun ReminderStep(language: AppLanguage, onContinue: () -> Unit) {
             haptics.selection()
             delay(120)
         }
+        ctaVisible = true
     }
+    // The button only arrives once the whole sentence has turned bold. It keeps its place
+    // in the layout meanwhile, so nothing moves when it shows up.
+    val ctaAlpha by animateFloatAsState(
+        targetValue = if (ctaVisible) 1f else 0f,
+        animationSpec = OnboardingMotion.settle(420),
+        label = "reminderCta",
+    )
     val bellScale by animateFloatAsState(
         targetValue = if (bellIn) 1f else 0.5f,
         animationSpec = OnboardingMotion.settle(420),
@@ -1032,7 +1041,17 @@ internal fun ReminderStep(language: AppLanguage, onContinue: () -> Unit) {
 
     OnboardingPage(
         footer = {
-            OnboardingCta(StringStore.text(context, "onboardingV2.reminder.cta", language), onContinue)
+            OnboardingCta(
+                text = StringStore.text(context, "onboardingV2.reminder.cta", language),
+                onClick = onContinue,
+                enabled = ctaVisible,
+                modifier = Modifier
+                    .graphicsLayer {
+                        alpha = ctaAlpha
+                        translationY = (1f - ctaAlpha) * 12.dp.toPx()
+                    }
+                    .then(if (ctaVisible) Modifier else Modifier.clearAndSetSemantics { }),
+            )
         },
     ) {
         ProgressiveWords(

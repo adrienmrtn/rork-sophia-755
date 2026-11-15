@@ -162,6 +162,13 @@ struct MyFriendQRSheet: View {
             }
             .frame(maxWidth: 230)
             .aspectRatio(1, contentMode: .fit)
+            // Le papier blanc du code, débordant de 10 pt : invisible le jour (carte blanche),
+            // il garde au code sa marge claire sur la carte sombre du mode Nuit.
+            .background(
+                RoundedRectangle(cornerRadius: DS.Radius.small, style: .continuous)
+                    .fill(Color(uiColor: FriendQRCode.paper))
+                    .padding(-10)
+            )
             .animation(DS.Motion.pop, value: qrImage != nil)
 
             Text("Sophia")
@@ -237,7 +244,9 @@ struct FriendQRScannerSheet: View {
     /// Le fond du cadre : sombre tant que la caméra cherche, puis teinté par le verdict.
     private var viewfinderFill: Color {
         switch phase {
-        case .scanning: DS.ink
+        // Sombre fixe (la valeur claire de `DS.ink`) : les messages posés dessus sont blancs,
+        // et `DS.ink` devient clair en mode Nuit.
+        case .scanning: Color(uiColor: FriendQRCode.ink)
         case .sending: DS.accentTint
         case .finished(_, let feedback): feedback.success ? DS.successTint : DS.dangerTint
         }

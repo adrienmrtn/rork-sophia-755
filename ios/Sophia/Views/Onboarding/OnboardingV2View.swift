@@ -198,6 +198,8 @@ struct OnboardingV2View: View {
                     .transition(.opacity)
             }
         }
+        // Clair uniquement : les jetons `DS` se résolvent en clair même si l'app est en mode nuit.
+        .environment(\.colorScheme, .light)
         .preferredColorScheme(.light)
         // Ressort à amortissement critique : l'écran arrive à sa place sans la dépasser.
         .animation(.spring(response: 0.5, dampingFraction: 1), value: stepIndex)

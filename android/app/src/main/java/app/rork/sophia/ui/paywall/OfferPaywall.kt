@@ -76,6 +76,11 @@ import app.rork.sophia.ui.onboarding.readableWidth
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaAppearance
 import kotlin.math.PI
+import app.rork.sophia.ui.onboarding.rememberOnboardingReduceMotion
+import kotlin.math.sin
+import kotlin.math.cos
+import kotlin.math.abs
+import androidx.compose.runtime.withFrameNanos
 
 private val OfferBlue = Color(0xFF2E62C4)
 private val OfferCoral = Color(0xFFE05A3A)
@@ -166,7 +171,7 @@ internal fun DiscountPaywall(
     // Painted here as well: from the tabs the paywall sits in an opaque layer that hides the
     // root backdrop.
     Box(modifier = Modifier.fillMaxSize().background(OfferBlue)) {
-        if (graduate) OfferConfetti(Modifier.fillMaxWidth().height(170.dp).align(Alignment.BottomCenter))
+        if (graduate) OfferConfetti(Modifier.fillMaxSize())
         Column(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -502,27 +507,62 @@ private fun OfferCta(text: String, purchasing: Boolean, onClick: () -> Unit) {
     }
 }
 
-/** Small paper pieces resting at the bottom of the screen, always in the same places. */
+/**
+ * A slow rain of small paper pieces over the whole screen, behind the copy. Each piece keeps
+ * its column, speed and sway (fixed-seed draw), so the rain loops without a jump. With
+ * animations turned off in the system settings the pieces rest at the bottom, still.
+ */
 @Composable
 private fun OfferConfetti(modifier: Modifier = Modifier) {
     val palette = remember { listOf(OfferSaffron, OfferCoral, Color.White, OfferSoft, OfferSaffron) }
+    val reduceMotion = rememberOnboardingReduceMotion()
+    // Seconds since the screen opened; null keeps the still layout.
+    var time by remember { mutableStateOf<Float?>(null) }
+    LaunchedEffect(reduceMotion) {
+        if (reduceMotion) {
+            time = null
+            return@LaunchedEffect
+        }
+        val start = withFrameNanos { it }
+        while (true) {
+            withFrameNanos { time = (it - start) / 1_000_000_000f }
+        }
+    }
     Canvas(modifier = modifier) {
+        val t = time
         var seed = 7L
         fun next(): Float {
             seed = seed * 6364136223846793005L + 1442695040888963407L
             return ((seed ushr 33) % 10_000L).toFloat() / 10_000f
         }
         repeat(34) { index ->
-            val x = next() * size.width
-            val y = size.height - 12.dp.toPx() - next() * (size.height - 24.dp.toPx())
+            val column = next() * size.width
+            val rest = next()
             val w = (8f + next() * 4f).dp.toPx()
             val h = (5f + next() * 3f).dp.toPx()
-            val degrees = (next() * PI).toFloat() * 57.29578f
-            rotate(degrees, pivot = Offset(x, y)) {
+            val angle = (next() * PI).toFloat()
+            val fall = 7f + next() * 6f // seconds to cross the screen
+            val sway = (6f + next() * 12f).dp.toPx()
+            val swayPace = 0.6f + next() * 0.9f
+            val spin = (next() - 0.5f) * 3.2f // radians per second
+
+            var x = column
+            var y = size.height - 12.dp.toPx() - rest * 150.dp.toPx()
+            var rotation = angle
+            var flip = 1f
+            if (t != null) {
+                val travel = size.height + 40.dp.toPx()
+                y = ((rest + t / fall) % 1f) * travel - 20.dp.toPx()
+                x = column + sin(t * swayPace + angle * 2f) * sway
+                rotation = angle + t * spin
+                // The piece turns over as it falls: its apparent height breathes.
+                flip = 0.35f + 0.65f * abs(cos(t * (1.2f + swayPace) + angle))
+            }
+            rotate(rotation * 57.29578f, pivot = Offset(x, y)) {
                 drawRoundRect(
                     color = palette[index % palette.size].copy(alpha = 0.9f),
-                    topLeft = Offset(x - w / 2, y - h / 2),
-                    size = Size(w, h),
+                    topLeft = Offset(x - w / 2, y - h * flip / 2),
+                    size = Size(w, h * flip),
                     cornerRadius = CornerRadius(2.dp.toPx()),
                 )
             }

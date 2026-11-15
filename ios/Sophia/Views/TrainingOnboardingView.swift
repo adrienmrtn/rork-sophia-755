@@ -76,7 +76,7 @@ struct TrainingOnboardingView: View {
                 .transition(.opacity)
             }
         }
-        .preferredColorScheme(.light)
+        .sophiaLightOnly()
         // Glissement posé, sans rebond.
         .animation(.easeOut(duration: 0.38), value: stepIndex)
         .onAppear {

@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
 import app.rork.sophia.ui.theme.DS
@@ -51,7 +50,7 @@ fun Modifier.lockedContentBlur(locked: Boolean, radius: androidx.compose.ui.unit
                 var y = 0f
                 while (y < size.height) {
                     drawRect(
-                        color = Color.White.copy(alpha = 0.35f * progress),
+                        color = DS.canvas.copy(alpha = 0.35f * progress),
                         topLeft = androidx.compose.ui.geometry.Offset(0f, y),
                         size = androidx.compose.ui.geometry.Size(size.width, bandHeight * 0.45f),
                     )

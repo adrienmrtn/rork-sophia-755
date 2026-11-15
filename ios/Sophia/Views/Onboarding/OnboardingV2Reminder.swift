@@ -9,6 +9,8 @@ struct OnboardingV2Reminder: View {
     @State private var boldCount = 0
     @State private var bellWobble = false
     @State private var bellIn = false
+    /// Le bouton n'arrive qu'une fois la phrase entièrement passée en gras.
+    @State private var ctaVisible = false
 
     private var words: [String] {
         languageManager.text("onboardingV2.reminder.title").split(separator: " ").map(String.init)
@@ -32,7 +34,13 @@ struct OnboardingV2Reminder: View {
 
             Spacer()
 
+            // Toujours dans la mise en page (rien ne bouge quand il arrive), mais invisible
+            // et inactif tant que la lecture guidée n'est pas finie.
             OnboardingV2Button(title: languageManager.text("onboardingV2.reminder.cta"), action: onNext)
+                .opacity(ctaVisible ? 1 : 0)
+                .offset(y: ctaVisible ? 0 : 12)
+                .allowsHitTesting(ctaVisible)
+                .accessibilityHidden(!ctaVisible)
         }
         .ov2Background()
         .onAppear {
@@ -45,7 +53,11 @@ struct OnboardingV2Reminder: View {
             for i in 0...words.count {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 + Double(i) * 0.12) {
                     boldCount = i
-                    if i < words.count { OnboardingHaptics.selection() }
+                    if i < words.count {
+                        OnboardingHaptics.selection()
+                    } else {
+                        withAnimation(DSCalmMotion.settle) { ctaVisible = true }
+                    }
                 }
             }
         }

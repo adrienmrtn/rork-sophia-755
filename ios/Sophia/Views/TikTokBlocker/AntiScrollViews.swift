@@ -40,7 +40,8 @@ struct AntiScrollLockedApps: View {
         .overlay(alignment: .topTrailing) {
             Image(systemName: "lock.fill")
                 .font(.system(size: tileSize * 0.2, weight: .bold))
-                .foregroundStyle(.white)
+                // `DS.canvas` et non du blanc : la pastille `DS.ink` devient claire en mode nuit.
+                .foregroundStyle(DS.canvas)
                 .frame(width: tileSize * 0.4, height: tileSize * 0.4)
                 .background(DS.ink, in: Circle())
                 .overlay(Circle().strokeBorder(DS.canvas, lineWidth: 2))

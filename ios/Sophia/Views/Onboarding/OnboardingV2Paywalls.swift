@@ -286,6 +286,9 @@ struct OnboardingV2PaywallComparison: View {
             .padding(.top, 6)
         }
         .ov2Background()
+        // Aussi présenté en plein écran par-dessus un autre paywall, depuis un cours qui peut
+        // être en mode nuit : il s'épingle lui-même en clair. Sans effet dans l'onboarding.
+        .sophiaLightOnly()
         .onAppear {
             store.trackPaywallImpression(paywallId: "onboarding_comparison")
         }
@@ -517,8 +520,8 @@ struct OnboardingV2LegalRow: View {
         .multilineTextAlignment(.center)
         .minimumScaleFactor(0.85)
         .frame(maxWidth: .infinity)
-        .sheet(isPresented: $showTerms) { TermsView() }
-        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+        .sheet(isPresented: $showTerms) { TermsView().sophiaLightOnly() }
+        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaLightOnly() }
     }
 
     @ViewBuilder

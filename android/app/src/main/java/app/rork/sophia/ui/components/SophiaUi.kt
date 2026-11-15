@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -28,6 +29,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -43,6 +46,7 @@ import androidx.compose.ui.graphics.drawOutline
 import androidx.compose.ui.graphics.drawscope.translate
 import app.rork.sophia.ui.theme.uppercaseInApp
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.SophiaTypography
 
 /**
@@ -385,3 +389,29 @@ fun StatTile(
         )
     }
 }
+
+/**
+ * `sophia_mark` is drawn in black (the word « Sophia » and the outline of the symbol), which
+ * vanishes on the night canvas. At night this filter turns its black into the night ink and
+ * leaves the pink of the symbol as it is; by day there is no filter and the image is untouched.
+ * The red channel tells the two apart: 0 for the black, 1 for the pink.
+ */
+fun sophiaMarkColorFilter(): ColorFilter? = if (SophiaAppearance.isDark) SOPHIA_MARK_NIGHT_FILTER else null
+
+private val SOPHIA_MARK_NIGHT_FILTER = ColorFilter.colorMatrix(
+    ColorMatrix(
+        floatArrayOf(
+            0.075f, 0f, 0f, 0f, 236f,
+            -0.415f, 0f, 0f, 0f, 239f,
+            -0.247f, 0f, 0f, 0f, 244f,
+            0f, 0f, 0f, 1f, 0f,
+        ),
+    ),
+)
+
+/**
+ * Container of a Material drop-down menu. By day Material's own colour, unchanged; at night
+ * the theme leaves Material's default dark grey there, so the menu takes the night surface.
+ */
+@Composable
+fun sophiaMenuContainerColor(): Color = if (SophiaAppearance.isDark) DS.surface else MenuDefaults.containerColor

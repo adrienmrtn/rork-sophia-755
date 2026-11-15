@@ -691,7 +691,7 @@ private fun PathQuizResult(
             }
         }
         if (showConfetti) {
-            val colors = remember(level.id) {
+            val colors = remember(level.id, app.rork.sophia.ui.theme.SophiaAppearance.isDark) {
                 buildList {
                     add(PathPalette.gold)
                     add(lerp(PathPalette.gold, Color.White, 0.3f))
