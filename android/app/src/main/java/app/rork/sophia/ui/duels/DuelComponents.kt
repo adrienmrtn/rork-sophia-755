@@ -193,7 +193,8 @@ fun DuelOnlineDot(size: Dp, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .size(size)
-            .background(Color.White, CircleShape)
+            // Le liseré découpe la pastille sur la carte : sa couleur, de jour comme de nuit.
+            .background(DS.surface, CircleShape)
             .padding(border)
             .background(DuelPalette.online, CircleShape),
     )

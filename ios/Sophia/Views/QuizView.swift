@@ -855,7 +855,7 @@ struct QuizView: View {
         .overlay {
             if showResultConfetti {
                 PathConfettiBurst(
-                    colors: [CoursePalette.gold, CoursePalette.goldTint, DS.accent, DS.success],
+                    colors: [CoursePalette.gold, CoursePalette.goldConfetti, DS.accent, DS.success],
                     pieceCount: 60,
                     duration: 2.6,
                     origin: CGPoint(x: 0.5, y: 0.3)

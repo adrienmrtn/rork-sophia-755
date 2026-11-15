@@ -81,6 +81,8 @@ import app.rork.sophia.ui.components.softPress
 import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.course.AuthorAvatar
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.DSPalette
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import coil.compose.AsyncImage
 import androidx.compose.ui.unit.Constraints
@@ -451,7 +453,14 @@ fun EventFeedCard(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                EventBadgeRing(campaign = campaign, done = done, size = 52.dp, track = DS.ink.copy(alpha = 0.14f))
+                EventBadgeRing(
+                    campaign = campaign,
+                    done = done,
+                    size = 52.dp,
+                    track = DS.ink.copy(alpha = 0.14f),
+                    // Sur la teinte de nuit, l'or sombre du symbole ne se lit plus : le safran.
+                    symbolTint = if (SophiaAppearance.isDark) EventPalette.saffron else EventPalette.gold,
+                )
                 Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text(
                         text = if (complete) {
@@ -612,7 +621,8 @@ fun VideoFeedCard(title: String, modifier: Modifier = Modifier, fillsPage: Boole
             .fillMaxWidth()
             .then(if (fillsPage) Modifier.fillMaxHeight() else Modifier.height(420.dp))
             .clip(DS.cardShape)
-            .background(DS.ink),
+            // Un fond sombre fixe : l'encre de jour, qui porte le titre blanc de jour comme de nuit.
+            .background(DSPalette.Light.ink),
         contentAlignment = Alignment.BottomStart,
     ) {
         Text(

@@ -531,7 +531,7 @@ struct StreakCelebrationView: View {
 
             if confetti {
                 PathConfettiBurst(
-                    colors: [CoursePalette.gold, CoursePalette.goldTint, DS.accent, DS.accentTint],
+                    colors: [CoursePalette.gold, CoursePalette.goldConfetti, DS.accent, DS.accentTint],
                     pieceCount: 60,
                     duration: 2.6,
                     origin: CGPoint(x: 0.5, y: 0.3)

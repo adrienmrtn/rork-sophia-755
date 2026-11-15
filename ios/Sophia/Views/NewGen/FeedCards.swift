@@ -321,6 +321,13 @@ struct EventFeedCard: View {
         .clipped()
     }
 
+    /// Le symbole du badge sans illustration : l'or sombre de l'affiche le jour
+    /// (`EventPalette.gold`), le safran en mode Nuit, où le panneau devient sombre.
+    private static let badgeSymbolTint = Color(uiColor: DSAdaptive.color(
+        light: (107.0 / 255.0, 78.0 / 255.0, 0),
+        dark: (230.0 / 255.0, 178.0 / 255.0, 51.0 / 255.0)
+    ))
+
     /// Le défi du lecteur : le badge dans son anneau, l'avancement en toutes lettres et un
     /// segment par cours. (L'objectif commun « Ensemble : N cours lus » n'est plus affiché.)
     private func progressPanel(done: Int, language: AppLanguage) -> some View {
@@ -329,7 +336,7 @@ struct EventFeedCard: View {
             ? String(format: AppLocalizable.string("event.challenge.unlocked", language: language), campaign.badgeName(for: language))
             : String(format: AppLocalizable.string("event.card.challenge", language: language), done, campaign.challengeTarget)
         return HStack(spacing: 12) {
-            EventBadgeRing(campaign: campaign, done: done, size: 52, track: DS.ink.opacity(0.14))
+            EventBadgeRing(campaign: campaign, done: done, size: 52, track: DS.ink.opacity(0.14), symbolTint: Self.badgeSymbolTint)
             VStack(alignment: .leading, spacing: 6) {
                 Text(label)
                     .font(DS.sans(.subheadline, .bold))
@@ -480,7 +487,10 @@ struct VideoFeedCard: View {
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous).fill(DS.ink)
+            // Fond sombre fixe (la valeur claire de `DS.ink`) : en mode Nuit, `DS.ink` devient
+            // clair et le titre blanc ne se lirait plus.
+            RoundedRectangle(cornerRadius: DS.Radius.card, style: .continuous)
+                .fill(Color(uiColor: DSAdaptive.color(light: (0.133, 0.149, 0.180), dark: (0.145, 0.184, 0.247))))
             Text(title)
                 .font(DS.title(.title3, .heavy))
                 .foregroundStyle(.white)

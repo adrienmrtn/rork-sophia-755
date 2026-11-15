@@ -130,6 +130,7 @@ struct SettingsView: View {
             .sheet(isPresented: $showDebugNotifications) {
                 #if DEBUG
                 DebugNotificationsView()
+                    .sophiaSheetChrome()
                 #endif
             }
         }

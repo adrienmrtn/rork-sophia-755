@@ -77,7 +77,7 @@ struct BadgeCelebrationView: View {
 
             if showConfetti {
                 PathConfettiBurst(
-                    colors: [DS.warm, CoursePalette.goldTint, DS.accent, DS.success],
+                    colors: [DS.warm, CoursePalette.goldConfetti, DS.accent, DS.success],
                     pieceCount: 70,
                     duration: 2.6,
                     origin: CGPoint(x: 0.5, y: 0.36)

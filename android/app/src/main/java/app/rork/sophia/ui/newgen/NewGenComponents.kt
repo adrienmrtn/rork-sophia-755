@@ -104,6 +104,8 @@ import app.rork.sophia.ui.components.pressable
 import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.course.AuthorAvatar
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.DSPalette
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import java.text.SimpleDateFormat
 import java.time.LocalDate
@@ -189,8 +191,10 @@ fun VerifiedCheck(language: AppLanguage, size: Dp = 14.dp, modifier: Modifier = 
 @Composable
 fun CreatorBadge(verified: Boolean, language: AppLanguage, modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val tint = if (verified) DS.accent else Color(0xFF4D1C94)
-    val background = if (verified) DS.accentTint else Color(0xFFF2EDFA)
+    // Le violet du créateur a sa paire de nuit, comme le bleu de l'expert.
+    val dark = SophiaAppearance.isDark
+    val tint = if (verified) DS.accent else if (dark) Color(0xFFC4A6F5) else Color(0xFF4D1C94)
+    val background = if (verified) DS.accentTint else if (dark) Color(0xFF33264D) else Color(0xFFF2EDFA)
     Row(
         modifier = modifier
             .clip(CircleShape)
@@ -363,7 +367,8 @@ fun TagPill(text: String, modifier: Modifier = Modifier, style: TagPillStyle = T
             fontFamily = PlusJakartaSans,
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
-            color = if (style == TagPillStyle.ACCENT) Color.White else DS.ink,
+            // Sur l'or, l'encre reste sombre de jour comme de nuit (l'or ne s'assombrit pas).
+            color = if (style == TagPillStyle.ACCENT) Color.White else DSPalette.Light.ink,
             maxLines = 1,
         )
     }

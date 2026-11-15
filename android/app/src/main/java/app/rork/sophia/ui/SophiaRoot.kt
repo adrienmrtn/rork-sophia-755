@@ -42,6 +42,7 @@ import app.rork.sophia.data.CourseAffinityStore
 import app.rork.sophia.data.DeviceCapabilities
 import app.rork.sophia.data.ProgressManager
 import app.rork.sophia.data.StringStore
+import app.rork.sophia.ui.components.sophiaMarkColorFilter
 import app.rork.sophia.ui.onboarding.OnboardingV2Screen
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -136,6 +137,7 @@ fun SophiaRoot(
                                     painter = painterResource(R.drawable.sophia_mark),
                                     contentDescription = "Sophia",
                                     modifier = Modifier.height(40.dp),
+                                    colorFilter = sophiaMarkColorFilter(),
                                 )
                             }
                         } else {

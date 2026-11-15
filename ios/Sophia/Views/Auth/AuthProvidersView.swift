@@ -19,6 +19,11 @@ struct AuthProvidersView: View {
     /// pas couper la suivante.
     @State private var attempt = 0
 
+    /// Bouton Apple : noir à texte blanc en clair, blanc à texte noir en mode nuit (un bouton
+    /// noir disparaît sur le fond nuit). Le bouton Google reste blanc dans les deux modes.
+    private static let appleFill = Color(uiColor: DSAdaptive.color(light: (0, 0, 0), dark: (1, 1, 1)))
+    private static let appleForeground = Color(uiColor: DSAdaptive.color(light: (1, 1, 1), dark: (0, 0, 0)))
+
     var body: some View {
         VStack(spacing: 12) {
             // Official `SignInWithAppleButton` ignores the in-app language and stays
@@ -33,10 +38,10 @@ struct AuthProvidersView: View {
                     Text(languageManager.text("auth.continueWithApple"))
                         .font(.jakarta(.body, weight: .semibold))
                 }
-                .foregroundStyle(.white)
+                .foregroundStyle(Self.appleForeground)
                 .frame(maxWidth: .infinity)
                 .frame(height: 54)
-                .background(Color.black, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
+                .background(Self.appleFill, in: RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
                 .contentShape(RoundedRectangle(cornerRadius: DS.Radius.control, style: .continuous))
             }
             .buttonStyle(.pressable)

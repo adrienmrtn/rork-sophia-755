@@ -25,11 +25,16 @@ struct CollectionCoverView: View {
     var accentIndex: Int = 0
 
     private var palette: (Color, Color) {
+        // Dégradés bleu pâle le jour ; en mode Nuit, les mêmes en bleu nuit (un pavé pastel
+        // ferait une tache claire sur le fond sombre).
+        func pair(_ light: (CGFloat, CGFloat, CGFloat), _ dark: (CGFloat, CGFloat, CGFloat)) -> Color {
+            Color(uiColor: DSAdaptive.color(light: light, dark: dark))
+        }
         let palettes: [(Color, Color)] = [
-            (Color(red: 0.914, green: 0.937, blue: 0.973), Color(red: 0.831, green: 0.878, blue: 0.949)),
-            (Color(red: 0.902, green: 0.925, blue: 0.965), Color(red: 0.784, green: 0.843, blue: 0.933)),
-            (Color(red: 0.925, green: 0.949, blue: 0.976), Color(red: 0.808, green: 0.867, blue: 0.941)),
-            (Color(red: 0.898, green: 0.933, blue: 0.973), Color(red: 0.769, green: 0.831, blue: 0.925)),
+            (pair((0.914, 0.937, 0.973), (0.165, 0.208, 0.286)), pair((0.831, 0.878, 0.949), (0.125, 0.161, 0.227))),
+            (pair((0.902, 0.925, 0.965), (0.157, 0.196, 0.271)), pair((0.784, 0.843, 0.933), (0.118, 0.153, 0.220))),
+            (pair((0.925, 0.949, 0.976), (0.173, 0.216, 0.294)), pair((0.808, 0.867, 0.941), (0.129, 0.169, 0.239))),
+            (pair((0.898, 0.933, 0.973), (0.161, 0.204, 0.282)), pair((0.769, 0.831, 0.925), (0.114, 0.149, 0.216))),
         ]
         return palettes[accentIndex % palettes.count]
     }

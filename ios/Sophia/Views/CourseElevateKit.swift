@@ -14,13 +14,16 @@ enum CoursePalette {
     /// Safran des barres d'XP, des étoiles et de la flamme (#E6B233).
     static let gold: Color = DS.warm
     /// Or soutenu des pictogrammes (#B17F10).
-    static let goldDeep = Color(red: 0.694, green: 0.498, blue: 0.063)
-    /// Fond pâle des pastilles d'XP et de combo (#FBEFC9).
-    static let goldTint = Color(red: 0.984, green: 0.937, blue: 0.788)
-    /// Texte des pastilles d'XP et de combo (#6B4E00).
-    static let goldInk = Color(red: 0.420, green: 0.306, blue: 0.0)
-    /// Texte d'une bonne réponse et titre d'un verdict réussi (#1F4D36).
-    static let successInk = Color(red: 0.122, green: 0.302, blue: 0.212)
+    static let goldDeep = Color(uiColor: DSAdaptive.color(light: (0.694, 0.498, 0.063), dark: (0.902, 0.698, 0.200)))
+    /// Fond pâle des pastilles d'XP et de combo (#FBEFC9) ; ambre sombre en mode Nuit.
+    static let goldTint = Color(uiColor: DSAdaptive.color(light: (0.984, 0.937, 0.788), dark: (0.243, 0.196, 0.078)))
+    /// Or pâle des confettis (#FBEFC9) : une couleur de fête, la même de jour comme de nuit.
+    static let goldConfetti = Color(red: 0.984, green: 0.937, blue: 0.788)
+    /// Texte des pastilles d'XP et de combo (#6B4E00) ; or clair en mode Nuit.
+    static let goldInk = Color(uiColor: DSAdaptive.color(light: (0.420, 0.306, 0.0), dark: (0.961, 0.851, 0.541)))
+    /// Texte d'une bonne réponse et titre d'un verdict réussi (#1F4D36) ; vert clair en mode
+    /// Nuit, où il se pose sur `DS.successTint` devenu sombre.
+    static let successInk = Color(uiColor: DSAdaptive.color(light: (0.122, 0.302, 0.212), dark: (0.659, 0.875, 0.757)))
     /// Piste neutre des barres de progression.
     static let track: Color = DS.ink.opacity(0.12)
 }

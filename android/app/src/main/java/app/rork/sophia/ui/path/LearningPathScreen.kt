@@ -753,7 +753,7 @@ private fun PathLevelSection(
                     onTapLocked = onTapLockedLevel,
                 )
                 if (state.celebratingLevelId == level.id) {
-                    val colors = remember(level.id) { confettiColors(level) }
+                    val colors = remember(level.id, app.rork.sophia.ui.theme.SophiaAppearance.isDark) { confettiColors(level) }
                     Box(modifier = Modifier.matchParentSize(), contentAlignment = Alignment.Center) {
                         ConfettiBurst(
                             colors = colors,

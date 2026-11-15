@@ -217,6 +217,8 @@ fun EventBadgeRing(
     size: Dp = 96.dp,
     /** La couleur de l'anneau vide, selon le fond sur lequel le badge est posé. */
     track: Color = DS.hairline,
+    /** La couleur du symbole nu (sans illustration) : l'or sombre va sur un fond clair. */
+    symbolTint: Color = EventPalette.gold,
 ) {
     val target = maxOf(1, campaign.challengeTarget)
     val fraction = (done.toFloat() / target).coerceIn(0f, 1f)
@@ -259,7 +261,7 @@ fun EventBadgeRing(
             modifier = Modifier.size(inner).clip(CircleShape),
             contentAlignment = Alignment.Center,
         ) {
-            CampaignSymbol(symbol = campaign.symbol, size = inner * 0.46f, tint = EventPalette.gold)
+            CampaignSymbol(symbol = campaign.symbol, size = inner * 0.46f, tint = symbolTint)
             campaign.badgeImageUrl?.let { url ->
                 AsyncImage(
                     model = url,

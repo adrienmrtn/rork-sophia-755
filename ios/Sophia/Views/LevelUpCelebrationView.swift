@@ -45,7 +45,7 @@ struct LevelUpCelebrationView: View {
 
             if showNewLevel, !reduceMotion {
                 PathConfettiBurst(
-                    colors: [CoursePalette.gold, CoursePalette.goldTint, DS.accent, DS.accentTint],
+                    colors: [CoursePalette.gold, CoursePalette.goldConfetti, DS.accent, DS.accentTint],
                     pieceCount: 50,
                     duration: 2.4,
                     origin: CGPoint(x: 0.5, y: 0.28)

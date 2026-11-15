@@ -16,6 +16,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import app.rork.sophia.domain.LearningCollection
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.SophiaAppearance
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 
@@ -31,7 +32,12 @@ fun CollectionCover(
             "file:///android_asset/collection_covers/$name.jpg"
         }
     }
-    val palette = palettes[accentIndex.mod(palettes.size)]
+    // The pale blues are a placeholder for a white page; at night the tile takes the muted surface.
+    val palette = if (SophiaAppearance.isDark) {
+        DS.surfaceMuted to DS.accentTint
+    } else {
+        palettes[accentIndex.mod(palettes.size)]
+    }
     Box(
         modifier = modifier.background(Brush.linearGradient(listOf(palette.first, palette.second))),
         contentAlignment = Alignment.Center,

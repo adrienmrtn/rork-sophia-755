@@ -49,6 +49,11 @@ enum DuelFriendPresenter {
         .environment(\.layoutDirection, LanguageManager.shared.layoutDirection)
         host.rootView = AnyView(flow)
         host.modalPresentationStyle = .fullScreen
+        // Présenté par UIKit : le thème choisi est posé tout de suite, pour que le fond ne
+        // soit pas résolu en clair le temps que `sophiaColorScheme` prenne la main.
+        host.overrideUserInterfaceStyle = AppearanceManager.shared.preference.presentedUserInterfaceStyle(
+            systemScheme: AppearanceManager.shared.systemColorScheme
+        )
         host.view.backgroundColor = DS.uiCanvas
         current = host
         top.present(host, animated: true)
@@ -85,6 +90,13 @@ final class DuelInviteBanner {
         window.frame = CGRect(x: 0, y: 0, width: scene.screen.bounds.width, height: 240)
         window.windowLevel = UIWindow.Level(rawValue: UIWindow.Level.alert.rawValue + 1)
         window.backgroundColor = .clear
+        // Une fenêtre à part ne reçoit pas le thème épinglé sur celle de l'app : sans cela le
+        // bandeau suivrait le téléphone, pas le choix Clair / Nuit des réglages.
+        switch AppearanceManager.shared.preference {
+        case .light: window.overrideUserInterfaceStyle = .light
+        case .dark: window.overrideUserInterfaceStyle = .dark
+        case .system: window.overrideUserInterfaceStyle = .unspecified
+        }
         window.rootViewController = host
         window.isHidden = false
         self.window = window

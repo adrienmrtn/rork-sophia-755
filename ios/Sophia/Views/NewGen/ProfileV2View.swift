@@ -94,9 +94,11 @@ struct ProfileV2View: View {
         }
         .sheet(isPresented: $showBadges) {
             BadgesPageView(progressManager: progressManager)
+                .sophiaSheetChrome()
         }
         .sheet(isPresented: $showAvatarPicker) {
             AvatarPickerSheet(current: progressManager.avatarId, initial: String(displayName.prefix(1)).uppercased()) { progressManager.setAvatar($0) }
+                .sophiaSheetChrome()
         }
         .fullScreenCover(isPresented: $showSettings) {
             SettingsView(

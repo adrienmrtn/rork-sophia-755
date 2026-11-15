@@ -7,29 +7,33 @@ import SwiftUI
 // MARK: - Teintes
 
 /// Les teintes de l'écran de duel qui n'existent pas dans `DS` (maquette AEr24). Les couleurs
-/// des ligues et des trophées restent dans `DuelPalette`.
+/// des ligues et des trophées restent dans `DuelPalette`. Les gris posés sur le fond de page
+/// ont une valeur nuit ; les teintes de verdict et celles posées sur une illustration, non.
 enum DuelTheme {
     /// Fond gris très clair du bloc de score.
-    static let scoreBlock = Color(red: 0.957, green: 0.965, blue: 0.980)
+    static let scoreBlock = Color(uiColor: DSAdaptive.color(light: (0.957, 0.965, 0.980), dark: (0.118, 0.145, 0.192)))
     /// Filet à l'intérieur du bloc de score.
-    static let scoreRule = Color(red: 0.882, green: 0.898, blue: 0.922)
+    static let scoreRule = Color(uiColor: DSAdaptive.color(light: (0.882, 0.898, 0.922), dark: (0.212, 0.247, 0.310)))
     /// Piste de l'anneau du minuteur.
-    static let timerTrack = Color(red: 0.835, green: 0.863, blue: 0.910)
+    static let timerTrack = Color(uiColor: DSAdaptive.color(light: (0.835, 0.863, 0.910), dark: (0.212, 0.247, 0.310)))
     /// Case d'une question à venir.
-    static let stripIdle = Color(red: 0.867, green: 0.886, blue: 0.918)
+    static let stripIdle = Color(uiColor: DSAdaptive.color(light: (0.867, 0.886, 0.918), dark: (0.212, 0.247, 0.310)))
     /// Case d'une question réussie.
     static let stripRight = Color(red: 0.247, green: 0.749, blue: 0.561)
     /// Case d'une question ratée, et minuteur dans les dernières secondes.
     static let stripWrong = Color(red: 0.878, green: 0.337, blue: 0.290)
     /// Étiquette d'une manche qui n'est pas en cours.
-    static let faint = Color(red: 0.639, green: 0.671, blue: 0.722)
+    static let faint = Color(uiColor: DSAdaptive.color(light: (0.639, 0.671, 0.722), dark: (0.475, 0.522, 0.588)))
     /// Voile posé sur l'illustration d'une ligue pour y lire du texte blanc.
     static let scrim = Color(red: 0.051, green: 0.094, blue: 0.176)
     /// Texte secondaire sur l'illustration d'une ligue.
     static let onArtSecondary = Color(red: 0.835, green: 0.863, blue: 0.961)
 
-    /// Confettis lisibles sur fond blanc.
-    static let confetti: [Color] = [DuelPalette.saffron, DuelPalette.coral, DS.accent, stripRight, DuelPalette.navy]
+    /// Confettis lisibles sur le fond de l'écran : le bleu marine devient crème en mode nuit.
+    static let confetti: [Color] = [
+        DuelPalette.saffron, DuelPalette.coral, DS.accent, stripRight,
+        Color(uiColor: DSAdaptive.color(light: (0.102, 0.227, 0.420), dark: (0.984, 0.969, 0.937))),
+    ]
 }
 
 // MARK: - Recherche

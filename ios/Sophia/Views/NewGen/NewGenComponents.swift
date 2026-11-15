@@ -107,13 +107,17 @@ struct CreatorBadge: View {
             Text(AppLocalizable.string(verified ? "creator.badge.verified" : "creator.badge.creator", language: language))
                 .font(DS.sans(.footnote, .bold))
         }
-        .foregroundStyle(verified ? DS.accent : Color(red: 0.30, green: 0.11, blue: 0.58))
+        .foregroundStyle(verified ? DS.accent : Self.creatorInk)
         .padding(.horizontal, 12)
         .frame(height: 28)
         .background(
-            Capsule().fill(verified ? DS.accentTint : Color(red: 0.95, green: 0.93, blue: 0.98))
+            Capsule().fill(verified ? DS.accentTint : Self.creatorTint)
         )
     }
+
+    /// Le violet « Créateur » : texte foncé sur capsule pâle le jour, l'inverse en mode Nuit.
+    private static let creatorInk = Color(uiColor: DSAdaptive.color(light: (0.30, 0.11, 0.58), dark: (0.780, 0.690, 0.980)))
+    private static let creatorTint = Color(uiColor: DSAdaptive.color(light: (0.95, 0.93, 0.98), dark: (0.208, 0.157, 0.318)))
 }
 
 /// Avatar, nom avec coche, pedigree : la ligne « qui a écrit ça » des cartes et des fiches.
@@ -238,7 +242,9 @@ struct TagPill: View {
     var body: some View {
         Text(text)
             .font(DS.sans(.caption, .bold))
-            .foregroundStyle(style == .accent ? .white : DS.ink)
+            // Sur l'or, une encre sombre fixe (la valeur claire de `DS.ink`) : en mode Nuit,
+            // `DS.ink` devient clair et ne se lirait plus sur la capsule dorée.
+            .foregroundStyle(style == .accent ? Color.white : Color(red: 0.133, green: 0.149, blue: 0.180))
             .padding(.horizontal, 10)
             .frame(height: 26)
             .background(Capsule().fill(style == .accent ? DS.accent : DS.warm))

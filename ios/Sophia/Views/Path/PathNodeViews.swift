@@ -383,7 +383,7 @@ struct PathLevelBanner: View {
 
     private var lockMedallion: some View {
         ZStack {
-            Circle().fill(Color.white)
+            Circle().fill(DS.surface)
             Image(systemName: "lock.fill")
                 .font(.jakarta(size: 14, weight: .bold))
                 .foregroundStyle(DS.inkSecondary)
@@ -403,6 +403,6 @@ struct PathLevelBanner: View {
         .foregroundStyle(DS.success)
         .padding(.horizontal, 10)
         .padding(.vertical, 5)
-        .background(Color.white, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+        .background(DS.surface, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
     }
 }

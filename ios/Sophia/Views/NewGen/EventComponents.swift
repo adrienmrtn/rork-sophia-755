@@ -153,6 +153,9 @@ struct EventBadgeRing: View {
     var size: CGFloat = 96
     /// La couleur de l'anneau vide, selon le fond sur lequel le badge est posé.
     var track: Color = DS.hairline
+    /// La couleur du symbole nu (sans illustration) : l'or sombre sur la crème, à remplacer
+    /// quand l'anneau est posé sur un fond qui suit le mode Nuit.
+    var symbolTint: Color = EventPalette.gold
 
     /// L'avancement dessiné : il part de zéro et rejoint la vraie valeur à l'apparition.
     @State private var drawn: CGFloat = 0
@@ -176,7 +179,7 @@ struct EventBadgeRing: View {
             // Sans illustration : le symbole de l'événement, nu dans son anneau.
             Image(systemName: campaign.symbol ?? "sparkles")
                 .font(.system(size: inner * 0.46, weight: .semibold))
-                .foregroundStyle(EventPalette.gold)
+                .foregroundStyle(symbolTint)
                 .frame(width: inner, height: inner)
                 .overlay {
                     if let url = campaign.badgeImageUrl {

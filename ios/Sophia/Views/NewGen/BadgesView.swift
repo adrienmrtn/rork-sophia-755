@@ -78,6 +78,7 @@ struct BadgesPageView: View {
         .sheet(item: $selected) { badge in
             // La feuille se règle elle-même à la hauteur de son contenu.
             BadgeDetailSheet(badge: badge, progressManager: progressManager)
+                .sophiaSheetChrome()
         }
     }
 

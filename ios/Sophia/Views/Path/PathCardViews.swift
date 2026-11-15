@@ -42,19 +42,20 @@ enum PathCardLayout {
 // MARK: - Palette
 
 /// Colours of the trail that carry a meaning of their own (done, not reached yet, reward).
+/// Those that sit on the page (idle dots, locked cover, pale gold) have a night value.
 enum PathCardPalette {
     /// Bright green of what is behind the reader: check badge, travelled dots.
     static let done = Color(red: 0.247, green: 0.749, blue: 0.561)
     /// Dots not travelled yet, dashed outline of the quiz to come.
-    static let trailIdle = Color(red: 0.765, green: 0.796, blue: 0.847)
+    static let trailIdle = Color(uiColor: DSAdaptive.color(light: (0.765, 0.796, 0.847), dark: (0.290, 0.329, 0.396)))
     /// Cover of a course still locked.
-    static let lockedCover = Color(red: 0.933, green: 0.941, blue: 0.953)
+    static let lockedCover = Color(uiColor: DSAdaptive.color(light: (0.933, 0.941, 0.953), dark: (0.145, 0.184, 0.247)))
     /// Night-blue veil over a level's cover, so its title reads on any artwork.
     static let bannerVeil = Color(red: 0.051, green: 0.094, blue: 0.176)
     /// Pale gold behind a trophy or a reward chip.
-    static let goldTint = Color(red: 0.984, green: 0.937, blue: 0.788)
+    static let goldTint = Color(uiColor: DSAdaptive.color(light: (0.984, 0.937, 0.788), dark: (0.243, 0.196, 0.078)))
     /// Text on pale gold.
-    static let goldInk = Color(red: 0.420, green: 0.306, blue: 0.0)
+    static let goldInk = Color(uiColor: DSAdaptive.color(light: (0.420, 0.306, 0.0), dark: (0.953, 0.816, 0.455)))
 }
 
 // MARK: - Padlock
