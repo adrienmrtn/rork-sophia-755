@@ -100,7 +100,9 @@ import app.rork.sophia.ui.components.sophiaCard
 import app.rork.sophia.ui.onboarding.AssetPicture
 import app.rork.sophia.ui.onboarding.onboardingAssets
 import app.rork.sophia.ui.theme.DS
+import app.rork.sophia.ui.theme.DSPalette
 import app.rork.sophia.ui.theme.PlusJakartaSans
+import app.rork.sophia.ui.theme.SophiaAppearance
 import app.rork.sophia.ui.theme.uppercaseInApp
 import coil.compose.AsyncImage
 import kotlinx.coroutines.Dispatchers
@@ -115,8 +117,9 @@ import kotlinx.coroutines.withContext
  * `PaywallUi.kt` / `PaywallShowcase.kt`, which is why these live beside them, not in them.
  */
 
-/** Ring of an unselected radio, a touch darker than the hairline. */
-private val RadioRing = Color(0xFFC3CBD8)
+/** Ring of an unselected radio, a touch stronger than the hairline (read at use: it follows the appearance). */
+private val RadioRing: Color
+    get() = if (SophiaAppearance.isDark) Color(0xFF4A5568) else Color(0xFFC3CBD8)
 
 /** One text of the paywalls: the app family, a size, a weight. */
 @Composable
@@ -200,7 +203,12 @@ internal fun ElevateCloseButton(
             Icon(
                 Icons.Filled.Close,
                 contentDescription = StringStore.text(context, "common.close", language),
-                tint = if (style == ElevateCloseStyle.Plain) DS.inkTertiary else DS.inkSecondary,
+                tint = when (style) {
+                    ElevateCloseStyle.Plain -> DS.inkTertiary
+                    ElevateCloseStyle.Bordered -> DS.inkSecondary
+                    // On its white disc over the picture, whatever the appearance.
+                    ElevateCloseStyle.Floating -> DSPalette.Light.inkSecondary
+                },
                 modifier = Modifier.size(20.dp),
             )
         }
@@ -1052,6 +1060,8 @@ internal fun ElevateTrialOfferCard(badge: String, title: String, body: String, m
                     text = badge.uppercaseInApp(),
                     size = 11.sp,
                     weight = FontWeight.Bold,
+                    // Dark ink on the amber pill, by day and at night.
+                    color = DSPalette.Light.ink,
                     letterSpacing = 0.55.sp,
                     maxLines = 1,
                     modifier = Modifier.background(DS.warm, CircleShape).padding(horizontal = 10.dp, vertical = 4.dp),

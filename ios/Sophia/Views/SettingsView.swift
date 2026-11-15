@@ -96,8 +96,10 @@ struct SettingsView: View {
                 // Presented from here rather than routed through ContentView: the real
                 // paywalls come with their own triggers, counters and analytics, and a
                 // shortcut for looking at a screen has no business spending any of that.
+                // Like the real ones: the app's appearance, except the discount paywall
+                // (the `default` of `debugPaywallScreen`), which stays light.
                 debugPaywallScreen(context)
-                    .sophiaLightOnly()
+                    .sophiaPaywallScheme(lightOnly: !(context == .quizz || context == .debloquerCours || context == .audio))
                 #endif
             }
             .alert(languageManager.text("settings.reset.alert.title"), isPresented: $showResetAlert) {

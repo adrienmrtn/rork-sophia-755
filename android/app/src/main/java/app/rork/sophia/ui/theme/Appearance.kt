@@ -42,7 +42,7 @@ object SophiaAppearance {
      */
     var darkBackdropBehindBars by mutableStateOf(false)
 
-    /** Screens on screen that are designed light-only (onboarding, paywalls), as on iOS. */
+    /** Screens on screen that are designed light-only (onboarding, the discount paywall), as on iOS. */
     private var forcedLightScreens by mutableIntStateOf(0)
 
     /** Night when the reader asked for it (or the phone, on Automatic), unless a light-only screen is up. */

@@ -119,8 +119,8 @@ fun OnboardingPaywallFlow(
     /** The package that was actually bought, so the caller can tell a trial from a plain sale. */
     onPurchased: (Package?) -> Unit,
 ) {
-    // Designed light-only, as on iOS: the night palette stays off while it is shown.
-    ForceLightAppearance()
+    // Follows the app's appearance. Inside the onboarding (or the training onboarding) the
+    // host screen forces light, so this flow is light there without asking for it.
     var showComparison by remember { mutableStateOf(false) }
     var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
     LaunchedEffect(Unit) { storeViewModel.fetchOfferings() }
@@ -183,8 +183,7 @@ fun PaywallScreen(
     /** Same for the discount paywall. */
     forcedDiscountVariant: PaywallExperiment.DiscountVariant? = null,
 ) {
-    // Designed light-only, as on iOS: the night palette stays off while it is shown.
-    ForceLightAppearance()
+    // The paywalls follow the app's appearance; only the discount paywall is light-only (below).
     var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
     // iOS stacks a plan-comparison paywall when the first offer is dismissed, rather than
     // letting the user out on the first tap.
@@ -248,16 +247,21 @@ fun PaywallScreen(
                 onDismiss = onDismiss,
                 onPurchased = { onPurchased() },
             )
-            PaywallContext.OFFRE_DISCOUNT -> DiscountPaywall(
-                variant = discountVariant,
-                language = language,
-                storeViewModel = storeViewModel,
-                onDismiss = onDismiss,
-                onPurchased = onPurchased,
-                onRestore = restore,
-                onOpenTerms = { legalDoc = LegalDocKind.Terms },
-                onOpenPrivacy = { legalDoc = LegalDocKind.Privacy },
-            )
+            PaywallContext.OFFRE_DISCOUNT -> {
+                // The one paywall designed light-only: the night palette stays off while it
+                // is the one on screen (its legal pages included), and comes back when it leaves.
+                ForceLightAppearance()
+                DiscountPaywall(
+                    variant = discountVariant,
+                    language = language,
+                    storeViewModel = storeViewModel,
+                    onDismiss = onDismiss,
+                    onPurchased = onPurchased,
+                    onRestore = restore,
+                    onOpenTerms = { legalDoc = LegalDocKind.Terms },
+                    onOpenPrivacy = { legalDoc = LegalDocKind.Privacy },
+                )
+            }
             PaywallContext.QUIZZ -> QuizPaywall(
                 language = language,
                 storeViewModel = storeViewModel,

@@ -72,6 +72,28 @@ class DSPalette(
             warm = Color(0xFFE6B233),
         )
 
+        /**
+         * [Legacy] at night, value for value the dark side of the iOS `DSLegacy`
+         * (`DesignSystemLegacy.swift`), for the legacy-styled paywalls and the discount
+         * overlays opened from the app. Read through [DSLegacy], never directly.
+         */
+        val LegacyDark = DSPalette(
+            canvas = Color(0xFF121721),
+            surface = Color(0xFF1E2531),
+            surfaceMuted = Color(0xFF252F3F),
+            ink = Color(0xFFECEFF4),
+            inkSecondary = Color(0xFFA7B2C1),
+            inkTertiary = Color(0xFF798596),
+            accent = Color(0xFF4F7DDA),
+            accentSoft = Color(0xFF7AA7F5),
+            accentTint = Color(0xFF25324C),
+            hairline = Color(0xFF363F4F),
+            success = Color(0xFF61B082),
+            successTint = Color(0xFF21372D),
+            danger = Color(0xFFE37466),
+            dangerTint = Color(0xFF422624),
+            warm = Color(0xFFF2C252),
+        )
 
         /** The iOS Night palette (`DesignSystem.swift`), value for value. */
         val Dark = DSPalette(
@@ -141,10 +163,12 @@ object DS {
 
 /**
  * The tokens as they were before « Elevate arrondi », for the screens that keep their old
- * look (paywalls, strengths, trial steps, reminder). Do not use anywhere else.
+ * look (paywalls, strengths, trial steps, reminder). Do not use anywhere else. The colours
+ * follow [SophiaAppearance] like [DS]: the frozen light palette by day and on the light-only
+ * screens (onboarding, discount paywall), its night counterpart otherwise.
  */
 object DSLegacy {
-    private val palette: DSPalette get() = DSPalette.Legacy
+    private val palette: DSPalette get() = if (SophiaAppearance.isDark) DSPalette.LegacyDark else DSPalette.Legacy
 
     val canvas: Color get() = palette.canvas
     val surface: Color get() = palette.surface

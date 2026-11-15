@@ -517,9 +517,10 @@ struct ElevateLibraryTitle: View {
                 .foregroundStyle(DS.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
-            Image("sophia_mark")
-                .resizable()
-                .frame(width: 38 * (1192.0 / 334.0), height: 38)
+            // Le logo sur le fond de la page : son mot noir est redessiné en clair la nuit.
+            // Une image : son découpage (symbole à gauche, mot à droite) ne se retourne pas.
+            SophiaWordmark(height: 38)
+                .environment(\.layoutDirection, .leftToRight)
                 .accessibilityLabel(Text(verbatim: "Sophia"))
         }
         .frame(maxWidth: .infinity)
@@ -580,9 +581,8 @@ struct ElevateCourseFan: View {
     private func card(_ entry: Entry, width: CGFloat, coverHeight: CGFloat, large: Bool) -> some View {
         VStack(alignment: .leading, spacing: 0) {
             VStack(alignment: .leading, spacing: large ? 4 : 3) {
-                Image("sophia_mark")
-                    .resizable()
-                    .frame(width: (large ? 12 : 10) * (1192.0 / 334.0), height: large ? 12 : 10)
+                // Sur la carte (sombre la nuit) : le mot noir du logo y est redessiné en clair.
+                SophiaWordmark(height: large ? 12 : 10)
                 Text(entry.title)
                     .font(.jakarta(size: large ? 13 : 10, weight: .bold))
                     .foregroundStyle(DS.ink)
@@ -658,9 +658,10 @@ struct ElevateCourseFan: View {
 struct ElevateSampleQuizCard: View {
     @Environment(LanguageManager.self) private var languageManager
 
-    /// Texte fixe sur la pastille ambrée du nom du cours.
-    private static let pillInk = Color(red: 0.478, green: 0.325, blue: 0.063)
-    private static let pillFill = Color(red: 0.984, green: 0.945, blue: 0.839)
+    /// Pastille ambrée du nom du cours : crème et texte brun le jour, ambre sombre et texte
+    /// doré la nuit (une pastille crème éblouirait sur la carte sombre).
+    private static let pillInk = Color(uiColor: DSAdaptive.color(light: (0.478, 0.325, 0.063), dark: (0.953, 0.816, 0.502)))
+    private static let pillFill = Color(uiColor: DSAdaptive.color(light: (0.984, 0.945, 0.839), dark: (0.251, 0.196, 0.094)))
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -897,6 +898,13 @@ struct ElevateSamplePlayerCard: View {
 struct ElevateBlockerStepsCard: View {
     @Environment(LanguageManager.self) private var languageManager
 
+    /// Le crème du fond de `pw_blocker_lock` la nuit, transparent le jour.
+    private static let lockBackdrop = Color(uiColor: UIColor { traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(red: 0.984, green: 0.969, blue: 0.933, alpha: 1)
+            : UIColor.clear
+    })
+
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Image("pw_blocker_lock")
@@ -905,6 +913,10 @@ struct ElevateBlockerStepsCard: View {
                 .frame(width: 220, height: 220)
                 .clipped()
                 .frame(maxWidth: .infinity)
+                // L'illustration a un fond crème qu'on ne peut pas recolorer. La nuit, il est
+                // prolongé sur toute la largeur : un bandeau rogné par les coins de la carte,
+                // plutôt qu'un carré clair posé au milieu d'une carte sombre. Rien le jour.
+                .background(Self.lockBackdrop)
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 0) {

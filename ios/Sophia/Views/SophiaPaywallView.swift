@@ -56,9 +56,11 @@ struct SophiaPaywallView: View {
     var onDismissed: (() -> Void)? = nil
 
     var body: some View {
-        // Clair uniquement, y compris présenté depuis un écran en mode nuit.
+        // Les paywalls suivent l'apparence de l'app (clair, nuit, automatique). Seul le
+        // paywall de l'offre flash, dessiné sur son fond bleu, reste épinglé en clair, y
+        // compris présenté depuis un écran en mode nuit.
         paywall
-            .sophiaLightOnly()
+            .sophiaPaywallScheme(lightOnly: context == .offreDiscount)
     }
 
     @ViewBuilder
