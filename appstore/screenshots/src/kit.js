@@ -9,6 +9,7 @@ const Kit = (() => {
   // ?device=ipad switches the page to the iPad variant (see kit.css). Kit.ipad tells a screen which one it is.
   const ipad = new URLSearchParams(location.search).get("device") === "ipad";
   if (ipad) document.documentElement.classList.add("ipad");
+  if (new URLSearchParams(location.search).get("os") === "android") document.documentElement.classList.add("android");
   // The status bar date in the page's language (French and English keep their fixed form).
   const ipadDate = () => {
     const lang = new URLSearchParams(location.search).get("lang") || "fr";

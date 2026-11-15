@@ -18,7 +18,9 @@ html, body { margin: 0; }
 body { width: 1920px; height: 823px; overflow: hidden; position: relative; background: var(--bg); }
 body.cream { --bg: #fef5e9; --star1: #f2b134; --star2: #f4a3c4; }
 body.blue { --bg: #2e62c4; --star1: #fef5e9; --star2: #f2b134; }
-body.cards, body.cards-cream { --bg: #2e62c4; font-family: "Plus Jakarta Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+body.rtl .card { direction: rtl; }
+body.rtl .card .pill { left: auto; right: 12px; }
+body.cards, body.cards-cream { --bg: #2e62c4; font-family: "Plus Jakarta Sans", "Noto Sans", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans CJK JP", sans-serif; -webkit-font-smoothing: antialiased; }
 body.cards-cream { --bg: #fef5e9; }
 /* Course cards: the app's card (cover, subject pill, title), tilted and scattered around the logo */
 .card { position: absolute; width: 250px; background: #fff; border-radius: 22px; overflow: hidden; z-index: 2;
@@ -38,6 +40,7 @@ svg.s { position: absolute; z-index: 1; }
 </head>
 <body>
 <div class="safe"></div>
+<script src="header-titles.js"></script>
 <script>
   const v = new URLSearchParams(location.search).get("v") || "cream";
   document.body.className = v + (location.hash === "#guide" ? " guide" : "");
@@ -54,21 +57,23 @@ svg.s { position: absolute; z-index: 1; }
       <div class="t">${title}</div></div>`);
     const white = v === "cards";
     add(`<img class="logo" src="${white ? "../../../ios/Sophia/Assets.xcassets/logo_white.imageset/logo_white.png" : "../../../web/public/brand/sophia-logo.png"}" style="top:${white ? 336 : 322}px;height:${white ? 150 : 172}px">`);
-    const fr = new URLSearchParams(location.search).get("lang") === "fr";
-    document.documentElement.lang = fr ? "fr" : "en";
-    const SUBJ = fr ? { Art: "Art", History: "Histoire", Science: "Sciences", Mythology: "Mythologie" } : null;
-    // [x, y, rotation, cover, subject, English title, French title]
-    [[352, 96, -7, "la_joconde", "Art", "Why is the Mona Lisa so famous?", "Pourquoi la Joconde est-elle aussi connue\u00a0?"],
-     [420, 470, 5, "giza_pyramids_khufu_khafre_menkaure_wide_view", "History", "Who really built the pyramids?", "Qui a vraiment construit les pyramides\u00a0?"],
-     [1322, 70, 6, "crab_nebula_supernova_remnant_hubble", "Science", "How does a star die?", "Comment meurt une étoile\u00a0?"],
-     [1262, 455, -5, "la_guerre_de_troie_et_le_cheval_de_bois", "Mythology", "How did a wooden horse bring down Troy?", "Comment un cheval de bois a-t-il fait tomber Troie\u00a0?"],
-     [64, 250, 4, "eiffel_tower_1889_universal_exhibition", "Art", "Why did people want to tear down the Eiffel Tower?", "Pourquoi voulait-on démolir la tour Eiffel\u00a0?"],
-     [1616, 250, -4, "apollo_11_aldrin_us_flag_lunar_module_1969", "History", "How did the United States win the race to the Moon?", "Comment les États-Unis ont-ils gagné la course à la Lune\u00a0?"],
-     [-110, -70, -9, "comment_se_forment_les_eclairs", "Science", "How does lightning form?", "Comment se forment les éclairs\u00a0?"],
-     [1790, -90, 8, "la_nuit_etoilee_van_gogh", "Art", "Why does the sky in “The Starry Night” swirl?", "Pourquoi le ciel de «\u00a0La Nuit étoilée\u00a0» tourbillonne-t-il\u00a0?"],
-     [-130, 600, 7, "dna_double_helix_3d_render_blue", "Science", "What can you actually learn from your DNA?", "Que peut-on vraiment lire dans son ADN\u00a0?"],
-     [1810, 610, -7, "beethoven_genie_et_surdite", "Art", "How could Beethoven compose as he went deaf?", "Comment Beethoven a-t-il pu composer en devenant sourd\u00a0?"],
-    ].forEach(([x, y, r, img, subj, en, f]) => card(x, y, r, img, subj, fr ? f : en, SUBJ));
+    // Titles and subject names per language come from header-titles.js (tools/header_titles.py).
+    const lang = new URLSearchParams(location.search).get("lang") || "en";
+    const L = HEADER_L10N[lang];
+    document.documentElement.lang = lang;
+    if (lang === "ar" || lang === "he") document.body.classList.add("rtl");
+    // [x, y, rotation, cover, subject]; the order matches COURSES in the generator
+    [[352, 96, -7, "la_joconde", "Art"],
+     [420, 470, 5, "giza_pyramids_khufu_khafre_menkaure_wide_view", "History"],
+     [1322, 70, 6, "crab_nebula_supernova_remnant_hubble", "Science"],
+     [1262, 455, -5, "la_guerre_de_troie_et_le_cheval_de_bois", "Mythology"],
+     [64, 250, 4, "eiffel_tower_1889_universal_exhibition", "Art"],
+     [1616, 250, -4, "apollo_11_aldrin_us_flag_lunar_module_1969", "History"],
+     [-110, -70, -9, "comment_se_forment_les_eclairs", "Science"],
+     [1790, -90, 8, "la_nuit_etoilee_van_gogh", "Art"],
+     [-130, 600, 7, "dna_double_helix_3d_render_blue", "Science"],
+     [1810, 610, -7, "beethoven_genie_et_surdite", "Art"],
+    ].forEach(([x, y, r, img, subj], k) => card(x, y, r, img, subj, L.titles[k], L.subjects));
   } else if (v === "cream") {
     add(`<img class="logo" src="../../../web/public/brand/sophia-logo.png">`);
     add(`<div class="floor"></div>`);
