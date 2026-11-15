@@ -131,6 +131,10 @@ struct SophiaColorSchemeModifier: ViewModifier {
 /// is what actually flips `DS.*` adaptive tokens on Settings and other covers.
 private struct SophiaInterfaceStyleBridge: UIViewRepresentable {
     var style: UIUserInterfaceStyle
+    /// `true` for a light-only presentation (paywall, onboarding sheet): the bridge then
+    /// only ever touches a controller that is itself presented, and registers it in
+    /// `SophiaLightPin` so the presenter's own bridge leaves it alone.
+    var pinsLightPresentation: Bool = false
 
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: .zero)
@@ -141,20 +145,28 @@ private struct SophiaInterfaceStyleBridge: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: UIView, context: Context) {
-        apply(style, from: uiView)
+        let style = style
+        let pinsLightPresentation = pinsLightPresentation
+        Self.apply(style, pinsLightPresentation: pinsLightPresentation, from: uiView)
         DispatchQueue.main.async {
-            apply(style, from: uiView)
+            Self.apply(style, pinsLightPresentation: pinsLightPresentation, from: uiView)
         }
     }
 
-    private func apply(_ style: UIUserInterfaceStyle, from view: UIView) {
+    private static func apply(_ style: UIUserInterfaceStyle, pinsLightPresentation: Bool, from view: UIView) {
         var node: UIResponder? = view.next
         while let current = node {
             if let controller = current as? UIViewController {
+                if pinsLightPresentation {
+                    pinLight(from: controller)
+                    return
+                }
                 if controller.overrideUserInterfaceStyle != style {
                     controller.overrideUserInterfaceStyle = style
                 }
+                // A paywall presented from a Night screen pins itself light: do not flip it.
                 if let presented = controller.presentedViewController,
+                   !SophiaLightPin.contains(presented),
                    presented.overrideUserInterfaceStyle != style {
                     presented.overrideUserInterfaceStyle = style
                 }
@@ -163,11 +175,72 @@ private struct SophiaInterfaceStyleBridge: UIViewRepresentable {
             node = current.next
         }
     }
+
+    /// Pins light on the presentation that holds `controller`. Nothing happens when the
+    /// content is not presented (the onboarding at the app root, a paywall step embedded in
+    /// a screen): forcing a style there would stick to the host after the content is gone.
+    private static func pinLight(from controller: UIViewController) {
+        var top: UIViewController = controller
+        while let parent = top.parent {
+            top = parent
+        }
+        guard top.presentingViewController != nil else { return }
+        SophiaLightPin.add(top)
+        if top.overrideUserInterfaceStyle != .light {
+            top.overrideUserInterfaceStyle = .light
+        }
+        if controller !== top, controller.overrideUserInterfaceStyle != .light {
+            controller.overrideUserInterfaceStyle = .light
+        }
+    }
+}
+
+/// Presented controllers pinned light by `sophiaLightOnly()`. Held weakly: an entry goes
+/// away with its presentation.
+private enum SophiaLightPin {
+    private static let controllers = NSHashTable<UIViewController>.weakObjects()
+
+    static func add(_ controller: UIViewController) {
+        controllers.add(controller)
+    }
+
+    static func contains(_ controller: UIViewController) -> Bool {
+        controllers.contains(controller)
+    }
+}
+
+/// Light-only screens: the paywalls and the onboarding, which have no Night drawing.
+///
+/// - `environment(\.colorScheme, .light)` makes every `DS` / `DSLegacy` token inside resolve
+///   to its light value at once, whatever the hosting controller's traits are.
+/// - `preferredColorScheme(.light)` and the bridge pin the presentation itself (status bar,
+///   sheet chrome, UIKit-backed controls), which does not inherit the window scheme and is
+///   otherwise flipped to Night by the presenter's `sophiaColorScheme()`.
+///
+/// Apply it to the content of the `sheet` / `fullScreenCover`, never to a tab or to a screen
+/// that uses `sophiaColorScheme()`.
+struct SophiaLightOnlyModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .environment(\.colorScheme, .light)
+            .preferredColorScheme(.light)
+            .background {
+                SophiaInterfaceStyleBridge(style: .light, pinsLightPresentation: true)
+                    .frame(width: 0, height: 0)
+                    .allowsHitTesting(false)
+                    .accessibilityHidden(true)
+            }
+    }
 }
 
 extension View {
     func sophiaColorScheme() -> some View {
         modifier(SophiaColorSchemeModifier())
+    }
+
+    /// Pins a paywall / onboarding presentation to light (see `SophiaLightOnlyModifier`).
+    func sophiaLightOnly() -> some View {
+        modifier(SophiaLightOnlyModifier())
     }
 
     /// Sheet chrome (grabber, unused area) follows the design-system canvas.

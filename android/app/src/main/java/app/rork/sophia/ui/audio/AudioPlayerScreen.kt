@@ -95,6 +95,7 @@ import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.components.SectionLabel
 import app.rork.sophia.ui.components.SophiaSecondaryButton
 import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.components.sophiaMenuContainerColor
 import app.rork.sophia.ui.theme.DS
 import app.rork.sophia.ui.theme.PlusJakartaSans
 import app.rork.sophia.ui.theme.SophiaTypography
@@ -439,7 +440,7 @@ private fun ActionRow(item: AudioQueueItem, language: AppLanguage, onOpenQueue: 
             ActionTile(Icons.Filled.Language, "${item.language.flag} ${item.language.shortCode}", t("audio.language")) {
                 languageMenu = true
             }
-            DropdownMenu(expanded = languageMenu, onDismissRequest = { languageMenu = false }) {
+            DropdownMenu(expanded = languageMenu, onDismissRequest = { languageMenu = false }, containerColor = sophiaMenuContainerColor()) {
                 CourseAudioCatalog.languages(item.courseId).forEach { lang ->
                     DropdownMenuItem(
                         text = { Text(lang.label()) },
@@ -470,7 +471,7 @@ private fun ActionRow(item: AudioQueueItem, language: AppLanguage, onOpenQueue: 
                     ActionTile(Icons.Filled.DownloadDone, item.language.shortCode, t("audio.downloaded"), tint = DS.success) {
                         deleteMenu = true
                     }
-                    DropdownMenu(expanded = deleteMenu, onDismissRequest = { deleteMenu = false }) {
+                    DropdownMenu(expanded = deleteMenu, onDismissRequest = { deleteMenu = false }, containerColor = sophiaMenuContainerColor()) {
                         DropdownMenuItem(
                             text = { Text(t("audio.deleteDownload"), color = DS.danger) },
                             leadingIcon = { Icon(Icons.Filled.Delete, null, tint = DS.danger) },
@@ -641,7 +642,7 @@ private fun AudioAddRow(course: CourseSummary, language: AppLanguage) {
                 )
             }
         }
-        DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+        DropdownMenu(expanded = menu, onDismissRequest = { menu = false }, containerColor = sophiaMenuContainerColor()) {
             AudioMenuItems(course.id, language) { menu = false }
         }
     }

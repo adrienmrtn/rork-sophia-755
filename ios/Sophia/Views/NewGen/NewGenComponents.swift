@@ -81,6 +81,47 @@ struct CreatorAvatar: View {
     }
 }
 
+/// Le logo complet (`sophia_mark` : symbole rose + mot « Sophia » en noir) posé sur le fond
+/// de l'app. Le jour, l'image telle quelle. En mode Nuit, le mot noir disparaîtrait sur le
+/// fond sombre : le symbole garde ses couleurs et le mot est redessiné dans l'encre claire.
+struct SophiaWordmark: View {
+    @Environment(\.colorScheme) private var colorScheme
+    var height: CGFloat = 30
+
+    /// Proportions de l'image (1192 × 334).
+    private static let aspect: CGFloat = 1192.0 / 334.0
+    /// Part de la largeur occupée par le symbole ; la coupe tombe dans le blanc qui le sépare du mot.
+    private static let symbolFraction: CGFloat = 0.25
+
+    var body: some View {
+        if colorScheme == .dark {
+            let width: CGFloat = height * Self.aspect
+            let split: CGFloat = width * Self.symbolFraction
+            ZStack(alignment: .leading) {
+                Image("sophia_mark")
+                    .resizable()
+                    .frame(width: width, height: height)
+                    .frame(width: split, height: height, alignment: .leading)
+                    .clipped()
+                Image("sophia_mark")
+                    .renderingMode(.template)
+                    .resizable()
+                    .frame(width: width, height: height)
+                    .foregroundStyle(DS.ink)
+                    .mask(alignment: .trailing) {
+                        Rectangle().frame(width: width - split, height: height)
+                    }
+            }
+            .frame(width: width, height: height, alignment: .leading)
+        } else {
+            Image("sophia_mark")
+                .resizable()
+                .scaledToFit()
+                .frame(height: height)
+        }
+    }
+}
+
 /// Coche bleue des experts vérifiés, à côté du nom.
 struct VerifiedCheck: View {
     var size: CGFloat = 14

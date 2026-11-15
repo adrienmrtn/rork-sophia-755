@@ -27,7 +27,9 @@ struct AvatarCircle: View {
                     .resizable()
                     .scaledToFill()
             } else {
-                Circle().fill(DS.accentSoft)
+                // `DS.accent` et non `DS.accentSoft` : mêmes valeurs le jour, mais en mode Nuit
+                // l'accent doux est trop clair pour porter l'initiale blanche.
+                Circle().fill(DS.accent)
                 Text(initial)
                     .font(.system(size: size * 0.38, weight: .heavy, design: .rounded))
                     .foregroundStyle(.white)

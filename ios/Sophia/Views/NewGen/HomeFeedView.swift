@@ -124,10 +124,8 @@ struct HomeFeedView: View {
     private var header: some View {
         // `sophia_mark` est le logo complet : le symbole et le mot « Sophia ».
         HStack(spacing: 10) {
-            Image("sophia_mark")
-                .resizable()
-                .scaledToFit()
-                .frame(height: 30)
+            SophiaWordmark(height: 30)
+                .accessibilityElement(children: .ignore)
                 .accessibilityLabel(Text("Sophia"))
             Spacer(minLength: 0)
             streakPill

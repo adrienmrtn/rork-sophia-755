@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -407,3 +408,10 @@ private val SOPHIA_MARK_NIGHT_FILTER = ColorFilter.colorMatrix(
         ),
     ),
 )
+
+/**
+ * Container of a Material drop-down menu. By day Material's own colour, unchanged; at night
+ * the theme leaves Material's default dark grey there, so the menu takes the night surface.
+ */
+@Composable
+fun sophiaMenuContainerColor(): Color = if (SophiaAppearance.isDark) DS.surface else MenuDefaults.containerColor

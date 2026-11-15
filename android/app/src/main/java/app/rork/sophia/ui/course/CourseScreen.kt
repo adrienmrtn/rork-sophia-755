@@ -69,6 +69,7 @@ import app.rork.sophia.ui.components.dsStagger
 import app.rork.sophia.ui.components.lockedContentBlur
 import app.rork.sophia.ui.components.rememberHaptics
 import app.rork.sophia.ui.components.sophiaCard
+import app.rork.sophia.ui.components.sophiaMenuContainerColor
 import app.rork.sophia.ui.newgen.BigHeartOverlay
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
@@ -550,7 +551,7 @@ fun CourseScreen(
                         contentDescription = StringStore.text(context, "course.readingMode", language),
                         size = 42.dp,
                     )
-                    DropdownMenu(expanded = showModeMenu, onDismissRequest = { showModeMenu = false }) {
+                    DropdownMenu(expanded = showModeMenu, onDismissRequest = { showModeMenu = false }, containerColor = sophiaMenuContainerColor()) {
                         CourseReadingMode.entries.forEach { mode ->
                             DropdownMenuItem(
                                 text = { Text(text = StringStore.text(context, mode.titleKey, language), style = SophiaTypography.bodyLarge) },
