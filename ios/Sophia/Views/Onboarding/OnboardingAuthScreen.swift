@@ -47,8 +47,8 @@ struct OnboardingAuthScreen: View {
             }
         }
         .preferredColorScheme(.light)
-        .sheet(isPresented: $showTerms) { TermsView() }
-        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+        .sheet(isPresented: $showTerms) { TermsView().sophiaLightOnly() }
+        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaLightOnly() }
         .onAppear {
             withAnimation(DS.Motion.reveal) {
                 appeared = true

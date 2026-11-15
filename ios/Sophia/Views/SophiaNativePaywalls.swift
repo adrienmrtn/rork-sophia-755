@@ -30,8 +30,8 @@ struct PaywallLegalRow: View {
         .multilineTextAlignment(.center)
         .minimumScaleFactor(0.85)
         .frame(maxWidth: .infinity)
-        .sheet(isPresented: $showTerms) { TermsView() }
-        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+        .sheet(isPresented: $showTerms) { TermsView().sophiaLightOnly() }
+        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaLightOnly() }
     }
 
     @ViewBuilder

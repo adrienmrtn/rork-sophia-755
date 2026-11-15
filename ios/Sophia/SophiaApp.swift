@@ -63,7 +63,9 @@ struct SophiaApp: App {
             .environment(AuthService.shared)
             .environment(\.locale, languageManager.locale)
             .environment(\.layoutDirection, languageManager.layoutDirection)
-            .preferredColorScheme(appearanceManager.preference.preferredColorScheme)
+            // L'onboarding est en clair uniquement : tant qu'il est à l'écran, la fenêtre ne
+            // suit pas le thème choisi (un onboarding rejoué depuis les réglages en mode nuit).
+            .preferredColorScheme(showOnboarding ? .light : appearanceManager.preference.preferredColorScheme)
             .animation(.easeInOut(duration: 0.25), value: appearanceManager.preference)
             // Mounted at the root, above every forced scheme, so it reports the device's
             // real appearance. Without it, Automatic sampled the trait once and an open

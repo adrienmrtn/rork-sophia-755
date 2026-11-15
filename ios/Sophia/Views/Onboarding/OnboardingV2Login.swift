@@ -58,8 +58,8 @@ struct OnboardingV2Login: View {
             .dsStagger(2)
         }
         .ov2Background()
-        .sheet(isPresented: $showTerms) { TermsView() }
-        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+        .sheet(isPresented: $showTerms) { TermsView().sophiaLightOnly() }
+        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaLightOnly() }
         .sheet(isPresented: $showProviders) {
             OnboardingV2SignInSheet(onSignedIn: {
                 showProviders = false
@@ -105,7 +105,7 @@ struct OnboardingV2SignInSheet: View {
         .background(OV2.bg.ignoresSafeArea())
         .presentationDetents([.height(contentHeight > 0 ? contentHeight : Self.estimatedHeight)])
         .presentationDragIndicator(.visible)
-        .preferredColorScheme(.light)
+        .sophiaLightOnly()
     }
 }
 
@@ -198,8 +198,8 @@ struct OnboardingV2ExistingAccountSheet: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ov2Background()
-        .preferredColorScheme(.light)
-        .sheet(isPresented: $showTerms) { TermsView() }
-        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView() }
+        .sophiaLightOnly()
+        .sheet(isPresented: $showTerms) { TermsView().sophiaLightOnly() }
+        .sheet(isPresented: $showPrivacy) { PrivacyPolicyView().sophiaLightOnly() }
     }
 }

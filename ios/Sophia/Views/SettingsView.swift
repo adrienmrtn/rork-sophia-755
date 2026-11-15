@@ -97,7 +97,7 @@ struct SettingsView: View {
                 // paywalls come with their own triggers, counters and analytics, and a
                 // shortcut for looking at a screen has no business spending any of that.
                 debugPaywallScreen(context)
-                    .preferredColorScheme(.light)
+                    .sophiaLightOnly()
                 #endif
             }
             .alert(languageManager.text("settings.reset.alert.title"), isPresented: $showResetAlert) {

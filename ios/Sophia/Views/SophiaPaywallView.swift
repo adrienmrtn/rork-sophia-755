@@ -56,8 +56,9 @@ struct SophiaPaywallView: View {
     var onDismissed: (() -> Void)? = nil
 
     var body: some View {
+        // Clair uniquement, y compris présenté depuis un écran en mode nuit.
         paywall
-            .preferredColorScheme(.light)
+            .sophiaLightOnly()
     }
 
     @ViewBuilder
