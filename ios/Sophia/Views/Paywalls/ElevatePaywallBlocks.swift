@@ -518,7 +518,9 @@ struct ElevateLibraryTitle: View {
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
             // Le logo sur le fond de la page : son mot noir est redessiné en clair la nuit.
+            // Une image : son découpage (symbole à gauche, mot à droite) ne se retourne pas.
             SophiaWordmark(height: 38)
+                .environment(\.layoutDirection, .leftToRight)
                 .accessibilityLabel(Text(verbatim: "Sophia"))
         }
         .frame(maxWidth: .infinity)
