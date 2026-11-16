@@ -4,6 +4,7 @@ import { DataNav, PLATFORM_LABEL, SectionTitle } from "@/components/admin/DataCh
 import { Card, Pill, container } from "@/components/ui";
 import { getStudioSession } from "@/lib/studio/account";
 import { shortDateTime } from "@/lib/studio/data";
+import { feedbackTranslations } from "@/lib/studio/feedback-translation";
 import { dataRpcArgs, readDataFilters } from "@/lib/studio/paywalls";
 import { FEEDBACK_CATEGORY_LABEL, type FeedbackDashboard } from "@/lib/studio/usage";
 
@@ -18,6 +19,7 @@ export default async function FeedbackDataPage({ searchParams }: PageProps<"/adm
 
   const { data, error } = await session.supabase.rpc("admin_feedback_dashboard", dataRpcArgs(filters));
   const d = (data ?? null) as FeedbackDashboard | null;
+  const translations = await feedbackTranslations(d?.items ?? []);
 
   return (
     <>
@@ -34,7 +36,7 @@ export default async function FeedbackDataPage({ searchParams }: PageProps<"/adm
 
         {d && (
           <section className="flex flex-col gap-4">
-            <SectionTitle title="Feedback" note="Messages sent from the form in the app settings, most recent first. To answer one, use the email it also sent: the address is not kept here." />
+            <SectionTitle title="Feedback" note="Messages sent from the form in the app settings, most recent first. To answer one, use the email it also sent: the address is not kept here. Messages in another language come with a French translation, written by a model the first time the page shows them." />
             {d.total === 0 ? (
               <Card className="p-6 text-[14px] text-ink-3">No feedback with these filters. Messages are copied here by the next app versions; until then they only arrive by email.</Card>
             ) : (
@@ -62,6 +64,14 @@ export default async function FeedbackDataPage({ searchParams }: PageProps<"/adm
                           {item.has_email && <span>Left an email</span>}
                         </div>
                         <p className="text-[15px] leading-relaxed break-words whitespace-pre-wrap text-ink">{item.message}</p>
+                        {translations.get(item.id) && (
+                          <div className="flex flex-col gap-1 border-l-2 border-line pl-3">
+                            <span className="text-[12px] font-bold uppercase tracking-[0.6px] text-ink-3">French translation</span>
+                            <p lang="fr" className="text-[15px] leading-relaxed break-words whitespace-pre-wrap text-ink-2">
+                              {translations.get(item.id)}
+                            </p>
+                          </div>
+                        )}
                       </Card>
                     </li>
                   ))}

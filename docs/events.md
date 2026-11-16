@@ -203,7 +203,7 @@ Pages de l'espace équipe du site, chacune servie par une fonction réservée à
 | `/admin/data` | `admin_paywall_dashboard` | paywalls, tests A/B, revenus |
 | `/admin/data/onboarding` | `admin_onboarding_dashboard` | entonnoir, réponses |
 | `/admin/data/usage` | `admin_usage_dashboard` | lecture, cours les plus ouverts, questions les plus ratées (à partir de 20 réponses), duels |
-| `/admin/data/retention` | `admin_retention_dashboard` | rétention par cohorte d'inscription : J0, J+1, J+3, J+7, J+14, J+30 |
+| `/admin/data/retention` | `admin_cohort_retention` | rétention par cohorte d'inscription, « a appris » et « a rouvert l'app » : J0, J+1, J+3, J+7, J+14, J+30 |
 | `/admin/data/social` | `admin_social_dashboard` | demandes d'amis, amitiés, invitations en duel, parrainage, créateurs suivis |
 | `/admin/data/feedback` | `admin_feedback_dashboard` | les retours de `app_feedback` |
 | `/admin/data/health` | `admin_data_health` | santé de la collecte : volume reçu, taille du journal, tâches planifiées |
@@ -216,18 +216,23 @@ que la période. Les titres de cours et les énoncés de quiz sont lus dans `cou
 
 ### Rétention par cohorte
 
-Migration `20261116010000_cohort_retention.sql`. `public.daily_cohort_retention`, gardée sans
-limite : une ligne par jour UTC de création de compte (`auth.users.created_at`), avec les
-comptes créés et ceux actifs le jour même, puis exactement 1, 3, 7, 14 et 30 jours plus tard.
+Migrations `20261116010000_cohort_retention.sql` et `20261116050000_cohort_retention_split.sql`.
+`public.daily_cohort_retention`, gardée sans limite : une ligne par jour UTC de création de
+compte (`auth.users.created_at`). Deux mesures qui ne se mélangent pas :
 
-- « Actif » un jour : le compte a gagné de l'XP (`xp_events`, toutes versions de l'app,
-  depuis juillet 2026) ou son app a envoyé un événement (`course_events`, versions récentes).
-  Tant que toutes les versions n'envoient pas d'événements, les cohortes récentes sont donc
-  mesurées un peu plus largement que les anciennes.
-- `refresh_recent_cohort_retention()` recalcule toutes les heures (tâche
-  `daily_cohort_retention`) les cohortes des 31 derniers jours ; au-delà, plus rien ne bouge.
-- `admin_retention_dashboard(p_days)` ne rend un jalon que lorsque son jour est terminé, et
-  ses totaux ne comptent, pour chaque jalon, que les cohortes assez anciennes.
+- **a appris** (`learned_0`, `learned_1`… `learned_30`) : le compte a gagné de l'XP
+  (`xp_events`) le jour de l'inscription, puis exactement 1, 3, 7, 14 et 30 jours plus tard.
+  Toutes versions de l'app, depuis juillet 2026 : c'est la mesure comparable dans le temps.
+- **a rouvert l'app** (`reopened_1`… `reopened_30`) : l'app a envoyé un événement
+  (`course_events`) ce jour-là. Seules les versions récentes en envoient : la part se calcule
+  parmi les comptes suivis (`tracked`, ceux dont l'app a envoyé un événement le jour de
+  l'inscription), pas parmi tous les inscrits.
+
+`refresh_recent_cohort_retention()` recalcule toutes les heures (tâche
+`daily_cohort_retention`) les cohortes des 31 derniers jours. `admin_cohort_retention(p_days)`
+sert la page `/admin/data/retention` : un jalon n'est rendu que lorsque son jour est terminé,
+et chaque total porte sa propre base. Les colonnes `d0`…`d30` et `admin_retention_dashboard`
+sont celles de la première version (XP ou événement confondus) ; plus rien ne les lit.
 
 ### Filtre par version de l'app
 
@@ -285,6 +290,11 @@ fois cet envoi réussi, l'app en dépose une copie dans `public.app_feedback` (m
 n'est pas copiée), `lang`, `platform`, `app_version`, `os_version`, `device`, `is_premium`,
 `created_at`. L'app ne peut qu'insérer ses propres lignes ; la lecture se fait côté serveur.
 Un échec de la copie est silencieux : le message est déjà parti.
+
+La page `/admin/data/feedback` montre sous chaque message sa traduction française
+(migration `20261116040000`, colonne `app_feedback.message_fr`) : le site la fait écrire par
+le modèle de texte de fal à la première lecture, puis la garde. Vide : le message était déjà
+en français.
 
 ## Piège Android : valeurs par défaut
 
