@@ -25,6 +25,8 @@ export interface PaywallDashboard {
   from: string;
   updated_at: string | null;
   languages: string[];
+  /** Absent tant que la migration 20261116030000 n'est pas appliquée. */
+  versions?: AppVersion[];
   totals: PaywallCounts;
   series: { day: string; views: number; purchases: number }[];
   by_paywall: (PaywallCounts & { paywall_id: string })[];
@@ -75,6 +77,36 @@ export interface DataFilters {
   days: number;
   platform: string | null;
   lang: string | null;
+  /** Version de l'app (« 1.0.6 »), toujours avec sa plateforme : un numéro n'a de sens que là. */
+  version: string | null;
+}
+
+/** Une version connue d'un tableau de bord (champ `versions` des fonctions admin_*_dashboard). */
+export interface AppVersion {
+  platform: string;
+  app_version: string;
+}
+
+/** Les versions par plateforme, la plus récente d'abord, comparées nombre par nombre
+ *  (« 1.0.10 » après « 1.0.9 », ce que l'ordre alphabétique rate). */
+export function sortVersions(versions: AppVersion[]): AppVersion[] {
+  const parts = (v: string) => v.split(/[^0-9]+/).filter(Boolean).map(Number);
+  return [...versions].sort((a, b) => {
+    if (a.platform !== b.platform) return a.platform < b.platform ? -1 : 1;
+    const x = parts(a.app_version);
+    const y = parts(b.app_version);
+    for (let i = 0; i < Math.max(x.length, y.length); i++) {
+      const diff = (y[i] ?? 0) - (x[i] ?? 0);
+      if (diff) return diff;
+    }
+    return a.app_version < b.app_version ? 1 : a.app_version > b.app_version ? -1 : 0;
+  });
+}
+
+/** Les arguments communs des fonctions admin_*_dashboard. p_version n'est envoyé que
+ *  lorsqu'une version est choisie : sans filtre, l'appel reste celui d'avant. */
+export function dataRpcArgs(filters: DataFilters): { p_days: number; p_platform: string | null; p_lang: string | null; p_version?: string } {
+  return { p_days: filters.days, p_platform: filters.platform, p_lang: filters.lang, ...(filters.version ? { p_version: filters.version } : {}) };
 }
 
 /** L'adresse d'une page de /admin/data pour un jeu de filtres ; les valeurs par défaut
@@ -84,6 +116,7 @@ export function dataHref(filters: DataFilters, base = "/admin/data"): string {
   if (filters.days !== 28) params.set("days", String(filters.days));
   if (filters.platform) params.set("platform", filters.platform);
   if (filters.lang) params.set("lang", filters.lang);
+  if (filters.version && filters.platform) params.set("v", filters.version);
   const query = params.toString();
   return query ? `${base}?${query}` : base;
 }
@@ -93,7 +126,8 @@ export function readDataFilters(sp: Record<string, string | string[] | undefined
   const days = PAYWALL_PERIODS.includes(Number(sp.days)) ? Number(sp.days) : 28;
   const platform = PAYWALL_PLATFORMS.includes(sp.platform as PaywallPlatform) ? (sp.platform as PaywallPlatform) : null;
   const lang = typeof sp.lang === "string" && /^[A-Za-z-]{2,7}$/.test(sp.lang) ? sp.lang : null;
-  return { days, platform, lang };
+  const version = platform && typeof sp.v === "string" && /^[0-9A-Za-z._-]{1,20}$/.test(sp.v) ? sp.v : null;
+  return { days, platform, lang, version };
 }
 
 export function dollars(value: number): string {

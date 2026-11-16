@@ -1,3 +1,5 @@
+import type { AppVersion } from "./paywalls";
+
 /** Ce que renvoient les fonctions SQL admin_usage_dashboard et admin_feedback_dashboard
  *  (docs/events.md), et les calculs que les pages /admin/data/usage et /feedback font dessus. */
 
@@ -18,6 +20,8 @@ export interface UsageDashboard {
   min_answers: number;
   updated_at: string | null;
   languages: string[];
+  /** Absent tant que la migration 20261116030000 n'est pas appliquée. */
+  versions?: AppVersion[];
   totals: UsageCounts & { sessions: number; saves: number; shares: number };
   series: { day: string; active_users: number; course_opens: number; pages_read: number; duels: number }[];
   by_language: (UsageCounts & { lang: string })[];
@@ -55,6 +59,8 @@ export interface FeedbackDashboard {
   days: number;
   total: number;
   languages: string[];
+  /** Absent tant que la migration 20261116030000 n'est pas appliquée. */
+  versions?: AppVersion[];
   by_category: { category: string; count: number }[];
   items: FeedbackItem[];
 }
