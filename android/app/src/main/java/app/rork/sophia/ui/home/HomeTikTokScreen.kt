@@ -145,6 +145,7 @@ fun HomeTikTokScreen(
             affinity = CourseAffinityStore.cached() ?: CourseAffinity.NONE,
             context = deckContext,
             isCompleted = { progress.courseProgress[it]?.isCompleted == true },
+            tuning = app.rork.sophia.data.HomeDeckConfig.tuning,
         )
     }
 

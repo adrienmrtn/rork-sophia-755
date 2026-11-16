@@ -32,6 +32,8 @@ struct SophiaApp: App {
         PaywallFonts.registerIfNeeded()
         // Réglage du test A/B du paywall cours (lecture seule, `app_config`).
         PaywallExperiment.start()
+        // Réglage du fil d'accueil (lecture seule, `app_config`, clé `home_deck`).
+        HomeDeckConfig.start()
     }
 
     var body: some Scene {

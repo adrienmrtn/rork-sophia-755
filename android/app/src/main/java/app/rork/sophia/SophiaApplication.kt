@@ -87,6 +87,8 @@ class SophiaApplication : Application(), ImageLoaderFactory {
         Analytics.init(this, authService, languageManager, appScope)
         // A/B test of the course paywall: last known setting now, fresh one in the background.
         app.rork.sophia.data.PaywallExperiment.start(this)
+        // Tuning of the home deck (`app_config`, key `home_deck`), same mechanics.
+        app.rork.sophia.data.HomeDeckConfig.start(this)
         setUpAudio()
 
         // Construit le snapshot du catalogue (disque, sinon pack de départ) hors du fil principal,

@@ -228,7 +228,7 @@ enum PaywallExperiment {
     }
 
     /// Lecture publique d'une ligne de `app_config` ; `nil` quand le réseau ne répond pas.
-    private static func fetchRow(key: String) async -> Data? {
+    static func fetchRow(key: String) async -> Data? {
         guard let base = URL(string: AppConfig.SUPABASE_URL) else { return nil }
         var components = URLComponents(url: base.appendingPathComponent("rest/v1/app_config"), resolvingAgainstBaseURL: false)
         components?.queryItems = [
@@ -247,7 +247,7 @@ enum PaywallExperiment {
 
     /// La réponse REST est `[{"value": {...}}]` ; `value` peut aussi être du JSON écrit dans
     /// une chaîne. Tout le reste (liste vide, autre forme) est « illisible ».
-    private static func parse<Config: Decodable>(_ data: Data) -> Config? {
+    static func parse<Config: Decodable>(_ data: Data) -> Config? {
         let decoder = JSONDecoder()
         if let rows = try? decoder.decode([PaywallConfigObjectRow<Config>].self, from: data) {
             return rows.first?.value

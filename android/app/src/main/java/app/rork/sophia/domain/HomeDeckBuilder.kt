@@ -79,6 +79,32 @@ data class DeckContext(
 }
 
 /**
+ * What the team can tune from a distance: the `home_deck` row of `app_config`
+ * (`{"head_pool": 5, "exploration_every": 4}`), read by `HomeDeckConfig`.
+ */
+data class DeckTuning(
+    /**
+     * For a reader who has finished nothing yet, each scored card is drawn among this many
+     * best courses left in its subject. At 1 every new reader gets the same top course of each
+     * subject, which is what made one course the first card of three new accounts in four.
+     */
+    val headPool: Int = DEFAULT_HEAD_POOL,
+    /** One card in this many is drawn at random outside the dominant subject. */
+    val explorationEvery: Int = HomeDeckBuilder.EXPLORATION_EVERY,
+) {
+    companion object {
+        const val DEFAULT_HEAD_POOL = 5
+        val DEFAULT = DeckTuning()
+
+        /** Out-of-range values are brought back in range rather than refused. */
+        fun clamped(headPool: Int?, explorationEvery: Int?) = DeckTuning(
+            headPool = (headPool ?: DEFAULT_HEAD_POOL).coerceIn(1, 20),
+            explorationEvery = (explorationEvery ?: HomeDeckBuilder.EXPLORATION_EVERY).coerceIn(2, 20),
+        )
+    }
+}
+
+/**
  * Builds the home course deck: which subject each card comes from, and which course within
  * it. Port of iOS's `HomeDeckBuilder`, which replaced a plain shuffle.
  *
@@ -87,6 +113,9 @@ data class DeckContext(
  * - **A floor under every subject**, so none quietly disappears from a reader's deck.
  * - One card in four is drawn at random outside the dominant subject: the exploration that
  *   keeps the affinity numbers refreshable without training on their own picks.
+ * - **No single first card for newcomers.** Until a reader has finished a course nothing
+ *   tells two of them apart, so the scored cards are drawn among the few best of each
+ *   subject ([DeckTuning.headPool]) instead of always being the very best.
  */
 object HomeDeckBuilder {
     const val EXPLORATION_EVERY = 4
@@ -113,6 +142,7 @@ object HomeDeckBuilder {
         context: DeckContext = DeckContext.EMPTY,
         isCompleted: (String) -> Boolean,
         random: Random = Random.Default,
+        tuning: DeckTuning = DeckTuning.DEFAULT,
     ): List<CourseSummary> {
         val candidates = courses.filterNot { isCompleted(it.id) }
         if (candidates.isEmpty()) return emptyList()
@@ -128,12 +158,16 @@ object HomeDeckBuilder {
             }
             .toMutableMap()
 
+        // A reader with history is already told apart by what they read and skipped.
+        val headPool = if (context.completedBySubject.values.sum() == 0) maxOf(tuning.headPool, 1) else 1
+        val explorationEvery = maxOf(tuning.explorationEvery, 2)
+
         val deck = ArrayList<CourseSummary>(candidates.size)
         val recentSubjects = ArrayDeque<String>()
 
         while (pools.isNotEmpty()) {
             val blocked = blockedSubject(recentSubjects)
-            val isExploration = (deck.size + 1) % EXPLORATION_EVERY == 0
+            val isExploration = (deck.size + 1) % explorationEvery == 0
 
             val key = (if (isExploration) explorationSubject(pools, blocked, dominant, random) else null)
                 ?: drawSubject(pools, weights, blocked, random)
@@ -145,7 +179,11 @@ object HomeDeckBuilder {
             }
             // Exploration deliberately ignores the score: a card nobody would have ranked
             // highly is the only kind that teaches the model something new.
-            val index = if (isExploration) random.nextInt(pool.size) else 0
+            val index = when {
+                isExploration -> random.nextInt(pool.size)
+                headPool > 1 -> random.nextInt(minOf(headPool, pool.size))
+                else -> 0
+            }
             deck += pool.removeAt(index)
             if (pool.isEmpty()) pools.remove(key)
 

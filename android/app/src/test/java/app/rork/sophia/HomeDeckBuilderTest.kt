@@ -4,6 +4,7 @@ import app.rork.sophia.domain.CourseAffinity
 import app.rork.sophia.domain.CourseProgress
 import app.rork.sophia.domain.CourseSummary
 import app.rork.sophia.domain.DeckContext
+import app.rork.sophia.domain.DeckTuning
 import app.rork.sophia.domain.HomeDeckBuilder
 import app.rork.sophia.domain.Subject
 import app.rork.sophia.domain.UserProgress
@@ -35,8 +36,12 @@ class HomeDeckBuilderTest {
         neighbourLifts = mapOf("histoire_0" to listOf(10.0)),
     )
 
-    private fun deck(context: DeckContext = DeckContext.EMPTY, completed: Set<String> = emptySet(), seed: Int = 1) =
-        HomeDeckBuilder.deck(catalogue, affinity, context, { it in completed }, Random(seed))
+    private fun deck(
+        context: DeckContext = DeckContext.EMPTY,
+        completed: Set<String> = emptySet(),
+        seed: Int = 1,
+        tuning: DeckTuning = DeckTuning.DEFAULT,
+    ) = HomeDeckBuilder.deck(catalogue, affinity, context, { it in completed }, Random(seed), tuning)
 
     @Test
     fun everyUnfinishedCourseIsDealtOnceAndFinishedOnesNever() {
@@ -101,7 +106,7 @@ class HomeDeckBuilderTest {
 
     @Test
     fun theBestCourseOfASubjectComesFirstOutsideExploration() {
-        val dealt = deck(seed = 3)
+        val dealt = deck(seed = 3, tuning = DeckTuning(headPool = 1))
         // Cards 1-3 are never exploration: each is the best left of its subject.
         val seen = mutableMapOf<String, Int>()
         dealt.take(3).forEach { course ->
@@ -109,6 +114,29 @@ class HomeDeckBuilderTest {
             assertEquals("${course.subject}_${11 - rank}", course.id)
             seen[course.subject] = rank + 1
         }
+    }
+
+    @Test
+    fun newReadersDoNotAllGetTheSameFirstCard() {
+        // Same subject or not, the first card is one of the five best of its subject…
+        val firsts = (0 until 200).map { seed -> deck(seed = seed).first() }
+        assertTrue(firsts.all { it.id.substringAfterLast('_').toInt() >= 7 })
+        // …and no longer the same one for everybody.
+        val bySubject = firsts.groupBy { it.subject }
+        assertTrue(bySubject.getValue("sciences").map { it.id }.distinct().size == 5)
+        // A reader with history keeps the strict ranking: what they read tells them apart.
+        val reader = DeckContext(completedBySubject = mapOf("art" to 1))
+        (0 until 50).forEach { seed ->
+            val first = deck(context = reader, seed = seed).first()
+            assertEquals("${first.subject}_11", first.id)
+        }
+    }
+
+    @Test
+    fun tuningIsClampedToSaneValues() {
+        assertEquals(DeckTuning(headPool = 5, explorationEvery = 4), DeckTuning.clamped(null, null))
+        assertEquals(DeckTuning(headPool = 1, explorationEvery = 2), DeckTuning.clamped(0, 0))
+        assertEquals(DeckTuning(headPool = 20, explorationEvery = 20), DeckTuning.clamped(500, 500))
     }
 
     @Test

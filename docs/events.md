@@ -49,7 +49,7 @@ n'est qu'une photo sans dates).
 | `premium_status` | `free`, `trial`, `paid` ou `unknown` au moment de l'événement |
 | `screen` | écran d'origine quand il compte (`home`, `library`, `profile`…) |
 | `position` | rang de la carte dans le fil (0 = première), pour les événements de carte |
-| `algo_version` | version de l'algorithme qui a produit le fil (`local-v1` tant que le fil est calculé sur le téléphone) |
+| `algo_version` | version de l'algorithme qui a produit le fil (`local-v1`, puis `local-v2` depuis que la tête de fil des nouveaux lecteurs est tirée parmi les meilleurs cours de chaque matière ; le fil est calculé sur le téléphone, réglé par `app_config.home_deck`) |
 | `props` | propriétés spécifiques, JSON de 2 Ko au plus |
 | `ts` | horodatage de l'événement sur l'appareil |
 
@@ -183,6 +183,11 @@ recalculées toutes les heures pour le jour en cours et les deux précédents :
   likes, enregistrements, partages, et les réponses de quiz (dont les bonnes).
 - `public.daily_course_usage` : la même chose par cours (`daily_course_stats`, qui nourrit le
   tableau de bord des créateurs, ne connaît pas la plateforme).
+  `impressions` et `card_opens` (migration `20261116020000`) comptent les cartes affichées
+  dans le fil et celles ouvertes depuis le fil : leur rapport, le taux d'ouverture, dit si un
+  cours attire, là où le nombre d'ouvertures dit surtout s'il a été montré.
+- `public.daily_version_usage` : l'usage par plateforme, version de l'app et langue
+  (tableau « By app version » de la page d'usage).
 - `public.daily_quiz_question_stats` : réponses et bonnes réponses par question
   (`quiz_answer`, tous contextes).
 - `public.daily_duel_stats` : duels lancés, terminés et abandonnés, par type (`match` :
@@ -223,6 +228,15 @@ comptes créés et ceux actifs le jour même, puis exactement 1, 3, 7, 14 et 30 
   `daily_cohort_retention`) les cohortes des 31 derniers jours ; au-delà, plus rien ne bouge.
 - `admin_retention_dashboard(p_days)` ne rend un jalon que lorsque son jour est terminé, et
   ses totaux ne comptent, pour chaque jalon, que les cohortes assez anciennes.
+
+### Réglage du fil d'accueil
+
+`app_config`, clé `home_deck` : `{"head_pool": 5, "exploration_every": 4}`, lu au lancement
+par les apps (`HomeDeckConfig`, iOS et Android, algorithme `local-v2`) ; la dernière valeur
+connue sert hors ligne. `head_pool` : pour un lecteur qui n'a encore terminé aucun cours,
+chaque carte est tirée parmi ce nombre de meilleurs cours de sa matière (à 1, toujours le
+meilleur, donc la même tête de fil pour tous les nouveaux comptes). `exploration_every` : une
+carte sur N est tirée au hasard hors de la matière dominante. Bornes : 1 à 20 et 2 à 20.
 
 ### Conservation et santé de la collecte
 

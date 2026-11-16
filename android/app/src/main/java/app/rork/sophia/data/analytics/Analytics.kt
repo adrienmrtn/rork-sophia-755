@@ -45,7 +45,7 @@ import kotlinx.serialization.json.buildJsonObject
  */
 object Analytics {
     /** Version de l'algorithme qui compose le fil, tant qu'il est calculé sur le téléphone. */
-    const val ALGO_VERSION = "local-v1"
+    const val ALGO_VERSION = "local-v2"
 
     /**
      * Les noms acceptés par la contrainte `course_events_name_check` (docs/events.md). Un nom

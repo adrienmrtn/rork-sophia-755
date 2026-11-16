@@ -292,6 +292,55 @@ struct HomeDeckBuilderTests {
         #expect(a.map(\.id) == b.map(\.id))
     }
 
+    @Test func newReadersDoNotAllGetTheSameFirstCard() {
+        var firsts: Set<String> = []
+        for seed in UInt64(1)...200 {
+            var generator = seeded(seed)
+            let deck = HomeDeckBuilder.deck(
+                from: catalogue, context: .empty, isCompleted: { _ in false }, using: &generator
+            )
+            guard let first = deck.first else { continue }
+            firsts.insert(first.id)
+            // Still one of the five best of its subject, never a card from the bottom.
+            let ranked = catalogue
+                .filter { $0.subject == first.subject }
+                .sorted { HomeDeckBuilder.score($0, context: .empty) > HomeDeckBuilder.score($1, context: .empty) }
+            let fifth = HomeDeckBuilder.score(ranked[min(4, ranked.count - 1)], context: .empty)
+            #expect(HomeDeckBuilder.score(first, context: .empty) >= fifth)
+        }
+        // Six subjects, one fixed head each, used to mean at most six first cards.
+        #expect(firsts.count > Subject.allCases.count)
+    }
+
+    @Test func aHeadPoolOfOneKeepsTheStrictRanking() {
+        for seed in UInt64(1)...30 {
+            var generator = seeded(seed)
+            let deck = HomeDeckBuilder.deck(
+                from: catalogue,
+                context: .empty,
+                tuning: DeckTuning(headPool: 1, explorationEvery: 4),
+                isCompleted: { _ in false },
+                using: &generator
+            )
+            guard let first = deck.first else { continue }
+            let best = catalogue
+                .filter { $0.subject == first.subject }
+                .map { HomeDeckBuilder.score($0, context: .empty) }
+                .max() ?? 0
+            #expect(HomeDeckBuilder.score(first, context: .empty) == best)
+        }
+    }
+
+    @Test func deckTuningReadsItsRowAndClampsIt() throws {
+        let decoder = JSONDecoder()
+        let read = try decoder.decode(DeckTuning.self, from: Data(#"{"head_pool": 8, "exploration_every": 3}"#.utf8))
+        #expect(read == DeckTuning(headPool: 8, explorationEvery: 3))
+        let empty = try decoder.decode(DeckTuning.self, from: Data("{}".utf8))
+        #expect(empty == .fallback)
+        let wild = try decoder.decode(DeckTuning.self, from: Data(#"{"head_pool": 0, "exploration_every": 999}"#.utf8))
+        #expect(wild == DeckTuning(headPool: 1, explorationEvery: 20))
+    }
+
     @Test func skippingACourseLowersItsScoreAndReadingItsNeighbourRaisesIt() {
         // "Pourquoi rêve-t-on" — the most finished course in the catalogue, so its
         // quality term is 1 and any movement below comes from the other two terms.

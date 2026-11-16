@@ -147,7 +147,7 @@ final class AnalyticsService {
     static let shared = AnalyticsService()
 
     /// Version de l'algorithme qui compose le fil, tant qu'il est calculé sur le téléphone.
-    static let algoVersion = "local-v1"
+    static let algoVersion = "local-v2"
 
     private static let flushInterval: Duration = .seconds(30)
     private static let flushThreshold = 50
