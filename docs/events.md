@@ -286,6 +286,11 @@ n'est pas copiée), `lang`, `platform`, `app_version`, `os_version`, `device`, `
 `created_at`. L'app ne peut qu'insérer ses propres lignes ; la lecture se fait côté serveur.
 Un échec de la copie est silencieux : le message est déjà parti.
 
+La page `/admin/data/feedback` montre sous chaque message sa traduction française
+(migration `20261116040000`, colonne `app_feedback.message_fr`) : le site la fait écrire par
+le modèle de texte de fal à la première lecture, puis la garde. Vide : le message était déjà
+en français.
+
 ## Piège Android : valeurs par défaut
 
 Le client Supabase d'Android sérialise sans les valeurs par défaut (`encodeDefaults = false`).
