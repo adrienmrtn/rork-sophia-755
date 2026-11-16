@@ -51,6 +51,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.data.HomeDeckConfig
 import app.rork.sophia.R
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.AuthorStore
@@ -136,7 +137,7 @@ fun HomeFeedScreen(
             affinity = CourseAffinityStore.cached() ?: CourseAffinity.NONE,
             context = deckContext,
             isCompleted = { current.courseProgress[it]?.isCompleted == true },
-            tuning = app.rork.sophia.data.HomeDeckConfig.tuning,
+            tuning = HomeDeckConfig.tuning,
         )
     }
 
