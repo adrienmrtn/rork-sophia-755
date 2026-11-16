@@ -36,6 +36,46 @@ nonisolated struct DeckContext: Sendable {
     static let empty = DeckContext()
 }
 
+/// What the team can tune from a distance: the `home_deck` row of `app_config`
+/// (`{"head_pool": 5, "exploration_every": 4}`), read by `HomeDeckConfig`.
+nonisolated struct DeckTuning: Codable, Sendable, Equatable {
+    /// For a reader who has finished nothing yet, each scored card is drawn among this
+    /// many best courses left in its subject. At 1 every new reader gets the same top
+    /// course of each subject — which is what made "Pourquoi rêve-t-on" the first card
+    /// of three new accounts in four.
+    var headPool: Int
+
+    /// One card in this many is drawn at random outside the dominant subject.
+    var explorationEvery: Int
+
+    /// Row missing, network down or value unreadable.
+    static let fallback = DeckTuning(headPool: 5, explorationEvery: 4)
+
+    /// Out-of-range values are brought back in range rather than refused.
+    init(headPool: Int, explorationEvery: Int) {
+        self.headPool = min(max(headPool, 1), 20)
+        self.explorationEvery = min(max(explorationEvery, 2), 20)
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case headPool = "head_pool"
+        case explorationEvery = "exploration_every"
+    }
+
+    /// Tolerant read: a missing or mistyped field takes its default.
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let decodedHead: Double? = try? container.decode(Double.self, forKey: .headPool)
+        let decodedEvery: Double? = try? container.decode(Double.self, forKey: .explorationEvery)
+        let head: Double = decodedHead ?? Double(DeckTuning.fallback.headPool)
+        let every: Double = decodedEvery ?? Double(DeckTuning.fallback.explorationEvery)
+        self.init(
+            headPool: head.isFinite ? Int(min(max(head, 1), 20)) : DeckTuning.fallback.headPool,
+            explorationEvery: every.isFinite ? Int(min(max(every, 2), 20)) : DeckTuning.fallback.explorationEvery
+        )
+    }
+}
+
 /// Builds the home course deck: which subject each card comes from, and which course
 /// within it.
 ///
@@ -57,6 +97,10 @@ nonisolated struct DeckContext: Sendable {
 ///   row. Subjects are drawn by weight instead, and never three times consecutively.
 /// - **A floor under every subject.** Without it a subject disappears from a reader's
 ///   deck, nothing more is ever learned about it, and 40 courses quietly die.
+///
+/// And one exception to "best first": until a reader has finished a course, nothing
+/// tells two of them apart, so the scored cards are drawn among the few best of each
+/// subject (`DeckTuning.headPool`) rather than always being the very best.
 enum HomeDeckBuilder {
     // MARK: - Tuning
 
@@ -95,14 +139,21 @@ enum HomeDeckBuilder {
 
     // MARK: - Public API
 
-    /// The deck for this visit, unfinished courses only, best first.
+    /// The deck for this visit, unfinished courses only, best first, under the tuning
+    /// last read from `app_config`.
     static func deck(
         from courses: [Course],
         context: DeckContext = .empty,
         isCompleted: (String) -> Bool
     ) -> [Course] {
         var generator = SystemRandomNumberGenerator()
-        return deck(from: courses, context: context, isCompleted: isCompleted, using: &generator)
+        return deck(
+            from: courses,
+            context: context,
+            tuning: HomeDeckConfig.tuning,
+            isCompleted: isCompleted,
+            using: &generator
+        )
     }
 
     /// Deck built with a caller-supplied source of randomness.
@@ -113,6 +164,7 @@ enum HomeDeckBuilder {
     static func deck<G: RandomNumberGenerator>(
         from courses: [Course],
         context: DeckContext,
+        tuning: DeckTuning = .fallback,
         isCompleted: (String) -> Bool,
         using generator: inout G
     ) -> [Course] {
@@ -131,6 +183,11 @@ enum HomeDeckBuilder {
         for (key, pool) in pools {
             pools[key] = pool.sorted { score($0, context: context) > score($1, context: context) }
         }
+
+        // A reader with history is already told apart by what they read and skipped.
+        let isNewReader = context.completedBySubject.values.reduce(0, +) == 0
+        let headPool = isNewReader ? max(tuning.headPool, 1) : 1
+        let explorationEvery = max(tuning.explorationEvery, 2)
 
         var deck: [Course] = []
         deck.reserveCapacity(candidates.count)
@@ -160,7 +217,14 @@ enum HomeDeckBuilder {
             }
             // Exploration deliberately ignores the score: a card nobody would have
             // ranked highly is the only kind that teaches the model something new.
-            let index = isExploration ? Int.random(in: 0..<pool.count, using: &generator) : 0
+            let index: Int
+            if isExploration {
+                index = Int.random(in: 0..<pool.count, using: &generator)
+            } else if headPool > 1 {
+                index = Int.random(in: 0..<min(headPool, pool.count), using: &generator)
+            } else {
+                index = 0
+            }
             deck.append(pool.remove(at: index))
             pools[key] = pool.isEmpty ? nil : pool
 

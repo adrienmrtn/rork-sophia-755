@@ -6,7 +6,8 @@ import { Card, container } from "@/components/ui";
 import { getStudioSession } from "@/lib/studio/account";
 import { shortDateTime } from "@/lib/studio/data";
 import { percent, readDataFilters } from "@/lib/studio/paywalls";
-import { DUEL_KIND_LABEL, courseName, perDay, ratio, type UsageCounts, type UsageDashboard } from "@/lib/studio/usage";
+import { shortDate } from "@/lib/studio/data";
+import { DUEL_KIND_LABEL, MIN_IMPRESSIONS, courseName, openRate, perDay, ratio, type UsageCounts, type UsageDashboard } from "@/lib/studio/usage";
 
 export const dynamic = "force-dynamic";
 
@@ -75,18 +76,67 @@ export default async function UsageDataPage({ searchParams }: PageProps<"/admin/
                     </Card>
                   </div>
 
+                  {(d.by_version ?? []).length > 0 && (
+                    <Card className="flex flex-col gap-3 p-6">
+                      <div className="flex flex-col gap-1">
+                        <h3 className="text-[18px] font-extrabold tracking-[-0.3px]">By app version</h3>
+                        <p className="text-[13px] text-ink-3">
+                          One line per released version, most recent first. Someone who updates during a day counts in both versions that day. Feed open rate is the share of cards displayed in the feed that were opened: the number to watch when a
+                          version changes how the feed is built.
+                        </p>
+                      </div>
+                      <div className="overflow-x-auto">
+                        <table className="w-full min-w-[860px] text-[14px]">
+                          <thead>
+                            <tr className="border-b border-line text-left text-[12px] font-bold uppercase tracking-[0.6px] text-ink-3">
+                              <th className="py-2 pr-3 font-bold">Version</th>
+                              <th className="py-2 pr-3 font-bold">Seen</th>
+                              <Th>Users / day</Th>
+                              <Th>Opens</Th>
+                              <Th>Feed open rate</Th>
+                              <Th>Pages / open</Th>
+                              <Th>Finished</Th>
+                              <Th>Quiz correct</Th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-line">
+                            {(d.by_version ?? []).map((v) => (
+                              <tr key={`${v.platform} ${v.app_version}`}>
+                                <td className="py-2 pr-3 font-semibold whitespace-nowrap">
+                                  {PLATFORM_LABEL[v.platform] ?? v.platform} {v.app_version || "unknown"}
+                                </td>
+                                <td className="py-2 pr-3 whitespace-nowrap text-ink-3">{v.first_day === v.last_day ? shortDate(v.first_day) : `${shortDate(v.first_day)} – ${shortDate(v.last_day)}`}</td>
+                                <Td strong>{n(perDay(v.user_days, d.days))}</Td>
+                                <Td>{n(v.course_opens)}</Td>
+                                <Td>{percent(openRate(v.card_opens, v.impressions))}</Td>
+                                <Td>{Number(v.course_opens) ? (Number(v.pages_read) / Number(v.course_opens)).toFixed(1) : "–"}</Td>
+                                <Td>{percent(ratio(v.completes, v.course_opens))}</Td>
+                                <Td>{percent(ratio(v.quiz_correct, v.quiz_answers))}</Td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </Card>
+                  )}
+
                   <Card className="flex flex-col gap-3 p-6">
                     <div className="flex flex-col gap-1">
                       <h3 className="text-[18px] font-extrabold tracking-[-0.3px]">Most opened courses</h3>
-                      <p className="text-[13px] text-ink-3">The 25 most opened. Pages per open tells how far people read once inside.</p>
+                      <p className="text-[13px] text-ink-3">
+                        The 25 most opened. Pages per open tells how far people read once inside. A course is mostly opened because the feed showed it: “Shown in feed” counts the cards displayed, and “Feed open rate” is the share of those cards that
+                        were opened, which is what tells whether the course itself attracts (shown from {MIN_IMPRESSIONS} cards).
+                      </p>
                     </div>
                     <div className="overflow-x-auto">
-                      <table className="w-full min-w-[680px] text-[14px]">
+                      <table className="w-full min-w-[860px] text-[14px]">
                         <thead>
                           <tr className="border-b border-line text-left text-[12px] font-bold uppercase tracking-[0.6px] text-ink-3">
                             <th className="w-8 py-2 pr-2 font-bold">#</th>
                             <th className="py-2 pr-3 font-bold">Course</th>
                             <Th>Opens</Th>
+                            <Th>Shown in feed</Th>
+                            <Th>Feed open rate</Th>
                             <Th>Pages read</Th>
                             <Th>Pages / open</Th>
                             <Th>Finished</Th>
@@ -99,6 +149,8 @@ export default async function UsageDataPage({ searchParams }: PageProps<"/admin/
                               <td className="py-2 pr-2 text-ink-3 tabular-nums">{i + 1}</td>
                               <td className="py-2 pr-3 font-semibold">{courseName(c)}</td>
                               <Td strong>{n(c.opens)}</Td>
+                              <Td>{c.impressions == null ? "–" : n(c.impressions)}</Td>
+                              <Td>{percent(openRate(c.card_opens, c.impressions))}</Td>
                               <Td>{n(c.pages_read)}</Td>
                               <Td>{Number(c.opens) ? (Number(c.pages_read) / Number(c.opens)).toFixed(1) : "–"}</Td>
                               <Td>{percent(ratio(c.completes, c.opens))}</Td>

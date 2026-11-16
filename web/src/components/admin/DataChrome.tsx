@@ -10,6 +10,7 @@ const TABS = [
   { key: "paywalls", href: "/admin/data", label: "Paywalls" },
   { key: "onboarding", href: "/admin/data/onboarding", label: "Onboarding" },
   { key: "usage", href: "/admin/data/usage", label: "Usage" },
+  { key: "retention", href: "/admin/data/retention", label: "Retention" },
   { key: "social", href: "/admin/data/social", label: "Friends" },
   { key: "feedback", href: "/admin/data/feedback", label: "Feedback" },
   { key: "health", href: "/admin/data/health", label: "Health" },

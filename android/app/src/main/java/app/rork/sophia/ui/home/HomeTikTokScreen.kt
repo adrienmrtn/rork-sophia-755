@@ -72,6 +72,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.data.HomeDeckConfig
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.data.ContentCatalog
 import app.rork.sophia.data.CourseAffinityStore
@@ -145,6 +146,7 @@ fun HomeTikTokScreen(
             affinity = CourseAffinityStore.cached() ?: CourseAffinity.NONE,
             context = deckContext,
             isCompleted = { progress.courseProgress[it]?.isCompleted == true },
+            tuning = HomeDeckConfig.tuning,
         )
     }
 

@@ -22,7 +22,10 @@ export interface UsageDashboard {
   series: { day: string; active_users: number; course_opens: number; pages_read: number; duels: number }[];
   by_language: (UsageCounts & { lang: string })[];
   by_platform: (UsageCounts & { platform: string })[];
-  top_courses: { course_id: string; title: string | null; opens: number; readers: number; pages_read: number; completes: number; likes: number }[];
+  /** Absent tant que la migration 20261116020000 n'est pas appliquée. */
+  by_version?: (Omit<UsageCounts, "likes"> & { platform: string; app_version: string; first_day: string; last_day: string; impressions: number; card_opens: number })[];
+  /** impressions : cartes affichées dans le fil ; card_opens : cartes ouvertes depuis le fil. */
+  top_courses: { course_id: string; title: string | null; opens: number; readers: number; pages_read: number; completes: number; likes: number; impressions?: number; card_opens?: number }[];
   quiz: {
     questions_seen: number;
     questions_ranked: number;
@@ -89,6 +92,16 @@ export const DUEL_INVITE_STATUS_LABEL: Record<string, string> = {
 export function ratio(part: number, whole: number): number | null {
   const w = Number(whole);
   return w ? Number(part) / w : null;
+}
+
+/** En dessous de ce nombre d'affichages, un taux d'ouverture ne dit rien. */
+export const MIN_IMPRESSIONS = 20;
+
+/** La part des cartes affichées dans le fil qui ont été ouvertes, ou null quand il y a trop
+ *  peu d'affichages pour qu'elle veuille dire quelque chose. */
+export function openRate(cardOpens: number | null | undefined, impressions: number | null | undefined): number | null {
+  const shown = Number(impressions ?? 0);
+  return shown >= MIN_IMPRESSIONS ? Number(cardOpens ?? 0) / shown : null;
 }
 
 /** Une moyenne par jour sur la période, arrondie à l'entier. */

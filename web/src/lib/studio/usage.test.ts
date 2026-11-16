@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { courseName, perDay, ratio } from "./usage";
+import { courseName, openRate, perDay, ratio } from "./usage";
 
 describe("ratio", () => {
   it("is null when there is nothing to compare against", () => {
@@ -21,5 +21,14 @@ describe("courseName", () => {
     expect(courseName({ course_id: "course_42_pourquoi_reve_t_on", title: "Pourquoi rêve-t-on ?" })).toBe("Pourquoi rêve-t-on ?");
     expect(courseName({ course_id: "course_42_pourquoi_reve_t_on", title: null })).toBe("pourquoi reve t on");
     expect(courseName({ course_id: "odd", title: null })).toBe("odd");
+  });
+});
+
+describe("openRate", () => {
+  it("needs enough impressions to mean something", () => {
+    expect(openRate(5, 10)).toBeNull();
+    expect(openRate(undefined, undefined)).toBeNull();
+    expect(openRate(10, 40)).toBe(0.25);
+    expect(openRate(0, 40)).toBe(0);
   });
 });

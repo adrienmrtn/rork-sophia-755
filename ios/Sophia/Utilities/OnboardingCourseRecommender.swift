@@ -41,6 +41,7 @@ enum OnboardingCourseRecommender {
         let deck = HomeDeckBuilder.deck(
             from: catalogue,
             context: DeckContext(objectiveSubjects: interests),
+            tuning: HomeDeckConfig.tuning,
             isCompleted: { excluding.contains($0) },
             using: &generator
         )
