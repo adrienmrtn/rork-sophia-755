@@ -6,7 +6,7 @@ import { Card, container } from "@/components/ui";
 import { getStudioSession } from "@/lib/studio/account";
 import { shortDateTime } from "@/lib/studio/data";
 import { funnel, questionViews, type FunnelStep, type OnboardingDashboard } from "@/lib/studio/onboarding";
-import { percent, readDataFilters } from "@/lib/studio/paywalls";
+import { percent, dataRpcArgs, readDataFilters } from "@/lib/studio/paywalls";
 
 export const dynamic = "force-dynamic";
 
@@ -17,7 +17,7 @@ export default async function OnboardingDataPage({ searchParams }: PageProps<"/a
   if (!session?.isAdmin) redirect("/studio");
   const filters = readDataFilters(await searchParams);
 
-  const { data, error } = await session.supabase.rpc("admin_onboarding_dashboard", { p_days: filters.days, p_platform: filters.platform, p_lang: filters.lang });
+  const { data, error } = await session.supabase.rpc("admin_onboarding_dashboard", dataRpcArgs(filters));
   const d = (data ?? null) as OnboardingDashboard | null;
   const steps = funnel(d?.steps ?? []);
   const questions = questionViews(d?.questions ?? []);
@@ -32,7 +32,7 @@ export default async function OnboardingDataPage({ searchParams }: PageProps<"/a
       <AdminHeader session={session} active="data" />
       <main className={`${container} flex flex-1 flex-col gap-6 pt-8 pb-20`}>
         <AdminTitle title="Data" lead="What people do in the app: paywalls, onboarding, usage, friends and feedback." />
-        <DataNav active="onboarding" filters={filters} languages={d?.languages ?? []} />
+        <DataNav active="onboarding" filters={filters} languages={d?.languages ?? []} versions={d?.versions ?? []} />
 
         {error && (
           <p role="alert" className="rounded-xl bg-red-bg px-4 py-3 text-[14px] font-semibold text-red">

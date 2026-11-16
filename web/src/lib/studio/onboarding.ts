@@ -1,3 +1,5 @@
+import type { AppVersion } from "./paywalls";
+
 /** Ce que renvoie la fonction SQL admin_onboarding_dashboard (docs/events.md), et la mise en
  *  ordre que la page /admin/data/onboarding fait dessus. */
 
@@ -19,6 +21,8 @@ export interface OnboardingDashboard {
   from: string;
   updated_at: string | null;
   languages: string[];
+  /** Absent tant que la migration 20261116030000 n'est pas appliquée. */
+  versions?: AppVersion[];
   steps: OnboardingStepRow[];
   series: { day: string; installs: number }[];
   questions: OnboardingQuestionRow[];

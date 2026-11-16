@@ -4,7 +4,7 @@ import { DataNav, PLATFORM_LABEL, SectionTitle } from "@/components/admin/DataCh
 import { Card, Pill, container } from "@/components/ui";
 import { getStudioSession } from "@/lib/studio/account";
 import { shortDateTime } from "@/lib/studio/data";
-import { readDataFilters } from "@/lib/studio/paywalls";
+import { dataRpcArgs, readDataFilters } from "@/lib/studio/paywalls";
 import { FEEDBACK_CATEGORY_LABEL, type FeedbackDashboard } from "@/lib/studio/usage";
 
 export const dynamic = "force-dynamic";
@@ -16,7 +16,7 @@ export default async function FeedbackDataPage({ searchParams }: PageProps<"/adm
   if (!session?.isAdmin) redirect("/studio");
   const filters = readDataFilters(await searchParams);
 
-  const { data, error } = await session.supabase.rpc("admin_feedback_dashboard", { p_days: filters.days, p_platform: filters.platform, p_lang: filters.lang });
+  const { data, error } = await session.supabase.rpc("admin_feedback_dashboard", dataRpcArgs(filters));
   const d = (data ?? null) as FeedbackDashboard | null;
 
   return (
@@ -24,7 +24,7 @@ export default async function FeedbackDataPage({ searchParams }: PageProps<"/adm
       <AdminHeader session={session} active="data" />
       <main className={`${container} flex flex-1 flex-col gap-6 pt-8 pb-20`}>
         <AdminTitle title="Data" lead="What people do in the app: paywalls, onboarding, usage, friends and feedback." />
-        <DataNav active="feedback" filters={filters} languages={d?.languages ?? []} />
+        <DataNav active="feedback" filters={filters} languages={d?.languages ?? []} versions={d?.versions ?? []} />
 
         {error && (
           <p role="alert" className="rounded-xl bg-red-bg px-4 py-3 text-[14px] font-semibold text-red">

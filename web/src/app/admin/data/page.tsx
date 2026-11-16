@@ -11,6 +11,7 @@ import {
   dollars,
   groupExperiments,
   percent,
+  dataRpcArgs,
   readDataFilters,
   type PaywallCounts,
   type PaywallDashboard,
@@ -26,7 +27,7 @@ export default async function DataPage({ searchParams }: PageProps<"/admin/data"
   const sp = await searchParams;
   const filters = readDataFilters(sp);
 
-  const { data, error } = await session.supabase.rpc("admin_paywall_dashboard", { p_days: filters.days, p_platform: filters.platform, p_lang: filters.lang });
+  const { data, error } = await session.supabase.rpc("admin_paywall_dashboard", dataRpcArgs(filters));
   const d = (data ?? null) as PaywallDashboard | null;
   const languages = d?.languages ?? [];
   const experiments = groupExperiments(d?.by_experiment ?? []);
@@ -38,7 +39,7 @@ export default async function DataPage({ searchParams }: PageProps<"/admin/data"
       <main className={`${container} flex flex-1 flex-col gap-6 pt-8 pb-20`}>
         <AdminTitle title="Data" lead="What people do in the app: paywalls, onboarding, usage, friends and feedback." />
 
-        <DataNav active="paywalls" filters={filters} languages={languages} />
+        <DataNav active="paywalls" filters={filters} languages={languages} versions={d?.versions ?? []} />
 
         {error && (
           <p role="alert" className="rounded-xl bg-red-bg px-4 py-3 text-[14px] font-semibold text-red">
@@ -115,7 +116,7 @@ export default async function DataPage({ searchParams }: PageProps<"/admin/data"
             <section className="flex flex-col gap-4 border-t border-line pt-6">
               <SectionTitle
                 title="Revenue"
-                note={`From RevenueCat, every app version, in US dollars${revenue.first_day ? `, since ${shortDay(revenue.first_day)}` : ""}. Follows the period and the platform, not the language.`}
+                note={`From RevenueCat, every app version, in US dollars${revenue.first_day ? `, since ${shortDay(revenue.first_day)}` : ""}. Follows the period and the platform, not the language or the app version.`}
               />
               <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
                 <Tile label="Revenue" value={dollars(revenue.totals.revenue)} />

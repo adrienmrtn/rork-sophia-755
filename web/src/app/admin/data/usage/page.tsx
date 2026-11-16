@@ -5,7 +5,7 @@ import { DayBars } from "@/components/admin/DayBars";
 import { Card, container } from "@/components/ui";
 import { getStudioSession } from "@/lib/studio/account";
 import { shortDateTime } from "@/lib/studio/data";
-import { percent, readDataFilters } from "@/lib/studio/paywalls";
+import { percent, dataRpcArgs, readDataFilters } from "@/lib/studio/paywalls";
 import { shortDate } from "@/lib/studio/data";
 import { DUEL_KIND_LABEL, MIN_IMPRESSIONS, courseName, openRate, perDay, ratio, type UsageCounts, type UsageDashboard } from "@/lib/studio/usage";
 
@@ -20,7 +20,7 @@ export default async function UsageDataPage({ searchParams }: PageProps<"/admin/
   if (!session?.isAdmin) redirect("/studio");
   const filters = readDataFilters(await searchParams);
 
-  const { data, error } = await session.supabase.rpc("admin_usage_dashboard", { p_days: filters.days, p_platform: filters.platform, p_lang: filters.lang });
+  const { data, error } = await session.supabase.rpc("admin_usage_dashboard", dataRpcArgs(filters));
   const d = (data ?? null) as UsageDashboard | null;
   const duelsStarted = (d?.duels.by_kind ?? []).reduce((total, row) => total + Number(row.started), 0);
 
@@ -29,7 +29,7 @@ export default async function UsageDataPage({ searchParams }: PageProps<"/admin/
       <AdminHeader session={session} active="data" />
       <main className={`${container} flex flex-1 flex-col gap-6 pt-8 pb-20`}>
         <AdminTitle title="Data" lead="What people do in the app: paywalls, onboarding, usage, friends and feedback." />
-        <DataNav active="usage" filters={filters} languages={d?.languages ?? []} />
+        <DataNav active="usage" filters={filters} languages={d?.languages ?? []} versions={d?.versions ?? []} />
 
         {error && (
           <p role="alert" className="rounded-xl bg-red-bg px-4 py-3 text-[14px] font-semibold text-red">
@@ -212,7 +212,7 @@ export default async function UsageDataPage({ searchParams }: PageProps<"/admin/
             <section className="flex flex-col gap-4 border-t border-line pt-6">
               <SectionTitle
                 title="Duels"
-                note={`Counted by the game server, every app version. A duel between friends counts for the one who starts it.${filters.platform ? " With a platform filter, only players whose app sends usage events are counted." : ""}`}
+                note={`Counted by the game server, every app version. A duel between friends counts for the one who starts it. Duels do not follow the version filter.${filters.platform ? " With a platform filter, only players whose app sends usage events are counted." : ""}`}
               />
               <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1fr_2fr]">
                 <Card className="flex flex-col gap-3 p-6">

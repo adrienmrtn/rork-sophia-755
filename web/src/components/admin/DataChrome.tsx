@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Card } from "@/components/ui";
-import { PAYWALL_PERIODS, PAYWALL_PLATFORMS, dataHref, type DataFilters } from "@/lib/studio/paywalls";
+import { PAYWALL_PERIODS, PAYWALL_PLATFORMS, dataHref, sortVersions, type AppVersion, type DataFilters } from "@/lib/studio/paywalls";
 
 /** Ce que partagent les pages de /admin/data : les onglets, les filtres, les tuiles. */
 
@@ -18,11 +18,29 @@ const TABS = [
 
 export type DataTab = (typeof TABS)[number]["key"];
 
-/** Les onglets et les trois filtres. Changer d'onglet garde les filtres. `periodOnly` : la
+/** Les onglets et les filtres. Changer d'onglet garde les filtres. `versions` : les versions de
+ *  l'app que la page connaît ; en choisir une choisit aussi sa plateforme, et changer de
+ *  plateforme l'oublie. `periodOnly` : la
  *  page ne connaît ni plateforme ni langue, seuls les choix de période sont montrés. `noFilters` : la page n'a aucun filtre. */
-export function DataNav({ active, filters, languages, periodOnly = false, noFilters = false }: { active: DataTab; filters: DataFilters; languages: string[]; periodOnly?: boolean; noFilters?: boolean }) {
+export function DataNav({
+  active,
+  filters,
+  languages,
+  versions = [],
+  periodOnly = false,
+  noFilters = false,
+}: {
+  active: DataTab;
+  filters: DataFilters;
+  languages: string[];
+  versions?: AppVersion[];
+  periodOnly?: boolean;
+  noFilters?: boolean;
+}) {
   const base = TABS.find((t) => t.key === active)?.href ?? "/admin/data";
   const langs = [...new Set([...languages, ...(filters.lang ? [filters.lang] : [])])].sort();
+  const known = filters.version && filters.platform && !versions.some((v) => v.platform === filters.platform && v.app_version === filters.version) ? [...versions, { platform: filters.platform, app_version: filters.version }] : versions;
+  const versionChoices = sortVersions(known).filter((v) => !filters.platform || v.platform === filters.platform);
   return (
     <div className="flex flex-col gap-4">
       <nav aria-label="Data pages" className="flex gap-6 overflow-x-auto border-b border-line">
@@ -49,15 +67,27 @@ export function DataNav({ active, filters, languages, periodOnly = false, noFilt
           {!periodOnly && (
             <>
               <Segmented label="Platform">
-                <Choice href={dataHref({ ...filters, platform: null }, base)} active={filters.platform === null}>
+                <Choice href={dataHref({ ...filters, platform: null, version: null }, base)} active={filters.platform === null}>
                   All
                 </Choice>
                 {PAYWALL_PLATFORMS.map((p) => (
-                  <Choice key={p} href={dataHref({ ...filters, platform: p }, base)} active={filters.platform === p}>
+                  <Choice key={p} href={dataHref({ ...filters, platform: p, version: null }, base)} active={filters.platform === p}>
                     {PLATFORM_LABEL[p]}
                   </Choice>
                 ))}
               </Segmented>
+              {versionChoices.length > 0 && (
+                <Segmented label="Version">
+                  <Choice href={dataHref({ ...filters, version: null }, base)} active={filters.version === null}>
+                    All
+                  </Choice>
+                  {versionChoices.map((v) => (
+                    <Choice key={`${v.platform} ${v.app_version}`} href={dataHref({ ...filters, platform: v.platform, version: v.app_version }, base)} active={filters.platform === v.platform && filters.version === v.app_version}>
+                      {PLATFORM_LABEL[v.platform] ?? v.platform} {v.app_version}
+                    </Choice>
+                  ))}
+                </Segmented>
+              )}
               {(langs.length > 1 || filters.lang) && (
                 <Segmented label="Language">
                   <Choice href={dataHref({ ...filters, lang: null }, base)} active={filters.lang === null}>

@@ -229,6 +229,17 @@ comptes créés et ceux actifs le jour même, puis exactement 1, 3, 7, 14 et 30 
 - `admin_retention_dashboard(p_days)` ne rend un jalon que lorsque son jour est terminé, et
   ses totaux ne comptent, pour chaque jalon, que les cohortes assez anciennes.
 
+### Filtre par version de l'app
+
+Migration `20261116030000_data_version_filter.sql`. `daily_paywall_stats`,
+`daily_onboarding_stats`, `daily_usage_stats`, `daily_course_usage` et
+`daily_quiz_question_stats` portent `app_version` dans leur clé ; les fonctions
+`admin_paywall_dashboard`, `admin_onboarding_dashboard`, `admin_usage_dashboard` et
+`admin_feedback_dashboard` prennent `p_version` et renvoient `versions` (plateforme et
+version connues). Sur le site, choisir une version choisit aussi sa plateforme. Ne suivent
+pas la version : les revenus (RevenueCat), les duels, les amis et la rétention, dont la
+source ne la connaît pas.
+
 ### Réglage du fil d'accueil
 
 `app_config`, clé `home_deck` : `{"head_pool": 5, "exploration_every": 4}`, lu au lancement
