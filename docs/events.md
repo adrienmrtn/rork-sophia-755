@@ -198,6 +198,7 @@ Pages de l'espace équipe du site, chacune servie par une fonction réservée à
 | `/admin/data` | `admin_paywall_dashboard` | paywalls, tests A/B, revenus |
 | `/admin/data/onboarding` | `admin_onboarding_dashboard` | entonnoir, réponses |
 | `/admin/data/usage` | `admin_usage_dashboard` | lecture, cours les plus ouverts, questions les plus ratées (à partir de 20 réponses), duels |
+| `/admin/data/retention` | `admin_retention_dashboard` | rétention par cohorte d'inscription : J0, J+1, J+3, J+7, J+14, J+30 |
 | `/admin/data/social` | `admin_social_dashboard` | demandes d'amis, amitiés, invitations en duel, parrainage, créateurs suivis |
 | `/admin/data/feedback` | `admin_feedback_dashboard` | les retours de `app_feedback` |
 | `/admin/data/health` | `admin_data_health` | santé de la collecte : volume reçu, taille du journal, tâches planifiées |
@@ -207,6 +208,21 @@ directement `friend_requests`, `friendships`, `duel_invites`, `referrals` et `fo
 tables sont gardées sans limite mais ne portent ni plateforme ni langue, la page ne suit donc
 que la période. Les titres de cours et les énoncés de quiz sont lus dans `course_contents` et
 `quizzes`, dans la langue filtrée, à défaut en français.
+
+### Rétention par cohorte
+
+Migration `20261116010000_cohort_retention.sql`. `public.daily_cohort_retention`, gardée sans
+limite : une ligne par jour UTC de création de compte (`auth.users.created_at`), avec les
+comptes créés et ceux actifs le jour même, puis exactement 1, 3, 7, 14 et 30 jours plus tard.
+
+- « Actif » un jour : le compte a gagné de l'XP (`xp_events`, toutes versions de l'app,
+  depuis juillet 2026) ou son app a envoyé un événement (`course_events`, versions récentes).
+  Tant que toutes les versions n'envoient pas d'événements, les cohortes récentes sont donc
+  mesurées un peu plus largement que les anciennes.
+- `refresh_recent_cohort_retention()` recalcule toutes les heures (tâche
+  `daily_cohort_retention`) les cohortes des 31 derniers jours ; au-delà, plus rien ne bouge.
+- `admin_retention_dashboard(p_days)` ne rend un jalon que lorsque son jour est terminé, et
+  ses totaux ne comptent, pour chaque jalon, que les cohortes assez anciennes.
 
 ### Conservation et santé de la collecte
 
