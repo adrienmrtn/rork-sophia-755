@@ -28,6 +28,7 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -35,6 +36,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -136,6 +138,13 @@ fun OnboardingPaywallFlow(
         onPrivacy = { legalDoc = LegalDocKind.Privacy },
     )
 
+    CheckoutCancelOfferHost(
+        language = language,
+        storeViewModel = storeViewModel,
+        // The flash offer has no trial: the caller reads that off the package it is handed.
+        onPurchased = { onPurchased(storeViewModel.promoPackage()) },
+        onRestored = { onPurchased(null) },
+    ) {
     PaywallLegalOverlay(doc = legalDoc, language = language, onBack = { legalDoc = null }) {
         if (!showComparison) {
             OnboardingAnnualPaywall(
@@ -166,8 +175,91 @@ fun OnboardingPaywallFlow(
             )
         }
     }
+    }
 }
 
+/**
+ * What a paywall hands to [purchasePackage] as `onCancelled`: called when the reader closes the
+ * Google Play sheet without paying, it answers with the properties to add to that
+ * `purchase_failed` event. Outside a [CheckoutCancelOfferHost] it does nothing.
+ */
+internal val LocalOnCheckoutCancelled =
+    staticCompositionLocalOf<(paywallId: String) -> Map<String, Any?>> { { emptyMap() } }
+
+/**
+ * Test `checkout_cancel_ab` (see [PaywallExperiment.CancelVariant]): what follows a purchase
+ * started on one of the paywalls in [content] and cancelled on the Google Play sheet.
+ *
+ * The first such cancel of a presentation, for a reader the flash offer could be shown to (not
+ * Premium, an offer cheaper than the regular price, today's offer not used up), is the
+ * exposure: its `purchase_failed` event carries `cancel_test` and `cancel_variant`, in both
+ * variants, so the two groups are counted the same way. In the `offer` variant the flash
+ * discount paywall then opens on top, its countdown started; closing it leaves the paywall
+ * underneath as it was. Its own events carry `trigger: checkout_cancel`.
+ */
+@Composable
+private fun CheckoutCancelOfferHost(
+    language: AppLanguage,
+    storeViewModel: StoreViewModel,
+    onPurchased: () -> Unit,
+    onRestored: () -> Unit,
+    content: @Composable () -> Unit,
+) {
+    val app = LocalContext.current.applicationContext as SophiaApplication
+    // Drawn once per presentation, like the paywall variants.
+    val variant = remember { PaywallExperiment.cancelVariant() }
+    val discountVariant = remember { PaywallExperiment.discountVariant() }
+    var exposed by remember { mutableStateOf(false) }
+    var offerShown by remember { mutableStateOf(false) }
+    var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
+    val restore = rememberRestoreAction(language, storeViewModel) { onRestored() }
+
+    // Remembered: a new lambda at every recomposition would recompose the whole paywall.
+    val onCancelled: (String) -> Map<String, Any?> = remember(storeViewModel) { handler@{ _ ->
+        if (exposed) return@handler emptyMap()
+        val eligible = !storeViewModel.isPremium.value &&
+            storeViewModel.promoPackage() != null &&
+            storeViewModel.promoIsWorthShowing() &&
+            app.discountManager.canOpenAfterCheckoutCancel()
+        if (!eligible) return@handler emptyMap()
+        exposed = true
+        if (variant == PaywallExperiment.CancelVariant.OFFER) {
+            offerShown = app.discountManager.openAfterCheckoutCancel()
+        }
+        mapOf("cancel_test" to PaywallExperiment.CANCEL_EXPERIMENT, "cancel_variant" to variant.id)
+    } }
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        CompositionLocalProvider(LocalOnCheckoutCancelled provides onCancelled) { content() }
+        if (offerShown) {
+            // Opaque and clickable so the paywall underneath neither shows nor reacts.
+            Box(modifier = Modifier.fillMaxSize().softPress(onClick = {})) {
+                ForceLightAppearance()
+                PaywallLegalOverlay(doc = legalDoc, language = language, onBack = { legalDoc = null }) {
+                    DiscountPaywall(
+                        variant = discountVariant,
+                        language = language,
+                        storeViewModel = storeViewModel,
+                        onDismiss = { offerShown = false },
+                        onPurchased = {
+                            app.discountManager.markExpired()
+                            onPurchased()
+                        },
+                        onRestore = restore,
+                        onOpenTerms = { legalDoc = LegalDocKind.Terms },
+                        onOpenPrivacy = { legalDoc = LegalDocKind.Privacy },
+                        extraProps = mapOf("trigger" to "checkout_cancel"),
+                    )
+                }
+            }
+        }
+    }
+}
+
+/**
+ * A paywall by its context. The contextual paywalls sit in a [CheckoutCancelOfferHost]; the
+ * onboarding flow brings its own, and the flash offer never follows itself.
+ */
 @Composable
 fun PaywallScreen(
     context: PaywallContext,
@@ -182,6 +274,44 @@ fun PaywallScreen(
     forcedCourseVariant: PaywallExperiment.Variant? = null,
     /** Same for the discount paywall. */
     forcedDiscountVariant: PaywallExperiment.DiscountVariant? = null,
+) {
+    val content: @Composable () -> Unit = {
+        PaywallScreenContent(
+            context = context,
+            language = language,
+            storeViewModel = storeViewModel,
+            onDismiss = onDismiss,
+            onPurchased = onPurchased,
+            onRestored = onRestored,
+            courseId = courseId,
+            forcedCourseVariant = forcedCourseVariant,
+            forcedDiscountVariant = forcedDiscountVariant,
+        )
+    }
+    if (context == PaywallContext.FIN_ONBOARDING || context == PaywallContext.OFFRE_DISCOUNT) {
+        content()
+    } else {
+        CheckoutCancelOfferHost(
+            language = language,
+            storeViewModel = storeViewModel,
+            onPurchased = onPurchased,
+            onRestored = onRestored,
+            content = content,
+        )
+    }
+}
+
+@Composable
+private fun PaywallScreenContent(
+    context: PaywallContext,
+    language: AppLanguage,
+    storeViewModel: StoreViewModel,
+    onDismiss: () -> Unit,
+    onPurchased: () -> Unit,
+    onRestored: () -> Unit,
+    courseId: String?,
+    forcedCourseVariant: PaywallExperiment.Variant?,
+    forcedDiscountVariant: PaywallExperiment.DiscountVariant?,
 ) {
     // The paywalls follow the app's appearance; only the discount paywall is light-only (below).
     var legalDoc by remember { mutableStateOf<LegalDocKind?>(null) }
@@ -248,6 +378,14 @@ fun PaywallScreen(
                 onPurchased = { onPurchased() },
             )
             PaywallContext.OFFRE_DISCOUNT -> {
+                // No flash offer for this customer (the price arm they are in asks for none,
+                // or its discount would not be cheaper than their regular price): leave.
+                val offerings by storeViewModel.offerings.collectAsState()
+                val worthShowing = remember(offerings) { storeViewModel.promoIsWorthShowing() }
+                if (!worthShowing) {
+                    LaunchedEffect(Unit) { onDismiss() }
+                    return@PaywallLegalOverlay
+                }
                 // The one paywall designed light-only: the night palette stays off while it
                 // is the one on screen (its legal pages included), and comes back when it leaves.
                 ForceLightAppearance()
@@ -368,6 +506,7 @@ private fun OnboardingAnnualPaywall(
     legalActions: ElevateLegalActions,
 ) {
     val context = LocalContext.current
+    val onCheckoutCancelled = LocalOnCheckoutCancelled.current
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     var notice by remember { mutableStateOf<String?>(null) }
@@ -482,6 +621,7 @@ private fun OnboardingAnnualPaywall(
                         onError = { error = it; notice = null; purchasing = false },
                         onPending = { notice = it; error = null; purchasing = false },
                         onPurchased = onPurchased,
+                        onCancelled = onCheckoutCancelled,
                         paywallId = "onboarding_annual",
                     )
                 },
@@ -567,6 +707,7 @@ private fun ComparisonPaywall(
     analyticsProps: Map<String, Any?> = emptyMap(),
 ) {
     val context = LocalContext.current
+    val onCheckoutCancelled = LocalOnCheckoutCancelled.current
     var yearlySelected by remember { mutableStateOf(true) }
     var purchasing by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
@@ -710,6 +851,7 @@ private fun ComparisonPaywall(
                         onError = { error = it; notice = null; purchasing = false },
                         onPending = { notice = it; error = null; purchasing = false },
                         onPurchased = { onPurchased(pkg) },
+                        onCancelled = onCheckoutCancelled,
                         paywallId = "paywall_comparison",
                         analyticsProps = analyticsProps,
                     )
@@ -729,6 +871,7 @@ private fun TrainingPaywall(
     legalFooter: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
+    val onCheckoutCancelled = LocalOnCheckoutCancelled.current
     LaunchedEffect(Unit) {
         storeViewModel.fetchOfferings()
         storeViewModel.trackPaywallImpression("native_training", PaywallContext.ENTRAINEMENT.offeringId)
@@ -771,6 +914,7 @@ private fun TrainingPaywall(
                 onPurchased = {
                     onPurchased()
                 },
+                onCancelled = onCheckoutCancelled,
                 paywallId = "native_training",
             )
         },
@@ -963,6 +1107,12 @@ internal fun purchasePackage(
     onPurchased: () -> Unit,
     onPending: (String) -> Unit = {},
     /**
+     * The reader closed the Google Play sheet without paying. Receives the properties to add
+     * to the `purchase_failed` event (the `checkout_cancel_ab` exposure, see
+     * [CheckoutCancelOfferHost]); the paywall passes [LocalOnCheckoutCancelled] here.
+     */
+    onCancelled: (paywallId: String) -> Map<String, Any?> = { emptyMap() },
+    /**
      * The paywall the purchase starts from, the same identifier as its `paywall_view`. It rides
      * on the three purchase events (`paywall_id`), so each purchase is tied to its paywall.
      */
@@ -1015,7 +1165,12 @@ internal fun purchasePackage(
                     error.code == PurchasesErrorCode.PaymentPendingError -> "pending"
                     else -> "error"
                 }
-                Analytics.log("purchase_failed", props = mapOf("product" to productId, "reason" to reason) + analyticsProps)
+                // Asked before the event is written: a cancelled checkout carries its test variant.
+                val cancelProps = if (userCancelled) onCancelled(paywallId) else emptyMap()
+                Analytics.log(
+                    "purchase_failed",
+                    props = mapOf("product" to productId, "reason" to reason) + analyticsProps + cancelProps,
+                )
                 if (userCancelled) return
                 if (error.code == PurchasesErrorCode.PaymentPendingError) {
                     onPending(StringStore.text(context, "purchase.pending", language))

@@ -190,6 +190,7 @@ private fun ElevatePaywallFrame(
     pitch: @Composable ColumnScope.(ElevatePlanChoice) -> Unit,
 ) {
     val context = LocalContext.current
+    val onCheckoutCancelled = LocalOnCheckoutCancelled.current
     LaunchedEffect(Unit) {
         storeViewModel.fetchOfferings()
         storeViewModel.trackPaywallImpression(paywallId, paywallContext.offeringId, analyticsProps)
@@ -266,6 +267,7 @@ private fun ElevatePaywallFrame(
                         onError = { error = it; notice = null; purchasing = false },
                         onPending = { notice = it; error = null; purchasing = false },
                         onPurchased = onPurchased,
+                        onCancelled = onCheckoutCancelled,
                         paywallId = paywallId,
                         analyticsProps = analyticsProps,
                     )

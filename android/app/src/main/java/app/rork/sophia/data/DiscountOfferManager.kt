@@ -159,6 +159,42 @@ class DiscountOfferManager(context: Context) {
         startTicker()
     }
 
+    /**
+     * Whether the flash offer may open right after a cancelled checkout (test
+     * `checkout_cancel_ab`): it is running, or today's has not been used up. Reads only.
+     */
+    fun canOpenAfterCheckoutCancel(): Boolean {
+        maybeExpireFromElapsed()
+        val s = _state.value
+        return s.isActive || !(s.hasBeenTriggered && wasShownToday())
+    }
+
+    /**
+     * Starts the offer for a cancelled checkout, or keeps the countdown already running.
+     * Returns false, changing nothing, when today's offer is over: it stays a one-time offer.
+     * An offer left over from an earlier day is replaced by a fresh one, as a new day of swipes
+     * would do.
+     */
+    fun openAfterCheckoutCancel(): Boolean {
+        if (!canOpenAfterCheckoutCancel()) return false
+        if (_state.value.isActive) {
+            markShownToday()
+            return true
+        }
+        val today = today()
+        mutate { current ->
+            current.copy(
+                startEpochMs = System.currentTimeMillis(),
+                isExpiredForever = false,
+                isGiftPending = false,
+                lastShownDay = today,
+                remainingSeconds = DiscountState.DURATION_MS / 1000,
+            )
+        }
+        startTicker()
+        return true
+    }
+
     /** Wipes the promo countdown so a deleted account leaves no offer behind. */
     fun clearLocalState() {
         persist(DiscountState())

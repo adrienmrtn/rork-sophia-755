@@ -140,6 +140,10 @@ fun MainTabs(
     val trialExpiresInOneDay by storeViewModel.trialExpiresInOneDay.collectAsState()
     val progress by app.progressManager.progress.collectAsState()
     val discount by app.discountManager.state.collectAsState()
+    // No gift and no countdown tab for a customer whose flash offer would not be a discount
+    // (the arm of a price experiment can ask for none): see StoreViewModel.promoIsWorthShowing.
+    val storeOfferings by storeViewModel.offerings.collectAsState()
+    val flashOfferWorthShowing = remember(storeOfferings) { storeViewModel.promoIsWorthShowing() }
     var selectedTab by remember { mutableIntStateOf(0) }
     // La navigation « nouvelle génération », pour tous depuis la fin du tirage 50/50. La
     // branche classique plus bas n'est plus servie.
@@ -610,7 +614,7 @@ fun MainTabs(
             }
             }
 
-            if (!isPremium && selectedCourse == null && paywall == null) {
+            if (!isPremium && selectedCourse == null && paywall == null && flashOfferWorthShowing) {
                 if (discount.isGiftPending) {
                     // The gift is earned by swiping home, so it opens on home, like iOS.
                     if (selectedTab == 0) {
