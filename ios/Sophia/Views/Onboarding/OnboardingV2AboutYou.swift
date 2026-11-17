@@ -237,6 +237,59 @@ struct OnboardingV2Age: View {
     }
 }
 
+// MARK: - Genre
+
+/// « Quel est ton genre ? » : homme, femme, ou « je préfère ne pas répondre ». Une seule
+/// réponse, comme la page de l'âge.
+struct OnboardingV2Gender: View {
+    @Environment(LanguageManager.self) private var languageManager
+    let vm: OnboardingV2ViewModel
+    let onNext: () -> Void
+
+    var body: some View {
+        OV2CorePage { _ in
+            pageBody
+        } footer: {
+            OnboardingV2Button(
+                title: languageManager.text("common.continue"),
+                enabled: vm.genderKey != nil,
+                action: onNext
+            )
+        }
+        .ov2Background()
+    }
+
+    private var pageBody: some View {
+        VStack(spacing: 0) {
+            OV2CoreQuestionTitle(title: languageManager.text("onboardingV2.gender.title"))
+                .padding(.top, OV2CoreMetrics.topInset)
+                .dsStagger(0)
+
+            rows
+                .padding(.horizontal, OV2CoreMetrics.sideInset)
+                .padding(.top, 32)
+                .padding(.bottom, 16)
+        }
+    }
+
+    private var rows: some View {
+        VStack(spacing: 10) {
+            ForEach(Array(OnboardingV2ViewModel.genderKeys.enumerated()), id: \.element) { index, key in
+                OV2CoreOptionRow(
+                    label: OnboardingV2ViewModel.genderLabel(key, language: languageManager.current),
+                    isSelected: vm.genderKey == key,
+                    action: {
+                        withAnimation(OV2CoreMotion.select) {
+                            vm.genderKey = key
+                        }
+                    }
+                )
+                .dsStagger(index, base: 0.18)
+            }
+        }
+    }
+}
+
 // MARK: - Culture générale
 
 /// « Comment évalues-tu ta culture générale ? » : quatre niveaux, de « pas terrible » à « très

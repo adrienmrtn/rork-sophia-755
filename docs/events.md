@@ -81,6 +81,7 @@ Questions (`question` → `answer`) :
 | `question` | Écran | `answer` |
 | --- | --- | --- |
 | `age` | `age` | une tranche : `under18`, `18to24`, `25to34`, `35to44`, `45to54`, `55plus`. Jamais un âge exact |
+| `gender` | `gender` | `man`, `woman` ou `undisclosed` (« je préfère ne pas répondre ») |
 | `knowledge` | `knowledge` | `0` à `3`. Aucun niveau n'est présélectionné : la réponse est toujours un choix |
 | `motivation` | `motivation` | `grow`, `conversations`, `career`, `sharp`, `world` |
 | `objectives` | `objective` | choix multiples : les clés triées, séparées par des virgules (`cultivate,exams`) |

@@ -31,7 +31,7 @@ export interface OnboardingDashboard {
 /** Les écrans dans l'ordre du déroulé (`analyticsName` des deux apps). Android enchaîne ses
  *  deux paywalls dans un seul écran, `paywall`. */
 export const STEP_ORDER = [
-  "welcome", "language", "lessons", "researchers", "intro", "social_proof", "name", "age", "knowledge", "motivation",
+  "welcome", "language", "lessons", "researchers", "intro", "social_proof", "name", "age", "gender", "knowledge", "motivation",
   "objective", "topics", "objective_intro", "phone_time", "years_grid", "transform", "questions", "mission", "personalize",
   "swipe_courses", "reading_time", "curve_90", "notifications", "review", "loading", "profile", "login", "account",
   "follow_creators", "welcome_aboard", "features", "trial_steps", "reminder", "paywall_annual", "paywall_comparison", "paywall",
@@ -46,6 +46,7 @@ const STEP_LABEL: Record<string, string> = {
   social_proof: "Social proof",
   name: "First name",
   age: "Age",
+  gender: "Gender",
   knowledge: "General knowledge",
   motivation: "Motivation",
   objective: "Objectives",
@@ -114,10 +115,11 @@ export function funnel(rows: OnboardingStepRow[]): FunnelStep[] {
   }));
 }
 
-const QUESTION_ORDER = ["age", "knowledge", "motivation", "objectives", "topics", "phone_time", "swipe_liked", "swipe_passed", "reading_time", "reads_monthly", "forgets_reading", "too_much_phone", "likes_learning_daily"];
+const QUESTION_ORDER = ["age", "gender", "knowledge", "motivation", "objectives", "topics", "phone_time", "swipe_liked", "swipe_passed", "reading_time", "reads_monthly", "forgets_reading", "too_much_phone", "likes_learning_daily"];
 
 const QUESTION_LABEL: Record<string, string> = {
   age: "Age",
+  gender: "Gender",
   knowledge: "General knowledge, self-rated",
   motivation: "Why they want to progress",
   objectives: "Objectives (several possible)",
@@ -134,12 +136,15 @@ const QUESTION_LABEL: Record<string, string> = {
 
 const OPTION_LABEL: Record<string, Record<string, string>> = {
   age: { under18: "Under 18", "18to24": "18–24", "25to34": "25–34", "35to44": "35–44", "45to54": "45–54", "55plus": "55 and over" },
+  gender: { man: "Man", woman: "Woman", undisclosed: "Prefer not to say" },
   knowledge: { "0": "Not great", "1": "Decent", "2": "Good", "3": "Very good" },
   motivation: { grow: "To grow as a person", conversations: "To shine in conversations", career: "Studies or career", sharp: "To keep a sharp mind", world: "To understand the world better" },
   objectives: { cultivate: "Get cultured every day", reduceScreen: "Reduce screen time", exams: "Studies and exams", impress: "Impress in company", curiosity: "Learn out of curiosity" },
 };
 
 const AGE_ORDER = ["under18", "18to24", "25to34", "35to44", "45to54", "55plus"];
+/** Les réponses de la question du genre, dans l'ordre de l'écran. */
+const GENDER_ORDER = ["man", "woman", "undisclosed"];
 /** Les questions dont les réponses ont un ordre naturel, à garder à l'affichage. */
 const NUMERIC_QUESTIONS = new Set(["knowledge", "phone_time", "reading_time"]);
 const BOOLEAN_LABEL: Record<string, string> = { true: "Yes", false: "No" };
@@ -179,6 +184,7 @@ export function questionViews(rows: OnboardingQuestionRow[]): QuestionView[] {
       const answered = Number(row.answered);
       const options = row.options.map((o) => ({ value: o.value, label: optionLabel(row.question, o.value), installs: Number(o.installs), share: answered ? Number(o.installs) / answered : null }));
       if (row.question === "age") options.sort((a, b) => AGE_ORDER.indexOf(a.value) - AGE_ORDER.indexOf(b.value));
+      else if (row.question === "gender") options.sort((a, b) => GENDER_ORDER.indexOf(a.value) - GENDER_ORDER.indexOf(b.value));
       else if (NUMERIC_QUESTIONS.has(row.question)) options.sort((a, b) => Number(a.value) - Number(b.value));
       else options.sort((a, b) => b.installs - a.installs || a.value.localeCompare(b.value));
       return { question: row.question, label: QUESTION_LABEL[row.question] ?? row.question, answered, options };

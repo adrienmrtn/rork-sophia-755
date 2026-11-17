@@ -46,7 +46,7 @@ struct OnboardingV2View: View {
     @State private var showSplash: Bool = OnboardingV2View.startsAtWelcome
 
     private enum Screen: Hashable {
-        case welcome, language, lessons, researchers, intro, socialProof, name, age, knowledge, motivation
+        case welcome, language, lessons, researchers, intro, socialProof, name, age, gender, knowledge, motivation
         case objectives, topics, objectiveIntro, mission
         case questions, phoneTime, yearsGrid, transform, review, personalize
         case swipe, loading, profile, readingTime, curve90, notifications, login, account, followCreators
@@ -65,6 +65,7 @@ struct OnboardingV2View: View {
             case .socialProof: "social_proof"
             case .name: "name"
             case .age: "age"
+            case .gender: "gender"
             case .knowledge: "knowledge"
             case .motivation: "motivation"
             case .objectives: "objective"
@@ -105,7 +106,7 @@ struct OnboardingV2View: View {
     /// promettrait un essai que l'utilisateur n'aura pas.
     private var screens: [Screen] {
         var list: [Screen] = [.welcome, .language, .lessons, .researchers, .intro, .socialProof,
-                              .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro,
+                              .name, .age, .gender, .knowledge, .motivation, .objectives, .topics, .objectiveIntro,
                               .phoneTime, .yearsGrid, .transform, .questions, .mission, .personalize,
                               .swipe, .readingTime, .curve90, .notifications, .review, .loading, .profile,
                               .login, .account, .followCreators,
@@ -136,7 +137,7 @@ struct OnboardingV2View: View {
     /// Écrans comptés par la barre de progression, dans l'ordre du déroulé : de la preuve
     /// sociale au profil inclus.
     private static let progressScreens: [Screen] = [
-        .socialProof, .name, .age, .knowledge, .motivation, .objectives, .topics, .objectiveIntro,
+        .socialProof, .name, .age, .gender, .knowledge, .motivation, .objectives, .topics, .objectiveIntro,
         .phoneTime, .yearsGrid, .transform, .questions, .mission, .personalize,
         .swipe, .readingTime, .curve90, .notifications, .review, .loading, .profile,
     ]
@@ -300,6 +301,8 @@ struct OnboardingV2View: View {
             OnboardingV2Name(vm: vm, onNext: advance)
         case .age:
             OnboardingV2Age(vm: vm, onNext: advance)
+        case .gender:
+            OnboardingV2Gender(vm: vm, onNext: advance)
         case .knowledge:
             OnboardingV2Knowledge(vm: vm, onNext: advance)
         case .motivation:
@@ -430,6 +433,9 @@ struct OnboardingV2View: View {
         case .age:
             question = "age"
             answer = vm.ageRangeKey
+        case .gender:
+            question = "gender"
+            answer = vm.genderKey
         case .knowledge:
             question = "knowledge"
             answer = String(vm.knowledgeLevel)

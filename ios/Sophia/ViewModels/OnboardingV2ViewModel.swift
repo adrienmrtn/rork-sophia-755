@@ -23,6 +23,10 @@ final class OnboardingV2ViewModel {
     var ageRangeKey: String? = nil {
         didSet { OnboardingResumeStore.ageRangeKey = ageRangeKey }
     }
+    /// Genre (`genderKeys`), nil tant que la page n'a pas été répondue.
+    var genderKey: String? = nil {
+        didSet { OnboardingResumeStore.genderKey = genderKey }
+    }
     /// Culture générale auto-évaluée, de 0 (« pas terrible ») à 3 (« très bonne »).
     var knowledgeLevel: Int = 1 {
         didSet { OnboardingResumeStore.knowledgeLevel = knowledgeLevel }
@@ -66,6 +70,7 @@ final class OnboardingV2ViewModel {
         firstName = OnboardingResumeStore.firstName
         if let stored = OnboardingResumeStore.avatarId, Avatars.isValid(stored) { avatarId = stored }
         ageRangeKey = OnboardingResumeStore.ageRangeKey
+        genderKey = OnboardingResumeStore.genderKey
         if let level = OnboardingResumeStore.knowledgeLevel { knowledgeLevel = level }
         motivationKey = OnboardingResumeStore.motivationKey
         objectiveKeys = OnboardingResumeStore.objectiveKeys
@@ -114,6 +119,16 @@ final class OnboardingV2ViewModel {
 
     static func ageRangeLabel(_ key: String, language: AppLanguage) -> String {
         AppLocalizable.string("onboardingV2.age.\(key)", language: language)
+    }
+
+    // MARK: - Genre
+
+    /// Réponses de la page du genre, telles qu'envoyées dans `onboarding_answer` (mêmes clés
+    /// qu'Android) : homme, femme, ou « je préfère ne pas répondre ».
+    static let genderKeys = ["man", "woman", "undisclosed"]
+
+    static func genderLabel(_ key: String, language: AppLanguage) -> String {
+        AppLocalizable.string("onboardingV2.gender.\(key)", language: language)
     }
 
     // MARK: - Culture générale
@@ -299,6 +314,7 @@ final class OnboardingV2ViewModel {
     /// Réponses des pages « à propos de toi », gardées pour l'app (accueil, profil…).
     static let firstNameDefaultsKey = "sophia_user_first_name"
     static let ageRangeDefaultsKey = "sophia_user_age_range"
+    static let genderDefaultsKey = "sophia_user_gender"
     static let knowledgeLevelDefaultsKey = "sophia_user_knowledge_level"
     static let motivationDefaultsKey = "sophia_user_motivation"
 
@@ -319,6 +335,7 @@ final class OnboardingV2ViewModel {
         let name = trimmedFirstName
         defaults.set(name.isEmpty ? nil : name, forKey: Self.firstNameDefaultsKey)
         defaults.set(ageRangeKey, forKey: Self.ageRangeDefaultsKey)
+        defaults.set(genderKey, forKey: Self.genderDefaultsKey)
         defaults.set(knowledgeLevel, forKey: Self.knowledgeLevelDefaultsKey)
         defaults.set(motivationKey, forKey: Self.motivationDefaultsKey)
 

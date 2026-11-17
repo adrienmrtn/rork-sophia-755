@@ -73,7 +73,7 @@ import kotlinx.coroutines.launch
  *
  * Welcome · Language · Lessons · Researchers · Presentation (a carousel of four pages that
  * advance by themselves: quiz, path, duels, audio) · Social proof (500,000 users) · First
- * name · Age · General knowledge (slider) · Motivation · Objectives · Subjects · « Sophia
+ * name · Age · Gender · General knowledge (slider) · Motivation · Objectives · Subjects · « Sophia
  * will help you » · Phone time · Life in years · « Turn that time » · Questions · Mission ·
  * Personalize · Swipe · 90-day curve · Notifications · Reviews · Loading · Profile ·
  * Login · Follow creators · Welcome aboard · Strengths · Trial · Reminder · Paywall.
@@ -93,6 +93,7 @@ private enum class OnboardingStep {
     SocialProof,
     Name,
     Age,
+    Gender,
     Knowledge,
     Motivation,
     Objectives,
@@ -130,6 +131,7 @@ private enum class OnboardingStep {
             SocialProof -> "social_proof"
             Name -> "name"
             Age -> "age"
+            Gender -> "gender"
             Knowledge -> "knowledge"
             Motivation -> "motivation"
             Objectives -> "objective"
@@ -199,6 +201,7 @@ private val PROGRESS_STEPS = listOf(
     OnboardingStep.SocialProof,
     OnboardingStep.Name,
     OnboardingStep.Age,
+    OnboardingStep.Gender,
     OnboardingStep.Knowledge,
     OnboardingStep.Motivation,
     OnboardingStep.Objectives,
@@ -354,6 +357,7 @@ fun OnboardingV2Screen(
     fun logAnswer(leaving: OnboardingStep) {
         val (question, answer) = when (leaving) {
             OnboardingStep.Age -> "age" to answers.ageRange
+            OnboardingStep.Gender -> "gender" to answers.gender
             OnboardingStep.Knowledge -> "knowledge" to answers.knowledgeLevel.toString()
             OnboardingStep.Motivation -> "motivation" to answers.motivation
             OnboardingStep.Objectives -> "objectives" to selectedObjectives.sorted().joinToString(",").ifEmpty { null }
@@ -634,6 +638,12 @@ fun OnboardingV2Screen(
                     language = language,
                     selected = answers.ageRange,
                     onSelect = { key -> updateAnswers { it.copy(ageRange = key) } },
+                    onContinue = { goTo(OnboardingStep.Gender) },
+                )
+                OnboardingStep.Gender -> GenderStep(
+                    language = language,
+                    selected = answers.gender,
+                    onSelect = { key -> updateAnswers { it.copy(gender = key) } },
                     onContinue = { goTo(OnboardingStep.Knowledge) },
                 )
                 OnboardingStep.Knowledge -> KnowledgeStep(

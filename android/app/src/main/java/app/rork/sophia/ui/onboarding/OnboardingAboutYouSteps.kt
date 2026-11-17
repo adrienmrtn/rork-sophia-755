@@ -97,6 +97,9 @@ import kotlin.math.abs
 
 internal const val FIRST_NAME_MAX_LENGTH = 24
 internal val AGE_RANGE_KEYS = listOf("under18", "18to24", "25to34", "35to44", "45to54", "55plus")
+
+/** The answers of the gender page, as sent in `onboarding_answer` (same keys as iOS). */
+internal val GENDER_KEYS = listOf("man", "woman", "undisclosed")
 internal const val KNOWLEDGE_LEVEL_COUNT = 4
 internal val MOTIVATION_KEYS = listOf("grow", "conversations", "career", "sharp", "world")
 internal val SUBJECT_EMOJI = mapOf(
@@ -428,6 +431,43 @@ internal fun AgeStep(
             AGE_RANGE_KEYS.forEachIndexed { index, key ->
                 OV2CoreOptionRow(
                     label = StringStore.text(context, "onboardingV2.age.$key", language),
+                    selected = key == selected,
+                    onClick = { onSelect(key) },
+                    modifier = Modifier.dsStagger(index, baseMillis = 180),
+                )
+            }
+        }
+    }
+}
+
+// MARK: - Gender
+
+/** « What is your gender? »: man, woman, or prefer not to say. One answer, like the age page. */
+@Composable
+internal fun GenderStep(
+    language: AppLanguage,
+    selected: String?,
+    onSelect: (String) -> Unit,
+    onContinue: () -> Unit,
+) {
+    val context = LocalContext.current
+    OV2CorePage(
+        footer = {
+            OnboardingCta(
+                text = StringStore.text(context, "common.continue", language),
+                onClick = onContinue,
+                enabled = selected != null,
+            )
+        },
+    ) { _ ->
+        OV2CoreQuestionTitle(
+            title = StringStore.text(context, "onboardingV2.gender.title", language),
+            modifier = Modifier.padding(top = OV2Core.topInset).dsStagger(0),
+        )
+        OptionRows(topPadding = 32.dp) {
+            GENDER_KEYS.forEachIndexed { index, key ->
+                OV2CoreOptionRow(
+                    label = StringStore.text(context, "onboardingV2.gender.$key", language),
                     selected = key == selected,
                     onClick = { onSelect(key) },
                     modifier = Modifier.dsStagger(index, baseMillis = 180),
