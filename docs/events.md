@@ -170,7 +170,9 @@ personne à qui l'offre flash pouvait être montrée (pas Premium, offre moins c
 normal, offre du jour pas encore consommée), est l'exposition : son `purchase_failed`
 (`reason` : `cancelled`) porte `cancel_test` (`checkout_cancel_ab`) et `cancel_variant`,
 dans les deux variantes. Les événements du paywall de réduction ouvert de cette façon portent
-`trigger` : `checkout_cancel`. Ces clés sont distinctes de `experiment` / `variant` pour ne
+`trigger` : `checkout_cancel`. Cette offre ne consomme pas le cadeau du jour : il arrive
+toujours au troisième swipe, avec le compte à rebours en cours s'il tourne encore, avec un
+nouveau sinon ; un abandon n'ouvre l'offre qu'une fois par jour. Ces clés sont distinctes de `experiment` / `variant` pour ne
 pas découper `daily_paywall_stats` ; le test se lit dans `course_events`.
 
 Offre flash et expériences de prix : l'offre RevenueCat servie (la « courante ») peut nommer
