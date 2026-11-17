@@ -105,4 +105,38 @@ class PaywallExperimentTest {
         )
         assertNull(PaywallExperiment.parseDiscountValue("not json"))
     }
+
+    @Test
+    fun cancelDrawIsIndependentAndStable() {
+        // SHA-256("checkout_cancel_ab:" + the all-zero install id), first four bytes / 2^32.
+        assertEquals(0.18309536366723478, PaywallExperiment.unitInterval(zero, PaywallExperiment.CANCEL_EXPERIMENT), 1e-12)
+        assertEquals(
+            PaywallExperiment.CancelVariant.OFFER,
+            PaywallExperiment.cancelVariant(zero, PaywallExperiment.CancelConfig()),
+        )
+        assertEquals(
+            PaywallExperiment.CancelVariant.OFFER,
+            PaywallExperiment.cancelVariant(zero, PaywallExperiment.CancelConfig(shareOffer = 1.0)),
+        )
+        assertEquals(
+            PaywallExperiment.CancelVariant.CONTROL,
+            PaywallExperiment.cancelVariant(zero, PaywallExperiment.CancelConfig(shareOffer = 0.0)),
+        )
+    }
+
+    @Test
+    fun cancelSettingIsReadLenientlyAndStopsOnItsDefault() {
+        assertEquals(PaywallExperiment.CancelConfig(), PaywallExperiment.parseCancelValue("{}"))
+        // Stopped without a default: nobody gets the offer.
+        assertEquals(
+            PaywallExperiment.CancelVariant.CONTROL,
+            PaywallExperiment.cancelVariant(zero, PaywallExperiment.CancelConfig(enabled = false, shareOffer = 1.0)),
+        )
+        val rolledOut = PaywallExperiment.parseCancelValue(
+            """{"enabled": false, "share_offer": 0.0, "default_variant": "offer"}""",
+        )!!
+        assertEquals(PaywallExperiment.CancelVariant.OFFER, PaywallExperiment.cancelVariant(zero, rolledOut))
+        assertEquals(1.0, PaywallExperiment.parseCancelValue("""{"share_offer": 3}""")!!.shareOffer, 0.0)
+        assertNull(PaywallExperiment.parseCancelValue("not json"))
+    }
 }

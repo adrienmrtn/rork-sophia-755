@@ -10,6 +10,8 @@ import android.content.Context
 data class OnboardingAnswers(
     val firstName: String = "",
     val ageRange: String? = null,
+    /** `man`, `woman` or `undisclosed` (« prefer not to say »); null until the page is answered. */
+    val gender: String? = null,
     val knowledgeLevel: Int = 1,
     /**
      * Whether [knowledgeLevel] was actually chosen. The page opens with nothing selected: 1 is
@@ -81,6 +83,7 @@ class OnboardingStore(context: Context) {
     fun answers(): OnboardingAnswers = OnboardingAnswers(
         firstName = prefs.getString(KEY_FIRST_NAME, null).orEmpty(),
         ageRange = prefs.getString(KEY_AGE_RANGE, null),
+        gender = prefs.getString(KEY_GENDER, null),
         knowledgeLevel = prefs.getInt(KEY_KNOWLEDGE, 1),
         knowledgeAnswered = prefs.contains(KEY_KNOWLEDGE),
         motivation = prefs.getString(KEY_MOTIVATION, null),
@@ -95,6 +98,7 @@ class OnboardingStore(context: Context) {
         prefs.edit()
             .putString(KEY_FIRST_NAME, answers.firstName.ifBlank { null })
             .putString(KEY_AGE_RANGE, answers.ageRange)
+            .putString(KEY_GENDER, answers.gender)
             .apply { if (answers.knowledgeAnswered) putInt(KEY_KNOWLEDGE, answers.knowledgeLevel) else remove(KEY_KNOWLEDGE) }
             .putString(KEY_MOTIVATION, answers.motivation)
             .putString(KEY_TOPICS, answers.topics.joinToString(","))
@@ -111,6 +115,7 @@ class OnboardingStore(context: Context) {
         // Same names as the iOS UserDefaults keys.
         private const val KEY_FIRST_NAME = "sophia_user_first_name"
         private const val KEY_AGE_RANGE = "sophia_user_age_range"
+        private const val KEY_GENDER = "sophia_user_gender"
         private const val KEY_KNOWLEDGE = "sophia_user_knowledge_level"
         private const val KEY_MOTIVATION = "sophia_user_motivation"
         private const val KEY_TOPICS = "sophia_user_interests"

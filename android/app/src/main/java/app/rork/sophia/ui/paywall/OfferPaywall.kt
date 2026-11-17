@@ -106,12 +106,14 @@ internal fun DiscountPaywall(
     onRestore: () -> Unit,
     onOpenTerms: () -> Unit,
     onOpenPrivacy: () -> Unit,
+    /** Added to the paywall's view and purchase events (how it was opened, when that matters). */
+    extraProps: Map<String, Any?> = emptyMap(),
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
     val discount by app.discountManager.state.collectAsState()
     val haptics = rememberHaptics()
-    val props = remember(variant) { PaywallExperiment.discountAnalyticsProps(variant) }
+    val props = remember(variant) { PaywallExperiment.discountAnalyticsProps(variant) + extraProps }
     LaunchedEffect(Unit) {
         storeViewModel.fetchOfferings()
         // Reported on the bucket's own offering, never on the experiment-served current one.

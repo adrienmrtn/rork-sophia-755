@@ -75,7 +75,7 @@ export default async function OnboardingDataPage({ searchParams }: PageProps<"/a
             </section>
 
             <section className="flex flex-col gap-4 border-t border-line pt-6">
-              <SectionTitle title="Answers" note="The last answer each installation gave. The age is a range, never an exact age; first names are not collected." />
+              <SectionTitle title="Answers" note="The last answer each installation gave. The age is a range, never an exact age; the gender is man, woman or prefer not to say; first names are not collected." />
               {questions.length === 0 ? (
                 <Card className="p-6 text-[14px] text-ink-3">No answer on this period. Answers are sent by the next app versions.</Card>
               ) : (

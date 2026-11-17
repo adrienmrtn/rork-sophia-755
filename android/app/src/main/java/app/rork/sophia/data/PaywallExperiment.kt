@@ -112,6 +112,70 @@ object PaywallExperiment {
         null
     }
 
+    // region Flash offer after a cancelled checkout (test `checkout_cancel_ab`)
+
+    /**
+     * What happens when the reader starts a purchase and closes the Google Play sheet without
+     * paying. Android only: this is where Android loses most of the purchases it starts.
+     */
+    enum class CancelVariant(val id: String) {
+        /** Back to the paywall, nothing more. */
+        CONTROL("control"),
+
+        /** The flash discount paywall opens right away. */
+        OFFER("offer"),
+        ;
+
+        companion object {
+            fun fromId(id: String?): CancelVariant? = entries.firstOrNull { it.id == id }
+        }
+    }
+
+    /** `{"enabled": true, "share_offer": 0.5, "default_variant": "control"}`. */
+    data class CancelConfig(
+        val enabled: Boolean = true,
+        /** Share of the installs (0 to 1) that get [CancelVariant.OFFER]. */
+        val shareOffer: Double = 0.5,
+        val defaultVariant: CancelVariant? = null,
+    )
+
+    const val CANCEL_EXPERIMENT = "checkout_cancel_ab"
+
+    @Volatile
+    var cancelConfig: CancelConfig = CancelConfig()
+        private set
+
+    /** The variant of this install; drawn independently of the two paywall-design tests. */
+    fun cancelVariant(): CancelVariant = cancelVariant(Analytics.installIdentifier, cancelConfig)
+
+    fun cancelVariant(installId: String, config: CancelConfig): CancelVariant {
+        if (!config.enabled) return config.defaultVariant ?: CancelVariant.CONTROL
+        return if (unitInterval(installId, CANCEL_EXPERIMENT) < config.shareOffer) {
+            CancelVariant.OFFER
+        } else {
+            CancelVariant.CONTROL
+        }
+    }
+
+    fun parseCancelValue(text: String): CancelConfig? = try {
+        parseCancelConfig(json.parseToJsonElement(text))
+    } catch (_: Exception) {
+        null
+    }
+
+    private fun parseCancelConfig(element: JsonElement): CancelConfig? {
+        if (element is JsonPrimitive && element.isString) return parseCancelValue(element.content)
+        val value = element as? JsonObject ?: return null
+        val share = (value["share_offer"] as? JsonPrimitive)?.doubleOrNull
+        return CancelConfig(
+            enabled = (value["enabled"] as? JsonPrimitive)?.booleanOrNull ?: true,
+            shareOffer = (share?.takeIf { !it.isNaN() } ?: 0.5).coerceIn(0.0, 1.0),
+            defaultVariant = CancelVariant.fromId((value["default_variant"] as? JsonPrimitive)?.content),
+        )
+    }
+
+    // endregion
+
     private fun parseDiscountConfig(element: JsonElement): DiscountConfig? {
         if (element is JsonPrimitive && element.isString) return parseDiscountValue(element.content)
         val value = element as? JsonObject ?: return null
@@ -137,6 +201,16 @@ object PaywallExperiment {
         prefs.getString(KEY_VALUE, null)?.let { saved -> parseValue(saved)?.let { config = it } }
         prefs.getString(DISCOUNT_EXPERIMENT, null)?.let { saved ->
             parseDiscountValue(saved)?.let { discountConfig = it }
+        }
+        prefs.getString(CANCEL_EXPERIMENT, null)?.let { saved ->
+            parseCancelValue(saved)?.let { cancelConfig = it }
+        }
+        scope.launch {
+            val body = fetch(CANCEL_EXPERIMENT) ?: return@launch
+            val value = firstValue(body) ?: return@launch
+            val parsed = parseCancelConfig(value) ?: return@launch
+            cancelConfig = parsed
+            prefs.edit().putString(CANCEL_EXPERIMENT, value.toString()).apply()
         }
         scope.launch {
             val body = fetch(DISCOUNT_EXPERIMENT) ?: return@launch

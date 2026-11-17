@@ -81,6 +81,7 @@ Questions (`question` → `answer`) :
 | `question` | Écran | `answer` |
 | --- | --- | --- |
 | `age` | `age` | une tranche : `under18`, `18to24`, `25to34`, `35to44`, `45to54`, `55plus`. Jamais un âge exact |
+| `gender` | `gender` | `man`, `woman` ou `undisclosed` (« je préfère ne pas répondre ») |
 | `knowledge` | `knowledge` | `0` à `3`. Aucun niveau n'est présélectionné : la réponse est toujours un choix |
 | `motivation` | `motivation` | `grow`, `conversations`, `career`, `sharp`, `world` |
 | `objectives` | `objective` | choix multiples : les clés triées, séparées par des virgules (`cultivate,exams`) |
@@ -159,6 +160,26 @@ l'app ajoute `experiment` et `variant` à son `paywall_view` et à ses événeme
 (`course_paywall_ab` : `bonhomme` / `reviews` ; `discount_paywall_ab` : `percent` /
 `graduate`). Le test de prix du paywall de réduction et les expériences RevenueCat se lisent
 dans `offering`.
+
+Test `checkout_cancel_ab` (Android) : que se passe-t-il quand la feuille de paiement Google
+est refermée sans achat. Variante `control` : retour au paywall ; variante `offer` : le
+paywall de l'offre flash s'ouvre aussitôt. Réglage dans `public.app_config`, clé
+`checkout_cancel_ab` : `{"enabled": true, "share_offer": 0.5, "default_variant": "control"}`
+(sans ligne : test actif, moitié-moitié). Le premier abandon d'une présentation, pour une
+personne à qui l'offre flash pouvait être montrée (pas Premium, offre moins chère que son prix
+normal, offre du jour pas encore consommée), est l'exposition : son `purchase_failed`
+(`reason` : `cancelled`) porte `cancel_test` (`checkout_cancel_ab`) et `cancel_variant`,
+dans les deux variantes. Les événements du paywall de réduction ouvert de cette façon portent
+`trigger` : `checkout_cancel`. Cette offre compte comme l'offre du jour : son compte à
+rebours d'une heure tourne et l'onglet reste visible, mais le cadeau du swipe ne revient pas
+ce jour-là. Ces clés sont distinctes de `experiment` / `variant` pour ne
+pas découper `daily_paywall_stats` ; le test se lit dans `course_events`.
+
+Offre flash et expériences de prix : l'offre RevenueCat servie (la « courante ») peut nommer
+l'offre flash qui va avec elle, par la métadonnée `promo_offering` (identifiant d'une offre,
+ou `none` pour aucune offre flash). Sans métadonnée, c'est le tirage `discount_bucket` qui
+choisit, comme avant. L'app ne montre jamais une offre flash dont l'annuel coûte autant ou
+plus que l'annuel normal du client.
 
 ### Synthèse et tableau de bord des paywalls
 

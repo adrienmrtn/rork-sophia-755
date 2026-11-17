@@ -407,6 +407,10 @@ enum AppLocalizable {
         "onboardingV2.age.35to44": "35 – 44 ans",
         "onboardingV2.age.45to54": "45 – 54 ans",
         "onboardingV2.age.55plus": "55 ans et plus",
+        "onboardingV2.gender.title": "Quel est ton genre ?",
+        "onboardingV2.gender.man": "Homme",
+        "onboardingV2.gender.woman": "Femme",
+        "onboardingV2.gender.undisclosed": "Je préfère ne pas répondre",
         "onboardingV2.knowledge.title": "Comment évalues-tu ta culture générale ?",
         "onboardingV2.knowledge.subtitle": "Sois honnête : ça sert juste à adapter le niveau.",
         "onboardingV2.knowledge.level1": "Pas terrible",
@@ -2902,6 +2906,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Notifications may include alerts, sounds, and icon badges. These can be configured in Settings.",
         "onboardingV2.notifications.alert.deny.ios": "Don’t Allow",
         "onboardingV2.notifications.alert.allow": "Allow",
+        "onboardingV2.gender.title": "What's your gender?",
+        "onboardingV2.gender.man": "Man",
+        "onboardingV2.gender.woman": "Woman",
+        "onboardingV2.gender.undisclosed": "Prefer not to say",
     ]
     // MARK: - Spanish
 
@@ -4289,6 +4297,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Las notificaciones pueden incluir alertas, sonidos y globos en los iconos. Puedes configurarlas en Ajustes.",
         "onboardingV2.notifications.alert.deny.ios": "No permitir",
         "onboardingV2.notifications.alert.allow": "Permitir",
+        "onboardingV2.gender.title": "¿Cuál es tu género?",
+        "onboardingV2.gender.man": "Hombre",
+        "onboardingV2.gender.woman": "Mujer",
+        "onboardingV2.gender.undisclosed": "Prefiero no decirlo",
     ]
     // MARK: - German
 
@@ -5676,6 +5688,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Mitteilungen können Hinweise, Töne und Kennzeichen sein. Du kannst sie in den Einstellungen konfigurieren.",
         "onboardingV2.notifications.alert.deny.ios": "Nicht erlauben",
         "onboardingV2.notifications.alert.allow": "Erlauben",
+        "onboardingV2.gender.title": "Was ist dein Geschlecht?",
+        "onboardingV2.gender.man": "Mann",
+        "onboardingV2.gender.woman": "Frau",
+        "onboardingV2.gender.undisclosed": "Keine Angabe",
     ]
     // MARK: - Portuguese (Brazil)
 
@@ -7063,6 +7079,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "As notificações podem incluir alertas, sons e avisos nos ícones. Você pode configurá-las em Ajustes.",
         "onboardingV2.notifications.alert.deny.ios": "Não Permitir",
         "onboardingV2.notifications.alert.allow": "Permitir",
+        "onboardingV2.gender.title": "Qual é o seu gênero?",
+        "onboardingV2.gender.man": "Homem",
+        "onboardingV2.gender.woman": "Mulher",
+        "onboardingV2.gender.undisclosed": "Prefiro não dizer",
     ]
 
     // MARK: - Portuguese (Portugal)
@@ -8451,6 +8471,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "As notificações podem incluir alertas, sons e avisos nos ícones. Pode configurá-las nas Definições.",
         "onboardingV2.notifications.alert.deny.ios": "Não permitir",
         "onboardingV2.notifications.alert.allow": "Permitir",
+        "onboardingV2.gender.title": "Qual é o teu género?",
+        "onboardingV2.gender.man": "Homem",
+        "onboardingV2.gender.woman": "Mulher",
+        "onboardingV2.gender.undisclosed": "Prefiro não dizer",
     ]
     // MARK: - Italian
 
@@ -9838,6 +9862,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Le notifiche possono includere avvisi, suoni e badge icona. Puoi configurarle in Impostazioni.",
         "onboardingV2.notifications.alert.deny.ios": "Non consentire",
         "onboardingV2.notifications.alert.allow": "Consenti",
+        "onboardingV2.gender.title": "Qual è il tuo genere?",
+        "onboardingV2.gender.man": "Uomo",
+        "onboardingV2.gender.woman": "Donna",
+        "onboardingV2.gender.undisclosed": "Preferisco non dirlo",
     ]
     // MARK: - Turkish
 
@@ -11225,6 +11253,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Bildirimler uyarıları, sesleri ve simge işaretlerini içerebilir. Bunları Ayarlar’dan düzenleyebilirsiniz.",
         "onboardingV2.notifications.alert.deny.ios": "İzin Verme",
         "onboardingV2.notifications.alert.allow": "İzin Ver",
+        "onboardingV2.gender.title": "Cinsiyetin nedir?",
+        "onboardingV2.gender.man": "Erkek",
+        "onboardingV2.gender.woman": "Kadın",
+        "onboardingV2.gender.undisclosed": "Belirtmek istemiyorum",
     ]
     // MARK: - Polish
 
@@ -12613,6 +12645,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Powiadomienia mogą zawierać alerty, dźwięki i plakietki ikon. Możesz je skonfigurować w Ustawieniach.",
         "onboardingV2.notifications.alert.deny.ios": "Nie pozwalaj",
         "onboardingV2.notifications.alert.allow": "Pozwól",
+        "onboardingV2.gender.title": "Jaka jest twoja płeć?",
+        "onboardingV2.gender.man": "Mężczyzna",
+        "onboardingV2.gender.woman": "Kobieta",
+        "onboardingV2.gender.undisclosed": "Wolę nie podawać",
     ]
     // MARK: - Romanian
 
@@ -14001,6 +14037,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Notificările pot include alerte, sunete și insigne pe pictograme. Le puteți configura în Configurări.",
         "onboardingV2.notifications.alert.deny.ios": "Nu permite",
         "onboardingV2.notifications.alert.allow": "Permite",
+        "onboardingV2.gender.title": "Care este genul tău?",
+        "onboardingV2.gender.man": "Bărbat",
+        "onboardingV2.gender.woman": "Femeie",
+        "onboardingV2.gender.undisclosed": "Prefer să nu spun",
     ]
     // MARK: - Dutch
 
@@ -15388,6 +15428,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Meldingen kunnen bestaan uit waarschuwingen, geluiden en badges. Je kunt ze configureren in Instellingen.",
         "onboardingV2.notifications.alert.deny.ios": "Sta niet toe",
         "onboardingV2.notifications.alert.allow": "Sta toe",
+        "onboardingV2.gender.title": "Wat is je geslacht?",
+        "onboardingV2.gender.man": "Man",
+        "onboardingV2.gender.woman": "Vrouw",
+        "onboardingV2.gender.undisclosed": "Zeg ik liever niet",
     ]
     // MARK: - Greek
 
@@ -16775,6 +16819,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Οι γνωστοποιήσεις μπορεί να περιλαμβάνουν ειδοποιήσεις, ήχους και ταμπέλες εικονιδίων. Μπορείτε να τις διαμορφώσετε στις Ρυθμίσεις.",
         "onboardingV2.notifications.alert.deny.ios": "Να μην επιτρέπεται",
         "onboardingV2.notifications.alert.allow": "Να επιτρέπεται",
+        "onboardingV2.gender.title": "Ποιο είναι το φύλο σου;",
+        "onboardingV2.gender.man": "Άνδρας",
+        "onboardingV2.gender.woman": "Γυναίκα",
+        "onboardingV2.gender.undisclosed": "Προτιμώ να μην απαντήσω",
     ]
     // MARK: - Swedish
 
@@ -18162,6 +18210,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Notiser kan inkludera påminnelser, ljud och symbolbrickor. Du kan ställa in dem i Inställningar.",
         "onboardingV2.notifications.alert.deny.ios": "Tillåt inte",
         "onboardingV2.notifications.alert.allow": "Tillåt",
+        "onboardingV2.gender.title": "Vilket kön har du?",
+        "onboardingV2.gender.man": "Man",
+        "onboardingV2.gender.woman": "Kvinna",
+        "onboardingV2.gender.undisclosed": "Vill inte uppge",
     ]
     // MARK: - Hungarian
 
@@ -19549,6 +19601,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Az értesítések figyelmeztetéseket, hangokat és ikonjelvényeket tartalmazhatnak. Ezeket a Beállításokban konfigurálhatja.",
         "onboardingV2.notifications.alert.deny.ios": "Tiltás",
         "onboardingV2.notifications.alert.allow": "Engedélyezés",
+        "onboardingV2.gender.title": "Mi a nemed?",
+        "onboardingV2.gender.man": "Férfi",
+        "onboardingV2.gender.woman": "Nő",
+        "onboardingV2.gender.undisclosed": "Nem szeretném megadni",
     ]
     // MARK: - Bulgarian
 
@@ -20936,6 +20992,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Известията могат да включват предупреждения, звуци и значки върху иконите. Можете да ги настроите в Настройки.",
         "onboardingV2.notifications.alert.deny.ios": "Не разрешавам",
         "onboardingV2.notifications.alert.allow": "Разрешавам",
+        "onboardingV2.gender.title": "Какъв е полът ти?",
+        "onboardingV2.gender.man": "Мъж",
+        "onboardingV2.gender.woman": "Жена",
+        "onboardingV2.gender.undisclosed": "Предпочитам да не казвам",
     ]
     // MARK: - Czech
 
@@ -22324,6 +22384,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Oznámení mohou obsahovat upozornění, zvuky a odznaky na ikonách. Můžete je nastavit v Nastavení.",
         "onboardingV2.notifications.alert.deny.ios": "Nepovolit",
         "onboardingV2.notifications.alert.allow": "Povolit",
+        "onboardingV2.gender.title": "Jaké je tvé pohlaví?",
+        "onboardingV2.gender.man": "Muž",
+        "onboardingV2.gender.woman": "Žena",
+        "onboardingV2.gender.undisclosed": "Nechci uvádět",
     ]
 
     // MARK: - Danish
@@ -23712,6 +23776,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Notifikationer kan omfatte advarsler, lyde og symbolmærker. Du kan indstille dem i Indstillinger.",
         "onboardingV2.notifications.alert.deny.ios": "Tillad ikke",
         "onboardingV2.notifications.alert.allow": "Tillad",
+        "onboardingV2.gender.title": "Hvad er dit køn?",
+        "onboardingV2.gender.man": "Mand",
+        "onboardingV2.gender.woman": "Kvinde",
+        "onboardingV2.gender.undisclosed": "Ønsker ikke at oplyse",
     ]
 
     // MARK: - Norwegian
@@ -25100,6 +25168,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Varslinger kan inneholde varsler, lyder og merker på symboler. Du kan konfigurere dem i Innstillinger.",
         "onboardingV2.notifications.alert.deny.ios": "Ikke tillat",
         "onboardingV2.notifications.alert.allow": "Tillat",
+        "onboardingV2.gender.title": "Hva er kjønnet ditt?",
+        "onboardingV2.gender.man": "Mann",
+        "onboardingV2.gender.woman": "Kvinne",
+        "onboardingV2.gender.undisclosed": "Ønsker ikke å oppgi",
     ]
 
     // MARK: - Russian
@@ -26489,6 +26561,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Уведомления могут содержать напоминания, звуки и наклейки на значках. Их можно настроить в Настройках.",
         "onboardingV2.notifications.alert.deny.ios": "Запретить",
         "onboardingV2.notifications.alert.allow": "Разрешить",
+        "onboardingV2.gender.title": "Какой у тебя пол?",
+        "onboardingV2.gender.man": "Мужчина",
+        "onboardingV2.gender.woman": "Женщина",
+        "onboardingV2.gender.undisclosed": "Предпочитаю не указывать",
     ]
 
     // MARK: - Croatian
@@ -27878,6 +27954,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Obavijesti mogu uključivati upozorenja, zvukove i bedževe ikona. Možete ih podesiti u Postavkama.",
         "onboardingV2.notifications.alert.deny.ios": "Nemoj dopustiti",
         "onboardingV2.notifications.alert.allow": "Dopusti",
+        "onboardingV2.gender.title": "Koji je tvoj spol?",
+        "onboardingV2.gender.man": "Muškarac",
+        "onboardingV2.gender.woman": "Žena",
+        "onboardingV2.gender.undisclosed": "Ne želim odgovoriti",
     ]
 
     // MARK: - Slovenian
@@ -29268,6 +29348,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Obvestila lahko vključujejo opozorila, zvoke in značke na ikonah. Nastavite jih lahko v Nastavitvah.",
         "onboardingV2.notifications.alert.deny.ios": "Ne dovoli",
         "onboardingV2.notifications.alert.allow": "Dovoli",
+        "onboardingV2.gender.title": "Kateri je tvoj spol?",
+        "onboardingV2.gender.man": "Moški",
+        "onboardingV2.gender.woman": "Ženska",
+        "onboardingV2.gender.undisclosed": "Ne želim odgovoriti",
     ]
 
     // MARK: - Slovak
@@ -30657,6 +30741,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Hlásenia môžu obsahovať upozornenia, zvuky a odznaky na ikonách. Môžete ich nastaviť v Nastaveniach.",
         "onboardingV2.notifications.alert.deny.ios": "Nepovoliť",
         "onboardingV2.notifications.alert.allow": "Povoliť",
+        "onboardingV2.gender.title": "Aké je tvoje pohlavie?",
+        "onboardingV2.gender.man": "Muž",
+        "onboardingV2.gender.woman": "Žena",
+        "onboardingV2.gender.undisclosed": "Nechcem uviesť",
     ]
 
     // MARK: - Serbian
@@ -32046,6 +32134,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Обавештења могу да садрже упозорења, звукове и беџеве на иконама. Можете их подесити у Подешавањима.",
         "onboardingV2.notifications.alert.deny.ios": "Не дозволи",
         "onboardingV2.notifications.alert.allow": "Дозволи",
+        "onboardingV2.gender.title": "Koji je tvoj pol?",
+        "onboardingV2.gender.man": "Muškarac",
+        "onboardingV2.gender.woman": "Žena",
+        "onboardingV2.gender.undisclosed": "Ne želim da odgovorim",
     ]
 
     // MARK: - Arabic
@@ -33436,6 +33528,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "قد تتضمن الإشعارات تنبيهات وأصواتًا وشارات على الأيقونات. يمكنك ضبطها من الإعدادات.",
         "onboardingV2.notifications.alert.deny.ios": "عدم السماح",
         "onboardingV2.notifications.alert.allow": "السماح",
+        "onboardingV2.gender.title": "ما جنسك؟",
+        "onboardingV2.gender.man": "رجل",
+        "onboardingV2.gender.woman": "امرأة",
+        "onboardingV2.gender.undisclosed": "أفضّل عدم الإجابة",
     ]
 
     // MARK: - Hebrew
@@ -34825,6 +34921,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "העדכונים עשויים לכלול התראות, צלילים ותגי אייקונים. ניתן להגדיר אותם ב״הגדרות״.",
         "onboardingV2.notifications.alert.deny.ios": "אל תאפשר",
         "onboardingV2.notifications.alert.allow": "אפשר",
+        "onboardingV2.gender.title": "מה המגדר שלך?",
+        "onboardingV2.gender.man": "גבר",
+        "onboardingV2.gender.woman": "אישה",
+        "onboardingV2.gender.undisclosed": "אעדיף לא לענות",
     ]
 
     // MARK: - Finnish
@@ -36213,6 +36313,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Ilmoitukset voivat sisältää hälytyksiä, ääniä ja kuvakkeiden merkkejä. Voit määrittää ne Asetuksissa.",
         "onboardingV2.notifications.alert.deny.ios": "Älä salli",
         "onboardingV2.notifications.alert.allow": "Salli",
+        "onboardingV2.gender.title": "Mikä on sukupuolesi?",
+        "onboardingV2.gender.man": "Mies",
+        "onboardingV2.gender.woman": "Nainen",
+        "onboardingV2.gender.undisclosed": "En halua kertoa",
     ]
 
     // MARK: - Estonian
@@ -37601,6 +37705,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Märguanded võivad sisaldada hoiatusi, helisid ja ikoonimärke. Neid saab seadistada menüüs Seaded.",
         "onboardingV2.notifications.alert.deny.ios": "Ära luba",
         "onboardingV2.notifications.alert.allow": "Luba",
+        "onboardingV2.gender.title": "Mis on sinu sugu?",
+        "onboardingV2.gender.man": "Mees",
+        "onboardingV2.gender.woman": "Naine",
+        "onboardingV2.gender.undisclosed": "Ei soovi vastata",
     ]
 
     // MARK: - lithuanian (copie du français, à post-éditer)
@@ -38989,6 +39097,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Pranešimai gali apimti įspėjimus, garsus ir piktogramų ženklelius. Juos galite sukonfigūruoti nustatymuose.",
         "onboardingV2.notifications.alert.deny.ios": "Neleisti",
         "onboardingV2.notifications.alert.allow": "Leisti",
+        "onboardingV2.gender.title": "Kokia tavo lytis?",
+        "onboardingV2.gender.man": "Vyras",
+        "onboardingV2.gender.woman": "Moteris",
+        "onboardingV2.gender.undisclosed": "Nenoriu atsakyti",
     ]
 
     // MARK: - latvian (copie du français, à post-éditer)
@@ -40378,6 +40490,10 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "Paziņojumos var būt brīdinājumi, skaņas un ikonu emblēmas. Tos var konfigurēt iestatījumos.",
         "onboardingV2.notifications.alert.deny.ios": "Neatļaut",
         "onboardingV2.notifications.alert.allow": "Atļaut",
+        "onboardingV2.gender.title": "Kāds ir tavs dzimums?",
+        "onboardingV2.gender.man": "Vīrietis",
+        "onboardingV2.gender.woman": "Sieviete",
+        "onboardingV2.gender.undisclosed": "Nevēlos atbildēt",
     ]
 
     // MARK: - japanese (copie du français, à post-éditer)
@@ -41765,5 +41881,9 @@ enum AppLocalizable {
         "onboardingV2.notifications.alert.body.ios": "通知方法は、テキスト、サウンド、アイコンバッジが利用できる可能性があります。通知方法は“設定”で設定できます。",
         "onboardingV2.notifications.alert.deny.ios": "許可しない",
         "onboardingV2.notifications.alert.allow": "許可",
+        "onboardingV2.gender.title": "性別を教えてください",
+        "onboardingV2.gender.man": "男性",
+        "onboardingV2.gender.woman": "女性",
+        "onboardingV2.gender.undisclosed": "回答しない",
     ]
 }

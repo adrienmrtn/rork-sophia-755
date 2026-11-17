@@ -335,19 +335,38 @@ class StoreViewModel(app: Application) : AndroidViewModel(app) {
     fun isWeekly(pkg: Package?): Boolean = pkg?.packageType == PackageType.WEEKLY
 
     /**
-     * Offering behind the flash discount paywall: the bucket's offering, or `offre_discount`
-     * while the bucket's own offering does not exist yet in RevenueCat. Explicit by design: it
-     * is never the current offering, so an experiment on the onboarding price leaves it
-     * untouched.
+     * Offering behind the flash discount paywall. It is never the current offering itself, but
+     * the current offering can name it (metadata `promo_offering`, see [DiscountBucket]): the
+     * arm of a price experiment then gets a discount cut for its own price, or none. Without
+     * that name it is the bucket's offering, or `offre_discount` while the bucket's own
+     * offering does not exist yet in RevenueCat.
      */
     fun promoOffering(): Offering? {
         val all = _offerings.value ?: return null
-        val bucket = DiscountBucket.get(getApplication())
-        return all.getOffering(DiscountBucket.offeringIdentifier(bucket))
-            ?: all.getOffering(DiscountBucket.offeringIdentifier(DiscountBucket.A))
+        val named = all.current?.getMetadataString(DiscountBucket.METADATA_KEY, "")
+        val identifier = DiscountBucket.promoOfferingIdentifier(
+            named = named,
+            bucket = DiscountBucket.get(getApplication()),
+            exists = { all.getOffering(it) != null },
+        ) ?: return null
+        return all.getOffering(identifier)
     }
 
     fun promoPackage(): Package? = promoOffering()?.let { annualOf(it) }
+
+    /**
+     * False once the offerings are known and there is no flash offer worth showing: the current
+     * offering asks for none, the one it names is missing, or its annual plan costs as much as
+     * the regular one or more (in the same currency). True while the offerings are still
+     * loading, so nothing changes for a customer whose offer is fine.
+     */
+    fun promoIsWorthShowing(): Boolean {
+        if (_offerings.value == null) return true
+        val promo = promoPackage()?.product?.price ?: return false
+        val regular = annualPackage(null)?.product?.price ?: return true
+        if (promo.currencyCode != regular.currencyCode) return true
+        return promo.amountMicros < regular.amountMicros
+    }
 
     /**
      * Whether a package's store product ships a free-trial introductory offer.

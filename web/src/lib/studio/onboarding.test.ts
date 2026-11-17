@@ -29,6 +29,17 @@ describe("questionViews", () => {
     expect(age.options.map((o) => o.share)).toEqual([0.1, 0.3, 0.6]);
   });
 
+  it("keeps the order of the gender page and puts the question right after the age", () => {
+    const views = questionViews([
+      { question: "knowledge", answered: 1, options: [{ value: "1", installs: 1 }] },
+      { question: "gender", answered: 10, options: [{ value: "undisclosed", installs: 1 }, { value: "woman", installs: 5 }, { value: "man", installs: 4 }] },
+      { question: "age", answered: 1, options: [{ value: "25to34", installs: 1 }] },
+    ]);
+    expect(views.map((v) => v.question)).toEqual(["age", "gender", "knowledge"]);
+    expect(views[1].label).toBe("Gender");
+    expect(views[1].options.map((o) => o.label)).toEqual(["Man", "Woman", "Prefer not to say"]);
+  });
+
   it("orders numeric answers by value and reads phone time in hours", () => {
     const [phone] = questionViews([{ question: "phone_time", answered: 4, options: [{ value: "180", installs: 2 }, { value: "30", installs: 1 }, { value: "90", installs: 1 }] }]);
     expect(phone.options.map((o) => o.label)).toEqual(["30 min", "1 h 30", "3 h"]);

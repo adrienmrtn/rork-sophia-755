@@ -381,7 +381,7 @@ function onboardingDashboard(days: number) {
   // Part des installations encore là à chaque écran ; iOS seul pour quelques-uns.
   const keep: [string, number, "all" | "ios" | "android"][] = [
     ["welcome", 1, "all"], ["language", 0.93, "all"], ["lessons", 0.9, "all"], ["researchers", 0.88, "all"], ["intro", 0.86, "all"], ["social_proof", 0.81, "all"],
-    ["name", 0.79, "all"], ["age", 0.74, "all"], ["knowledge", 0.72, "all"], ["motivation", 0.71, "all"], ["objective", 0.7, "all"], ["topics", 0.68, "all"],
+    ["name", 0.79, "all"], ["age", 0.74, "all"], ["gender", 0.73, "all"], ["knowledge", 0.72, "all"], ["motivation", 0.71, "all"], ["objective", 0.7, "all"], ["topics", 0.68, "all"],
     ["objective_intro", 0.67, "all"], ["phone_time", 0.66, "all"], ["years_grid", 0.65, "all"], ["transform", 0.64, "all"], ["questions", 0.63, "all"],
     ["mission", 0.62, "all"], ["personalize", 0.61, "all"], ["swipe_courses", 0.6, "all"], ["reading_time", 0.57, "ios"], ["curve_90", 0.56, "all"],
     ["notifications", 0.44, "all"], ["review", 0.54, "all"], ["loading", 0.53, "all"], ["profile", 0.52, "all"], ["login", 0.51, "all"], ["account", 0.3, "ios"],
@@ -404,6 +404,7 @@ function onboardingDashboard(days: number) {
     series: Array.from({ length: days }, (_, i) => ({ day: day(i), installs: Math.round(1500 * (0.8 + 0.4 * Math.abs(Math.sin(i * 0.9)))) })),
     questions: [
       question("age", 30200, [["under18", 0.11], ["18to24", 0.34], ["25to34", 0.27], ["35to44", 0.14], ["45to54", 0.08], ["55plus", 0.06]]),
+      question("gender", 30000, [["man", 0.46], ["woman", 0.47], ["undisclosed", 0.07]]),
       question("knowledge", 29800, [["0", 0.18], ["1", 0.47], ["2", 0.28], ["3", 0.07]]),
       question("motivation", 29400, [["grow", 0.31], ["conversations", 0.24], ["world", 0.21], ["career", 0.14], ["sharp", 0.1]]),
       question("objectives", 29000, [["cultivate", 0.72], ["curiosity", 0.48], ["reduceScreen", 0.39], ["impress", 0.22], ["exams", 0.17]]),
