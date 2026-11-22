@@ -289,8 +289,14 @@ fun CourseScreen(
             progressManager = progressManager,
             onClose = onDismiss,
             onQuiz = {
-                showCompleted = false
-                showQuiz = true
+                if (isPremium) {
+                    showCompleted = false
+                    showQuiz = true
+                } else {
+                    // Straight to the quiz paywall, over this page: no locked screen in between.
+                    // Once subscribed, the same button opens the quiz.
+                    onRequestPaywall("quizz")
+                }
             },
         )
         return
