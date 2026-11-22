@@ -88,6 +88,7 @@ import app.rork.sophia.ui.newgen.NewGenRoute
 import app.rork.sophia.ui.newgen.NewGenTabs
 import app.rork.sophia.ui.path.LearningPathScreen
 import app.rork.sophia.ui.path.PathQuizScreen
+import app.rork.sophia.ui.paywall.CheckoutCancelSimulation
 import app.rork.sophia.ui.paywall.PaywallContext
 import app.rork.sophia.ui.paywall.PaywallScreen
 import app.rork.sophia.ui.legal.LegalDocKind
@@ -671,7 +672,7 @@ fun MainTabs(
                             debugPremium = debugPremium,
                             onDebugPremiumChange = storeViewModel::setDebugPremium,
                             onSimulateCancelOffer = {
-                                app.rork.sophia.ui.paywall.CheckoutCancelSimulation.active = true
+                                CheckoutCancelSimulation.active = true
                                 overlay = null
                                 paywall = PaywallContext.DEBLOQUER_COURS
                             },
