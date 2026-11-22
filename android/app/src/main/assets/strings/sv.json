@@ -1530,5 +1530,7 @@
   "onboardingV2.gender.title": "Vilket kön har du?",
   "onboardingV2.gender.man": "Man",
   "onboardingV2.gender.woman": "Kvinna",
-  "onboardingV2.gender.undisclosed": "Vill inte uppge"
+  "onboardingV2.gender.undisclosed": "Vill inte uppge",
+  "settings.debug.cancelOffer": "Simuler un achat abandonné puis l'offre flash",
+  "settings.debug.cancelOffer.subtitle": "Le bouton d'achat fait comme si le paiement Google était refermé"
 }

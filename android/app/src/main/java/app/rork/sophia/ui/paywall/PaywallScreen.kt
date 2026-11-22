@@ -51,6 +51,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.rork.sophia.BuildConfig
 import app.rork.sophia.SophiaApplication
 import app.rork.sophia.billing.StoreViewModel
 import app.rork.sophia.data.DiscountBucket
@@ -179,6 +180,18 @@ fun OnboardingPaywallFlow(
 }
 
 /**
+ * Debug builds only (settings, « Simuler paywall puis offre flash »): while [active], the
+ * purchase button of a paywall calls no store and behaves as if the Google Play sheet had just
+ * been closed, and the flash offer follows whatever the test variant, the offerings or today's
+ * offer say. Lets the sequence be seen on a build where Play sells nothing. Switched off when
+ * the paywall leaves.
+ */
+internal object CheckoutCancelSimulation {
+    @Volatile
+    var active: Boolean = false
+}
+
+/**
  * What a paywall hands to [purchasePackage] as `onCancelled`: called when the reader closes the
  * Google Play sheet without paying, it answers with the properties to add to that
  * `purchase_failed` event. Outside a [CheckoutCancelOfferHost] it does nothing.
@@ -215,7 +228,19 @@ private fun CheckoutCancelOfferHost(
     val restore = rememberRestoreAction(language, storeViewModel) { onRestored() }
 
     // Remembered: a new lambda at every recomposition would recompose the whole paywall.
+    DisposableEffect(Unit) {
+        onDispose { CheckoutCancelSimulation.active = false }
+    }
     val onCancelled: (String) -> Map<String, Any?> = remember(storeViewModel) { handler@{ _ ->
+        if (BuildConfig.DEBUG && CheckoutCancelSimulation.active) {
+            // A used-up offer is wiped rather than refused: the tester wants to see the screen.
+            if (!app.discountManager.openAfterCheckoutCancel()) {
+                app.discountManager.clearLocalState()
+                app.discountManager.openAfterCheckoutCancel()
+            }
+            offerShown = true
+            return@handler emptyMap()
+        }
         if (exposed) return@handler emptyMap()
         val eligible = !storeViewModel.isPremium.value &&
             storeViewModel.promoPackage() != null &&
@@ -1122,6 +1147,11 @@ internal fun purchasePackage(
 ) {
     @Suppress("NAME_SHADOWING")
     val analyticsProps = analyticsProps + ("paywall_id" to paywallId)
+    if (BuildConfig.DEBUG && CheckoutCancelSimulation.active) {
+        // No store, no event: only what a closed Google Play sheet would trigger.
+        onCancelled(paywallId)
+        return
+    }
     if (pkg == null) {
         if (!Purchases.isConfigured) {
             // No store keys in this build: unblock the flow locally instead of dead-ending.

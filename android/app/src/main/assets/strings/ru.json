@@ -1546,5 +1546,7 @@
   "onboardingV2.gender.title": "Какой у тебя пол?",
   "onboardingV2.gender.man": "Мужчина",
   "onboardingV2.gender.woman": "Женщина",
-  "onboardingV2.gender.undisclosed": "Предпочитаю не указывать"
+  "onboardingV2.gender.undisclosed": "Предпочитаю не указывать",
+  "settings.debug.cancelOffer": "Simuler un achat abandonné puis l'offre flash",
+  "settings.debug.cancelOffer.subtitle": "Le bouton d'achat fait comme si le paiement Google était refermé"
 }

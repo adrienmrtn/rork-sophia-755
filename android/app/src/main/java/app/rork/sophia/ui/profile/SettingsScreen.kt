@@ -135,6 +135,8 @@ fun SettingsScreen(
     /** Debug builds only: Premium forced on, to test it on an emulator where Play sells nothing. */
     debugPremium: Boolean = false,
     onDebugPremiumChange: (Boolean) -> Unit = {},
+    /** Debug builds only: opens a paywall whose purchase button simulates a closed Google Play sheet. */
+    onSimulateCancelOffer: () -> Unit = {},
 ) {
     val context = LocalContext.current
     val app = context.applicationContext as SophiaApplication
@@ -526,6 +528,15 @@ fun SettingsScreen(
                                 ),
                             )
                         },
+                    )
+                    // Le parcours du test `checkout_cancel_ab`, sans store : un paywall dont le
+                    // bouton d'achat fait comme si la feuille Google venait d'être refermée.
+                    ProfileRowDivider()
+                    SettingsRow(
+                        icon = Icons.Outlined.CreditCard,
+                        label = StringStore.text(context, "settings.debug.cancelOffer", language),
+                        subtitle = StringStore.text(context, "settings.debug.cancelOffer.subtitle", language),
+                        onClick = onSimulateCancelOffer,
                     )
                     // Le catalogue en ligne : d'où il vient, combien de cours sont sur le téléphone,
                     // quand il a été relu ; un tap force le rafraîchissement (manifeste + fichiers).
