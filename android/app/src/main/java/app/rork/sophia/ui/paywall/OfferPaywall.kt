@@ -348,14 +348,6 @@ internal fun DiscountPaywall(
                         )
                     },
                 )
-                Text(
-                    text = StringStore.text(context, "paywall.discount.noTrial", language),
-                    color = OfferSoft,
-                    fontFamily = PlusJakartaSans,
-                    fontWeight = FontWeight.Medium,
-                    fontSize = 12.sp,
-                    textAlign = TextAlign.Center,
-                )
                 // This paywall sells a subscription like every other one, so it owes the same
                 // links as the others: Restore, Terms and Privacy.
                 PaywallLegalRow(
