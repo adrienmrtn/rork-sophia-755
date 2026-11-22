@@ -1219,11 +1219,6 @@ struct SophiaDiscountPaywall: View {
             .disabled(purchasing)
             .padding(.horizontal, 24)
 
-            Text(languageManager.text("paywall.discount.noTrial"))
-                .font(.jakarta(size: 12, weight: .medium))
-                .foregroundStyle(Self.soft)
-                .multilineTextAlignment(.center)
-
             legalRow.padding(.bottom, 14)
         }
     }
