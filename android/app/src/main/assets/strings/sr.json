@@ -1538,5 +1538,7 @@
   "onboardingV2.gender.title": "Koji je tvoj pol?",
   "onboardingV2.gender.man": "Muškarac",
   "onboardingV2.gender.woman": "Žena",
-  "onboardingV2.gender.undisclosed": "Ne želim da odgovorim"
+  "onboardingV2.gender.undisclosed": "Ne želim da odgovorim",
+  "settings.debug.cancelOffer": "Simuler un achat abandonné puis l'offre flash",
+  "settings.debug.cancelOffer.subtitle": "Le bouton d'achat fait comme si le paiement Google était refermé"
 }

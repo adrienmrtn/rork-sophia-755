@@ -1530,5 +1530,7 @@
   "onboardingV2.gender.title": "Qual è il tuo genere?",
   "onboardingV2.gender.man": "Uomo",
   "onboardingV2.gender.woman": "Donna",
-  "onboardingV2.gender.undisclosed": "Preferisco non dirlo"
+  "onboardingV2.gender.undisclosed": "Preferisco non dirlo",
+  "settings.debug.cancelOffer": "Simuler un achat abandonné puis l'offre flash",
+  "settings.debug.cancelOffer.subtitle": "Le bouton d'achat fait comme si le paiement Google était refermé"
 }

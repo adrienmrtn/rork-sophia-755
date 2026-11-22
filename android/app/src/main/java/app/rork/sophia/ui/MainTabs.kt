@@ -670,6 +670,11 @@ fun MainTabs(
                             onOpenAudioDownloads = { openFromSettings(OverlayScreen.AudioDownloads) },
                             debugPremium = debugPremium,
                             onDebugPremiumChange = storeViewModel::setDebugPremium,
+                            onSimulateCancelOffer = {
+                                app.rork.sophia.ui.paywall.CheckoutCancelSimulation.active = true
+                                overlay = null
+                                paywall = PaywallContext.DEBLOQUER_COURS
+                            },
                             onRestorePurchases = {
                                 storeViewModel.restore { result ->
                                     val key = when (result) {

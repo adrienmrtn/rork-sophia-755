@@ -1532,5 +1532,7 @@
   "onboardingV2.gender.title": "What's your gender?",
   "onboardingV2.gender.man": "Man",
   "onboardingV2.gender.woman": "Woman",
-  "onboardingV2.gender.undisclosed": "Prefer not to say"
+  "onboardingV2.gender.undisclosed": "Prefer not to say",
+  "settings.debug.cancelOffer": "Simulate an abandoned purchase then the flash offer",
+  "settings.debug.cancelOffer.subtitle": "The purchase button acts as if the Google payment sheet was closed"
 }
