@@ -24,6 +24,14 @@ Subcommands:
     plan     read Play and the App Store prices, print every change. Writes nothing.
     prices   print the current Play price of every base plan in every region, one CSV line
              per region (`PRICE,region,currency,<base plan>,…`). Reads only.
+    geo-plan   what `geo-apply` would do with appstore/subscriptions/play_geo_grid.json: the
+               base plans it would create (copies of p1y, monthly and annual-promo with one
+               price per country), every price that differs from the source plan, and the
+               offers (free trial) it would copy. Writes nothing.
+    geo-apply  create those base plans (or bring their prices to the grid if they exist),
+               activate them, copy and activate the active offers of each source plan, then
+               read everything back. Never touches the three existing base plans or their
+               subscribers. Idempotent.
     apply    patch the subscription, then read it back and check every new price.
 
 Credentials (environment, never in the repository):
@@ -244,16 +252,167 @@ def print_prices(subscription: dict) -> None:
     print(f"\n{len(table)} regions. Nothing was written (prices).")
 
 
+# --- geo grid: new base plans with one price per country -----------------------------------
+
+GEO_GRID = Path(__file__).resolve().parent.parent / "appstore" / "subscriptions" / "play_geo_grid.json"
+
+
+def geo_base_plan(source: dict, new_id: str, grid: dict, source_id: str, existing: dict | None) -> tuple[dict, list[str], list[str]]:
+    """The base plan `new_id`: `source` with the grid's prices. Returns it, the list of price
+    changes against the source (for the report) and the problems that forbid writing."""
+    plan = json.loads(json.dumps(existing if existing is not None else source))
+    plan["basePlanId"] = new_id
+    plan.pop("state", None)
+    if existing is None:
+        renewing = plan.get("autoRenewingBasePlanType")
+        if renewing is not None:
+            # One base plan per subscription is the backward-compatible one: it stays the source.
+            renewing["legacyCompatible"] = False
+            renewing.pop("legacyCompatibleSubscriptionOfferId", None)
+    source_prices = {c["regionCode"]: c.get("price") or {} for c in source.get("regionalConfigs") or []}
+    changes, problems = [], []
+    for config in plan.get("regionalConfigs") or []:
+        region = config["regionCode"]
+        row = grid.get(region)
+        reference = source_prices.get(region) or config.get("price") or {}
+        currency = reference.get("currencyCode", "")
+        if row is None:
+            continue
+        if row["currency"] != currency:
+            problems.append(f"{new_id} {region}: the grid is in {row['currency']}, Play sells in {currency}")
+            continue
+        new = Decimal(row[source_id])
+        old = money_to_decimal(reference)
+        if new <= 0:
+            problems.append(f"{new_id} {region}: price {new}")
+            continue
+        config["price"] = decimal_to_money(new, currency)
+        if new != old:
+            changes.append(f"{region} {old.normalize():f} -> {new.normalize():f} {currency} ({(new / old - 1) * 100:+.0f} %)")
+    missing = sorted(set(source_prices) - set(grid))
+    if missing:
+        changes.append(f"(not in the grid, source price kept: {', '.join(missing)})")
+    return plan, changes, problems
+
+
+def list_offers(token: str, base_plan_id: str) -> list[dict]:
+    offers, page = [], ""
+    while True:
+        query = urllib.parse.urlencode({"pageSize": 100, **({"pageToken": page} if page else {})})
+        result = play_call(token, "GET", f"{API}/subscriptions/{SUBSCRIPTION}/basePlans/{base_plan_id}/offers?{query}")
+        offers += result.get("subscriptionOffers") or []
+        page = result.get("nextPageToken") or ""
+        if not page:
+            return offers
+
+
+def geo(token: str, subscription: dict, write: bool) -> int:
+    spec = json.loads(GEO_GRID.read_text(encoding="utf-8"))
+    grid = spec["prices"]
+    plans = {bp["basePlanId"]: bp for bp in subscription.get("basePlans") or []}
+    regions_version = latest_regions_version(token)
+    print(f"Play regions version: {regions_version}")
+    new_plans, problems, offers_to_copy = {}, [], {}
+    for new_id, info in spec["base_plans"].items():
+        source_id = info["source"]
+        if source_id not in plans:
+            raise PlayError(f"source base plan {source_id!r} not found; found {sorted(plans)}")
+        plan, changes, bad = geo_base_plan(plans[source_id], new_id, grid, source_id, plans.get(new_id))
+        new_plans[new_id] = plan
+        problems += bad
+        state = plans[new_id].get("state") if new_id in plans else None
+        print(f"\n{new_id} (copy of {source_id}): {'exists, state ' + state if state else 'to create'}; "
+              f"{len(plan.get('regionalConfigs') or [])} regions, {sum(1 for c in changes if not c.startswith('('))} prices differ from {source_id}")
+        for line in changes:
+            print(f"  {line}")
+        source_offers = [o for o in list_offers(token, source_id) if o.get("state") == "ACTIVE"]
+        have = {o["offerId"]: o for o in (list_offers(token, new_id) if new_id in plans else [])}
+        offers_to_copy[new_id] = (source_offers, have)
+        for offer in source_offers:
+            phases = ", ".join(f"{p.get('recurrenceCount')} x {p.get('duration')}" for p in offer.get("phases") or [])
+            known = have.get(offer["offerId"])
+            print(f"  offer {offer['offerId']} ({phases}): {'exists, state ' + known.get('state', '?') if known else 'to copy'}")
+        if not source_offers:
+            print("  no active offer on the source plan: none to copy")
+    if problems:
+        print("\nRefused, the grid does not match Play:\n  " + "\n  ".join(problems))
+        return 1
+    if not write:
+        print("\nNothing was written (geo-plan).")
+        return 0
+
+    # 1. the base plans: every existing one as it is, plus the new ones (or their new prices).
+    body = json.loads(json.dumps(subscription))
+    body["basePlans"] = [new_plans.get(bp["basePlanId"], bp) for bp in body.get("basePlans") or []]
+    body["basePlans"] += [plan for new_id, plan in new_plans.items() if new_id not in plans]
+    query = urllib.parse.urlencode({
+        "updateMask": "basePlans",
+        "regionsVersion.version": regions_version,
+        "latencyTolerance": "PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE",
+    })
+    after = play_call(token, "PATCH", f"{API}/subscriptions/{SUBSCRIPTION}?{query}", body)
+    after_plans = {bp["basePlanId"]: bp for bp in after.get("basePlans") or []}
+    print("\nBase plans written.")
+    # 2. activate them.
+    for new_id in new_plans:
+        if (after_plans.get(new_id) or {}).get("state") != "ACTIVE":
+            play_call(token, "POST", f"{API}/subscriptions/{SUBSCRIPTION}/basePlans/{new_id}:activate",
+                      {"packageName": PACKAGE, "productId": SUBSCRIPTION, "basePlanId": new_id})
+            print(f"  {new_id}: activated")
+    # 3. their offers: a copy of each active offer of the source plan, then activated.
+    for new_id, (source_offers, have) in offers_to_copy.items():
+        for offer in source_offers:
+            offer_id = offer["offerId"]
+            if offer_id not in have:
+                copy = json.loads(json.dumps(offer))
+                copy.pop("state", None)
+                copy["basePlanId"] = new_id
+                create = urllib.parse.urlencode({"offerId": offer_id, "regionsVersion.version": regions_version})
+                play_call(token, "POST", f"{API}/subscriptions/{SUBSCRIPTION}/basePlans/{new_id}/offers?{create}", copy)
+                print(f"  {new_id} / {offer_id}: created")
+            if (have.get(offer_id) or {}).get("state") != "ACTIVE":
+                play_call(token, "POST", f"{API}/subscriptions/{SUBSCRIPTION}/basePlans/{new_id}/offers/{offer_id}:activate",
+                          {"packageName": PACKAGE, "productId": SUBSCRIPTION, "basePlanId": new_id, "offerId": offer_id})
+                print(f"  {new_id} / {offer_id}: activated")
+    # 4. read back.
+    final = {bp["basePlanId"]: bp for bp in play_call(token, "GET", f"{API}/subscriptions/{SUBSCRIPTION}").get("basePlans") or []}
+    wrong = []
+    for new_id, plan in new_plans.items():
+        got = final.get(new_id)
+        if got is None:
+            wrong.append(f"{new_id}: not found after the write")
+            continue
+        if got.get("state") != "ACTIVE":
+            wrong.append(f"{new_id}: state {got.get('state')}")
+        got_prices = {c["regionCode"]: money_to_decimal(c.get("price") or {}) for c in got.get("regionalConfigs") or []}
+        for config in plan.get("regionalConfigs") or []:
+            want = money_to_decimal(config.get("price") or {})
+            if got_prices.get(config["regionCode"]) != want:
+                wrong.append(f"{new_id} {config['regionCode']}: {got_prices.get(config['regionCode'])} instead of {want}")
+        active = {o["offerId"] for o in list_offers(token, new_id) if o.get("state") == "ACTIVE"}
+        for offer in offers_to_copy[new_id][0]:
+            if offer["offerId"] not in active:
+                wrong.append(f"{new_id} / {offer['offerId']}: offer not active")
+    for source_id in {info["source"] for info in spec["base_plans"].values()}:
+        if json.dumps(final.get(source_id), sort_keys=True) != json.dumps(plans[source_id], sort_keys=True):
+            wrong.append(f"{source_id}: the source base plan changed")
+    if wrong:
+        print("\nRead back: MISMATCH\n  " + "\n  ".join(wrong))
+        return 1
+    print(f"\nRead back: {len(new_plans)} base plans active at the grid's prices, offers active, source plans untouched.")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["plan", "apply", "prices"])
+    parser.add_argument("command", choices=["plan", "apply", "prices", "geo-plan", "geo-apply"])
     args = parser.parse_args()
     service_account = os.environ.get("PLAY_SERVICE_ACCOUNT_JSON", "").strip()
     rc_key = os.environ.get("REVENUECAT_SECRET_API_KEY", "").strip()
     if not service_account.startswith("{"):
         print("PLAY_SERVICE_ACCOUNT_JSON is missing or is not the JSON key of a service account.", file=sys.stderr)
         return 2
-    if not rc_key.startswith("sk_"):
+    if args.command in ("plan", "apply") and not rc_key.startswith("sk_"):
         print("REVENUECAT_SECRET_API_KEY is missing.", file=sys.stderr)
         return 2
     try:
@@ -264,6 +423,8 @@ def main() -> int:
         if args.command == "prices":
             print_prices(subscription)
             return 0
+        if args.command in ("geo-plan", "geo-apply"):
+            return geo(token, subscription, write=args.command == "geo-apply")
         regions_version = latest_regions_version(token)
         print(f"Play regions version: {regions_version}")
         project_id = resolve_project_id(rc_key, os.environ.get("REVENUECAT_PROJECT_ID"))
