@@ -1,0 +1,1235 @@
+{
+ "_comment": "Grille de prix Android par pays (test « geo », novembre 2026). Trois forfaits de base de sophia_pro, copies de p1y, monthly et annual-promo avec un prix par pays : palier 1 (12 pays hors Europe) annuel à 49,99 $ ou équivalent, mensuel et cadeau inchangés ; palier 2 (Europe et assimilés) inchangé ; palier 3 −25 % ; palier 4 −40 %. Créés par scripts/play_pricing.py geo-plan / geo-apply. Un pays absent garde le prix du forfait source. « offers »: false : les offres du forfait source (essai gratuit) ne sont pas recopiées ; le mensuel geo est sans essai.",
+ "base_plans": {
+  "p1y-geo": {
+   "source": "p1y"
+  },
+  "monthly-geo": {
+   "source": "monthly",
+   "offers": false
+  },
+  "annual-promo-geo": {
+   "source": "annual-promo"
+  }
+ },
+ "prices": {
+  "AE": {
+   "currency": "AED",
+   "tier": 1,
+   "monthly": "34.99",
+   "p1y": "179.99",
+   "annual-promo": "69.99"
+  },
+  "AG": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "17.99"
+  },
+  "AL": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "7.99",
+   "p1y": "29.99",
+   "annual-promo": "14.99"
+  },
+  "AM": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "7.99",
+   "p1y": "29.99",
+   "annual-promo": "14.99"
+  },
+  "AO": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "AR": {
+   "currency": "ARS",
+   "tier": 4,
+   "monthly": "10000",
+   "p1y": "42000",
+   "annual-promo": "21000"
+  },
+  "AT": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "AU": {
+   "currency": "AUD",
+   "tier": 1,
+   "monthly": "14.99",
+   "p1y": "74.99",
+   "annual-promo": "29.99"
+  },
+  "AW": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "6.99",
+   "p1y": "29.99",
+   "annual-promo": "13.99"
+  },
+  "AZ": {
+   "currency": "AZN",
+   "tier": 4,
+   "monthly": "11.99",
+   "p1y": "44.99",
+   "annual-promo": "24.99"
+  },
+  "BA": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "14.99"
+  },
+  "BD": {
+   "currency": "BDT",
+   "tier": 4,
+   "monthly": "960",
+   "p1y": "3900",
+   "annual-promo": "2000"
+  },
+  "BE": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "BF": {
+   "currency": "EUR",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "BG": {
+   "currency": "EUR",
+   "tier": 3,
+   "monthly": "7.99",
+   "p1y": "29.99",
+   "annual-promo": "14.99"
+  },
+  "BH": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "BJ": {
+   "currency": "EUR",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "BM": {
+   "currency": "USD",
+   "tier": 1,
+   "monthly": "8.99",
+   "p1y": "49.99",
+   "annual-promo": "17.99"
+  },
+  "BO": {
+   "currency": "BOB",
+   "tier": 4,
+   "monthly": "79.99",
+   "p1y": "319.99",
+   "annual-promo": "159.99"
+  },
+  "BR": {
+   "currency": "BRL",
+   "tier": 3,
+   "monthly": "44.9",
+   "p1y": "169.9",
+   "annual-promo": "89.9"
+  },
+  "BS": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "BW": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "6.99",
+   "p1y": "24.99",
+   "annual-promo": "13.99"
+  },
+  "BY": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "7.99",
+   "p1y": "29.99",
+   "annual-promo": "14.99"
+  },
+  "BZ": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "CA": {
+   "currency": "CAD",
+   "tier": 1,
+   "monthly": "11.99",
+   "p1y": "69.99",
+   "annual-promo": "24.99"
+  },
+  "CD": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "CF": {
+   "currency": "EUR",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "CG": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "CH": {
+   "currency": "CHF",
+   "tier": 2,
+   "monthly": "8",
+   "p1y": "30",
+   "annual-promo": "15"
+  },
+  "CI": {
+   "currency": "XOF",
+   "tier": 4,
+   "monthly": "4600",
+   "p1y": "19000",
+   "annual-promo": "9300"
+  },
+  "CL": {
+   "currency": "CLP",
+   "tier": 3,
+   "monthly": "7490",
+   "p1y": "29990",
+   "annual-promo": "14990"
+  },
+  "CM": {
+   "currency": "XAF",
+   "tier": 4,
+   "monthly": "4700",
+   "p1y": "19000",
+   "annual-promo": "9400"
+  },
+  "CO": {
+   "currency": "COP",
+   "tier": 4,
+   "monthly": "22000",
+   "p1y": "87000",
+   "annual-promo": "44000"
+  },
+  "CR": {
+   "currency": "CRC",
+   "tier": 3,
+   "monthly": "3900",
+   "p1y": "16000",
+   "annual-promo": "7800"
+  },
+  "CV": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "CY": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "CZ": {
+   "currency": "CZK",
+   "tier": 2,
+   "monthly": "249",
+   "p1y": "999",
+   "annual-promo": "499"
+  },
+  "DE": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "DJ": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "6.99",
+   "p1y": "29.99",
+   "annual-promo": "13.99"
+  },
+  "DK": {
+   "currency": "DKK",
+   "tier": 2,
+   "monthly": "79",
+   "p1y": "299",
+   "annual-promo": "149"
+  },
+  "DM": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "DO": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "6.99",
+   "p1y": "24.99",
+   "annual-promo": "13.99"
+  },
+  "DZ": {
+   "currency": "DZD",
+   "tier": 4,
+   "monthly": "910",
+   "p1y": "3700",
+   "annual-promo": "1800"
+  },
+  "EC": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "EE": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "EG": {
+   "currency": "EGP",
+   "tier": 4,
+   "monthly": "299.99",
+   "p1y": "1199.99",
+   "annual-promo": "599.99"
+  },
+  "ER": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "6.99",
+   "p1y": "29.99",
+   "annual-promo": "13.99"
+  },
+  "ES": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "ET": {
+   "currency": "ETB",
+   "tier": 4,
+   "monthly": "1100",
+   "p1y": "4400",
+   "annual-promo": "2200"
+  },
+  "FI": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "FJ": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "FM": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "FR": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "GA": {
+   "currency": "EUR",
+   "tier": 3,
+   "monthly": "7.99",
+   "p1y": "29.99",
+   "annual-promo": "14.99"
+  },
+  "GB": {
+   "currency": "GBP",
+   "tier": 2,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "17.99"
+  },
+  "GD": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "GE": {
+   "currency": "GEL",
+   "tier": 3,
+   "monthly": "25",
+   "p1y": "109",
+   "annual-promo": "54"
+  },
+  "GH": {
+   "currency": "GHS",
+   "tier": 4,
+   "monthly": "90",
+   "p1y": "370",
+   "annual-promo": "190"
+  },
+  "GI": {
+   "currency": "GBP",
+   "tier": 2,
+   "monthly": "8.49",
+   "p1y": "33.99",
+   "annual-promo": "16.99"
+  },
+  "GM": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "GN": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "6.99",
+   "p1y": "29.99",
+   "annual-promo": "13.99"
+  },
+  "GR": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "GT": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "GW": {
+   "currency": "EUR",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "HK": {
+   "currency": "HKD",
+   "tier": 1,
+   "monthly": "68",
+   "p1y": "388",
+   "annual-promo": "148"
+  },
+  "HN": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "HR": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "HT": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "6.99",
+   "p1y": "29.99",
+   "annual-promo": "13.99"
+  },
+  "HU": {
+   "currency": "HUF",
+   "tier": 2,
+   "monthly": "3990",
+   "p1y": "14990",
+   "annual-promo": "7990"
+  },
+  "ID": {
+   "currency": "IDR",
+   "tier": 4,
+   "monthly": "89000",
+   "p1y": "360000",
+   "annual-promo": "180000"
+  },
+  "IE": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "IL": {
+   "currency": "ILS",
+   "tier": 1,
+   "monthly": "29.9",
+   "p1y": "159.9",
+   "annual-promo": "59.9"
+  },
+  "IN": {
+   "currency": "INR",
+   "tier": 4,
+   "monthly": "599",
+   "p1y": "2099",
+   "annual-promo": "1199"
+  },
+  "IQ": {
+   "currency": "IQD",
+   "tier": 4,
+   "monthly": "9100",
+   "p1y": "36000",
+   "annual-promo": "18000"
+  },
+  "IS": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "12.39",
+   "p1y": "49.59",
+   "annual-promo": "24.79"
+  },
+  "IT": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "JM": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "6.99",
+   "p1y": "24.99",
+   "annual-promo": "13.99"
+  },
+  "JO": {
+   "currency": "JOD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "9.99"
+  },
+  "JP": {
+   "currency": "JPY",
+   "tier": 1,
+   "monthly": "1500",
+   "p1y": "7800",
+   "annual-promo": "3000"
+  },
+  "KE": {
+   "currency": "KES",
+   "tier": 4,
+   "monthly": "1000",
+   "p1y": "4200",
+   "annual-promo": "2100"
+  },
+  "KG": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "KH": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "KM": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "6.99",
+   "p1y": "29.99",
+   "annual-promo": "13.99"
+  },
+  "KN": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "17.99"
+  },
+  "KR": {
+   "currency": "KRW",
+   "tier": 2,
+   "monthly": "12000",
+   "p1y": "49000",
+   "annual-promo": "29000"
+  },
+  "KW": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "17.99"
+  },
+  "KY": {
+   "currency": "USD",
+   "tier": 1,
+   "monthly": "8.99",
+   "p1y": "49.99",
+   "annual-promo": "17.99"
+  },
+  "KZ": {
+   "currency": "KZT",
+   "tier": 3,
+   "monthly": "3790",
+   "p1y": "14990",
+   "annual-promo": "7490"
+  },
+  "LA": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "LB": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "6.99",
+   "p1y": "24.99",
+   "annual-promo": "13.99"
+  },
+  "LC": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "LI": {
+   "currency": "CHF",
+   "tier": 2,
+   "monthly": "10",
+   "p1y": "41",
+   "annual-promo": "20"
+  },
+  "LK": {
+   "currency": "LKR",
+   "tier": 4,
+   "monthly": "2300",
+   "p1y": "9200",
+   "annual-promo": "4600"
+  },
+  "LR": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "LT": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "LU": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "LV": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "LY": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "MA": {
+   "currency": "MAD",
+   "tier": 4,
+   "monthly": "79.99",
+   "p1y": "309.99",
+   "annual-promo": "159.99"
+  },
+  "MC": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "11.99",
+   "p1y": "47.99",
+   "annual-promo": "23.99"
+  },
+  "MD": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "MK": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "6.99",
+   "p1y": "24.99",
+   "annual-promo": "13.99"
+  },
+  "ML": {
+   "currency": "EUR",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "MM": {
+   "currency": "MMK",
+   "tier": 4,
+   "monthly": "14000",
+   "p1y": "58000",
+   "annual-promo": "29000"
+  },
+  "MN": {
+   "currency": "MNT",
+   "tier": 4,
+   "monthly": "25000",
+   "p1y": "100000",
+   "annual-promo": "50000"
+  },
+  "MO": {
+   "currency": "MOP",
+   "tier": 2,
+   "monthly": "92.99",
+   "p1y": "378",
+   "annual-promo": "188"
+  },
+  "MT": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "MU": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "7.99",
+   "p1y": "29.99",
+   "annual-promo": "14.99"
+  },
+  "MV": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "6.99",
+   "p1y": "24.99",
+   "annual-promo": "13.99"
+  },
+  "MX": {
+   "currency": "MXN",
+   "tier": 3,
+   "monthly": "149",
+   "p1y": "599",
+   "annual-promo": "299"
+  },
+  "MY": {
+   "currency": "MYR",
+   "tier": 3,
+   "monthly": "29.9",
+   "p1y": "109.9",
+   "annual-promo": "59.9"
+  },
+  "MZ": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "NA": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "NE": {
+   "currency": "EUR",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "NG": {
+   "currency": "NGN",
+   "tier": 4,
+   "monthly": "8900",
+   "p1y": "36000",
+   "annual-promo": "18000"
+  },
+  "NI": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "NL": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "NO": {
+   "currency": "NOK",
+   "tier": 2,
+   "monthly": "99",
+   "p1y": "449",
+   "annual-promo": "229"
+  },
+  "NP": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "NZ": {
+   "currency": "NZD",
+   "tier": 1,
+   "monthly": "14.99",
+   "p1y": "84.99",
+   "annual-promo": "29.99"
+  },
+  "OM": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "17.99"
+  },
+  "PA": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "17.99"
+  },
+  "PE": {
+   "currency": "PEN",
+   "tier": 4,
+   "monthly": "24.99",
+   "p1y": "89.9",
+   "annual-promo": "44.99"
+  },
+  "PG": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "PH": {
+   "currency": "PHP",
+   "tier": 4,
+   "monthly": "359",
+   "p1y": "1390",
+   "annual-promo": "599"
+  },
+  "PK": {
+   "currency": "PKR",
+   "tier": 4,
+   "monthly": "1500",
+   "p1y": "5900",
+   "annual-promo": "2900"
+  },
+  "PL": {
+   "currency": "PLN",
+   "tier": 2,
+   "monthly": "39.99",
+   "p1y": "149.99",
+   "annual-promo": "79.99"
+  },
+  "PT": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "PY": {
+   "currency": "PYG",
+   "tier": 4,
+   "monthly": "42000",
+   "p1y": "165000",
+   "annual-promo": "90000"
+  },
+  "QA": {
+   "currency": "QAR",
+   "tier": 1,
+   "monthly": "29.99",
+   "p1y": "179.99",
+   "annual-promo": "69.99"
+  },
+  "RO": {
+   "currency": "RON",
+   "tier": 3,
+   "monthly": "39.99",
+   "p1y": "149.99",
+   "annual-promo": "74.99"
+  },
+  "RS": {
+   "currency": "RSD",
+   "tier": 3,
+   "monthly": "1099",
+   "p1y": "4099",
+   "annual-promo": "2099"
+  },
+  "RU": {
+   "currency": "RUB",
+   "tier": 3,
+   "monthly": "599",
+   "p1y": "2290",
+   "annual-promo": "1090"
+  },
+  "RW": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "SA": {
+   "currency": "SAR",
+   "tier": 2,
+   "monthly": "39.99",
+   "p1y": "149.99",
+   "annual-promo": "79.99"
+  },
+  "SB": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "SC": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "6.99",
+   "p1y": "24.99",
+   "annual-promo": "13.99"
+  },
+  "SE": {
+   "currency": "SEK",
+   "tier": 2,
+   "monthly": "119",
+   "p1y": "499",
+   "annual-promo": "229"
+  },
+  "SG": {
+   "currency": "SGD",
+   "tier": 1,
+   "monthly": "12.98",
+   "p1y": "64.98",
+   "annual-promo": "24.98"
+  },
+  "SI": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "SK": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "SL": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "SM": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "SN": {
+   "currency": "XOF",
+   "tier": 4,
+   "monthly": "4600",
+   "p1y": "19000",
+   "annual-promo": "9300"
+  },
+  "SO": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "6.99",
+   "p1y": "29.99",
+   "annual-promo": "13.99"
+  },
+  "SR": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "SV": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "TC": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "17.99"
+  },
+  "TD": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "TG": {
+   "currency": "EUR",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "TH": {
+   "currency": "THB",
+   "tier": 3,
+   "monthly": "229",
+   "p1y": "970",
+   "annual-promo": "529"
+  },
+  "TJ": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "TM": {
+   "currency": "USD",
+   "tier": 3,
+   "monthly": "6.99",
+   "p1y": "24.99",
+   "annual-promo": "13.99"
+  },
+  "TN": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "TO": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "TR": {
+   "currency": "TRY",
+   "tier": 3,
+   "monthly": "379.99",
+   "p1y": "1499.99",
+   "annual-promo": "749.99"
+  },
+  "TT": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "17.99"
+  },
+  "TW": {
+   "currency": "TWD",
+   "tier": 2,
+   "monthly": "290",
+   "p1y": "1190",
+   "annual-promo": "590"
+  },
+  "TZ": {
+   "currency": "TZS",
+   "tier": 4,
+   "monthly": "15000",
+   "p1y": "60000",
+   "annual-promo": "30000"
+  },
+  "UA": {
+   "currency": "UAH",
+   "tier": 4,
+   "monthly": "369.99",
+   "p1y": "1499.99",
+   "annual-promo": "749.99"
+  },
+  "UG": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "US": {
+   "currency": "USD",
+   "tier": 1,
+   "monthly": "8.99",
+   "p1y": "49.99",
+   "annual-promo": "17.99"
+  },
+  "UY": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "17.99"
+  },
+  "UZ": {
+   "currency": "UZS",
+   "tier": 4,
+   "monthly": "93000",
+   "p1y": "375000",
+   "annual-promo": "185000"
+  },
+  "VA": {
+   "currency": "EUR",
+   "tier": 2,
+   "monthly": "9.99",
+   "p1y": "39.99",
+   "annual-promo": "19.99"
+  },
+  "VE": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "VG": {
+   "currency": "USD",
+   "tier": 2,
+   "monthly": "8.99",
+   "p1y": "34.99",
+   "annual-promo": "17.99"
+  },
+  "VN": {
+   "currency": "VND",
+   "tier": 4,
+   "monthly": "180000",
+   "p1y": "600000",
+   "annual-promo": "300000"
+  },
+  "VU": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "WS": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "6.99",
+   "p1y": "29.99",
+   "annual-promo": "13.99"
+  },
+  "YE": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "4.99",
+   "p1y": "19.99",
+   "annual-promo": "10.99"
+  },
+  "ZA": {
+   "currency": "ZAR",
+   "tier": 3,
+   "monthly": "149.99",
+   "p1y": "529.99",
+   "annual-promo": "299.99"
+  },
+  "ZM": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  },
+  "ZW": {
+   "currency": "USD",
+   "tier": 4,
+   "monthly": "5.99",
+   "p1y": "24.99",
+   "annual-promo": "11.99"
+  }
+ }
+}

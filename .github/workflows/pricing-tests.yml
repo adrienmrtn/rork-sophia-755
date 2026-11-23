@@ -38,6 +38,16 @@
 #     plan     Google Play prices of sophia_pro (p1y, monthly, annual-promo) next to
 #              the App Store price of the matching iOS product, country by country,
 #              and what `apply` would lower. Writes nothing.
+#     prices   current Play price of every base plan in every region, as CSV lines.
+#              Reads only.
+#     geo-plan   what geo-apply would create from appstore/subscriptions/play_geo_grid.json:
+#                three base plans (p1y-geo, monthly-geo, annual-promo-geo), one price per
+#                country, and the free-trial offers copied from the source plans. Writes nothing.
+#     offer-off  deactivates one offer, `only` = <base plan>:<offer id> (monthly:freetrial-3d
+#                sells the monthly plan without a free trial). Reversible in Play Console.
+#     geo-draft  creates them as drafts: nothing sold, nothing visible, still deletable.
+#     geo-apply  creates and activates them, then reads everything back. The three existing
+#                base plans and their subscribers are not touched.
 #     apply    lowers each Play price to the App Store price where the currency is
 #              the same, then reads the subscription back (scripts/play_pricing.py).
 #              Needs the PLAY_SERVICE_ACCOUNT_JSON secret.
@@ -71,6 +81,10 @@ on:
           - switch
           - rollout
           - default
+          - geo-plan
+          - geo-draft
+          - offer-off
+          - geo-apply
       only:
         description: "appstore: one product id, e.g. Sophia_yearly_4999 (blank = all). revenuecat-experiments · switch: ordered steps, e.g. stop:exp…,start:exp…"
         type: string
@@ -149,6 +163,11 @@ jobs:
             revenuecat-experiments/default) set -- scripts/revenuecat_experiments.py default --target "$ONLY" ;;
             play/plan)         set -- scripts/play_pricing.py plan ;;
             play/apply)        set -- scripts/play_pricing.py apply ;;
+            play/prices)       set -- scripts/play_pricing.py prices ;;
+            play/geo-plan)     set -- scripts/play_pricing.py geo-plan ;;
+            play/geo-draft)    set -- scripts/play_pricing.py geo-draft ;;
+            play/offer-off)    set -- scripts/play_pricing.py offer-off --target "$ONLY" ;;
+            play/geo-apply)    set -- scripts/play_pricing.py geo-apply ;;
             *) echo "unsupported: $TARGET / $ACTION" >&2; exit 1 ;;
           esac
           {
