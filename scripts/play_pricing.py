@@ -22,6 +22,8 @@ Google keeps current subscribers on their price; only new purchases get the new 
 
 Subcommands:
     plan     read Play and the App Store prices, print every change. Writes nothing.
+    prices   print the current Play price of every base plan in every region, one CSV line
+             per region (`PRICE,region,currency,<base plan>,…`). Reads only.
     apply    patch the subscription, then read it back and check every new price.
 
 Credentials (environment, never in the repository):
@@ -224,9 +226,27 @@ def verify(subscription: dict, changes: dict) -> int:
     return 0
 
 
+def print_prices(subscription: dict) -> None:
+    """Current price of every base plan in every region, as CSV lines. Reads only."""
+    plans = [bp for bp in subscription.get("basePlans") or []]
+    names = [bp["basePlanId"] for bp in plans]
+    table: dict[str, dict[str, str]] = {}
+    currencies: dict[str, str] = {}
+    for bp in plans:
+        for config in bp.get("regionalConfigs") or []:
+            price = config.get("price") or {}
+            region = config["regionCode"]
+            currencies.setdefault(region, price.get("currencyCode", ""))
+            table.setdefault(region, {})[bp["basePlanId"]] = str(money_to_decimal(price))
+    print("PRICE,region,currency," + ",".join(names))
+    for region in sorted(table):
+        print(f"PRICE,{region},{currencies[region]}," + ",".join(table[region].get(n, "") for n in names))
+    print(f"\n{len(table)} regions. Nothing was written (prices).")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["plan", "apply"])
+    parser.add_argument("command", choices=["plan", "apply", "prices"])
     args = parser.parse_args()
     service_account = os.environ.get("PLAY_SERVICE_ACCOUNT_JSON", "").strip()
     rc_key = os.environ.get("REVENUECAT_SECRET_API_KEY", "").strip()
@@ -241,6 +261,9 @@ def main() -> int:
         token = access_token(service_account)
         subscription = play_call(token, "GET", f"{API}/subscriptions/{SUBSCRIPTION}")
         print(f"Play {PACKAGE} / {SUBSCRIPTION}: base plans {[bp['basePlanId'] for bp in subscription.get('basePlans') or []]}")
+        if args.command == "prices":
+            print_prices(subscription)
+            return 0
         regions_version = latest_regions_version(token)
         print(f"Play regions version: {regions_version}")
         project_id = resolve_project_id(rc_key, os.environ.get("REVENUECAT_PROJECT_ID"))
