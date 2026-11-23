@@ -28,6 +28,10 @@ Subcommands:
                base plans it would create (copies of p1y, monthly and annual-promo with one
                price per country), every price that differs from the source plan, and the
                offers (free trial) it would copy. Writes nothing.
+    offer-off  deactivate one offer of a base plan, `--target <base plan>:<offer id>` (e.g.
+               monthly:freetrial-3d to sell the monthly plan without a free trial). New
+               subscribers no longer get it; existing subscribers keep what they have. Reads
+               the offer back. Reversible: an inactive offer can be activated again.
     geo-draft  create those base plans and copy the offers, but leave everything in DRAFT:
                nothing is sold, no customer can see them, and a draft can still be deleted.
                Checks that the service account may create base plans and that Google accepts
@@ -429,7 +433,8 @@ def geo(token: str, subscription: dict, write: bool, activate: bool = True) -> i
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["plan", "apply", "prices", "geo-plan", "geo-draft", "geo-apply"])
+    parser.add_argument("command", choices=["plan", "apply", "prices", "geo-plan", "geo-draft", "geo-apply", "offer-off"])
+    parser.add_argument("--target", default="", help="offer-off: <base plan>:<offer id>")
     args = parser.parse_args()
     service_account = os.environ.get("PLAY_SERVICE_ACCOUNT_JSON", "").strip()
     rc_key = os.environ.get("REVENUECAT_SECRET_API_KEY", "").strip()
@@ -447,6 +452,19 @@ def main() -> int:
         if args.command == "prices":
             print_prices(subscription)
             return 0
+        if args.command == "offer-off":
+            base_plan_id, _, offer_id = args.target.partition(":")
+            if not base_plan_id or not offer_id:
+                raise PlayError("offer-off needs --target <base plan>:<offer id>")
+            url = f"{API}/subscriptions/{SUBSCRIPTION}/basePlans/{base_plan_id}/offers/{offer_id}"
+            before = play_call(token, "GET", url).get("state")
+            print(f"{base_plan_id} / {offer_id}: state {before}")
+            if before == "ACTIVE":
+                play_call(token, "POST", f"{url}:deactivate",
+                          {"packageName": PACKAGE, "productId": SUBSCRIPTION, "basePlanId": base_plan_id, "offerId": offer_id})
+            after = play_call(token, "GET", url).get("state")
+            print(f"{base_plan_id} / {offer_id}: state {after} (read back)")
+            return 0 if after != "ACTIVE" else 1
         if args.command in ("geo-plan", "geo-draft", "geo-apply"):
             return geo(token, subscription, write=args.command != "geo-plan", activate=args.command == "geo-apply")
         regions_version = latest_regions_version(token)

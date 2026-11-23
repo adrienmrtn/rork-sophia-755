@@ -43,6 +43,8 @@
 #     geo-plan   what geo-apply would create from appstore/subscriptions/play_geo_grid.json:
 #                three base plans (p1y-geo, monthly-geo, annual-promo-geo), one price per
 #                country, and the free-trial offers copied from the source plans. Writes nothing.
+#     offer-off  deactivates one offer, `only` = <base plan>:<offer id> (monthly:freetrial-3d
+#                sells the monthly plan without a free trial). Reversible in Play Console.
 #     geo-draft  creates them as drafts: nothing sold, nothing visible, still deletable.
 #     geo-apply  creates and activates them, then reads everything back. The three existing
 #                base plans and their subscribers are not touched.
@@ -81,6 +83,7 @@ on:
           - default
           - geo-plan
           - geo-draft
+          - offer-off
           - geo-apply
       only:
         description: "appstore: one product id, e.g. Sophia_yearly_4999 (blank = all). revenuecat-experiments · switch: ordered steps, e.g. stop:exp…,start:exp…"
@@ -163,6 +166,7 @@ jobs:
             play/prices)       set -- scripts/play_pricing.py prices ;;
             play/geo-plan)     set -- scripts/play_pricing.py geo-plan ;;
             play/geo-draft)    set -- scripts/play_pricing.py geo-draft ;;
+            play/offer-off)    set -- scripts/play_pricing.py offer-off --target "$ONLY" ;;
             play/geo-apply)    set -- scripts/play_pricing.py geo-apply ;;
             *) echo "unsupported: $TARGET / $ACTION" >&2; exit 1 ;;
           esac
