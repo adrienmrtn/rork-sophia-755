@@ -282,6 +282,18 @@
     "discount_yearly": {
       "play": "sophia_pro:annual-promo",
       "test_store": "discount_yearly"
+    },
+    "play_geo_yearly": {
+      "play_only": true,
+      "play": "sophia_pro:p1y-geo"
+    },
+    "play_geo_monthly": {
+      "play_only": true,
+      "play": "sophia_pro:monthly-geo"
+    },
+    "play_geo_promo": {
+      "play_only": true,
+      "play": "sophia_pro:annual-promo-geo"
     }
   },
   "offerings": [
@@ -442,6 +454,29 @@
       "packages": {
         "$rc_annual": "discount_yearly"
       }
+    },
+    {
+      "lookup_key": "geo__android",
+      "display_name": "GEO · Android · prix par pays",
+      "metadata": {
+        "experiment": "GEO",
+        "promo_offering": "geo__android_promo"
+      },
+      "packages": {
+        "$rc_annual": "play_geo_yearly",
+        "$rc_monthly": "play_geo_monthly"
+      }
+    },
+    {
+      "lookup_key": "geo__android_promo",
+      "display_name": "GEO · Android · offre flash par pays",
+      "metadata": {
+        "experiment": "GEO",
+        "role": "promo"
+      },
+      "packages": {
+        "$rc_annual": "play_geo_promo"
+      }
     }
   ],
   "audiences": [
@@ -579,6 +614,138 @@
       ],
       "platform": "ios",
       "min_app_version": "1.1.7"
+    },
+    {
+      "name": "Prix · GEO (Android 1.0.7+, pays dont le prix change)",
+      "countries": [
+        "AE",
+        "AL",
+        "AM",
+        "AO",
+        "AR",
+        "AU",
+        "AW",
+        "AZ",
+        "BA",
+        "BD",
+        "BF",
+        "BG",
+        "BJ",
+        "BM",
+        "BO",
+        "BR",
+        "BW",
+        "BY",
+        "BZ",
+        "CA",
+        "CD",
+        "CF",
+        "CG",
+        "CI",
+        "CL",
+        "CM",
+        "CO",
+        "CR",
+        "CV",
+        "DJ",
+        "DM",
+        "DO",
+        "DZ",
+        "EC",
+        "EG",
+        "ER",
+        "ET",
+        "FJ",
+        "FM",
+        "GA",
+        "GD",
+        "GE",
+        "GH",
+        "GM",
+        "GN",
+        "GT",
+        "GW",
+        "HK",
+        "HN",
+        "HT",
+        "ID",
+        "IL",
+        "IN",
+        "IQ",
+        "JM",
+        "JO",
+        "JP",
+        "KE",
+        "KG",
+        "KH",
+        "KM",
+        "KY",
+        "KZ",
+        "LA",
+        "LB",
+        "LC",
+        "LK",
+        "LR",
+        "LY",
+        "MA",
+        "MD",
+        "MK",
+        "ML",
+        "MM",
+        "MN",
+        "MU",
+        "MV",
+        "MX",
+        "MY",
+        "MZ",
+        "NA",
+        "NE",
+        "NG",
+        "NI",
+        "NP",
+        "NZ",
+        "PE",
+        "PG",
+        "PH",
+        "PK",
+        "PY",
+        "QA",
+        "RO",
+        "RS",
+        "RU",
+        "RW",
+        "SB",
+        "SC",
+        "SG",
+        "SL",
+        "SN",
+        "SO",
+        "SR",
+        "SV",
+        "TD",
+        "TG",
+        "TH",
+        "TJ",
+        "TM",
+        "TN",
+        "TO",
+        "TR",
+        "TZ",
+        "UA",
+        "UG",
+        "US",
+        "UZ",
+        "VE",
+        "VN",
+        "VU",
+        "WS",
+        "YE",
+        "ZA",
+        "ZM",
+        "ZW"
+      ],
+      "platform": "android",
+      "min_app_version": "1.0.7"
     }
   ],
   "experiments": [
@@ -669,6 +836,16 @@
         "p__4999"
       ],
       "notes": "Hypothèse : les pays à fort pouvoir d'achat supportent un annuel plus cher que 39,99. Seuil de neutralité : 49,99 doit garder ≥ 80 % de la conversion du contrôle. Lecture à J+21, J+30, J+45 (docs/plan-ab-tests-prix.md § 0). Métrique primaire : LTV réalisée par client. Nouveaux clients iOS en version 1.1.7 ou plus uniquement (la 1.1.6, sans le correctif R1, affichait le prix de la variante et facturait 39,99 € sur les paywalls cours et quiz ; la v1 du 01/10 a été arrêtée pour cette raison). Android inchangé. v4 : variante 69,99 retirée le 11/10 (moins d'essais, 11,1 % contre 15,1 %, et moins d'essais payés, 21 % contre 39 %, chacun sûr à plus de 99 % ; revenu par visiteur plus bas avec 76-96 % de certitude) ; la v3 (expecf89281b0) est arrêtée. Les données 49,99 de la v3 restent comparables et peuvent être additionnées à celles de la v4."
+    },
+    {
+      "name": "Prix GEO Android · grille par pays · v1",
+      "audience": "Prix · GEO (Android 1.0.7+, pays dont le prix change)",
+      "type": "price_point",
+      "control": "fin_onboarding",
+      "treatments": [
+        "geo__android"
+      ],
+      "notes": "Hypothèse : sur Android, un prix adapté au pouvoir d'achat du pays rapporte plus que le prix unique (≈ 40 $ partout). Variante : forfaits Play p1y-geo / monthly-geo / annual-promo-geo (appstore/subscriptions/play_geo_grid.json) — 12 pays hors Europe à 49,99 $ ou équivalent sur l'annuel, −25 % et −40 % ailleurs ; l'Europe (prix inchangés) est hors audience. L'offre flash suit la grille par la métadonnée promo_offering (Android 1.0.7+). Lecture palier par palier (filtre pays), jamais en global : les paliers vont en sens opposés. Métrique primaire : LTV réalisée par client, à J+21 et après la fin des essais."
     }
   ],
   "experiment_settings": {

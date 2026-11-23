@@ -70,6 +70,9 @@ def store_ids(manifest: dict, ios_id: str) -> dict[str, str]:
         if spec["product_id"] == ios_id:
             return {"app_store": ios_id, "play_store": spec.get("play"), "test_store": spec.get("test_store")}
     known = manifest.get("existing_products", {}).get(ios_id)
+    if known and known.get("play_only"):
+        # A Play base plan with no App Store twin (the Android price grid): the key is only a name.
+        return {"play_store": known.get("play")}
     if known:
         return {"app_store": ios_id, "play_store": known.get("play"), "test_store": known.get("test_store")}
     return {"app_store": ios_id}
