@@ -1,11 +1,12 @@
 {
- "_comment": "Grille de prix Android par pays (test « geo », novembre 2026). Trois forfaits de base de sophia_pro, copies de p1y, monthly et annual-promo avec un prix par pays : palier 1 (12 pays hors Europe) annuel à 49,99 $ ou équivalent, mensuel et cadeau inchangés ; palier 2 (Europe et assimilés) inchangé ; palier 3 −25 % ; palier 4 −40 %. Créés par scripts/play_pricing.py geo-plan / geo-apply. Un pays absent garde le prix du forfait source.",
+ "_comment": "Grille de prix Android par pays (test « geo », novembre 2026). Trois forfaits de base de sophia_pro, copies de p1y, monthly et annual-promo avec un prix par pays : palier 1 (12 pays hors Europe) annuel à 49,99 $ ou équivalent, mensuel et cadeau inchangés ; palier 2 (Europe et assimilés) inchangé ; palier 3 −25 % ; palier 4 −40 %. Créés par scripts/play_pricing.py geo-plan / geo-apply. Un pays absent garde le prix du forfait source. « offers »: false : les offres du forfait source (essai gratuit) ne sont pas recopiées ; le mensuel geo est sans essai.",
  "base_plans": {
   "p1y-geo": {
    "source": "p1y"
   },
   "monthly-geo": {
-   "source": "monthly"
+   "source": "monthly",
+   "offers": false
   },
   "annual-promo-geo": {
    "source": "annual-promo"

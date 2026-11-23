@@ -317,6 +317,7 @@ def geo(token: str, subscription: dict, write: bool, activate: bool = True) -> i
     regions_version = latest_regions_version(token)
     print(f"Play regions version: {regions_version}")
     new_plans, problems, offers_to_copy = {}, [], {}
+    offers_to_delete: list[tuple[str, str]] = []
     for new_id, info in spec["base_plans"].items():
         source_id = info["source"]
         if source_id not in plans:
@@ -329,9 +330,19 @@ def geo(token: str, subscription: dict, write: bool, activate: bool = True) -> i
               f"{len(plan.get('regionalConfigs') or [])} regions, {sum(1 for c in changes if not c.startswith('('))} prices differ from {source_id}")
         for line in changes:
             print(f"  {line}")
-        source_offers = [o for o in list_offers(token, source_id) if o.get("state") == "ACTIVE"]
+        copies = info.get("offers", True)
+        source_offers = [o for o in list_offers(token, source_id) if o.get("state") == "ACTIVE"] if copies else []
         have = {o["offerId"]: o for o in (list_offers(token, new_id) if new_id in plans else [])}
         offers_to_copy[new_id] = (source_offers, have)
+        if not copies:
+            # A plan sold without any offer (no free trial): whatever was copied before goes.
+            for offer_id, offer in have.items():
+                removable = offer.get("state") == "DRAFT"
+                print(f"  offer {offer_id}: state {offer.get('state')}, {'to delete (the grid wants no offer on this plan)' if removable else 'NOT a draft: deactivate it in Play Console'}")
+                if removable:
+                    offers_to_delete.append((new_id, offer_id))
+            print("  no offer on this plan (grid: offers = false)")
+            continue
         for offer in source_offers:
             phases = ", ".join(f"{p.get('recurrenceCount')} x {p.get('duration')}" for p in offer.get("phases") or [])
             known = have.get(offer["offerId"])
@@ -363,6 +374,9 @@ def geo(token: str, subscription: dict, write: bool, activate: bool = True) -> i
             play_call(token, "POST", f"{API}/subscriptions/{SUBSCRIPTION}/basePlans/{new_id}:activate",
                       {"packageName": PACKAGE, "productId": SUBSCRIPTION, "basePlanId": new_id})
             print(f"  {new_id}: activated")
+    for new_id, offer_id in offers_to_delete:
+        play_call(token, "DELETE", f"{API}/subscriptions/{SUBSCRIPTION}/basePlans/{new_id}/offers/{offer_id}")
+        print(f"  {new_id} / {offer_id}: deleted")
     # 3. their offers: a copy of each active offer of the source plan, then activated.
     for new_id, (source_offers, have) in offers_to_copy.items():
         for offer in source_offers:
@@ -395,6 +409,8 @@ def geo(token: str, subscription: dict, write: bool, activate: bool = True) -> i
             if got_prices.get(config["regionCode"]) != want:
                 wrong.append(f"{new_id} {config['regionCode']}: {got_prices.get(config['regionCode'])} instead of {want}")
         offers_now = {o["offerId"]: o.get("state") for o in list_offers(token, new_id)}
+        if not spec["base_plans"][new_id].get("offers", True) and offers_now:
+            wrong.append(f"{new_id}: still has offers {offers_now}")
         for offer in offers_to_copy[new_id][0]:
             state = offers_now.get(offer["offerId"])
             print(f"  {new_id} / {offer['offerId']}: state {state}")
