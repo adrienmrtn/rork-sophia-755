@@ -43,6 +43,7 @@
 #     geo-plan   what geo-apply would create from appstore/subscriptions/play_geo_grid.json:
 #                three base plans (p1y-geo, monthly-geo, annual-promo-geo), one price per
 #                country, and the free-trial offers copied from the source plans. Writes nothing.
+#     geo-draft  creates them as drafts: nothing sold, nothing visible, still deletable.
 #     geo-apply  creates and activates them, then reads everything back. The three existing
 #                base plans and their subscribers are not touched.
 #     apply    lowers each Play price to the App Store price where the currency is
@@ -79,6 +80,7 @@ on:
           - rollout
           - default
           - geo-plan
+          - geo-draft
           - geo-apply
       only:
         description: "appstore: one product id, e.g. Sophia_yearly_4999 (blank = all). revenuecat-experiments · switch: ordered steps, e.g. stop:exp…,start:exp…"
@@ -160,6 +162,7 @@ jobs:
             play/apply)        set -- scripts/play_pricing.py apply ;;
             play/prices)       set -- scripts/play_pricing.py prices ;;
             play/geo-plan)     set -- scripts/play_pricing.py geo-plan ;;
+            play/geo-draft)    set -- scripts/play_pricing.py geo-draft ;;
             play/geo-apply)    set -- scripts/play_pricing.py geo-apply ;;
             *) echo "unsupported: $TARGET / $ACTION" >&2; exit 1 ;;
           esac

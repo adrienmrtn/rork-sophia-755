@@ -28,6 +28,10 @@ Subcommands:
                base plans it would create (copies of p1y, monthly and annual-promo with one
                price per country), every price that differs from the source plan, and the
                offers (free trial) it would copy. Writes nothing.
+    geo-draft  create those base plans and copy the offers, but leave everything in DRAFT:
+               nothing is sold, no customer can see them, and a draft can still be deleted.
+               Checks that the service account may create base plans and that Google accepts
+               every price. Reads everything back.
     geo-apply  create those base plans (or bring their prices to the grid if they exist),
                activate them, copy and activate the active offers of each source plan, then
                read everything back. Never touches the three existing base plans or their
@@ -306,7 +310,7 @@ def list_offers(token: str, base_plan_id: str) -> list[dict]:
             return offers
 
 
-def geo(token: str, subscription: dict, write: bool) -> int:
+def geo(token: str, subscription: dict, write: bool, activate: bool = True) -> int:
     spec = json.loads(GEO_GRID.read_text(encoding="utf-8"))
     grid = spec["prices"]
     plans = {bp["basePlanId"]: bp for bp in subscription.get("basePlans") or []}
@@ -353,9 +357,9 @@ def geo(token: str, subscription: dict, write: bool) -> int:
     after = play_call(token, "PATCH", f"{API}/subscriptions/{SUBSCRIPTION}?{query}", body)
     after_plans = {bp["basePlanId"]: bp for bp in after.get("basePlans") or []}
     print("\nBase plans written.")
-    # 2. activate them.
+    # 2. activate them (not in a draft run).
     for new_id in new_plans:
-        if (after_plans.get(new_id) or {}).get("state") != "ACTIVE":
+        if activate and (after_plans.get(new_id) or {}).get("state") != "ACTIVE":
             play_call(token, "POST", f"{API}/subscriptions/{SUBSCRIPTION}/basePlans/{new_id}:activate",
                       {"packageName": PACKAGE, "productId": SUBSCRIPTION, "basePlanId": new_id})
             print(f"  {new_id}: activated")
@@ -370,7 +374,7 @@ def geo(token: str, subscription: dict, write: bool) -> int:
                 create = urllib.parse.urlencode({"offerId": offer_id, "regionsVersion.version": regions_version})
                 play_call(token, "POST", f"{API}/subscriptions/{SUBSCRIPTION}/basePlans/{new_id}/offers?{create}", copy)
                 print(f"  {new_id} / {offer_id}: created")
-            if (have.get(offer_id) or {}).get("state") != "ACTIVE":
+            if activate and (have.get(offer_id) or {}).get("state") != "ACTIVE":
                 play_call(token, "POST", f"{API}/subscriptions/{SUBSCRIPTION}/basePlans/{new_id}/offers/{offer_id}:activate",
                           {"packageName": PACKAGE, "productId": SUBSCRIPTION, "basePlanId": new_id, "offerId": offer_id})
                 print(f"  {new_id} / {offer_id}: activated")
@@ -382,30 +386,34 @@ def geo(token: str, subscription: dict, write: bool) -> int:
         if got is None:
             wrong.append(f"{new_id}: not found after the write")
             continue
-        if got.get("state") != "ACTIVE":
+        if activate and got.get("state") != "ACTIVE":
             wrong.append(f"{new_id}: state {got.get('state')}")
+        print(f"  {new_id}: state {got.get('state')}")
         got_prices = {c["regionCode"]: money_to_decimal(c.get("price") or {}) for c in got.get("regionalConfigs") or []}
         for config in plan.get("regionalConfigs") or []:
             want = money_to_decimal(config.get("price") or {})
             if got_prices.get(config["regionCode"]) != want:
                 wrong.append(f"{new_id} {config['regionCode']}: {got_prices.get(config['regionCode'])} instead of {want}")
-        active = {o["offerId"] for o in list_offers(token, new_id) if o.get("state") == "ACTIVE"}
+        offers_now = {o["offerId"]: o.get("state") for o in list_offers(token, new_id)}
         for offer in offers_to_copy[new_id][0]:
-            if offer["offerId"] not in active:
-                wrong.append(f"{new_id} / {offer['offerId']}: offer not active")
+            state = offers_now.get(offer["offerId"])
+            print(f"  {new_id} / {offer['offerId']}: state {state}")
+            if state is None or (activate and state != "ACTIVE"):
+                wrong.append(f"{new_id} / {offer['offerId']}: offer {state or 'missing'}")
     for source_id in {info["source"] for info in spec["base_plans"].values()}:
         if json.dumps(final.get(source_id), sort_keys=True) != json.dumps(plans[source_id], sort_keys=True):
             wrong.append(f"{source_id}: the source base plan changed")
     if wrong:
         print("\nRead back: MISMATCH\n  " + "\n  ".join(wrong))
         return 1
-    print(f"\nRead back: {len(new_plans)} base plans active at the grid's prices, offers active, source plans untouched.")
+    done = "active" if activate else "in place, not activated (geo-draft)"
+    print(f"\nRead back: {len(new_plans)} base plans {done} at the grid's prices, offers copied, source plans untouched.")
     return 0
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["plan", "apply", "prices", "geo-plan", "geo-apply"])
+    parser.add_argument("command", choices=["plan", "apply", "prices", "geo-plan", "geo-draft", "geo-apply"])
     args = parser.parse_args()
     service_account = os.environ.get("PLAY_SERVICE_ACCOUNT_JSON", "").strip()
     rc_key = os.environ.get("REVENUECAT_SECRET_API_KEY", "").strip()
@@ -423,8 +431,8 @@ def main() -> int:
         if args.command == "prices":
             print_prices(subscription)
             return 0
-        if args.command in ("geo-plan", "geo-apply"):
-            return geo(token, subscription, write=args.command == "geo-apply")
+        if args.command in ("geo-plan", "geo-draft", "geo-apply"):
+            return geo(token, subscription, write=args.command != "geo-plan", activate=args.command == "geo-apply")
         regions_version = latest_regions_version(token)
         print(f"Play regions version: {regions_version}")
         project_id = resolve_project_id(rc_key, os.environ.get("REVENUECAT_PROJECT_ID"))
