@@ -120,6 +120,13 @@ final class CatalogStore {
     /// il y en a une (et rafraîchit en arrière-plan si le manifeste annonce une version plus
     /// récente) ; sinon attend le réseau. Nil : hors ligne et jamais téléchargé.
     func ensureContent(courseId: String, language: AppLanguage) async -> CourseContentV2? {
+        #if DEBUG
+        // Aperçu embarqué d'une édition native : il passe avant le paquet en ligne, et rien
+        // n'est retéléchargé par-dessus.
+        if let preview = InteractivePreview.bundle(courseId: courseId, language: language) {
+            return preview.content
+        }
+        #endif
         if let local = localBundle(courseId: courseId, language: language) {
             if let wanted = manifests[language]?.courses[courseId]?.hash, wanted != local.hash {
                 Task { _ = await download(courseId: courseId, language: language) }
@@ -318,13 +325,21 @@ final class CatalogStore {
                     if let value = dto.entry { glossary["\(entry.id)|\(term)"] = value }
                 }
             }
+            var lessons = entry.sections.map { LessonPage(id: $0.id, title: $0.title) }
+            #if DEBUG
+            // Une édition native en aperçu a ses propres sections : le catalogue en ligne
+            // décrit encore celles de l'ancienne version.
+            if let preview = InteractivePreview.bundle(courseId: entry.id, language: language) {
+                lessons = preview.content.sections.map { LessonPage(id: $0.id, title: $0.title) }
+            }
+            #endif
             courses.append(Course(
                 id: entry.id,
                 title: entry.title,
                 description: entry.description,
                 subject: subject,
                 subcategory: entry.subcategory,
-                lessons: entry.sections.map { LessonPage(id: $0.id, title: $0.title) },
+                lessons: lessons,
                 quiz: quiz ?? []
             ))
         }
@@ -354,6 +369,11 @@ final class CatalogStore {
     }
 
     private func localBundle(courseId: String, language: AppLanguage) -> CourseBundle? {
+        #if DEBUG
+        if let preview = InteractivePreview.bundle(courseId: courseId, language: language) {
+            return preview
+        }
+        #endif
         let key = Self.key(courseId, language)
         if let bundle = bundles[key] { return bundle }
         if missingBundles.contains(key) { return nil }
@@ -533,3 +553,32 @@ final class CatalogSnapshot {
         self.glossary = glossary
     }
 }
+
+#if DEBUG
+/// Aperçu embarqué des éditions natives (`content/native_editions.json`), pour les essayer dans
+/// un build DEBUG avant leur publication : `Resources/InteractivePreview/preview_<lang>_<id>.json`,
+/// écrits par `scripts/build_interactive_preview.py`, au format des paquets du catalogue.
+///
+/// Réservé au DEBUG : un build de l'App Store ne lit jamais ces fichiers et affiche les cours
+/// du catalogue en ligne, comme avant.
+enum InteractivePreview {
+    private static var loaded: [String: CourseBundle] = [:]
+    private static var missing: Set<String> = []
+
+    static func bundle(courseId: String, language: AppLanguage) -> CourseBundle? {
+        let name = "preview_\(language.rawValue)_\(courseId)"
+        if let bundle = loaded[name] { return bundle }
+        if missing.contains(name) { return nil }
+        let url = Bundle.main.url(forResource: name, withExtension: "json")
+            ?? Bundle.main.url(forResource: name, withExtension: "json", subdirectory: "InteractivePreview")
+        guard let url,
+              let data = try? Data(contentsOf: url),
+              let bundle = try? JSONDecoder().decode(CourseBundle.self, from: data) else {
+            missing.insert(name)
+            return nil
+        }
+        loaded[name] = bundle
+        return bundle
+    }
+}
+#endif

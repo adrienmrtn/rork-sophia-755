@@ -176,6 +176,11 @@ que les règles de la langue.
 - En lecture pas à pas, « Continuer » fait avancer l'image ou la carte en cours avant de révéler
   le passage suivant (`CourseGuideState`). Toucher l'image ou la carte fait la même chose.
 - Android ne rend pas encore ces blocs : il affiche l'image simple et ignore cartes et questions.
+- **Essayer avant de publier.** Tant qu'une édition native n'est pas publiée dans Supabase, les
+  utilisateurs gardent l'ancienne version. `python3 scripts/build_interactive_preview.py` écrit un
+  aperçu embarqué (`ios/Sophia/Resources/InteractivePreview/`) qu'un build **DEBUG** d'iOS lit à la
+  place du paquet en ligne (`InteractivePreview` dans `CatalogStore.swift`). À relancer après toute
+  modification d'une édition native. Un build de l'App Store ne lit jamais cet aperçu.
 
 ### Balisage inline (dans `paragraph`, `funFact`, `takeaway`)
 - `**gras**`
