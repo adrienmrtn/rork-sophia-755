@@ -191,6 +191,7 @@
         },
         {
           "type": "question",
+          "text": "What is the **event horizon**? It is not a surface you could stand on. It is a point of no return: inside it, even light cannot escape.",
           "kind": "choice",
           "prompt": "What is the **event horizon**?",
           "options": [
@@ -210,6 +211,7 @@
       "blocks": [
         {
           "type": "question",
+          "text": "Earth would keep circling exactly as before. A black hole's pull depends on its mass and on distance, like any other object. We would just freeze in the dark.",
           "kind": "truefalse",
           "prompt": "If the Sun were swapped for a black hole of the **same mass**, Earth would be sucked in.",
           "options": [
@@ -544,6 +546,7 @@
         },
         {
           "type": "question",
+          "text": "The telescopes recorded radio waves, which our eyes cannot see. Orange was chosen to show brightness: the brighter the signal, the lighter the color.",
           "kind": "truefalse",
           "prompt": "The orange color in the picture is the **real color** of the black hole's ring.",
           "options": [
@@ -572,6 +575,7 @@
         },
         {
           "type": "question",
+          "text": "In the picture, what is the **orange ring** made of? Nothing escapes from inside. The ring is gas outside the event horizon, heated until it glows, with its light bent around the hole by gravity.",
           "kind": "choice",
           "prompt": "In the picture, what is the **orange ring** made of?",
           "options": [
@@ -669,6 +673,7 @@
         },
         {
           "type": "question",
+          "text": "From a prediction on paper to a photograph: just over a hundred years.",
           "kind": "order",
           "prompt": "Last question. Put a century of black hole science **in order**.",
           "items": [

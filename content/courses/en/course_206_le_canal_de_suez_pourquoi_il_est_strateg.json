@@ -378,6 +378,7 @@
         },
         {
           "type": "question",
+          "text": "Suez is flat from end to end. A ship simply sails through, in a convoy, in 12 to 16 hours.",
           "kind": "truefalse",
           "prompt": "Like the Panama Canal, the Suez Canal lifts ships with **locks**.",
           "options": [
@@ -426,6 +427,7 @@
         },
         {
           "type": "question",
+          "text": "How do Britain and France **react**? The three countries invade in October 1956. But the United States and the Soviet Union both order them to stop. They withdraw, humiliated. The canal stays Egyptian.",
           "kind": "choice",
           "prompt": "How do Britain and France **react**?",
           "options": [
@@ -725,6 +727,7 @@
         },
         {
           "type": "question",
+          "text": "In 2021, the *Ever Given* blocked the canal for **six days**. From March 23 to March 29. It took dredgers, more than a dozen tugboats and a high spring tide to pull it free.",
           "kind": "truefalse",
           "prompt": "In 2021, the *Ever Given* blocked the canal for **six days**.",
           "options": [
@@ -736,6 +739,7 @@
         },
         {
           "type": "question",
+          "text": "A century and a half, and the same question each time: who controls the shortcut?",
           "kind": "order",
           "prompt": "Last question. Put the canal's history **in order**.",
           "items": [
