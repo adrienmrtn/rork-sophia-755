@@ -172,7 +172,30 @@ struct ContentBlockViewV2: View {
             )
 
         case .image(let image):
-            AspectImageView(block: image)
+            if let stops = image.stops, !stops.isEmpty {
+                GuidedImageView(
+                    block: image,
+                    stops: stops,
+                    accent: accent,
+                    courseId: courseId,
+                    courseTitle: courseTitle,
+                    onGlossaryTap: onGlossaryTap
+                )
+            } else {
+                AspectImageView(block: image)
+            }
+
+        case .map(let map):
+            GuidedMapView(
+                block: map,
+                accent: accent,
+                courseId: courseId,
+                courseTitle: courseTitle,
+                onGlossaryTap: onGlossaryTap
+            )
+
+        case .question(let question):
+            CourseInlineQuestionView(question: question)
 
         case .timeline(let events):
             TimelineBlockView(events: events, accent: accent)

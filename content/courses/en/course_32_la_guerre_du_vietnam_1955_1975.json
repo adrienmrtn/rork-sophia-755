@@ -18,115 +18,1448 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "At the heart of the Cold War, Vietnam split in two. A communist regime in the North. A Western-backed state in the South. The United States sent in enormous resources. Even so, it got stuck."
+          "text": "At the height of the war, **543,000** American soldiers are in Vietnam. And yet the world's leading power does not win. Twenty years of war, millions of dead, and in the end its opponent comes out on top. How is that possible?"
         },
         {
-          "type": "paragraph",
-          "text": "This conflict was not only military. It divided America, showed the limits of raw force, and left lasting scars on both sides."
+          "type": "image",
+          "asset": "vietnam_huey_helicopters_1966",
+          "ratio": "1280:827",
+          "caption": "Look at this photo from 1966. It shows how America fights.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Look at this photo from 1966. It shows how America fights."
+            },
+            {
+              "x": 0.78,
+              "y": 0.52,
+              "zoom": 1.7,
+              "text": "**The helicopter.** Soldiers call it the “Huey.” The United States sends nearly 12,000 helicopters to Vietnam."
+            },
+            {
+              "x": 0.36,
+              "y": 0.63,
+              "zoom": 2.2,
+              "text": "**The infantry.** Packs on their backs, they run to board. Within minutes they will be dropped deep in the jungle."
+            },
+            {
+              "x": 0.27,
+              "y": 0.49,
+              "zoom": 2.4,
+              "text": "**Behind them, more aircraft are waiting.** Troops arrive in waves, anywhere, at any time.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.385,
+                    0.455,
+                    0.075,
+                    0.075
+                  ]
+                },
+                {
+                  "ellipse": [
+                    0.145,
+                    0.525,
+                    0.03,
+                    0.03
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Speed, power, technology. On paper, nothing can stand up to this."
+            }
+          ]
         }
       ]
     },
     {
       "id": "course_32_la_guerre_du_vietnam_1955_1975_p1",
-      "title": "A divided country, then a war that grew",
+      "title": "A country cut in two",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "After the French defeat in the **[[Indochina War]]**, the Geneva Accords (**1954**) split Vietnam at the **17th parallel**. In the North, **[[Ho Chi Minh]]**, a nationalist and communist leader, took charge. In the South, an authoritarian regime backed by Washington."
-        },
-        {
-          "type": "paragraph",
-          "text": "The American presidents **John F. Kennedy** and then **Lyndon B. Johnson** feared the **[[domino theory]]**: if one country fell to communism, its neighbors would follow. In **August 1964** a naval incident in the Gulf of Tonkin served as a pretext to widen the war. By **1965**, Operation **[[Rolling Thunder]]** was bombing the North and the Marines were landing at Da Nang."
+          "text": "Since the 19th century, Vietnam has been a French colony. In **1954**, after eight years of fighting, France loses the [[First Indochina War]] and leaves."
         },
         {
           "type": "image",
-          "asset": "vietnam_war_american_soldiers",
-          "ratio": "4:3",
-          "caption": "American soldiers in Vietnam: a war of attrition in the jungle"
+          "asset": "ho_chi_minh_portrait_1946",
+          "ratio": "800:801",
+          "caption": "Ho Chi Minh, around 1946. A communist and a nationalist, he led the fight against France. Now he wants a united, independent Vietnam."
         },
         {
-          "type": "funFact",
-          "text": "Johnson is said to have remarked in private after Tonkin: “For all I know, our navy was shooting at whales out there.”"
+          "type": "map",
+          "map": "map_vietnam",
+          "ratio": "5:6",
+          "text": "Geneva, 1954. The great powers meet to decide the country's fate. They cut it in two at the 17th parallel. The split is meant to be temporary: elections are planned for 1956 to reunite the country. In the North, Ho Chi Minh leads a communist government, backed by the USSR and China. Its capital: Hanoi. In the South, an authoritarian, anti-communist government, backed by the United States. Its capital: Saigon. Two Vietnams, two sides of the Cold War. Each wants to reunite the country on its own terms.",
+          "labels": [
+            {
+              "id": "laos",
+              "lon": 102.6,
+              "lat": 19.2,
+              "text": "Laos",
+              "style": "plain"
+            },
+            {
+              "id": "camb",
+              "lon": 104.7,
+              "lat": 12.7,
+              "text": "Cambodia",
+              "style": "plain"
+            },
+            {
+              "id": "chine",
+              "lon": 108.3,
+              "lat": 22.9,
+              "text": "China",
+              "style": "plain"
+            },
+            {
+              "id": "thai",
+              "lon": 102.2,
+              "lat": 15.6,
+              "text": "Thailand",
+              "style": "plain"
+            },
+            {
+              "id": "tonkin",
+              "lon": 107.8,
+              "lat": 19.5,
+              "text": "Gulf of Tonkin",
+              "style": "sea"
+            },
+            {
+              "id": "p17",
+              "lon": 108.9,
+              "lat": 17,
+              "text": "17th parallel",
+              "style": "tag"
+            },
+            {
+              "id": "nord",
+              "lon": 107.9,
+              "lat": 20,
+              "text": "North Vietnam",
+              "style": "tagNorth"
+            },
+            {
+              "id": "sud",
+              "lon": 108.7,
+              "lat": 9.5,
+              "text": "South Vietnam",
+              "style": "tagSouth"
+            },
+            {
+              "id": "nordS",
+              "lon": 108,
+              "lat": 19.6,
+              "text": "North",
+              "style": "tagNorth"
+            },
+            {
+              "id": "sudS",
+              "lon": 110.6,
+              "lat": 13,
+              "text": "South",
+              "style": "tagSouth"
+            },
+            {
+              "id": "hanoi",
+              "lon": 105.85,
+              "lat": 21.03,
+              "text": "Hanoi",
+              "style": "city"
+            },
+            {
+              "id": "saigon",
+              "lon": 106.66,
+              "lat": 10.78,
+              "text": "Saigon",
+              "style": "city"
+            },
+            {
+              "id": "hue",
+              "lon": 107.58,
+              "lat": 16.46,
+              "text": "Hue",
+              "style": "city"
+            },
+            {
+              "id": "piste",
+              "lon": 104.3,
+              "lat": 15.5,
+              "text": "Ho Chi Minh Trail",
+              "style": "tag"
+            }
+          ],
+          "routes": [
+            {
+              "id": "trail",
+              "style": "ink",
+              "points": [
+                [
+                  105.9,
+                  18.5
+                ],
+                [
+                  105.5,
+                  17.7
+                ],
+                [
+                  105.85,
+                  16.9
+                ],
+                [
+                  106.3,
+                  16.2
+                ],
+                [
+                  106.7,
+                  15.4
+                ],
+                [
+                  107.1,
+                  14.7
+                ],
+                [
+                  107.1,
+                  13.8
+                ],
+                [
+                  106.9,
+                  12.9
+                ],
+                [
+                  106.3,
+                  12.1
+                ],
+                [
+                  106.25,
+                  11.45
+                ]
+              ]
+            },
+            {
+              "id": "p17line",
+              "style": "boundary",
+              "points": [
+                [
+                  106.16,
+                  17.0
+                ],
+                [
+                  107.44,
+                  17.0
+                ]
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "view": [
+                105.8,
+                16,
+                16.6
+              ],
+              "show": [
+                "laos",
+                "camb",
+                "chine",
+                "thai"
+              ],
+              "text": "**Geneva, 1954.** The great powers meet to decide the country's fate."
+            },
+            {
+              "view": [
+                107,
+                17,
+                7
+              ],
+              "show": [
+                "p17",
+                "laos",
+                "north",
+                "south",
+                "p17line"
+              ],
+              "text": "They cut it in two at the **17th parallel**. The split is meant to be temporary: elections are planned for 1956 to reunite the country."
+            },
+            {
+              "view": [
+                106.4,
+                20.6,
+                7
+              ],
+              "show": [
+                "hanoi",
+                "nord",
+                "chine",
+                "tonkin",
+                "north",
+                "south",
+                "p17line"
+              ],
+              "text": "**In the North**, Ho Chi Minh leads a communist government, backed by the USSR and China. Its capital: Hanoi."
+            },
+            {
+              "view": [
+                107,
+                11.4,
+                7.5
+              ],
+              "show": [
+                "saigon",
+                "sud",
+                "camb",
+                "north",
+                "south",
+                "p17line"
+              ],
+              "text": "**In the South**, an authoritarian, anti-communist government, backed by the United States. Its capital: Saigon."
+            },
+            {
+              "view": [
+                105.8,
+                16,
+                16.6
+              ],
+              "show": [
+                "hanoi",
+                "saigon",
+                "p17",
+                "nordS",
+                "sudS",
+                "north",
+                "south",
+                "p17line"
+              ],
+              "text": "Two Vietnams, two sides of the Cold War. Each wants to reunite the country on its own terms."
+            }
+          ],
+          "dots": [
+            [
+              107.2,
+              16.75
+            ],
+            [
+              107.58,
+              16.46
+            ],
+            [
+              108.2,
+              16.07
+            ],
+            [
+              108.8,
+              15.12
+            ],
+            [
+              108,
+              14.35
+            ],
+            [
+              108,
+              13.98
+            ],
+            [
+              109.2,
+              13.77
+            ],
+            [
+              108.05,
+              12.67
+            ],
+            [
+              109.19,
+              12.25
+            ],
+            [
+              108.44,
+              11.94
+            ],
+            [
+              106.82,
+              10.95
+            ],
+            [
+              106.66,
+              10.78
+            ],
+            [
+              106.35,
+              10.36
+            ],
+            [
+              105.97,
+              10.25
+            ],
+            [
+              105.78,
+              10.03
+            ],
+            [
+              106.38,
+              10.24
+            ],
+            [
+              105.13,
+              9.18
+            ],
+            [
+              107.08,
+              10.35
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The elections never happen: the South and Washington know Ho Chi Minh would win them. In the late 1950s, communist fighters take up arms in the South. Their enemies call them the [[Viet Cong]]."
+        },
+        {
+          "type": "paragraph",
+          "text": "Washington is worried. In 1954, President Eisenhower sums up his fear with a simple picture: the [[domino theory]]. If Vietnam falls, its neighbors will fall one after another."
+        },
+        {
+          "type": "question",
+          "kind": "choice",
+          "prompt": "So **why** does the United States get involved in Vietnam?",
+          "options": [
+            "To take over the former French colony for itself.",
+            "Out of fear that communism will spread, one by one, to neighboring countries.",
+            "To get its hands on the region's oil."
+          ],
+          "answer": 1,
+          "explanation": "That is the domino theory. Washington does not want a colony: it wants an allied South Vietnam, so the rest of Asia does not tip over."
         }
       ]
     },
     {
       "id": "course_32_la_guerre_du_vietnam_1955_1975_p2",
-      "title": "Why force was not enough",
+      "title": "Sliding into war",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1969** about **543,000** American soldiers were in the country. The **[[search and destroy]]** strategy, hunting the enemy in order to wipe him out, and total air superiority still failed to cut the North Vietnamese supplies coming down the Ho Chi Minh trail. General **Vo Nguyen Giap**, the North's military chief, counted on constant harassment and on the support of part of the population."
+          "text": "At first, America only sends military advisers: about **16,000** under President Kennedy. Then, on **August 2, 1964**, an American ship, the *Maddox*, is sailing off the northern coast, in the Gulf of Tonkin."
+        },
+        {
+          "type": "image",
+          "asset": "gulf_of_tonkin_torpedo_boats_1964",
+          "ratio": "2400:1436",
+          "caption": "This photo is taken that day from the deck of the Maddox. At first glance, an empty sea.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "This photo is taken that day from the deck of the *Maddox*. At first glance, an empty sea."
+            },
+            {
+              "x": 0.73,
+              "y": 0.37,
+              "zoom": 3,
+              "text": "**On the horizon, two dark dots.** They are North Vietnamese torpedo boats, racing toward the ship.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.632,
+                    0.365,
+                    0.028,
+                    0.04
+                  ]
+                },
+                {
+                  "ellipse": [
+                    0.822,
+                    0.36,
+                    0.028,
+                    0.04
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.09,
+              "y": 0.38,
+              "zoom": 3,
+              "text": "**A third one, further left.** They fire their torpedoes, miss, and pull back under American fire.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.048,
+                    0.372,
+                    0.028,
+                    0.04
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "That day, the attack is real. Two days later, things get murky."
+            }
+          ]
         },
         {
           "type": "paragraph",
-          "text": "The Americans also used defoliants such as Agent Orange to clear the jungle. The human and political cost exploded. The coffins came home. The **[[Pentagon]]**, headquarters of the American military, was learning that local political will can hold out against technology."
+          "text": "On **August 4**, President Johnson is told of a second attack. It is night, the sea is rough, and the ships' messages contradict each other. Johnson does not wait: he orders air strikes on the North."
+        },
+        {
+          "type": "paragraph",
+          "text": "Three days later, Congress gives him, almost unanimously, the right to use force. We now know the second attack **never happened**."
+        },
+        {
+          "type": "image",
+          "asset": "johnson_signs_tonkin_resolution_1964",
+          "ratio": "1000:783",
+          "caption": "August 10, 1964. Johnson signs the text passed by Congress. He can now wage war without ever declaring it."
         },
         {
           "type": "funFact",
-          "text": "More than **80 million** liters of herbicide were sprayed, destroying about **20%** of the forests of South Vietnam."
+          "text": "Johnson himself had doubts. A few days later he reportedly said in private: “For all I know, our Navy was shooting at whales out there.”"
+        },
+        {
+          "type": "paragraph",
+          "text": "In **March 1965**, everything speeds up. American planes bomb the North almost without pause: this is Operation [[Rolling Thunder]]. The first combat troops land on the beach at Da Nang."
+        },
+        {
+          "type": "image",
+          "asset": "marine_da_nang_beach_1965",
+          "ratio": "900:949",
+          "caption": "Da Nang, August 1965. A young Marine waits on the beach during a landing."
+        },
+        {
+          "type": "image",
+          "asset": "mcnamara_vietnam_map_press_conference_1965",
+          "ratio": "2000:1328",
+          "caption": "Washington, April 1965. A press conference about the war.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Washington, April 1965. A press conference about the war."
+            },
+            {
+              "x": 0.17,
+              "y": 0.5,
+              "zoom": 2.1,
+              "text": "**Robert McNamara**, the U.S. Secretary of Defense. A former head of Ford, he believes in numbers, maps and charts."
+            },
+            {
+              "x": 0.33,
+              "y": 0.56,
+              "zoom": 2,
+              "text": "**On the board**, a title: “North Vietnam bridge interdiction.” Each circle is an aerial photo of a targeted bridge."
+            },
+            {
+              "x": 0.78,
+              "y": 0.48,
+              "zoom": 1.9,
+              "text": "**On the map**, his pointer follows Vietnam. His idea: cut from the air the roads that supply the South, until the North gives in."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "kind": "truefalse",
+          "prompt": "The bombing of the North was planned for **eight weeks**. It lasted more than **three years**.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer": 0,
+          "explanation": "From March 1965 to November 1968. The North repairs its bridges, scatters its depots, and does not give in."
         }
       ]
     },
     {
       "id": "course_32_la_guerre_du_vietnam_1955_1975_p3",
-      "title": "The shock of the Tet Offensive",
+      "title": "Why force is not enough",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On **January 30, 1968**, during the Vietnamese New Year, the **[[Tet Offensive]]** hit more than **100** cities. On the ground it was a failure for the North. On American television it was a shock: the “victory around the corner” promised by Washington now looked like a lie."
+          "text": "In three years, America goes from **23,000** to more than **500,000** soldiers on the ground. Its method has a name: “search and destroy.” Helicopters drop the troops, they hunt the enemy, then they leave."
         },
         {
           "type": "paragraph",
-          "text": "President **Richard Nixon** then launched “Vietnamization”: pull the American troops out while arming the South. The Paris Accords (**1973**) sealed the American departure. With no protector left, Saigon, the capital of the South, collapsed within two years."
+          "text": "On the other side, General **Giap**, head of the northern army, refuses the big battle. His men strike, then vanish into the jungle, the villages or tunnels. Ground won in the morning is lost again by night."
+        },
+        {
+          "type": "map",
+          "map": "map_vietnam",
+          "ratio": "5:6",
+          "text": "To hold on, fighters in the South need weapons and men from the North. But the border at the 17th parallel is watched. So the North goes around it. Thousands of kilometers of tracks cross Laos and Cambodia, two neighboring countries: this is the Ho Chi Minh Trail. American planes bomb it relentlessly. Every night it is repaired. The supplies never stop.",
+          "labels": [
+            {
+              "id": "laos",
+              "lon": 102.6,
+              "lat": 19.2,
+              "text": "Laos",
+              "style": "plain"
+            },
+            {
+              "id": "camb",
+              "lon": 104.7,
+              "lat": 12.7,
+              "text": "Cambodia",
+              "style": "plain"
+            },
+            {
+              "id": "chine",
+              "lon": 108.3,
+              "lat": 22.9,
+              "text": "China",
+              "style": "plain"
+            },
+            {
+              "id": "thai",
+              "lon": 102.2,
+              "lat": 15.6,
+              "text": "Thailand",
+              "style": "plain"
+            },
+            {
+              "id": "tonkin",
+              "lon": 107.8,
+              "lat": 19.5,
+              "text": "Gulf of Tonkin",
+              "style": "sea"
+            },
+            {
+              "id": "p17",
+              "lon": 108.9,
+              "lat": 17,
+              "text": "17th parallel",
+              "style": "tag"
+            },
+            {
+              "id": "nord",
+              "lon": 107.9,
+              "lat": 20,
+              "text": "North Vietnam",
+              "style": "tagNorth"
+            },
+            {
+              "id": "sud",
+              "lon": 108.7,
+              "lat": 9.5,
+              "text": "South Vietnam",
+              "style": "tagSouth"
+            },
+            {
+              "id": "nordS",
+              "lon": 108,
+              "lat": 19.6,
+              "text": "North",
+              "style": "tagNorth"
+            },
+            {
+              "id": "sudS",
+              "lon": 110.6,
+              "lat": 13,
+              "text": "South",
+              "style": "tagSouth"
+            },
+            {
+              "id": "hanoi",
+              "lon": 105.85,
+              "lat": 21.03,
+              "text": "Hanoi",
+              "style": "city"
+            },
+            {
+              "id": "saigon",
+              "lon": 106.66,
+              "lat": 10.78,
+              "text": "Saigon",
+              "style": "city"
+            },
+            {
+              "id": "hue",
+              "lon": 107.58,
+              "lat": 16.46,
+              "text": "Hue",
+              "style": "city"
+            },
+            {
+              "id": "piste",
+              "lon": 104.3,
+              "lat": 15.5,
+              "text": "Ho Chi Minh Trail",
+              "style": "tag"
+            }
+          ],
+          "routes": [
+            {
+              "id": "trail",
+              "style": "ink",
+              "points": [
+                [
+                  105.9,
+                  18.5
+                ],
+                [
+                  105.5,
+                  17.7
+                ],
+                [
+                  105.85,
+                  16.9
+                ],
+                [
+                  106.3,
+                  16.2
+                ],
+                [
+                  106.7,
+                  15.4
+                ],
+                [
+                  107.1,
+                  14.7
+                ],
+                [
+                  107.1,
+                  13.8
+                ],
+                [
+                  106.9,
+                  12.9
+                ],
+                [
+                  106.3,
+                  12.1
+                ],
+                [
+                  106.25,
+                  11.45
+                ]
+              ]
+            },
+            {
+              "id": "p17line",
+              "style": "boundary",
+              "points": [
+                [
+                  106.16,
+                  17.0
+                ],
+                [
+                  107.44,
+                  17.0
+                ]
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "view": [
+                105.8,
+                16,
+                16.6
+              ],
+              "show": [
+                "hanoi",
+                "saigon",
+                "p17",
+                "laos",
+                "camb",
+                "north",
+                "south",
+                "p17line"
+              ],
+              "text": "To hold on, fighters in the South need weapons and men from the North. But the border at the 17th parallel is watched."
+            },
+            {
+              "view": [
+                106.2,
+                14.9,
+                10.5
+              ],
+              "show": [
+                "saigon",
+                "p17",
+                "laos",
+                "camb",
+                "piste",
+                "north",
+                "south",
+                "p17line",
+                "trail"
+              ],
+              "text": "So the North goes around it. Thousands of kilometers of tracks cross Laos and Cambodia, two neighboring countries: this is the **Ho Chi Minh Trail**."
+            },
+            {
+              "view": [
+                106.2,
+                14.9,
+                10.5
+              ],
+              "show": [
+                "saigon",
+                "p17",
+                "laos",
+                "camb",
+                "piste",
+                "north",
+                "south",
+                "p17line",
+                "trail"
+              ],
+              "text": "American planes bomb it relentlessly. Every night it is repaired. The supplies never stop."
+            }
+          ],
+          "dots": [
+            [
+              107.2,
+              16.75
+            ],
+            [
+              107.58,
+              16.46
+            ],
+            [
+              108.2,
+              16.07
+            ],
+            [
+              108.8,
+              15.12
+            ],
+            [
+              108,
+              14.35
+            ],
+            [
+              108,
+              13.98
+            ],
+            [
+              109.2,
+              13.77
+            ],
+            [
+              108.05,
+              12.67
+            ],
+            [
+              109.19,
+              12.25
+            ],
+            [
+              108.44,
+              11.94
+            ],
+            [
+              106.82,
+              10.95
+            ],
+            [
+              106.66,
+              10.78
+            ],
+            [
+              106.35,
+              10.36
+            ],
+            [
+              105.97,
+              10.25
+            ],
+            [
+              105.78,
+              10.03
+            ],
+            [
+              106.38,
+              10.24
+            ],
+            [
+              105.13,
+              9.18
+            ],
+            [
+              107.08,
+              10.35
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "asset": "agent_orange_spraying_planes_vietnam",
+          "ratio": "1280:1528",
+          "caption": "Since the enemy hides under the trees, the U.S. military decides to go after the trees.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Since the enemy hides under the trees, the U.S. military decides to go after the trees."
+            },
+            {
+              "x": 0.55,
+              "y": 0.33,
+              "zoom": 1.6,
+              "text": "**Three planes**, in formation, flying very low.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.335,
+                    0.205,
+                    0.075,
+                    0.04
+                  ]
+                },
+                {
+                  "ellipse": [
+                    0.665,
+                    0.375,
+                    0.075,
+                    0.04
+                  ]
+                },
+                {
+                  "ellipse": [
+                    0.8,
+                    0.525,
+                    0.07,
+                    0.035
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.28,
+              "y": 0.52,
+              "zoom": 1.6,
+              "text": "**Behind them, a cloud of weedkiller.** The best known is called Agent Orange. Nearly 80 million liters are sprayed in ten years."
+            },
+            {
+              "x": 0.62,
+              "y": 0.88,
+              "zoom": 2,
+              "text": "**Below, fields and trees.** The goal: strip the leaves and destroy the crops. About 20% of the South's forests are hit, and the health effects are still felt today."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "kind": "truefalse",
+          "prompt": "The U.S. military **lost** most of the major battles of this war.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer": 1,
+          "explanation": "It wins almost every major engagement. It is the war it cannot win: the enemy replaces its losses and comes back."
+        },
+        {
+          "type": "paragraph",
+          "text": "Washington measures progress by counting enemy dead. But the North accepts far heavier losses than the United States does. Ho Chi Minh had warned the French twenty years earlier."
+        },
+        {
+          "type": "quote",
+          "text": "You will kill ten of us, we will kill one of you, and it is you who will tire of it first.",
+          "attribution": "Ho Chi Minh, 1946"
         }
       ]
     },
     {
       "id": "course_32_la_guerre_du_vietnam_1955_1975_p4",
-      "title": "The end of the war, and what it left behind",
+      "title": "The shock of Tet",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "On **April 30, 1975**, Saigon fell. About **58,000** Americans had died. Vietnamese losses ran into the millions. The first truly televised war, it also exposed crimes such as the massacre at **[[My Lai]]**, where American soldiers killed civilians in **1968**. America came out of it far more wary of distant interventions."
+          "text": "In late 1967, the U.S. government insists: victory is near. At home, though, doubt is growing."
         },
         {
-          "type": "timeline",
-          "events": [
+          "type": "image",
+          "asset": "pentagon_march_antiwar_protest_1967",
+          "ratio": "1280:1601",
+          "caption": "Washington, October 21, 1967. A crowd gathers against the war.",
+          "stops": [
             {
-              "date": "1954",
-              "title": "Geneva Accords",
-              "detail": "A temporary partition at the 17th parallel."
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Washington, October 21, 1967. A crowd gathers against the war."
             },
             {
-              "date": "1965",
-              "title": "American escalation",
-              "detail": "Bombing raids and the Marine landing."
+              "x": 0.52,
+              "y": 0.62,
+              "zoom": 1.7,
+              "text": "**The sign says it all.** Many of the protesters are students, who can be drafted at any time."
             },
             {
-              "date": "1968",
-              "title": "Tet Offensive",
-              "detail": "A televised shock that turned public opinion around."
-            },
-            {
-              "date": "1973",
-              "title": "Paris Accords",
-              "detail": "The American forces withdrew."
-            },
-            {
-              "date": "1975",
-              "title": "Fall of Saigon",
-              "detail": "Reunification under communism."
+              "x": 0.5,
+              "y": 0.05,
+              "zoom": 2,
+              "text": "**Across the pool, the crowd goes on.** About 100,000 people are there that day."
             }
           ]
         },
         {
+          "type": "paragraph",
+          "text": "Three months later, on the night of **January 30, 1968**, the North and the Viet Cong strike where no one expects them."
+        },
+        {
+          "type": "map",
+          "map": "map_vietnam",
+          "ratio": "5:6",
+          "text": "It is Tet, the Vietnamese New Year. A truce has been announced. Many southern soldiers are on leave. Within hours, more than 100 towns and bases across the South are attacked at the same time. In Saigon, a commando breaks into the grounds of the U.S. embassy. It is stopped within hours, but the images go around the world. In Hue, the old imperial capital, the fighting lasts nearly a month.",
+          "labels": [
+            {
+              "id": "laos",
+              "lon": 102.6,
+              "lat": 19.2,
+              "text": "Laos",
+              "style": "plain"
+            },
+            {
+              "id": "camb",
+              "lon": 104.7,
+              "lat": 12.7,
+              "text": "Cambodia",
+              "style": "plain"
+            },
+            {
+              "id": "chine",
+              "lon": 108.3,
+              "lat": 22.9,
+              "text": "China",
+              "style": "plain"
+            },
+            {
+              "id": "thai",
+              "lon": 102.2,
+              "lat": 15.6,
+              "text": "Thailand",
+              "style": "plain"
+            },
+            {
+              "id": "tonkin",
+              "lon": 107.8,
+              "lat": 19.5,
+              "text": "Gulf of Tonkin",
+              "style": "sea"
+            },
+            {
+              "id": "p17",
+              "lon": 108.9,
+              "lat": 17,
+              "text": "17th parallel",
+              "style": "tag"
+            },
+            {
+              "id": "nord",
+              "lon": 107.9,
+              "lat": 20,
+              "text": "North Vietnam",
+              "style": "tagNorth"
+            },
+            {
+              "id": "sud",
+              "lon": 108.7,
+              "lat": 9.5,
+              "text": "South Vietnam",
+              "style": "tagSouth"
+            },
+            {
+              "id": "nordS",
+              "lon": 108,
+              "lat": 19.6,
+              "text": "North",
+              "style": "tagNorth"
+            },
+            {
+              "id": "sudS",
+              "lon": 110.6,
+              "lat": 13,
+              "text": "South",
+              "style": "tagSouth"
+            },
+            {
+              "id": "hanoi",
+              "lon": 105.85,
+              "lat": 21.03,
+              "text": "Hanoi",
+              "style": "city"
+            },
+            {
+              "id": "saigon",
+              "lon": 106.66,
+              "lat": 10.78,
+              "text": "Saigon",
+              "style": "city"
+            },
+            {
+              "id": "hue",
+              "lon": 107.58,
+              "lat": 16.46,
+              "text": "Hue",
+              "style": "city"
+            },
+            {
+              "id": "piste",
+              "lon": 104.3,
+              "lat": 15.5,
+              "text": "Ho Chi Minh Trail",
+              "style": "tag"
+            }
+          ],
+          "routes": [
+            {
+              "id": "trail",
+              "style": "ink",
+              "points": [
+                [
+                  105.9,
+                  18.5
+                ],
+                [
+                  105.5,
+                  17.7
+                ],
+                [
+                  105.85,
+                  16.9
+                ],
+                [
+                  106.3,
+                  16.2
+                ],
+                [
+                  106.7,
+                  15.4
+                ],
+                [
+                  107.1,
+                  14.7
+                ],
+                [
+                  107.1,
+                  13.8
+                ],
+                [
+                  106.9,
+                  12.9
+                ],
+                [
+                  106.3,
+                  12.1
+                ],
+                [
+                  106.25,
+                  11.45
+                ]
+              ]
+            },
+            {
+              "id": "p17line",
+              "style": "boundary",
+              "points": [
+                [
+                  106.16,
+                  17.0
+                ],
+                [
+                  107.44,
+                  17.0
+                ]
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "view": [
+                107,
+                13.4,
+                13.5
+              ],
+              "show": [
+                "saigon",
+                "p17",
+                "camb",
+                "laos",
+                "north",
+                "south",
+                "p17line"
+              ],
+              "text": "It is [[Tet]], the Vietnamese New Year. A truce has been announced. Many southern soldiers are on leave."
+            },
+            {
+              "view": [
+                107,
+                13.4,
+                13.5
+              ],
+              "show": [
+                "p17",
+                "dots",
+                "north",
+                "south",
+                "p17line"
+              ],
+              "text": "Within hours, more than **100 towns** and bases across the South are attacked at the same time."
+            },
+            {
+              "view": [
+                106.7,
+                10.9,
+                4.2
+              ],
+              "show": [
+                "saigon",
+                "dots",
+                "north",
+                "south",
+                "p17line"
+              ],
+              "text": "**In Saigon**, a commando breaks into the grounds of the U.S. embassy. It is stopped within hours, but the images go around the world."
+            },
+            {
+              "view": [
+                107.5,
+                16.4,
+                4.2
+              ],
+              "show": [
+                "hue",
+                "dots",
+                "north",
+                "south",
+                "p17line"
+              ],
+              "text": "**In Hue**, the old imperial capital, the fighting lasts nearly a month."
+            }
+          ],
+          "dots": [
+            [
+              107.2,
+              16.75
+            ],
+            [
+              107.58,
+              16.46
+            ],
+            [
+              108.2,
+              16.07
+            ],
+            [
+              108.8,
+              15.12
+            ],
+            [
+              108,
+              14.35
+            ],
+            [
+              108,
+              13.98
+            ],
+            [
+              109.2,
+              13.77
+            ],
+            [
+              108.05,
+              12.67
+            ],
+            [
+              109.19,
+              12.25
+            ],
+            [
+              108.44,
+              11.94
+            ],
+            [
+              106.82,
+              10.95
+            ],
+            [
+              106.66,
+              10.78
+            ],
+            [
+              106.35,
+              10.36
+            ],
+            [
+              105.97,
+              10.25
+            ],
+            [
+              105.78,
+              10.03
+            ],
+            [
+              106.38,
+              10.24
+            ],
+            [
+              105.13,
+              9.18
+            ],
+            [
+              107.08,
+              10.35
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "asset": "saigon_tet_offensive_arvn_rangers_1968",
+          "ratio": "1100:859",
+          "caption": "Saigon, 1968. South Vietnamese soldiers defend their capital during the offensive."
+        },
+        {
+          "type": "paragraph",
+          "text": "On the ground, the offensive fails: the towns are retaken and communist losses are huge. But every evening, Americans watch the fighting on television. They had been promised victory. The country's most trusted news anchor, Walter Cronkite, says it on air."
+        },
+        {
+          "type": "quote",
+          "text": "It seems now more certain than ever that the bloody experience of Vietnam is to end in a stalemate.",
+          "attribution": "Walter Cronkite, CBS, February 27, 1968"
+        },
+        {
+          "type": "question",
+          "kind": "choice",
+          "prompt": "The North **loses** the battle of Tet. Why is it still a turning point?",
+          "options": [
+            "Because the North captures Saigon.",
+            "Because the U.S. military runs short of soldiers.",
+            "Because Americans stop believing in the victory they were promised."
+          ],
+          "answer": 2,
+          "explanation": "Tet is a military defeat for the North, but a victory in American public opinion. A month later, Johnson announces he will not run again."
+        }
+      ]
+    },
+    {
+      "id": "course_32_la_guerre_du_vietnam_1955_1975_p5",
+      "title": "The end, and what it leaves behind",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Elected in late 1968, President Nixon changes the plan: bring American soldiers home step by step and let the southern army fight alone. This is [[Vietnamization]]. The war still lasts four more years, and spills into Cambodia and Laos."
+        },
+        {
+          "type": "image",
+          "asset": "paris_peace_accords_signing_1973",
+          "ratio": "1100:744",
+          "caption": "Paris, January 27, 1973. After more than four years of talks, the United States signs its way out of Vietnam."
+        },
+        {
+          "type": "paragraph",
+          "text": "Without its protector, the South holds on for two years. In the spring of **1975**, the northern army launches its final assault. On **April 30**, its tanks roll into Saigon."
+        },
+        {
+          "type": "image",
+          "asset": "saigon_evacuation_refugees_1975",
+          "ratio": "696:564",
+          "caption": "April 29, 1975. Saigon is about to fall. In less than two days, the Americans evacuate more than 7,000 people by helicopter.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "April 29, 1975. Saigon is about to fall. In less than two days, the Americans evacuate more than 7,000 people by helicopter."
+            },
+            {
+              "x": 0.45,
+              "y": 0.12,
+              "zoom": 1.5,
+              "text": "**Behind them, the helicopter** that has just dropped them on an American ship, out at sea."
+            },
+            {
+              "x": 0.38,
+              "y": 0.8,
+              "zoom": 1.9,
+              "text": "**One bag in hand.** It is all they could take. In the years that follow, hundreds of thousands more will flee the country by sea."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Vietnam is reunited under a communist government, and Saigon becomes Ho Chi Minh City. The toll is terrible: between one and three million Vietnamese killed, civilians and soldiers."
+        },
+        {
+          "type": "image",
+          "asset": "vietnam_veterans_memorial_wall",
+          "ratio": "1280:853",
+          "caption": "Washington, today. This black granite wall is the memorial to the American soldiers of Vietnam.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Washington, today. This black granite wall is the memorial to the American soldiers of Vietnam."
+            },
+            {
+              "x": 0.08,
+              "y": 0.1,
+              "zoom": 2.7,
+              "text": "**Names carved in the stone.** More than 58,000: every American killed or missing in the war."
+            },
+            {
+              "x": 0.53,
+              "y": 0.44,
+              "zoom": 2.3,
+              "text": "**At the end of the path, the Washington Monument.** The wall points toward it: the defeat is written into the heart of the capital.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.535,
+                    0.455,
+                    0.022,
+                    0.085
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "In the United States, people will long speak of the “Vietnam syndrome”: the fear of getting bogged down again in a distant war that force alone cannot win."
+        },
+        {
+          "type": "question",
+          "kind": "order",
+          "prompt": "Last question. Put the war **back in order**, from earliest to latest.",
+          "items": [
+            "Vietnam is split in two at Geneva",
+            "Gulf of Tonkin incident",
+            "Tet Offensive",
+            "Paris Peace Accords",
+            "Fall of Saigon"
+          ],
+          "labels": [
+            "1954",
+            "1964",
+            "1968",
+            "1973",
+            "1975"
+          ],
+          "explanation": "Twenty-one years separate the division of the country from its reunification."
+        },
+        {
           "type": "takeaway",
-          "text": "After **20 years** of war the United States left Vietnam without a victory: military power checked by politics, the country reunified under communism, and American society divided for decades."
+          "text": "The United States had the firepower. Its opponent refused open battle and never ran out of reinforcements.\nTet, lost on the ground by the North, turned American public opinion.\nTwenty years of war, a country reunited under communism, and an America lastingly wary of distant wars."
         }
       ]
     }

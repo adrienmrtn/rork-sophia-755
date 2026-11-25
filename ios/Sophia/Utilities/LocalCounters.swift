@@ -103,7 +103,15 @@ enum ReadingTime {
             case .timeline(let events):
                 text += " " + events.map { "\($0.date) \($0.title) \($0.detail ?? "")" }.joined(separator: " ")
             case .image(let image):
-                text += " " + (image.caption ?? "")
+                if let stops = image.stops, !stops.isEmpty {
+                    text += " " + stops.map(\.text).joined(separator: " ")
+                } else {
+                    text += " " + (image.caption ?? "")
+                }
+            case .map(let map):
+                text += " " + map.steps.map(\.text).joined(separator: " ")
+            case .question(let question):
+                text += " " + question.prompt
             }
         }
         return text.split(whereSeparator: { $0.isWhitespace || $0.isNewline }).count

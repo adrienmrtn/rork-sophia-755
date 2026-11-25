@@ -18,6 +18,9 @@ struct CourseView: View {
     @State private var revealedCount: Int = 0
     /// Dernière demande de défilement vers un passage révélé.
     @State private var scrollRequest: CourseStepReaderView.ScrollRequest? = nil
+    /// Où en est chaque image guidée ou carte guidée du fil : « Continuer » fait d'abord
+    /// avancer le bloc guidé en cours, puis révèle le passage suivant.
+    @State private var guideState = CourseGuideState()
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     /// Le paquet du cours (texte, quiz, glossaire) : déjà sur le téléphone, en cours de
     /// téléchargement, ou introuvable hors ligne.
@@ -864,6 +867,7 @@ struct CourseView: View {
             // Le texte original entier n'est proposé qu'à qui peut lire le cours entier.
             onShowOriginal: hasFullAccess ? { language in originalLanguage = language } : nil
         )
+        .environment(guideState)
     }
 
     /// Calcule les passages du mode pas à pas et replace la lecture sur la section en cours.
@@ -889,6 +893,16 @@ struct CourseView: View {
     /// Mode pas à pas : révèle le passage suivant, ou termine le cours quand tout est lu.
     private func advanceStep() {
         guard !steps.isEmpty else { return }
+        // Le dernier passage révélé est une image guidée ou une carte qui a encore des
+        // arrêts : le tap la fait avancer, sans rien révéler de plus.
+        if revealedCount > 0, revealedCount <= steps.count {
+            let last = steps[revealedCount - 1]
+            if case .block(let block, _) = last.kind,
+               guideState.advance(last.id, total: block.guideStopCount) {
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                return
+            }
+        }
         guard revealedCount < steps.count else {
             // Cours réservé : la partie gratuite est lue, le « Continuer » de trop ouvre le
             // paywall. Fermé sans achat, on reste sur le dernier passage lu.
@@ -1056,7 +1070,7 @@ struct CourseView: View {
             return t
         case .quote(let t, _):
             return t
-        case .image, .timeline:
+        case .image, .timeline, .map, .question:
             return ""
         }
     }
