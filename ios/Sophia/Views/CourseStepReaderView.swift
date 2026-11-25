@@ -37,7 +37,7 @@ struct ReaderStep: Identifiable {
             return text
         case .quote(let text, _):
             return text
-        case .image, .timeline:
+        case .image, .timeline, .map, .question:
             return ""
         }
     }
@@ -151,6 +151,9 @@ struct CourseStepReaderView: View {
                                 Color.clear.frame(height: 0).id(step.id)
                                 stepView(step)
                             }
+                            // Les blocs guidés (image, carte) avancent avec « Continuer » :
+                            // leur position vit dans `CourseGuideState`, rangée par passage.
+                            .environment(\.courseGuideKey, step.id)
                             .transition(transition(for: step))
                         }
                     }

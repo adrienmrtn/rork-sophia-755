@@ -1351,8 +1351,8 @@
   },
   "course_32_la_guerre_du_vietnam_1955_1975|Rolling Thunder": {
     "displayTerm": "Rolling Thunder",
-    "classification": "evenementConnexe",
-    "explanation": "Massive aerial bombardment campaign conducted by the US Air Force against North Vietnam between 1965 and 1968."
+    "classification": "concept",
+    "explanation": "The American bombing campaign against North Vietnam, from March 1965 to November 1968."
   },
   "course_32_la_guerre_du_vietnam_1955_1975|search and destroy": {
     "displayTerm": "search and destroy",
@@ -2547,7 +2547,7 @@
   "course_67_qu_est_ce_qu_un_trou_noir|Hawking radiation": {
     "displayTerm": "Hawking radiation",
     "classification": "concept",
-    "explanation": "Theoretical thermal radiation emitted by black holes due to quantum effects, leading to their very slow evaporation."
+    "explanation": "A very faint glow that a black hole should give off because of quantum effects at its edge, predicted by Stephen Hawking in 1974."
   },
   "course_67_qu_est_ce_qu_un_trou_noir|Event horizon": {
     "displayTerm": "Event horizon",
@@ -9810,9 +9810,9 @@
     "explanation": "\"Economic miracle\" of West Germany: between 1950 and 1960, its GDP tripled, moving from an economy in ruins to the leading European economic power. Partly funded by the Marshall Plan and favored by the 1948 monetary reform."
   },
   "course_32_la_guerre_du_vietnam_1955_1975|domino theory": {
-    "displayTerm": "domino theory",
+    "displayTerm": "Domino theory",
     "classification": "concept",
-    "explanation": "American foreign politics theory according to which if one country became communist, its neighbors would fall one after another. It justified the commitment in Vietnam to \"stop communist progression in Southeast Asia.\""
+    "explanation": "An idea popular in Washington in the 1950s: if one country turns communist, its neighbors will follow one after another."
   },
   "course_32_la_guerre_du_vietnam_1955_1975|January 1968": {
     "displayTerm": "January 1968",
@@ -10500,9 +10500,9 @@
     "explanation": "Study of the light spectrum to determine the chemical and physical composition of the matter that is emitting or being passed through."
   },
   "course_67_qu_est_ce_qu_un_trou_noir|event horizon": {
-    "displayTerm": "event horizon",
+    "displayTerm": "Event horizon",
     "classification": "concept",
-    "explanation": "The \"boundary\" of a black hole beyond which nothing can return, not even light. It is not a physical surface but a mathematical limit: the speed required to escape exceeds that of light."
+    "explanation": "The boundary around a black hole. Anything that crosses it, light included, can never come back out."
   },
   "course_67_qu_est_ce_qu_un_trou_noir|gravitational singularity": {
     "displayTerm": "gravitational singularity",
@@ -10510,14 +10510,14 @@
     "explanation": "Point at the center of a black hole where density theoretically becomes infinite. The equations of known physics cease to function there - a quantum theory of gravity (not yet developed) would be necessary to describe what happens there."
   },
   "course_67_qu_est_ce_qu_un_trou_noir|accretion disk": {
-    "displayTerm": "accretion disk",
+    "displayTerm": "Accretion disk",
     "classification": "concept",
-    "explanation": "Structure of gas and dust rotating around a massive object (such as a black hole), heated by friction and shining intensely."
+    "explanation": "A ring of gas and dust spinning around a black hole at huge speed. Friction heats it until it glows."
   },
   "course_67_qu_est_ce_qu_un_trou_noir|interferometry": {
-    "displayTerm": "interferometry",
+    "displayTerm": "Interferometry",
     "classification": "concept",
-    "explanation": "Technique consisting of combining signals from several distant telescopes to obtain a resolution equivalent to that of a giant telescope."
+    "explanation": "A technique that combines the signals of several distant telescopes so that they act like one giant telescope."
   },
   "course_68_la_theorie_de_la_relativite_pour_tous|time dilation": {
     "displayTerm": "time dilation",
@@ -15583,5 +15583,70 @@
     "displayTerm": "Hipparchus",
     "classification": "personnage",
     "explanation": "A Greek astronomer of the 2nd century BC, active in Rhodes. He compiled a star catalog, discovered the precession of the equinoxes, and described irregularities in the Moon's motion."
+  },
+  "course_32_la_guerre_du_vietnam_1955_1975|First Indochina War": {
+    "displayTerm": "First Indochina War",
+    "classification": "concept",
+    "explanation": "From 1946 to 1954, France fought to keep its colony of Indochina, made up of Vietnam, Laos and Cambodia. It lost after its defeat at Dien Bien Phu."
+  },
+  "course_32_la_guerre_du_vietnam_1955_1975|Viet Cong": {
+    "displayTerm": "Viet Cong",
+    "classification": "concept",
+    "explanation": "The name their enemies gave to the communist fighters of South Vietnam. They were armed and supported by the North."
+  },
+  "course_32_la_guerre_du_vietnam_1955_1975|Tet": {
+    "displayTerm": "Tet",
+    "classification": "concept",
+    "explanation": "The Vietnamese New Year, the biggest holiday of the year. Both sides usually observed a truce for it."
+  },
+  "course_32_la_guerre_du_vietnam_1955_1975|Vietnamization": {
+    "displayTerm": "Vietnamization",
+    "classification": "concept",
+    "explanation": "President Nixon's policy from 1969: bring American soldiers home step by step and hand the fighting to the South Vietnamese army."
+  },
+  "course_67_qu_est_ce_qu_un_trou_noir|singularity": {
+    "displayTerm": "Singularity",
+    "classification": "concept",
+    "explanation": "The center of a black hole according to theory: a point where matter is crushed to extreme density and our equations stop working."
+  },
+  "course_149_la_joconde|sfumato": {
+    "displayTerm": "Sfumato",
+    "classification": "concept",
+    "explanation": "Italian for “smoky.” A technique Leonardo perfected: dozens of thin, see-through layers of paint, so that shapes melt into each other with no visible line."
+  },
+  "course_149_la_joconde|Louvre": {
+    "displayTerm": "Louvre",
+    "classification": "concept",
+    "explanation": "A former royal palace in Paris, turned into a public museum in 1793, during the French Revolution."
+  },
+  "course_167_icare_et_dedale|Labyrinth": {
+    "displayTerm": "Labyrinth",
+    "classification": "concept",
+    "explanation": "A maze so complex that no one who entered could find the way out. In the myth, Daedalus built it on Crete for King Minos."
+  },
+  "course_167_icare_et_dedale|Minotaur": {
+    "displayTerm": "Minotaur",
+    "classification": "concept",
+    "explanation": "A monster with a man's body and a bull's head, kept at the center of the Labyrinth and fed with human victims."
+  },
+  "course_167_icare_et_dedale|hubris": {
+    "displayTerm": "Hubris",
+    "classification": "concept",
+    "explanation": "A Greek word for the pride that makes a human forget their limits. In Greek stories, it is always punished."
+  },
+  "course_167_icare_et_dedale|Ovid": {
+    "displayTerm": "Ovid",
+    "classification": "concept",
+    "explanation": "A Roman poet. His long poem the Metamorphoses, finished around the year 8, gives the best-known version of this story."
+  },
+  "course_206_le_canal_de_suez_pourquoi_il_est_strateg|nationalize": {
+    "displayTerm": "Nationalize",
+    "classification": "concept",
+    "explanation": "When a state takes over ownership of a company or an asset that belonged to private or foreign owners."
+  },
+  "course_206_le_canal_de_suez_pourquoi_il_est_strateg|chokepoint": {
+    "displayTerm": "Chokepoint",
+    "classification": "concept",
+    "explanation": "A narrow passage that a large share of sea traffic has to go through. Block it, and trade backs up across the world."
   }
 }

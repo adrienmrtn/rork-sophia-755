@@ -18,103 +18,392 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Icarus** and his father **Daedalus** star in one of the best known Greek myths. Beyond the image of a boy dropping into the sea, the story is about ingenuity, limits, and the pull of going too far."
+          "text": "Around 1560, a Flemish painter makes a picture called *Landscape with the Fall of Icarus*. It is one of the most famous paintings of the myth. There is just one problem."
         },
         {
-          "type": "paragraph",
-          "text": "It is the tale of an impossible escape that turns into a lesson about [[Hybris (and excess)]]: try to match the gods and you risk burning."
+          "type": "image",
+          "asset": "bruegel_landscape_fall_of_icarus",
+          "ratio": "1920:1227",
+          "caption": "Where is Icarus? Take a second to look.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Where is Icarus? Take a second to look."
+            },
+            {
+              "x": 0.4,
+              "y": 0.66,
+              "zoom": 2.2,
+              "text": "**A farmer** ploughs his field, eyes on the ground."
+            },
+            {
+              "x": 0.52,
+              "y": 0.58,
+              "zoom": 3,
+              "text": "**A shepherd** leans on his staff and stares at the sky. He is looking the wrong way."
+            },
+            {
+              "x": 0.8,
+              "y": 0.52,
+              "zoom": 2.2,
+              "text": "**A ship** sails on, sails full of wind. It has somewhere to be."
+            },
+            {
+              "x": 0.86,
+              "y": 0.88,
+              "zoom": 3.2,
+              "text": "**And there he is.** Two bare legs, kicking in the green water. The boy who flew is drowning, and nobody has noticed.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.873,
+                    0.925,
+                    0.04,
+                    0.06
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "To understand how he got there, we have to go back to the beginning. It starts with his father."
+            }
+          ]
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p1",
-      "title": "Daedalus, prisoner of his own labyrinth",
+      "title": "The inventor and the maze",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "**Daedalus** was a legendary inventor, the living image of [[Metis]], the cunning intelligence the Greeks admired. Exiled to the court of King **Minos** in Crete, he built the **Labyrinth**, a prison so tangled that nobody ever walked out. It hid the **Minotaur**, a monster born of the forbidden passion of Queen [[Pasiphae]]."
+          "text": "His name is **Daedalus**, and he is the cleverest craftsman in Greece. He works for Minos, king of the island of Crete. For him, he builds the [[Labyrinth]]: a maze to hold a monster, the [[Minotaur]]."
         },
         {
           "type": "image",
-          "asset": "daedalus_labyrinth_crete_minotaur_myth",
-          "ratio": "4:3",
-          "caption": "Daedalus, architect of the Cretan Labyrinth"
+          "asset": "knossos_palace_north_portico",
+          "ratio": "1100:825",
+          "caption": "Knossos, on Crete. This real palace, more than 3,500 years old, had hundreds of rooms on several floors. It may have inspired the legend of the maze."
         },
         {
           "type": "paragraph",
-          "text": "When Minos learned that Daedalus had helped the hero **Theseus** escape with Ariadne's thread, he shut the inventor and his young son **Icarus** inside their own creation. Land and sea were sealed off. Only the sky was left."
+          "text": "Daedalus knows the maze's secret. So when a young hero finds his way out of it, Minos blames the inventor. He locks Daedalus and his son, **Icarus**, inside a tower. The king controls the land and the sea. There is no way off the island."
         },
         {
-          "type": "funFact",
-          "text": "The French word **dédale**, meaning a maze, comes from this character: a place where you lose your way, like the Labyrinth he designed."
-        },
-        {
-          "type": "paragraph",
-          "text": "By watching birds, Daedalus built two pairs of wings out of wood, feathers and **beeswax**. Craft became the way out."
+          "type": "question",
+          "kind": "choice",
+          "prompt": "Minos watches the land and the sea. **What is left?**",
+          "options": [
+            "A tunnel under the palace.",
+            "The sky.",
+            "A disguise."
+          ],
+          "answer": 1,
+          "explanation": "“He may block the land and the sea,” says Daedalus in [[Ovid]]'s poem, “but the sky is open.” He starts collecting feathers."
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p2",
-      "title": "Flying too high, or too low",
+      "title": "Wings of wax",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Before takeoff, Daedalus gave Icarus one simple rule: keep to the middle path. Too low, and the damp air would weigh the feathers down. Too high, and the sun would melt the wax. That caution is close to [[Sophia]], the wisdom of knowing your place."
-        },
-        {
-          "type": "paragraph",
-          "text": "At first all went well. Father and son flew over the islands of the Aegean. Shepherds below thought they were seeing gods. Then Icarus grew drunk on the flight. He climbed, spellbound by the sky. The wax softened. The feathers came loose. He beat bare arms and dropped into the sea."
+          "text": "He lays the feathers in a row, from the shortest to the longest. He ties the middle with thread and fixes the base with wax. Then he bends the whole thing into a gentle curve, like a real bird's wing."
         },
         {
           "type": "image",
-          "asset": "icarus_falling_sun_bruegel_painting",
-          "ratio": "4:3",
-          "caption": "The fall of Icarus, a subject for painters since the Renaissance"
+          "asset": "landon_daedalus_and_icarus",
+          "ratio": "1000:1135",
+          "caption": "The take-off, painted in 1799. Daedalus gives his son a last push. Icarus is already looking at the sky, not at his father."
         },
         {
-          "type": "funFact",
-          "text": "The myth is a scientific paradox: the higher you climb, the colder it gets. Icarus should have frozen rather than watched his wax melt."
+          "type": "paragraph",
+          "text": "Before they leave, the father gives the son one rule. “Fly in the middle. Too low, and the sea spray will weigh down your feathers. Too high, and the sun will melt the wax.”"
+        },
+        {
+          "type": "question",
+          "kind": "truefalse",
+          "prompt": "Daedalus only warns his son about flying **too high**.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer": 1,
+          "explanation": "He warns against both. Too low is as dangerous as too high. People remember the sun and forget the sea, but the lesson was about staying in between."
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p3",
-      "title": "Pride, ideal, or a forgotten detail?",
+      "title": "The fall",
       "free": false,
       "blocks": [
         {
-          "type": "paragraph",
-          "text": "The ancients saw a punishment for pride above all: Icarus paid for wanting too much. The Romantics, **Baudelaire** among them, turned him into a hero of the ideal instead: better to die looking at the sun than to live a careful life on the ground."
+          "type": "map",
+          "map": "map_aegean",
+          "ratio": "3:2",
+          "text": "They jump from Crete and head north, over the open sea. Fishermen and shepherds look up and take them for gods. Icarus is thrilled. He forgets the rule and climbs, higher and higher. The sun softens the wax. The feathers come loose. He falls here. The Greeks named the place after him. The island is still called Icaria, and the water around it the Icarian Sea. Daedalus buries his son and flies on alone, all the way to Sicily. He never uses his wings again.",
+          "labels": [
+            {
+              "id": "athens",
+              "lon": 23.73,
+              "lat": 37.98,
+              "text": "Athens",
+              "style": "city"
+            },
+            {
+              "id": "knossos",
+              "lon": 25.16,
+              "lat": 35.3,
+              "text": "Knossos",
+              "style": "city"
+            },
+            {
+              "id": "icaria",
+              "lon": 26.15,
+              "lat": 37.6,
+              "text": "Icaria",
+              "style": "city"
+            },
+            {
+              "id": "sicily",
+              "lon": 14.2,
+              "lat": 37.6,
+              "text": "Sicily",
+              "style": "plain"
+            },
+            {
+              "id": "crete",
+              "lon": 24.6,
+              "lat": 34.65,
+              "text": "Crete",
+              "style": "sea"
+            },
+            {
+              "id": "sea",
+              "lon": 26.6,
+              "lat": 36.9,
+              "text": "Icarian Sea",
+              "style": "sea"
+            },
+            {
+              "id": "greece",
+              "lon": 21.9,
+              "lat": 39.4,
+              "text": "Greece",
+              "style": "plain"
+            }
+          ],
+          "routes": [
+            {
+              "id": "r1",
+              "style": "accent",
+              "points": [
+                [
+                  25.16,
+                  35.3
+                ],
+                [
+                  25.5,
+                  36.2
+                ],
+                [
+                  25.9,
+                  37
+                ],
+                [
+                  26.05,
+                  37.45
+                ]
+              ]
+            },
+            {
+              "id": "r2",
+              "style": "alt",
+              "points": [
+                [
+                  26.05,
+                  37.45
+                ],
+                [
+                  24,
+                  36.9
+                ],
+                [
+                  21,
+                  36.4
+                ],
+                [
+                  17.5,
+                  36.8
+                ],
+                [
+                  14.6,
+                  37.3
+                ]
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "view": [
+                22,
+                37.3,
+                8.6
+              ],
+              "show": [
+                "knossos",
+                "crete",
+                "greece",
+                "athens"
+              ],
+              "text": "They jump from **Crete** and head north, over the open sea. Fishermen and shepherds look up and take them for gods."
+            },
+            {
+              "view": [
+                25.4,
+                36.5,
+                4.2
+              ],
+              "show": [
+                "knossos",
+                "icaria",
+                "sea",
+                "r1"
+              ],
+              "text": "Icarus is thrilled. He forgets the rule and climbs, higher and higher. The sun softens the wax. The feathers come loose. He falls **here**."
+            },
+            {
+              "view": [
+                25.4,
+                36.5,
+                4.2
+              ],
+              "show": [
+                "icaria",
+                "sea",
+                "r1"
+              ],
+              "text": "The Greeks named the place after him. The island is still called **Icaria**, and the water around it the Icarian Sea."
+            },
+            {
+              "view": [
+                20.5,
+                37.3,
+                8.6
+              ],
+              "show": [
+                "icaria",
+                "sicily",
+                "knossos",
+                "r1",
+                "r2"
+              ],
+              "text": "Daedalus buries his son and flies on alone, all the way to **Sicily**. He never uses his wings again."
+            }
+          ]
         },
         {
-          "type": "paragraph",
-          "text": "The painter **Pieter Bruegel the Elder** offered another reading. In his picture the fall is only a detail: the plowman keeps working, and the world does not stop for a hero. The great individual feat becomes almost invisible."
+          "type": "image",
+          "asset": "gowy_fall_of_icarus_prado",
+          "ratio": "1280:1384",
+          "caption": "A painter from the 1600s chooses the exact second it goes wrong.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "A painter from the 1600s chooses the exact second it goes wrong."
+            },
+            {
+              "x": 0.68,
+              "y": 0.42,
+              "zoom": 1.8,
+              "text": "**Icarus** tumbles backward, arms open. Around his shoulders, the wings are coming apart."
+            },
+            {
+              "x": 0.22,
+              "y": 0.3,
+              "zoom": 1.9,
+              "text": "**Daedalus** turns his head. His own wings still hold. He can see everything, and do nothing."
+            }
+          ]
         },
         {
-          "type": "funFact",
-          "text": "Some versions add that Daedalus read his son's death as a punishment too: long before, out of jealousy, he had killed his nephew **Perdix**, a rival inventor with too much talent."
+          "type": "question",
+          "kind": "truefalse",
+          "prompt": "In the myth, Daedalus **dies** in the fall too.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer": 1,
+          "explanation": "He survives, and that is the cruel part. The inventor's creation works perfectly. It is his own son who pays for it."
         }
       ]
     },
     {
       "id": "course_167_icare_et_dedale_p4",
-      "title": "A sea, an island, a lesson",
+      "title": "What the story means",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The currents carried the body of Icarus to an island that the hero **Heracles** named [[Ikaria]]. The water around it became the **Icarian Sea**. Daedalus reached Sicily alone and offered his wings to the god **Apollo**, swearing never to fly again."
+          "text": "For the Greeks, the lesson is clear. Icarus is guilty of [[hubris]]: he wanted to rise as high as the gods. The story warns young people to listen, and everyone to know their limits."
         },
         {
           "type": "paragraph",
-          "text": "The myth survives everywhere: in aviation as both dream and risk, in psychology as the “Icarus complex”, the urge to succeed too fast. Daedalus remains the ambiguous inventor, capable of the best (the wings) and of the worst. [[The labyrinth as a symbol]] reminds us that technology can lock us in as easily as it sets us free."
+          "text": "Later centuries read it differently. For many poets and painters, Icarus becomes a hero: the one who dared, and who touched the sun before he fell."
+        },
+        {
+          "type": "image",
+          "asset": "draper_lament_for_icarus",
+          "ratio": "1100:1128",
+          "caption": "In 1898, the fallen boy has become a hero. His wings are whole and magnificent, and sea nymphs weep over him."
+        },
+        {
+          "type": "question",
+          "kind": "choice",
+          "prompt": "Back to the first painting. What is **Bruegel** telling us by hiding Icarus in a corner?",
+          "options": [
+            "That he did not know how to paint people.",
+            "That the world carries on, even when someone falls.",
+            "That Icarus deserved what happened to him."
+          ],
+          "answer": 1,
+          "explanation": "The farmer ploughs, the ship sails, the sun shines. A Flemish proverb says: “No plough stops for a dying man.” It is one of the hardest readings of the myth."
+        },
+        {
+          "type": "question",
+          "kind": "order",
+          "prompt": "Last question. Put the story **in order**.",
+          "items": [
+            "Daedalus builds the Labyrinth for Minos",
+            "Minos locks him up with his son",
+            "Daedalus makes wings from feathers and wax",
+            "Icarus flies too close to the sun",
+            "Daedalus lands alone in Sicily"
+          ],
+          "labels": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "explanation": "A maze, a prison, an escape, a fall. The story has been retold for more than two thousand years."
         },
         {
           "type": "takeaway",
-          "text": "**Daedalus** escaped Crete on wings of wax. **Icarus** ignored the warning, flew too close to the sun, and drowned. Technology frees us, but without measure it kills."
+          "text": "Daedalus, a brilliant inventor, escapes from Crete with his son on wings of feathers and wax.\nHis rule was to fly in the middle: not too low, not too high. Icarus climbs, the wax melts, and he drowns.\nThe Greeks saw a warning against pride. Later artists saw a hero who dared."
         }
       ]
     }

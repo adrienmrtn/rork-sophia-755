@@ -18,40 +18,188 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A black hole is a region of **spacetime**, the fabric that ties space and time together, where gravity is so intense that the speed needed to escape is greater than the speed of light. Nothing leaves it: no matter, no light."
+          "text": "For a century, black holes were only equations on paper. Then, in April 2019, astronomers showed the world a picture."
         },
         {
-          "type": "paragraph",
-          "text": "It is not a “hole” in the sense of a tunnel. It is an extreme concentration of matter that bends that fabric very hard. For a long time black holes were pure theory, a result of Einstein's equations. Today they are observed in several ways."
+          "type": "image",
+          "asset": "m87_black_hole_first_image_eht",
+          "ratio": "1280:1280",
+          "caption": "Here it is: the first image of a black hole.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Here it is: the first image of a black hole."
+            },
+            {
+              "x": 0.5,
+              "y": 0.48,
+              "zoom": 1.9,
+              "text": "**The dark center.** This is the black hole's shadow. No light comes out of here. It is wider than our entire solar system.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.497,
+                    0.47,
+                    0.068,
+                    0.068
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.49,
+              "zoom": 1.9,
+              "text": "**The glowing ring.** Gas heated to billions of degrees, whirling around the hole at close to the speed of light.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.5,
+                    0.49,
+                    0.185,
+                    0.185
+                  ]
+                },
+                {
+                  "ellipse": [
+                    0.497,
+                    0.47,
+                    0.06,
+                    0.06
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.56,
+              "zoom": 1.9,
+              "text": "**The bottom is brighter.** That part of the gas is rushing toward us, which makes its light look stronger.",
+              "outline": [
+                {
+                  "polygon": [
+                    [
+                      0.335,
+                      0.52
+                    ],
+                    [
+                      0.395,
+                      0.615
+                    ],
+                    [
+                      0.5,
+                      0.66
+                    ],
+                    [
+                      0.605,
+                      0.625
+                    ],
+                    [
+                      0.665,
+                      0.53
+                    ],
+                    [
+                      0.585,
+                      0.545
+                    ],
+                    [
+                      0.5,
+                      0.565
+                    ],
+                    [
+                      0.415,
+                      0.55
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "A shadow, a ring, a bright side. The rest of this course explains each of them."
+            }
+          ]
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p1",
-      "title": "When a star collapses",
+      "title": "A star that loses its fight",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "A stellar black hole is usually born from the death of a very massive star, at least **20 to 25 times** the mass of the Sun. While it lives, the star holds together through a balance: gravity pulls inward, and the pressure of **nuclear fusion** pushes outward. In the core of the star, hydrogen turns into helium."
+          "text": "A star spends its life in a tug of war. Gravity pulls everything inward. The heat of nuclear fusion in its core pushes outward. As long as there is fuel, the two cancel out."
+        },
+        {
+          "type": "paragraph",
+          "text": "When a very heavy star, at least 20 times the mass of the Sun, runs out of fuel, the push stops. The core caves in within seconds, and the outer layers are blown away in a **supernova**."
         },
         {
           "type": "image",
-          "asset": "black_hole_accretion_disk_galaxy",
-          "ratio": "auto",
-          "caption": "A black hole ringed by its glowing accretion disk"
+          "asset": "crab_nebula_hubble",
+          "ratio": "1280:1280",
+          "caption": "This is the Crab Nebula: the wreck of a star that Chinese astronomers watched explode in the year 1054.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "This is the Crab Nebula: the wreck of a star that Chinese astronomers watched explode in the year 1054."
+            },
+            {
+              "x": 0.5,
+              "y": 0.53,
+              "zoom": 1,
+              "text": "**The glowing shreds** are the star's outer layers. Almost a thousand years later, they are still flying outward at about 1,500 km per second."
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "zoom": 2.6,
+              "text": "**At the center, the crushed core.** Here it became a neutron star: a ball about 20 km wide, heavier than the Sun.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.5,
+                    0.52,
+                    0.055,
+                    0.055
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Had the star been heavier, nothing could have stopped the collapse. The core would have become a black hole."
+            }
+          ]
         },
         {
           "type": "paragraph",
-          "text": "When the fuel runs out, the pressure collapses. The core of the star caves in. A **supernova** explosion can then light up the whole galaxy. If the leftover core is massive enough, nothing can stop the compression."
-        },
-        {
-          "type": "paragraph",
-          "text": "At the center, theory describes a [[gravitational singularity]]: a point where density and curvature become extreme, and where our current equations stop working properly. Around it lies the [[event horizon]]: an invisible boundary. Cross it and there is no way back to the rest of the universe."
+          "text": "In that case, theory says the matter is crushed into a [[singularity]]. Around it lies the [[event horizon]]: an invisible border. Cross it, and there is no way back."
         },
         {
           "type": "funFact",
-          "text": "If you fell toward a black hole, gravity would pull far harder on your feet than on your head. Physicists call that stretching “spaghettification.”"
+          "text": "If you fell feet first toward a small black hole, gravity would pull far harder on your feet than on your head. Physicists have a serious name for what happens next: “spaghettification.”"
+        },
+        {
+          "type": "question",
+          "kind": "choice",
+          "prompt": "What is the **event horizon**?",
+          "options": [
+            "A solid surface, like the crust of a planet.",
+            "The bright ring of gas we see in the picture.",
+            "The border past which nothing can come back."
+          ],
+          "answer": 2,
+          "explanation": "It is not a surface you could stand on. It is a point of no return: inside it, even light cannot escape."
         }
       ]
     },
@@ -61,58 +209,487 @@
       "free": false,
       "blocks": [
         {
-          "type": "paragraph",
-          "text": "Despite the cliché, a black hole does not suck in everything that passes at a distance. Its gravity depends on its mass and on distance, just like any other object. If the Sun were swapped for a black hole of the same mass, the Earth would keep orbiting. Without light or heat, though, we would freeze."
+          "type": "question",
+          "kind": "truefalse",
+          "prompt": "If the Sun were swapped for a black hole of the **same mass**, Earth would be sucked in.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer": 1,
+          "explanation": "Earth would keep circling exactly as before. A black hole's pull depends on its mass and on distance, like any other object. We would just freeze in the dark."
         },
         {
           "type": "paragraph",
-          "text": "There are also **supermassive black holes**, from millions to billions of solar masses, at the heart of almost every galaxy. In the Milky Way it is **Sagittarius A***, about **4 million** solar masses."
+          "text": "Black holes only swallow what comes very close. Some, though, are giants. At the heart of almost every galaxy sits a **supermassive** black hole, millions or billions of times heavier than the Sun."
+        },
+        {
+          "type": "image",
+          "asset": "m87_galaxy_jet_hubble",
+          "ratio": "1222:1276",
+          "caption": "This is the galaxy M87, seen by the Hubble Space Telescope. Two things stand out.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "This is the galaxy M87, seen by the Hubble Space Telescope. Two things stand out."
+            },
+            {
+              "x": 0.2,
+              "y": 0.2,
+              "zoom": 2,
+              "text": "**The bright core.** Hidden inside is a black hole 6.5 billion times heavier than the Sun. It is the one in the famous picture."
+            },
+            {
+              "x": 0.45,
+              "y": 0.44,
+              "zoom": 1.5,
+              "text": "**The blue streak** is a jet of matter 5,000 light-years long, fired out at nearly the speed of light.",
+              "outline": [
+                {
+                  "polygon": [
+                    [
+                      0.205,
+                      0.215
+                    ],
+                    [
+                      0.31,
+                      0.26
+                    ],
+                    [
+                      0.47,
+                      0.415
+                    ],
+                    [
+                      0.61,
+                      0.515
+                    ],
+                    [
+                      0.705,
+                      0.635
+                    ],
+                    [
+                      0.665,
+                      0.7
+                    ],
+                    [
+                      0.555,
+                      0.605
+                    ],
+                    [
+                      0.41,
+                      0.475
+                    ],
+                    [
+                      0.265,
+                      0.335
+                    ],
+                    [
+                      0.185,
+                      0.255
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "The black hole itself stays invisible. What gives it away is everything around it."
+            }
+          ]
         },
         {
           "type": "paragraph",
-          "text": "We often spot them thanks to the [[accretion disk]]: a ring of gas and dust whirling around them at huge speed. Friction heats that matter until it shines fiercely in X-rays or radio waves. The black hole then shows up as a shadow against that bright background."
+          "text": "Gas falling toward a black hole does not drop straight in. It spirals, forming an [[accretion disk]]. Friction heats it until it shines. So to photograph something black, you photograph its glowing surroundings."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p3",
-      "title": "2019: the first image",
+      "title": "A telescope the size of Earth",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **April 2019**, the Event Horizon Telescope project released the first image of a black hole. By combining eight radio telescopes through [[interferometry]], the researchers built a virtual telescope the size of the Earth."
+          "text": "There is a catch. Seen from Earth, the black hole of M87 looks as small as an orange on the Moon. To see a detail that fine, you would need a telescope as wide as the planet."
         },
         {
-          "type": "paragraph",
-          "text": "The target was **M87***, the supermassive black hole of the galaxy Messier 87, **55 million** light-years away. The image shows a bright ring around a dark zone: the silhouette of the event horizon. In **2022**, an image of our own neighbor Sagittarius A* followed."
+          "type": "map",
+          "map": "map_world",
+          "ratio": "3:2",
+          "text": "Nobody can build that. So in April 2017, astronomers try a trick: link telescopes that are thousands of kilometers apart. Chile. At 5,000 m in the Atacama desert, two observatories, including ALMA and its 66 dishes. Hawaii, Arizona, Mexico. Each site records the same patch of sky at the same instant, timed by atomic clocks. Spain, on a peak of the Sierra Nevada. Add a station at the South Pole, off this map, and you get eight telescopes on six sites. Combined by interferometry, they act like a single dish almost as wide as Earth: the Event Horizon Telescope.",
+          "labels": [
+            {
+              "id": "alma",
+              "lon": -67.75,
+              "lat": -23.02,
+              "text": "Chile",
+              "style": "city"
+            },
+            {
+              "id": "hawaii",
+              "lon": -155.47,
+              "lat": 19.82,
+              "text": "Hawaii",
+              "style": "city"
+            },
+            {
+              "id": "arizona",
+              "lon": -109.89,
+              "lat": 32.7,
+              "text": "Arizona",
+              "style": "city"
+            },
+            {
+              "id": "mexico",
+              "lon": -97.31,
+              "lat": 18.99,
+              "text": "Mexico",
+              "style": "city"
+            },
+            {
+              "id": "spain",
+              "lon": -3.39,
+              "lat": 37.07,
+              "text": "Spain",
+              "style": "city"
+            }
+          ],
+          "routes": [
+            {
+              "id": "link0",
+              "style": "gold",
+              "points": [
+                [
+                  -67.75,
+                  -23.02
+                ],
+                [
+                  -155.47,
+                  19.82
+                ]
+              ]
+            },
+            {
+              "id": "link1",
+              "style": "gold",
+              "points": [
+                [
+                  -155.47,
+                  19.82
+                ],
+                [
+                  -109.89,
+                  32.7
+                ]
+              ]
+            },
+            {
+              "id": "link2",
+              "style": "gold",
+              "points": [
+                [
+                  -109.89,
+                  32.7
+                ],
+                [
+                  -3.39,
+                  37.07
+                ]
+              ]
+            },
+            {
+              "id": "link3",
+              "style": "gold",
+              "points": [
+                [
+                  -3.39,
+                  37.07
+                ],
+                [
+                  -67.75,
+                  -23.02
+                ]
+              ]
+            },
+            {
+              "id": "link4",
+              "style": "gold",
+              "points": [
+                [
+                  -97.31,
+                  18.99
+                ],
+                [
+                  -3.39,
+                  37.07
+                ]
+              ]
+            },
+            {
+              "id": "link5",
+              "style": "gold",
+              "points": [
+                [
+                  -97.31,
+                  18.99
+                ],
+                [
+                  -67.75,
+                  -23.02
+                ]
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "view": [
+                -70,
+                8,
+                130
+              ],
+              "show": [],
+              "text": "Nobody can build that. So in **April 2017**, astronomers try a trick: link telescopes that are thousands of kilometers apart."
+            },
+            {
+              "view": [
+                -68,
+                -23,
+                45
+              ],
+              "show": [
+                "alma"
+              ],
+              "text": "**Chile.** At 5,000 m in the Atacama desert, two observatories, including ALMA and its 66 dishes."
+            },
+            {
+              "view": [
+                -125,
+                24,
+                55
+              ],
+              "show": [
+                "hawaii",
+                "arizona",
+                "mexico"
+              ],
+              "text": "**Hawaii, Arizona, Mexico.** Each site records the same patch of sky at the same instant, timed by atomic clocks."
+            },
+            {
+              "view": [
+                -3,
+                38,
+                35
+              ],
+              "show": [
+                "spain"
+              ],
+              "text": "**Spain**, on a peak of the Sierra Nevada."
+            },
+            {
+              "view": [
+                -70,
+                8,
+                130
+              ],
+              "show": [
+                "alma",
+                "hawaii",
+                "arizona",
+                "mexico",
+                "spain",
+                "link0",
+                "link1",
+                "link2",
+                "link3",
+                "link4",
+                "link5"
+              ],
+              "text": "Add a station at the South Pole, off this map, and you get eight telescopes on six sites. Combined by [[interferometry]], they act like a single dish almost as wide as Earth: the Event Horizon Telescope."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "asset": "alma_antennas_chajnantor_night",
+          "ratio": "1280:862",
+          "caption": "This is what one of those sites looks like: ALMA, in Chile, at night.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "This is what one of those sites looks like: ALMA, in Chile, at night."
+            },
+            {
+              "x": 0.33,
+              "y": 0.48,
+              "zoom": 1.6,
+              "text": "**One dish.** It is 12 m wide and does not collect visible light. It listens to radio waves, which pass through the dust that hides the black hole."
+            },
+            {
+              "x": 0.72,
+              "y": 0.82,
+              "zoom": 1.7,
+              "text": "**And many more.** Working together, the dishes of one site already act as one big telescope. The same trick is then repeated across the whole planet."
+            }
+          ]
         },
         {
           "type": "funFact",
-          "text": "Since **2015**, the LIGO and Virgo observatories have also been detecting **gravitational waves**: tiny vibrations of spacetime produced when two black holes merge."
+          "text": "The observation produced about 5 petabytes of data: too much to send over the internet. Half a ton of hard drives was flown to the labs by plane. The drives from the South Pole had to wait months for the polar winter to end."
+        },
+        {
+          "type": "question",
+          "kind": "truefalse",
+          "prompt": "The orange color in the picture is the **real color** of the black hole's ring.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer": 1,
+          "explanation": "The telescopes recorded radio waves, which our eyes cannot see. Orange was chosen to show brightness: the brighter the signal, the lighter the color."
         }
       ]
     },
     {
       "id": "course_67_qu_est_ce_qu_un_trou_noir_p4",
-      "title": "Hawking and the slow evaporation",
+      "title": "Reading the picture",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In **1974**, the British physicist **Stephen Hawking** showed that a black hole would not be entirely black. Because of quantum effects near the horizon, it should give off a very faint glow: [[Hawking radiation]]."
+          "text": "Four nights of observation, then two years of computing by more than 200 researchers. The result matches what Albert Einstein's theory of gravity, published in **1915**, predicted for the shape and size of the shadow."
+        },
+        {
+          "type": "image",
+          "asset": "einstein_portrait_1921",
+          "ratio": "900:910",
+          "caption": "Albert Einstein in 1921. He doubted that black holes could really exist. His own equations said otherwise."
+        },
+        {
+          "type": "question",
+          "kind": "choice",
+          "prompt": "In the picture, what is the **orange ring** made of?",
+          "options": [
+            "Hot gas circling just outside the black hole.",
+            "The surface of the black hole itself.",
+            "Light escaping from inside the black hole."
+          ],
+          "answer": 0,
+          "explanation": "Nothing escapes from inside. The ring is gas outside the event horizon, heated until it glows, with its light bent around the hole by gravity."
         },
         {
           "type": "paragraph",
-          "text": "So a black hole left on its own would slowly lose mass and eventually evaporate. For a stellar black hole that would take spans of time fantastically longer than the current age of the universe. The idea also raises the information paradox: what becomes of the information about everything that fell in, if the black hole disappears?"
+          "text": "In **2022**, the same team released a second picture. This time, the target was much closer to home: Sagittarius A*, the black hole at the center of our own galaxy, the Milky Way."
+        },
+        {
+          "type": "image",
+          "asset": "sagittarius_a_star_black_hole_eht",
+          "ratio": "1280:1280",
+          "caption": "Sagittarius A, 27,000 light-years away. It looks a lot like the first one.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Sagittarius A*, 27,000 light-years away. It looks a lot like the first one."
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1.5,
+              "text": "**The same dark shadow.** This black hole is about 1,600 times lighter than the one in M87, but 2,000 times closer. In our sky, the two rings look almost the same size.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.485,
+                    0.49,
+                    0.09,
+                    0.09
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1.3,
+              "text": "**Three bright knots.** The gas here circles the hole in minutes, so the picture kept changing while it was being taken. These spots are partly an effect of that blur.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.59,
+                    0.375,
+                    0.085,
+                    0.075
+                  ]
+                },
+                {
+                  "ellipse": [
+                    0.6,
+                    0.665,
+                    0.085,
+                    0.075
+                  ]
+                },
+                {
+                  "ellipse": [
+                    0.3,
+                    0.46,
+                    0.075,
+                    0.09
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_67_qu_est_ce_qu_un_trou_noir_p5",
+      "title": "Not entirely black",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **1974**, the British physicist Stephen Hawking showed that black holes should not be completely black. Because of quantum effects at the horizon, they should give off a very faint glow: [[Hawking radiation]]."
         },
         {
           "type": "paragraph",
-          "text": "Close to a black hole, time also runs more slowly as seen by a distant observer, a relativistic effect called **time dilation**. These objects remain among the best laboratories we have for testing the limits of physics."
+          "text": "A black hole left alone would therefore slowly lose mass and, in the end, evaporate. For a real one, that would take unimaginably longer than the current age of the universe."
+        },
+        {
+          "type": "paragraph",
+          "text": "There is now a second way to detect them. Since **2015**, detectors have picked up gravitational waves: tiny ripples in space sent out when two black holes collide."
+        },
+        {
+          "type": "question",
+          "kind": "order",
+          "prompt": "Last question. Put a century of black hole science **in order**.",
+          "items": [
+            "Einstein publishes his theory of gravity",
+            "Hawking predicts that black holes glow faintly",
+            "First gravitational waves detected",
+            "First picture of a black hole, in M87",
+            "Picture of the black hole at the center of the Milky Way"
+          ],
+          "labels": [
+            "1915",
+            "1974",
+            "2015",
+            "2019",
+            "2022"
+          ],
+          "explanation": "From a prediction on paper to a photograph: just over a hundred years."
         },
         {
           "type": "takeaway",
-          "text": "A black hole often forms when a massive star collapses. Its edge is the event horizon, a boundary photographed for the first time in **2019** around M87*."
+          "text": "A black hole is a region where gravity is so strong that nothing, not even light, can escape past the event horizon.\nWe cannot see the hole itself. We see the hot gas around it and the shadow it casts.\nThe first picture, in 2019, needed eight telescopes working as one, as wide as Earth."
         }
       ]
     }

@@ -18,103 +18,745 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The **Suez Canal**, in Egypt, is one of the most strategic crossing points on the planet. By linking the Mediterranean to the Red Sea, it spares ships the long trip around Africa by the **Cape of Good Hope**, cutting nearly 7,000 kilometers off the route between Europe and Asia."
+          "text": "On the morning of **March 23, 2021**, a sandstorm blows across northern Egypt. A giant container ship loses its heading. The photo below is taken four days later, from the International Space Station."
+        },
+        {
+          "type": "image",
+          "asset": "ever_given_suez_canal_iss_2021",
+          "ratio": "1280:886",
+          "caption": "Fields on the left, desert on the right. The blue strip in the middle is the Suez Canal.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Fields on the left, desert on the right. The blue strip in the middle is the Suez Canal."
+            },
+            {
+              "x": 0.5,
+              "y": 0.48,
+              "zoom": 2.6,
+              "text": "**The ship.** It is called the *Ever Given*. It is 400 m long, as long as the Empire State Building is tall. The canal here is about 300 m wide."
+            },
+            {
+              "x": 0.53,
+              "y": 0.4,
+              "zoom": 3.4,
+              "text": "**The bow.** It has dug itself into the eastern bank. The stern is aground on the other side. Nothing can get past.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.572,
+                    0.345,
+                    0.035,
+                    0.045
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "For six days, one of the busiest waterways in the world is shut by a single ship."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "asset": "suez_ship_jam_radar_2021",
+          "ratio": "1280:761",
+          "caption": "Two radar images of the canal's southern entrance, four days apart. Every bright dot on the water is a ship.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Two radar images of the canal's southern entrance, four days apart. Every bright dot on the water is a ship."
+            },
+            {
+              "x": 0.25,
+              "y": 0.62,
+              "zoom": 2,
+              "text": "**March 21.** A normal day. A few dozen ships wait their turn."
+            },
+            {
+              "x": 0.76,
+              "y": 0.62,
+              "zoom": 2,
+              "text": "**March 25.** The dots multiply. In the end about 400 ships are stuck, carrying oil, cars, furniture, even live animals."
+            }
+          ]
         },
         {
           "type": "paragraph",
-          "text": "Beyond its economic role, the canal is a reliable barometer of world power. From its colonial construction to its nationalization by Egypt in 1956, and on to the maritime tensions of today, it remains a major question of sovereignty."
+          "text": "Each day of blockage holds up goods worth more than 9 billion dollars. How did the world come to depend on a strip of water this narrow?"
         }
       ]
     },
     {
       "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_p1",
-      "title": "The colonial era: a bridge to empire",
+      "title": "The shortcut",
       "free": false,
       "blocks": [
         {
-          "type": "paragraph",
-          "text": "The cut through the Isthmus of Suez was led by the French engineer Ferdinand de Lesseps. Between 1859 and 1869, thousands of Egyptian laborers dug this 193-kilometer waterway."
+          "type": "map",
+          "map": "map_world",
+          "ratio": "3:2",
+          "text": "A container leaves Asia for Europe. There are two ways to get there by sea. The long way: all around Africa, past the Cape of Good Hope. For centuries, it was the only one. The shortcut: through Egypt. It saves about 7,000 km and more than a week at sea. The canal is 193 km of water dug through the desert, between the Mediterranean and the Red Sea. It has no locks: both seas are at the same level.",
+          "labels": [
+            {
+              "id": "singapore",
+              "lon": 103.8,
+              "lat": 1.3,
+              "text": "Singapore",
+              "style": "city"
+            },
+            {
+              "id": "rotterdam",
+              "lon": 4,
+              "lat": 52,
+              "text": "Rotterdam",
+              "style": "city"
+            },
+            {
+              "id": "suez",
+              "lon": 32.5,
+              "lat": 30.5,
+              "text": "Suez Canal",
+              "style": "tag"
+            },
+            {
+              "id": "cape",
+              "lon": 18.5,
+              "lat": -34.4,
+              "text": "Cape of Good Hope",
+              "style": "city"
+            },
+            {
+              "id": "med",
+              "lon": 20,
+              "lat": 34.5,
+              "text": "Mediterranean",
+              "style": "sea"
+            },
+            {
+              "id": "red",
+              "lon": 37.5,
+              "lat": 22.5,
+              "text": "Red Sea",
+              "style": "sea"
+            },
+            {
+              "id": "egypt",
+              "lon": 29.3,
+              "lat": 26.8,
+              "text": "Egypt",
+              "style": "plain"
+            },
+            {
+              "id": "bab",
+              "lon": 43.4,
+              "lat": 12.5,
+              "text": "Bab el-Mandeb",
+              "style": "city"
+            }
+          ],
+          "routes": [
+            {
+              "id": "r2",
+              "style": "alt",
+              "points": [
+                [
+                  103.8,
+                  1.3
+                ],
+                [
+                  98,
+                  5.8
+                ],
+                [
+                  95,
+                  6
+                ],
+                [
+                  80,
+                  1
+                ],
+                [
+                  57,
+                  -20
+                ],
+                [
+                  42,
+                  -30
+                ],
+                [
+                  20,
+                  -36.5
+                ],
+                [
+                  10,
+                  -26
+                ],
+                [
+                  -12,
+                  -2
+                ],
+                [
+                  -19,
+                  15
+                ],
+                [
+                  -13,
+                  35
+                ],
+                [
+                  -10,
+                  44
+                ],
+                [
+                  -5.5,
+                  48.6
+                ],
+                [
+                  1.5,
+                  50.8
+                ],
+                [
+                  4,
+                  52
+                ]
+              ]
+            },
+            {
+              "id": "r1",
+              "style": "accent",
+              "points": [
+                [
+                  103.8,
+                  1.3
+                ],
+                [
+                  98,
+                  5.8
+                ],
+                [
+                  95,
+                  6
+                ],
+                [
+                  80.5,
+                  5.5
+                ],
+                [
+                  60,
+                  12
+                ],
+                [
+                  51.5,
+                  12.6
+                ],
+                [
+                  43.4,
+                  12.5
+                ],
+                [
+                  39,
+                  19.5
+                ],
+                [
+                  34.2,
+                  27
+                ],
+                [
+                  33.3,
+                  28.4
+                ],
+                [
+                  32.55,
+                  29.95
+                ],
+                [
+                  32.3,
+                  31.3
+                ],
+                [
+                  25,
+                  34.2
+                ],
+                [
+                  11.5,
+                  37.6
+                ],
+                [
+                  -5.6,
+                  36
+                ],
+                [
+                  -10,
+                  37
+                ],
+                [
+                  -10,
+                  44
+                ],
+                [
+                  -5.5,
+                  48.6
+                ],
+                [
+                  1.5,
+                  50.8
+                ],
+                [
+                  4,
+                  52
+                ]
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "view": [
+                60,
+                20,
+                92
+              ],
+              "show": [
+                "singapore",
+                "rotterdam"
+              ],
+              "text": "A container leaves **Asia** for **Europe**. There are two ways to get there by sea."
+            },
+            {
+              "view": [
+                52,
+                6,
+                118
+              ],
+              "show": [
+                "singapore",
+                "rotterdam",
+                "cape",
+                "r2"
+              ],
+              "text": "**The long way**: all around Africa, past the Cape of Good Hope. For centuries, it was the only one."
+            },
+            {
+              "view": [
+                52,
+                6,
+                118
+              ],
+              "show": [
+                "singapore",
+                "rotterdam",
+                "cape",
+                "suez",
+                "r1",
+                "r2"
+              ],
+              "text": "**The shortcut**: through Egypt. It saves about 7,000 km and more than a week at sea."
+            },
+            {
+              "view": [
+                33,
+                28.5,
+                13
+              ],
+              "show": [
+                "suez",
+                "med",
+                "red",
+                "egypt",
+                "r1"
+              ],
+              "text": "The canal is 193 km of water dug through the desert, between the Mediterranean and the Red Sea. It has no locks: both seas are at the same level."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "kind": "truefalse",
+          "prompt": "Like the Panama Canal, the Suez Canal lifts ships with **locks**.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer": 1,
+          "explanation": "Suez is flat from end to end. A ship simply sails through, in a convoy, in 12 to 16 hours."
         },
         {
           "type": "image",
-          "asset": "suez_canal_inauguration_1869_lesseps",
-          "ratio": "4:3",
-          "caption": "The opening of the Suez Canal in November 1869 crowned a decade of enormous works"
-        },
-        {
-          "type": "paragraph",
-          "text": "When it opened in 1869, the canal was run by a private company funded mostly with French money. Britain was skeptical at first, but quickly saw how important the route was for its colonies. Taking advantage of the huge debts of the khedive, the ruler of Egypt, it bought his shares in 1875 and became the main shareholder."
-        },
-        {
-          "type": "funFact",
-          "text": "For the opening in 1869, the composer Giuseppe Verdi was asked to write an opera for the occasion. That is how the famous *Aida* was born."
-        },
-        {
-          "type": "paragraph",
-          "text": "This foreign control created growing tension. For most of the 20th century, Egyptian nationalists saw the canal as the symbol of a colonial humiliation, a British enclave in the heart of a country seeking its independence."
+          "asset": "warship_suez_canal_1992",
+          "ratio": "1100:815",
+          "caption": "A warship in the canal, 1992. From the deck, it looks like sailing through the desert."
         }
       ]
     },
     {
       "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_p2",
-      "title": "1956: the nationalization turning point",
+      "title": "A canal everyone wants",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The year 1956 marked a historic break. The Egyptian president Gamal Abdel Nasser, a leading figure of **[[Pan-Arabism]]**, nationalized the canal company on July 26, 1956. His aim was to use the canal's revenue to pay for a great dam on the Nile that the Western powers had just refused to finance."
+          "text": "The canal opens in **1869**, after ten years of digging. The project is French, led by the diplomat Ferdinand de Lesseps. The work is Egyptian: tens of thousands of peasants are forced to dig, and many die."
+        },
+        {
+          "type": "image",
+          "asset": "suez_canal_first_ships_1869",
+          "ratio": "1071:704",
+          "caption": "1869: the first ships pass through, in a newspaper engraving of the time."
         },
         {
           "type": "paragraph",
-          "text": "The reaction was immediate. France and the United Kingdom, which had just lost their stake, joined Israel in a secret military offensive. The canal was occupied, but the operation enraged American president Eisenhower, who had not been told and feared the attack would push the developing world toward the USSR."
+          "text": "Egypt, deep in debt, soon sells its share to Britain. For the British Empire, the canal is the road to India. Its soldiers will guard it for more than seventy years."
         },
         {
           "type": "paragraph",
-          "text": "Under American pressure, the European powers were forced into a humiliating withdrawal. It was the end of France and the United Kingdom as front-rank colonial powers, and the triumph of Nasser, now an idol across the Arab world. The episode is still known as **[[The Suez Crisis (1956)]]**."
+          "text": "In **July 1956**, Egypt's president, Gamal Abdel Nasser, announces that Egypt is taking the canal back. He will [[nationalize]] it and use its income to build a giant dam on the Nile."
+        },
+        {
+          "type": "image",
+          "asset": "nasser_cairo_crowd_1956",
+          "ratio": "1100:792",
+          "caption": "Cairo, August 1956. Nasser is cheered by the crowd a few days after his announcement."
+        },
+        {
+          "type": "question",
+          "kind": "choice",
+          "prompt": "How do Britain and France **react**?",
+          "options": [
+            "They accept, and negotiate a price.",
+            "They attack Egypt, together with Israel.",
+            "They build a second canal."
+          ],
+          "answer": 1,
+          "explanation": "The three countries invade in October 1956. But the United States and the Soviet Union both order them to stop. They withdraw, humiliated. The canal stays Egyptian."
+        },
+        {
+          "type": "funFact",
+          "text": "In 1967, a war between Israel and Egypt shut the canal for eight years. Fifteen cargo ships were trapped inside the whole time. Desert sand slowly covered their decks, and sailors nicknamed them the “Yellow Fleet.”"
         }
       ]
     },
     {
       "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_p3",
-      "title": "A vital artery under modern strain",
+      "title": "The world's chokepoint",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Today the Suez Canal is still the lungs of world shipping: about 12% of global trade and nearly 20,000 vessels pass through it every year. But its narrowness, next to the sheer size of modern ships, is a major weakness."
-        },
-        {
-          "type": "paragraph",
-          "text": "On March 26, 2021, the giant container ship **[[Ever Given]]** ran aground across the canal and blocked all traffic for six days. The blockage backed up more than 400 ships and cost the world economy around 400 million dollars an hour."
+          "text": "Today, about **12%** of world trade passes through the canal: some 50 ships a day in a normal year. For Egypt, the tolls are worth more than 9 billion dollars a year."
         },
         {
           "type": "image",
-          "asset": "ever_given_container_ship_suez_canal_stuck_2021",
-          "ratio": "16:9",
-          "caption": "In March 2021, the container ship Ever Given blocked the Suez Canal for six days"
+          "asset": "suez_canal_bridge_from_cargo_ship",
+          "ratio": "1100:825",
+          "caption": "The canal seen from a cargo ship. Vessels travel in convoys, one behind the other."
         },
         {
           "type": "paragraph",
-          "text": "Technical accidents are not the only danger: regional politics threatens that stability too. Between 2023 and 2024, missile attacks launched by the **[[Houthis]]** from Yemen against commercial shipping pushed many owners to reroute their fleets around southern Africa, a three-week detour that drives costs sharply higher."
-        }
-      ]
-    },
-    {
-      "id": "course_206_le_canal_de_suez_pourquoi_il_est_strateg_p4",
-      "title": "Challenges of the 21st century",
-      "free": false,
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "To stay competitive, Egypt launched the “new Suez Canal” in 2015, doubling capacity along some stretches. The canal is also becoming an economic zone that attracts Chinese and European investment."
+          "text": "A passage like this has a name: a [[chokepoint]]. Everything depends on it staying open. And it does not take a ship turned sideways to close it."
         },
         {
-          "type": "paragraph",
-          "text": "Canal revenue is still one of Egypt's main sources of foreign currency, which makes the country extremely watchful over the security of the **Bab-el-Mandeb** strait, the real southern gateway to the whole Suez system."
+          "type": "map",
+          "map": "map_world",
+          "ratio": "3:2",
+          "text": "To reach the canal from Asia, ships must first pass a narrow strait at the bottom of the Red Sea: Bab el-Mandeb. From late 2023, armed groups in Yemen attack cargo ships there with missiles and drones. Many shipping companies give up on the shortcut. They send their ships the long way again, around Africa. In 2024, traffic through the canal falls by about half.",
+          "labels": [
+            {
+              "id": "singapore",
+              "lon": 103.8,
+              "lat": 1.3,
+              "text": "Singapore",
+              "style": "city"
+            },
+            {
+              "id": "rotterdam",
+              "lon": 4,
+              "lat": 52,
+              "text": "Rotterdam",
+              "style": "city"
+            },
+            {
+              "id": "suez",
+              "lon": 32.5,
+              "lat": 30.5,
+              "text": "Suez Canal",
+              "style": "tag"
+            },
+            {
+              "id": "cape",
+              "lon": 18.5,
+              "lat": -34.4,
+              "text": "Cape of Good Hope",
+              "style": "city"
+            },
+            {
+              "id": "med",
+              "lon": 20,
+              "lat": 34.5,
+              "text": "Mediterranean",
+              "style": "sea"
+            },
+            {
+              "id": "red",
+              "lon": 37.5,
+              "lat": 22.5,
+              "text": "Red Sea",
+              "style": "sea"
+            },
+            {
+              "id": "egypt",
+              "lon": 29.3,
+              "lat": 26.8,
+              "text": "Egypt",
+              "style": "plain"
+            },
+            {
+              "id": "bab",
+              "lon": 43.4,
+              "lat": 12.5,
+              "text": "Bab el-Mandeb",
+              "style": "city"
+            }
+          ],
+          "routes": [
+            {
+              "id": "r2",
+              "style": "alt",
+              "points": [
+                [
+                  103.8,
+                  1.3
+                ],
+                [
+                  98,
+                  5.8
+                ],
+                [
+                  95,
+                  6
+                ],
+                [
+                  80,
+                  1
+                ],
+                [
+                  57,
+                  -20
+                ],
+                [
+                  42,
+                  -30
+                ],
+                [
+                  20,
+                  -36.5
+                ],
+                [
+                  10,
+                  -26
+                ],
+                [
+                  -12,
+                  -2
+                ],
+                [
+                  -19,
+                  15
+                ],
+                [
+                  -13,
+                  35
+                ],
+                [
+                  -10,
+                  44
+                ],
+                [
+                  -5.5,
+                  48.6
+                ],
+                [
+                  1.5,
+                  50.8
+                ],
+                [
+                  4,
+                  52
+                ]
+              ]
+            },
+            {
+              "id": "r1",
+              "style": "accent",
+              "points": [
+                [
+                  103.8,
+                  1.3
+                ],
+                [
+                  98,
+                  5.8
+                ],
+                [
+                  95,
+                  6
+                ],
+                [
+                  80.5,
+                  5.5
+                ],
+                [
+                  60,
+                  12
+                ],
+                [
+                  51.5,
+                  12.6
+                ],
+                [
+                  43.4,
+                  12.5
+                ],
+                [
+                  39,
+                  19.5
+                ],
+                [
+                  34.2,
+                  27
+                ],
+                [
+                  33.3,
+                  28.4
+                ],
+                [
+                  32.55,
+                  29.95
+                ],
+                [
+                  32.3,
+                  31.3
+                ],
+                [
+                  25,
+                  34.2
+                ],
+                [
+                  11.5,
+                  37.6
+                ],
+                [
+                  -5.6,
+                  36
+                ],
+                [
+                  -10,
+                  37
+                ],
+                [
+                  -10,
+                  44
+                ],
+                [
+                  -5.5,
+                  48.6
+                ],
+                [
+                  1.5,
+                  50.8
+                ],
+                [
+                  4,
+                  52
+                ]
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "view": [
+                42,
+                20,
+                32
+              ],
+              "show": [
+                "suez",
+                "red",
+                "bab",
+                "r1"
+              ],
+              "text": "To reach the canal from Asia, ships must first pass a narrow strait at the bottom of the Red Sea: **Bab el-Mandeb**."
+            },
+            {
+              "view": [
+                42,
+                16,
+                22
+              ],
+              "show": [
+                "red",
+                "bab",
+                "r1"
+              ],
+              "text": "From **late 2023**, armed groups in Yemen attack cargo ships there with missiles and drones."
+            },
+            {
+              "view": [
+                52,
+                6,
+                118
+              ],
+              "show": [
+                "singapore",
+                "rotterdam",
+                "cape",
+                "suez",
+                "r2"
+              ],
+              "text": "Many shipping companies give up on the shortcut. They send their ships the long way again, around Africa. In 2024, traffic through the canal falls by about half."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "kind": "truefalse",
+          "prompt": "In 2021, the *Ever Given* blocked the canal for **six days**.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer": 0,
+          "explanation": "From March 23 to March 29. It took dredgers, more than a dozen tugboats and a high spring tide to pull it free."
+        },
+        {
+          "type": "question",
+          "kind": "order",
+          "prompt": "Last question. Put the canal's history **in order**.",
+          "items": [
+            "The canal opens",
+            "Nasser takes the canal back for Egypt",
+            "A war shuts the canal for eight years",
+            "The Ever Given blocks it for six days",
+            "Attacks in the Red Sea send ships around Africa"
+          ],
+          "labels": [
+            "1869",
+            "1956",
+            "1967",
+            "2021",
+            "2023"
+          ],
+          "explanation": "A century and a half, and the same question each time: who controls the shortcut?"
         },
         {
           "type": "takeaway",
-          "text": "The Suez Canal, opened in 1869, went from a tool of British imperial control to a symbol of Egyptian sovereignty after the crisis of 1956. Today it carries 12% of world trade, but it stays vulnerable to technical accidents and to tension in the Red Sea."
+          "text": "The Suez Canal is the shortest sea route between Asia and Europe. It saves about 7,000 km.\nAbout 12% of world trade depends on it, which makes it a target and a prize: 1956, 1967, 2023.\nOne ship, one storm or one conflict is enough to send global trade the long way around."
         }
       ]
     }

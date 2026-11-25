@@ -5,7 +5,6 @@
   "subject": "art",
   "subcategory": "Iconic works",
   "description": "It is the most famous painting in the world. Yet in 1503, its own painter had better things to do than the portrait of a merchant's wife.",
-  "author": "dusan-nikolic",
   "hero": {
     "image": "la_joconde",
     "ratio": "16:9",
@@ -19,141 +18,627 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "For one of the most famous paintings in the world, very little is known for certain about the *Mona Lisa*. Art historians agree on the essentials: Leonardo da Vinci painted it in Florence between **1503 and 1506**. In **1517**, he carried it with him to France, and the panel ended up in the collection of King [[Francis I]]."
+          "text": "Every day, about 20,000 people file past one small painting in Paris. Most of them look at it for less than a minute. Almost none of them could say why this one, and not another."
         },
         {
-          "type": "paragraph",
-          "text": "Legends have filled the historical vacuum. The painting is spoken of as a woman, \"she.\" Her half-smile is called mysterious. After the theft of **1911**, even its authenticity was questioned. All these stories made its fame, but they pushed its context aside. Yet at the time Leonardo painted it, the work may not have mattered to him at all."
+          "type": "image",
+          "asset": "mona_lisa_leonardo_louvre_full",
+          "ratio": "1600:2384",
+          "caption": "Here she is. Oil on a poplar panel, 77 cm by 53: about the size of a carry-on bag.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Here she is. Oil on a poplar panel, 77 cm by 53: about the size of a carry-on bag."
+            },
+            {
+              "x": 0.455,
+              "y": 0.3,
+              "zoom": 3.4,
+              "text": "**The smile.** Look at the corners of the mouth: there is no line anywhere. Leonardo blurs them with a technique called [[sfumato]], so the smile seems to change as your eyes move.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.447,
+                    0.327,
+                    0.05,
+                    0.018
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.455,
+              "y": 0.225,
+              "zoom": 3.4,
+              "text": "**The eyes.** No eyebrows, no eyelashes. They may have faded with time, or been cleaned away. The gaze seems to follow you around the room."
+            },
+            {
+              "x": 0.42,
+              "y": 0.8,
+              "zoom": 1.9,
+              "text": "**The hands.** Relaxed, one over the other. At the time, portraits were stiff and cut at the chest. Showing the hands, calm and soft, was new."
+            },
+            {
+              "x": 0.72,
+              "y": 0.37,
+              "zoom": 3,
+              "text": "**A bridge.** Behind her right shoulder, the only sign of human life in a strange landscape of rocks and water.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.715,
+                    0.372,
+                    0.06,
+                    0.022
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "A masterpiece, then. But in 1900 it was one masterpiece among many. Something else had to happen."
+            }
+          ]
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p1",
-      "title": "Who is the Mona Lisa?",
+      "title": "A portrait that was never delivered",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Art historians widely accept that the sitter is [[Lisa Gherardini]], wife of **Francesco del Giocondo**, a merchant and minor figure in the Florentine government. Hence the painting's other name, *La Gioconda*. The identification rests on the biography of Leonardo published by [[Giorgio Vasari]] in **1550** and again in **1568**, in his *Lives of the Most Excellent Painters, Sculptors, and Architects*."
+          "text": "Florence, around **1503**. A silk merchant, Francesco del Giocondo, orders a portrait of his wife, Lisa. The painter is the most admired artist in the city: Leonardo da Vinci."
         },
         {
           "type": "image",
-          "asset": "vasari_lives_of_the_artists_1568_title_page",
-          "ratio": "3:4",
-          "caption": "Vasari's Lives, Florentine edition of 1568: the text that gives the sitter a name."
+          "asset": "leonardo_portrait_melzi",
+          "ratio": "800:1008",
+          "caption": "Leonardo around 1515, drawn by his pupil Francesco Melzi. Painter, engineer, anatomist: he started many things and finished few."
         },
         {
           "type": "paragraph",
-          "text": "Why did Francesco commission the portrait? Nobody knows. Leonardo started work in early **1503**. What happened next is still debated: for historians, Vasari's account reads like a literary invention, a biographer filling the blanks with a good story. In mid-**1506**, Leonardo left Florence for Milan in search of better employment. The unfinished portrait went with him."
+          "text": "Leonardo works slowly. He never hands the portrait over. He keeps it with him for the rest of his life, adding thin layers of paint year after year."
         },
         {
-          "type": "funFact",
-          "text": "According to Vasari, Leonardo hired musicians and jesters to keep his sitter entertained during the sittings. Historians see this as the biographer's invention, but it is the story that launched the myth of the \"Mona Lisa smile.\""
+          "type": "question",
+          "kind": "choice",
+          "prompt": "The painting is Italian. So **why is it in Paris** today?",
+          "options": [
+            "Napoleon's army took it from Italy.",
+            "Leonardo carried it to France himself.",
+            "France bought it from Italy in 1900."
+          ],
+          "answer": 1,
+          "explanation": "Leonardo moved to France at the end of his life and brought the painting with him. The map shows the journey."
+        },
+        {
+          "type": "map",
+          "map": "map_france_italy",
+          "ratio": "5:6",
+          "text": "Florence. This is where Lisa sits for Leonardo, and where the painting begins. 1516. The French king, Francis I, invites the old painter to his court. Leonardo, aged 64, crosses the Alps with the portrait in his luggage and settles in Amboise. He dies there in 1519. The king keeps the painting. After the French Revolution, the royal collection goes to a new museum in Paris: the Louvre.",
+          "labels": [
+            {
+              "id": "paris",
+              "lon": 2.35,
+              "lat": 48.86,
+              "text": "Paris",
+              "style": "city"
+            },
+            {
+              "id": "florence",
+              "lon": 11.25,
+              "lat": 43.77,
+              "text": "Florence",
+              "style": "city"
+            },
+            {
+              "id": "amboise",
+              "lon": 0.98,
+              "lat": 47.41,
+              "text": "Amboise",
+              "style": "city"
+            },
+            {
+              "id": "france",
+              "lon": 2.2,
+              "lat": 45.3,
+              "text": "France",
+              "style": "plain"
+            },
+            {
+              "id": "italy",
+              "lon": 12.6,
+              "lat": 42.4,
+              "text": "Italy",
+              "style": "plain"
+            },
+            {
+              "id": "alps",
+              "lon": 7.6,
+              "lat": 46.3,
+              "text": "Alps",
+              "style": "sea"
+            }
+          ],
+          "routes": [
+            {
+              "id": "r1",
+              "style": "accent",
+              "points": [
+                [
+                  11.25,
+                  43.77
+                ],
+                [
+                  9.19,
+                  45.46
+                ],
+                [
+                  6.9,
+                  45.15
+                ],
+                [
+                  4.83,
+                  45.76
+                ],
+                [
+                  2.6,
+                  46.9
+                ],
+                [
+                  0.98,
+                  47.41
+                ]
+              ]
+            },
+            {
+              "id": "r2",
+              "style": "alt",
+              "points": [
+                [
+                  2.35,
+                  48.86
+                ],
+                [
+                  4.83,
+                  45.76
+                ],
+                [
+                  7.68,
+                  45.07
+                ],
+                [
+                  9.19,
+                  45.46
+                ],
+                [
+                  11.25,
+                  43.77
+                ]
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "view": [
+                6.4,
+                46,
+                12
+              ],
+              "show": [
+                "florence",
+                "france",
+                "italy"
+              ],
+              "text": "**Florence.** This is where Lisa sits for Leonardo, and where the painting begins."
+            },
+            {
+              "view": [
+                6.4,
+                46,
+                12
+              ],
+              "show": [
+                "florence",
+                "amboise",
+                "alps",
+                "r1"
+              ],
+              "text": "**1516.** The French king, Francis I, invites the old painter to his court. Leonardo, aged 64, crosses the Alps with the portrait in his luggage and settles in Amboise."
+            },
+            {
+              "view": [
+                2,
+                47.8,
+                6
+              ],
+              "show": [
+                "amboise",
+                "paris",
+                "r1"
+              ],
+              "text": "He dies there in **1519**. The king keeps the painting. After the French Revolution, the royal collection goes to a new museum in Paris: the [[Louvre]]."
+            }
+          ]
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p2",
-      "title": "Anghiari: a more prestigious commission",
+      "title": "Famous, but not that famous",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "In October **1503**, the Florentine government hired Leonardo to paint the [[Battle of Anghiari]] in the [[Palazzo Vecchio]], the seat of the Florentine Republic. The mural was to commemorate Florence's victory over Milan in **1440**. In the Renaissance, a history scene counted for far more than a portrait. Alongside religious, mythological and allegorical subjects, it was seen as the highest form of art."
+          "text": "For four centuries, the portrait is admired by painters and writers. But it is not a star. In the Louvre's own galleries, bigger and more dramatic paintings draw the crowds."
         },
         {
-          "type": "image",
-          "asset": "rubens_copy_battle_of_anghiari_louvre_drawing",
-          "ratio": "16:9",
-          "caption": "Rubens's copy of the central melee: the only trace of the great unfinished mural in the Palazzo Vecchio."
-        },
-        {
-          "type": "paragraph",
-          "text": "Next to a large public commission, the private portrait of a minor official's wife carried little weight. From December **1503**, Leonardo spent more and more time preparing the large composition. Prestige and better pay: the Mona Lisa could wait. By the end of his second stay in Florence, the portrait was unfinished. So was the *Battle of Anghiari*: only preparatory sketches and their copies survive."
-        },
-        {
-          "type": "funFact",
-          "text": "It is possible that only the landscape in the background was still unfinished when Leonardo left for Milan in 1506."
+          "type": "question",
+          "kind": "truefalse",
+          "prompt": "In 1900, the Mona Lisa was **already** the most famous painting in the world.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer": 1,
+          "explanation": "It was respected, and well known to art lovers. But most people outside that circle could not have named it. That changed in a single week of 1911."
         }
       ]
     },
     {
       "id": "course_149_la_joconde_p3",
-      "title": "The making of an icon",
+      "title": "The empty wall",
       "free": false,
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Leonardo died on **May 2, 1519**, in Amboise, France. The *Mona Lisa* never reached the Giocondo family. After the French Revolution, the royal collection became public and the painting entered the **Louvre**. Since the early 19th century, its smile has been described in a thousand ways, from divine to sensual."
+          "text": "**Monday, August 21, 1911.** The Louvre is closed for cleaning. A man in a white worker's smock lifts the painting off its hooks, removes it from its frame in a stairwell, and walks out with it under his clothes."
         },
         {
           "type": "image",
-          "asset": "mona_lisa_stolen_1911_newspaper_headline",
-          "ratio": "4:3",
-          "caption": "The front page of Excelsior in January 1914: the Mona Lisa returns after the theft of 1911."
-        },
-        {
-          "type": "paragraph",
-          "text": "The turning point was the theft of the painting from the museum in **1911**. Newspapers turned the Mona Lisa into a worldwide sensation. Ever since, popular journalism and fiction have routinely questioned the work's authenticity and the sitter's identity, without any grounding in proper historical analysis. The painting has become the center of ever more stories, ones we still hear today."
-        }
-      ]
-    },
-    {
-      "id": "course_149_la_joconde_p4",
-      "title": "A painting that outgrew its author",
-      "free": false,
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "More than **500 years** after the portrait was begun, Lisa del Giocondo is more attractive than ever. Placed behind bulletproof glass at the Louvre, the painting is cut off from its historical context. Freed from it, it has acquired the status of a universal icon. That status has a price: in modern times, no restoration has been attempted."
-        },
-        {
-          "type": "timeline",
-          "events": [
+          "asset": "louvre_empty_wall_mona_lisa_1911",
+          "ratio": "640:887",
+          "caption": "This photo is taken in the Louvre a few days later.",
+          "stops": [
             {
-              "date": "1503",
-              "title": "The portrait begins",
-              "detail": "Leonardo starts the portrait of Lisa Gherardini in Florence."
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "This photo is taken in the Louvre a few days later."
             },
             {
-              "date": "October 1503",
-              "title": "The Anghiari commission",
-              "detail": "Florence entrusts him with a large mural for the Palazzo Vecchio."
+              "x": 0.47,
+              "y": 0.46,
+              "zoom": 1.8,
+              "text": "**The gap.** Between two paintings, four iron hooks and nothing else. Nobody notices for more than a day: guards assume the portrait is away being photographed.",
+              "outline": [
+                {
+                  "polygon": [
+                    [
+                      0.215,
+                      0.3
+                    ],
+                    [
+                      0.72,
+                      0.3
+                    ],
+                    [
+                      0.72,
+                      0.635
+                    ],
+                    [
+                      0.215,
+                      0.635
+                    ]
+                  ],
+                  "sharp": true
+                }
+              ]
             },
             {
-              "date": "1506",
-              "title": "Departure for Milan",
-              "detail": "Leonardo leaves Florence with the unfinished portrait."
-            },
-            {
-              "date": "1519",
-              "title": "Leonardo dies",
-              "detail": "In Amboise, on May 2. The painting stays in France."
-            },
-            {
-              "date": "1911",
-              "title": "The theft",
-              "detail": "The press turns the Mona Lisa into a worldwide sensation."
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Then the news breaks, and something odd happens. People queue for hours to stare at the empty wall."
             }
           ]
         },
         {
           "type": "paragraph",
-          "text": "Removing the [[varnish]] yellowed by the centuries, the protective coat used in oil painting, would risk damaging the work. And even if a restoration went well, there is a fear that the *Mona Lisa* would lose its hold on us. Leonardo's original technique and coloring matter less than the image. Now a vessel for countless stories, the painting has outgrown its author and art history."
+          "text": "The theft makes front pages around the world. The police question the young painter Pablo Picasso and jail the poet Guillaume Apollinaire for a week. Both are innocent. For two years, there is no trace of the painting."
+        },
+        {
+          "type": "image",
+          "asset": "vincenzo_peruggia_police_photo",
+          "ratio": "798:752",
+          "caption": "The real thief: Vincenzo Peruggia, an Italian workman. He knew the place well. He had helped build the painting's protective glass case."
+        },
+        {
+          "type": "question",
+          "kind": "choice",
+          "prompt": "Where was the painting **hidden** for two years?",
+          "options": [
+            "In a bank vault in Switzerland.",
+            "In a trunk in the thief's room in Paris.",
+            "In a private collector's castle."
+          ],
+          "answer": 1,
+          "explanation": "Peruggia kept it in a trunk with a false bottom, in his small room, a couple of kilometers from the Louvre."
+        },
+        {
+          "type": "map",
+          "map": "map_france_italy",
+          "ratio": "5:6",
+          "text": "December 1913. Peruggia writes to an art dealer in Florence. He says he wants to bring the Mona Lisa home to Italy, for a reward. He takes the train across the Alps with the painting in his trunk. Four centuries after Leonardo, the portrait makes the journey in reverse. Florence. The dealer checks the back of the panel, recognizes the real thing, and calls the police. Peruggia is arrested in his hotel.",
+          "labels": [
+            {
+              "id": "paris",
+              "lon": 2.35,
+              "lat": 48.86,
+              "text": "Paris",
+              "style": "city"
+            },
+            {
+              "id": "florence",
+              "lon": 11.25,
+              "lat": 43.77,
+              "text": "Florence",
+              "style": "city"
+            },
+            {
+              "id": "amboise",
+              "lon": 0.98,
+              "lat": 47.41,
+              "text": "Amboise",
+              "style": "city"
+            },
+            {
+              "id": "france",
+              "lon": 2.2,
+              "lat": 45.3,
+              "text": "France",
+              "style": "plain"
+            },
+            {
+              "id": "italy",
+              "lon": 12.6,
+              "lat": 42.4,
+              "text": "Italy",
+              "style": "plain"
+            },
+            {
+              "id": "alps",
+              "lon": 7.6,
+              "lat": 46.3,
+              "text": "Alps",
+              "style": "sea"
+            }
+          ],
+          "routes": [
+            {
+              "id": "r1",
+              "style": "accent",
+              "points": [
+                [
+                  11.25,
+                  43.77
+                ],
+                [
+                  9.19,
+                  45.46
+                ],
+                [
+                  6.9,
+                  45.15
+                ],
+                [
+                  4.83,
+                  45.76
+                ],
+                [
+                  2.6,
+                  46.9
+                ],
+                [
+                  0.98,
+                  47.41
+                ]
+              ]
+            },
+            {
+              "id": "r2",
+              "style": "alt",
+              "points": [
+                [
+                  2.35,
+                  48.86
+                ],
+                [
+                  4.83,
+                  45.76
+                ],
+                [
+                  7.68,
+                  45.07
+                ],
+                [
+                  9.19,
+                  45.46
+                ],
+                [
+                  11.25,
+                  43.77
+                ]
+              ]
+            }
+          ],
+          "steps": [
+            {
+              "view": [
+                6.4,
+                46,
+                12
+              ],
+              "show": [
+                "paris",
+                "florence"
+              ],
+              "text": "**December 1913.** Peruggia writes to an art dealer in Florence. He says he wants to bring the Mona Lisa home to Italy, for a reward."
+            },
+            {
+              "view": [
+                6.4,
+                46,
+                12
+              ],
+              "show": [
+                "paris",
+                "florence",
+                "alps",
+                "r2"
+              ],
+              "text": "He takes the train across the Alps with the painting in his trunk. Four centuries after Leonardo, the portrait makes the journey in reverse."
+            },
+            {
+              "view": [
+                10.5,
+                43.8,
+                5
+              ],
+              "show": [
+                "florence",
+                "italy",
+                "r2"
+              ],
+              "text": "**Florence.** The dealer checks the back of the panel, recognizes the real thing, and calls the police. Peruggia is arrested in his hotel."
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "asset": "mona_lisa_uffizi_1913",
+          "ratio": "1000:1278",
+          "caption": "Florence, December 1913. Before going back to Paris, the painting is shown at the Uffizi Gallery. Italians queue to see it."
+        },
+        {
+          "type": "image",
+          "asset": "petit_parisien_mona_lisa_found_1913",
+          "ratio": "1280:991",
+          "caption": "Paris, the next morning. This paper prints more than a million copies a day.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Paris, the next morning. This paper prints more than a million copies a day."
+            },
+            {
+              "x": 0.62,
+              "y": 0.22,
+              "zoom": 2.2,
+              "text": "**The headline**: “The Mona Lisa is found.” Her face fills the front page. For two years, newspapers everywhere have printed it again and again."
+            },
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "Millions of people who had never set foot in a museum now know her face. That is the real effect of the theft."
+            }
+          ]
+        },
+        {
+          "type": "funFact",
+          "text": "Peruggia claimed he acted out of patriotism, to return the painting to Italy. An Italian court gave him about a year in prison. He served seven months."
+        }
+      ]
+    },
+    {
+      "id": "course_149_la_joconde_p4",
+      "title": "The most looked-at face on Earth",
+      "free": false,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In **January 1914**, the painting returns to the Louvre. It has never stopped drawing crowds since. Artists copy it, mock it, put it on posters and mugs. Each joke makes it more famous."
+        },
+        {
+          "type": "image",
+          "asset": "louvre_crowd_mona_lisa_2014",
+          "ratio": "1280:720",
+          "caption": "The Louvre, today. This is the room where she hangs.",
+          "stops": [
+            {
+              "x": 0.5,
+              "y": 0.5,
+              "zoom": 1,
+              "text": "The Louvre, today. This is the room where she hangs."
+            },
+            {
+              "x": 0.75,
+              "y": 0.25,
+              "zoom": 2.6,
+              "text": "**There she is.** That small dark rectangle on the far wall, behind bulletproof glass and a barrier.",
+              "outline": [
+                {
+                  "ellipse": [
+                    0.752,
+                    0.235,
+                    0.042,
+                    0.085
+                  ]
+                }
+              ]
+            },
+            {
+              "x": 0.38,
+              "y": 0.62,
+              "zoom": 1.8,
+              "text": "**And here are her visitors.** Most of them see her through a phone screen, over someone else's shoulder."
+            }
+          ]
+        },
+        {
+          "type": "question",
+          "kind": "truefalse",
+          "prompt": "The theft was noticed **within minutes**.",
+          "options": [
+            "True",
+            "False"
+          ],
+          "answer": 1,
+          "explanation": "It took more than a day. The museum was closed, and paintings were often taken down to be photographed. A visiting painter finally asked where she was."
+        },
+        {
+          "type": "question",
+          "kind": "order",
+          "prompt": "Last question. Put the painting's story **in order**.",
+          "items": [
+            "Leonardo starts the portrait in Florence",
+            "He carries it across the Alps to France",
+            "It is stolen from the Louvre",
+            "It is found in Florence",
+            "It returns to the Louvre"
+          ],
+          "labels": [
+            "1503",
+            "1516",
+            "1911",
+            "1913",
+            "1914"
+          ],
+          "explanation": "Four quiet centuries, then two years that changed everything."
         },
         {
           "type": "takeaway",
-          "text": "Set aside in 1503 for a more prestigious commission, the *Mona Lisa* owes its status as an icon to five centuries of legends and a theft, far more than to the rank Leonardo gave it."
+          "text": "The Mona Lisa is a real masterpiece: the blurred smile, the hands and the landscape were all new in their time.\nIt is in France because Leonardo brought it there himself in 1516.\nIts worldwide fame dates from 1911: a theft, two years of headlines, and a face printed millions of times."
         }
       ]
-    }
-  ],
-  "sources": [
-    {
-      "text": "S. Campbell, Leonardo da Vinci: An Untraceable Life, Princeton University Press, 2025, p. 43-45."
-    },
-    {
-      "text": "F. Zöllner, « Leonardo's Portrait of Mona Lisa del Giocondo », Gazette des Beaux-Arts, vol. 121, 1993, p. 115-138."
     }
   ]
 }

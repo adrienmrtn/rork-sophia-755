@@ -145,6 +145,35 @@ Un fichier JSON par cours : `content/courses/fr/<course_id>.json`.
 | `funFact`   | `text`                                                        | encart « Le saviez-vous ? » |
 | `takeaway`  | `text`                                                        | encart « À retenir » (fin de cours) |
 | `quote`     | `text`, `attribution?`                                        | citation stylée |
+| `image` + `stops` | `stops: [{ x, y, zoom, text, outline? }]`              | **image guidée** : on parcourt l'image arrêt par arrêt (recadrage + texte) |
+| `map`       | `map`, `ratio?`, `labels`, `routes`, `dots?`, `steps`, `text` | **carte guidée** sur un fond embarqué (`ios/Sophia/Resources/Maps/`) |
+| `question`  | `kind`, `prompt`, `options?`, `answer?`, `items?`, `labels?`, `explanation?` | **question dans le fil** : `choice`, `truefalse` ou `order` |
+
+### Blocs interactifs (iOS 2.5)
+
+Ces trois blocs ne servent que dans les **éditions natives** : des cours écrits directement dans
+leur langue, avec leurs propres sections, listés dans `content/native_editions.json`. La porte de
+traduction ne les compare pas au français (`scripts/check_course_translation.py`), elle n'applique
+que les règles de la langue.
+
+- **Image guidée.** Un bloc `image` qui porte `stops`. Chaque arrêt vise un point (`x`, `y`, en
+  fractions de l'image), un grossissement (`zoom`, 1 = image entière) et un texte. `outline` trace
+  un contour (`{ "ellipse": [cx, cy, rx, ry] }` ou `{ "polygon": [[x, y], …], "sharp"? }`) et
+  assombrit le reste. **Le contour est réservé aux détails difficiles à repérer** : si le zoom
+  suffit à montrer de quoi on parle, pas de contour. Le contour n'apparaît qu'une fois le
+  recadrage terminé. Un lecteur qui ne connaît pas `stops` affiche l'image et `caption`.
+- **Carte guidée.** `map` nomme un fond embarqué (`map_vietnam`, `map_france_italy`, `map_aegean`,
+  `map_world` ; frontières, fleuves et relief de Natural Earth, domaine public). `labels` et
+  `routes` sont en longitude et latitude ; chaque étape donne sa vue
+  (`[lon, lat, hauteur en degrés]`), ce qu'elle montre (`show` : identifiants d'étiquettes, de
+  tracés, de zones du fond, et `dots`) et son texte. `text` est le repli pour un ancien lecteur.
+- **Question.** `choice` (une bonne réponse, `answer` = index dans `options`), `truefalse`
+  (deux options) ou `order` (`items` donnés dans le bon ordre, `labels` = la date affichée après
+  validation). La question porte sur le passage qui précède, ne bloque pas la lecture et ne
+  donne ni points ni vies. **Pas de question d'estimation en ouverture de cours.**
+- En lecture pas à pas, « Continuer » fait avancer l'image ou la carte en cours avant de révéler
+  le passage suivant (`CourseGuideState`). Toucher l'image ou la carte fait la même chose.
+- Android ne rend pas encore ces blocs : il affiche l'image simple et ignore cartes et questions.
 
 ### Balisage inline (dans `paragraph`, `funFact`, `takeaway`)
 - `**gras**`

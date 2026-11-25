@@ -1191,6 +1191,14 @@ def check_segment(
             report("english-leftover", f"{word!r}: {context}")
 
 
+def native_editions(lang: str) -> frozenset[str]:
+    """Course ids written natively in ``lang`` instead of translated from French."""
+    path = CONTENT_ROOT.parent / "native_editions.json"
+    if not path.exists():
+        return frozenset()
+    return frozenset(json.loads(path.read_text(encoding="utf-8")).get(lang, []))
+
+
 def check_course(course_id: str, lang: str, allowed_by_course: dict[str, list[str]]) -> list[Finding]:
     findings: list[Finding] = []
     french = load_course("fr", course_id)
@@ -1201,6 +1209,12 @@ def check_course(course_id: str, lang: str, allowed_by_course: dict[str, list[st
 
     fr_segments = dict(segments(french))
     tr_segments = dict(segments(translated))
+
+    # A native edition is written directly in its language, with its own sections and
+    # blocks (content/native_editions.json). There is no French counterpart to compare it
+    # to: only the rules of the language itself apply, so each segment is its own reference.
+    if course_id in native_editions(lang):
+        fr_segments = dict(tr_segments)
 
     if list(fr_segments) != list(tr_segments):
         only_fr = [k for k in fr_segments if k not in tr_segments]
