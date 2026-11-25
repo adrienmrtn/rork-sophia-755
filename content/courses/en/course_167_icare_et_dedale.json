@@ -97,15 +97,16 @@
         },
         {
           "type": "question",
+          "text": "Minos watches the land and the sea. What is **left**? “He may block the land and the sea,” says Daedalus in Ovid's poem, “but the sky is open.” He starts collecting feathers.",
           "kind": "choice",
-          "prompt": "Minos watches the land and the sea. **What is left?**",
+          "prompt": "Minos watches the land and the sea. What is **left**?",
           "options": [
             "A tunnel under the palace.",
             "The sky.",
             "A disguise."
           ],
           "answer": 1,
-          "explanation": "“He may block the land and the sea,” says Daedalus in [[Ovid]]'s poem, “but the sky is open.” He starts collecting feathers."
+          "explanation": "“He may block the land and the sea,” says Daedalus in Ovid's poem, “but the sky is open.” He starts collecting feathers."
         }
       ]
     },
@@ -130,6 +131,7 @@
         },
         {
           "type": "question",
+          "text": "He warns against both. Too low is as dangerous as too high. People remember the sun and forget the sea, but the lesson was about staying in between.",
           "kind": "truefalse",
           "prompt": "Daedalus only warns his son about flying **too high**.",
           "options": [
@@ -339,6 +341,7 @@
         },
         {
           "type": "question",
+          "text": "He survives, and that is the cruel part. The inventor's creation works perfectly. It is his own son who pays for it.",
           "kind": "truefalse",
           "prompt": "In the myth, Daedalus **dies** in the fall too.",
           "options": [
@@ -371,6 +374,7 @@
         },
         {
           "type": "question",
+          "text": "Back to the first painting. What is **Bruegel** telling us by hiding Icarus in a corner? The farmer ploughs, the ship sails, the sun shines. A Flemish proverb says: “No plough stops for a dying man.” It is one of the hardest readings of the myth.",
           "kind": "choice",
           "prompt": "Back to the first painting. What is **Bruegel** telling us by hiding Icarus in a corner?",
           "options": [
@@ -383,6 +387,7 @@
         },
         {
           "type": "question",
+          "text": "A maze, a prison, an escape, a fall. The story has been retold for more than two thousand years.",
           "kind": "order",
           "prompt": "Last question. Put the story **in order**.",
           "items": [
